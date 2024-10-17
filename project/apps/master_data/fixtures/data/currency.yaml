@@ -1,0 +1,11 @@
+- model: "master_data.currency"
+  pk: 1
+  fields:
+    name: USD-United States dollar
+    item_code: USD
+
+- model: "master_data.currency"
+  pk: 2
+  fields:
+    name: VND-Vietnamese dong
+    item_code: VND

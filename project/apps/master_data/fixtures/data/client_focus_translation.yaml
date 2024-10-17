@@ -1,0 +1,18 @@
+- model: 'master_data.ClientFocusTranslation' 
+  pk: 1
+  fields: 
+    language_code: "vi"
+    name : "Khách hàng nhỏ (<10,000$/đơn hàng)"
+    client_focus: 1
+- model: 'master_data.ClientFocusTranslation' 
+  pk: 2
+  fields: 
+    language_code: "vi"
+    name : "Khách hàng trung bình (10,000$-50,000$/đơn hàng)"
+    client_focus: 2
+- model: 'master_data.ClientFocusTranslation' 
+  pk: 3
+  fields: 
+    language_code: "vi"
+    name : "Khách hàng lớn (>50,000$/đơn hàng)"
+    client_focus: 3

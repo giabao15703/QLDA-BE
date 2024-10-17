@@ -1,0 +1,123 @@
+variables:
+  GITLAB_REGISTRY_IMAGE: "registry.gitlab.com/99g-nex/nex-build/nex-api"
+
+stages:
+  - test
+  - build
+  - deploy
+
+test-develop:
+  stage: test
+  image: registry.gitlab.com/99g-nng/docker-hub/docker:18.09.7-dind
+  services:
+    - name: registry.gitlab.com/99g-nng/docker-hub/docker:18.09.7-dind
+    #- docker:dind
+  script:
+    - echo "Run Test"
+  only:
+    - develop
+
+build-develop:
+  stage: build
+  image: registry.gitlab.com/99g-nng/docker-hub/docker:18.09.7-dind
+  services:
+    - name: registry.gitlab.com/99g-nng/docker-hub/docker:18.09.7-dind
+  before_script:
+    - docker login -u "$GITLAB_REGISTRY_USER" -p "$GITLAB_REGISTRY_PASSWORD" $GITLAB_REGISTRY
+    - apk add git
+    - if [ -z $(git describe --tags $(git rev-list --tags --max-count=1)) ] ; then TAG=0.0.0 ; else TAG=$(git describe --tags $(git rev-list --tags --max-count=1)); fi
+  script:
+    - docker build -t "$GITLAB_REGISTRY_IMAGE:test-$TAG.$CI_PIPELINE_IID" -t "$GITLAB_REGISTRY_IMAGE:test-latest" .
+    - docker push "$GITLAB_REGISTRY_IMAGE:test-$TAG.$CI_PIPELINE_IID"
+    - docker push "$GITLAB_REGISTRY_IMAGE:test-latest"
+    - docker rmi "$GITLAB_REGISTRY_IMAGE:test-$TAG.$CI_PIPELINE_IID"
+    - docker rmi "$GITLAB_REGISTRY_IMAGE:test-latest"
+  only:
+    - develop
+
+deploy-develop:
+  stage: deploy
+  image:
+    name: lachlanevenson/k8s-kubectl:latest
+    entrypoint: ["/bin/sh", "-c"]
+  before_script:
+    - apk add git curl
+    - if [ -z $(git describe --tags $(git rev-list --tags --max-count=1)) ] ; then TAG=0.0.0 ; else TAG=$(git describe --tags $(git rev-list --tags --max-count=1)); fi
+    - MESSAGE=$'Deployed *API* to *Test/Dev Servers* successfully:\n'$CI_COMMIT_MESSAGE
+  script:
+    ### Dev Server
+    - kubectl --kubeconfig=$KUBECONFIG_LOCAL set image deployment.apps/nextpro-api-deploy nextpro-api=$GITLAB_REGISTRY_IMAGE:test-$TAG.$CI_PIPELINE_IID --record=true -n nextpro-system
+    - kubectl --kubeconfig=$KUBECONFIG_LOCAL set image deployment.apps/nextpro-celery-schedule-deploy nextpro-celery-schedule=$GITLAB_REGISTRY_IMAGE:test-$TAG.$CI_PIPELINE_IID --record=true -n nextpro-system
+    - kubectl --kubeconfig=$KUBECONFIG_LOCAL set image deployment.apps/nextpro-celery-worker-deploy nextpro-celery-worker=$GITLAB_REGISTRY_IMAGE:test-$TAG.$CI_PIPELINE_IID --record=true -n nextpro-system
+    ### Test Server
+    - kubectl --kubeconfig=$KUBECONFIG_LOCAL set image deployment.apps/nextpro-api-deploy-test nextpro-api-test=$GITLAB_REGISTRY_IMAGE:test-$TAG.$CI_PIPELINE_IID --record=true -n nextpro-system
+    - kubectl --kubeconfig=$KUBECONFIG_LOCAL set image deployment.apps/nextpro-celery-schedule-deploy-test nextpro-celery-schedule-test=$GITLAB_REGISTRY_IMAGE:test-$TAG.$CI_PIPELINE_IID --record=true -n nextpro-system
+    - kubectl --kubeconfig=$KUBECONFIG_LOCAL set image deployment.apps/nextpro-celery-worker-deploy-test nextpro-celery-worker-test=$GITLAB_REGISTRY_IMAGE:test-$TAG.$CI_PIPELINE_IID --record=true -n nextpro-system
+    - curl -G --data-urlencode "project=NEX" --data-urlencode "message=$MESSAGE" http://rancher.nng.bz:8000/api/notify/
+  only:
+    - develop
+
+test-master:
+  stage: test
+  image: registry.gitlab.com/99g-nng/docker-hub/docker:18.09.7-dind
+  services:
+    - name: registry.gitlab.com/99g-nng/docker-hub/docker:18.09.7-dind
+    #- docker:dind
+  script:
+    - echo "Run Test"
+  only:
+    - master
+
+build-master:
+  stage: build
+  image: registry.gitlab.com/99g-nng/docker-hub/docker:18.09.7-dind
+  services:
+    - name: registry.gitlab.com/99g-nng/docker-hub/docker:18.09.7-dind
+  before_script:
+    - docker login -u "$GITLAB_REGISTRY_USER" -p "$GITLAB_REGISTRY_PASSWORD" $GITLAB_REGISTRY
+    - apk add git
+    - if [ -z $(git describe --tags $(git rev-list --tags --max-count=1)) ] ; then TAG=0.0.0 ; else TAG=$(git describe --tags $(git rev-list --tags --max-count=1)); fi
+  script:
+    - docker build -t "$GITLAB_REGISTRY_IMAGE:$TAG.$CI_PIPELINE_IID" -t "$GITLAB_REGISTRY_IMAGE:latest" .
+    - docker push "$GITLAB_REGISTRY_IMAGE:$TAG.$CI_PIPELINE_IID"
+    - docker push "$GITLAB_REGISTRY_IMAGE:latest"
+    - docker rmi "$GITLAB_REGISTRY_IMAGE:$TAG.$CI_PIPELINE_IID"
+    - docker rmi "$GITLAB_REGISTRY_IMAGE:latest"
+  only:
+    - master
+
+deploy-master-uat:
+  stage: deploy
+  image:
+    name: lachlanevenson/k8s-kubectl:latest
+    entrypoint: ["/bin/sh", "-c"]
+  before_script:
+    - apk add git curl
+    - if [ -z $(git describe --tags $(git rev-list --tags --max-count=1)) ] ; then TAG=0.0.0 ; else TAG=$(git describe --tags $(git rev-list --tags --max-count=1)); fi
+    - MESSAGE=$'Deployed *API* to *UAT Server* successfully:\n'$CI_COMMIT_MESSAGE
+  script:
+    - kubectl --kubeconfig=$KUBECONFIG_CLOUD set image deployment.apps/nex-api-deploy-uat nex-api-uat=$GITLAB_REGISTRY_IMAGE:$TAG.$CI_PIPELINE_IID --record=true -n nex-system
+    - kubectl --kubeconfig=$KUBECONFIG_CLOUD set image deployment.apps/nex-celery-schedule-deploy-uat nex-celery-schedule-uat=$GITLAB_REGISTRY_IMAGE:$TAG.$CI_PIPELINE_IID --record=true -n nex-system
+    - kubectl --kubeconfig=$KUBECONFIG_CLOUD set image deployment.apps/nex-celery-worker-deploy-uat nex-celery-worker-uat=$GITLAB_REGISTRY_IMAGE:$TAG.$CI_PIPELINE_IID --record=true -n nex-system
+    - curl -G --data-urlencode "project=NEX" --data-urlencode "message=$MESSAGE" http://rancher.nng.bz:8000/api/notify/
+  only:
+    - master
+  when: manual
+
+deploy-master-prod:
+  stage: deploy
+  image:
+    name: lachlanevenson/k8s-kubectl:latest
+    entrypoint: ["/bin/sh", "-c"]
+  before_script:
+    - apk add git curl
+    - if [ -z $(git describe --tags $(git rev-list --tags --max-count=1)) ] ; then TAG=0.0.0 ; else TAG=$(git describe --tags $(git rev-list --tags --max-count=1)); fi
+    - MESSAGE=$'Deployed *API* to *Production Server* successfully:\n'$CI_COMMIT_MESSAGE
+  script:
+    - kubectl --kubeconfig=$KUBECONFIG_CLOUD set image deployment.apps/nex-api-deploy-prod nex-api-prod=$GITLAB_REGISTRY_IMAGE:$TAG.$CI_PIPELINE_IID --record=true -n nex-system
+    - kubectl --kubeconfig=$KUBECONFIG_CLOUD set image deployment.apps/nex-celery-schedule-deploy-prod nex-celery-schedule-prod=$GITLAB_REGISTRY_IMAGE:$TAG.$CI_PIPELINE_IID --record=true -n nex-system
+    - kubectl --kubeconfig=$KUBECONFIG_CLOUD set image deployment.apps/nex-celery-worker-deploy-prod nex-celery-worker-prod=$GITLAB_REGISTRY_IMAGE:$TAG.$CI_PIPELINE_IID --record=true -n nex-system
+    - curl -G --data-urlencode "project=NEX" --data-urlencode "message=$MESSAGE" http://rancher.nng.bz:8000/api/notify/
+  only:
+    - master
+  when: manual

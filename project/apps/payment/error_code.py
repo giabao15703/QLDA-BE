@@ -1,0 +1,25 @@
+from django.db import models
+
+
+class PaymentError(models.TextChoices):
+    PAYMENT_01 = "The transaction is waiting for the administrator to confirm"
+    PAYMENT_02 = "You must upgrade profile features or sicp registration"
+    PAYMENT_03 = "Promotion code has been deactivated"
+    PAYMENT_04 = "You must upgrade profile features"
+    PAYMENT_05 = "You must be buyer or supplier"
+    PAYMENT_06 = "Invalid token"
+    PAYMENT_07 = "The transaction is done"
+    PAYMENT_08 = "Your account do not have enough money"
+    PAYMENT_09 = "You must be supplier"
+    PAYMENT_10 = "Invalid bank account information"
+    PAYMENT_11 = "Invalid amount"
+    PAYMENT_12 = "Invalid method payment"
+    PAYMENT_13 = "This diamond sponsor has been paid"
+    PAYMENT_14 = "The diamond sponsor fee has not been established yet"
+    PAYMENT_15 = "Promotion code does not exists or been expired"
+    PAYMENT_16 = "You cannot use this promotion code"
+    PAYMENT_17 = "Promotion code input wrong scope."
+    PAYMENT_18 = "Promotion code is empty."
+    PAYMENT_19 = "User payment does not exists."
+    PAYMENT_20 = "The amount should be zero."
+    PAYMENT_21 = "This order does not exists."

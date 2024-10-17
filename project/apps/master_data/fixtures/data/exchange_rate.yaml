@@ -1,0 +1,6 @@
+- model: 'master_data.exchangeRate'
+  pk: 1
+  fields:
+    unit_of_measures_name: VND-Dong
+    item_code: VND 
+    exchange_rate: 23317.94

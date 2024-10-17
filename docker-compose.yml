@@ -1,0 +1,85 @@
+services:
+    core:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: qlda-core
+        container_name: qlda-core
+        restart: always
+        tty: true
+        volumes:
+            - ./project:/project
+        ports:
+            - "8000:8000"
+        depends_on:
+            - db
+        environment:
+            DB_NAME: QLDA
+            DB_USER: some_user
+            DB_PASSWORD: some_password
+            DB_HOST: db
+            DB_PORT: 5432
+            DJANGO_ENV: prod
+        networks:
+            - app-network
+
+    db:
+        image: postgres:12-alpine
+        container_name: qlda-db
+        restart: always
+        tty: true
+        ports:
+            - "5436:5432"
+        environment:
+            POSTGRES_USER: some_user    
+            POSTGRES_PASSWORD: some_password      
+            POSTGRES_DB: QLDA
+            RABBITMQ_URL: rabbitmq
+        volumes:
+            - qlda-db:/var/lib/postgresql/data
+        networks:
+            - app-network
+
+    rabbitmq:
+        image: rabbitmq:3.7-alpine
+        container_name: rabbitmqQLDA
+        restart: always
+        tty: true
+        networks:
+            - app-network
+
+    celery_worker:
+        command: watchmedo auto-restart -- celery worker -l info -A apps
+        container_name: celery-worker-new
+        depends_on:
+            - core
+            - db
+            - rabbitmq
+        image: qlda-core
+        volumes:
+            - ./project:/project
+        networks:
+            - app-network
+
+    celery_schedule:
+        command: celery -A apps beat --loglevel=info --pidfile=/tmp/celeryd.pid
+        container_name: celery-schedule-new
+        depends_on:
+            - rabbitmq
+            - celery_worker
+        image: qlda-core
+        volumes:
+            - ./project:/project
+        networks:
+            - app-network
+
+
+#Docker Networks
+networks:
+    app-network:
+        driver: bridge
+
+#Volumes
+volumes:
+    qlda-db:
+        driver: local

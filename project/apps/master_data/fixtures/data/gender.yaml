@@ -1,0 +1,8 @@
+- model: 'master_data.gender'
+  pk: 1
+  fields:
+    name: Male
+- model: 'master_data.gender'
+  pk: 2
+  fields:
+    name: Female

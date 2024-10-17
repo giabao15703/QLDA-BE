@@ -1,0 +1,168 @@
+- model: 'master_data.familyCode'
+  pk: "1"
+  fields:
+    item_code: "1"
+    name: "Electronic and household appliance"
+    status: "True"
+- model: 'master_data.familyCode'
+  pk: "2"
+  fields:
+    item_code: "2"
+    name: "Apparel, textile and accessory"
+    status: "True"
+- model: 'master_data.familyCode'
+  pk: "3"
+  fields:
+    item_code: "3"
+    name: "Gift, sport and toy"
+    status: "True"
+- model: 'master_data.familyCode'
+  pk: "4"
+  fields:
+    item_code: "4"
+    name: "Bag, shoe and accessory"
+    status: "True"
+- model: 'master_data.familyCode'
+  pk: "5"
+  fields:
+    item_code: "5"
+    name: "Construction and furniture"
+    status: "True"
+- model: 'master_data.familyCode'
+  pk: "6"
+  fields:
+    item_code: "6"
+    name: "Vehicle and accessory"
+    status: "True"
+- model: 'master_data.familyCode'
+  pk: "7"
+  fields:
+    item_code: "7"
+    name: "Health and beauty"
+    status: "True"
+- model: 'master_data.familyCode'
+  pk: "8"
+  fields:
+    item_code: "8"
+    name: "Computer and software"
+    status: "True"
+- model: 'master_data.familyCode'
+  pk: "9"
+  fields:
+    item_code: "9"
+    name: "Building material and product"
+    status: "True"
+- model: 'master_data.familyCode'
+  pk: "10"
+  fields:
+    item_code: "10"
+    name: "Medical device and supply"
+    status: "True"
+- model: 'master_data.familyCode'
+  pk: "11"
+  fields:
+    item_code: "11"
+    name: "Specialized service"
+    status: "True"
+- model: 'master_data.familyCode'
+  pk: "12"
+  fields:
+    item_code: "12"
+    name: "Machine and accessory"
+    status: "True"
+- model: 'master_data.familyCode'
+  pk: "13"
+  fields:
+    item_code: "13"
+    name: "Communication and presentation technology"
+    status: "True"
+- model: 'master_data.familyCode'
+  pk: "14"
+  fields:
+    item_code: "14"
+    name: "Labor protection and fire prevention"
+    status: "True"
+- model: 'master_data.familyCode'
+  pk: "15"
+  fields:
+    item_code: "15"
+    name: "Tool and workshop equipment"
+    status: "True"
+- model: 'master_data.familyCode'
+  pk: "16"
+  fields:
+    item_code: "16"
+    name: "Other technology"
+    status: "True"
+- model: 'master_data.familyCode'
+  pk: "17"
+  fields:
+    item_code: "17"
+    name: "Piping technology and environmental engineering"
+    status: "True"
+- model: 'master_data.familyCode'
+  pk: "18"
+  fields:
+    item_code: "18"
+    name: "Chemical and fluid technology"
+    status: "True"
+- model: 'master_data.familyCode'
+  pk: "19"
+  fields:
+    item_code: "19"
+    name: "Electrical and electronic engineering"
+    status: "True"
+- model: 'master_data.familyCode'
+  pk: "20"
+  fields:
+    item_code: "20"
+    name: "Drive and automation engineering"
+    status: "True"
+- model: 'master_data.familyCode'
+  pk: "21"
+  fields:
+    item_code: "21"
+    name: "Industrial handling and assembly technique"
+    status: "True"
+- model: 'master_data.familyCode'
+  pk: "22"
+  fields:
+    item_code: "22"
+    name: "Metallurgy, rubber and plastic"
+    status: "True"
+- model: 'master_data.familyCode'
+  pk: "23"
+  fields:
+    item_code: "23"
+    name: "Machining"
+    status: "True"
+- model: 'master_data.familyCode'
+  pk: "24"
+  fields:
+    item_code: "24"
+    name: "Material and semi-finished product"
+    status: "True"
+- model: 'master_data.familyCode'
+  pk: "25"
+  fields:
+    item_code: "25"
+    name: "Agriculture and food"
+    status: "True"
+- model: 'master_data.familyCode'
+  pk: "26"
+  fields:
+    item_code: "26"
+    name: "Office supplies and company equipment"
+    status: "True"
+- model: 'master_data.familyCode'
+  pk: "27"
+  fields:
+    item_code: "27"
+    name: "Machine design and construction"
+    status: "True"
+- model: 'master_data.familyCode'
+  pk: "28"
+  fields:
+    item_code: "28"
+    name: "Auxiliary and operating material"
+    status: "True"

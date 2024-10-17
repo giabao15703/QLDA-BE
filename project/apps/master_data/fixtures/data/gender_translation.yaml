@@ -1,0 +1,13 @@
+- model: 'master_data.genderTranslation'
+  pk: 1
+  fields:
+    name:  Nam
+    language_code: vi
+    gender : 1
+
+- model: 'master_data.genderTranslation'
+  pk: 2
+  fields:
+    name: Nữ
+    language_code: vi
+    gender: 2

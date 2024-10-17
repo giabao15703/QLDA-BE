@@ -1,0 +1,46 @@
+- model: 'master_data.deliveryTerm'
+  pk: 1
+  fields:
+    name: DDP - Delivered Duty Paid
+
+- model: 'master_data.deliveryTerm'
+  pk: 2
+  fields:
+    name: EXW - Ex Works
+- model: 'master_data.deliveryTerm'
+  pk: 3
+  fields:
+    name: FOB - Free On Board
+- model: 'master_data.deliveryTerm'
+  pk: 4
+  fields:
+    name: CIP - Carriage and Insurance Paid To
+- model: 'master_data.deliveryTerm'
+  pk: 5
+  fields:
+    name: DAT - Delivered at Terminal
+- model: 'master_data.deliveryTerm'
+  pk: 6
+  fields:
+    name: CFR - Cost And Freight
+- model: 'master_data.deliveryTerm'
+  pk: 7
+  fields:
+    name: CIF - Cost, Insurance and Freight
+- model: 'master_data.deliveryTerm'
+  pk: 8
+  fields:
+    name: CPT - Carriage Paid To
+- model: 'master_data.deliveryTerm'
+  pk: 9
+  fields:
+    name: DAP - Delivered at Place
+- model: 'master_data.deliveryTerm'
+  pk: 10
+  fields:
+    name: FAS - Free Alongside Ship
+- model: 'master_data.deliveryTerm'
+  pk: 11
+  fields:
+    name: FCA - Free Carrier
+

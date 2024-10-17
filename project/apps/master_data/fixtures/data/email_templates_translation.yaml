@@ -1,0 +1,1377 @@
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 1
+  fields:
+    title: 'Chào mừng đến với NextPro! Bạn được mời đăng ký'
+    content: '<img src={{image}} alt="" width="189" height="30" /></span></p>
+    <hr />
+    <p>Thưa ông / bà.<span style="color: red;"> {{name}}, </span></p><br>
+    <p>Quý khách vừa được {{referralBy}}mời tạo tài khoản trên Nền tảng Đấu thầu Thông minh NextPro. Bấm vào <a href="{{link}}"> link</a> để đăng ký tài khoản sử dụng NextPro.</p>
+    <p >NextPro tạo nền tảng kết nối Người mua và Người cung cấp tiềm năng được thiết lập trên Nền tảng Đấu thầu Thông minh NextPro, từ đó gia tăng cơ hội giao dịch cho các bên, đồng nghĩa với việc tăng doanh thu cho Người cung cấp thông qua tiêu chí tìm kiếm phù hợp với yêu cầu thực tế của Người mua cũng như phù hợp nhất với khả năng và kinh nghiệm của Người cung cấp. </p>
+    <p >Chúng tôi hướng đến các Nhà cung cấp Việt Nam và Quốc tế có nhu cầu tăng doanh số, tìm kiếm yêu cầu chất lượng từ Người mua, minh bạch trong cạnh tranh.</p>
+    <br>
+    <p>Rất cảm ơn và trân trọng,</p>
+    <p>Bộ phận Dịch vụ khách hàng</p>
+    <br>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 1
+    language_code : vi
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 2
+  fields:
+    title: 'Chào mừng đến với NextPro! Bạn được mời đăng ký'
+    content: '<img src={{image}} alt="" width="189" height="30" /></span></p>
+    <hr />
+    <p>Thưa ông / bà.<span style="color: red;"> {{name}}, </span></p><br>
+    <p>Quý khách vừa được {{referralBy}}mời tạo tài khoản trên Nền tảng Đấu thầu Thông minh NextPro. Bấm vào <a href="{{link}}"> link</a> để đăng ký tài khoản sử dụng NextPro.</p>
+    <p>NextPro là nhà cung cấp dịch vụ thuê ngoài và giải pháp mua sắm. Đội ngũ mua sắm chiến lược của NextPro có thể tác động tích cực đến hoạt động kinh doanh thông qua việc tư vấn sử dụng quy trình mua sắm hoàn chỉnh và toàn diện của NextPro nhờ vào nguồn cung cấp đa dạng và mua sắm theo gói. </p>
+    <p>Chúng tôi có đội ngũ chuyên gia giàu kinh nghiệm mang đến các giải pháp mua sắm chiến lược nhằm quản lý chi phí tốt hơn, cung cấp nền tảng mua sắm ứng dụng công nghệ AI tốt nhất, luôn cập nhật theo xu hướng và tiêu chuẩn quốc tế.</p>
+    <p>Chúng tôi hướng tới các doanh nghiệp Việt Nam và Quốc tế có nhu cầu phát triển hệ thống mua sắm để kiểm soát tốt hơn chi phí, tăng tính minh bạch, nâng cao chất lượng Nhà cung cấp và nâng cao năng lực quản lý</p>
+    <br>
+    <p>Rất cảm ơn và trân trọng,</p>
+    <p>Bộ phận Dịch vụ khách hàng</p>
+    <br>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 2
+    language_code : vi
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 3
+  fields:
+    title: 'Hướng dẫn lấy lại Mật khẩu đăng nhập Nền tảng NextPro'
+    content: '<p><img src="{{image}}" alt="" width="189" height="30" /></p>
+    <hr />
+    <p>Thưa ông / bà<span style="color: red;"> {{name}}, </span></p>
+    <p>&nbsp;</p>
+    <p>Quý khách vừa gửi yêu cầu lấy lại mật khẩu Đăng nhập tài khoản NextPro. Vui lòng bấm vào nút dưới đây để xác lập lại Mật khẩu:</p>
+    <table style="width: 29.9939%;">
+    <tbody>
+    <tr>
+    <td" style="width: 100%;"><a href="https://auction.nextpro.io/auth/create-new-password/{{Token}}"><button style="background-color: navy; color: red;" name="button" type="button"><strong>Reset your password</strong></button></a></td>
+    </tr>
+    </tbody>
+    </table>
+    <p>Nếu Quý khách không yêu cầu đặt lại mật khẩu, vui lòng bỏ qua hoặc không trả lời thư điện tử này.</p>
+    <p>Chân thành cảm ơn Quý khách đã sử dụng dịch vụ.</p>
+    <p>Trân trọng,</p>
+    <p>Bộ phận Dịch vụ khách hàng</p>
+    <p>&nbsp;</p>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Th&ocirc;ng tin trong e-mail n&agrave;y chỉ d&agrave;nh cho người nhận e-mail trực tiếp v&agrave; c&oacute; thể chứa th&ocirc;ng tin b&iacute; mật v&agrave;/hoặc th&ocirc;ng tin đặc quyền. Nếu bạn kh&ocirc;ng phải l&agrave; người nhận như chỉ định, xin th&ocirc;ng b&aacute;o rằng việc bạn đọc, lưu, ph&acirc;n phối hoặc sử dụng nội dung của e-mail n&agrave;y bị cấm. Nếu bạn nhận được e-mail n&agrave;y do nhầm lẫn, xin vui l&ograve;ng th&ocirc;ng b&aacute;o cho người gửi v&agrave; xo&aacute; e-mail.</span></p>'
+    email_templates: 3
+    language_code : vi
+
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 4
+  fields:
+    title: 'Thông báo cho Người mua về việc tổ chức thành công Phiên đấu giá điện tử - Đấu giá điện tử  {{auction_item_code}}'
+    content: '<img src={{image}} alt="" width="189" height="30" /></span></p>
+    <hr />
+    <p>Thưa ông / bà.<span style="color: red;"> {{name}}, </span></p><br>
+    <p>Chúng tôi xin chính thức thông báo cho ông/bà rằng Phiên đấu giá điện tử {{auction_title}} với Mã đấu giá điện tử  {{auction_item_code}} đã được tổ chức thành công.</p>
+    <p>Để xem chi tiết Phiên đấu giá điện tử của mình, ông/bà vui lòng đăng nhập bằng tài khoản người mua của ông/bà bằng cách sử dụng liên kết sau: <a href="https://auction.nextpro.io/auth/login">thực hiện đăng nhập ngay bây giờ.</a>.&nbsp;</p>
+    <p>Rất cảm ơn và trân trọng,</p>
+    <p>Bộ phận Dịch vụ khách hàng</p>
+    <br>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 4
+    language_code : vi
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 5
+  fields:
+    title: 'Thông báo cho Nhà cung cấp về lời mời tham gia Đấu giá điện tử '
+    content: '<img src={{image}} alt="" width="189" height="30" /></span></p>
+    <hr />
+    <p>Thưa ông / bà.<span style="color: red;"> {{name}}, </span></p><br>
+   	<p>Chúng tôi xin chính thức thông báo cho bạn rằng <span style="color: #ff6600;"> {{company_long_name}} </span> đã mời bạn tham gia phiên Đấu giá điện tử  <span style="color: #ff6600;">{{auction_title}}</span> với mã số <span style="color: #ff6600;"> {{auction_item_code}}</span> vào ngày <span style="color: #ff6600;"> {{start_time_date}}</span> bắt đầu từ <span style="color: #ff6600;">{{start_time}}</span> và rất mong bạn tham gia trên Nền tảng đấu giá điện tử NextPro.</p>
+    <p>Để truy cập Phiên đấu giá điện tử  <span style="color: #ff6600;">{{auction_title}} </span> với mã số  <span style="color: #ff6600;">{{auction_item_code}}</span>, vui lòng sử dụng liên kết sau:  <a style="color: #0000ff;" href="https://auction.nextpro.io/e-auction/detail/{{AuctionID}}">đăng nhập ngay.</a></p>
+    <p>Nếu bạn không muốn tham gia vào cuộc đấu giá này hoặc không muốn nhận được bất kỳ thư từ liên quan nào khác, bạn có thể từ chối tham gia bằng việc nhấp chuột vào đây: <a style="color: #0000ff;" href="https://auction.nextpro.io/e-auction/detail/{{AuctionID}}">từ chối tham gia tại đây</a></p>
+    <p>Trong trường hợp bạn có thắc mắc, vui lòng liên hệ với người mua chịu trách nhiệm liên quan.</p>
+    <p>Rất cảm ơn và trân trọng,</p>
+    <p>Bộ phận Dịch vụ khách hàng</p>
+    <br>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 5
+    language_code : vi
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 6
+  fields:
+    title: 'Chào mừng Quý khách sử dụng NextPro! Tài khoản đăng nhập'
+    content: '<img src={{image}} alt="" width="189" height="30" /></span></p>
+    <hr />
+    <p>Thưa ông / bà.<span style="color: red;"> {{name}}, </span></p><br>
+   	<p>Thư điện tử này cung cấp thông tin truy cập cá nhân để sử dụng Nền tảng đấu thầu thông minh NextPro.</span></p>
+    <p><strong>Mã đăng nhập: </strong> <span style="color: red;">{{username}}</span></p>
+    <p><strong>Mật khẩu tạm thời:</strong> <span style="color: red;">{{password}}</span></p>
+    <p>Quý khách lưu ý khi sử dụng chức năng Copy (cắt)/paste (dán) thông tin truy cập có thể xảy ra lỗi khi đăng nhập. Chúng tôi luôn khuyến nghị Quý vị nhập trực tiếp thông tin một cách thủ công.</span></p>
+    <p>Một lưu ý quan trọng khác, đây là thông tin sơ bộ ban đầu của bạn để kích hoạt tài khoản, vui lòng cung cấp thông tin bổ sung trong bảng mục “Kinh doanh chính” trong Hồ sơ của bạn để tối đa hóa sự hiện diện của bạn khi người mua tìm kiếm thông tin liên quan đến hoạt động kinh doanh chính của bạn.</p>
+    <p>Nhằm mục đích bảo vệ quyền riêng tư và dữ liệu, Quý khách phải thay đổi mật khẩu tạm thời đã được cấp trong lần đăng nhập đầu tiên. Để hoàn tất việc thay đổi, vui lòng thực hiện theo hướng dẫn đã được hệ thống gửi đến Quý khách.</span></p>
+    <p>Để truy cập vào Nền tảng NextPro, Quý khách vui lòng truy cập theo đường dẫn sau: </span><a style="font-weight: 400;" href="https://auction.nextpro.io/auth/login">đăng nhập bây giờ</a></p><br>
+    <p>Rất cảm ơn và trân trọng,</p>
+    <p>Bộ phận Dịch vụ khách hàng</p>
+    <br>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 6
+    language_code : vi
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 7
+  fields:
+    title: 'Chào mừng Quý khách sử dụng NextPro! Tài khoản đăng nhập'
+    content: '<img src={{image}} alt="" width="189" height="30" /></span></p>
+    <hr />
+    <p>Thưa ông / bà.<span style="color: red;"> {{name}}, </span></p><br>
+    <p>Thư điện tử này cung cấp thông tin truy cập cá nhân để sử dụng Nền tảng đấu thầu thông minh NextPro.</p>
+    <p style="text-align: left;"><strong>Mã đăng nhập: </strong><span style="color:red">{{username}}</span></p>
+    <p style="text-align: left;"><strong>Mật khẩu tạm thời:</strong> <span style="color:red">{{password}}</span></p>
+    <p>Quý khách lưu ý khi sử dụng chức năng Copy (cắt)/paste (dán) thông tin truy cập có thể xảy ra lỗi khi đăng nhập. Chúng tôi luôn khuyến nghị Quý khách nhập trực tiếp thông tin một cách thủ công.</span></p>
+    <p>Nhằm mục đích bảo vệ quyền riêng tư và dữ liệu, Quý khách phải thay đổi mật khẩu tạm thời đã được cấp trong lần đăng nhập đầu tiên. Để hoàn tất việc thay đổi mật khẩu, vui lòng thực hiện theo hướng dẫn đã được hệ thống gửi đến Quý khách.</span></p>
+    <p>Để truy cập vào Nền tảng NextPro, Quý khách vui lòng truy cập theo đường dẫn sau: </span><a href ="https://auction.nextpro.io/auth/login">đăng nhập bây giờ</a></p>
+    <br>
+    <p>Rất cảm ơn và trân trọng,</p>
+    <p>Bộ phận Dịch vụ khách hàng</p>
+    <br>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 7
+    language_code : vi
+
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 8
+  fields:
+    title: 'Thông báo cho Nhà cung cấp về việc Phiên đấu giá điện tử đã kết thúc '
+    content: '<img src={{image}} alt="" width="189" height="30" /></span></p>
+    <hr />
+    <p>Thưa ông / bà.<span style="color: red;"> {{name}}, </span></p><br>
+    <p><br />Chúng tôi xin chính thức thông báo cho bạn rằng Phiên đấu giá điện tử <span style="color: #ff0000;">{{auction_title}}</span>với mã số <span style="color: #ff0000;">{{auction_item_code}}</span>đã kết thúc. 
+    <p>Bạn đã gửi <span style="color: #ff0000;">{{number_bid}}</span> gói thầu trong thời gian diễn ra phiên đấu giá điện tử. <br />Để xem chi tiết Phiên đấu giá điện tử của bạn, vui lòng đăng nhập bằng tài khoản nhà cung cấp thông qua liên kết sau: <a style="font-weight: 400;" href="https://auction.nextpro.io/auth/login"> đăng nhập ngay bây giờ.</a>.</p>
+    <br>
+    <p>Rất cảm ơn và trân trọng,</p>
+    <p>Bộ phận Dịch vụ khách hàng</p>
+    <br>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 8
+    language_code : vi
+
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 9
+  fields:
+    title: 'Thông báo cho Người mua về việc Phiên đấu giá điện tử đã kết thúc '
+    content: '<img src={{image}} alt="" width="189" height="30" /></span></p>
+    <hr />
+    <p>Thưa ông / bà.<span style="color: red;"> {{name}}, </span></p><br>
+    <p>Chúng tôi xin chính thức thông báo tới Ông/bà rằng Phiên đấu giá điện tử  <span style="color: #ff0000;">{{auction_title}}</span>của bạn với Phiên đấu giá điện tử số <span style="color: #ff0000;">{{auction_item_code}}</span> đã kết thúc thành công.
+    <span style="color: #ff0000;">{{total_number_bid}} </span>  gói thầu đã tham gia . </p>
+    <p>Để xem chi tiết Phiên đấu giá điện tử của bạn, vui lòng đăng nhập bằng tài khoản người mua thông qua liên kết sau: <a style="font-weight: 400;" href="https://auction.nextpro.io/auth/login">đăng nhập ngay bây giờ.</a>.</p>
+    <br>
+    <p>Rất cảm ơn và trân trọng,</p>
+    <p>Bộ phận Dịch vụ khách hàng</p>
+    <br>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 9
+    language_code : vi
+
+
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 10
+  fields:
+    title: 'Xin chúc mừng! Hồ sơ NextPro của Quý khách vừa được nâng cấp'
+    content: '<img src={{image}} alt="" width="189" height="30" /></span></p>
+    <hr />
+    <p>Kính gửi  Ông / bà.<span style="color: red;"> {{name}}, </span></p><br>
+    <p>Chúng tôi xin chân thành cảm ơn Quý khách đã tin tưởng lựa chọn NextPro để cộng tác trong suốt thời gian qua. Bằng thư điện tử này, NextPro xin thông báo Hồ sơ của Quý khách đã được nâng cấp lên tài khoản <span style="color: #ff0000;">{{scheme}} </span>.  Để biết thêm chi tiết về các lợi ích cho tài khoản của Quý khách, vui lòng truy cập vào đường dẫn sau đây: </span><a style="font-weight: 400;" href={{link}}>link</a></p>
+    <p>Cảm ơn Quý khách đã trao cho Chúng tôi cơ hội để phục vụ Quý khách được tốt hơn.</p>
+    <br>
+    <p>Chân thành cảm ơn đã sử dụng dịch vụ.</p>
+    <p>Trân trọng,</p>
+    <p>Bộ phận Dịch vụ khách hàng</p>
+    <br>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 10
+    language_code : vi
+
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 11
+  fields:
+    title: 'Xin chúc mừng! Quý khách đã đăng ký thành công chương trình SICP với  NextPro'
+    content: '<img src={{image}} alt="" width="189" height="30" /></span></p>
+    <hr />
+    <p>Kính gửi  Ông / bà.<span style="color: red;"> {{name}}, </span></p><br>
+    <p>Chúng tôi xin chân thành cảm ơn Quý khách đã tin tưởng lựa chọn NextPro để hợp tác trong suốt thời gian qua.</p>
+    <p>Yêu cầu đăng ký SICP với tài khoản <span style="color: #ff0000;"> {{scheme}} </span>đã được đăng ký thành công. Quý khách vui lòng bấm vào đường dẫn sau đây:  <a style="font-weight: 400;" href="{{link}}">link</a> fđể tải lên các tài liệu yêu cầu sau đó NextPro sẽ rà soát và cung cấp kết quả trong thời gian sớm nhất.
+    <p>Cảm ơn Quý khách đã trao cho Chúng tôi cơ hội để phục vụ Quý khách được tốt hơn.</p>
+    <br>
+    <p>Chân thành cảm ơn đã sử dụng dịch vụ.</p>
+    <p>Trân trọng,</p>
+    <p>Bộ phận Dịch vụ khách hàng</p>
+    <br>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 11
+    language_code : vi
+
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 12
+  fields:
+    title: 'Xác nhận yêu cầu Hoàn tiền trên Nền tảng Đấu giá NextPro'
+    content: '<img src={{image}} alt="" width="189" height="30" /></span></p>
+    <hr />
+    <p>Kính gửi  Ông / bà.<span style="color: red;"> {{name}}, </span></p><br>
+    <p>Chúng tôi xin chân thành cảm ơn Quý khách đã tin tưởng lựa chọn NextPro để hợp tác trong suốt thời gian qua. Quý khách vừa gửi cho NextPro yêu cầu hoàn tiền vào tài khoản của Quý khách, để xác minh lại yêu chính thức, Quý khách vui lòng bấm vào đường dẫn sau:<u><a href="http://www.nextpro.io/">link</a>.</u></p>
+    <p>Cảm ơn Quý khách đã trao cho Chúng tôi cơ hội để phục vụ Quý khách được tốt hơn.</p>
+    <br>
+    <p>Chân thành cảm ơn đã sử dụng dịch vụ.</p>
+    <p>Trân trọng,</p>
+    <p>Bộ phận Dịch vụ khách hàng</p>
+    <br>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 12
+    language_code : vi
+
+
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 13
+  fields:
+    title: 'Yêu cầu hoàn tiền của Quý khách tới NextPro đã được gửi thành công'
+    content: '<img src={{image}} alt="" width="189" height="30" /></span></p>
+    <hr />
+    <p>Kính gửi  Ông / bà.<span style="color: red;"> {{name}}, </span></p><br>
+    <p >Chúng tôi xin chân thành cảm ơn Quý khách đã tin tưởng lựa chọn NextPro để hợp tác trong suốt thời gian qua. NextPro xin thông báo đã nhận được yêu cầu hoàn tiền của Quý khách. Vui lòng kiểm tra tài khoản của Quý khách trong thời gian từ 7 – 10 ngày kể từ ngày nhận thư này.</p>
+    <p>Cảm ơn Quý khách đã trao cho Chúng tôi cơ hội để phục vụ Quý khách được tốt hơn.</p>
+    <br>
+    <p>Chân thành cảm ơn đã sử dụng dịch vụ.</p>
+    <p>Trân trọng,</p>
+    <p>Bộ phận Dịch vụ khách hàng</p>
+    <br>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 13
+    language_code : vi
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 14
+  fields:
+    title: 'Thông báo nhắc đặt cọc để công bố Đấu giá điện tử số {{auction_item_code}}  trên NextPro'
+    content: '<img src={{image}} alt="" width="189" height="30" /></span></p>
+    <hr />
+    <p>Kính gửi  Ông / bà.<span style="color: red;"> {{name}}, </span></p><br>
+    <p> Quý khách vừa bắt đầu thực hiện yêu cầu Đấu giá điện tử trên nền tảng Đấu giá NextPro với mã dự kiến  <span style="color: #ff0000;">{{auction_item_code}}</span>  Tuy nhiên chúng tôi vẫn chưa nhận được khoản đặt cọc của Quý khách. Vui lòng bấm vào đường dẫn này:  <a style="font-weight: 400;" href="{{link}}">link</a></span> để đặt cọc, sau khi hoàn thành đặt cọc, Quý khách có thể công bố thông tin Đấu thầu điện tử.  
+    <p>Cảm ơn Quý khách đã trao cho Chúng tôi cơ hội để phục vụ Quý khách được tốt hơn.</p>
+    <br>
+    <p>Chân thành cảm ơn đã sử dụng dịch vụ.</p>
+    <p>Trân trọng,</p>
+    <p>Bộ phận Dịch vụ khách hàng</p>
+    <br>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 14
+    language_code : vi
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 15
+  fields:
+    title: 'Thông báo nhắc đặt cọc để tham dự Đấu giá điện tử số {{auction_item_code}} trên NextPro'
+    content: '<img src={{image}} alt="" width="189" height="30" /></span></p>
+    <hr />
+    <p>Kính gửi  Ông / bà.<span style="color: red;"> {{name}}, </span></p><br>
+    <p>Chúng tôi xin chân thành cảm ơn Quý khách đã tin tưởng lựa chọn NextPro để hợp tác trong suốt thời gian qua. </p>
+    <p>Quý khách vừa được mời tham dự Đấu giá điện tử trên nền tảng Đấu giá NextPro với mã dự kiến   <span style="color: #ff0000;">{{auction_item_code}}</span> với <span style="color: #ff0000;">{{buyer_name}}</span> Tuy nhiên chúng tôi vẫn chưa nhận được khoản đặt cọc của Quý khách. Vui lòng bấm vào đường dẫn này:  <a style="font-weight: 400;" href="{{link}}">link</a>để đặt cọc, sau khi hoàn thành đặt cọc, Quý khách có thể tiến hành nộp thầu cho phiên Đấu thầu điện tử theo thời gian đã được thông báo.</p>
+
+    <p>Cảm ơn Quý khách đã trao cho Chúng tôi cơ hội để phục vụ Quý khách được tốt hơn.</p>
+    <br>
+    <p>Chân thành cảm ơn đã sử dụng dịch vụ.</p>
+    <p>Trân trọng,</p>
+    <p>Bộ phận Dịch vụ khách hàng</p>
+    <br>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 15
+    language_code : vi
+
+
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 16
+  fields:
+    title: 'Thông báo nhắc lần 1 về việc thanh toán chậm đơn hàng số .{{order_no}} trên NextPro'
+    content: '<img src={{image}} alt="" width="189" height="30" /></span></p>
+    <hr />
+    <p>Kính gửi  Ông / bà.<span style="color: red;"> {{name}}, </span></p><br>
+    <p>Chúng tôi xin chân thành cảm ơn Quý khách đã tin tưởng lựa chọn NextPro để hợp tác trong suốt thời gian qua. </p>
+    <p>Bằng thư điện tử này, NextPro xin thông báo Quý khách đã xác nhận chưa thực hiện thanh toán đơn hàng số<span style="color: #ff0000;">{{order_no}}</span>t. Quý khách vui lòng bấm vào đường dẫn này:<a style="font-weight: 400;" href="{{link}}">link&nbsp;</a> để thực hiện thanh toán.</p>
+    <p>Cảm ơn Quý khách đã trao cho Chúng tôi cơ hội để phục vụ Quý khách được tốt hơn.</p>
+    <br>
+    <p>Chân thành cảm ơn đã sử dụng dịch vụ.</p>
+    <p>Trân trọng,</p>
+    <p>Bộ phận Dịch vụ khách hàng</p>
+    <br>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 16
+    language_code : vi
+
+
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 17
+  fields:
+    title: 'Thông báo nhắc lần 2 về việc thanh toán chậm đơn hàng số .{{order_no}} trên NextPro'
+    content: '<img src={{image}} alt="" width="189" height="30" /></span></p>
+    <hr />
+    <p>Kính gửi  Ông / bà.<span style="color: red;"> {{name}}, </span></p><br>
+    <p>Chúng tôi xin chân thành cảm ơn Quý khách đã tin tưởng lựa chọn NextPro để hợp tác trong suốt thời gian qua. Bằng thư điện tử này, NextPro xin thông báo Quý khách đã xác nhận chưa thực hiện thanh toán đơn hàng số <span style="color: #ff0000;">{{order_no}}</span>.  Quý khách vui lòng bấm vào đường dẫn này: <a style="font-weight: 400;" href="{{link}}">link&nbsp;</a> để thực hiện thanh toán.</p>
+
+    <p>Cảm ơn Quý khách đã trao cho Chúng tôi cơ hội để phục vụ Quý khách được tốt hơn.</p>
+    <br>
+    <p>Chân thành cảm ơn đã sử dụng dịch vụ.</p>
+    <p>Trân trọng,</p>
+    <p>Bộ phận Dịch vụ khách hàng</p>
+    <br>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 17
+    language_code : vi
+
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 18
+  fields:
+    title: 'Thông báo nhắc lần 3 về việc thanh toán chậm đơn hàng số .{{order_no}} trên NextPro'
+    content: '<img src={{image}} alt="" width="189" height="30" /></span></p>
+    <hr />
+    <p>Kính gửi  Ông / bà.<span style="color: red;"> {{name}}, </span></p><br>
+    <p>Chúng tôi xin chân thành cảm ơn Quý khách đã tin tưởng lựa chọn NextPro để hợp tác trong suốt thời gian qua. Bằng thư điện tử này, NextPro xin thông báo Quý khách đã xác nhận chưa thực hiện thanh toán đơn hàng số <span style="color: #ff0000;">{{order_no}}</span>.  Quý khách vui lòng bấm vào đường dẫn này: <a style="font-weight: 400;" href="{{link}}">link&nbsp;</a> để thực hiện thanh toán.</p>
+
+    <p>Cảm ơn Quý khách đã trao cho Chúng tôi cơ hội để phục vụ Quý khách được tốt hơn.</p>
+    <br>
+    <p>Chân thành cảm ơn đã sử dụng dịch vụ.</p>
+    <p>Trân trọng,</p>
+    <p>Bộ phận Dịch vụ khách hàng</p>
+    <br>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 18
+    language_code : vi
+
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 19
+  fields:
+    title: 'Đơn hàng số {{order_no}}đã được thanh toán thành công'
+    content: '<img src={{image}} alt="" width="189" height="30" /></span></p>
+    <hr />
+    <p>Kính gửi  Ông / bà.<span style="color: red;"> {{name}}, </span></p><br>
+    <p>Chúng tôi xin chân thành cảm ơn Quý khách đã tin tưởng lựa chọn NextPro để hợp tác trong suốt thời gian qua. Bằng thư điện tử này, NextPro xin xác nhận đơn hàng số <span style="color: #ff0000;">{{order_no}}</span> đã được thanh toán thành công.</p>
+    <p>Cảm ơn Quý khách đã trao cho Chúng tôi cơ hội để phục vụ Quý khách được tốt hơn.</p>
+    <br>
+    <p>Chân thành cảm ơn đã sử dụng dịch vụ.</p>
+    <p>Trân trọng,</p>
+    <p>Bộ phận Dịch vụ khách hàng</p>
+    <br>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 19
+    language_code : vi
+
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 20
+  fields:
+    title: 'NextPro đã nhận được tiền chuyển khoản của Đơn hàng số {{order_no}}'
+    content: '<img src={{image}} alt="" width="189" height="30" /></span></p>
+    <hr />
+    <p>Kính gửi  Ông / bà.<span style="color: red;"> {{name}}, </span></p><br>
+    <p>Chúng tôi xin chân thành cảm ơn Quý khách đã tin tưởng lựa chọn NextPro để hợp tác trong suốt thời gian qua. Bằng thư điện tử này, NextPro xin xác nhận đã nhận được số tiền chuyển khoản cho đơn hàng số<span style="color: #ff0000;">{{order_no}}</span> . Chúng tôi sẽ xử lý yêu cầu của Quý khách và gửi lại thông tin trong 1-3 ngày.</p>
+    <p>Cảm ơn Quý khách đã trao cho Chúng tôi cơ hội để phục vụ Quý khách được tốt hơn.</p>
+    <br>
+    <p>Chân thành cảm ơn đã sử dụng dịch vụ.</p>
+    <p>Trân trọng,</p>
+    <p>Bộ phận Dịch vụ khách hàng</p>
+    <br>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 20
+    language_code : vi
+
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 21
+  fields:
+    title: 'Số tiền đặt cọc cho phiên Đấu giá số {{auction_item_code}}  đã được hoàn trả vào tài khoản của NextPro'
+    content: '<img src={{image}} alt="" width="189" height="30" /></span></p>
+    <hr />
+    <p>Kính gửi  Ông / bà.<span style="color: red;"> {{name}}, </span></p><br>
+    <p>Chúng tôi xin chân thành cảm ơn Quý khách đã tin tưởng lựa chọn NextPro để hợp tác trong suốt thời gian qua. Bằng thư điện tử này, NextPro xin xác nhận số tiền đặt cọc cho phiên Đấu giá số <span style="color: #ff0000;">{{auction_item_code}}</span> đã được hoàn trả vào số tài khoản của NextPro, Vui lòng bấm vào đường dẫn này:  <a style="font-weight: 400;" href="{{link}}">link</a> để kiểm tra số dư.</p>
+    <p>Cảm ơn Quý khách đã trao cho Chúng tôi cơ hội để phục vụ Quý khách được tốt hơn.</p>
+    <br>
+    <p>Chân thành cảm ơn đã sử dụng dịch vụ.</p>
+    <p>Trân trọng,</p>
+    <p>Bộ phận Dịch vụ khách hàng</p>
+    <br>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 21
+    language_code : vi
+
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 22
+  fields:
+    title: 'NextPro thông bao thu phí dịch vụ do Quý khách hủy phiên Đấu giá số {{auction_item_code}} '
+    content: '<img src={{image}} alt="" width="189" height="30" /></span></p>
+    <hr />
+    <p>Kính gửi  Ông / bà.<span style="color: red;"> {{name}}, </span></p><br>
+    <p>Chúng tôi xin chân thành cảm ơn Quý khách đã tin tưởng lựa chọn NextPro để hợp tác trong suốt thời gian qua. Bằng thư điện tử này, NextPro xin thông báo đã thực hiện thu phí dịch vụ là số tiền đã đặt cọc do Quý khách đã hủy phiên Đấu giá số.<span style="color: #ff0000;">{{auction_item_code}}</span>  vui lòng xem chi tiết thông tin tại đường dẫn này:  <a style="font-weight: 400;" href="{{link}}">link</a> </p>
+    <p>Cảm ơn Quý khách đã trao cho Chúng tôi cơ hội để phục vụ Quý khách được tốt hơn.</p>
+    <br>
+    <p>Chân thành cảm ơn đã sử dụng dịch vụ.</p>
+    <p>Trân trọng,</p>
+    <p>Bộ phận Dịch vụ khách hàng</p>
+    <br>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 22
+    language_code : vi
+
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 23
+  fields:
+    title: 'NextPro thông báo đã thu phí dịch vụ là một phần số tiền đặt cọc và hoàn trả số tiền đặt cọc còn lại vào tài khoản NextPro do Quý khách đã trúng phiên Đấu giá số{{auction_item_code}}'
+    content: '<img src={{image}} alt="" width="189" height="30" /></span></p>
+    <hr />
+    <p>Kính gửi  Ông / bà.<span style="color: red;"> {{name}}, </span></p><br>
+    <p>Chúng tôi xin chân thành cảm ơn Quý khách đã tin tưởng lựa chọn NextPro để hợp tác trong suốt thời gian qua. Bằng thư điện tử này, NextPro xin thông báo đã thu phí dịch vụ là một phần số tiền đặt cọc và hoàn trả vào tài khoản NextPro vì Quý khách đã trúng phiên Đấu giá số.<span style="color: #ff0000;">{{auction_item_code}}</span>.Vui lòng xem chi tiết thông tin tại đường dẫn này: li</span></span></span><a href="{{link}}">link</a></p>
+    <p>Cảm ơn Quý khách đã trao cho Chúng tôi cơ hội để phục vụ Quý khách được tốt hơn.</p>
+    <br>
+    <p>Chân thành cảm ơn đã sử dụng dịch vụ.</p>
+    <p>Trân trọng,</p>
+    <p>Bộ phận Dịch vụ khách hàng</p>
+    <br>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 23
+    language_code : vi
+
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 24
+  fields:
+    title: 'Hồ sơ của Quý khách đã đạt đến giới hạn triển khai Đấu giá điện tử'
+    content: '<img src={{image}} alt="" width="189" height="30" /></span></p>
+    <hr />
+    <p>Kính gửi  Ông / bà.<span style="color: red;"> {{name}}, </span></p><br>
+    <p>Chúng tôi xin chân thành cảm ơn Quý khách đã tin tưởng lựa chọn NextPro để hợp tác trong suốt thời gian qua. Bằng thư điện tử này, Chúng tôi xin thông báo số lần Đấu thầu điện tử cho hồ sơ tài khoản của Quý khách đã đạt mức tối đa và không thể tiếp tục thực hiện các phiên Đấu thầu điển tử.</p>
+    <p>Chúng tôi vẫn duy trình trạng thái hồ sơ tài khoản của Quý khách cho đến khi hết hạn. Nếu Quý khách muốn thực hiện tiếp các phiên Đấu thầu điện tử, vui lòng gia hạn hồ sơ tài khoản hoặc mua dịch vụ hồ sơ mới   <a href="{{link}}"> tại đây.</a></p>
+    <p>Cảm ơn Quý khách đã trao cho Chúng tôi cơ hội để phục vụ Quý khách được tốt hơn.</p>
+    <br>
+    <p>Chân thành cảm ơn đã sử dụng dịch vụ.</p>
+    <p>Trân trọng,</p>
+    <p>Bộ phận Dịch vụ khách hàng</p>
+    <br>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 24
+    language_code : vi
+
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 25
+  fields:
+    title: 'Xin lưu ý! Tài khoản NextPro của Quý khách sẽ hết hạn trong 30 ngày tới'
+    content: '<img src={{image}} alt="" width="189" height="30" /></span></p>
+    <hr />
+    <p>Kính gửi  Ông / bà.<span style="color: red;"> {{name}}, </span></p><br>
+    <p >Chúng tôi xin chân thành cảm ơn Quý khách đã tin tưởng lựa chọn NextPro để hợp tác trong suốt thời gian qua. NextPro xin thông báo tài khoản  <span style="color: #ff0000;">{{scheme}}</span> sẽ hết hạn trong 30 ngày tới. Để gia hạn hoặc nâng cấp tài khoản, Quý khách vui lòng bấm vào đường dẫn này <a href="{{link}}">link</a></p>
+    <p>Cảm ơn Quý khách đã trao cho Chúng tôi cơ hội để phục vụ Quý khách được tốt hơn.</p>
+    <br>
+    <p>Chân thành cảm ơn đã sử dụng dịch vụ.</p>
+    <p>Trân trọng,</p>
+    <p>Bộ phận Dịch vụ khách hàng</p>
+    <br>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 25
+    language_code : vi
+
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 26
+  fields:
+    title: 'Xin lưu ý! Tài khoản NextPro của Quý khách sẽ hết hạn trong 15 ngày tới'
+    content: '<img src={{image}} alt="" width="189" height="30" /></span></p>
+    <hr />
+    <p>Kính gửi  Ông / bà.<span style="color: red;"> {{name}}, </span></p><br>
+    <p >Chúng tôi xin chân thành cảm ơn Quý khách đã tin tưởng lựa chọn NextPro để hợp tác trong suốt thời gian qua. NextPro xin thông báo tài khoản  <span style="color: #ff0000;">{{scheme}}</span> sẽ hết hạn trong 15 ngày tới. Để gia hạn hoặc nâng cấp tài khoản, Quý khách vui lòng bấm vào đường dẫn này <a href="{{link}}">link</a></p>
+    <p>Cảm ơn Quý khách đã trao cho Chúng tôi cơ hội để phục vụ Quý khách được tốt hơn.</p>
+    <br>
+    <p>Chân thành cảm ơn đã sử dụng dịch vụ.</p>
+    <p>Trân trọng,</p>
+    <p>Bộ phận Dịch vụ khách hàng</p>
+    <br>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 26
+    language_code : vi
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 27
+  fields:
+    title: 'Warning! Your NextPro account will expire in next 07 daysp'
+    content: '<img src={{image}} alt="" width="189" height="30" /></span></p>
+    <hr />
+    <p>Kính gửi  Ông / bà.<span style="color: red;"> {{name}}, </span></p><br>
+    <p >Chúng tôi xin chân thành cảm ơn Quý khách đã tin tưởng lựa chọn NextPro để hợp tác trong suốt thời gian qua. NextPro xin thông báo tài khoản  <span style="color: #ff0000;">{{scheme}}</span> sẽ hết hạn trong 07 ngày tới. Để gia hạn hoặc nâng cấp tài khoản, Quý khách vui lòng bấm vào đường dẫn này <a href="{{link}}">link</a></p>
+    <p>Cảm ơn Quý khách đã trao cho Chúng tôi cơ hội để phục vụ Quý khách được tốt hơn.</p>
+    <br>
+    <p>Chân thành cảm ơn đã sử dụng dịch vụ.</p>
+    <p>Trân trọng,</p>
+    <p>Bộ phận Dịch vụ khách hàng</p>
+    <br>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 27
+    language_code : vi
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 28
+  fields:
+    title: 'Warning! Your NextPro account has already expired '
+    content: '<img src={{image}} alt="" width="189" height="30" /></span></p>
+    <hr />
+    <p>Kính gửi  Ông / bà.<span style="color: red;"> {{name}}, </span></p><br>
+    <p>Chúng tôi xin chân thành cảm ơn Quý khách đã tin tưởng lựa chọn NextPro để hợp tác trong suốt thời gian qua. Bằng thư điện tử này, NextPro xin thông báo tài khoản <span style="color: #ff0000;">{{Scheme}}</span> đã hết hạn và chuyển sang tài khoản  <span style="color: #ff0000;"><strong>Không đảm bảo</strong></span> . Để gia hạn hoặc nâng cấp tài khoản, Quý khách vui lòng bấm vào đường dẫn sau đây: <a href="{{link}}">link</a></p>
+
+    <p>Cảm ơn Quý khách đã trao cho Chúng tôi cơ hội để phục vụ Quý khách được tốt hơn.</p>
+    <br>
+    <p>Chân thành cảm ơn đã sử dụng dịch vụ.</p>
+    <p>Trân trọng,</p>
+    <p>Bộ phận Dịch vụ khách hàng</p>
+    <br>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 28
+    language_code : vi
+
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 29
+  fields:
+    title: 'Thông báo nhắc đặt cọc để tham dự Đấu giá điện tử số {{auction_item_code}} trên NextPro'
+    content: '<img src={{image}} alt="" width="189" height="30" /></span></p>
+    <hr />
+    <p>Kính gửi  Ông / bà.<span style="color: red;"> {{name}}, </span></p><br>
+    <p>Chúng tôi xin chân thành cảm ơn Quý khách đã tin tưởng lựa chọn NextPro để hợp tác trong suốt thời gian qua. </p>
+    <p>Quý khách vừa được mời tham dự Đấu giá điện tử trên nền tảng Đấu giá NextPro với mã dự kiến   <span style="color: #ff0000;">{{auction_item_code}}</span> với <span style="color: #ff0000;">{{buyer_name}}</span> Tuy nhiên chúng tôi vẫn chưa nhận được khoản đặt cọc của Quý khách. Vui lòng bấm vào đường dẫn này:  <a style="font-weight: 400;" href="{{link}}">link</a>để đặt cọc, sau khi hoàn thành đặt cọc, Quý khách có thể tiến hành nộp thầu cho phiên Đấu thầu điện tử theo thời gian đã được thông báo.</p>
+    <p>Cảm ơn Quý khách đã trao cho Chúng tôi cơ hội để phục vụ Quý khách được tốt hơn.</p>
+    <br>
+    <p>Chân thành cảm ơn đã sử dụng dịch vụ.</p>
+    <p>Trân trọng,</p>
+    <p>Bộ phận Dịch vụ khách hàng</p>
+    <br>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 29
+    language_code : vi
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 32
+  fields:
+    title: 'Thông báo cho Người mua về việc hủy Đấu giá điện tử - Đấu giá điện tử {{auction_item_code}}'
+    content: '<img src={{image}} alt="" width="189" height="30" /></span></p>
+    <hr />
+    <p>Kính gửi  Ông / bà.<span style="color: red;"> {{name}}, </span></p><br>
+    <p>Chúng tôi xin chính thức thông báo rằng bạn đã hủy Phiên đấu giá điện tử  <span  style="color: red;">{{auction_title}} </span>  với mã số  <span  style="color: red;">{{auction_item_code}}</span> vì lý do <span  style="color: red;">{{reason}}</span></p>
+    <p>&nbsp;</p>
+    <p><span style="font-weight: 400;">Để xem chi tiết Phiên đấu giá điện tử của bạn, vui lòng đăng nhập bằng tài khoản người mua thông qua liên kết sau:<a href="{{link}}">đăng nhập ngay bây giờ.</a>
+    <br>
+    <p>Chân thành cảm ơn đã sử dụng dịch vụ.</p>
+    <p>Trân trọng,</p>
+    <p>Bộ phận Dịch vụ khách hàng</p>
+    <br>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 32
+    language_code : vi
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 33
+  fields:
+    title: 'Thông báo cho nhà cung cấp về việc hủy đấu giá điện tử- Phiên đấu giá điện tử  {{auction_item_code}}'
+    content: '<img src={{image}} alt="" width="189" height="30" /></span></p>
+    <hr />
+    <p>Kính gửi  Ông / bà.<span style="color: red;"> {{name}}, </span></p><br>
+   <p>Chúng tôi xin chính thức thông báo cho bạn rằng  <span style="color: red;">{{buyer_company_name}}</span> đã hủy phiên Đấu giá điện tử  <span style="color: red;">{{Title}}</span> với mã số   <span style="color: red;">{{auction_item_code}}</span></p>
+    <p><span style="font-weight: 400;">Vui lòng xem lý do hủy  <span style="color: red;">{{reason}}.</span></p>
+    <p>Trong trường hợp bạn có thắc mắc, vui lòng liên hệ với người mua có trách nhiệm.</span></p>
+    <p>Chân thành cảm ơn đã sử dụng dịch vụ.</p>
+    <p>Trân trọng,</p>
+    <p>Bộ phận Dịch vụ khách hàng</p>
+    <br>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 33
+    language_code : vi
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 34
+  fields:
+    title: 'Xin chúc mừng! Giao dịch kiếm tiền mới khi đăng ký Mã: {{pro_code}}'
+    content: '<img src={{image}} alt="" width="189" height="30" /></span></p>
+    <hr />
+    <p>Kính gửi Ông/bà.<span style="color: red;"> {{name}}, </span></p>
+    <br>
+    <p>Xin chúc mừng Đại sứ Thương hiệu <span style="color: red;">{{name}}</span> với <span style="color: red;">{{pro_code}}</span> đã kiếm được nhiều tiền hơn với NextPro hôm nay!</p>
+    <br>
+    <p>Gần đây, khách hàng <span style="color: red;">{{user_name}}</span> đã thanh toán để nâng cấp thành công gói dịch vụ <span style="color: red;">{{profile_name}}</span> với tổng giá trị đã thanh toán <span style="color: red;">{% load humanize %}{{profile_amount|intcomma}} VND</span>, vì vậy bạn được thưởng <span style="color: red;">{{commission}}%</span> bằng giá trị trong tổng số <span style="color: red;">{% load humanize %}{{commission_amount|intcomma}} VND</span>.</p>
+    <p>Khoản thanh toán vào tài khoản ngân hàng của bạn sẽ được thực hiện sau vòng tổng hợp kế tiếp.</p>
+    <p>Nếu bạn có bất kỳ câu hỏi nào, vui lòng liên hệ với phòng hỗ trợ dịch vụ của chúng tôi. Xin chân thành cảm ơn Đại sứ Thương hiệu đã đồng hành cùng NextPro trong suốt thời gian qua.</p>
+    <br>
+    <p>Trân thành cảm ơn.</p>
+    <p>Bộ phận Dịch vụ khách hàng</p>
+    <br>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 34
+    language_code : vi
+
+# ----------------------RFX Mailings-----------------------
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 35
+  fields:
+    title: 'Lời mời RFx mới cho nhà cung cấp được chỉ định'
+    content: '<table style="width:100%;"><tr><td><img src="{{image}}" alt="" width="189" height="30" /></td><td style="text-align: right; padding-top: 15px">Lời mời RFx</td></tr></table>
+    <hr />
+    <p>Kính gửi Ông/bà. <span style="color: blue;">{{supplier_user_name}},</span></p>
+    <p>Bạn được mời gửi hồ sơ dự RFx để cung cấp <span style="color: blue;">{{title}}</span> cho <span style="color: blue;">{{buyer_name}}</span> với RFx số. <span style="color: blue;">{{item_code}}</span> có sẵn trên <a href="https://auction.nextpro.io/auth/login">liên kết</a> này.</p>
+    <p>Bằng cách tham gia gói RFx này, bạn cho thấy sự chấp nhận của bạn bị ràng buộc bởi các nguyên tắc được nêu trong RFx và các tệp đính kèm. Chúng tôi cung cấp cùng với RFx các chi tiết chính về yêu cầu của <span style="color: blue;">{{buyer_name}}</span> mà bạn nên xem xét trước khi gửi thông tin.</p>
+    <p>Các thông tin cần được gửi tới RFx số <span style="color: blue;">{{item_code}}</span> trước ngày <span style="color: blue;">{{due_date}},</span> <span style="color: blue;">{{time_value}}</span> thông qua <a href="https://auction.nextpro.io/auth/login">liên kết</a> trong email này.</p>
+    <p>Vui lòng gửi bất kỳ câu hỏi nào liên quan đến nội dung hoặc quy trình của RFx số <span style="color: blue;">{{item_code}}</span> cho các nhân viên đại diện của <span style="color: blue;">{{buyer_name}}</span> có tên trong RFx được đề cập. Bạn không nên liên hệ với nhân viên <span style="color: blue;">{{buyer_name}}</span> khác trừ khi được nhân viên đại diện của <span style="color: blue;">{{buyer_name}}</span> chỉ dẫn làm như vậy. <span style="color: blue;">{{buyer_name}}</span> có quyền loại bỏ và từ chối các báo giá chào RFx được nộp từ các nhà cung cấp không tuân thủ các nguyên tắc này. Tất cả các câu hỏi phải được gửi bằng văn bản lên nền tảng thương mại NextPro hoặc đến địa chỉ email được đề cập trong RFx.</p>
+    <p>Bằng sự lựa chọn thông minh của hệ thống NextPro, chúng tôi tin rằng RFx này phù hợp nhất với hồ sơ công ty của bạn!</p>
+    <p>Nếu bạn có bất kỳ câu hỏi nào, vui lòng liên hệ với phòng hỗ trợ dịch vụ của chúng tôi. Xin chân thành cảm ơn Đại sứ Thương hiệu đã đồng hành cùng NextPro trong suốt thời gian qua.</p>
+    <p>&nbsp;</p>
+    <p>Trân trọng.</p>
+    <p>Phòng Dịch vụ khách hàng</p>
+    <p>&nbsp;</p>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 35
+    language_code : vi
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 36
+  fields:
+    title: 'Lời mời RFx mới cho nhà cung cấp'
+    content: '<table style="width:100%;"><tr><td><img src="{{image}}" alt="" width="189" height="30" /></td><td style="text-align: right; padding-top: 15px">Lời mời RFx</td></tr></table>
+    <hr />
+    <p>Kính gửi Ông/bà. <span style="color: blue;">{{supplier_user_name}},</span></p>
+    <p>Hiện có sẵn trên liên kết cho RFx số <span style="color: blue;">{{item_code}}</span> để gửi hồ sơ trả lời RFx cung cấp <span style="color: blue;">{{title}}</span> cho <span style="color: blue;">{{buyer_name}}</span>. Công ty của bạn đã được lựa chọn bởi hệ thống thông minh NextPro mà chúng tôi tin rằng RFx có sẵn này là phù hợp nhất với hồ sơ công ty của bạn.</p>
+    <p>Bằng cách tham gia gói RFx này, bạn cho thấy sự chấp nhận của bạn bị ràng buộc bởi các nguyên tắc được nêu trong RFx và các tệp đính kèm. Chúng tôi cung cấp cùng với RFx các chi tiết chính về yêu cầu của <span style="color: blue;">{{buyer_name}}</span> mà bạn nên xem xét trước khi gửi thông tin.</p>
+    <p>Các thông tin cần được gửi tới RFx số <span style="color: blue;">{{item_code}}</span> trước ngày <span style="color: blue;">{{due_date}},</span> <span style="color: blue;">{{time_value}}</span> thông qua <a href="https://auction.nextpro.io/auth/login">liên kết</a> trong email này.</p>
+    <p>Vui lòng gửi bất kỳ câu hỏi nào liên quan đến nội dung hoặc quy trình của RFx số <span style="color: blue;">{{item_code}}</span> cho các nhân viên đại diện của <span style="color: blue;">{{buyer_name}}</span> có tên trong RFx được đề cập. Bạn không nên liên hệ với nhân viên <span style="color: blue;">{{buyer_name}}</span> khác trừ khi được nhân viên đại diện của <span style="color: blue;">{{buyer_name}}</span> chỉ dẫn làm như vậy. <span style="color: blue;">{{buyer_name}}</span> có quyền loại bỏ và từ chối các báo giá chào RFx được nộp từ các nhà cung cấp không tuân thủ các nguyên tắc này. Tất cả các câu hỏi phải được gửi bằng văn bản lên nền tảng thương mại NextPro hoặc đến địa chỉ email được đề cập trong RFx.</p>
+    <p>Bằng sự lựa chọn thông minh của hệ thống NextPro, chúng tôi tin rằng RFx này phù hợp nhất với hồ sơ công ty của bạn!</p>
+    <p>&nbsp;</p>
+    <p>Trân trọng.</p>
+    <p>Phòng Dịch vụ khách hàng</p>
+    <p>&nbsp;</p>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 36
+    language_code : vi
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 37
+  fields:
+    title: 'Thông báo cho người mua về ngày hết hạn và so sánh chi phí của báo giá'
+    content: '<table style="width:100%;"><tr><td><img src="{{image}}" alt="" width="189" height="30" /></td><td style="text-align: right; padding-top: 15px">So sánh báo giá</td></tr></table>
+    <hr />
+    <p>Kính gửi Ông/bà. <span style="color: blue;">{{buyer_user_name}},</span></p>
+    <p>RFx của bạn - <span style="color: blue;">{{title}}</span> với số RFx <span style="color: blue;">{{item_code}}</span> đã kết thúc thành công. Đã có <span style="color: blue;">{{number}}</span> báo giá chào thầu đã được gửi trong RFx được đề cập.</p>
+    <p>Để xem chi tiết báo giá chào thầu đã gửi cũng như bảng so sánh giá, vui lòng đăng nhập bằng tài khoản người mua của bạn và mật khẩu phù hợp bằng liên kết sau: <a href="https://auction.nextpro.io/auth/login">đăng nhập ngay</a>.</p>
+    <p>&nbsp;</p>
+    <p>Trân trọng.</p>
+    <p>Phòng Dịch vụ khách hàng</p>
+    <p>&nbsp;</p>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 37
+    language_code : vi
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 38
+  fields:
+    title: 'Thư từ chối đến các nhà cung cấp cho RFx'
+    content: '<table style="width:100%;"><tr><td><img src="{{image}}" alt="" width="189" height="30" /></td><td style="text-align: right; padding-top: 15px">Thư từ chối</td></tr></table>
+    <hr />
+    <p>Kính gửi Ông/bà. <span style="color: blue;">{{supplier_user_name}},</span></p>
+    <p>Mục đích của lá thư này là để thông báo cho bạn rằng việc đánh giá các đề xuất của bạn cho yêu cầu RFx số. <span style="color: blue;">{{item_code}}</span>, được phát hành bởi công ty mua hàng <span style="color: blue;">{{buyer_name}}</span> đã được hoàn thành.</p>
+    <p>Ban Đánh giá Kỹ thuật của công ty mua hàng nêu trên đã đánh giá tất cả các đề xuất theo đúng các tiêu chí đánh giá được nêu trong RFx đã đề cập. Chúng tôi rất tiếc phải thông báo với bạn rằng đề xuất của công ty bạn không được chọn để đi vòng kế tiếp. Lý do từ chối là <span style="color: blue;">{{reason}}</span>.</p>
+    <p>Chúng tôi muốn cảm ơn bạn về đề xuất của bạn và sự quan tâm đến yêu cầu của chúng tôi, và chúng tôi mong muốn sự tham gia của bạn trong các RFx trong tương lai.</p>
+    <p>Nếu bạn có bất kỳ câu hỏi nào về vấn đề này, vui lòng liên hệ với chúng tôi.</p>
+    <p>&nbsp;</p>
+    <p>Trân trọng.</p>
+    <p>Phòng Dịch vụ khách hàng</p>
+    <p>&nbsp;</p>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 38
+    language_code : vi
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 39
+  fields:
+    title: 'Đệ trình phê duyệt RFQ'
+    content: '<table style="width:100%;"><tr><td><img src="{{image}}" alt="" width="189" height="30" /></td><td style="text-align: right; padding-top: 15px">Phê duyệt RFQ</td></tr></table>
+    <hr />
+    <p>Kính gửi Ông/bà. <span style="color: blue;">{{buyer_user_name}},</span></p>
+    <p>Nhân viên mua hàng <span style="color: blue;">{{buyer_name}}</span> vừa gửi cho bạn yêu cầu chào giá số <span style="color: blue;">{{item_code}}</span> cho yêu cầu <span style="color: blue;">{{title}}</span>, tổng ngân sách là <span style="color: blue;">{{bubget}}</span> <span style="color: blue;">{{currency}}</span> để bạn xét duyệt, vui lòng đăng nhập qua <a href="https://auction.nextpro.io/auth/login">liên kết</a> này để xét duyệt.</p>
+    <p>&nbsp;</p>
+    <p>Trân trọng.</p>
+    <p>Phòng Dịch vụ khách hàng</p>
+    <p>&nbsp;</p>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 39
+    language_code : vi
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 40
+  fields:
+    title: 'Thông báo RFQ được phê duyệt'
+    content: '<table style="width:100%;"><tr><td><img src="{{image}}" alt="" width="189" height="30" /></td><td style="text-align: right; padding-top: 15px">RFQ được phê duyệt</td></tr></table>
+    <hr />
+    <p>Kính gửi Ông/bà. <span style="color: blue;">{{buyer_user_name}},</span></p>
+    <p>Yêu cầu chào giá của bạn số <span style="color: blue;">{{item_code}}</span> cho yêu cầu <span style="color: blue;">{{title}}</span>, tổng ngân sách là <span style="color: blue;">{{bubget}}</span> <span style="color: blue;">{{currency}}</span> vừa được duyệt bởi quản lý của bạn và chúng tôi đã đăng yêu cầu này cho mạng lưới nhà cung cấp trên nền tảng NextPro, vui lòng chờ đợi chào giá cạnh tranh nhất từ các nhà cung cấp.</p>
+    <p>&nbsp;</p>
+    <p>Trân trọng.</p>
+    <p>Phòng Dịch vụ khách hàng</p>
+    <p>&nbsp;</p>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 40
+    language_code : vi
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 41
+  fields:
+    title: 'Email thương lượng tự động'
+    content: '<table style="width:100%;"><tr><td><img src="{{image}}" alt="" width="189" height="30" /></td><td style="text-align: right; padding-top: 15px">Thương lượng tự động</td></tr></table>
+    <hr />
+    <p>Kính gửi Ông/bà. <span style="color: blue;">{{supplier_user_name}},</span></p>
+    <p>Gần đây yêu cầu chào giá mà bạn đã tham gia số <span style="color: blue;">{{item_code}}</span>, tiêu đề <span style="color: blue;">{{title}}</span> được phát hành bởi công ty mua hàng <span style="color: blue;">{{buyer_name}}</span>, chúng tôi muốn thông báo với bạn rằng hiện tại bạn đang tạm thời là đơn vị có giá tốt nhất trong giao dịch này. Một lần nữa xin chúc mừng và vui lòng tiếp tục theo dõi liên lạc qua email của chúng tôi để cập nhật trạng thái của RFQ này.</p>
+    <p>&nbsp;</p>
+    <p>Trân trọng.</p>
+    <p>Phòng Dịch vụ khách hàng</p>
+    <p>&nbsp;</p>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 41
+    language_code : vi
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 42
+  fields:
+    title: 'Email thương lượng tự động'
+    content: '<table style="width:100%;"><tr><td><img src="{{image}}" alt="" width="189" height="30" /></td><td style="text-align: right; padding-top: 15px">Thương lượng tự động</td></tr></table>
+    <hr />
+    <p>Kính gửi Ông/bà. <span style="color: blue;">{{supplier_user_name}},</span></p>
+    <p>Gần đây yêu cầu chào giá mà bạn đã tham gia số <span style="color: blue;">{{item_code}}</span>, tiêu đề <span style="color: blue;">{{title}}</span> được phát hành bởi công ty mua hàng <span style="color: blue;">{{buyer_name}}</span>, chúng tôi muốn thông báo với bạn rằng chào giá gần đây của bạn không phải là chào giá cạnh tranh nhất so với những nhà cung cấp khác, có nghĩa là tất cả chào giá đều khá gần nhau. Hãy giảm thêm <span style="color: blue;">{{percentage}}%</span> để trở thành nhà cung cấp chào giá tốt nhất nếu như bạn không muốn chuyển cơ hội kinh doanh này cho nhà cung cấp khác.</p>
+    <p>&nbsp;</p>
+    <p>Trân trọng.</p>
+    <p>Phòng Dịch vụ khách hàng</p>
+    <p>&nbsp;</p>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 42
+    language_code : vi
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 43
+  fields:
+    title: 'Email thương lượng tự động'
+    content: '<table style="width:100%;"><tr><td><img src="{{image}}" alt="" width="189" height="30" /></td><td style="text-align: right; padding-top: 15px">Thương lượng tự động</td></tr></table>
+    <hr />
+    <p>Kính gửi Ông/bà. <span style="color: blue;">{{supplier_user_name}},</span></p>
+    <p>Gần đây yêu cầu chào giá mà bạn đã tham gia số <span style="color: blue;">{{item_code}}</span>, tiêu đề <span style="color: blue;">{{title}}</span> được phát hành bởi công ty mua hàng <span style="color: blue;">{{buyer_name}}</span> vừa được gửi bởi một nhà cung cấp khác với giá tốt hơn của bạn. Vui lòng giảm thêm <span style="color: blue;">{{percentage}}%</span> để trở thành đơn vị có giá tốt nhất và đừng bỏ lỡ cơ hội mở rộng quy mô kinh doanh của bạn với công ty thu mua này.</p>
+    <p>Lưu ý: đừng quên gửi giá ưu đãi tiếp theo của bạn không muộn hơn <span style="color: blue;">{{due_date}},</span> <span style="color: blue;">{{time_value}}</span> qua <a href="https://auction.nextpro.io/auth/login">liên kết</a> trong email này.</p>
+    <p>&nbsp;</p>
+    <p>Trân trọng.</p>
+    <p>Phòng Dịch vụ khách hàng</p>
+    <p>&nbsp;</p>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 43
+    language_code : vi
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 44
+  fields:
+    title: 'So sánh báo giá'
+    content: '<table style="width:100%;"><tr><td><img src="{{image}}" alt="" width="189" height="30" /></td><td style="text-align: right; padding-top: 15px">So sánh báo giá</td></tr></table>
+    <hr />
+    <p>Kính gửi Ông/bà. <span style="color: blue;">{{buyer_user_name}},</span></p>
+    <p>Yêu cầu chào giá của bạn số <span style="color: blue;">{{item_code}}</span> cho yêu cầu <span style="color: blue;">{{title}}</span>, đã hoàn tất thành công cho việc gửi chào giá, có tất cả <span style="color: blue;">{{number}}</span> chào giá từ các nhà cung cấp, để xem chi tiết và so sánh giá vui lòng đăng nhập vào <a href="https://auction.nextpro.io/auth/login">liên kết</a> bằng tài khoản của bạn.</p>
+    <p>&nbsp;</p>
+    <p>Trân trọng.</p>
+    <p>Phòng Dịch vụ khách hàng</p>
+    <p>&nbsp;</p>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 44
+    language_code : vi
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 45
+  fields:
+    title: 'Phê duyệt trao thưởng nhà cung cấp'
+    content: '<table style="width:100%;"><tr><td><img src="{{image}}" alt="" width="189" height="30" /></td><td style="text-align: right; padding-top: 15px">Phê duyệt trao thưởng</td></tr></table>
+    <hr />
+    <p>Kính gửi Ông/bà. <span style="color: blue;">{{buyer_user_name}},</span></p>
+    <p>Yêu cầu chào giá của bạn số <span style="color: blue;">{{item_code}}</span> cho yêu cầu <span style="color: blue;">{{title}}</span>, đã hoàn tất thành công cho việc gửi chào giá, nhân viên phụ trách mua hàng đã đề xuất chọn thầu cho nhà cung cấp <span style="color: blue;">{{supplier_name}}</span>, nhà cung cấp này đã đạt vòng đánh giá kỹ thuật cũng như có đề xuất chào giá tốt nhất, mức tiết kiệm thực tế là <span style="color: blue;">{{percentage}}%</span> so với ngân sách (giá trị tuyệt đối tiết kiệm được là: <span style="color: blue;">{{amount}}</span> <span style="color: blue;">{{currency}}</span>).</p>
+    <p>Để xem chi tiết đề xuất và so sánh giá vui lòng đăng nhập vào <a href="https://auction.nextpro.io/auth/login">liên kết</a> bằng tài khoản của bạn và vui lòng xét duyệt đề xuất chọn thầu này.</p>
+    <p>&nbsp;</p>
+    <p>Trân trọng.</p>
+    <p>Phòng Dịch vụ khách hàng</p>
+    <p>&nbsp;</p>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 45
+    language_code : vi
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 46
+  fields:
+    title: 'PO đến nhà cung cấp'
+    content: '<p><img src="{{image}}" alt="" width="189" height="30" /></p>
+    <hr />
+    <p>Kính gửi Ông/Bà <span style="color: red;"> {{buyer_name}} </span></p>
+    <p>&nbsp;</p>
+    <p>Xin chúc mừng! Công ty mua hàng {{buyer_company_long_name}} đã quyết định chọn công ty bạn là đơn vị trúng thầu cho gói yêu cầu số <span style="color: blue;">{{item_code}}</span>, cung cấp <span style="color: blue;">{{title}}</span>.</p>
+    <p>&nbsp;</p>
+    <p>Để xem chi tiết đơn hàng, vui lòng đăng nhập vào <a href="https://auction.nextpro.io/auth/login">liên kết</a> này bằng tài khoản của bạn và vui lòng xác nhận đơn hàng này trên hệ thống cho bên mua hàng.</p>
+    <p>&nbsp;</p>
+    <p>Trân Trọng,</p>
+    <p>Phòng Dịch vụ Khách hàng.</p>
+    <p>&nbsp;</p>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 4, 57 Lê Thị Hồng Gấm</p>
+    <p>Phường Nguyễn Thái Bình , Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+    <p><a href="info@nextpro.io">info@nextpro.io</a> | <a href="http://www.nextpro.io">www.nextpro.io</a></p>
+    <p>&nbsp;</p>
+    <hr />
+    <p><span style="color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 46
+    language_code : vi
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 47
+  fields:
+    title: 'Xác nhận PO'
+    content: '<table style="width:100%;"><tr><td><img src="{{image}}" alt="" width="189" height="30" /></td><td style="text-align: right; padding-top: 15px">Xác nhận PO</td></tr></table>
+    <hr />
+    <p>Kính gửi Ông/bà. <span style="color: blue;">{{buyer_user_name}},</span></p>
+    <p>Đơn hàng của bạn số <span style="color: blue;">{{item_code}}</span>, cho yêu cầu <span style="color: blue;">{{title}}</span>, đã được nhà cung cấp <span style="color: blue;">{{supplier_name}}</span> xác nhận trên hệ thống. Vui lòng tiếp tục theo dõi tình trạng giao hàng của nhà cung cấp này.</p>
+    <p>&nbsp;</p>
+    <p>Trân trọng.</p>
+    <p>Phòng Dịch vụ khách hàng</p>
+    <p>&nbsp;</p>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 47
+    language_code : vi
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 48
+  fields:
+    title: 'Thông báo giao PO'
+    content: '<table style="width:100%;"><tr><td><img src="{{image}}" alt="" width="189" height="30" /></td><td style="text-align: right; padding-top: 15px">Thông báo giao PO</td></tr></table>
+    <hr />
+    <p>Kính gửi Ông/bà. <span style="color: blue;">{{buyer_user_name}}, {{supplier_user_name}},</span></p>
+    <p>Chúng tôi muốn thông báo đến các bạn, hôm nay là ngày giao hàng của đơn hàng số <span style="color: blue;">{{item_code}}</span>, cho yêu cầu <span style="color: blue;">{{title}}</span>, vui lòng sắp xếp việc giao nhận hàng hóa/dịch vụ trên hệ thống cho phù hợp.</p>
+    <p>&nbsp;</p>
+    <p>Trân trọng.</p>
+    <p>Phòng Dịch vụ khách hàng</p>
+    <p>&nbsp;</p>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 48
+    language_code : vi
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 49
+  fields:
+    title: 'Hủy RFQ'
+    content: '<table style="width:100%;"><tr><td><img src="{{image}}" alt="" width="189" height="30" /></td><td style="text-align: right; padding-top: 15px">Hủy RFQ</td></tr></table>
+    <hr />
+    <p>Kính gửi Ông/bà. <span style="color: blue;">{{buyer_user_name}},</span></p>
+    <p>Bạn vừa hủy yêu cầu chào giá số <span style="color: blue;">{{item_code}}</span>, cho yêu cầu <span style="color: blue;">{{title}}</span>. Theo hồ sơ của bạn, bạn được phép hủy tối đa <span style="color: blue;">{{max_cancellation}}</span> yêu cầu chào giá. Số lượng còn lại của yêu cầu chào giá được phép hủy của bạn là <span style="color: blue;">{{remain_cancellation}}</span>. Do vậy, để có thể tạo tiếp những yêu cầu chào giá kế tiếp, bạn hãy vào <a href="https://auction.nextpro.io/auth/login">liên kết</a> này để năng cấp hồ sơ của mình cho phù hợp.</p>
+    <p>Thank you for choosing NextPro platform for your buying decision.</p>
+    <p>&nbsp;</p>
+    <p>Trân trọng.</p>
+    <p>Phòng Dịch vụ khách hàng</p>
+    <p>&nbsp;</p>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 49
+    language_code : vi
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 50
+  fields:
+    title: 'Đánh giá nhà cung cấp'
+    content: '<table style="width:100%;"><tr><td><img src="{{image}}" alt="" width="189" height="30" /></td><td style="text-align: right; padding-top: 15px">Đánh giá nhà cung cấp</td></tr></table>
+    <hr />
+    <p>Kính gửi Ông/bà. <span style="color: blue;">{{supplier_user_name}},</span></p>
+    <p>Người mua hàng của bạn vừa thực hiện việc đánh giá cho đơn hàng số <span style="color: blue;">{{item_code}}</span>, cho yêu cầu <span style="color: blue;">{{title}}</span>. Để xem chi tiết, vui lòng đăng nhập vào <a href="https://auction.nextpro.io/auth/login">liên kết</a> này và gửi phản hồi nếu cần thiết.</p>
+    <p>&nbsp;</p>
+    <p>Trân trọng.</p>
+    <p>Phòng Dịch vụ khách hàng</p>
+    <p>&nbsp;</p>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 50
+    language_code : vi
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 51
+  fields:
+    title: 'Thông báo hoàn thành giao hàng'
+    content: '<table style="width:100%;"><tr><td><img src="{{image}}" alt="" width="189" height="30" /></td><td style="text-align: right; padding-top: 15px">Hoàn thành giao hàng</td></tr></table>
+    <hr />
+    <p>Kính gửi Ông/bà. <span style="color: blue;">{{buyer_user_name}},</span></p>
+    <p>Nhà cung cấp của bạn vừa hoàn thành việc giao hàng hóa/dịch vụ cho đơn hàng số <span style="color: blue;">{{item_code}}</span>, cho yêu cầu <span style="color: blue;">{{title}}</span>. Vui lòng đăng nhập vào <a href="https://auction.nextpro.io/auth/login">liên kết</a> này để đánh giá mức độ hoàn thành của nhà cung cấp. Bước đánh giá này sẽ đóng sau 8 giờ và đạt 5 sao đánh giá nếu không nhận bất kỳ thông tin từ người mua.</p>
+    <p>&nbsp;</p>
+    <p>Trân trọng.</p>
+    <p>Phòng Dịch vụ khách hàng</p>
+    <p>&nbsp;</p>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 51
+    language_code : vi
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 52
+  fields:
+    title: 'Email thông báo kết thúc RFX'
+    content: '<p><img src="{{image}}" alt="" width="189" height="30" /></p>
+    <hr />
+    <p>Kính gửi Ông/bà. <span style="color: blue;">{{buyer_user_name}},</span></p>
+    <p>Yêu cầu chào giá <span style="color: blue;">{{title}}</span> của bạn với số <span style="color: blue;">{{item_code}}</span> đã kết thúc thành công. <span style="color: blue;">{{number_submitted}}</span> báo giá chào đã được gửi trong Yêu cầu chào giá được đề cập.</p>
+    <p>Để xem chi tiết Yêu cầu chào giá của bạn, vui lòng đăng nhập bằng tài khoản người mua và mật khẩu phù hợp bằng liên kết sau: <a href="https://auction.nextpro.io/auth/login">đăng nhập ngay.</a></p>
+    <p>&nbsp;</p>
+    <p>Trân trọng.</p>
+    <p>Phòng Dịch vụ khách hàng</p>
+    <p>&nbsp;</p>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 52
+    language_code : vi
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 53
+  fields:
+    title: 'Email thông báo kết thúc RFX'
+    content: '<p><img src="{{image}}" alt="" width="189" height="30" /></p>
+    <hr />
+    <p>Kính gửi Ông/bà. <span style="color: blue;">{{supplier_user_name}},</span></p>
+    <p>Cảm ơn bạn đã tham gia vào Yêu cầu <span style="color: blue;">{{title}}</span>, số <span style="color: blue;">{{item_code}}</span>, được phát hành bởi công ty mua hàng <span style="color: blue;">{{buyer_company_name}}</span> đã kết thúc thành công. <span style="color: blue;">{{number_submitted}}</span> đề xuất của bạn đã được gửi trong Yêu cầu này.</p>
+    <p>Để xem chi tiết các đề xuất của bạn, vui lòng đăng nhập bằng tài khoản nhà cung cấp và mật khẩu phù hợp bằng liên kết sau: <a href="https://auction.nextpro.io/auth/login">đăng nhập ngay.</a></p>
+    <p>Xin vui lòng chờ đợi kết quả cho yêu cầu này từ quyết định của người mua hàng.</p>
+    <p>&nbsp;</p>
+    <p>Trân trọng.</p>
+    <p>Phòng Dịch vụ khách hàng</p>
+    <p>&nbsp;</p>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 10, Tòa nhà Miss Áo Dài</p>
+    <p>21 Nguyễn Trung Ngạn,</p>
+    <p>Phường Bến Nghé, Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+     
+    <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> | <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+    <hr />
+    <p><span style="font-weight: 400; color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 53
+    language_code : vi
+
+- model: 'master_data.emailTemplatesTranslation'
+  pk: 54
+  fields:
+    title: 'PO đến người mua'
+    content: '<p><img src="{{image}}" alt="" width="189" height="30" /></p>
+    <hr />
+    <p>Kính gửi Ông/Bà <span style="color: red;"> {{buyer_name}} </span></p>
+    <p>&nbsp;</p>
+    <p>Xin chúc mừng! Công ty mua hàng {{buyer_company_long_name}} đã quyết định chọn công ty bạn là đơn vị trúng thầu cho gói yêu cầu số <span style="color: blue;">{{item_code}}</span>, cung cấp <span style="color: blue;">{{title}}</span>.</p>
+    <p>&nbsp;</p>
+    <p>Để xem chi tiết đơn hàng, vui lòng đăng nhập vào <a href="https://auction.nextpro.io/auth/login">liên kết</a> này bằng tài khoản của bạn và vui lòng xác nhận đơn hàng này trên hệ thống cho bên mua hàng.</p>
+    <p>&nbsp;</p>
+    <p>Trân Trọng,</p>
+    <p>Phòng Dịch vụ Khách hàng.</p>
+    <p>&nbsp;</p>
+    <p><strong>Công ty TNHH Dịch vụ Cung ứng Quốc tế NextPro</strong></p>
+    <p>Tầng 4, 57 Lê Thị Hồng Gấm</p>
+    <p>Phường Nguyễn Thái Bình , Quận 1,</p>
+    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+    <p><a href="info@nextpro.io">info@nextpro.io</a> | <a href="http://www.nextpro.io">www.nextpro.io</a></p>
+    <p>&nbsp;</p>
+    <hr />
+    <p><span style="color: gray;">Thông tin trong e-mail này chỉ dành cho người nhận e-mail trực tiếp và có thể chứa thông tin bí mật và/hoặc thông tin đặc quyền. Nếu bạn không phải là người nhận như chỉ định, xin thông báo rằng việc bạn đọc, lưu, phân phối hoặc sử dụng nội dung của e-mail này bị cấm. Nếu bạn nhận được e-mail này do nhầm lẫn, xin vui lòng thông báo cho người gửi và xoá e-mail.</span></p>'
+    email_templates: 54
+    language_code : vi

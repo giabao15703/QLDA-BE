@@ -1,0 +1,266 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE HTML>
+<html lang="vi">
+
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4 portrait;
+            margin: 1cm;
+        }
+        @font-face {
+            font-family: font;
+            src: "{% static '/Times New Roman 400.ttf' %}";
+        }
+        @font-face {
+            font-family: Roboto;
+            src: "{% static '/Roboto-Regular.ttf' %}";
+        }
+        body {
+            font-family: "Roboto", sans-serif;
+        }
+
+        .font_face {
+            font-family: "Roboto", sans-serif;
+        }
+
+        .fs-8 {
+            font-size: 8pt;
+            margin-bottom: 0in;
+            text-align: left;
+            margin-left: 5px;
+        }
+
+        .w-100 {
+            width: 100% !important;
+        }
+
+        .mt-0 {
+            margin-top: 0 !important;
+        }
+
+        .mt-5px {
+            margin-top: 5px !important;
+        }
+
+
+
+        .fs-9 {
+            font-size: 9pt;
+            text-align: center;
+        }
+
+        td {
+            border: 1px solid #000000;
+
+        }
+
+        tr.detail-table-content td {
+            font-size: 14px;
+        }
+
+        tr.tr-fs-14 td {
+            font-size: 14px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        table.info-table {
+            padding: 1px;
+            border-spacing: 0;
+            border-collapse: separate;
+        }
+
+
+        table.detail-table,
+        table.signature-table {
+            padding: 7px;
+            border-spacing: 0;
+            border-collapse: separate;
+        }
+
+        .bg-dark {
+            background-color: #bfbfbf;
+        }
+
+        .header {
+            width: 100%;
+        }
+
+        .header img {
+            height: 36px;
+            width: 120px;
+        }
+
+
+        table td {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        table {
+            table-layout: fixed;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header" style="padding-bottom: -27px;">
+        <div style="width: 50%; text-align: left; float: left;"><img src="/project/static/invoice.png" /></div>
+        <div style="float: right; width: 50%; text-align: right;">
+            <p style="font-size: 15px;" class="font_face">Vượt xa mọi chuẩn mực và sự tuân thủ</p>
+        </div>
+    </div>
+    <hr style="margin-top: 0px !important; width: 100%;" />
+    <div class="title">
+        <p style="text-align: right; font-size: 35px; margin-bottom: -120;"><strong> HÓA ĐƠN DỰ THẢO</strong></p>
+    </div>
+    <center>
+        <table class="info-table">
+            <tr>
+                <td style="border: 1px solid #000000; width: 33.33%;" valign="top">
+                    <p class="fs-8" style="padding-top: 10px;"><strong>Người bán:</strong></p>
+                    <p class="fs-8 mt-5px"><strong> Tên công ty</strong>:Công ty TNHH Dịch Vụ Cung Ứng Quốc Tế
+                        NextPro.
+                    </p>
+                    <p class="fs-8 mt-5px"><strong> MST:</strong>0316185082</p>
+                    <p class="fs-8 mt-5px"><strong> Địa chỉ</strong>:Tầng 10, tòa nhà Miss Áo Dài,</p>
+                    <p class="fs-8 mt-0">21 Nguyễn Trung Ngạn <br /> Phường Bến Nghé, Quận 1 <br />Tp.HCM, Việt Nam
+                    </p>
+                </td>
+                <td style="width: 33.33%; vertical-align: top;">
+                    <p class="fs-8" style="padding-top: 10px;"><strong>Người mua:</strong></p>
+                    <p class="fs-8 mt-5px "><strong> Tên công ty</strong>:<span class="font_face">
+                            {% block company_full_name %} {{ company_full_name}} {% endblock %}</span></p>
+                    <p class="fs-8 mt-5px"><strong> MST:</strong>
+                        {% block company_tax %} {{ company_tax}} {% endblock %}
+                    </p>
+                    <p class="fs-8 mt-5px"><strong> Địa chỉ</strong>:<span class="font_face">
+                            {% block Address %} {{ company_address}} {% endblock %}</span></p>
+                    <p class="fs-8 mt-5px"><strong> Điện thoại</strong>:{% block phone %} {{ phone}} {% endblock %}
+                    </p>
+                </td>
+                <td style="width: 33.34%; vertical-align: top;">
+                    <p class="fs-8" style="padding-top: 10px;"><strong>Số hóa đơn</strong>:
+                        {% block invoice_no %} {{invoice_no}} {% endblock %}</p>
+                    <p class="fs-8 mt-5px"><strong>Ngày hóa đơn</strong>:
+                        {% block invoice_date %} {{ invoice_date}}{%endblock %}</p>
+                </td>
+            </tr>
+        </table>
+    </center>
+    <center style="margin-top: 40px;">
+        <table class="detail-table">
+            <tbody>
+                <tr>
+                    <td class="bg-dark" style="width: 10%;">
+                        <p class="fs-9"><strong>STT</strong></p>
+                    </td>
+                    <td class="bg-dark" style="width: 35%;">
+                        <p class="fs-9"><strong>Diễn giải</strong></p>
+                    </td>
+                    <td class="bg-dark" style="width: 15%;">
+                        <p class="fs-9"><strong>Số lượng </strong></p>
+                    </td>
+                    <td class="bg-dark" style="width: 20%;">
+                        <p class="fs-9"><strong>Đơn giá (VND)</strong></p>
+                    </td>
+                    <td class="bg-dark" style="width: 20%;">
+                        <p class="fs-9"><strong>Thành tiền (VND)</strong></p>
+                    </td>
+                </tr>
+
+
+                {% block list_detail %}
+
+                {% for detail in detail_list %}
+                <tr class="detail-table-content">
+                    <td style="width: 10%;">
+                        <p>{{ forloop.counter}}</p>
+                    </td>
+                    <td style="width: 35%;">
+                        <p style="text-align: left;">{{detail.description}}</p>
+                    </td>
+                    <td style="width: 15%;">
+                        <p>{{detail.quantity}}</p>
+                    </td>
+                    <td style="width: 20%;">
+                        <p>{{detail.unit_price}}</p>
+                    </td>
+                    <td style="width: 20%;">
+                        <p>{{detail.total_amount}}</p>
+                    </td>
+                </tr>
+                {% endfor %}
+                {% endblock %}
+                <tr class="tr-fs-14">
+                    <td style="border: 1px solid #000000;" colspan="4">
+                        <p style="text-align: left;"><strong> Cộng </strong></p>
+                    </td>
+                    <td style="border: 1px solid #000000; vertical-align: top;">
+                        <p>{% block subtotal %} {{sub_total}} {% endblock %}</p>
+                    </td>
+                </tr>
+                <tr class="tr-fs-14">
+                    <td style="border: 1px solid #000000;" colspan="4">
+                        <p style="text-align: left;"><strong>Thuế GTGT 10%</strong></p>
+                    </td>
+                    <td style="border: 1px solid #000000; vertical-align: top;">
+                        <p>{% block tax %} {{tax}} {% endblock %}</p>
+                    </td>
+                </tr>
+                <tr class="tr-fs-14">
+                    <td style="border: 1px solid #000000;" colspan="4">
+                        <p style="text-align: left;"><strong>Tổng cộng</strong></p>
+                    </td>
+                    <td style="border: 1px solid #000000; vertical-align: top;">
+                        <p><strong> {% block total %} {{total}} {% endblock %} </strong></p>
+                    </td>
+                </tr>
+                <tr class="tr-fs-14">
+                    <td style="border: 1px solid #000000;" colspan="5">
+                        <p class="font_face" style="text-align: left; color: black;">Số tiền viết bằng chữ:
+                            {% block total_string%} {{total_string}} {% endblock %}</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </center>
+    <p style="margin-bottom: 0.11in; line-height: 108%; text-align: justify;"><em style="font-size: 12px;">
+            Xin lưu ý rằng Hóa đơn Dự thảo này chỉ nhằm mục đích kiểm tra và tham khảo thông tin mua dịch vụ và không có
+            hiệu lực đối với các hình thức thanh toán và thưởng mại khác. NextPro sẽ không chịu trách nhiệm trực tiếp
+            hoặc gián tiếp nào liên quan đến việc sử dụng sai Bản thảo Hóa đơn này.</em></p>
+    <center>
+        <table class="signature-table">
+            <tbody>
+                <tr>
+                    <td style="border: 1px solid #000000; background-color: #bfbfbf;">
+                        <p style="text-align: center;"><strong style="font-size: 12px;">Chữ ký người bán </strong></p>
+                    </td>
+                    <td style="border: 1px solid #000000; padding: 0in 0.08in; background-color: #bfbfbf;">
+                        <p style="text-align: center;"><strong style="font-size: 12px;">
+                                Chữ ký người mua </strong></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #000000; height: 90px;">&nbsp;</td>
+                    <td style="border: 1px solid #000000; height: 90px;">&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </center>
+    <p style="margin-bottom: 0.11in; line-height: 108%;">&nbsp;</p>
+    <div title="footer">
+        <p style="margin-top: 0.46in; margin-bottom: 0in; line-height: 100%; text-align: center;"><em>Bản thỏa hóa đơn
+                từ NextPro</em></p>
+    </div>
+</body>
+
+</html>

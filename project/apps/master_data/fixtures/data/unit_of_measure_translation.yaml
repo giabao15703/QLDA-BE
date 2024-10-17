@@ -1,0 +1,384 @@
+- model: master_data.UnitofMeasureTranslation
+  pk: 1
+  fields:
+    name: cái
+    language_code: vi
+    unit_of_measure: 1
+- model: master_data.UnitofMeasureTranslation
+  pk: 2
+  fields:
+    name: mỗi cái
+    language_code: vi
+    unit_of_measure: 2
+- model: master_data.UnitofMeasureTranslation
+  pk: 3
+  fields:
+    name: túi
+    language_code: vi
+    unit_of_measure: 3
+- model: master_data.UnitofMeasureTranslation
+  pk: 4
+  fields:
+    name: chai
+    language_code: vi
+    unit_of_measure: 4
+- model: master_data.UnitofMeasureTranslation
+  pk: 5
+  fields:
+    name: hộp
+    language_code: vi
+    unit_of_measure: 5
+- model: master_data.UnitofMeasureTranslation
+  pk: 6
+  fields:
+    name: caratage
+    language_code: vi
+    unit_of_measure: 6
+- model: master_data.UnitofMeasureTranslation
+  pk: 7
+  fields:
+    name: thùng giấy carton
+    language_code: vi
+    unit_of_measure: 7
+- model: master_data.UnitofMeasureTranslation
+  pk: 8
+  fields:
+    name: thùng
+    language_code: vi
+    unit_of_measure: 8
+- model: master_data.UnitofMeasureTranslation
+  pk: 9
+  fields:
+    name: centimet
+    language_code: vi
+    unit_of_measure: 9
+- model: master_data.UnitofMeasureTranslation
+  pk: 10
+  fields:
+    name: cuộn
+    language_code: vi
+    unit_of_measure: 10
+- model: master_data.UnitofMeasureTranslation
+  pk: 11
+  fields:
+    name: thùng
+    language_code: vi
+    unit_of_measure: 11
+- model: master_data.UnitofMeasureTranslation
+  pk: 12
+  fields:
+    name: centimet khối
+    language_code: vi
+    unit_of_measure: 12
+- model: master_data.UnitofMeasureTranslation
+  pk: 13
+  fields:
+    name: decimet khối
+    language_code: vi
+    unit_of_measure: 13
+- model: master_data.UnitofMeasureTranslation
+  pk: 14
+  fields:
+    name: fut khối
+    language_code: vi
+    unit_of_measure: 14
+- model: master_data.UnitofMeasureTranslation
+  pk: 15
+  fields:
+    name: mét khối
+    language_code: vi
+    unit_of_measure: 15
+- model: master_data.UnitofMeasureTranslation
+  pk: 16
+  fields:
+    name: ngày
+    language_code: vi
+    unit_of_measure: 16
+- model: master_data.UnitofMeasureTranslation
+  pk: 17
+  fields:
+    name: decimet
+    language_code: vi
+    unit_of_measure: 17
+- model: master_data.UnitofMeasureTranslation
+  pk: 18
+  fields:
+    name: tá
+    language_code: vi
+    unit_of_measure: 18
+- model: master_data.UnitofMeasureTranslation
+  pk: 19
+  fields:
+    name: mỗi dặm
+    language_code: vi
+    unit_of_measure: 19
+- model: master_data.UnitofMeasureTranslation
+  pk: 20
+  fields:
+    name: gallon
+    language_code: vi
+    unit_of_measure: 20
+- model: master_data.UnitofMeasureTranslation
+  pk: 21
+  fields:
+    name: gram
+    language_code: vi
+    unit_of_measure: 21
+- model: master_data.UnitofMeasureTranslation
+  pk: 22
+  fields:
+    name: hectoliter
+    language_code: vi
+    unit_of_measure: 22
+- model: master_data.UnitofMeasureTranslation
+  pk: 23
+  fields:
+    name: giờ
+    language_code: vi
+    unit_of_measure: 23
+- model: master_data.UnitofMeasureTranslation
+  pk: 24
+  fields:
+    name: inch
+    language_code: vi
+    unit_of_measure: 24
+- model: master_data.UnitofMeasureTranslation
+  pk: 25
+  fields:
+    name: kg
+    language_code: vi
+    unit_of_measure: 25
+- model: master_data.UnitofMeasureTranslation
+  pk: 26
+  fields:
+    name: kg/mét khối
+    language_code: vi
+    unit_of_measure: 26
+- model: master_data.UnitofMeasureTranslation
+  pk: 27
+  fields:
+    name: km
+    language_code: vi
+    unit_of_measure: 27
+- model: master_data.UnitofMeasureTranslation
+  pk: 28
+  fields:
+    name: bộ
+    language_code: vi
+    unit_of_measure: 28
+- model: master_data.UnitofMeasureTranslation
+  pk: 29
+  fields:
+    name: kilowatt/giờ
+    language_code: vi
+    unit_of_measure: 29
+- model: master_data.UnitofMeasureTranslation
+  pk: 30
+  fields:
+    name: lít
+    language_code: vi
+    unit_of_measure: 30
+- model: master_data.UnitofMeasureTranslation
+  pk: 31
+  fields:
+    name: megawatt/giờ
+    language_code: vi
+    unit_of_measure: 31
+- model: master_data.UnitofMeasureTranslation
+  pk: 32
+  fields:
+    name: mét
+    language_code: vi
+    unit_of_measure: 32
+- model: master_data.UnitofMeasureTranslation
+  pk: 33
+  fields:
+    name: micro mét
+    language_code: vi
+    unit_of_measure: 33
+- model: master_data.UnitofMeasureTranslation
+  pk: 34
+  fields:
+    name: dặm
+    language_code: vi
+    unit_of_measure: 34
+- model: master_data.UnitofMeasureTranslation
+  pk: 35
+  fields:
+    name: miligram
+    language_code: vi
+    unit_of_measure: 35
+- model: master_data.UnitofMeasureTranslation
+  pk: 36
+  fields:
+    name: miligram/lít
+    language_code: vi
+    unit_of_measure: 36
+- model: master_data.UnitofMeasureTranslation
+  pk: 37
+  fields:
+    name: mili lít
+    language_code: vi
+    unit_of_measure: 37
+- model: master_data.UnitofMeasureTranslation
+  pk: 38
+  fields:
+    name: mili mét
+    language_code: vi
+    unit_of_measure: 38
+- model: master_data.UnitofMeasureTranslation
+  pk: 39
+  fields:
+    name: mili giây
+    language_code: vi
+    unit_of_measure: 39
+- model: master_data.UnitofMeasureTranslation
+  pk: 40
+  fields:
+    name: phút
+    language_code: vi
+    unit_of_measure: 40
+- model: master_data.UnitofMeasureTranslation
+  pk: 41
+  fields:
+    name: tháng
+    language_code: vi
+    unit_of_measure: 41
+- model: master_data.UnitofMeasureTranslation
+  pk: 42
+  fields:
+    name: nanomet
+    language_code: vi
+    unit_of_measure: 42
+- model: master_data.UnitofMeasureTranslation
+  pk: 43
+  fields:
+    name: nano giây
+    language_code: vi
+    unit_of_measure: 43
+- model: master_data.UnitofMeasureTranslation
+  pk: 44
+  fields:
+    name: đơn vị khác
+    language_code: vi
+    unit_of_measure: 44
+- model: master_data.UnitofMeasureTranslation
+  pk: 45
+  fields:
+    name: ounce
+    language_code: vi
+    unit_of_measure: 45
+- model: master_data.UnitofMeasureTranslation
+  pk: 46
+  fields:
+    name: gói hàng
+    language_code: vi
+    unit_of_measure: 46
+- model: master_data.UnitofMeasureTranslation
+  pk: 47
+  fields:
+    name: đôi
+    language_code: vi
+    unit_of_measure: 47
+- model: master_data.UnitofMeasureTranslation
+  pk: 48
+  fields:
+    name: pallete
+    language_code: vi
+    unit_of_measure: 48
+- model: master_data.UnitofMeasureTranslation
+  pk: 49
+  fields:
+    name: bảng điều khiển
+    language_code: vi
+    unit_of_measure: 49
+- model: master_data.UnitofMeasureTranslation
+  pk: 50
+  fields:
+    name: pascal thứ hai
+    language_code: vi
+    unit_of_measure: 50
+- model: master_data.UnitofMeasureTranslation
+  pk: 51
+  fields:
+    name: picosecond
+    language_code: vi
+    unit_of_measure: 51
+- model: master_data.UnitofMeasureTranslation
+  pk: 52
+  fields:
+    name: điểm
+    language_code: vi
+    unit_of_measure: 52
+- model: master_data.UnitofMeasureTranslation
+  pk: 53
+  fields:
+    name: pund
+    language_code: vi
+    unit_of_measure: 53
+- model: master_data.UnitofMeasureTranslation
+  pk: 54
+  fields:
+    name: giây
+    language_code: vi
+    unit_of_measure: 54
+- model: master_data.UnitofMeasureTranslation
+  pk: 55
+  fields:
+    name: đơn vị dịch vụ
+    language_code: vi
+    unit_of_measure: 55
+- model: master_data.UnitofMeasureTranslation
+  pk: 56
+  fields:
+    name: centimet vuông
+    language_code: vi
+    unit_of_measure: 56
+- model: master_data.UnitofMeasureTranslation
+  pk: 57
+  fields:
+    name: mét vuông
+    language_code: vi
+    unit_of_measure: 57
+- model: master_data.UnitofMeasureTranslation
+  pk: 58
+  fields:
+    name: milimet vuông
+    language_code: vi
+    unit_of_measure: 58
+- model: master_data.UnitofMeasureTranslation
+  pk: 59
+  fields:
+    name: nghìn
+    language_code: vi
+    unit_of_measure: 59
+- model: master_data.UnitofMeasureTranslation
+  pk: 60
+  fields:
+    name: tấn
+    language_code: vi
+    unit_of_measure: 60
+- model: master_data.UnitofMeasureTranslation
+  pk: 61
+  fields:
+    name: đơn vị
+    language_code: vi
+    unit_of_measure: 61
+- model: master_data.UnitofMeasureTranslation
+  pk: 62
+  fields:
+    name: tuần
+    language_code: vi
+    unit_of_measure: 62
+- model: master_data.UnitofMeasureTranslation
+  pk: 63
+  fields:
+    name: Tải đầy container
+    language_code: vi
+    unit_of_measure: 63
+- model: master_data.UnitofMeasureTranslation
+  pk: 64
+  fields:
+    name: Tải ít container
+    language_code: vi
+    unit_of_measure: 64

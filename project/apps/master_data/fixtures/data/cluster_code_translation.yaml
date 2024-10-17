@@ -1,0 +1,3936 @@
+- model: master_data.clusterCodeTranslation
+  pk: "1"
+  fields:
+    cluster_code_id: "1"
+    language_code: "en"
+    name: "Household appliance"
+- model: master_data.clusterCodeTranslation
+  pk: "2"
+  fields:
+    cluster_code_id: "1"
+    language_code: "vi"
+    name: "Đồ dùng gia đình"
+- model: master_data.clusterCodeTranslation
+  pk: "3"
+  fields:
+    cluster_code_id: "2"
+    language_code: "en"
+    name: "Audio, video device"
+- model: master_data.clusterCodeTranslation
+  pk: "4"
+  fields:
+    cluster_code_id: "2"
+    language_code: "vi"
+    name: "Thiết bị âm thanh, hình ảnh"
+- model: master_data.clusterCodeTranslation
+  pk: "5"
+  fields:
+    cluster_code_id: "3"
+    language_code: "en"
+    name: "Smart electronic appliance"
+- model: master_data.clusterCodeTranslation
+  pk: "6"
+  fields:
+    cluster_code_id: "3"
+    language_code: "vi"
+    name: "Thiết bị điện tử thông minh"
+- model: master_data.clusterCodeTranslation
+  pk: "7"
+  fields:
+    cluster_code_id: "4"
+    language_code: "en"
+    name: "Watch, jewelry, eyewear"
+- model: master_data.clusterCodeTranslation
+  pk: "8"
+  fields:
+    cluster_code_id: "4"
+    language_code: "vi"
+    name: "Đồng hồ, trang sức, kính"
+- model: master_data.clusterCodeTranslation
+  pk: "9"
+  fields:
+    cluster_code_id: "5"
+    language_code: "en"
+    name: "Fashion accessory"
+- model: master_data.clusterCodeTranslation
+  pk: "10"
+  fields:
+    cluster_code_id: "5"
+    language_code: "vi"
+    name: "Phụ kiện thời trang"
+- model: master_data.clusterCodeTranslation
+  pk: "11"
+  fields:
+    cluster_code_id: "6"
+    language_code: "en"
+    name: "Textile and leather product"
+- model: master_data.clusterCodeTranslation
+  pk: "12"
+  fields:
+    cluster_code_id: "6"
+    language_code: "vi"
+    name: "Sản phẩm vải và da"
+- model: master_data.clusterCodeTranslation
+  pk: "13"
+  fields:
+    cluster_code_id: "7"
+    language_code: "en"
+    name: "Apparel"
+- model: master_data.clusterCodeTranslation
+  pk: "14"
+  fields:
+    cluster_code_id: "7"
+    language_code: "vi"
+    name: "Trang phục"
+- model: master_data.clusterCodeTranslation
+  pk: "15"
+  fields:
+    cluster_code_id: "8"
+    language_code: "en"
+    name: "Toy and hobby"
+- model: master_data.clusterCodeTranslation
+  pk: "16"
+  fields:
+    cluster_code_id: "8"
+    language_code: "vi"
+    name: "Đồ chơi và sở thích"
+- model: master_data.clusterCodeTranslation
+  pk: "17"
+  fields:
+    cluster_code_id: "9"
+    language_code: "en"
+    name: "Gift and craft"
+- model: master_data.clusterCodeTranslation
+  pk: "18"
+  fields:
+    cluster_code_id: "9"
+    language_code: "vi"
+    name: "Quà tặng và thủ công mỹ nghệ"
+- model: master_data.clusterCodeTranslation
+  pk: "19"
+  fields:
+    cluster_code_id: "10"
+    language_code: "en"
+    name: "Sport and entertainment"
+- model: master_data.clusterCodeTranslation
+  pk: "20"
+  fields:
+    cluster_code_id: "10"
+    language_code: "vi"
+    name: "Thể thao và giải trí"
+- model: master_data.clusterCodeTranslation
+  pk: "21"
+  fields:
+    cluster_code_id: "11"
+    language_code: "en"
+    name: "Shoe and accessory"
+- model: master_data.clusterCodeTranslation
+  pk: "22"
+  fields:
+    cluster_code_id: "11"
+    language_code: "vi"
+    name: "Giầy dép và phụ kiện"
+- model: master_data.clusterCodeTranslation
+  pk: "23"
+  fields:
+    cluster_code_id: "12"
+    language_code: "en"
+    name: "Luggage, bag and case"
+- model: master_data.clusterCodeTranslation
+  pk: "24"
+  fields:
+    cluster_code_id: "12"
+    language_code: "vi"
+    name: "Hành lý, túi, ba lô"
+- model: master_data.clusterCodeTranslation
+  pk: "25"
+  fields:
+    cluster_code_id: "13"
+    language_code: "en"
+    name: "Real estate"
+- model: master_data.clusterCodeTranslation
+  pk: "26"
+  fields:
+    cluster_code_id: "13"
+    language_code: "vi"
+    name: "Bất động sản"
+- model: master_data.clusterCodeTranslation
+  pk: "27"
+  fields:
+    cluster_code_id: "14"
+    language_code: "en"
+    name: "Light and lighting"
+- model: master_data.clusterCodeTranslation
+  pk: "28"
+  fields:
+    cluster_code_id: "14"
+    language_code: "vi"
+    name: "Đèn và chiếu sáng"
+- model: master_data.clusterCodeTranslation
+  pk: "29"
+  fields:
+    cluster_code_id: "15"
+    language_code: "en"
+    name: "Construction service"
+- model: master_data.clusterCodeTranslation
+  pk: "30"
+  fields:
+    cluster_code_id: "15"
+    language_code: "vi"
+    name: "Dịch vụ xây dựng"
+- model: master_data.clusterCodeTranslation
+  pk: "31"
+  fields:
+    cluster_code_id: "16"
+    language_code: "en"
+    name: "Scaffolding"
+- model: master_data.clusterCodeTranslation
+  pk: "32"
+  fields:
+    cluster_code_id: "16"
+    language_code: "vi"
+    name: "Giàn giáo thi công"
+- model: master_data.clusterCodeTranslation
+  pk: "33"
+  fields:
+    cluster_code_id: "17"
+    language_code: "en"
+    name: "Building safety system"
+- model: master_data.clusterCodeTranslation
+  pk: "34"
+  fields:
+    cluster_code_id: "17"
+    language_code: "vi"
+    name: "Hệ thống an toàn tòa nhà"
+- model: master_data.clusterCodeTranslation
+  pk: "35"
+  fields:
+    cluster_code_id: "18"
+    language_code: "en"
+    name: "Lighting system"
+- model: master_data.clusterCodeTranslation
+  pk: "36"
+  fields:
+    cluster_code_id: "18"
+    language_code: "vi"
+    name: "Hệ thống chiếu sáng"
+- model: master_data.clusterCodeTranslation
+  pk: "37"
+  fields:
+    cluster_code_id: "19"
+    language_code: "en"
+    name: "Garden technique"
+- model: master_data.clusterCodeTranslation
+  pk: "38"
+  fields:
+    cluster_code_id: "19"
+    language_code: "vi"
+    name: "Kỹ thuật làm vườn"
+- model: master_data.clusterCodeTranslation
+  pk: "39"
+  fields:
+    cluster_code_id: "20"
+    language_code: "en"
+    name: "Planning, project management"
+- model: master_data.clusterCodeTranslation
+  pk: "40"
+  fields:
+    cluster_code_id: "20"
+    language_code: "vi"
+    name: "Lập kế hoạch và quản lý dự án"
+- model: master_data.clusterCodeTranslation
+  pk: "41"
+  fields:
+    cluster_code_id: "21"
+    language_code: "en"
+    name: "Public furniture"
+- model: master_data.clusterCodeTranslation
+  pk: "42"
+  fields:
+    cluster_code_id: "21"
+    language_code: "vi"
+    name: "Nội thất công cộng"
+- model: master_data.clusterCodeTranslation
+  pk: "43"
+  fields:
+    cluster_code_id: "22"
+    language_code: "en"
+    name: "Company furniture"
+- model: master_data.clusterCodeTranslation
+  pk: "44"
+  fields:
+    cluster_code_id: "22"
+    language_code: "vi"
+    name: "Nội thất công ty"
+- model: master_data.clusterCodeTranslation
+  pk: "45"
+  fields:
+    cluster_code_id: "23"
+    language_code: "en"
+    name: "Household furniture"
+- model: master_data.clusterCodeTranslation
+  pk: "46"
+  fields:
+    cluster_code_id: "23"
+    language_code: "vi"
+    name: "Nội thất gia dụng"
+- model: master_data.clusterCodeTranslation
+  pk: "47"
+  fields:
+    cluster_code_id: "24"
+    language_code: "en"
+    name: "Furniture asscessory"
+- model: master_data.clusterCodeTranslation
+  pk: "48"
+  fields:
+    cluster_code_id: "24"
+    language_code: "vi"
+    name: "Phụ kiện nội thất"
+- model: master_data.clusterCodeTranslation
+  pk: "49"
+  fields:
+    cluster_code_id: "25"
+    language_code: "en"
+    name: "Design and finished construction"
+- model: master_data.clusterCodeTranslation
+  pk: "50"
+  fields:
+    cluster_code_id: "25"
+    language_code: "vi"
+    name: "Thiết kế và thi công xây dựng"
+- model: master_data.clusterCodeTranslation
+  pk: "51"
+  fields:
+    cluster_code_id: "26"
+    language_code: "en"
+    name: "Home decoration"
+- model: master_data.clusterCodeTranslation
+  pk: "52"
+  fields:
+    cluster_code_id: "26"
+    language_code: "vi"
+    name: "Trang trí nhà cửa"
+- model: master_data.clusterCodeTranslation
+  pk: "53"
+  fields:
+    cluster_code_id: "27"
+    language_code: "en"
+    name: "Drive and engine for vehicle"
+- model: master_data.clusterCodeTranslation
+  pk: "54"
+  fields:
+    cluster_code_id: "27"
+    language_code: "vi"
+    name: "Bộ truyền động và động cơ xe"
+- model: master_data.clusterCodeTranslation
+  pk: "55"
+  fields:
+    cluster_code_id: "28"
+    language_code: "en"
+    name: "Motor vehicle electric and electronic"
+- model: master_data.clusterCodeTranslation
+  pk: "56"
+  fields:
+    cluster_code_id: "28"
+    language_code: "vi"
+    name: "Hệ thống điện và điện tử xe"
+- model: master_data.clusterCodeTranslation
+  pk: "57"
+  fields:
+    cluster_code_id: "29"
+    language_code: "en"
+    name: "Other vehicle system"
+- model: master_data.clusterCodeTranslation
+  pk: "58"
+  fields:
+    cluster_code_id: "29"
+    language_code: "vi"
+    name: "Hệ thống khác của xe"
+- model: master_data.clusterCodeTranslation
+  pk: "59"
+  fields:
+    cluster_code_id: "30"
+    language_code: "en"
+    name: "Braking system and component"
+- model: master_data.clusterCodeTranslation
+  pk: "60"
+  fields:
+    cluster_code_id: "30"
+    language_code: "vi"
+    name: "Hệ thống phanh và linh kiện"
+- model: master_data.clusterCodeTranslation
+  pk: "61"
+  fields:
+    cluster_code_id: "31"
+    language_code: "en"
+    name: "Automotive chassis and component"
+- model: master_data.clusterCodeTranslation
+  pk: "62"
+  fields:
+    cluster_code_id: "31"
+    language_code: "vi"
+    name: "Khung gầm và linh kiện"
+- model: master_data.clusterCodeTranslation
+  pk: "63"
+  fields:
+    cluster_code_id: "32"
+    language_code: "en"
+    name: "Fuel system component for vehicle"
+- model: master_data.clusterCodeTranslation
+  pk: "64"
+  fields:
+    cluster_code_id: "32"
+    language_code: "vi"
+    name: "Linh kiện hệ thống nhiên liệu xe"
+- model: master_data.clusterCodeTranslation
+  pk: "65"
+  fields:
+    cluster_code_id: "33"
+    language_code: "en"
+    name: "Exhaust gas machine, component and internal combustion engine"
+- model: master_data.clusterCodeTranslation
+  pk: "66"
+  fields:
+    cluster_code_id: "33"
+    language_code: "vi"
+    name: "Máy và linh kiện khí thải và động cơ đốt"
+- model: master_data.clusterCodeTranslation
+  pk: "67"
+  fields:
+    cluster_code_id: "34"
+    language_code: "en"
+    name: "Interior for vehicle"
+- model: master_data.clusterCodeTranslation
+  pk: "68"
+  fields:
+    cluster_code_id: "34"
+    language_code: "vi"
+    name: "Nội thất xe"
+- model: master_data.clusterCodeTranslation
+  pk: "69"
+  fields:
+    cluster_code_id: "35"
+    language_code: "en"
+    name: "Motor vehicle accessory"
+- model: master_data.clusterCodeTranslation
+  pk: "70"
+  fields:
+    cluster_code_id: "35"
+    language_code: "vi"
+    name: "Phụ kiện xe"
+- model: master_data.clusterCodeTranslation
+  pk: "71"
+  fields:
+    cluster_code_id: "36"
+    language_code: "en"
+    name: "Body and body component"
+- model: master_data.clusterCodeTranslation
+  pk: "72"
+  fields:
+    cluster_code_id: "36"
+    language_code: "vi"
+    name: "Thân xe và phụ tùng"
+- model: master_data.clusterCodeTranslation
+  pk: "73"
+  fields:
+    cluster_code_id: "37"
+    language_code: "en"
+    name: "Bus"
+- model: master_data.clusterCodeTranslation
+  pk: "74"
+  fields:
+    cluster_code_id: "37"
+    language_code: "vi"
+    name: "Xe buýt"
+- model: master_data.clusterCodeTranslation
+  pk: "75"
+  fields:
+    cluster_code_id: "38"
+    language_code: "en"
+    name: "Other vehicle"
+- model: master_data.clusterCodeTranslation
+  pk: "76"
+  fields:
+    cluster_code_id: "38"
+    language_code: "vi"
+    name: "Xe khác"
+- model: master_data.clusterCodeTranslation
+  pk: "77"
+  fields:
+    cluster_code_id: "39"
+    language_code: "en"
+    name: "Truck"
+- model: master_data.clusterCodeTranslation
+  pk: "78"
+  fields:
+    cluster_code_id: "39"
+    language_code: "vi"
+    name: "Xe tải"
+- model: master_data.clusterCodeTranslation
+  pk: "79"
+  fields:
+    cluster_code_id: "40"
+    language_code: "en"
+    name: "Health and medical"
+- model: master_data.clusterCodeTranslation
+  pk: "80"
+  fields:
+    cluster_code_id: "40"
+    language_code: "vi"
+    name: "Sức khỏe và y tế"
+- model: master_data.clusterCodeTranslation
+  pk: "81"
+  fields:
+    cluster_code_id: "41"
+    language_code: "en"
+    name: "Beauty and personal care"
+- model: master_data.clusterCodeTranslation
+  pk: "82"
+  fields:
+    cluster_code_id: "41"
+    language_code: "vi"
+    name: "Thẩm mỹ và chăm sóc cá nhân"
+- model: master_data.clusterCodeTranslation
+  pk: "83"
+  fields:
+    cluster_code_id: "42"
+    language_code: "en"
+    name: "Computer system"
+- model: master_data.clusterCodeTranslation
+  pk: "84"
+  fields:
+    cluster_code_id: "42"
+    language_code: "vi"
+    name: "Hệ thống máy tính"
+- model: master_data.clusterCodeTranslation
+  pk: "85"
+  fields:
+    cluster_code_id: "43"
+    language_code: "en"
+    name: "Unified messaging system"
+- model: master_data.clusterCodeTranslation
+  pk: "86"
+  fields:
+    cluster_code_id: "43"
+    language_code: "vi"
+    name: "Hệ thống nhắn tin đồng bộ"
+- model: master_data.clusterCodeTranslation
+  pk: "87"
+  fields:
+    cluster_code_id: "44"
+    language_code: "en"
+    name: "Warehouse management and stores control system"
+- model: master_data.clusterCodeTranslation
+  pk: "88"
+  fields:
+    cluster_code_id: "44"
+    language_code: "vi"
+    name: "Hệ thống quản lý và kiểm soát kho"
+- model: master_data.clusterCodeTranslation
+  pk: "89"
+  fields:
+    cluster_code_id: "45"
+    language_code: "en"
+    name: "Standard and system software"
+- model: master_data.clusterCodeTranslation
+  pk: "90"
+  fields:
+    cluster_code_id: "45"
+    language_code: "vi"
+    name: "Phần mềm hệ thống và tiêu chuẩn"
+- model: master_data.clusterCodeTranslation
+  pk: "91"
+  fields:
+    cluster_code_id: "46"
+    language_code: "en"
+    name: "Application software"
+- model: master_data.clusterCodeTranslation
+  pk: "92"
+  fields:
+    cluster_code_id: "46"
+    language_code: "vi"
+    name: "Phần mềm ứng dụng"
+- model: master_data.clusterCodeTranslation
+  pk: "93"
+  fields:
+    cluster_code_id: "47"
+    language_code: "en"
+    name: "IT accessory unit"
+- model: master_data.clusterCodeTranslation
+  pk: "94"
+  fields:
+    cluster_code_id: "47"
+    language_code: "vi"
+    name: "Phụ kiện CNTT"
+- model: master_data.clusterCodeTranslation
+  pk: "95"
+  fields:
+    cluster_code_id: "48"
+    language_code: "en"
+    name: "EDP supply material"
+- model: master_data.clusterCodeTranslation
+  pk: "96"
+  fields:
+    cluster_code_id: "48"
+    language_code: "vi"
+    name: "Vật liệu cung cấp EDP"
+- model: master_data.clusterCodeTranslation
+  pk: "97"
+  fields:
+    cluster_code_id: "49"
+    language_code: "en"
+    name: "Concrete reinforcing steel"
+- model: master_data.clusterCodeTranslation
+  pk: "98"
+  fields:
+    cluster_code_id: "49"
+    language_code: "vi"
+    name: "Bê tông cốt thép"
+- model: master_data.clusterCodeTranslation
+  pk: "99"
+  fields:
+    cluster_code_id: "50"
+    language_code: "en"
+    name: "Concrete component"
+- model: master_data.clusterCodeTranslation
+  pk: "100"
+  fields:
+    cluster_code_id: "50"
+    language_code: "vi"
+    name: "Cấu kiện bê tông"
+- model: master_data.clusterCodeTranslation
+  pk: "101"
+  fields:
+    cluster_code_id: "51"
+    language_code: "en"
+    name: "Wood construction component"
+- model: master_data.clusterCodeTranslation
+  pk: "102"
+  fields:
+    cluster_code_id: "51"
+    language_code: "vi"
+    name: "Cấu kiện gỗ xây dựng"
+- model: master_data.clusterCodeTranslation
+  pk: "103"
+  fields:
+    cluster_code_id: "52"
+    language_code: "en"
+    name: "Element construction material"
+- model: master_data.clusterCodeTranslation
+  pk: "104"
+  fields:
+    cluster_code_id: "52"
+    language_code: "vi"
+    name: "Cấu kiện xây dựng "
+- model: master_data.clusterCodeTranslation
+  pk: "105"
+  fields:
+    cluster_code_id: "53"
+    language_code: "en"
+    name: "Building construction element"
+- model: master_data.clusterCodeTranslation
+  pk: "106"
+  fields:
+    cluster_code_id: "53"
+    language_code: "vi"
+    name: "Cấu kiện xây dựng nhà"
+- model: master_data.clusterCodeTranslation
+  pk: "107"
+  fields:
+    cluster_code_id: "54"
+    language_code: "en"
+    name: "Fiber cement construction component"
+- model: master_data.clusterCodeTranslation
+  pk: "108"
+  fields:
+    cluster_code_id: "54"
+    language_code: "vi"
+    name: "Cấu kiện xây dựng xi măng sợi"
+- model: master_data.clusterCodeTranslation
+  pk: "109"
+  fields:
+    cluster_code_id: "55"
+    language_code: "en"
+    name: "Binding agent"
+- model: master_data.clusterCodeTranslation
+  pk: "110"
+  fields:
+    cluster_code_id: "55"
+    language_code: "vi"
+    name: "Chất kết dính"
+- model: master_data.clusterCodeTranslation
+  pk: "111"
+  fields:
+    cluster_code_id: "56"
+    language_code: "en"
+    name: "Coating agent"
+- model: master_data.clusterCodeTranslation
+  pk: "112"
+  fields:
+    cluster_code_id: "56"
+    language_code: "vi"
+    name: "Chất phủ"
+- model: master_data.clusterCodeTranslation
+  pk: "113"
+  fields:
+    cluster_code_id: "57"
+    language_code: "en"
+    name: "Coating agent for construction"
+- model: master_data.clusterCodeTranslation
+  pk: "114"
+  fields:
+    cluster_code_id: "57"
+    language_code: "vi"
+    name: "Chất phủ cho xây dựng"
+- model: master_data.clusterCodeTranslation
+  pk: "115"
+  fields:
+    cluster_code_id: "58"
+    language_code: "en"
+    name: "Construction aggregate"
+- model: master_data.clusterCodeTranslation
+  pk: "116"
+  fields:
+    cluster_code_id: "58"
+    language_code: "vi"
+    name: "Cốt liệu xây dựng"
+- model: master_data.clusterCodeTranslation
+  pk: "117"
+  fields:
+    cluster_code_id: "59"
+    language_code: "en"
+    name: "Tile and board"
+- model: master_data.clusterCodeTranslation
+  pk: "118"
+  fields:
+    cluster_code_id: "59"
+    language_code: "vi"
+    name: "Gạch lát và tấm"
+- model: master_data.clusterCodeTranslation
+  pk: "119"
+  fields:
+    cluster_code_id: "60"
+    language_code: "en"
+    name: "Wood"
+- model: master_data.clusterCodeTranslation
+  pk: "120"
+  fields:
+    cluster_code_id: "60"
+    language_code: "vi"
+    name: "Gỗ"
+- model: master_data.clusterCodeTranslation
+  pk: "121"
+  fields:
+    cluster_code_id: "61"
+    language_code: "en"
+    name: "Building industry chemical"
+- model: master_data.clusterCodeTranslation
+  pk: "122"
+  fields:
+    cluster_code_id: "61"
+    language_code: "vi"
+    name: "Hóa chất ngành xây dựng"
+- model: master_data.clusterCodeTranslation
+  pk: "123"
+  fields:
+    cluster_code_id: "62"
+    language_code: "en"
+    name: "Block"
+- model: master_data.clusterCodeTranslation
+  pk: "124"
+  fields:
+    cluster_code_id: "62"
+    language_code: "vi"
+    name: "Khối xây"
+- model: master_data.clusterCodeTranslation
+  pk: "125"
+  fields:
+    cluster_code_id: "63"
+    language_code: "en"
+    name: "Building glass"
+- model: master_data.clusterCodeTranslation
+  pk: "126"
+  fields:
+    cluster_code_id: "63"
+    language_code: "vi"
+    name: "Kính xây dựng"
+- model: master_data.clusterCodeTranslation
+  pk: "127"
+  fields:
+    cluster_code_id: "64"
+    language_code: "en"
+    name: "Floor covering"
+- model: master_data.clusterCodeTranslation
+  pk: "128"
+  fields:
+    cluster_code_id: "64"
+    language_code: "vi"
+    name: "Lớp phủ sàn"
+- model: master_data.clusterCodeTranslation
+  pk: "129"
+  fields:
+    cluster_code_id: "65"
+    language_code: "en"
+    name: "Thermal insulation and sound absorbing material"
+- model: master_data.clusterCodeTranslation
+  pk: "130"
+  fields:
+    cluster_code_id: "65"
+    language_code: "vi"
+    name: "Vật liệu cách nhiệt và cách âm"
+- model: master_data.clusterCodeTranslation
+  pk: "131"
+  fields:
+    cluster_code_id: "66"
+    language_code: "en"
+    name: "Fire and water resistant material"
+- model: master_data.clusterCodeTranslation
+  pk: "132"
+  fields:
+    cluster_code_id: "66"
+    language_code: "vi"
+    name: "Vật liệu chống cháy và chống thấm"
+- model: master_data.clusterCodeTranslation
+  pk: "133"
+  fields:
+    cluster_code_id: "67"
+    language_code: "en"
+    name: "Building construction material"
+- model: master_data.clusterCodeTranslation
+  pk: "134"
+  fields:
+    cluster_code_id: "67"
+    language_code: "vi"
+    name: "Vật liệu xây dựng"
+- model: master_data.clusterCodeTranslation
+  pk: "135"
+  fields:
+    cluster_code_id: "68"
+    language_code: "en"
+    name: "Bituminous building material"
+- model: master_data.clusterCodeTranslation
+  pk: "136"
+  fields:
+    cluster_code_id: "68"
+    language_code: "vi"
+    name: "Vật liệu xây dựng sử dụng bitum"
+- model: master_data.clusterCodeTranslation
+  pk: "137"
+  fields:
+    cluster_code_id: "69"
+    language_code: "en"
+    name: "Loam building material"
+- model: master_data.clusterCodeTranslation
+  pk: "138"
+  fields:
+    cluster_code_id: "69"
+    language_code: "vi"
+    name: "Vật liệu xây dựng từ đất sét trộn"
+- model: master_data.clusterCodeTranslation
+  pk: "139"
+  fields:
+    cluster_code_id: "70"
+    language_code: "en"
+    name: "Mortar"
+- model: master_data.clusterCodeTranslation
+  pk: "140"
+  fields:
+    cluster_code_id: "70"
+    language_code: "vi"
+    name: "Vữa"
+- model: master_data.clusterCodeTranslation
+  pk: "141"
+  fields:
+    cluster_code_id: "71"
+    language_code: "en"
+    name: "Band kernel"
+- model: master_data.clusterCodeTranslation
+  pk: "142"
+  fields:
+    cluster_code_id: "71"
+    language_code: "vi"
+    name: "Băng cá nhân"
+- model: master_data.clusterCodeTranslation
+  pk: "143"
+  fields:
+    cluster_code_id: "72"
+    language_code: "en"
+    name: "Kit pack, individual set"
+- model: master_data.clusterCodeTranslation
+  pk: "144"
+  fields:
+    cluster_code_id: "72"
+    language_code: "vi"
+    name: "Bộ, riêng lẻ"
+- model: master_data.clusterCodeTranslation
+  pk: "145"
+  fields:
+    cluster_code_id: "73"
+    language_code: "en"
+    name: "Implant"
+- model: master_data.clusterCodeTranslation
+  pk: "146"
+  fields:
+    cluster_code_id: "73"
+    language_code: "vi"
+    name: "Cấy ghép"
+- model: master_data.clusterCodeTranslation
+  pk: "147"
+  fields:
+    cluster_code_id: "74"
+    language_code: "en"
+    name: "Patient care"
+- model: master_data.clusterCodeTranslation
+  pk: "148"
+  fields:
+    cluster_code_id: "74"
+    language_code: "vi"
+    name: "Chăm sóc bệnh nhân"
+- model: master_data.clusterCodeTranslation
+  pk: "149"
+  fields:
+    cluster_code_id: "75"
+    language_code: "en"
+    name: "Ostomy care"
+- model: master_data.clusterCodeTranslation
+  pk: "150"
+  fields:
+    cluster_code_id: "75"
+    language_code: "vi"
+    name: "Chăm sóc hậu môn nhân tạo"
+- model: master_data.clusterCodeTranslation
+  pk: "151"
+  fields:
+    cluster_code_id: "76"
+    language_code: "en"
+    name: "Incontinence care"
+- model: master_data.clusterCodeTranslation
+  pk: "152"
+  fields:
+    cluster_code_id: "76"
+    language_code: "vi"
+    name: "Chăm sóc kiểm soát"
+- model: master_data.clusterCodeTranslation
+  pk: "153"
+  fields:
+    cluster_code_id: "77"
+    language_code: "en"
+    name: "Wound care"
+- model: master_data.clusterCodeTranslation
+  pk: "154"
+  fields:
+    cluster_code_id: "77"
+    language_code: "vi"
+    name: "Chăm sóc vết thương"
+- model: master_data.clusterCodeTranslation
+  pk: "155"
+  fields:
+    cluster_code_id: "78"
+    language_code: "en"
+    name: "Functional diagnostic"
+- model: master_data.clusterCodeTranslation
+  pk: "156"
+  fields:
+    cluster_code_id: "78"
+    language_code: "vi"
+    name: "Chẩn đoán chức năng"
+- model: master_data.clusterCodeTranslation
+  pk: "157"
+  fields:
+    cluster_code_id: "79"
+    language_code: "en"
+    name: "Angiography, therapy vascular catheter"
+- model: master_data.clusterCodeTranslation
+  pk: "158"
+  fields:
+    cluster_code_id: "79"
+    language_code: "vi"
+    name: "Chụp mạch, liệu pháp ống thông mạch máu"
+- model: master_data.clusterCodeTranslation
+  pk: "159"
+  fields:
+    cluster_code_id: "80"
+    language_code: "en"
+    name: "Fixing, compression"
+- model: master_data.clusterCodeTranslation
+  pk: "160"
+  fields:
+    cluster_code_id: "80"
+    language_code: "vi"
+    name: "Cố định, nén"
+- model: master_data.clusterCodeTranslation
+  pk: "161"
+  fields:
+    cluster_code_id: "81"
+    language_code: "en"
+    name: "Drainage, biopsy, puncture"
+- model: master_data.clusterCodeTranslation
+  pk: "162"
+  fields:
+    cluster_code_id: "81"
+    language_code: "vi"
+    name: "Dẫn lưu, sinh thiết, chọc dò"
+- model: master_data.clusterCodeTranslation
+  pk: "163"
+  fields:
+    cluster_code_id: "82"
+    language_code: "en"
+    name: "Immobilization therapy"
+- model: master_data.clusterCodeTranslation
+  pk: "164"
+  fields:
+    cluster_code_id: "82"
+    language_code: "vi"
+    name: "Điều trị cố định"
+- model: master_data.clusterCodeTranslation
+  pk: "165"
+  fields:
+    cluster_code_id: "83"
+    language_code: "en"
+    name: "Patient positioning"
+- model: master_data.clusterCodeTranslation
+  pk: "166"
+  fields:
+    cluster_code_id: "83"
+    language_code: "vi"
+    name: "Định vị bệnh nhân"
+- model: master_data.clusterCodeTranslation
+  pk: "167"
+  fields:
+    cluster_code_id: "84"
+    language_code: "en"
+    name: "Wound closure"
+- model: master_data.clusterCodeTranslation
+  pk: "168"
+  fields:
+    cluster_code_id: "84"
+    language_code: "vi"
+    name: "Đóng vết thương"
+- model: master_data.clusterCodeTranslation
+  pk: "169"
+  fields:
+    cluster_code_id: "85"
+    language_code: "en"
+    name: "Instrument and small medical device"
+- model: master_data.clusterCodeTranslation
+  pk: "170"
+  fields:
+    cluster_code_id: "85"
+    language_code: "vi"
+    name: "Dụng cụ và thiết bị y tế nhỏ"
+- model: master_data.clusterCodeTranslation
+  pk: "171"
+  fields:
+    cluster_code_id: "86"
+    language_code: "en"
+    name: "Medical instrument"
+- model: master_data.clusterCodeTranslation
+  pk: "172"
+  fields:
+    cluster_code_id: "86"
+    language_code: "vi"
+    name: "Dụng cụ y tế"
+- model: master_data.clusterCodeTranslation
+  pk: "173"
+  fields:
+    cluster_code_id: "87"
+    language_code: "en"
+    name: "Anesthesia, intensive care, dialysis, hemofiltration"
+- model: master_data.clusterCodeTranslation
+  pk: "174"
+  fields:
+    cluster_code_id: "87"
+    language_code: "vi"
+    name: "Gây mê, thuốc chăm sóc đặc biệt, lọc máu"
+- model: master_data.clusterCodeTranslation
+  pk: "175"
+  fields:
+    cluster_code_id: "88"
+    language_code: "en"
+    name: "Medical system and product"
+- model: master_data.clusterCodeTranslation
+  pk: "176"
+  fields:
+    cluster_code_id: "88"
+    language_code: "vi"
+    name: "Hệ thống và sản phẩm y tế"
+- model: master_data.clusterCodeTranslation
+  pk: "177"
+  fields:
+    cluster_code_id: "89"
+    language_code: "en"
+    name: "Endoscopy, endo therapy, minimally invasive surgery (MIS)"
+- model: master_data.clusterCodeTranslation
+  pk: "178"
+  fields:
+    cluster_code_id: "89"
+    language_code: "vi"
+    name: "Nội soi, liệu pháp nội khoa, phẫu thuật xâm lấn tối thiểu (MIS)"
+- model: master_data.clusterCodeTranslation
+  pk: "179"
+  fields:
+    cluster_code_id: "90"
+    language_code: "en"
+    name: "Gastrointestinal tube, technique, enteral feeding"
+- model: master_data.clusterCodeTranslation
+  pk: "180"
+  fields:
+    cluster_code_id: "90"
+    language_code: "vi"
+    name: "Ống tiêu hóa, công nghệ, cho ăn qua đường tiêu hóa"
+- model: master_data.clusterCodeTranslation
+  pk: "181"
+  fields:
+    cluster_code_id: "91"
+    language_code: "en"
+    name: "Operation covering need"
+- model: master_data.clusterCodeTranslation
+  pk: "182"
+  fields:
+    cluster_code_id: "91"
+    language_code: "vi"
+    name: "Phẫu thuật"
+- model: master_data.clusterCodeTranslation
+  pk: "183"
+  fields:
+    cluster_code_id: "92"
+    language_code: "en"
+    name: "Clinic and practice facility"
+- model: master_data.clusterCodeTranslation
+  pk: "184"
+  fields:
+    cluster_code_id: "92"
+    language_code: "vi"
+    name: "Phòng khám và cơ sở hành nghề"
+- model: master_data.clusterCodeTranslation
+  pk: "185"
+  fields:
+    cluster_code_id: "93"
+    language_code: "en"
+    name: "Rehabilitation"
+- model: master_data.clusterCodeTranslation
+  pk: "186"
+  fields:
+    cluster_code_id: "93"
+    language_code: "vi"
+    name: "Phục hồi chức năng"
+- model: master_data.clusterCodeTranslation
+  pk: "187"
+  fields:
+    cluster_code_id: "94"
+    language_code: "en"
+    name: "Alternative medicine article"
+- model: master_data.clusterCodeTranslation
+  pk: "188"
+  fields:
+    cluster_code_id: "94"
+    language_code: "vi"
+    name: "Sản phẩm thuốc thay thế"
+- model: master_data.clusterCodeTranslation
+  pk: "189"
+  fields:
+    cluster_code_id: "95"
+    language_code: "en"
+    name: "Surgical technique device"
+- model: master_data.clusterCodeTranslation
+  pk: "190"
+  fields:
+    cluster_code_id: "95"
+    language_code: "vi"
+    name: "Thiết bị kỹ thuật phẫu thuật"
+- model: master_data.clusterCodeTranslation
+  pk: "191"
+  fields:
+    cluster_code_id: "96"
+    language_code: "en"
+    name: "Injection, infusion, transfusion"
+- model: master_data.clusterCodeTranslation
+  pk: "192"
+  fields:
+    cluster_code_id: "96"
+    language_code: "vi"
+    name: "Tiêm, rruyền, truyền máu"
+- model: master_data.clusterCodeTranslation
+  pk: "193"
+  fields:
+    cluster_code_id: "97"
+    language_code: "en"
+    name: "Urology"
+- model: master_data.clusterCodeTranslation
+  pk: "194"
+  fields:
+    cluster_code_id: "97"
+    language_code: "vi"
+    name: "Tiết niệu"
+- model: master_data.clusterCodeTranslation
+  pk: "195"
+  fields:
+    cluster_code_id: "98"
+    language_code: "en"
+    name: "Sterilization"
+- model: master_data.clusterCodeTranslation
+  pk: "196"
+  fields:
+    cluster_code_id: "98"
+    language_code: "vi"
+    name: "Tiệt trùng"
+- model: master_data.clusterCodeTranslation
+  pk: "197"
+  fields:
+    cluster_code_id: "99"
+    language_code: "en"
+    name: "Physiotherapy"
+- model: master_data.clusterCodeTranslation
+  pk: "198"
+  fields:
+    cluster_code_id: "99"
+    language_code: "vi"
+    name: "Vật lý trị liệu"
+- model: master_data.clusterCodeTranslation
+  pk: "199"
+  fields:
+    cluster_code_id: "100"
+    language_code: "en"
+    name: "Radiology"
+- model: master_data.clusterCodeTranslation
+  pk: "200"
+  fields:
+    cluster_code_id: "100"
+    language_code: "vi"
+    name: "X quang"
+- model: master_data.clusterCodeTranslation
+  pk: "201"
+  fields:
+    cluster_code_id: "101"
+    language_code: "en"
+    name: "Other service"
+- model: master_data.clusterCodeTranslation
+  pk: "202"
+  fields:
+    cluster_code_id: "101"
+    language_code: "vi"
+    name: "Các dịch vụ khác"
+- model: master_data.clusterCodeTranslation
+  pk: "203"
+  fields:
+    cluster_code_id: "102"
+    language_code: "en"
+    name: "Renting, leasing"
+- model: master_data.clusterCodeTranslation
+  pk: "204"
+  fields:
+    cluster_code_id: "102"
+    language_code: "vi"
+    name: "Cho thuê"
+- model: master_data.clusterCodeTranslation
+  pk: "205"
+  fields:
+    cluster_code_id: "103"
+    language_code: "en"
+    name: "Training and workshop"
+- model: master_data.clusterCodeTranslation
+  pk: "206"
+  fields:
+    cluster_code_id: "103"
+    language_code: "vi"
+    name: "Đào tạo và hội thảo"
+- model: master_data.clusterCodeTranslation
+  pk: "207"
+  fields:
+    cluster_code_id: "104"
+    language_code: "en"
+    name: "Security service"
+- model: master_data.clusterCodeTranslation
+  pk: "208"
+  fields:
+    cluster_code_id: "104"
+    language_code: "vi"
+    name: "Dịch vụ an ninh"
+- model: master_data.clusterCodeTranslation
+  pk: "209"
+  fields:
+    cluster_code_id: "105"
+    language_code: "en"
+    name: "Catering"
+- model: master_data.clusterCodeTranslation
+  pk: "210"
+  fields:
+    cluster_code_id: "105"
+    language_code: "vi"
+    name: "Dịch vụ ăn uống"
+- model: master_data.clusterCodeTranslation
+  pk: "211"
+  fields:
+    cluster_code_id: "106"
+    language_code: "en"
+    name: "Personal service"
+- model: master_data.clusterCodeTranslation
+  pk: "212"
+  fields:
+    cluster_code_id: "106"
+    language_code: "vi"
+    name: "Dịch vụ cho cá nhân"
+- model: master_data.clusterCodeTranslation
+  pk: "213"
+  fields:
+    cluster_code_id: "107"
+    language_code: "en"
+    name: "IT service"
+- model: master_data.clusterCodeTranslation
+  pk: "214"
+  fields:
+    cluster_code_id: "107"
+    language_code: "vi"
+    name: "Dịch vụ CNTT"
+- model: master_data.clusterCodeTranslation
+  pk: "215"
+  fields:
+    cluster_code_id: "108"
+    language_code: "en"
+    name: "Translation service"
+- model: master_data.clusterCodeTranslation
+  pk: "216"
+  fields:
+    cluster_code_id: "108"
+    language_code: "vi"
+    name: "Dịch vụ dịch thuật"
+- model: master_data.clusterCodeTranslation
+  pk: "217"
+  fields:
+    cluster_code_id: "109"
+    language_code: "en"
+    name: "Test and measurement service"
+- model: master_data.clusterCodeTranslation
+  pk: "218"
+  fields:
+    cluster_code_id: "109"
+    language_code: "vi"
+    name: "Dịch vụ đo lường và thử nghiệm"
+- model: master_data.clusterCodeTranslation
+  pk: "219"
+  fields:
+    cluster_code_id: "110"
+    language_code: "en"
+    name: "Travelling service"
+- model: master_data.clusterCodeTranslation
+  pk: "220"
+  fields:
+    cluster_code_id: "110"
+    language_code: "vi"
+    name: "Dịch vụ du lịch"
+- model: master_data.clusterCodeTranslation
+  pk: "221"
+  fields:
+    cluster_code_id: "111"
+    language_code: "en"
+    name: "Logistic service"
+- model: master_data.clusterCodeTranslation
+  pk: "222"
+  fields:
+    cluster_code_id: "111"
+    language_code: "vi"
+    name: "Dịch vụ hậu cần"
+- model: master_data.clusterCodeTranslation
+  pk: "223"
+  fields:
+    cluster_code_id: "112"
+    language_code: "en"
+    name: "Conference, fair and event service"
+- model: master_data.clusterCodeTranslation
+  pk: "224"
+  fields:
+    cluster_code_id: "112"
+    language_code: "vi"
+    name: "Dịch vụ hội nghị, hội chợ và sự kiện"
+- model: master_data.clusterCodeTranslation
+  pk: "225"
+  fields:
+    cluster_code_id: "113"
+    language_code: "en"
+    name: "Printing service"
+- model: master_data.clusterCodeTranslation
+  pk: "226"
+  fields:
+    cluster_code_id: "113"
+    language_code: "vi"
+    name: "Dịch vụ in ấn"
+- model: master_data.clusterCodeTranslation
+  pk: "227"
+  fields:
+    cluster_code_id: "114"
+    language_code: "en"
+    name: "Marketing and advertising service"
+- model: master_data.clusterCodeTranslation
+  pk: "228"
+  fields:
+    cluster_code_id: "114"
+    language_code: "vi"
+    name: "Dịch vụ marketing và quảng cáo"
+- model: master_data.clusterCodeTranslation
+  pk: "229"
+  fields:
+    cluster_code_id: "115"
+    language_code: "en"
+    name: "Finance service and assurance"
+- model: master_data.clusterCodeTranslation
+  pk: "230"
+  fields:
+    cluster_code_id: "115"
+    language_code: "vi"
+    name: "Dịch vụ tài chính và bảo hiểm"
+- model: master_data.clusterCodeTranslation
+  pk: "231"
+  fields:
+    cluster_code_id: "116"
+    language_code: "en"
+    name: "Consulting and information service"
+- model: master_data.clusterCodeTranslation
+  pk: "232"
+  fields:
+    cluster_code_id: "116"
+    language_code: "vi"
+    name: "Dịch vụ thông tin và tư vấn"
+- model: master_data.clusterCodeTranslation
+  pk: "233"
+  fields:
+    cluster_code_id: "117"
+    language_code: "en"
+    name: "Commercial service"
+- model: master_data.clusterCodeTranslation
+  pk: "234"
+  fields:
+    cluster_code_id: "117"
+    language_code: "vi"
+    name: "Dịch vụ thương mại"
+- model: master_data.clusterCodeTranslation
+  pk: "235"
+  fields:
+    cluster_code_id: "118"
+    language_code: "en"
+    name: "Office service"
+- model: master_data.clusterCodeTranslation
+  pk: "236"
+  fields:
+    cluster_code_id: "118"
+    language_code: "vi"
+    name: "Dịch vụ văn phòng"
+- model: master_data.clusterCodeTranslation
+  pk: "237"
+  fields:
+    cluster_code_id: "119"
+    language_code: "en"
+    name: "Motor vehicle service"
+- model: master_data.clusterCodeTranslation
+  pk: "238"
+  fields:
+    cluster_code_id: "119"
+    language_code: "vi"
+    name: "Dịch vụ xe"
+- model: master_data.clusterCodeTranslation
+  pk: "239"
+  fields:
+    cluster_code_id: "120"
+    language_code: "en"
+    name: "Waste disposal service"
+- model: master_data.clusterCodeTranslation
+  pk: "240"
+  fields:
+    cluster_code_id: "120"
+    language_code: "vi"
+    name: "Dịch vụ xử lý rác thải"
+- model: master_data.clusterCodeTranslation
+  pk: "241"
+  fields:
+    cluster_code_id: "121"
+    language_code: "en"
+    name: "Technical supervision"
+- model: master_data.clusterCodeTranslation
+  pk: "242"
+  fields:
+    cluster_code_id: "121"
+    language_code: "vi"
+    name: "Giám sát kỹ thuật"
+- model: master_data.clusterCodeTranslation
+  pk: "243"
+  fields:
+    cluster_code_id: "122"
+    language_code: "en"
+    name: "Quality and environmental management"
+- model: master_data.clusterCodeTranslation
+  pk: "244"
+  fields:
+    cluster_code_id: "122"
+    language_code: "vi"
+    name: "Quản lý chất lượng và môi trường"
+- model: master_data.clusterCodeTranslation
+  pk: "245"
+  fields:
+    cluster_code_id: "123"
+    language_code: "en"
+    name: "Facility management"
+- model: master_data.clusterCodeTranslation
+  pk: "246"
+  fields:
+    cluster_code_id: "123"
+    language_code: "vi"
+    name: "Quản lý cơ sở hạ tầng kỹ thuật"
+- model: master_data.clusterCodeTranslation
+  pk: "247"
+  fields:
+    cluster_code_id: "124"
+    language_code: "en"
+    name: "Archive, document management"
+- model: master_data.clusterCodeTranslation
+  pk: "248"
+  fields:
+    cluster_code_id: "124"
+    language_code: "vi"
+    name: "Quản lý tài liệu, lưu trữ"
+- model: master_data.clusterCodeTranslation
+  pk: "249"
+  fields:
+    cluster_code_id: "125"
+    language_code: "en"
+    name: "Technical documentation"
+- model: master_data.clusterCodeTranslation
+  pk: "250"
+  fields:
+    cluster_code_id: "125"
+    language_code: "vi"
+    name: "Tài liệu kỹ thuật"
+- model: master_data.clusterCodeTranslation
+  pk: "251"
+  fields:
+    cluster_code_id: "126"
+    language_code: "en"
+    name: "Media design"
+- model: master_data.clusterCodeTranslation
+  pk: "252"
+  fields:
+    cluster_code_id: "126"
+    language_code: "vi"
+    name: "Thiết kế truyền thông"
+- model: master_data.clusterCodeTranslation
+  pk: "253"
+  fields:
+    cluster_code_id: "127"
+    language_code: "en"
+    name: "Technical calculation"
+- model: master_data.clusterCodeTranslation
+  pk: "254"
+  fields:
+    cluster_code_id: "127"
+    language_code: "vi"
+    name: "Tính toán kỹ thuật"
+- model: master_data.clusterCodeTranslation
+  pk: "255"
+  fields:
+    cluster_code_id: "128"
+    language_code: "en"
+    name: "Industry cleaning"
+- model: master_data.clusterCodeTranslation
+  pk: "256"
+  fields:
+    cluster_code_id: "128"
+    language_code: "vi"
+    name: "Vệ sinh công nghiệp"
+- model: master_data.clusterCodeTranslation
+  pk: "257"
+  fields:
+    cluster_code_id: "129"
+    language_code: "en"
+    name: "Industrial brush"
+- model: master_data.clusterCodeTranslation
+  pk: "258"
+  fields:
+    cluster_code_id: "129"
+    language_code: "vi"
+    name: "Bàn chải công nghiệp"
+- model: master_data.clusterCodeTranslation
+  pk: "259"
+  fields:
+    cluster_code_id: "130"
+    language_code: "en"
+    name: "Wheel"
+- model: master_data.clusterCodeTranslation
+  pk: "260"
+  fields:
+    cluster_code_id: "130"
+    language_code: "vi"
+    name: "Bánh răng"
+- model: master_data.clusterCodeTranslation
+  pk: "261"
+  fields:
+    cluster_code_id: "131"
+    language_code: "en"
+    name: "Ball"
+- model: master_data.clusterCodeTranslation
+  pk: "262"
+  fields:
+    cluster_code_id: "131"
+    language_code: "vi"
+    name: "Bi"
+- model: master_data.clusterCodeTranslation
+  pk: "263"
+  fields:
+    cluster_code_id: "132"
+    language_code: "en"
+    name: "Ventilator, blower"
+- model: master_data.clusterCodeTranslation
+  pk: "264"
+  fields:
+    cluster_code_id: "132"
+    language_code: "vi"
+    name: "Bộ thông gió, quạt thổi"
+- model: master_data.clusterCodeTranslation
+  pk: "265"
+  fields:
+    cluster_code_id: "133"
+    language_code: "en"
+    name: "Pump"
+- model: master_data.clusterCodeTranslation
+  pk: "266"
+  fields:
+    cluster_code_id: "133"
+    language_code: "vi"
+    name: "Bơm"
+- model: master_data.clusterCodeTranslation
+  pk: "267"
+  fields:
+    cluster_code_id: "134"
+    language_code: "en"
+    name: "Roller"
+- model: master_data.clusterCodeTranslation
+  pk: "268"
+  fields:
+    cluster_code_id: "134"
+    language_code: "vi"
+    name: "Con lăn"
+- model: master_data.clusterCodeTranslation
+  pk: "269"
+  fields:
+    cluster_code_id: "135"
+    language_code: "en"
+    name: "Tool for machine"
+- model: master_data.clusterCodeTranslation
+  pk: "270"
+  fields:
+    cluster_code_id: "135"
+    language_code: "vi"
+    name: "Công cụ máy"
+- model: master_data.clusterCodeTranslation
+  pk: "271"
+  fields:
+    cluster_code_id: "136"
+    language_code: "en"
+    name: "Tool and hardware"
+- model: master_data.clusterCodeTranslation
+  pk: "272"
+  fields:
+    cluster_code_id: "136"
+    language_code: "vi"
+    name: "Công cụ và phần cứng"
+- model: master_data.clusterCodeTranslation
+  pk: "273"
+  fields:
+    cluster_code_id: "137"
+    language_code: "en"
+    name: "Roll"
+- model: master_data.clusterCodeTranslation
+  pk: "274"
+  fields:
+    cluster_code_id: "137"
+    language_code: "vi"
+    name: "Cuộn"
+- model: master_data.clusterCodeTranslation
+  pk: "275"
+  fields:
+    cluster_code_id: "138"
+    language_code: "en"
+    name: "Connector and mechanical fastening element"
+- model: master_data.clusterCodeTranslation
+  pk: "276"
+  fields:
+    cluster_code_id: "138"
+    language_code: "vi"
+    name: "Đầu nối và thiết bị buộc cơ khí"
+- model: master_data.clusterCodeTranslation
+  pk: "277"
+  fields:
+    cluster_code_id: "139"
+    language_code: "en"
+    name: "Assembly system"
+- model: master_data.clusterCodeTranslation
+  pk: "278"
+  fields:
+    cluster_code_id: "139"
+    language_code: "vi"
+    name: "Hệ thống lắp ráp"
+- model: master_data.clusterCodeTranslation
+  pk: "279"
+  fields:
+    cluster_code_id: "140"
+    language_code: "en"
+    name: "Shaft hub connection"
+- model: master_data.clusterCodeTranslation
+  pk: "280"
+  fields:
+    cluster_code_id: "140"
+    language_code: "vi"
+    name: "Kết nối trục trung tâm"
+- model: master_data.clusterCodeTranslation
+  pk: "281"
+  fields:
+    cluster_code_id: "141"
+    language_code: "en"
+    name: "Spring"
+- model: master_data.clusterCodeTranslation
+  pk: "282"
+  fields:
+    cluster_code_id: "141"
+    language_code: "vi"
+    name: "Lò xo"
+- model: master_data.clusterCodeTranslation
+  pk: "283"
+  fields:
+    cluster_code_id: "142"
+    language_code: "en"
+    name: "Seal"
+- model: master_data.clusterCodeTranslation
+  pk: "284"
+  fields:
+    cluster_code_id: "142"
+    language_code: "vi"
+    name: "Lớp ngăn cản"
+- model: master_data.clusterCodeTranslation
+  pk: "285"
+  fields:
+    cluster_code_id: "143"
+    language_code: "en"
+    name: "Cover"
+- model: master_data.clusterCodeTranslation
+  pk: "286"
+  fields:
+    cluster_code_id: "143"
+    language_code: "vi"
+    name: "Lớp phủ"
+- model: master_data.clusterCodeTranslation
+  pk: "287"
+  fields:
+    cluster_code_id: "144"
+    language_code: "en"
+    name: "Master pattern machine"
+- model: master_data.clusterCodeTranslation
+  pk: "288"
+  fields:
+    cluster_code_id: "144"
+    language_code: "vi"
+    name: "Máy chế tạo các mẫu chính"
+- model: master_data.clusterCodeTranslation
+  pk: "289"
+  fields:
+    cluster_code_id: "145"
+    language_code: "en"
+    name: "Machine for producing of connection"
+- model: master_data.clusterCodeTranslation
+  pk: "290"
+  fields:
+    cluster_code_id: "145"
+    language_code: "vi"
+    name: "Máy chế tạo phần nối"
+- model: master_data.clusterCodeTranslation
+  pk: "291"
+  fields:
+    cluster_code_id: "146"
+    language_code: "en"
+    name: "Separating machine"
+- model: master_data.clusterCodeTranslation
+  pk: "292"
+  fields:
+    cluster_code_id: "146"
+    language_code: "vi"
+    name: "Máy chia tách"
+- model: master_data.clusterCodeTranslation
+  pk: "293"
+  fields:
+    cluster_code_id: "147"
+    language_code: "en"
+    name: "Semiconductor industry machine"
+- model: master_data.clusterCodeTranslation
+  pk: "294"
+  fields:
+    cluster_code_id: "147"
+    language_code: "vi"
+    name: "Máy cho công nghiệp bán dẫn"
+- model: master_data.clusterCodeTranslation
+  pk: "295"
+  fields:
+    cluster_code_id: "148"
+    language_code: "en"
+    name: "Special technologies machine"
+- model: master_data.clusterCodeTranslation
+  pk: "296"
+  fields:
+    cluster_code_id: "148"
+    language_code: "vi"
+    name: "Máy công nghệ chuyên dụng"
+- model: master_data.clusterCodeTranslation
+  pk: "297"
+  fields:
+    cluster_code_id: "149"
+    language_code: "en"
+    name: "Plastic and rubber industry machine"
+- model: master_data.clusterCodeTranslation
+  pk: "298"
+  fields:
+    cluster_code_id: "149"
+    language_code: "vi"
+    name: "Máy công nghiệp cao su và nhựa"
+- model: master_data.clusterCodeTranslation
+  pk: "299"
+  fields:
+    cluster_code_id: "150"
+    language_code: "en"
+    name: "Machine for machining of metal, other application"
+- model: master_data.clusterCodeTranslation
+  pk: "300"
+  fields:
+    cluster_code_id: "150"
+    language_code: "vi"
+    name: "Máy gia công kim loại, cho nhiều ứng dụng"
+- model: master_data.clusterCodeTranslation
+  pk: "301"
+  fields:
+    cluster_code_id: "151"
+    language_code: "en"
+    name: "Water, sanitary technical machine"
+- model: master_data.clusterCodeTranslation
+  pk: "302"
+  fields:
+    cluster_code_id: "151"
+    language_code: "vi"
+    name: "Máy kỹ thuật nước, vệ sinh"
+- model: master_data.clusterCodeTranslation
+  pk: "303"
+  fields:
+    cluster_code_id: "152"
+    language_code: "en"
+    name: "Machinery"
+- model: master_data.clusterCodeTranslation
+  pk: "304"
+  fields:
+    cluster_code_id: "152"
+    language_code: "vi"
+    name: "Máy móc"
+- model: master_data.clusterCodeTranslation
+  pk: "305"
+  fields:
+    cluster_code_id: "153"
+    language_code: "en"
+    name: "Compressor"
+- model: master_data.clusterCodeTranslation
+  pk: "306"
+  fields:
+    cluster_code_id: "153"
+    language_code: "vi"
+    name: "Máy nén khí"
+- model: master_data.clusterCodeTranslation
+  pk: "307"
+  fields:
+    cluster_code_id: "154"
+    language_code: "en"
+    name: "Electrical and electronic industry machine"
+- model: master_data.clusterCodeTranslation
+  pk: "308"
+  fields:
+    cluster_code_id: "154"
+    language_code: "vi"
+    name: "Máy ngành điện và điện tử"
+- model: master_data.clusterCodeTranslation
+  pk: "309"
+  fields:
+    cluster_code_id: "155"
+    language_code: "en"
+    name: "Forming machine"
+- model: master_data.clusterCodeTranslation
+  pk: "310"
+  fields:
+    cluster_code_id: "155"
+    language_code: "vi"
+    name: "Máy tạo hình"
+- model: master_data.clusterCodeTranslation
+  pk: "311"
+  fields:
+    cluster_code_id: "156"
+    language_code: "en"
+    name: "Industrial cleaning machine"
+- model: master_data.clusterCodeTranslation
+  pk: "312"
+  fields:
+    cluster_code_id: "156"
+    language_code: "vi"
+    name: "Máy vệ sinh công nghiệp"
+- model: master_data.clusterCodeTranslation
+  pk: "313"
+  fields:
+    cluster_code_id: "157"
+    language_code: "en"
+    name: "Surface treatment machine"
+- model: master_data.clusterCodeTranslation
+  pk: "314"
+  fields:
+    cluster_code_id: "157"
+    language_code: "vi"
+    name: "Máy xử lý bề mặt"
+- model: master_data.clusterCodeTranslation
+  pk: "315"
+  fields:
+    cluster_code_id: "158"
+    language_code: "en"
+    name: "Shaft bushing (machine element)"
+- model: master_data.clusterCodeTranslation
+  pk: "316"
+  fields:
+    cluster_code_id: "158"
+    language_code: "vi"
+    name: "Ống lót trục (thiết bị máy)"
+- model: master_data.clusterCodeTranslation
+  pk: "317"
+  fields:
+    cluster_code_id: "159"
+    language_code: "en"
+    name: "Sleeve"
+- model: master_data.clusterCodeTranslation
+  pk: "318"
+  fields:
+    cluster_code_id: "159"
+    language_code: "vi"
+    name: "Ống ngoài"
+- model: master_data.clusterCodeTranslation
+  pk: "319"
+  fields:
+    cluster_code_id: "160"
+    language_code: "en"
+    name: "Accessory and component for manufacturing machine"
+- model: master_data.clusterCodeTranslation
+  pk: "320"
+  fields:
+    cluster_code_id: "160"
+    language_code: "vi"
+    name: "Phụ kiện và linh kiện máy chế tạo"
+- model: master_data.clusterCodeTranslation
+  pk: "321"
+  fields:
+    cluster_code_id: "161"
+    language_code: "en"
+    name: "Lubricating equipment"
+- model: master_data.clusterCodeTranslation
+  pk: "322"
+  fields:
+    cluster_code_id: "161"
+    language_code: "vi"
+    name: "Thiết bị bôi trơn"
+- model: master_data.clusterCodeTranslation
+  pk: "323"
+  fields:
+    cluster_code_id: "162"
+    language_code: "en"
+    name: "Other standard element"
+- model: master_data.clusterCodeTranslation
+  pk: "324"
+  fields:
+    cluster_code_id: "162"
+    language_code: "vi"
+    name: "Thiết bị chuẩn khác"
+- model: master_data.clusterCodeTranslation
+  pk: "325"
+  fields:
+    cluster_code_id: "163"
+    language_code: "en"
+    name: "Guide element"
+- model: master_data.clusterCodeTranslation
+  pk: "326"
+  fields:
+    cluster_code_id: "163"
+    language_code: "vi"
+    name: "Thiết bị hướng dẫn"
+- model: master_data.clusterCodeTranslation
+  pk: "327"
+  fields:
+    cluster_code_id: "164"
+    language_code: "en"
+    name: "Structural component for vibration damping"
+- model: master_data.clusterCodeTranslation
+  pk: "328"
+  fields:
+    cluster_code_id: "164"
+    language_code: "vi"
+    name: "Thiết bị kết cấu giảm rung"
+- model: master_data.clusterCodeTranslation
+  pk: "329"
+  fields:
+    cluster_code_id: "165"
+    language_code: "en"
+    name: "Control and operating part"
+- model: master_data.clusterCodeTranslation
+  pk: "330"
+  fields:
+    cluster_code_id: "165"
+    language_code: "vi"
+    name: "Thiết bị kiểm soát và vận hành"
+- model: master_data.clusterCodeTranslation
+  pk: "331"
+  fields:
+    cluster_code_id: "166"
+    language_code: "en"
+    name: "Other machine element"
+- model: master_data.clusterCodeTranslation
+  pk: "332"
+  fields:
+    cluster_code_id: "166"
+    language_code: "vi"
+    name: "Thiết bị máy khác"
+- model: master_data.clusterCodeTranslation
+  pk: "333"
+  fields:
+    cluster_code_id: "167"
+    language_code: "en"
+    name: "Shaft"
+- model: master_data.clusterCodeTranslation
+  pk: "334"
+  fields:
+    cluster_code_id: "167"
+    language_code: "vi"
+    name: "Trục"
+- model: master_data.clusterCodeTranslation
+  pk: "335"
+  fields:
+    cluster_code_id: "168"
+    language_code: "en"
+    name: "Bearing"
+- model: master_data.clusterCodeTranslation
+  pk: "336"
+  fields:
+    cluster_code_id: "168"
+    language_code: "vi"
+    name: "Vòng bi"
+- model: master_data.clusterCodeTranslation
+  pk: "337"
+  fields:
+    cluster_code_id: "169"
+    language_code: "en"
+    name: "Washer"
+- model: master_data.clusterCodeTranslation
+  pk: "338"
+  fields:
+    cluster_code_id: "169"
+    language_code: "vi"
+    name: "Vòng đệm"
+- model: master_data.clusterCodeTranslation
+  pk: "339"
+  fields:
+    cluster_code_id: "170"
+    language_code: "en"
+    name: "Antenna, antenna array"
+- model: master_data.clusterCodeTranslation
+  pk: "340"
+  fields:
+    cluster_code_id: "170"
+    language_code: "vi"
+    name: "Ăng-ten, mảng ăng-ten"
+- model: master_data.clusterCodeTranslation
+  pk: "341"
+  fields:
+    cluster_code_id: "171"
+    language_code: "en"
+    name: "Board and projection wall"
+- model: master_data.clusterCodeTranslation
+  pk: "342"
+  fields:
+    cluster_code_id: "171"
+    language_code: "vi"
+    name: "Bảng và tường chiếu"
+- model: master_data.clusterCodeTranslation
+  pk: "343"
+  fields:
+    cluster_code_id: "172"
+    language_code: "en"
+    name: "Electroacoustic and video system"
+- model: master_data.clusterCodeTranslation
+  pk: "344"
+  fields:
+    cluster_code_id: "172"
+    language_code: "vi"
+    name: "Hệ thống điện âm và video"
+- model: master_data.clusterCodeTranslation
+  pk: "345"
+  fields:
+    cluster_code_id: "173"
+    language_code: "en"
+    name: "Telephone system"
+- model: master_data.clusterCodeTranslation
+  pk: "346"
+  fields:
+    cluster_code_id: "173"
+    language_code: "vi"
+    name: "Hệ thống điện thoại"
+- model: master_data.clusterCodeTranslation
+  pk: "347"
+  fields:
+    cluster_code_id: "174"
+    language_code: "en"
+    name: "Navigation system"
+- model: master_data.clusterCodeTranslation
+  pk: "348"
+  fields:
+    cluster_code_id: "174"
+    language_code: "vi"
+    name: "Hệ thống định vị"
+- model: master_data.clusterCodeTranslation
+  pk: "349"
+  fields:
+    cluster_code_id: "175"
+    language_code: "en"
+    name: "Electronic information system"
+- model: master_data.clusterCodeTranslation
+  pk: "350"
+  fields:
+    cluster_code_id: "175"
+    language_code: "vi"
+    name: "Hệ thống thông tin điện tử"
+- model: master_data.clusterCodeTranslation
+  pk: "351"
+  fields:
+    cluster_code_id: "176"
+    language_code: "en"
+    name: "Radio installation and set"
+- model: master_data.clusterCodeTranslation
+  pk: "352"
+  fields:
+    cluster_code_id: "176"
+    language_code: "vi"
+    name: "Hệ thống vô tuyến"
+- model: master_data.clusterCodeTranslation
+  pk: "353"
+  fields:
+    cluster_code_id: "177"
+    language_code: "en"
+    name: "Monitor and projector"
+- model: master_data.clusterCodeTranslation
+  pk: "354"
+  fields:
+    cluster_code_id: "177"
+    language_code: "vi"
+    name: "Màn hình và máy chiếu"
+- model: master_data.clusterCodeTranslation
+  pk: "355"
+  fields:
+    cluster_code_id: "178"
+    language_code: "en"
+    name: "Moderation equipment"
+- model: master_data.clusterCodeTranslation
+  pk: "356"
+  fields:
+    cluster_code_id: "178"
+    language_code: "vi"
+    name: "Thiết bị điều độ"
+- model: master_data.clusterCodeTranslation
+  pk: "357"
+  fields:
+    cluster_code_id: "179"
+    language_code: "en"
+    name: "Display appliance"
+- model: master_data.clusterCodeTranslation
+  pk: "358"
+  fields:
+    cluster_code_id: "179"
+    language_code: "vi"
+    name: "Thiết bị hiển thị"
+- model: master_data.clusterCodeTranslation
+  pk: "359"
+  fields:
+    cluster_code_id: "180"
+    language_code: "en"
+    name: "Technical conference equipment"
+- model: master_data.clusterCodeTranslation
+  pk: "360"
+  fields:
+    cluster_code_id: "180"
+    language_code: "vi"
+    name: "Thiết bị kỹ thuật hội nghị"
+- model: master_data.clusterCodeTranslation
+  pk: "361"
+  fields:
+    cluster_code_id: "181"
+    language_code: "en"
+    name: "Event and fair equipment"
+- model: master_data.clusterCodeTranslation
+  pk: "362"
+  fields:
+    cluster_code_id: "181"
+    language_code: "vi"
+    name: "Thiết bị sự kiện và hội chợ"
+- model: master_data.clusterCodeTranslation
+  pk: "363"
+  fields:
+    cluster_code_id: "182"
+    language_code: "en"
+    name: "Other presentation equipment"
+- model: master_data.clusterCodeTranslation
+  pk: "364"
+  fields:
+    cluster_code_id: "182"
+    language_code: "vi"
+    name: "Thiết bị trình chiếu khác"
+- model: master_data.clusterCodeTranslation
+  pk: "365"
+  fields:
+    cluster_code_id: "183"
+    language_code: "en"
+    name: "Telecommunication device"
+- model: master_data.clusterCodeTranslation
+  pk: "366"
+  fields:
+    cluster_code_id: "183"
+    language_code: "vi"
+    name: "Thiết bị viễn thông"
+- model: master_data.clusterCodeTranslation
+  pk: "367"
+  fields:
+    cluster_code_id: "184"
+    language_code: "en"
+    name: "Advertising material and equipment"
+- model: master_data.clusterCodeTranslation
+  pk: "368"
+  fields:
+    cluster_code_id: "184"
+    language_code: "vi"
+    name: "Vật tư và thiết bị quảng cáo"
+- model: master_data.clusterCodeTranslation
+  pk: "369"
+  fields:
+    cluster_code_id: "185"
+    language_code: "en"
+    name: "Security and protection"
+- model: master_data.clusterCodeTranslation
+  pk: "370"
+  fields:
+    cluster_code_id: "185"
+    language_code: "vi"
+    name: "An ninh và bảo vệ"
+- model: master_data.clusterCodeTranslation
+  pk: "371"
+  fields:
+    cluster_code_id: "186"
+    language_code: "en"
+    name: "Occupational safety equipment for sound and vibration protection"
+- model: master_data.clusterCodeTranslation
+  pk: "372"
+  fields:
+    cluster_code_id: "186"
+    language_code: "vi"
+    name: "Thiết bị an toàn lao động bảo vệ khỏi âm và rung chuyển"
+- model: master_data.clusterCodeTranslation
+  pk: "373"
+  fields:
+    cluster_code_id: "187"
+    language_code: "en"
+    name: "Occupational safety equipment"
+- model: master_data.clusterCodeTranslation
+  pk: "374"
+  fields:
+    cluster_code_id: "187"
+    language_code: "vi"
+    name: "Thiết bị an toàn nghề nghiệp"
+- model: master_data.clusterCodeTranslation
+  pk: "375"
+  fields:
+    cluster_code_id: "188"
+    language_code: "en"
+    name: "Fire protection equipment"
+- model: master_data.clusterCodeTranslation
+  pk: "376"
+  fields:
+    cluster_code_id: "188"
+    language_code: "vi"
+    name: "Thiết bị phòng cháy chữa cháy"
+- model: master_data.clusterCodeTranslation
+  pk: "377"
+  fields:
+    cluster_code_id: "189"
+    language_code: "en"
+    name: "Labor protective clothing"
+- model: master_data.clusterCodeTranslation
+  pk: "378"
+  fields:
+    cluster_code_id: "189"
+    language_code: "vi"
+    name: "Trang phục bảo hộ lao động"
+- model: master_data.clusterCodeTranslation
+  pk: "379"
+  fields:
+    cluster_code_id: "190"
+    language_code: "en"
+    name: "Abrasive and polishing agent"
+- model: master_data.clusterCodeTranslation
+  pk: "380"
+  fields:
+    cluster_code_id: "190"
+    language_code: "vi"
+    name: "Chất mài mòn và đánh bóng"
+- model: master_data.clusterCodeTranslation
+  pk: "381"
+  fields:
+    cluster_code_id: "191"
+    language_code: "en"
+    name: "Tool for other application"
+- model: master_data.clusterCodeTranslation
+  pk: "382"
+  fields:
+    cluster_code_id: "191"
+    language_code: "vi"
+    name: "Công cụ cho ứng dụng khác"
+- model: master_data.clusterCodeTranslation
+  pk: "383"
+  fields:
+    cluster_code_id: "192"
+    language_code: "en"
+    name: "Pneumatic tool"
+- model: master_data.clusterCodeTranslation
+  pk: "384"
+  fields:
+    cluster_code_id: "192"
+    language_code: "vi"
+    name: "Công cụ sử dụng khí nén"
+- model: master_data.clusterCodeTranslation
+  pk: "385"
+  fields:
+    cluster_code_id: "193"
+    language_code: "en"
+    name: "Hand tool"
+- model: master_data.clusterCodeTranslation
+  pk: "386"
+  fields:
+    cluster_code_id: "193"
+    language_code: "vi"
+    name: "Dụng cụ cầm tay"
+- model: master_data.clusterCodeTranslation
+  pk: "387"
+  fields:
+    cluster_code_id: "194"
+    language_code: "en"
+    name: "Gasoline tool"
+- model: master_data.clusterCodeTranslation
+  pk: "388"
+  fields:
+    cluster_code_id: "194"
+    language_code: "vi"
+    name: "Dụng cụ chạy bằng xăng"
+- model: master_data.clusterCodeTranslation
+  pk: "389"
+  fields:
+    cluster_code_id: "195"
+    language_code: "en"
+    name: "Electromotive tool and small machine"
+- model: master_data.clusterCodeTranslation
+  pk: "390"
+  fields:
+    cluster_code_id: "195"
+    language_code: "vi"
+    name: "Dụng cụ điện động và máy loại nhỏ"
+- model: master_data.clusterCodeTranslation
+  pk: "391"
+  fields:
+    cluster_code_id: "196"
+    language_code: "en"
+    name: "Measuring and testing tool"
+- model: master_data.clusterCodeTranslation
+  pk: "392"
+  fields:
+    cluster_code_id: "196"
+    language_code: "vi"
+    name: "Dụng cụ đo lường và thử nghiệm"
+- model: master_data.clusterCodeTranslation
+  pk: "393"
+  fields:
+    cluster_code_id: "197"
+    language_code: "en"
+    name: "Hydraulic tool and machine"
+- model: master_data.clusterCodeTranslation
+  pk: "394"
+  fields:
+    cluster_code_id: "197"
+    language_code: "vi"
+    name: "Dụng cụ và máy dùng thủy lực"
+- model: master_data.clusterCodeTranslation
+  pk: "395"
+  fields:
+    cluster_code_id: "198"
+    language_code: "en"
+    name: "Cutting part"
+- model: master_data.clusterCodeTranslation
+  pk: "396"
+  fields:
+    cluster_code_id: "198"
+    language_code: "vi"
+    name: "Thiết bị cắt"
+- model: master_data.clusterCodeTranslation
+  pk: "397"
+  fields:
+    cluster_code_id: "199"
+    language_code: "en"
+    name: "Filling and emptying device"
+- model: master_data.clusterCodeTranslation
+  pk: "398"
+  fields:
+    cluster_code_id: "199"
+    language_code: "vi"
+    name: "Thiết bị đổ đầy và làm rỗng"
+- model: master_data.clusterCodeTranslation
+  pk: "399"
+  fields:
+    cluster_code_id: "200"
+    language_code: "en"
+    name: "Cast metal part"
+- model: master_data.clusterCodeTranslation
+  pk: "400"
+  fields:
+    cluster_code_id: "200"
+    language_code: "vi"
+    name: "Thiết bị đúc bằng kim loại"
+- model: master_data.clusterCodeTranslation
+  pk: "401"
+  fields:
+    cluster_code_id: "201"
+    language_code: "en"
+    name: "Soldering equipment"
+- model: master_data.clusterCodeTranslation
+  pk: "402"
+  fields:
+    cluster_code_id: "201"
+    language_code: "vi"
+    name: "Thiết bị hàn"
+- model: master_data.clusterCodeTranslation
+  pk: "403"
+  fields:
+    cluster_code_id: "202"
+    language_code: "en"
+    name: "Other component for conveying technology"
+- model: master_data.clusterCodeTranslation
+  pk: "404"
+  fields:
+    cluster_code_id: "202"
+    language_code: "vi"
+    name: "Thiết bị khác công nghệ băng tải"
+- model: master_data.clusterCodeTranslation
+  pk: "405"
+  fields:
+    cluster_code_id: "203"
+    language_code: "en"
+    name: "Workshop equipment"
+- model: master_data.clusterCodeTranslation
+  pk: "406"
+  fields:
+    cluster_code_id: "203"
+    language_code: "vi"
+    name: "Thiết bị nhà xưởng"
+- model: master_data.clusterCodeTranslation
+  pk: "407"
+  fields:
+    cluster_code_id: "204"
+    language_code: "en"
+    name: "Load suspension equipment"
+- model: master_data.clusterCodeTranslation
+  pk: "408"
+  fields:
+    cluster_code_id: "204"
+    language_code: "vi"
+    name: "Thiết bị treo vật có tải trọng"
+- model: master_data.clusterCodeTranslation
+  pk: "409"
+  fields:
+    cluster_code_id: "205"
+    language_code: "en"
+    name: "Non continuous conveyor"
+- model: master_data.clusterCodeTranslation
+  pk: "410"
+  fields:
+    cluster_code_id: "205"
+    language_code: "vi"
+    name: "Băng tải không liên tục"
+- model: master_data.clusterCodeTranslation
+  pk: "411"
+  fields:
+    cluster_code_id: "206"
+    language_code: "en"
+    name: "Sensor (according to application)"
+- model: master_data.clusterCodeTranslation
+  pk: "412"
+  fields:
+    cluster_code_id: "206"
+    language_code: "vi"
+    name: "Bộ cảm biến (theo ứng dụng)"
+- model: master_data.clusterCodeTranslation
+  pk: "413"
+  fields:
+    cluster_code_id: "207"
+    language_code: "en"
+    name: "Sensor inductive"
+- model: master_data.clusterCodeTranslation
+  pk: "414"
+  fields:
+    cluster_code_id: "207"
+    language_code: "vi"
+    name: "Cảm biến cảm ứng"
+- model: master_data.clusterCodeTranslation
+  pk: "415"
+  fields:
+    cluster_code_id: "208"
+    language_code: "en"
+    name: "Sensor for physical quantity"
+- model: master_data.clusterCodeTranslation
+  pk: "416"
+  fields:
+    cluster_code_id: "208"
+    language_code: "vi"
+    name: "Cảm biến đại lượng vật lý"
+- model: master_data.clusterCodeTranslation
+  pk: "417"
+  fields:
+    cluster_code_id: "209"
+    language_code: "en"
+    name: "Sensor capacitive"
+- model: master_data.clusterCodeTranslation
+  pk: "418"
+  fields:
+    cluster_code_id: "209"
+    language_code: "vi"
+    name: "Cảm biến điện dung"
+- model: master_data.clusterCodeTranslation
+  pk: "419"
+  fields:
+    cluster_code_id: "210"
+    language_code: "en"
+    name: "Other sensor"
+- model: master_data.clusterCodeTranslation
+  pk: "420"
+  fields:
+    cluster_code_id: "210"
+    language_code: "vi"
+    name: "Cảm biến khác"
+- model: master_data.clusterCodeTranslation
+  pk: "421"
+  fields:
+    cluster_code_id: "211"
+    language_code: "en"
+    name: "Conveyor technology"
+- model: master_data.clusterCodeTranslation
+  pk: "422"
+  fields:
+    cluster_code_id: "211"
+    language_code: "vi"
+    name: "Công nghệ băng tải"
+- model: master_data.clusterCodeTranslation
+  pk: "423"
+  fields:
+    cluster_code_id: "212"
+    language_code: "en"
+    name: "Other conveyor technology"
+- model: master_data.clusterCodeTranslation
+  pk: "424"
+  fields:
+    cluster_code_id: "212"
+    language_code: "vi"
+    name: "Công nghệ băng tải khác"
+- model: master_data.clusterCodeTranslation
+  pk: "425"
+  fields:
+    cluster_code_id: "213"
+    language_code: "en"
+    name: "Measuring and testing technology for specific quantity"
+- model: master_data.clusterCodeTranslation
+  pk: "426"
+  fields:
+    cluster_code_id: "213"
+    language_code: "vi"
+    name: "Công nghệ đo lường và kiểm tra số lượng cụ thể"
+- model: master_data.clusterCodeTranslation
+  pk: "427"
+  fields:
+    cluster_code_id: "214"
+    language_code: "en"
+    name: "Welding technique"
+- model: master_data.clusterCodeTranslation
+  pk: "428"
+  fields:
+    cluster_code_id: "214"
+    language_code: "vi"
+    name: "Công nghệ hàn"
+- model: master_data.clusterCodeTranslation
+  pk: "429"
+  fields:
+    cluster_code_id: "215"
+    language_code: "en"
+    name: "Filtering technology"
+- model: master_data.clusterCodeTranslation
+  pk: "430"
+  fields:
+    cluster_code_id: "215"
+    language_code: "vi"
+    name: "Công nghệ lọc"
+- model: master_data.clusterCodeTranslation
+  pk: "431"
+  fields:
+    cluster_code_id: "216"
+    language_code: "en"
+    name: "Storage and rack system"
+- model: master_data.clusterCodeTranslation
+  pk: "432"
+  fields:
+    cluster_code_id: "216"
+    language_code: "vi"
+    name: "Hệ thống kệ và lưu trữ"
+- model: master_data.clusterCodeTranslation
+  pk: "433"
+  fields:
+    cluster_code_id: "217"
+    language_code: "en"
+    name: "Material and goods handling system"
+- model: master_data.clusterCodeTranslation
+  pk: "434"
+  fields:
+    cluster_code_id: "217"
+    language_code: "vi"
+    name: "Hệ thống xử lý hàng hóa và vật liệu"
+- model: master_data.clusterCodeTranslation
+  pk: "435"
+  fields:
+    cluster_code_id: "218"
+    language_code: "en"
+    name: "Accessory for sensoric"
+- model: master_data.clusterCodeTranslation
+  pk: "436"
+  fields:
+    cluster_code_id: "218"
+    language_code: "vi"
+    name: "Phụ kiện cảm biến"
+- model: master_data.clusterCodeTranslation
+  pk: "437"
+  fields:
+    cluster_code_id: "219"
+    language_code: "en"
+    name: "Compensator and bellow for tube"
+- model: master_data.clusterCodeTranslation
+  pk: "438"
+  fields:
+    cluster_code_id: "219"
+    language_code: "vi"
+    name: "Bộ bù và ống xếp cho ống"
+- model: master_data.clusterCodeTranslation
+  pk: "439"
+  fields:
+    cluster_code_id: "220"
+    language_code: "en"
+    name: "Component for water pollution prevention treatment"
+- model: master_data.clusterCodeTranslation
+  pk: "440"
+  fields:
+    cluster_code_id: "220"
+    language_code: "vi"
+    name: "Thiết bị xử lý ngăn ngừa ô nhiễm nước"
+- model: master_data.clusterCodeTranslation
+  pk: "441"
+  fields:
+    cluster_code_id: "221"
+    language_code: "en"
+    name: "Tube"
+- model: master_data.clusterCodeTranslation
+  pk: "442"
+  fields:
+    cluster_code_id: "221"
+    language_code: "vi"
+    name: "Ống"
+- model: master_data.clusterCodeTranslation
+  pk: "443"
+  fields:
+    cluster_code_id: "222"
+    language_code: "en"
+    name: "Hose"
+- model: master_data.clusterCodeTranslation
+  pk: "444"
+  fields:
+    cluster_code_id: "222"
+    language_code: "vi"
+    name: "Ống mềm"
+- model: master_data.clusterCodeTranslation
+  pk: "445"
+  fields:
+    cluster_code_id: "223"
+    language_code: "en"
+    name: "Armature"
+- model: master_data.clusterCodeTranslation
+  pk: "446"
+  fields:
+    cluster_code_id: "223"
+    language_code: "vi"
+    name: "Phần ứng"
+- model: master_data.clusterCodeTranslation
+  pk: "447"
+  fields:
+    cluster_code_id: "224"
+    language_code: "en"
+    name: "Canal and pipe fitting piece"
+- model: master_data.clusterCodeTranslation
+  pk: "448"
+  fields:
+    cluster_code_id: "224"
+    language_code: "vi"
+    name: "Phụ kiện lắp ống và đường ống"
+- model: master_data.clusterCodeTranslation
+  pk: "449"
+  fields:
+    cluster_code_id: "225"
+    language_code: "en"
+    name: "Pipe and hose accessory"
+- model: master_data.clusterCodeTranslation
+  pk: "450"
+  fields:
+    cluster_code_id: "225"
+    language_code: "vi"
+    name: "Phụ kiện ống và ống mềm"
+- model: master_data.clusterCodeTranslation
+  pk: "451"
+  fields:
+    cluster_code_id: "226"
+    language_code: "en"
+    name: "Component for water protection purpose"
+- model: master_data.clusterCodeTranslation
+  pk: "452"
+  fields:
+    cluster_code_id: "226"
+    language_code: "vi"
+    name: "Thiết bị bảo vệ môi trường nước"
+- model: master_data.clusterCodeTranslation
+  pk: "453"
+  fields:
+    cluster_code_id: "227"
+    language_code: "en"
+    name: "Sewage work component"
+- model: master_data.clusterCodeTranslation
+  pk: "454"
+  fields:
+    cluster_code_id: "227"
+    language_code: "vi"
+    name: "Thiết bị công trình thoát nước"
+- model: master_data.clusterCodeTranslation
+  pk: "455"
+  fields:
+    cluster_code_id: "228"
+    language_code: "en"
+    name: "Component for air purity maintenance"
+- model: master_data.clusterCodeTranslation
+  pk: "456"
+  fields:
+    cluster_code_id: "228"
+    language_code: "vi"
+    name: "Thiết bị duy trì độ tinh khiết không khí"
+- model: master_data.clusterCodeTranslation
+  pk: "457"
+  fields:
+    cluster_code_id: "229"
+    language_code: "en"
+    name: "Fumigation equipment"
+- model: master_data.clusterCodeTranslation
+  pk: "458"
+  fields:
+    cluster_code_id: "229"
+    language_code: "vi"
+    name: "Thiết bị khử trùng"
+- model: master_data.clusterCodeTranslation
+  pk: "459"
+  fields:
+    cluster_code_id: "230"
+    language_code: "en"
+    name: "Appliances for slurry drainage and treatment"
+- model: master_data.clusterCodeTranslation
+  pk: "460"
+  fields:
+    cluster_code_id: "230"
+    language_code: "vi"
+    name: "Thiết bị thoát nước và xử lý bùn"
+- model: master_data.clusterCodeTranslation
+  pk: "461"
+  fields:
+    cluster_code_id: "231"
+    language_code: "en"
+    name: "Oil hydraulic"
+- model: master_data.clusterCodeTranslation
+  pk: "462"
+  fields:
+    cluster_code_id: "231"
+    language_code: "vi"
+    name: "Dầu thủy lực"
+- model: master_data.clusterCodeTranslation
+  pk: "463"
+  fields:
+    cluster_code_id: "232"
+    language_code: "en"
+    name: "Chemical"
+- model: master_data.clusterCodeTranslation
+  pk: "464"
+  fields:
+    cluster_code_id: "232"
+    language_code: "vi"
+    name: "Hóa chất"
+- model: master_data.clusterCodeTranslation
+  pk: "465"
+  fields:
+    cluster_code_id: "233"
+    language_code: "en"
+    name: "Chemical (according to application)"
+- model: master_data.clusterCodeTranslation
+  pk: "466"
+  fields:
+    cluster_code_id: "233"
+    language_code: "vi"
+    name: "Hóa chất (theo ứng dụng)"
+- model: master_data.clusterCodeTranslation
+  pk: "467"
+  fields:
+    cluster_code_id: "234"
+    language_code: "en"
+    name: "Pneumatic"
+- model: master_data.clusterCodeTranslation
+  pk: "468"
+  fields:
+    cluster_code_id: "234"
+    language_code: "vi"
+    name: "Khí nén"
+- model: master_data.clusterCodeTranslation
+  pk: "469"
+  fields:
+    cluster_code_id: "235"
+    language_code: "en"
+    name: "Water-hydraulic"
+- model: master_data.clusterCodeTranslation
+  pk: "470"
+  fields:
+    cluster_code_id: "235"
+    language_code: "vi"
+    name: "Nước - thủy lực"
+- model: master_data.clusterCodeTranslation
+  pk: "471"
+  fields:
+    cluster_code_id: "236"
+    language_code: "en"
+    name: "Chemical technical product"
+- model: master_data.clusterCodeTranslation
+  pk: "472"
+  fields:
+    cluster_code_id: "236"
+    language_code: "vi"
+    name: "Sản phẩm hóa kỹ thuật"
+- model: master_data.clusterCodeTranslation
+  pk: "473"
+  fields:
+    cluster_code_id: "237"
+    language_code: "en"
+    name: "Other chemical industrial material"
+- model: master_data.clusterCodeTranslation
+  pk: "474"
+  fields:
+    cluster_code_id: "237"
+    language_code: "vi"
+    name: "Vật liệu hóa chất công nghiệp khác"
+- model: master_data.clusterCodeTranslation
+  pk: "475"
+  fields:
+    cluster_code_id: "238"
+    language_code: "en"
+    name: "Electromechanic"
+- model: master_data.clusterCodeTranslation
+  pk: "476"
+  fields:
+    cluster_code_id: "238"
+    language_code: "vi"
+    name: "Cơ điện"
+- model: master_data.clusterCodeTranslation
+  pk: "477"
+  fields:
+    cluster_code_id: "239"
+    language_code: "en"
+    name: "Electrical connection technology"
+- model: master_data.clusterCodeTranslation
+  pk: "478"
+  fields:
+    cluster_code_id: "239"
+    language_code: "vi"
+    name: "Công nghệ đấu nối điện"
+- model: master_data.clusterCodeTranslation
+  pk: "479"
+  fields:
+    cluster_code_id: "240"
+    language_code: "en"
+    name: "Electrical equipment"
+- model: master_data.clusterCodeTranslation
+  pk: "480"
+  fields:
+    cluster_code_id: "240"
+    language_code: "vi"
+    name: "Thiết bị điện"
+- model: master_data.clusterCodeTranslation
+  pk: "481"
+  fields:
+    cluster_code_id: "241"
+    language_code: "en"
+    name: "Drive system"
+- model: master_data.clusterCodeTranslation
+  pk: "482"
+  fields:
+    cluster_code_id: "241"
+    language_code: "vi"
+    name: "Hệ thống truyền động"
+- model: master_data.clusterCodeTranslation
+  pk: "483"
+  fields:
+    cluster_code_id: "242"
+    language_code: "en"
+    name: "Control technique"
+- model: master_data.clusterCodeTranslation
+  pk: "484"
+  fields:
+    cluster_code_id: "242"
+    language_code: "vi"
+    name: "Kỹ thuật điều khiển"
+- model: master_data.clusterCodeTranslation
+  pk: "485"
+  fields:
+    cluster_code_id: "243"
+    language_code: "en"
+    name: "Automation solution machine"
+- model: master_data.clusterCodeTranslation
+  pk: "486"
+  fields:
+    cluster_code_id: "243"
+    language_code: "vi"
+    name: "Máy tự động hóa"
+- model: master_data.clusterCodeTranslation
+  pk: "487"
+  fields:
+    cluster_code_id: "244"
+    language_code: "en"
+    name: "Driving component"
+- model: master_data.clusterCodeTranslation
+  pk: "488"
+  fields:
+    cluster_code_id: "244"
+    language_code: "vi"
+    name: "Thiết bị truyền động"
+- model: master_data.clusterCodeTranslation
+  pk: "489"
+  fields:
+    cluster_code_id: "245"
+    language_code: "en"
+    name: "Assembly technique"
+- model: master_data.clusterCodeTranslation
+  pk: "490"
+  fields:
+    cluster_code_id: "245"
+    language_code: "vi"
+    name: "Kỹ thuật lắp ráp"
+- model: master_data.clusterCodeTranslation
+  pk: "491"
+  fields:
+    cluster_code_id: "246"
+    language_code: "en"
+    name: "Industrial robot equipment"
+- model: master_data.clusterCodeTranslation
+  pk: "492"
+  fields:
+    cluster_code_id: "246"
+    language_code: "vi"
+    name: "Thiết bị rôbốt công nghiệp"
+- model: master_data.clusterCodeTranslation
+  pk: "493"
+  fields:
+    cluster_code_id: "247"
+    language_code: "en"
+    name: "Handling equipment"
+- model: master_data.clusterCodeTranslation
+  pk: "494"
+  fields:
+    cluster_code_id: "247"
+    language_code: "vi"
+    name: "Thiết bị xử lý"
+- model: master_data.clusterCodeTranslation
+  pk: "495"
+  fields:
+    cluster_code_id: "248"
+    language_code: "en"
+    name: "Rubber and plastic"
+- model: master_data.clusterCodeTranslation
+  pk: "496"
+  fields:
+    cluster_code_id: "248"
+    language_code: "vi"
+    name: "Cao su và nhựa"
+- model: master_data.clusterCodeTranslation
+  pk: "497"
+  fields:
+    cluster_code_id: "249"
+    language_code: "en"
+    name: "Minerals and metallurgy"
+- model: master_data.clusterCodeTranslation
+  pk: "498"
+  fields:
+    cluster_code_id: "249"
+    language_code: "vi"
+    name: "Khoáng sản và luyện kim"
+- model: master_data.clusterCodeTranslation
+  pk: "499"
+  fields:
+    cluster_code_id: "250"
+    language_code: "en"
+    name: "Energy"
+- model: master_data.clusterCodeTranslation
+  pk: "500"
+  fields:
+    cluster_code_id: "250"
+    language_code: "vi"
+    name: "Năng lượng"
+- model: master_data.clusterCodeTranslation
+  pk: "501"
+  fields:
+    cluster_code_id: "251"
+    language_code: "en"
+    name: "Metal construction"
+- model: master_data.clusterCodeTranslation
+  pk: "502"
+  fields:
+    cluster_code_id: "251"
+    language_code: "vi"
+    name: "Cấu kiện kim loại"
+- model: master_data.clusterCodeTranslation
+  pk: "503"
+  fields:
+    cluster_code_id: "252"
+    language_code: "en"
+    name: "Component for jig and fixture construction"
+- model: master_data.clusterCodeTranslation
+  pk: "504"
+  fields:
+    cluster_code_id: "252"
+    language_code: "vi"
+    name: "Chế tạo thiết bị đồ gá và cố định"
+- model: master_data.clusterCodeTranslation
+  pk: "505"
+  fields:
+    cluster_code_id: "253"
+    language_code: "en"
+    name: "Surface treatment and technology"
+- model: master_data.clusterCodeTranslation
+  pk: "506"
+  fields:
+    cluster_code_id: "253"
+    language_code: "vi"
+    name: "Công nghệ và xử lý bề mặt"
+- model: master_data.clusterCodeTranslation
+  pk: "507"
+  fields:
+    cluster_code_id: "254"
+    language_code: "en"
+    name: "Saw part"
+- model: master_data.clusterCodeTranslation
+  pk: "508"
+  fields:
+    cluster_code_id: "254"
+    language_code: "vi"
+    name: "Cưa phụ tùng"
+- model: master_data.clusterCodeTranslation
+  pk: "509"
+  fields:
+    cluster_code_id: "255"
+    language_code: "en"
+    name: "Fabrication service"
+- model: master_data.clusterCodeTranslation
+  pk: "510"
+  fields:
+    cluster_code_id: "255"
+    language_code: "vi"
+    name: "Dịch vụ chế tạo"
+- model: master_data.clusterCodeTranslation
+  pk: "511"
+  fields:
+    cluster_code_id: "256"
+    language_code: "en"
+    name: "Machinery and service"
+- model: master_data.clusterCodeTranslation
+  pk: "512"
+  fields:
+    cluster_code_id: "256"
+    language_code: "vi"
+    name: "Dịch vụ cho máy và thiết bị"
+- model: master_data.clusterCodeTranslation
+  pk: "513"
+  fields:
+    cluster_code_id: "257"
+    language_code: "en"
+    name: "Assembly service"
+- model: master_data.clusterCodeTranslation
+  pk: "514"
+  fields:
+    cluster_code_id: "257"
+    language_code: "vi"
+    name: "Dịch vụ lắp ráp"
+- model: master_data.clusterCodeTranslation
+  pk: "515"
+  fields:
+    cluster_code_id: "258"
+    language_code: "en"
+    name: "Complex manufacturing service"
+- model: master_data.clusterCodeTranslation
+  pk: "516"
+  fields:
+    cluster_code_id: "258"
+    language_code: "vi"
+    name: "Dịch vụ sản xuất tổng hợp"
+- model: master_data.clusterCodeTranslation
+  pk: "517"
+  fields:
+    cluster_code_id: "259"
+    language_code: "en"
+    name: "Mounded part of plastic, rubber"
+- model: master_data.clusterCodeTranslation
+  pk: "518"
+  fields:
+    cluster_code_id: "259"
+    language_code: "vi"
+    name: "Đúc nhựa, cao su"
+- model: master_data.clusterCodeTranslation
+  pk: "519"
+  fields:
+    cluster_code_id: "260"
+    language_code: "en"
+    name: "Metal working"
+- model: master_data.clusterCodeTranslation
+  pk: "520"
+  fields:
+    cluster_code_id: "260"
+    language_code: "vi"
+    name: "Gia công kim loại"
+- model: master_data.clusterCodeTranslation
+  pk: "521"
+  fields:
+    cluster_code_id: "261"
+    language_code: "en"
+    name: "Welding part, metal"
+- model: master_data.clusterCodeTranslation
+  pk: "522"
+  fields:
+    cluster_code_id: "261"
+    language_code: "vi"
+    name: "Hàn phụ tùng, kim loại"
+- model: master_data.clusterCodeTranslation
+  pk: "523"
+  fields:
+    cluster_code_id: "262"
+    language_code: "en"
+    name: "Grinding part"
+- model: master_data.clusterCodeTranslation
+  pk: "524"
+  fields:
+    cluster_code_id: "262"
+    language_code: "vi"
+    name: "Mài phụ tùng"
+- model: master_data.clusterCodeTranslation
+  pk: "525"
+  fields:
+    cluster_code_id: "263"
+    language_code: "en"
+    name: "Prototype and sample part, industrial, model construction"
+- model: master_data.clusterCodeTranslation
+  pk: "526"
+  fields:
+    cluster_code_id: "263"
+    language_code: "vi"
+    name: "Nguyên mẫu và phụ tùng mẫu, xây dựng mô hình công nghiệp"
+- model: master_data.clusterCodeTranslation
+  pk: "527"
+  fields:
+    cluster_code_id: "264"
+    language_code: "en"
+    name: "Other moulded and structural part"
+- model: master_data.clusterCodeTranslation
+  pk: "528"
+  fields:
+    cluster_code_id: "264"
+    language_code: "vi"
+    name: "Phần đúc và kết cấu khác"
+- model: master_data.clusterCodeTranslation
+  pk: "529"
+  fields:
+    cluster_code_id: "265"
+    language_code: "en"
+    name: "Milling part, milling metal"
+- model: master_data.clusterCodeTranslation
+  pk: "530"
+  fields:
+    cluster_code_id: "265"
+    language_code: "vi"
+    name: "Phay phụ tùng, phay kim loại"
+- model: master_data.clusterCodeTranslation
+  pk: "531"
+  fields:
+    cluster_code_id: "266"
+    language_code: "en"
+    name: "Tube metal part"
+- model: master_data.clusterCodeTranslation
+  pk: "532"
+  fields:
+    cluster_code_id: "266"
+    language_code: "vi"
+    name: "Phụ tùng ống kim loại"
+- model: master_data.clusterCodeTranslation
+  pk: "533"
+  fields:
+    cluster_code_id: "267"
+    language_code: "en"
+    name: "Sheet metal part, sheet metal working"
+- model: master_data.clusterCodeTranslation
+  pk: "534"
+  fields:
+    cluster_code_id: "267"
+    language_code: "vi"
+    name: "Phụ tùng tấm kim loại, gia công tấm kim loại"
+- model: master_data.clusterCodeTranslation
+  pk: "535"
+  fields:
+    cluster_code_id: "268"
+    language_code: "en"
+    name: "Turning part, metal"
+- model: master_data.clusterCodeTranslation
+  pk: "536"
+  fields:
+    cluster_code_id: "268"
+    language_code: "vi"
+    name: "Phụ tùng tiện, kim loại"
+- model: master_data.clusterCodeTranslation
+  pk: "537"
+  fields:
+    cluster_code_id: "269"
+    language_code: "en"
+    name: "Other manufacturing"
+- model: master_data.clusterCodeTranslation
+  pk: "538"
+  fields:
+    cluster_code_id: "269"
+    language_code: "vi"
+    name: "Sản xuất khác"
+- model: master_data.clusterCodeTranslation
+  pk: "539"
+  fields:
+    cluster_code_id: "270"
+    language_code: "en"
+    name: "Tool and mold making"
+- model: master_data.clusterCodeTranslation
+  pk: "540"
+  fields:
+    cluster_code_id: "270"
+    language_code: "vi"
+    name: "Tạo công cụ và khuôn"
+- model: master_data.clusterCodeTranslation
+  pk: "541"
+  fields:
+    cluster_code_id: "271"
+    language_code: "en"
+    name: "Thread fabrication part"
+- model: master_data.clusterCodeTranslation
+  pk: "542"
+  fields:
+    cluster_code_id: "271"
+    language_code: "vi"
+    name: "Tạo ren phụ tùng"
+- model: master_data.clusterCodeTranslation
+  pk: "543"
+  fields:
+    cluster_code_id: "272"
+    language_code: "en"
+    name: "Change material property"
+- model: master_data.clusterCodeTranslation
+  pk: "544"
+  fields:
+    cluster_code_id: "272"
+    language_code: "vi"
+    name: "Thay đổi đặc tính"
+- model: master_data.clusterCodeTranslation
+  pk: "545"
+  fields:
+    cluster_code_id: "273"
+    language_code: "en"
+    name: "Structural part, processing plastic"
+- model: master_data.clusterCodeTranslation
+  pk: "546"
+  fields:
+    cluster_code_id: "273"
+    language_code: "vi"
+    name: "Thiết bị cấu trúc, gia công nhựa"
+- model: master_data.clusterCodeTranslation
+  pk: "547"
+  fields:
+    cluster_code_id: "274"
+    language_code: "en"
+    name: "Punching and bending part"
+- model: master_data.clusterCodeTranslation
+  pk: "548"
+  fields:
+    cluster_code_id: "274"
+    language_code: "vi"
+    name: "Thiết bị đột lỗ và uốn"
+- model: master_data.clusterCodeTranslation
+  pk: "549"
+  fields:
+    cluster_code_id: "275"
+    language_code: "en"
+    name: "Machining center, flexible manufacturing cell and production system"
+- model: master_data.clusterCodeTranslation
+  pk: "550"
+  fields:
+    cluster_code_id: "275"
+    language_code: "vi"
+    name: "Trung tâm gia công, chi tiết chế tạo linh hoạt và hệ thống sản xuất"
+- model: master_data.clusterCodeTranslation
+  pk: "551"
+  fields:
+    cluster_code_id: "276"
+    language_code: "en"
+    name: "Elastomer and rubber semi manufactured goods"
+- model: master_data.clusterCodeTranslation
+  pk: "552"
+  fields:
+    cluster_code_id: "276"
+    language_code: "vi"
+    name: "Chất đàn hồi và cao su bán thành phẩm"
+- model: master_data.clusterCodeTranslation
+  pk: "553"
+  fields:
+    cluster_code_id: "277"
+    language_code: "en"
+    name: "Technical textile"
+- model: master_data.clusterCodeTranslation
+  pk: "554"
+  fields:
+    cluster_code_id: "277"
+    language_code: "vi"
+    name: "Dệt kỹ thuật"
+- model: master_data.clusterCodeTranslation
+  pk: "555"
+  fields:
+    cluster_code_id: "278"
+    language_code: "en"
+    name: "Metal semi manufactured goods"
+- model: master_data.clusterCodeTranslation
+  pk: "556"
+  fields:
+    cluster_code_id: "278"
+    language_code: "vi"
+    name: "Kim loại bán thành phẩm"
+- model: master_data.clusterCodeTranslation
+  pk: "557"
+  fields:
+    cluster_code_id: "279"
+    language_code: "en"
+    name: "Material, raw product, raw material"
+- model: master_data.clusterCodeTranslation
+  pk: "558"
+  fields:
+    cluster_code_id: "279"
+    language_code: "vi"
+    name: "Nguyên liệu, sản phẩm thô, nguyên liệu thô"
+- model: master_data.clusterCodeTranslation
+  pk: "559"
+  fields:
+    cluster_code_id: "280"
+    language_code: "en"
+    name: "Plastic semi manufactured goods"
+- model: master_data.clusterCodeTranslation
+  pk: "560"
+  fields:
+    cluster_code_id: "280"
+    language_code: "vi"
+    name: "Nhựa bán thành phẩm"
+- model: master_data.clusterCodeTranslation
+  pk: "561"
+  fields:
+    cluster_code_id: "281"
+    language_code: "en"
+    name: "Glass semi manufactured goods"
+- model: master_data.clusterCodeTranslation
+  pk: "562"
+  fields:
+    cluster_code_id: "281"
+    language_code: "vi"
+    name: "Thủy tinh bán thành phẩm"
+- model: master_data.clusterCodeTranslation
+  pk: "563"
+  fields:
+    cluster_code_id: "282"
+    language_code: "en"
+    name: "Agriculture"
+- model: master_data.clusterCodeTranslation
+  pk: "564"
+  fields:
+    cluster_code_id: "282"
+    language_code: "vi"
+    name: "Nông nghiệp"
+- model: master_data.clusterCodeTranslation
+  pk: "565"
+  fields:
+    cluster_code_id: "283"
+    language_code: "en"
+    name: "Food and beverage"
+- model: master_data.clusterCodeTranslation
+  pk: "566"
+  fields:
+    cluster_code_id: "283"
+    language_code: "vi"
+    name: "Thực phẩm và đồ uống"
+- model: master_data.clusterCodeTranslation
+  pk: "567"
+  fields:
+    cluster_code_id: "284"
+    language_code: "en"
+    name: "Waste container"
+- model: master_data.clusterCodeTranslation
+  pk: "568"
+  fields:
+    cluster_code_id: "284"
+    language_code: "vi"
+    name: "Bể chất thải"
+- model: master_data.clusterCodeTranslation
+  pk: "569"
+  fields:
+    cluster_code_id: "285"
+    language_code: "en"
+    name: "Office technology"
+- model: master_data.clusterCodeTranslation
+  pk: "570"
+  fields:
+    cluster_code_id: "285"
+    language_code: "vi"
+    name: "Công nghệ cho văn phòng"
+- model: master_data.clusterCodeTranslation
+  pk: "571"
+  fields:
+    cluster_code_id: "286"
+    language_code: "en"
+    name: "Bank technology"
+- model: master_data.clusterCodeTranslation
+  pk: "572"
+  fields:
+    cluster_code_id: "286"
+    language_code: "vi"
+    name: "Công nghệ ngân hàng"
+- model: master_data.clusterCodeTranslation
+  pk: "573"
+  fields:
+    cluster_code_id: "287"
+    language_code: "en"
+    name: "Other office supply"
+- model: master_data.clusterCodeTranslation
+  pk: "574"
+  fields:
+    cluster_code_id: "287"
+    language_code: "vi"
+    name: "Đồ dùng văn phòng khác"
+- model: master_data.clusterCodeTranslation
+  pk: "575"
+  fields:
+    cluster_code_id: "288"
+    language_code: "en"
+    name: "Office and school supplies"
+- model: master_data.clusterCodeTranslation
+  pk: "576"
+  fields:
+    cluster_code_id: "288"
+    language_code: "vi"
+    name: "Đồ dùng văn phòng và trường học"
+- model: master_data.clusterCodeTranslation
+  pk: "577"
+  fields:
+    cluster_code_id: "289"
+    language_code: "en"
+    name: "Paper and label"
+- model: master_data.clusterCodeTranslation
+  pk: "578"
+  fields:
+    cluster_code_id: "289"
+    language_code: "vi"
+    name: "Giấy và nhãn"
+- model: master_data.clusterCodeTranslation
+  pk: "579"
+  fields:
+    cluster_code_id: "290"
+    language_code: "en"
+    name: "Indoor, outdoor installation"
+- model: master_data.clusterCodeTranslation
+  pk: "580"
+  fields:
+    cluster_code_id: "290"
+    language_code: "vi"
+    name: "Hệ thống lắp đặt trong nhà, ngoài trời"
+- model: master_data.clusterCodeTranslation
+  pk: "581"
+  fields:
+    cluster_code_id: "291"
+    language_code: "en"
+    name: "Cash and payment system"
+- model: master_data.clusterCodeTranslation
+  pk: "582"
+  fields:
+    cluster_code_id: "291"
+    language_code: "vi"
+    name: "Hệ thống thanh toán và tiền mặt"
+- model: master_data.clusterCodeTranslation
+  pk: "583"
+  fields:
+    cluster_code_id: "292"
+    language_code: "en"
+    name: "Office furniture"
+- model: master_data.clusterCodeTranslation
+  pk: "584"
+  fields:
+    cluster_code_id: "292"
+    language_code: "vi"
+    name: "Nội thất văn phòng"
+- model: master_data.clusterCodeTranslation
+  pk: "585"
+  fields:
+    cluster_code_id: "293"
+    language_code: "en"
+    name: "Form and register book"
+- model: master_data.clusterCodeTranslation
+  pk: "586"
+  fields:
+    cluster_code_id: "293"
+    language_code: "vi"
+    name: "Sổ biểu mẫu và sổ đăng ký"
+- model: master_data.clusterCodeTranslation
+  pk: "587"
+  fields:
+    cluster_code_id: "294"
+    language_code: "en"
+    name: "File and cover"
+- model: master_data.clusterCodeTranslation
+  pk: "588"
+  fields:
+    cluster_code_id: "294"
+    language_code: "vi"
+    name: "Tệp và bìa"
+- model: master_data.clusterCodeTranslation
+  pk: "589"
+  fields:
+    cluster_code_id: "295"
+    language_code: "en"
+    name: "Desk need"
+- model: master_data.clusterCodeTranslation
+  pk: "590"
+  fields:
+    cluster_code_id: "295"
+    language_code: "vi"
+    name: "Vật dụng cần thiết cho văn phòng"
+- model: master_data.clusterCodeTranslation
+  pk: "591"
+  fields:
+    cluster_code_id: "296"
+    language_code: "en"
+    name: "Advertising material"
+- model: master_data.clusterCodeTranslation
+  pk: "592"
+  fields:
+    cluster_code_id: "296"
+    language_code: "vi"
+    name: "Vật tư quảng cáo"
+- model: master_data.clusterCodeTranslation
+  pk: "593"
+  fields:
+    cluster_code_id: "297"
+    language_code: "en"
+    name: "Air conditioning, ventilation system and component"
+- model: master_data.clusterCodeTranslation
+  pk: "594"
+  fields:
+    cluster_code_id: "297"
+    language_code: "vi"
+    name: "Hệ thống điều hòa không khí, thông gió và cấu kiện"
+- model: master_data.clusterCodeTranslation
+  pk: "595"
+  fields:
+    cluster_code_id: "298"
+    language_code: "en"
+    name: "System of communication engineering"
+- model: master_data.clusterCodeTranslation
+  pk: "596"
+  fields:
+    cluster_code_id: "298"
+    language_code: "vi"
+    name: "Hệ thống kỹ thuật truyền thông"
+- model: master_data.clusterCodeTranslation
+  pk: "597"
+  fields:
+    cluster_code_id: "299"
+    language_code: "en"
+    name: "Heating, ventilation device and air conditioner"
+- model: master_data.clusterCodeTranslation
+  pk: "598"
+  fields:
+    cluster_code_id: "299"
+    language_code: "vi"
+    name: "Hệ thống sưởi, thiết bị thông gió và điều hòa không khí"
+- model: master_data.clusterCodeTranslation
+  pk: "599"
+  fields:
+    cluster_code_id: "300"
+    language_code: "en"
+    name: "System and component for cooling and refrigeration engineering"
+- model: master_data.clusterCodeTranslation
+  pk: "600"
+  fields:
+    cluster_code_id: "300"
+    language_code: "vi"
+    name: "Hệ thống và cấu kiện kỹ thuật làm mát và làm lạnh"
+- model: master_data.clusterCodeTranslation
+  pk: "601"
+  fields:
+    cluster_code_id: "301"
+    language_code: "en"
+    name: "Thermal protection machine"
+- model: master_data.clusterCodeTranslation
+  pk: "602"
+  fields:
+    cluster_code_id: "301"
+    language_code: "vi"
+    name: "Máy bảo vệ nhiệt"
+- model: master_data.clusterCodeTranslation
+  pk: "603"
+  fields:
+    cluster_code_id: "302"
+    language_code: "en"
+    name: "Production machine"
+- model: master_data.clusterCodeTranslation
+  pk: "604"
+  fields:
+    cluster_code_id: "302"
+    language_code: "vi"
+    name: "Máy chế biến"
+- model: master_data.clusterCodeTranslation
+  pk: "605"
+  fields:
+    cluster_code_id: "303"
+    language_code: "en"
+    name: "Special machine"
+- model: master_data.clusterCodeTranslation
+  pk: "606"
+  fields:
+    cluster_code_id: "303"
+    language_code: "vi"
+    name: "Máy đặc biệt"
+- model: master_data.clusterCodeTranslation
+  pk: "607"
+  fields:
+    cluster_code_id: "304"
+    language_code: "en"
+    name: "Environmental engineering machine"
+- model: master_data.clusterCodeTranslation
+  pk: "608"
+  fields:
+    cluster_code_id: "304"
+    language_code: "vi"
+    name: "Máy kỹ thuật môi trường"
+- model: master_data.clusterCodeTranslation
+  pk: "609"
+  fields:
+    cluster_code_id: "305"
+    language_code: "en"
+    name: "Automotive industry machine"
+- model: master_data.clusterCodeTranslation
+  pk: "610"
+  fields:
+    cluster_code_id: "305"
+    language_code: "vi"
+    name: "Máy ngành công nghiệp ô tô"
+- model: master_data.clusterCodeTranslation
+  pk: "611"
+  fields:
+    cluster_code_id: "306"
+    language_code: "en"
+    name: "Machine for polygraphists industry"
+- model: master_data.clusterCodeTranslation
+  pk: "612"
+  fields:
+    cluster_code_id: "306"
+    language_code: "vi"
+    name: "Máy ngành đa hình học"
+- model: master_data.clusterCodeTranslation
+  pk: "613"
+  fields:
+    cluster_code_id: "307"
+    language_code: "en"
+    name: "Machine for the chemical and the petrochemical industry"
+- model: master_data.clusterCodeTranslation
+  pk: "614"
+  fields:
+    cluster_code_id: "307"
+    language_code: "vi"
+    name: "Máy ngành hóa chất và hóa dầu"
+- model: master_data.clusterCodeTranslation
+  pk: "615"
+  fields:
+    cluster_code_id: "308"
+    language_code: "en"
+    name: "Manufacturing industry machine"
+- model: master_data.clusterCodeTranslation
+  pk: "616"
+  fields:
+    cluster_code_id: "308"
+    language_code: "vi"
+    name: "Máy ngành sản xuất"
+- model: master_data.clusterCodeTranslation
+  pk: "617"
+  fields:
+    cluster_code_id: "309"
+    language_code: "en"
+    name: "Machine and component for metallurgy"
+- model: master_data.clusterCodeTranslation
+  pk: "618"
+  fields:
+    cluster_code_id: "309"
+    language_code: "vi"
+    name: "Máy và cấu kiện ngành luyện kim"
+- model: master_data.clusterCodeTranslation
+  pk: "619"
+  fields:
+    cluster_code_id: "310"
+    language_code: "en"
+    name: "Machine and component for process engineering"
+- model: master_data.clusterCodeTranslation
+  pk: "620"
+  fields:
+    cluster_code_id: "310"
+    language_code: "vi"
+    name: "Máy và thiết bị kỹ thuật quy trình"
+- model: master_data.clusterCodeTranslation
+  pk: "621"
+  fields:
+    cluster_code_id: "311"
+    language_code: "en"
+    name: "Packaging and printing"
+- model: master_data.clusterCodeTranslation
+  pk: "622"
+  fields:
+    cluster_code_id: "311"
+    language_code: "vi"
+    name: "Bao bì và in ấn"
+- model: master_data.clusterCodeTranslation
+  pk: "623"
+  fields:
+    cluster_code_id: "312"
+    language_code: "en"
+    name: "Pigment and dye stuff"
+- model: master_data.clusterCodeTranslation
+  pk: "624"
+  fields:
+    cluster_code_id: "312"
+    language_code: "vi"
+    name: "Bột màu và chất nhuộm"
+- model: master_data.clusterCodeTranslation
+  pk: "625"
+  fields:
+    cluster_code_id: "313"
+    language_code: "en"
+    name: "Preservative"
+- model: master_data.clusterCodeTranslation
+  pk: "626"
+  fields:
+    cluster_code_id: "313"
+    language_code: "vi"
+    name: "Chất bảo quản"
+- model: master_data.clusterCodeTranslation
+  pk: "627"
+  fields:
+    cluster_code_id: "314"
+    language_code: "en"
+    name: "Lubricant"
+- model: master_data.clusterCodeTranslation
+  pk: "628"
+  fields:
+    cluster_code_id: "314"
+    language_code: "vi"
+    name: "Chất bôi trơn"
+- model: master_data.clusterCodeTranslation
+  pk: "629"
+  fields:
+    cluster_code_id: "315"
+    language_code: "en"
+    name: "Antifreeze"
+- model: master_data.clusterCodeTranslation
+  pk: "630"
+  fields:
+    cluster_code_id: "315"
+    language_code: "vi"
+    name: "Chất chống đông"
+- model: master_data.clusterCodeTranslation
+  pk: "631"
+  fields:
+    cluster_code_id: "316"
+    language_code: "en"
+    name: "Solvating and thinning agent"
+- model: master_data.clusterCodeTranslation
+  pk: "632"
+  fields:
+    cluster_code_id: "316"
+    language_code: "vi"
+    name: "Chất hòa tan và làm mỏng"
+- model: master_data.clusterCodeTranslation
+  pk: "633"
+  fields:
+    cluster_code_id: "317"
+    language_code: "en"
+    name: "Adhesive"
+- model: master_data.clusterCodeTranslation
+  pk: "634"
+  fields:
+    cluster_code_id: "317"
+    language_code: "vi"
+    name: "Chất kết dính"
+- model: master_data.clusterCodeTranslation
+  pk: "635"
+  fields:
+    cluster_code_id: "318"
+    language_code: "en"
+    name: "Refridgerant"
+- model: master_data.clusterCodeTranslation
+  pk: "636"
+  fields:
+    cluster_code_id: "318"
+    language_code: "vi"
+    name: "Chất làm lạnh"
+- model: master_data.clusterCodeTranslation
+  pk: "637"
+  fields:
+    cluster_code_id: "319"
+    language_code: "en"
+    name: "Marking and labelling"
+- model: master_data.clusterCodeTranslation
+  pk: "638"
+  fields:
+    cluster_code_id: "319"
+    language_code: "vi"
+    name: "Đánh dấu và nhãn hiệu"
+- model: master_data.clusterCodeTranslation
+  pk: "639"
+  fields:
+    cluster_code_id: "320"
+    language_code: "en"
+    name: "Hydraulic fluid"
+- model: master_data.clusterCodeTranslation
+  pk: "640"
+  fields:
+    cluster_code_id: "320"
+    language_code: "vi"
+    name: "Dung dịch thủy lực"
+- model: master_data.clusterCodeTranslation
+  pk: "641"
+  fields:
+    cluster_code_id: "321"
+    language_code: "en"
+    name: "Technical gas"
+- model: master_data.clusterCodeTranslation
+  pk: "642"
+  fields:
+    cluster_code_id: "321"
+    language_code: "vi"
+    name: "Khí kỹ thuật"
+- model: master_data.clusterCodeTranslation
+  pk: "643"
+  fields:
+    cluster_code_id: "322"
+    language_code: "en"
+    name: "Storage"
+- model: master_data.clusterCodeTranslation
+  pk: "644"
+  fields:
+    cluster_code_id: "322"
+    language_code: "vi"
+    name: "Lưu trữ"
+- model: master_data.clusterCodeTranslation
+  pk: "645"
+  fields:
+    cluster_code_id: "323"
+    language_code: "en"
+    name: "Fuel"
+- model: master_data.clusterCodeTranslation
+  pk: "646"
+  fields:
+    cluster_code_id: "323"
+    language_code: "vi"
+    name: "Nhiên liệu"
+- model: master_data.clusterCodeTranslation
+  pk: "647"
+  fields:
+    cluster_code_id: "324"
+    language_code: "en"
+    name: "Sealing material"
+- model: master_data.clusterCodeTranslation
+  pk: "648"
+  fields:
+    cluster_code_id: "324"
+    language_code: "vi"
+    name: "Vật liệu làm kín"
+- model: master_data.clusterCodeTranslation
+  pk: "649"
+  fields:
+    cluster_code_id: "325"
+    language_code: "en"
+    name: "Cleaning material"
+- model: master_data.clusterCodeTranslation
+  pk: "650"
+  fields:
+    cluster_code_id: "325"
+    language_code: "vi"
+    name: "Vật liệu làm sạch"
+- model: master_data.clusterCodeTranslation
+  pk: "651"
+  fields:
+    cluster_code_id: "326"
+    language_code: "en"
+    name: "Other auxiliary material"
+- model: master_data.clusterCodeTranslation
+  pk: "652"
+  fields:
+    cluster_code_id: "326"
+    language_code: "vi"
+    name: "Vật liệu phụ trợ khác"
+- model: master_data.clusterCodeTranslation
+  pk: "653"
+  fields:
+    cluster_code_id: "327"
+    language_code: "en"
+    name: "Cold and heat transfer agent"
+- model: master_data.clusterCodeTranslation
+  pk: "654"
+  fields:
+    cluster_code_id: "327"
+    language_code: "vi"
+    name: "Vật liệu truyền nhiệt độ cao và lạnh"
+- model: master_data.clusterCodeTranslation
+  pk: "655"
+  fields:
+    cluster_code_id: "328"
+    language_code: "en"
+    name: "Technical spray"
+- model: master_data.clusterCodeTranslation
+  pk: "656"
+  fields:
+    cluster_code_id: "328"
+    language_code: "vi"
+    name: "Bình xịt kỹ thuật"

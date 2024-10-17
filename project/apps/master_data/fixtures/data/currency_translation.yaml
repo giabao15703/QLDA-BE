@@ -1,0 +1,13 @@
+- model: "master_data.currencyTranslation"
+  pk: 1
+  fields:
+    name: USD-Dollar Mỹ
+    language_code: vi
+    currency: 1
+
+- model: "master_data.currencyTranslation"
+  pk: 2
+  fields:
+    name: VND-Việt Nam Đồng
+    language_code: vi
+    currency : 2

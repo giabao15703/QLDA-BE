@@ -1,0 +1,44 @@
+- model: 'sale_schema.profileFeaturesSupplier'
+  pk: 1
+  fields:
+    name: BASIC
+    free_registration: "Yes"
+    quote_submiting: "Yes"
+    rfxr_receiving_priority: 12
+    sub_user_accounts: 0
+    help_desk: "No"
+    flash_sale: 0
+    report_year: 4
+    base_rate_month: 0
+    base_rate_full_year: 0
+    profile_features_type: 1
+
+- model: 'sale_schema.profileFeaturesSupplier'
+  pk: 2
+  fields:
+    name: PREMIUM
+    free_registration: "Yes"
+    quote_submiting: "Yes"
+    rfxr_receiving_priority: 6
+    sub_user_accounts: 3
+    help_desk: "Partly"
+    flash_sale: 5
+    report_year: 8
+    base_rate_month: 7590000
+    base_rate_full_year: 7590000
+    profile_features_type: 2
+
+- model: 'sale_schema.profileFeaturesSupplier'
+  pk: 3
+  fields:
+    name: SPONSOR
+    free_registration: "Yes"
+    quote_submiting: "Yes"
+    rfxr_receiving_priority: 0
+    sub_user_accounts: 5
+    help_desk: "Yes"
+    flash_sale: 10
+    report_year: 99999
+    base_rate_month: 7590000
+    base_rate_full_year: 7590000
+    profile_features_type: 3

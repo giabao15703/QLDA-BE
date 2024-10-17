@@ -1,0 +1,69 @@
+- model: 'master_data.deliveryTermTranslation'
+  pk: 1
+  fields:
+    name: DDP - Giao đã trả thuế
+    delivery_term : 1
+    language_code: vi
+
+- model: 'master_data.deliveryTermTranslation'
+  pk: 2
+  fields:
+    name: EXW - Giá xuất xưởng
+    delivery_term : 2
+    language_code: vi
+
+- model: 'master_data.deliveryTermTranslation'
+  pk: 3
+  fields:
+    name: FOB - Giao hàng lên tàu
+    delivery_term : 3
+    language_code: vi
+- model: 'master_data.deliveryTermTranslation'
+  pk: 4
+  fields:
+    name: CIP - Cước và bảo hiểm trả tới điểm đến
+    delivery_term : 4
+    language_code: vi
+- model: 'master_data.deliveryTermTranslation'
+  pk: 5
+  fields:
+    name: DAT - Giao tại Bến
+    delivery_term : 5
+    language_code: vi
+- model: 'master_data.deliveryTermTranslation'
+  pk: 6
+  fields:
+    name: CFR - Chi phí và Cước phí
+    delivery_term : 6
+    language_code: vi
+- model: 'master_data.deliveryTermTranslation'
+  pk: 7
+  fields:
+    name: CIF - Chi phí
+    delivery_term : 7
+    language_code: vi
+- model: 'master_data.deliveryTermTranslation'
+  pk: 8
+  fields:
+    name: CPT - Cước trả tới điểm đến
+    delivery_term : 8
+    language_code: vi
+- model: 'master_data.deliveryTermTranslation'
+  pk: 9
+  fields:
+    name: DAP - Giao hàng tại nơi đến
+    delivery_term : 9
+    language_code: vi
+- model: 'master_data.deliveryTermTranslation'
+  pk: 10
+  fields:
+    name: FAS - Giao hàng dọc mạn tàu
+    delivery_term : 10
+    language_code: vi
+- model: 'master_data.deliveryTermTranslation'
+  pk: 11
+  fields:
+    name: FCA - Giao cho người vận tải
+    delivery_term : 11
+    language_code: vi
+

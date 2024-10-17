@@ -1,0 +1,51 @@
+- model: "sale_schema.sicpRegistration"
+  pk: 1
+  fields:
+    name: UNSECURED
+    legal_status: null
+    bank_account: null
+    sanction_check: null
+    certificate_management: null
+    due_diligence: null
+    financial_risk: null
+    total_amount: null
+    sicp_type: 1
+
+- model: "sale_schema.sicpRegistration"
+  pk: 2
+  fields:
+    name: BRONZE
+    legal_status: 7590000
+    bank_account: 7590000
+    sanction_check: null
+    certificate_management: null
+    due_diligence: null
+    financial_risk: null
+    total_amount: 40986000
+    sicp_type: 2
+
+- model: "sale_schema.sicpRegistration"
+  pk: 3
+  fields:
+    name: SILVER
+    legal_status: 7590000
+    bank_account: 7590000
+    sanction_check: 7590000
+    certificate_management: 7590000
+    due_diligence: null
+    financial_risk: null
+    total_amount: 40986000
+    sicp_type: 3
+
+- model: "sale_schema.sicpRegistration"
+  pk: 4
+  fields:
+    name: GOLD
+    legal_status: 7590000
+    bank_account: 7590000
+    sanction_check: 7590000
+    certificate_management: 7590000
+    due_diligence: 7590000
+    financial_risk: 7590000
+    total_amount: 40986000
+    sicp_type: 4

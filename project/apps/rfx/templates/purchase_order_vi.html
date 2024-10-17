@@ -1,0 +1,365 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE HTML>
+<html lang="vi">
+
+<head>
+    <title></title>
+    <meta http-equiv=Content-Type content="text/html; charset=utf-8" />
+    <meta charset="UTF-8" />
+    <style>
+        @font-face {
+            font-family: font;
+            src: ("\static\times.ttf");
+        }
+        @font-face {
+            font-family: Roboto;
+            src: "\static\Roboto-Regular.ttf";
+        }
+
+        body {
+            font-family: Roboto;
+        }
+
+        .font_face {
+            font-family: Roboto;
+        }
+
+        .fs-8 {
+            font-size: 8pt;
+            margin-bottom: 0in;
+            text-align: left;
+            margin-left: 5px;
+        }
+
+        .w-100 {
+            width: 100% !important;
+        }
+
+        .mt-0 {
+            margin-top: 0 !important;
+        }
+
+        .mt-5px {
+            margin-top: 5px !important;
+        }
+
+
+
+        .fs-9 {
+            font-size: 9pt;
+            text-align: left;
+        }
+        .fs-9-center {
+            font-size: 9pt;
+            text-align: center;
+        }
+
+        .fs-10 {
+            font-size: 10pt;
+            margin-bottom: 0in;
+            text-align: left;
+            margin-left: 5px;
+        }
+
+        td {
+            border: 1px solid #000000;
+
+        }
+
+        tr.item-table-content td {
+            font-size: 14px;
+        }
+
+        tr.tr-fs-14 td {
+            font-size: 14px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        table.info-table {
+            padding: 1px;
+            border-spacing: 0;
+            border-collapse: separate;
+        }
+
+
+        table.item-table,
+        table.signature-table {
+            padding: 7px;
+            border-spacing: 0;
+            border-collapse: separate;
+        }
+
+        .bg-dark {
+            background-color: #bfbfbf;
+        }
+
+        .header {
+            width: 100%;
+        }
+
+        .header img {
+            height: 36px;
+            width: 120px;
+        }
+
+
+        table td {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        table {
+            table-layout: fixed;
+        }
+        
+        .inner-table-border {
+            vertical-align: top;
+            border: 0;
+        }
+
+        hr.line {
+            border: 0.5pt solid black;
+            width: 50%;
+            float: left;
+        }
+
+        .text-render {
+            color: red;
+        }
+        
+        @media print {
+        #scores {
+                page-break-before: always;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div title="Header">
+        <p style="margin-top: 0.46in; margin-bottom: 0in; line-height: 100%; text-align: right; font-size: x-large;">
+            <i>Đơn hàng</i>
+        </p>
+    </div>
+
+    <br/>
+    <br/>
+
+    <center>
+        <table class="info-table">
+            <tr>
+                <td style="vertical-align: top;">
+                    <p class="fs-10 mt-5px">Bên mua: {{buyer_code}}</p>
+                    <p class="fs-10 mt-1px">{{buyer_company_name}}</p>
+                    <p class="fs-10 mt-1px">{{buyer_company_address}}</p>
+                    <p class="fs-10 mt-1px">VAT: {{buyer_company_tax}}</p>
+                </td>
+                <td style="vertical-align: top;">
+                    <table style="border: 1;border-spacing: 0;">
+                        <tr>
+                            <td class="inner-table-border" >
+                                <p class="fs-8 mt-5px">Đơn hàng số</p>
+                                <p class="fs-10 mt-1px">{{item_code}}</p>
+                            </td>
+                            <td class="inner-table-border">
+                                <p class="fs-8 mt-5px">Ngày</p>
+                                <p class="fs-10 mt-1px">{{rfx_awarded_date}}</p>
+                            </td>
+                            <td class="inner-table-border">
+                                <p class="fs-8 mt-5px">Trang</p>
+                                <p class="fs-10 mt-1px">1 of 2</p>
+                            </td>
+                        </tr>                        
+                        <tr>
+                            <td class="inner-table-border" >
+                                <p class="fs-8 mt-1px">Người liên hệ</p>
+                                <br/>
+                            </td>
+                            <td colspan=2 class="inner-table-border">
+                                <p class="fs-10 mt-1px">{{buyer_contact_name}}</p>
+                                <br/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="inner-table-border" >
+                                <p class="fs-8 mt-1px">Số điện thoại</p>
+                                <br/>
+                            </td>
+                            <td colspan=2 class="inner-table-border">
+                                <p class="fs-10 mt-1px">{{buyer_phone}}</p>
+                                <br/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="inner-table-border" >
+                                <p class="fs-8 mt-1px">Địa chỉ email</p>
+                                <br/>
+                            </td>
+                            <td colspan=2 class="inner-table-border">
+                                <p class="fs-10 mt-1px">{{buyer_email}}</p>
+                                <br/>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">
+                    <p class="fs-10 mt-5px">Bên bán: {{supplier_code}}</p>
+                    <p class="fs-10 mt-1px">{{supplier_company_name}}</p>
+                    <p class="fs-10 mt-1px">{{supplier_company_address}}</p>
+                </td>
+                <td style="vertical-align: top;">
+                    <table>                      
+                        <tr>
+                            <td class="inner-table-border" >
+                                <p class="fs-8 mt-1px">Người liên hệ</p>
+                            </td>
+                            <td colspan=2 class="inner-table-border">
+                                <p class="fs-10 mt-1px">{{supplier_name}}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="inner-table-border" >
+                                <p class="fs-8 mt-1px">Địa chỉ email</p>
+                            </td>
+                            <td colspan=2 class="inner-table-border">
+                                <p class="fs-10 mt-1px">{{supplier_email}}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="inner-table-border" >
+                                <p class="fs-8 mt-1px">Điện thoại</p>
+                            </td>
+                            <td colspan=2 class="inner-table-border">
+                                <p class="fs-10 mt-1px">{{supplier_phone}}</p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </center>
+    <p class="fs-9">Đây là Đơn hàng được ký giữa {{buyer_company_name}} (Bên mua) và {{supplier_company_name}} (Bên Bán) thống nhất ký kết đối với một số hàng hóa nhất định được quy định bên dưới Đơn hàng này ('Đơn hàng).</p>
+    <p class="fs-9">1.	Đơn hàng này quy định những vấn đề cơ bản liên quan đến việc mua và cung cấp hàng hóa và / hoặc dịch vụ và sẽ chi phối bất kỳ và tất cả các giao dịch mua riêng lẻ giữa các Bên, trừ khi có thỏa thuận khác. Các điều kiện được nêu trong tài liệu này và các điều khoản và điều kiện của Bên mua để mua Hàng hóa & Dịch vụ (như được liệt kê bên dưới) sẽ áp dụng cho giao dịch mua hàng giữa Bên mua và Bên bán.</p>
+    <p class="fs-9">2.	Các điều khoản và điều kiện đã thoả thuận của các Bên được yêu cầu đối với việc cung cấp hàng hoá và / hoặc dịch vụ liên quan như giá mua, ngày giao hàng sẽ được nêu rõ dưới đây.</p>
+    <p class="fs-9">3.	Bản thân Đơn hàng này không làm phát sinh cam kết mua hàng từ phía Bên mua. Các nghĩa vụ như vậy của các Bên chỉ tồn tại khi Đơn hàng được gửi đến và được xác nhận trên sàn giao dịch TMĐT Nextpro.io bởi Bên bán.</p>
+    <p class="fs-9">4.	Thời hạn có hiệu lực của Đơn hàng này sẽ tuân theo Hiệu lực về Giá được nêu trong mô tả mặt hàng ('Thời hạn có hiệu lực'). Tuy nhiên, với điều kiện là nếu, tại thời điểm hết hạn hoặc chấm dứt Đơn hàng này, Bên bán vẫn còn bất kỳ nghĩa vụ nào chưa hoàn thành, thì Đơn hàng này sẽ được coi là có hiệu lực cho đến ngày nghĩa vụ chưa hoàn thành đó được thực hiện đầy đủ.</p>
+    <p class="fs-9">5.	Các sửa đổi đối với Đơn hàng sẽ chỉ ràng buộc Bên mua nếu Bên mua đồng ý trước bằng văn bản. Lưu ý rằng Bên mua có thể chuyển nhượng quyền hoặc nghĩa vụ của mình theo Đơn hàng bất kỳ lúc nào cho bất kỳ chi nhánh nào, không Bên nào được chuyển nhượng hoặc chuyển giao quyền và nghĩa vụ tương tự hoặc bất kỳ quyền và nghĩa vụ nào của mình theo đó cho dù toàn bộ hay một phần mà không có sự đồng ý trước bằng văn bản của Bên kia.</p>
+    <p class="fs-9">6.	Đơn hàng này sẽ có hiệu lực khi có sự xác nhận của cả Bên mua và Bên bán trên sàn giao dịch TMĐT Nextpro.io bao gồm cả ngày ký. Không có sửa đổi nào sẽ có hiệu lực và ràng buộc đối với cả Bên mua và Bên bán trừ khi được thực hiện dưới hình thức văn bản dựa trên xác nhận của cả Bên mua và Bên bán.</p>
+    <p class="fs-9">7.	Điều khoản thanh toán: {{payment_term}} <br/> 
+        Khoản thanh toán chỉ được chuyển sau khi Bên mua nhận được hóa đơn được chuẩn bị hợp lý và tất cả các tài liệu hỗ trợ (phiếu nhận hàng, phiếu nhận dịch vụ, v.v.) như sau: hóa đơn và chứng từ sẽ được Bên mua nhận được theo những ngày trên khi nhận hàng. <br/>
+        Thông tin chuyển khoản: <br/>
+        Đơn vị thụ hưởng: {{beneficiary_name}} <br/>
+        Ngân hàng: {{bank_name}}<br/>
+        Số tài khoản: {{bank_account_number}} <br/>
+    </p>
+    <p class="fs-9">8.	Điều khoản giao nhận: {{delivery_term}}</p>
+    <p class="fs-9">9.	Địa chỉ giao nhận: {{delivery_address}}<br/>
+        Quốc gia: {{buyer_company_country}}<br/>
+        Thành phố: {{buyer_company_state}}<br/>
+    </p>
+    <p class="fs-9">10.	Sau khi nhận được Đơn hàng trực tiếp từ Bên mua, Bên bán sẽ giao hàng hóa / dịch vụ với số lượng yêu cầu và phải tuân thủ ngày giao hàng như quy định trong Đơn hàng.</p>
+    <p class="fs-9">11.	Các khoản thuế khấu trừ, nếu có, sẽ được Bên mua khấu trừ vào số tiền trên hóa đơn.</p>
+    <p class="fs-9">12.	Việc cung cấp dịch vụ hoặc hàng hóa sẽ cấu thành sự thừa nhận của Bên bán và chấp nhận GTC của Bên mua. Đơn hàng này, bao gồm các Lệnh phát hành tiếp theo (nếu có), GTC và bất kỳ điều khoản hoặc tài liệu đã ký nào được tham chiếu trong Đơn hàng này, chứa thỏa thuận hoàn chỉnh và cuối cùng giữa Bên mua và Bên bán và không có thỏa thuận nào khác sửa đổi GTC ràng buộc Bên mua trừ khi được lập thành văn bản và ký bởi đại diện được ủy quyền của Bên mua.</p>
+    
+    <br/>
+    <div id="scores" style="page-break-before: always"> 
+        <pdf:nextpage /> 
+     </div> 
+     <div title="Header">
+        <p style="margin-top: 0.46in; margin-bottom: 0in; line-height: 100%; text-align: right; font-size: x-large;">
+            <i>Đơn hàng</i>
+        </p>
+    </div>
+
+    <p class="fs-9">13.	Điều khoản và điều kiện của Bên mua: {{terms_and_conditions}} <br/> <br/>
+        Ngoài các điều khoản và điều kiện nêu trong Đơn hàng này, các điều khoản & điều kiện sau sẽ tương ứng áp dụng cho Đơn hàng này theo bản chất của giao dịch được nêu trong Đơn hàng này:<br/>
+        (i) Điều khoản và điều kiện chung về mua hàng ('GPC'); <br/>
+        (ii) Điều kiện mua hàng đặc biệt để cung cấp hàng hóa ('Hàng hóa SPC'); và <br/>
+        (iii) Điều kiện mua đặc biệt để cung cấp dịch vụ ('Dịch vụ SPC') <br/>
+        <br/>
+        Sau đây gọi là Điều khoản & Điều kiện của Bên mua.<br/>
+        <br/>
+        Các Điều khoản & Điều kiện của Bên mua ở trên có tại liên kết https://nextpro.io/term-conditions/ và sẽ là một phần không thể tách rời của Đơn hàng. Trong trường hợp có sự khác biệt giữa các quy định của Đơn hàng và Điều khoản & Điều kiện của Bên mua, các quy định của Đơn hàng sẽ được ưu tiên áp dụng. <br/>
+        <br/>
+        Theo đây, Bên bán xác nhận rằng họ đã truy cập, đọc và đồng ý với các Điều khoản & Điều kiện của Bên mua có sẵn tại liên kết trên.
+    </p>
+    <p class="fs-9">14.	Danh sách hàng hóa, dịch vụ cung cấp:</p>
+    <center style="margin-top: 20px;">
+        <table class="item-table">
+            <tr>
+                <td style="width: 5%;" class="bg-dark">
+                    <p class="fs-9"><b>Mục</b></p>
+                </td>
+                <td style="width: 35%;" class="bg-dark">
+                    <p class="fs-9"><b>Mã số sản phẩm/ Diễn giải/ Thông số kỹ thuật/ Ngày giao hàng </b></p>
+                </td>
+                <td style="width: 15%;" class="bg-dark">
+                    <p class="fs-9"><b>Số lượng/ Đơn vị tính</b></p>
+                </td>
+                <td class="bg-dark">
+                    <p class="fs-9"><b>Đơn giá/ tiền tệ</b></p>
+                </td>
+            </tr>
+            {% block list_item %}
+
+            {% for item in item_list %}
+            <tr class="item-table-content">
+                <td style="width: 5%;">
+                    <p>{{ forloop.counter}}</p>
+                </td>
+                <td style="width: 35%;">
+                    <p style="text-align: left">{{ item.name }} <br/>
+                        Mã số thiết bị (nếu có): {{ item.part_number }} <br/>
+                        Giao hàng từ ngày: {{ item.delivery_from }} <br/>
+                        Đến ngày: {{ item.delivery_to }} <br/>
+                    </p>
+                </td>
+                <td style="width: 15%;">
+                    <p>{{item.quantity}}/{{item.unit}}</p>
+                </td>
+                <td>
+                    <p>{{item.unit_price}}/{{currency}}</p>
+                </td>
+            </tr>
+            {% endfor %}
+            {% endblock %}
+            <tr class="item-table-content">
+                <td colspan=3>
+                    <p class="fs-9-center"><b>Thành tiền</b></p>
+                </td>
+                <td>
+                    <p>{{sub_total_amount}}</p>
+                </td>
+            </tr>
+            <tr class="item-table-content">
+                <td colspan=3>
+                    <p class="fs-9-center"><b>Thuế giá trị gia tăng</b></p>
+                </td>
+                <td>
+                    <p>{{vat_amount}}</p>
+                </td>
+            </tr>
+            <tr class="item-table-content">
+                <td colspan=3>
+                    <p class="fs-9-center"><b>Tổng thành tiền</b></p>
+                </td>
+                <td>
+                    <p>{{grand_total_amount}}</p>
+                </td>
+            </tr>
+        </table>
+    </center>
+    <p class="fs-10">{{buyer_company_name}}</p>
+    <br/>
+    <p>{{buyer_contact_name}}</p>
+    <p class="fs-10 mt-1px">{{rfx_awarded_date}}</p>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+- model: 'master_data.TechnicalWeightingTranslation' 
+  pk: 1
+  fields: 
+    language_code: vi
+    name : "Trao thầu cho giá thấp nhất"
+    technical_weighting: 1
+- model: 'master_data.TechnicalWeightingTranslation' 
+  pk: 2
+  fields: 
+    language_code: vi
+    name : "Trao thầu dựa trên yếu tố kỹ thuật và thương mại"
+    technical_weighting: 2
+- model: 'master_data.TechnicalWeightingTranslation' 
+  pk: 3
+  fields: 
+    language_code: vi
+    name : "Trao thầu dựa trên điểm thưởng kỹ thuật và thương mại"
+    technical_weighting: 3

@@ -1,0 +1,99 @@
+- model: 'master_data.position'
+  pk: 1
+  fields:
+    name: Research & Development
+
+- model: 'master_data.position'
+  pk: 2
+  fields:
+    name: IT
+
+- model: 'master_data.position'
+  pk: 3
+  fields:
+    name: Legal & Compliance
+
+- model: 'master_data.position'
+  pk: 4
+  fields:
+    name: Logistic
+
+- model: 'master_data.position'
+  pk: 5
+  fields:
+    name: Management
+
+- model: 'master_data.position'
+  pk: 6
+  fields:
+    name: Marketing
+
+- model: 'master_data.position'
+  pk: 7
+  fields:
+    name: Other
+
+- model: 'master_data.position'
+  pk: 8
+  fields:
+    name: Procurement
+
+- model: 'master_data.position'
+  pk: 9
+  fields:
+    name: Production
+
+- model: 'master_data.position'
+  pk: 10
+  fields:
+    name: Project manager
+
+- model: 'master_data.position'
+  pk: 11
+  fields:
+    name: Quality control
+
+- model: 'master_data.position'
+  pk: 12
+  fields:
+    name: Supply Chain
+
+- model: 'master_data.position'
+  pk: 13
+  fields:
+    name: Sales
+
+- model: 'master_data.position'
+  pk: 14
+  fields:
+    name: Service
+
+- model: 'master_data.position'
+  pk: 15
+  fields:
+    name: Finance & Accounting
+
+- model: 'master_data.position'
+  pk: 16
+  fields:
+    name: Administration
+
+- model: 'master_data.position'
+  pk: 17
+  fields:
+    name: Human resource
+
+- model: 'master_data.position'
+  pk: 18
+  fields:
+    name: Technical & engineering
+
+- model: 'master_data.position'
+  pk: 19
+  fields:
+    name: Business Development
+    
+- model: 'master_data.position'
+  pk: 20
+  fields:
+    name: Training & Development

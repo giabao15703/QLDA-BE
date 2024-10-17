@@ -1,0 +1,92 @@
+- model: 'master_data.reasonTranslation'
+  pk: 1
+  fields:
+    name: Giá của bạn cao hơn ngân sách của chúng tôi.
+    reason : 1
+    language_code : vi
+
+- model: 'master_data.reasonTranslation'
+  pk: 2
+  fields:
+    name:  "Báo giá của bạn không đáp ứng yêu cầu của chúng tôi (Ngày giao hàng, Điều khoản thương mại, các thông tin khác. : CO, CQ;…)."
+    reason : 2
+    language_code : vi
+
+- model: 'master_data.reasonTranslation'
+  pk: 3
+  fields:
+    name:  Giá của bạn không được gửi trong nền tảng
+    reason : 3
+    language_code : vi
+- model: 'master_data.reasonTranslation'
+  pk: 4
+  fields:
+    name:  Giá của bạn không phải là giá cạnh tranh nhất trong các nhà cung cấp.
+    reason : 4
+    language_code : vi
+- model: 'master_data.reasonTranslation'
+  pk: 5
+  fields:
+    name:  Đề xuất của bạn không phù hợp/thỏa mãn với yêu cầu của chúng tôi.
+    reason : 5
+    language_code : vi
+- model: 'master_data.reasonTranslation'
+  pk: 6
+  fields:
+    name:  Nhu cầu của chúng tôi không cần thiết nữa.
+    reason : 6
+    language_code : vi
+- model: 'master_data.reasonTranslation'
+  pk: 7
+  fields:
+    name:  Chúng tôi quyết định tự sản xuất thay vì mua
+    reason : 7
+    language_code : vi
+- model: 'master_data.reasonTranslation'
+  pk: 8
+  fields:
+    name:  Hồ sơ công ty của bạn không phù hợp với yêu cầu tối thiểu của nhà cung cấp 
+    reason : 8
+    language_code : vi
+- model: 'master_data.reasonTranslation'
+  pk: 9
+  fields:
+    name:  Do phụ thuộc nhiều.
+    reason : 9
+    language_code : vi
+- model: 'master_data.reasonTranslation'
+  pk: 10
+  fields:
+    name: Chúng tôi không thích nhà cung cấp có hồ sơ không đảm bảo.
+    reason : 10
+    language_code : vi
+- model: 'master_data.reasonTranslation'
+  pk: 11
+  fields:
+    name:  Công ty của bạn thuộc danh sách xử phạt của chúng tôi.
+    reason : 11
+    language_code : vi
+- model: 'master_data.reasonTranslation'
+  pk: 12
+  fields:
+    name:  Chúng tôi thích nhà cung cấp được chứng nhận cao hơn.
+    reason : 12
+    language_code : vi
+- model: 'master_data.reasonTranslation'
+  pk: 13
+  fields:
+    name:  Chúng tôi muốn trao đơn hàng cho nhà cung cấp có hoạt động kinh doanh chủ yếu phù hợp với yêu cầu của chúng tôi.
+    reason : 13
+    language_code : vi
+- model: 'master_data.reasonTranslation'
+  pk: 14
+  fields:
+    name:  Chúng tôi thích khả năng đáp ứng cao hơn từ nhà cung cấp
+    reason : 14
+    language_code : vi
+- model: 'master_data.reasonTranslation'
+  pk: 15
+  fields:
+    name:  Chúng tôi mong nhà cung cấp cung cấp nhiều giải pháp tiên tiến hơn.
+    reason : 15
+    language_code : vi

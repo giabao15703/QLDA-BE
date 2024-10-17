@@ -1,0 +1,1256 @@
+- model: 'master_data.country'
+  pk: "1"
+  fields:
+    name: "Unknown"
+    item_code: "UNKNOWN"
+    status: "False"
+- model: 'master_data.country'
+  pk: "2"
+  fields:
+    name: "Afghanistan"
+    item_code: "AF"
+- model: 'master_data.country'
+  pk: "3"
+  fields:
+    name: "Aland Islands"
+    item_code: "AX"
+- model: 'master_data.country'
+  pk: "4"
+  fields:
+    name: "Albania"
+    item_code: "AL"
+- model: 'master_data.country'
+  pk: "5"
+  fields:
+    name: "Algeria"
+    item_code: "DZ"
+- model: 'master_data.country'
+  pk: "6"
+  fields:
+    name: "American Samoa"
+    item_code: "AS"
+- model: 'master_data.country'
+  pk: "7"
+  fields:
+    name: "Andorra"
+    item_code: "AD"
+- model: 'master_data.country'
+  pk: "8"
+  fields:
+    name: "Angola"
+    item_code: "AO"
+- model: 'master_data.country'
+  pk: "9"
+  fields:
+    name: "Anguilla"
+    item_code: "AI"
+- model: 'master_data.country'
+  pk: "10"
+  fields:
+    name: "Antarctica"
+    item_code: "AQ"
+- model: 'master_data.country'
+  pk: "11"
+  fields:
+    name: "Antigua And Barbuda"
+    item_code: "AG"
+- model: 'master_data.country'
+  pk: "12"
+  fields:
+    name: "Argentina"
+    item_code: "AR"
+- model: 'master_data.country'
+  pk: "13"
+  fields:
+    name: "Armenia"
+    item_code: "AM"
+- model: 'master_data.country'
+  pk: "14"
+  fields:
+    name: "Aruba"
+    item_code: "AW"
+- model: 'master_data.country'
+  pk: "15"
+  fields:
+    name: "Australia"
+    item_code: "AU"
+- model: 'master_data.country'
+  pk: "16"
+  fields:
+    name: "Austria"
+    item_code: "AT"
+- model: 'master_data.country'
+  pk: "17"
+  fields:
+    name: "Azerbaijan"
+    item_code: "AZ"
+- model: 'master_data.country'
+  pk: "18"
+  fields:
+    name: "Bahrain"
+    item_code: "BH"
+- model: 'master_data.country'
+  pk: "19"
+  fields:
+    name: "Bangladesh"
+    item_code: "BD"
+- model: 'master_data.country'
+  pk: "20"
+  fields:
+    name: "Barbados"
+    item_code: "BB"
+- model: 'master_data.country'
+  pk: "21"
+  fields:
+    name: "Belarus"
+    item_code: "BY"
+- model: 'master_data.country'
+  pk: "22"
+  fields:
+    name: "Belgium"
+    item_code: "BE"
+- model: 'master_data.country'
+  pk: "23"
+  fields:
+    name: "Belize"
+    item_code: "BZ"
+- model: 'master_data.country'
+  pk: "24"
+  fields:
+    name: "Benin"
+    item_code: "BJ"
+- model: 'master_data.country'
+  pk: "25"
+  fields:
+    name: "Bermuda"
+    item_code: "BM"
+- model: 'master_data.country'
+  pk: "26"
+  fields:
+    name: "Bhutan"
+    item_code: "BT"
+- model: 'master_data.country'
+  pk: "27"
+  fields:
+    name: "Bolivia"
+    item_code: "BO"
+- model: 'master_data.country'
+  pk: "28"
+  fields:
+    name: "Bonaire, Sint Eustatius and Saba"
+    item_code: "BQ"
+- model: 'master_data.country'
+  pk: "29"
+  fields:
+    name: "Bosnia and Herzegovina"
+    item_code: "BA"
+- model: 'master_data.country'
+  pk: "30"
+  fields:
+    name: "Botswana"
+    item_code: "BW"
+- model: 'master_data.country'
+  pk: "31"
+  fields:
+    name: "Bouvet Island"
+    item_code: "BV"
+- model: 'master_data.country'
+  pk: "32"
+  fields:
+    name: "Brazil"
+    item_code: "BR"
+- model: 'master_data.country'
+  pk: "33"
+  fields:
+    name: "British Indian Ocean Territory"
+    item_code: "IO"
+- model: 'master_data.country'
+  pk: "34"
+  fields:
+    name: "Brunei"
+    item_code: "BN"
+- model: 'master_data.country'
+  pk: "35"
+  fields:
+    name: "Bulgaria"
+    item_code: "BG"
+- model: 'master_data.country'
+  pk: "36"
+  fields:
+    name: "Burkina Faso"
+    item_code: "BF"
+- model: 'master_data.country'
+  pk: "37"
+  fields:
+    name: "Burundi"
+    item_code: "BI"
+- model: 'master_data.country'
+  pk: "38"
+  fields:
+    name: "Cambodia"
+    item_code: "KH"
+- model: 'master_data.country'
+  pk: "39"
+  fields:
+    name: "Cameroon"
+    item_code: "CM"
+- model: 'master_data.country'
+  pk: "40"
+  fields:
+    name: "Canada"
+    item_code: "CA"
+- model: 'master_data.country'
+  pk: "41"
+  fields:
+    name: "Cape Verde"
+    item_code: "CV"
+- model: 'master_data.country'
+  pk: "42"
+  fields:
+    name: "Cayman Islands"
+    item_code: "KY"
+- model: 'master_data.country'
+  pk: "43"
+  fields:
+    name: "Central African Republic"
+    item_code: "CF"
+- model: 'master_data.country'
+  pk: "44"
+  fields:
+    name: "Chad"
+    item_code: "TD"
+- model: 'master_data.country'
+  pk: "45"
+  fields:
+    name: "Chile"
+    item_code: "CL"
+- model: 'master_data.country'
+  pk: "46"
+  fields:
+    name: "China"
+    item_code: "CN"
+- model: 'master_data.country'
+  pk: "47"
+  fields:
+    name: "Christmas Island"
+    item_code: "CX"
+- model: 'master_data.country'
+  pk: "48"
+  fields:
+    name: "Cocos (Keeling) Islands"
+    item_code: "CC"
+- model: 'master_data.country'
+  pk: "49"
+  fields:
+    name: "Colombia"
+    item_code: "CO"
+- model: 'master_data.country'
+  pk: "50"
+  fields:
+    name: "Comoros"
+    item_code: "KM"
+- model: 'master_data.country'
+  pk: "51"
+  fields:
+    name: "Congo"
+    item_code: "CG"
+- model: 'master_data.country'
+  pk: "52"
+  fields:
+    name: "Cook Islands"
+    item_code: "CK"
+- model: 'master_data.country'
+  pk: "53"
+  fields:
+    name: "Costa Rica"
+    item_code: "CR"
+- model: 'master_data.country'
+  pk: "54"
+  fields:
+    name: "Cote D'Ivoire (Ivory Coast)"
+    item_code: "CI"
+- model: 'master_data.country'
+  pk: "55"
+  fields:
+    name: "Croatia"
+    item_code: "HR"
+- model: 'master_data.country'
+  pk: "56"
+  fields:
+    name: "Cuba"
+    item_code: "CU"
+- model: 'master_data.country'
+  pk: "57"
+  fields:
+    name: "Curaçao"
+    item_code: "CW"
+- model: 'master_data.country'
+  pk: "58"
+  fields:
+    name: "Cyprus"
+    item_code: "CY"
+- model: 'master_data.country'
+  pk: "59"
+  fields:
+    name: "Czech Republic"
+    item_code: "CZ"
+- model: 'master_data.country'
+  pk: "60"
+  fields:
+    name: "Democratic Republic of the Congo"
+    item_code: "CD"
+- model: 'master_data.country'
+  pk: "61"
+  fields:
+    name: "Denmark"
+    item_code: "DK"
+- model: 'master_data.country'
+  pk: "62"
+  fields:
+    name: "Djibouti"
+    item_code: "DJ"
+- model: 'master_data.country'
+  pk: "63"
+  fields:
+    name: "Dominica"
+    item_code: "DM"
+- model: 'master_data.country'
+  pk: "64"
+  fields:
+    name: "Dominican Republic"
+    item_code: "DO"
+- model: 'master_data.country'
+  pk: "65"
+  fields:
+    name: "East Timor"
+    item_code: "TL"
+- model: 'master_data.country'
+  pk: "66"
+  fields:
+    name: "Ecuador"
+    item_code: "EC"
+- model: 'master_data.country'
+  pk: "67"
+  fields:
+    name: "Egypt"
+    item_code: "EG"
+- model: 'master_data.country'
+  pk: "68"
+  fields:
+    name: "El Salvador"
+    item_code: "SV"
+- model: 'master_data.country'
+  pk: "69"
+  fields:
+    name: "Equatorial Guinea"
+    item_code: "GQ"
+- model: 'master_data.country'
+  pk: "70"
+  fields:
+    name: "Eritrea"
+    item_code: "ER"
+- model: 'master_data.country'
+  pk: "71"
+  fields:
+    name: "Estonia"
+    item_code: "EE"
+- model: 'master_data.country'
+  pk: "72"
+  fields:
+    name: "Ethiopia"
+    item_code: "ET"
+- model: 'master_data.country'
+  pk: "73"
+  fields:
+    name: "Falkland Islands"
+    item_code: "FK"
+- model: 'master_data.country'
+  pk: "74"
+  fields:
+    name: "Faroe Islands"
+    item_code: "FO"
+- model: 'master_data.country'
+  pk: "75"
+  fields:
+    name: "Fiji Islands"
+    item_code: "FJ"
+- model: 'master_data.country'
+  pk: "76"
+  fields:
+    name: "Finland"
+    item_code: "FI"
+- model: 'master_data.country'
+  pk: "77"
+  fields:
+    name: "France"
+    item_code: "FR"
+- model: 'master_data.country'
+  pk: "78"
+  fields:
+    name: "French Guiana"
+    item_code: "GF"
+- model: 'master_data.country'
+  pk: "79"
+  fields:
+    name: "French Polynesia"
+    item_code: "PF"
+- model: 'master_data.country'
+  pk: "80"
+  fields:
+    name: "French Southern Territories"
+    item_code: "TF"
+- model: 'master_data.country'
+  pk: "81"
+  fields:
+    name: "Gabon"
+    item_code: "GA"
+- model: 'master_data.country'
+  pk: "82"
+  fields:
+    name: "Gambia The"
+    item_code: "GM"
+- model: 'master_data.country'
+  pk: "83"
+  fields:
+    name: "Georgia"
+    item_code: "GE"
+- model: 'master_data.country'
+  pk: "84"
+  fields:
+    name: "Germany"
+    item_code: "DE"
+- model: 'master_data.country'
+  pk: "85"
+  fields:
+    name: "Ghana"
+    item_code: "GH"
+- model: 'master_data.country'
+  pk: "86"
+  fields:
+    name: "Gibraltar"
+    item_code: "GI"
+- model: 'master_data.country'
+  pk: "87"
+  fields:
+    name: "Greece"
+    item_code: "GR"
+- model: 'master_data.country'
+  pk: "88"
+  fields:
+    name: "Greenland"
+    item_code: "GL"
+- model: 'master_data.country'
+  pk: "89"
+  fields:
+    name: "Grenada"
+    item_code: "GD"
+- model: 'master_data.country'
+  pk: "90"
+  fields:
+    name: "Guadeloupe"
+    item_code: "GP"
+- model: 'master_data.country'
+  pk: "91"
+  fields:
+    name: "Guam"
+    item_code: "GU"
+- model: 'master_data.country'
+  pk: "92"
+  fields:
+    name: "Guatemala"
+    item_code: "GT"
+- model: 'master_data.country'
+  pk: "93"
+  fields:
+    name: "Guernsey and Alderney"
+    item_code: "GG"
+- model: 'master_data.country'
+  pk: "94"
+  fields:
+    name: "Guinea"
+    item_code: "GN"
+- model: 'master_data.country'
+  pk: "95"
+  fields:
+    name: "Guinea-Bissau"
+    item_code: "GW"
+- model: 'master_data.country'
+  pk: "96"
+  fields:
+    name: "Guyana"
+    item_code: "GY"
+- model: 'master_data.country'
+  pk: "97"
+  fields:
+    name: "Haiti"
+    item_code: "HT"
+- model: 'master_data.country'
+  pk: "98"
+  fields:
+    name: "Heard Island and McDonald Islands"
+    item_code: "HM"
+- model: 'master_data.country'
+  pk: "99"
+  fields:
+    name: "Honduras"
+    item_code: "HN"
+- model: 'master_data.country'
+  pk: "100"
+  fields:
+    name: "Hong Kong S.A.R."
+    item_code: "HK"
+- model: 'master_data.country'
+  pk: "101"
+  fields:
+    name: "Hungary"
+    item_code: "HU"
+- model: 'master_data.country'
+  pk: "102"
+  fields:
+    name: "Iceland"
+    item_code: "IS"
+- model: 'master_data.country'
+  pk: "103"
+  fields:
+    name: "India"
+    item_code: "IN"
+- model: 'master_data.country'
+  pk: "104"
+  fields:
+    name: "Indonesia"
+    item_code: "ID"
+- model: 'master_data.country'
+  pk: "105"
+  fields:
+    name: "Iran"
+    item_code: "IR"
+- model: 'master_data.country'
+  pk: "106"
+  fields:
+    name: "Iraq"
+    item_code: "IQ"
+- model: 'master_data.country'
+  pk: "107"
+  fields:
+    name: "Ireland"
+    item_code: "IE"
+- model: 'master_data.country'
+  pk: "108"
+  fields:
+    name: "Israel"
+    item_code: "IL"
+- model: 'master_data.country'
+  pk: "109"
+  fields:
+    name: "Italy"
+    item_code: "IT"
+- model: 'master_data.country'
+  pk: "110"
+  fields:
+    name: "Jamaica"
+    item_code: "JM"
+- model: 'master_data.country'
+  pk: "111"
+  fields:
+    name: "Japan"
+    item_code: "JP"
+- model: 'master_data.country'
+  pk: "112"
+  fields:
+    name: "Jersey"
+    item_code: "JE"
+- model: 'master_data.country'
+  pk: "113"
+  fields:
+    name: "Jordan"
+    item_code: "JO"
+- model: 'master_data.country'
+  pk: "114"
+  fields:
+    name: "Kazakhstan"
+    item_code: "KZ"
+- model: 'master_data.country'
+  pk: "115"
+  fields:
+    name: "Kenya"
+    item_code: "KE"
+- model: 'master_data.country'
+  pk: "116"
+  fields:
+    name: "Kiribati"
+    item_code: "KI"
+- model: 'master_data.country'
+  pk: "117"
+  fields:
+    name: "Kosovo"
+    item_code: "XK"
+- model: 'master_data.country'
+  pk: "118"
+  fields:
+    name: "Kuwait"
+    item_code: "KW"
+- model: 'master_data.country'
+  pk: "119"
+  fields:
+    name: "Kyrgyzstan"
+    item_code: "KG"
+- model: 'master_data.country'
+  pk: "120"
+  fields:
+    name: "Laos"
+    item_code: "LA"
+- model: 'master_data.country'
+  pk: "121"
+  fields:
+    name: "Latvia"
+    item_code: "LV"
+- model: 'master_data.country'
+  pk: "122"
+  fields:
+    name: "Lebanon"
+    item_code: "LB"
+- model: 'master_data.country'
+  pk: "123"
+  fields:
+    name: "Lesotho"
+    item_code: "LS"
+- model: 'master_data.country'
+  pk: "124"
+  fields:
+    name: "Liberia"
+    item_code: "LR"
+- model: 'master_data.country'
+  pk: "125"
+  fields:
+    name: "Libya"
+    item_code: "LY"
+- model: 'master_data.country'
+  pk: "126"
+  fields:
+    name: "Liechtenstein"
+    item_code: "LI"
+- model: 'master_data.country'
+  pk: "127"
+  fields:
+    name: "Lithuania"
+    item_code: "LT"
+- model: 'master_data.country'
+  pk: "128"
+  fields:
+    name: "Luxembourg"
+    item_code: "LU"
+- model: 'master_data.country'
+  pk: "129"
+  fields:
+    name: "Macau S.A.R."
+    item_code: "MO"
+- model: 'master_data.country'
+  pk: "130"
+  fields:
+    name: "Madagascar"
+    item_code: "MG"
+- model: 'master_data.country'
+  pk: "131"
+  fields:
+    name: "Malawi"
+    item_code: "MW"
+- model: 'master_data.country'
+  pk: "132"
+  fields:
+    name: "Malaysia"
+    item_code: "MY"
+- model: 'master_data.country'
+  pk: "133"
+  fields:
+    name: "Maldives"
+    item_code: "MV"
+- model: 'master_data.country'
+  pk: "134"
+  fields:
+    name: "Mali"
+    item_code: "ML"
+- model: 'master_data.country'
+  pk: "135"
+  fields:
+    name: "Malta"
+    item_code: "MT"
+- model: 'master_data.country'
+  pk: "136"
+  fields:
+    name: "Man (Isle of)"
+    item_code: "IM"
+- model: 'master_data.country'
+  pk: "137"
+  fields:
+    name: "Marshall Islands"
+    item_code: "MH"
+- model: 'master_data.country'
+  pk: "138"
+  fields:
+    name: "Martinique"
+    item_code: "MQ"
+- model: 'master_data.country'
+  pk: "139"
+  fields:
+    name: "Mauritania"
+    item_code: "MR"
+- model: 'master_data.country'
+  pk: "140"
+  fields:
+    name: "Mauritius"
+    item_code: "MU"
+- model: 'master_data.country'
+  pk: "141"
+  fields:
+    name: "Mayotte"
+    item_code: "YT"
+- model: 'master_data.country'
+  pk: "142"
+  fields:
+    name: "Mexico"
+    item_code: "MX"
+- model: 'master_data.country'
+  pk: "143"
+  fields:
+    name: "Micronesia"
+    item_code: "FM"
+- model: 'master_data.country'
+  pk: "144"
+  fields:
+    name: "Moldova"
+    item_code: "MD"
+- model: 'master_data.country'
+  pk: "145"
+  fields:
+    name: "Monaco"
+    item_code: "MC"
+- model: 'master_data.country'
+  pk: "146"
+  fields:
+    name: "Mongolia"
+    item_code: "MN"
+- model: 'master_data.country'
+  pk: "147"
+  fields:
+    name: "Montenegro"
+    item_code: "ME"
+- model: 'master_data.country'
+  pk: "148"
+  fields:
+    name: "Montserrat"
+    item_code: "MS"
+- model: 'master_data.country'
+  pk: "149"
+  fields:
+    name: "Morocco"
+    item_code: "MA"
+- model: 'master_data.country'
+  pk: "150"
+  fields:
+    name: "Mozambique"
+    item_code: "MZ"
+- model: 'master_data.country'
+  pk: "151"
+  fields:
+    name: "Myanmar"
+    item_code: "MM"
+- model: 'master_data.country'
+  pk: "152"
+  fields:
+    name: "Namibia"
+    item_code: "NA"
+- model: 'master_data.country'
+  pk: "153"
+  fields:
+    name: "Nauru"
+    item_code: "NR"
+- model: 'master_data.country'
+  pk: "154"
+  fields:
+    name: "Nepal"
+    item_code: "NP"
+- model: 'master_data.country'
+  pk: "155"
+  fields:
+    name: "Netherlands"
+    item_code: "NL"
+- model: 'master_data.country'
+  pk: "156"
+  fields:
+    name: "New Caledonia"
+    item_code: "NC"
+- model: 'master_data.country'
+  pk: "157"
+  fields:
+    name: "New Zealand"
+    item_code: "NZ"
+- model: 'master_data.country'
+  pk: "158"
+  fields:
+    name: "Nicaragua"
+    item_code: "NI"
+- model: 'master_data.country'
+  pk: "159"
+  fields:
+    name: "Niger"
+    item_code: "NE"
+- model: 'master_data.country'
+  pk: "160"
+  fields:
+    name: "Nigeria"
+    item_code: "NG"
+- model: 'master_data.country'
+  pk: "161"
+  fields:
+    name: "Niue"
+    item_code: "NU"
+- model: 'master_data.country'
+  pk: "162"
+  fields:
+    name: "Norfolk Island"
+    item_code: "NF"
+- model: 'master_data.country'
+  pk: "163"
+  fields:
+    name: "North Korea"
+    item_code: "KP"
+- model: 'master_data.country'
+  pk: "164"
+  fields:
+    name: "North Macedonia"
+    item_code: "MK"
+- model: 'master_data.country'
+  pk: "165"
+  fields:
+    name: "Northern Mariana Islands"
+    item_code: "MP"
+- model: 'master_data.country'
+  pk: "166"
+  fields:
+    name: "Norway"
+    item_code: "NO"
+- model: 'master_data.country'
+  pk: "167"
+  fields:
+    name: "Oman"
+    item_code: "OM"
+- model: 'master_data.country'
+  pk: "168"
+  fields:
+    name: "Pakistan"
+    item_code: "PK"
+- model: 'master_data.country'
+  pk: "169"
+  fields:
+    name: "Palau"
+    item_code: "PW"
+- model: 'master_data.country'
+  pk: "170"
+  fields:
+    name: "Palestinian Territory Occupied"
+    item_code: "PS"
+- model: 'master_data.country'
+  pk: "171"
+  fields:
+    name: "Panama"
+    item_code: "PA"
+- model: 'master_data.country'
+  pk: "172"
+  fields:
+    name: "Papua new Guinea"
+    item_code: "PG"
+- model: 'master_data.country'
+  pk: "173"
+  fields:
+    name: "Paraguay"
+    item_code: "PY"
+- model: 'master_data.country'
+  pk: "174"
+  fields:
+    name: "Peru"
+    item_code: "PE"
+- model: 'master_data.country'
+  pk: "175"
+  fields:
+    name: "Philippines"
+    item_code: "PH"
+- model: 'master_data.country'
+  pk: "176"
+  fields:
+    name: "Pitcairn Island"
+    item_code: "PN"
+- model: 'master_data.country'
+  pk: "177"
+  fields:
+    name: "Poland"
+    item_code: "PL"
+- model: 'master_data.country'
+  pk: "178"
+  fields:
+    name: "Portugal"
+    item_code: "PT"
+- model: 'master_data.country'
+  pk: "179"
+  fields:
+    name: "Puerto Rico"
+    item_code: "PR"
+- model: 'master_data.country'
+  pk: "180"
+  fields:
+    name: "Qatar"
+    item_code: "QA"
+- model: 'master_data.country'
+  pk: "181"
+  fields:
+    name: "Reunion"
+    item_code: "RE"
+- model: 'master_data.country'
+  pk: "182"
+  fields:
+    name: "Romania"
+    item_code: "RO"
+- model: 'master_data.country'
+  pk: "183"
+  fields:
+    name: "Russia"
+    item_code: "RU"
+- model: 'master_data.country'
+  pk: "184"
+  fields:
+    name: "Rwanda"
+    item_code: "RW"
+- model: 'master_data.country'
+  pk: "185"
+  fields:
+    name: "Saint Helena"
+    item_code: "SH"
+- model: 'master_data.country'
+  pk: "186"
+  fields:
+    name: "Saint Kitts And Nevis"
+    item_code: "KN"
+- model: 'master_data.country'
+  pk: "187"
+  fields:
+    name: "Saint Lucia"
+    item_code: "LC"
+- model: 'master_data.country'
+  pk: "188"
+  fields:
+    name: "Saint Pierre and Miquelon"
+    item_code: "PM"
+- model: 'master_data.country'
+  pk: "189"
+  fields:
+    name: "Saint Vincent And The Grenadines"
+    item_code: "VC"
+- model: 'master_data.country'
+  pk: "190"
+  fields:
+    name: "Saint-Barthelemy"
+    item_code: "BL"
+- model: 'master_data.country'
+  pk: "191"
+  fields:
+    name: "Saint-Martin (French part)"
+    item_code: "MF"
+- model: 'master_data.country'
+  pk: "192"
+  fields:
+    name: "Samoa"
+    item_code: "WS"
+- model: 'master_data.country'
+  pk: "193"
+  fields:
+    name: "San Marino"
+    item_code: "SM"
+- model: 'master_data.country'
+  pk: "194"
+  fields:
+    name: "Sao Tome and Principe"
+    item_code: "ST"
+- model: 'master_data.country'
+  pk: "195"
+  fields:
+    name: "Saudi Arabia"
+    item_code: "SA"
+- model: 'master_data.country'
+  pk: "196"
+  fields:
+    name: "Senegal"
+    item_code: "SN"
+- model: 'master_data.country'
+  pk: "197"
+  fields:
+    name: "Serbia"
+    item_code: "RS"
+- model: 'master_data.country'
+  pk: "198"
+  fields:
+    name: "Seychelles"
+    item_code: "SC"
+- model: 'master_data.country'
+  pk: "199"
+  fields:
+    name: "Sierra Leone"
+    item_code: "SL"
+- model: 'master_data.country'
+  pk: "200"
+  fields:
+    name: "Singapore"
+    item_code: "SG"
+- model: 'master_data.country'
+  pk: "201"
+  fields:
+    name: "Sint Maarten (Dutch part)"
+    item_code: "SX"
+- model: 'master_data.country'
+  pk: "202"
+  fields:
+    name: "Slovakia"
+    item_code: "SK"
+- model: 'master_data.country'
+  pk: "203"
+  fields:
+    name: "Slovenia"
+    item_code: "SI"
+- model: 'master_data.country'
+  pk: "204"
+  fields:
+    name: "Solomon Islands"
+    item_code: "SB"
+- model: 'master_data.country'
+  pk: "205"
+  fields:
+    name: "Somalia"
+    item_code: "SO"
+- model: 'master_data.country'
+  pk: "206"
+  fields:
+    name: "South Africa"
+    item_code: "ZA"
+- model: 'master_data.country'
+  pk: "207"
+  fields:
+    name: "South Georgia"
+    item_code: "GS"
+- model: 'master_data.country'
+  pk: "208"
+  fields:
+    name: "South Korea"
+    item_code: "KR"
+- model: 'master_data.country'
+  pk: "209"
+  fields:
+    name: "South Sudan"
+    item_code: "SS"
+- model: 'master_data.country'
+  pk: "210"
+  fields:
+    name: "Spain"
+    item_code: "ES"
+- model: 'master_data.country'
+  pk: "211"
+  fields:
+    name: "Sri Lanka"
+    item_code: "LK"
+- model: 'master_data.country'
+  pk: "212"
+  fields:
+    name: "Sudan"
+    item_code: "SD"
+- model: 'master_data.country'
+  pk: "213"
+  fields:
+    name: "Suriname"
+    item_code: "SR"
+- model: 'master_data.country'
+  pk: "214"
+  fields:
+    name: "Svalbard And Jan Mayen Islands"
+    item_code: "SJ"
+- model: 'master_data.country'
+  pk: "215"
+  fields:
+    name: "Swaziland"
+    item_code: "SZ"
+- model: 'master_data.country'
+  pk: "216"
+  fields:
+    name: "Sweden"
+    item_code: "SE"
+- model: 'master_data.country'
+  pk: "217"
+  fields:
+    name: "Switzerland"
+    item_code: "CH"
+- model: 'master_data.country'
+  pk: "218"
+  fields:
+    name: "Syria"
+    item_code: "SY"
+- model: 'master_data.country'
+  pk: "219"
+  fields:
+    name: "Taiwan"
+    item_code: "TW"
+- model: 'master_data.country'
+  pk: "220"
+  fields:
+    name: "Tajikistan"
+    item_code: "TJ"
+- model: 'master_data.country'
+  pk: "221"
+  fields:
+    name: "Tanzania"
+    item_code: "TZ"
+- model: 'master_data.country'
+  pk: "222"
+  fields:
+    name: "Thailand"
+    item_code: "TH"
+- model: 'master_data.country'
+  pk: "223"
+  fields:
+    name: "The Bahamas"
+    item_code: "BS"
+- model: 'master_data.country'
+  pk: "224"
+  fields:
+    name: "Togo"
+    item_code: "TG"
+- model: 'master_data.country'
+  pk: "225"
+  fields:
+    name: "Tokelau"
+    item_code: "TK"
+- model: 'master_data.country'
+  pk: "226"
+  fields:
+    name: "Tonga"
+    item_code: "TO"
+- model: 'master_data.country'
+  pk: "227"
+  fields:
+    name: "Trinidad And Tobago"
+    item_code: "TT"
+- model: 'master_data.country'
+  pk: "228"
+  fields:
+    name: "Tunisia"
+    item_code: "TN"
+- model: 'master_data.country'
+  pk: "229"
+  fields:
+    name: "Turkey"
+    item_code: "TR"
+- model: 'master_data.country'
+  pk: "230"
+  fields:
+    name: "Turkmenistan"
+    item_code: "TM"
+- model: 'master_data.country'
+  pk: "231"
+  fields:
+    name: "Turks And Caicos Islands"
+    item_code: "TC"
+- model: 'master_data.country'
+  pk: "232"
+  fields:
+    name: "Tuvalu"
+    item_code: "TV"
+- model: 'master_data.country'
+  pk: "233"
+  fields:
+    name: "Uganda"
+    item_code: "UG"
+- model: 'master_data.country'
+  pk: "234"
+  fields:
+    name: "Ukraine"
+    item_code: "UA"
+- model: 'master_data.country'
+  pk: "235"
+  fields:
+    name: "United Arab Emirates"
+    item_code: "AE"
+- model: 'master_data.country'
+  pk: "236"
+  fields:
+    name: "United Kingdom"
+    item_code: "GB"
+- model: 'master_data.country'
+  pk: "237"
+  fields:
+    name: "United States"
+    item_code: "US"
+- model: 'master_data.country'
+  pk: "238"
+  fields:
+    name: "United States Minor Outlying Islands"
+    item_code: "UM"
+- model: 'master_data.country'
+  pk: "239"
+  fields:
+    name: "Uruguay"
+    item_code: "UY"
+- model: 'master_data.country'
+  pk: "240"
+  fields:
+    name: "Uzbekistan"
+    item_code: "UZ"
+- model: 'master_data.country'
+  pk: "241"
+  fields:
+    name: "Vanuatu"
+    item_code: "VU"
+- model: 'master_data.country'
+  pk: "242"
+  fields:
+    name: "Vatican City State (Holy See)"
+    item_code: "VA"
+- model: 'master_data.country'
+  pk: "243"
+  fields:
+    name: "Venezuela"
+    item_code: "VE"
+- model: 'master_data.country'
+  pk: "244"
+  fields:
+    name: "Vietnam"
+    item_code: "VN"
+- model: 'master_data.country'
+  pk: "245"
+  fields:
+    name: "Virgin Islands (British)"
+    item_code: "VG"
+- model: 'master_data.country'
+  pk: "246"
+  fields:
+    name: "Virgin Islands (US)"
+    item_code: "VI"
+- model: 'master_data.country'
+  pk: "247"
+  fields:
+    name: "Wallis And Futuna Islands"
+    item_code: "WF"
+- model: 'master_data.country'
+  pk: "248"
+  fields:
+    name: "Western Sahara"
+    item_code: "EH"
+- model: 'master_data.country'
+  pk: "249"
+  fields:
+    name: "Yemen"
+    item_code: "YE"
+- model: 'master_data.country'
+  pk: "250"
+  fields:
+    name: "Zambia"
+    item_code: "ZM"
+- model: 'master_data.country'
+  pk: "251"
+  fields:
+    name: "Zimbabwe"
+    item_code: "ZW"

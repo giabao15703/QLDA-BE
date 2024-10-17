@@ -1,0 +1,5096 @@
+- model: 'master_data.IndustrySubSectors'
+  pk: "1"
+  fields:
+    item_code: "1"
+    name: "All"
+    status: "True"
+    industry_sectors_id: "1"
+- model: 'master_data.IndustrySubSectors'
+  pk: "2"
+  fields:
+    item_code: "2"
+    name: "Growing rice"
+    status: "True"
+    industry_sectors_id: "2"
+- model: 'master_data.IndustrySubSectors'
+  pk: "3"
+  fields:
+    item_code: "3"
+    name: "Growing corn and other grain crops"
+    status: "True"
+    industry_sectors_id: "2"
+- model: 'master_data.IndustrySubSectors'
+  pk: "4"
+  fields:
+    item_code: "4"
+    name: "Growing starchy root crops"
+    status: "True"
+    industry_sectors_id: "2"
+- model: 'master_data.IndustrySubSectors'
+  pk: "5"
+  fields:
+    item_code: "5"
+    name: "Plant sugarcane"
+    status: "True"
+    industry_sectors_id: "2"
+- model: 'master_data.IndustrySubSectors'
+  pk: "6"
+  fields:
+    item_code: "6"
+    name: "Growing tobacco and pipe tobacco"
+    status: "True"
+    industry_sectors_id: "2"
+- model: 'master_data.IndustrySubSectors'
+  pk: "7"
+  fields:
+    item_code: "7"
+    name: "Growing plants for fiber"
+    status: "True"
+    industry_sectors_id: "2"
+- model: 'master_data.IndustrySubSectors'
+  pk: "8"
+  fields:
+    item_code: "8"
+    name: "Planting plants with oil-bearing seeds"
+    status: "True"
+    industry_sectors_id: "2"
+- model: 'master_data.IndustrySubSectors'
+  pk: "9"
+  fields:
+    item_code: "9"
+    name: "Grow all kinds of vegetables"
+    status: "True"
+    industry_sectors_id: "2"
+- model: 'master_data.IndustrySubSectors'
+  pk: "10"
+  fields:
+    item_code: "10"
+    name: "Growing beans of all kinds"
+    status: "True"
+    industry_sectors_id: "2"
+- model: 'master_data.IndustrySubSectors'
+  pk: "11"
+  fields:
+    item_code: "11"
+    name: "Grow flowers every year"
+    status: "True"
+    industry_sectors_id: "2"
+- model: 'master_data.IndustrySubSectors'
+  pk: "12"
+  fields:
+    item_code: "12"
+    name: "Grow spices every year"
+    status: "True"
+    industry_sectors_id: "2"
+- model: 'master_data.IndustrySubSectors'
+  pk: "13"
+  fields:
+    item_code: "13"
+    name: "Grow medicinal and aromatic plants every year"
+    status: "True"
+    industry_sectors_id: "2"
+- model: 'master_data.IndustrySubSectors'
+  pk: "14"
+  fields:
+    item_code: "14"
+    name: "Plant the remaining annual crops"
+    status: "True"
+    industry_sectors_id: "2"
+- model: 'master_data.IndustrySubSectors'
+  pk: "15"
+  fields:
+    item_code: "15"
+    name: "Grow grapes"
+    status: "True"
+    industry_sectors_id: "3"
+- model: 'master_data.IndustrySubSectors'
+  pk: "16"
+  fields:
+    item_code: "16"
+    name: "Growing fruit trees in tropical and subtropical areas"
+    status: "True"
+    industry_sectors_id: "3"
+- model: 'master_data.IndustrySubSectors'
+  pk: "17"
+  fields:
+    item_code: "17"
+    name: "Grow oranges, tangerines and other citrus fruits"
+    status: "True"
+    industry_sectors_id: "3"
+- model: 'master_data.IndustrySubSectors'
+  pk: "18"
+  fields:
+    item_code: "18"
+    name: "Grow apples, plums and fruits with seeds such as apples"
+    status: "True"
+    industry_sectors_id: "3"
+- model: 'master_data.IndustrySubSectors'
+  pk: "19"
+  fields:
+    item_code: "19"
+    name: "Growing longan, lychee, and rambutan"
+    status: "True"
+    industry_sectors_id: "3"
+- model: 'master_data.IndustrySubSectors'
+  pk: "20"
+  fields:
+    item_code: "20"
+    name: "Plant other fruit trees"
+    status: "True"
+    industry_sectors_id: "3"
+- model: 'master_data.IndustrySubSectors'
+  pk: "21"
+  fields:
+    item_code: "21"
+    name: "Growing trees for oil-containing fruits"
+    status: "True"
+    industry_sectors_id: "3"
+- model: 'master_data.IndustrySubSectors'
+  pk: "22"
+  fields:
+    item_code: "22"
+    name: "Plant cashew trees"
+    status: "True"
+    industry_sectors_id: "3"
+- model: 'master_data.IndustrySubSectors'
+  pk: "23"
+  fields:
+    item_code: "23"
+    name: "Plant pepper trees"
+    status: "True"
+    industry_sectors_id: "3"
+- model: 'master_data.IndustrySubSectors'
+  pk: "24"
+  fields:
+    item_code: "24"
+    name: "Plant rubber trees"
+    status: "True"
+    industry_sectors_id: "3"
+- model: 'master_data.IndustrySubSectors'
+  pk: "25"
+  fields:
+    item_code: "25"
+    name: "Grow coffee plants"
+    status: "True"
+    industry_sectors_id: "3"
+- model: 'master_data.IndustrySubSectors'
+  pk: "26"
+  fields:
+    item_code: "26"
+    name: "Planting tea trees"
+    status: "True"
+    industry_sectors_id: "3"
+- model: 'master_data.IndustrySubSectors'
+  pk: "27"
+  fields:
+    item_code: "27"
+    name: "Grow perennial spices"
+    status: "True"
+    industry_sectors_id: "3"
+- model: 'master_data.IndustrySubSectors'
+  pk: "28"
+  fields:
+    item_code: "28"
+    name: "Growing perennial medicinal and aromatic plants"
+    status: "True"
+    industry_sectors_id: "3"
+- model: 'master_data.IndustrySubSectors'
+  pk: "29"
+  fields:
+    item_code: "29"
+    name: "Planting perennial ornamental plants"
+    status: "True"
+    industry_sectors_id: "3"
+- model: 'master_data.IndustrySubSectors'
+  pk: "30"
+  fields:
+    item_code: "30"
+    name: "Plant other remaining perennials"
+    status: "True"
+    industry_sectors_id: "3"
+- model: 'master_data.IndustrySubSectors'
+  pk: "31"
+  fields:
+    item_code: "31"
+    name: "Multiply and care for seedlings every year"
+    status: "True"
+    industry_sectors_id: "4"
+- model: 'master_data.IndustrySubSectors'
+  pk: "32"
+  fields:
+    item_code: "32"
+    name: "Propagate and care for perennial seedlings"
+    status: "True"
+    industry_sectors_id: "4"
+- model: 'master_data.IndustrySubSectors'
+  pk: "33"
+  fields:
+    item_code: "33"
+    name: "Production of buffalo and cow breeds"
+    status: "True"
+    industry_sectors_id: "5"
+- model: 'master_data.IndustrySubSectors'
+  pk: "34"
+  fields:
+    item_code: "34"
+    name: "Raising buffalo and cows"
+    status: "True"
+    industry_sectors_id: "5"
+- model: 'master_data.IndustrySubSectors'
+  pk: "35"
+  fields:
+    item_code: "35"
+    name: "Production of horse and donkey breeds"
+    status: "True"
+    industry_sectors_id: "5"
+- model: 'master_data.IndustrySubSectors'
+  pk: "36"
+  fields:
+    item_code: "36"
+    name: "Raising horses, donkeys, and mules"
+    status: "True"
+    industry_sectors_id: "5"
+- model: 'master_data.IndustrySubSectors'
+  pk: "37"
+  fields:
+    item_code: "37"
+    name: "Production of goat, sheep, deer and elk breeds"
+    status: "True"
+    industry_sectors_id: "5"
+- model: 'master_data.IndustrySubSectors'
+  pk: "38"
+  fields:
+    item_code: "38"
+    name: "Raising goats, sheep, deer"
+    status: "True"
+    industry_sectors_id: "5"
+- model: 'master_data.IndustrySubSectors'
+  pk: "39"
+  fields:
+    item_code: "39"
+    name: "Pig breed production"
+    status: "True"
+    industry_sectors_id: "5"
+- model: 'master_data.IndustrySubSectors'
+  pk: "40"
+  fields:
+    item_code: "40"
+    name: "Pig farming"
+    status: "True"
+    industry_sectors_id: "5"
+- model: 'master_data.IndustrySubSectors'
+  pk: "41"
+  fields:
+    item_code: "41"
+    name: "Egg incubation and poultry breeding activities"
+    status: "True"
+    industry_sectors_id: "5"
+- model: 'master_data.IndustrySubSectors'
+  pk: "42"
+  fields:
+    item_code: "42"
+    name: "Chicken breeding"
+    status: "True"
+    industry_sectors_id: "5"
+- model: 'master_data.IndustrySubSectors'
+  pk: "43"
+  fields:
+    item_code: "43"
+    name: "Raising ducks, geese, and geese"
+    status: "True"
+    industry_sectors_id: "5"
+- model: 'master_data.IndustrySubSectors'
+  pk: "44"
+  fields:
+    item_code: "44"
+    name: "Other poultry farming"
+    status: "True"
+    industry_sectors_id: "5"
+- model: 'master_data.IndustrySubSectors'
+  pk: "45"
+  fields:
+    item_code: "45"
+    name: "Other livestock"
+    status: "True"
+    industry_sectors_id: "5"
+- model: 'master_data.IndustrySubSectors'
+  pk: "46"
+  fields:
+    item_code: "46"
+    name: "Mixed farming and animal husbandry"
+    status: "True"
+    industry_sectors_id: "6"
+- model: 'master_data.IndustrySubSectors'
+  pk: "47"
+  fields:
+    item_code: "47"
+    name: "Cultivation service activities"
+    status: "True"
+    industry_sectors_id: "7"
+- model: 'master_data.IndustrySubSectors'
+  pk: "48"
+  fields:
+    item_code: "48"
+    name: "Livestock service activities"
+    status: "True"
+    industry_sectors_id: "7"
+- model: 'master_data.IndustrySubSectors'
+  pk: "49"
+  fields:
+    item_code: "49"
+    name: "Post-harvest service activities"
+    status: "True"
+    industry_sectors_id: "7"
+- model: 'master_data.IndustrySubSectors'
+  pk: "50"
+  fields:
+    item_code: "50"
+    name: "Seed treatment for propagation"
+    status: "True"
+    industry_sectors_id: "7"
+- model: 'master_data.IndustrySubSectors'
+  pk: "51"
+  fields:
+    item_code: "51"
+    name: "Hunting, trapping and related service activities"
+    status: "True"
+    industry_sectors_id: "8"
+- model: 'master_data.IndustrySubSectors'
+  pk: "52"
+  fields:
+    item_code: "52"
+    name: "Planting and caring for woody forests"
+    status: "True"
+    industry_sectors_id: "9"
+- model: 'master_data.IndustrySubSectors'
+  pk: "53"
+  fields:
+    item_code: "53"
+    name: "Planting and taking care of bamboo forests"
+    status: "True"
+    industry_sectors_id: "9"
+- model: 'master_data.IndustrySubSectors'
+  pk: "54"
+  fields:
+    item_code: "54"
+    name: "Planting forests and taking care of other forests"
+    status: "True"
+    industry_sectors_id: "9"
+- model: 'master_data.IndustrySubSectors'
+  pk: "55"
+  fields:
+    item_code: "55"
+    name: "Nursery of forestry trees"
+    status: "True"
+    industry_sectors_id: "9"
+- model: 'master_data.IndustrySubSectors'
+  pk: "56"
+  fields:
+    item_code: "56"
+    name: "Wood gathering"
+    status: "True"
+    industry_sectors_id: "10"
+- model: 'master_data.IndustrySubSectors'
+  pk: "57"
+  fields:
+    item_code: "57"
+    name: "Exploitation of other forest products except wood"
+    status: "True"
+    industry_sectors_id: "11"
+- model: 'master_data.IndustrySubSectors'
+  pk: "58"
+  fields:
+    item_code: "58"
+    name: "Collecting forest products other than wood"
+    status: "True"
+    industry_sectors_id: "11"
+- model: 'master_data.IndustrySubSectors'
+  pk: "59"
+  fields:
+    item_code: "59"
+    name: "Forestry service activities"
+    status: "True"
+    industry_sectors_id: "12"
+- model: 'master_data.IndustrySubSectors'
+  pk: "60"
+  fields:
+    item_code: "60"
+    name: "Marine fisheries exploitation"
+    status: "True"
+    industry_sectors_id: "13"
+- model: 'master_data.IndustrySubSectors'
+  pk: "61"
+  fields:
+    item_code: "61"
+    name: "Exploitation of inland fisheries"
+    status: "True"
+    industry_sectors_id: "13"
+- model: 'master_data.IndustrySubSectors'
+  pk: "62"
+  fields:
+    item_code: "62"
+    name: "Marine aquaculture"
+    status: "True"
+    industry_sectors_id: "14"
+- model: 'master_data.IndustrySubSectors'
+  pk: "63"
+  fields:
+    item_code: "63"
+    name: "Inland aquaculture"
+    status: "True"
+    industry_sectors_id: "14"
+- model: 'master_data.IndustrySubSectors'
+  pk: "64"
+  fields:
+    item_code: "64"
+    name: "Mining and collecting hard coal"
+    status: "True"
+    industry_sectors_id: "15"
+- model: 'master_data.IndustrySubSectors'
+  pk: "65"
+  fields:
+    item_code: "65"
+    name: "Mining and collecting lignite coal"
+    status: "True"
+    industry_sectors_id: "16"
+- model: 'master_data.IndustrySubSectors'
+  pk: "66"
+  fields:
+    item_code: "66"
+    name: "Crude oil exploitation"
+    status: "True"
+    industry_sectors_id: "17"
+- model: 'master_data.IndustrySubSectors'
+  pk: "67"
+  fields:
+    item_code: "67"
+    name: "Natural gas exploitation"
+    status: "True"
+    industry_sectors_id: "18"
+- model: 'master_data.IndustrySubSectors'
+  pk: "68"
+  fields:
+    item_code: "68"
+    name: "Iron ore mining"
+    status: "True"
+    industry_sectors_id: "19"
+- model: 'master_data.IndustrySubSectors'
+  pk: "69"
+  fields:
+    item_code: "69"
+    name: "Mining uranium ore and thorium ore"
+    status: "True"
+    industry_sectors_id: "20"
+- model: 'master_data.IndustrySubSectors'
+  pk: "70"
+  fields:
+    item_code: "70"
+    name: "Mining bauxite ore"
+    status: "True"
+    industry_sectors_id: "20"
+- model: 'master_data.IndustrySubSectors'
+  pk: "71"
+  fields:
+    item_code: "71"
+    name: "Mining of other non-iron metal ores not elsewhere classified"
+    status: "True"
+    industry_sectors_id: "20"
+- model: 'master_data.IndustrySubSectors'
+  pk: "72"
+  fields:
+    item_code: "72"
+    name: "Mining rare metal ores"
+    status: "True"
+    industry_sectors_id: "21"
+- model: 'master_data.IndustrySubSectors'
+  pk: "73"
+  fields:
+    item_code: "73"
+    name: "Quarrying"
+    status: "True"
+    industry_sectors_id: "22"
+- model: 'master_data.IndustrySubSectors'
+  pk: "74"
+  fields:
+    item_code: "74"
+    name: "Mining sand and gravel"
+    status: "True"
+    industry_sectors_id: "22"
+- model: 'master_data.IndustrySubSectors'
+  pk: "75"
+  fields:
+    item_code: "75"
+    name: "Clay mining"
+    status: "True"
+    industry_sectors_id: "22"
+- model: 'master_data.IndustrySubSectors'
+  pk: "76"
+  fields:
+    item_code: "76"
+    name: "Mining chemical minerals and fertilizer minerals"
+    status: "True"
+    industry_sectors_id: "23"
+- model: 'master_data.IndustrySubSectors'
+  pk: "77"
+  fields:
+    item_code: "77"
+    name: "Mining and collecting peat"
+    status: "True"
+    industry_sectors_id: "23"
+- model: 'master_data.IndustrySubSectors'
+  pk: "78"
+  fields:
+    item_code: "78"
+    name: "Salt mining"
+    status: "True"
+    industry_sectors_id: "23"
+- model: 'master_data.IndustrySubSectors'
+  pk: "79"
+  fields:
+    item_code: "79"
+    name: "Other mining not yet classified"
+    status: "True"
+    industry_sectors_id: "23"
+- model: 'master_data.IndustrySubSectors'
+  pk: "80"
+  fields:
+    item_code: "80"
+    name: "Service activities supporting crude oil and natural gas exploitation"
+    status: "True"
+    industry_sectors_id: "24"
+- model: 'master_data.IndustrySubSectors'
+  pk: "81"
+  fields:
+    item_code: "81"
+    name: "Other mining support service activities"
+    status: "True"
+    industry_sectors_id: "25"
+- model: 'master_data.IndustrySubSectors'
+  pk: "82"
+  fields:
+    item_code: "82"
+    name: "Slaughtering cattle and poultry"
+    status: "True"
+    industry_sectors_id: "26"
+- model: 'master_data.IndustrySubSectors'
+  pk: "83"
+  fields:
+    item_code: "83"
+    name: "Processing and preserving meat"
+    status: "True"
+    industry_sectors_id: "26"
+- model: 'master_data.IndustrySubSectors'
+  pk: "84"
+  fields:
+    item_code: "84"
+    name: "Processing and preserving meat products"
+    status: "True"
+    industry_sectors_id: "26"
+- model: 'master_data.IndustrySubSectors'
+  pk: "85"
+  fields:
+    item_code: "85"
+    name: "Processing and preserving frozen seafood"
+    status: "True"
+    industry_sectors_id: "27"
+- model: 'master_data.IndustrySubSectors'
+  pk: "86"
+  fields:
+    item_code: "86"
+    name: "Processing and preserving dried seafood"
+    status: "True"
+    industry_sectors_id: "27"
+- model: 'master_data.IndustrySubSectors'
+  pk: "87"
+  fields:
+    item_code: "87"
+    name: "Processing and preserving fish sauce"
+    status: "True"
+    industry_sectors_id: "27"
+- model: 'master_data.IndustrySubSectors'
+  pk: "88"
+  fields:
+    item_code: "88"
+    name: "Processing and preserving other aquatic products"
+    status: "True"
+    industry_sectors_id: "27"
+- model: 'master_data.IndustrySubSectors'
+  pk: "89"
+  fields:
+    item_code: "89"
+    name: "Production of juice from fruits and vegetables"
+    status: "True"
+    industry_sectors_id: "28"
+- model: 'master_data.IndustrySubSectors'
+  pk: "90"
+  fields:
+    item_code: "90"
+    name: "Processing and preserving other fruits and vegetables"
+    status: "True"
+    industry_sectors_id: "28"
+- model: 'master_data.IndustrySubSectors'
+  pk: "91"
+  fields:
+    item_code: "91"
+    name: "Production of animal oils and fats"
+    status: "True"
+    industry_sectors_id: "29"
+- model: 'master_data.IndustrySubSectors'
+  pk: "92"
+  fields:
+    item_code: "92"
+    name: "Production of oil and margarine"
+    status: "True"
+    industry_sectors_id: "29"
+- model: 'master_data.IndustrySubSectors'
+  pk: "93"
+  fields:
+    item_code: "93"
+    name: "Processing milk and dairy products"
+    status: "True"
+    industry_sectors_id: "30"
+- model: 'master_data.IndustrySubSectors'
+  pk: "94"
+  fields:
+    item_code: "94"
+    name: "Milling and producing raw flour"
+    status: "True"
+    industry_sectors_id: "31"
+- model: 'master_data.IndustrySubSectors'
+  pk: "95"
+  fields:
+    item_code: "95"
+    name: "Production of starch and products from starch"
+    status: "True"
+    industry_sectors_id: "31"
+- model: 'master_data.IndustrySubSectors'
+  pk: "96"
+  fields:
+    item_code: "96"
+    name: "Production of cakes from flour"
+    status: "True"
+    industry_sectors_id: "32"
+- model: 'master_data.IndustrySubSectors'
+  pk: "97"
+  fields:
+    item_code: "97"
+    name: "Sugar production"
+    status: "True"
+    industry_sectors_id: "32"
+- model: 'master_data.IndustrySubSectors'
+  pk: "98"
+  fields:
+    item_code: "98"
+    name: "Production of cocoa, chocolate and confectionery"
+    status: "True"
+    industry_sectors_id: "32"
+- model: 'master_data.IndustrySubSectors'
+  pk: "99"
+  fields:
+    item_code: "99"
+    name: "Manufacture of pasta, noodles and similar products"
+    status: "True"
+    industry_sectors_id: "32"
+- model: 'master_data.IndustrySubSectors'
+  pk: "100"
+  fields:
+    item_code: "100"
+    name: "Production of dishes and prepared foods"
+    status: "True"
+    industry_sectors_id: "32"
+- model: 'master_data.IndustrySubSectors'
+  pk: "101"
+  fields:
+    item_code: "101"
+    name: "Tea production"
+    status: "True"
+    industry_sectors_id: "32"
+- model: 'master_data.IndustrySubSectors'
+  pk: "102"
+  fields:
+    item_code: "102"
+    name: "Coffee production"
+    status: "True"
+    industry_sectors_id: "32"
+- model: 'master_data.IndustrySubSectors'
+  pk: "103"
+  fields:
+    item_code: "103"
+    name: "Other food production not classified elsewhere"
+    status: "True"
+    industry_sectors_id: "32"
+- model: 'master_data.IndustrySubSectors'
+  pk: "104"
+  fields:
+    item_code: "104"
+    name: "Producing animal feed, poultry and aquatic products"
+    status: "True"
+    industry_sectors_id: "33"
+- model: 'master_data.IndustrySubSectors'
+  pk: "105"
+  fields:
+    item_code: "105"
+    name: "Distilling, distilling and mixing spirits"
+    status: "True"
+    industry_sectors_id: "34"
+- model: 'master_data.IndustrySubSectors'
+  pk: "106"
+  fields:
+    item_code: "106"
+    name: "Produce wine"
+    status: "True"
+    industry_sectors_id: "34"
+- model: 'master_data.IndustrySubSectors'
+  pk: "107"
+  fields:
+    item_code: "107"
+    name: "Producing beer and fermenting malt"
+    status: "True"
+    industry_sectors_id: "34"
+- model: 'master_data.IndustrySubSectors'
+  pk: "108"
+  fields:
+    item_code: "108"
+    name: "Production of mineral water and bottled pure water"
+    status: "True"
+    industry_sectors_id: "34"
+- model: 'master_data.IndustrySubSectors'
+  pk: "109"
+  fields:
+    item_code: "109"
+    name: "Production of non-alcoholic beverages"
+    status: "True"
+    industry_sectors_id: "34"
+- model: 'master_data.IndustrySubSectors'
+  pk: "110"
+  fields:
+    item_code: "110"
+    name: "Tobacco production"
+    status: "True"
+    industry_sectors_id: "35"
+- model: 'master_data.IndustrySubSectors'
+  pk: "111"
+  fields:
+    item_code: "111"
+    name: "Manufacture of other cigarettes"
+    status: "True"
+    industry_sectors_id: "35"
+- model: 'master_data.IndustrySubSectors'
+  pk: "112"
+  fields:
+    item_code: "112"
+    name: "Yarn making"
+    status: "True"
+    industry_sectors_id: "36"
+- model: 'master_data.IndustrySubSectors'
+  pk: "113"
+  fields:
+    item_code: "113"
+    name: "Production of woven fabrics"
+    status: "True"
+    industry_sectors_id: "36"
+- model: 'master_data.IndustrySubSectors'
+  pk: "114"
+  fields:
+    item_code: "114"
+    name: "Finishing textile products"
+    status: "True"
+    industry_sectors_id: "36"
+- model: 'master_data.IndustrySubSectors'
+  pk: "115"
+  fields:
+    item_code: "115"
+    name: "Production of knitted fabrics, crochet fabrics and other non-woven fabrics"
+    status: "True"
+    industry_sectors_id: "37"
+- model: 'master_data.IndustrySubSectors'
+  pk: "116"
+  fields:
+    item_code: "116"
+    name: "Production of ready-made textiles (except apparel)"
+    status: "True"
+    industry_sectors_id: "37"
+- model: 'master_data.IndustrySubSectors'
+  pk: "117"
+  fields:
+    item_code: "117"
+    name: "Producing carpets, blankets, and cushions"
+    status: "True"
+    industry_sectors_id: "37"
+- model: 'master_data.IndustrySubSectors'
+  pk: "118"
+  fields:
+    item_code: "118"
+    name: "Production of all kinds of braided ropes and nets"
+    status: "True"
+    industry_sectors_id: "37"
+- model: 'master_data.IndustrySubSectors'
+  pk: "119"
+  fields:
+    item_code: "119"
+    name: "Production of other uncategorized textiles"
+    status: "True"
+    industry_sectors_id: "37"
+- model: 'master_data.IndustrySubSectors'
+  pk: "120"
+  fields:
+    item_code: "120"
+    name: "Sewing costumes (except costumes made from fur)"
+    status: "True"
+    industry_sectors_id: "38"
+- model: 'master_data.IndustrySubSectors'
+  pk: "121"
+  fields:
+    item_code: "121"
+    name: "Production of products from fur skin"
+    status: "True"
+    industry_sectors_id: "39"
+- model: 'master_data.IndustrySubSectors'
+  pk: "122"
+  fields:
+    item_code: "122"
+    name: "Production of knitted and crocheted clothes"
+    status: "True"
+    industry_sectors_id: "40"
+- model: 'master_data.IndustrySubSectors'
+  pk: "123"
+  fields:
+    item_code: "123"
+    name: "Tanning and preliminary processing of leather; Preparing and dyeing fur skins"
+    status: "True"
+    industry_sectors_id: "41"
+- model: 'master_data.IndustrySubSectors'
+  pk: "124"
+  fields:
+    item_code: "124"
+    name: "Production of suitcases, handbags and similar products, production of saddles and cushions"
+    status: "True"
+    industry_sectors_id: "41"
+- model: 'master_data.IndustrySubSectors'
+  pk: "125"
+  fields:
+    item_code: "125"
+    name: "Producing shoes"
+    status: "True"
+    industry_sectors_id: "42"
+- model: 'master_data.IndustrySubSectors'
+  pk: "126"
+  fields:
+    item_code: "126"
+    name: "Sawing, chipping and planing wood"
+    status: "True"
+    industry_sectors_id: "43"
+- model: 'master_data.IndustrySubSectors'
+  pk: "127"
+  fields:
+    item_code: "127"
+    name: "Wood preservation"
+    status: "True"
+    industry_sectors_id: "43"
+- model: 'master_data.IndustrySubSectors'
+  pk: "128"
+  fields:
+    item_code: "128"
+    name: "Production of plywood, veneer, plywood and other thin boards"
+    status: "True"
+    industry_sectors_id: "44"
+- model: 'master_data.IndustrySubSectors'
+  pk: "129"
+  fields:
+    item_code: "129"
+    name: "Production of wooden construction furniture"
+    status: "True"
+    industry_sectors_id: "44"
+- model: 'master_data.IndustrySubSectors'
+  pk: "130"
+  fields:
+    item_code: "130"
+    name: "Production of wooden packaging"
+    status: "True"
+    industry_sectors_id: "44"
+- model: 'master_data.IndustrySubSectors'
+  pk: "131"
+  fields:
+    item_code: "131"
+    name: "Producing other products from wood"
+    status: "True"
+    industry_sectors_id: "44"
+- model: 'master_data.IndustrySubSectors'
+  pk: "132"
+  fields:
+    item_code: "132"
+    name: "Manufacture of products from forest products (except wood), rush and plaiting materials"
+    status: "True"
+    industry_sectors_id: "44"
+- model: 'master_data.IndustrySubSectors'
+  pk: "133"
+  fields:
+    item_code: "133"
+    name: "Production of pulp, paper and paperboard"
+    status: "True"
+    industry_sectors_id: "45"
+- model: 'master_data.IndustrySubSectors'
+  pk: "134"
+  fields:
+    item_code: "134"
+    name: "Production of paper and cardboard packaging"
+    status: "True"
+    industry_sectors_id: "45"
+- model: 'master_data.IndustrySubSectors'
+  pk: "135"
+  fields:
+    item_code: "135"
+    name: "Production of wrinkled paper and wrinkled cardboard"
+    status: "True"
+    industry_sectors_id: "45"
+- model: 'master_data.IndustrySubSectors'
+  pk: "136"
+  fields:
+    item_code: "136"
+    name: "Production of other products from paper and cardboard not classified elsewhere"
+    status: "True"
+    industry_sectors_id: "45"
+- model: 'master_data.IndustrySubSectors'
+  pk: "137"
+  fields:
+    item_code: "137"
+    name: "Printing"
+    status: "True"
+    industry_sectors_id: "46"
+- model: 'master_data.IndustrySubSectors'
+  pk: "138"
+  fields:
+    item_code: "138"
+    name: "Services related to printing"
+    status: "True"
+    industry_sectors_id: "46"
+- model: 'master_data.IndustrySubSectors'
+  pk: "139"
+  fields:
+    item_code: "139"
+    name: "Copy records of all types"
+    status: "True"
+    industry_sectors_id: "47"
+- model: 'master_data.IndustrySubSectors'
+  pk: "140"
+  fields:
+    item_code: "140"
+    name: "Production of coke"
+    status: "True"
+    industry_sectors_id: "48"
+- model: 'master_data.IndustrySubSectors'
+  pk: "141"
+  fields:
+    item_code: "141"
+    name: "Production of refined petroleum products"
+    status: "True"
+    industry_sectors_id: "49"
+- model: 'master_data.IndustrySubSectors'
+  pk: "142"
+  fields:
+    item_code: "142"
+    name: "Industrial gas production"
+    status: "True"
+    industry_sectors_id: "50"
+- model: 'master_data.IndustrySubSectors'
+  pk: "143"
+  fields:
+    item_code: "143"
+    name: "Production of dyes and pigments"
+    status: "True"
+    industry_sectors_id: "50"
+- model: 'master_data.IndustrySubSectors'
+  pk: "144"
+  fields:
+    item_code: "144"
+    name: "Production of other basic inorganic chemicals"
+    status: "True"
+    industry_sectors_id: "50"
+- model: 'master_data.IndustrySubSectors'
+  pk: "145"
+  fields:
+    item_code: "145"
+    name: "Production of other basic organic chemicals"
+    status: "True"
+    industry_sectors_id: "50"
+- model: 'master_data.IndustrySubSectors'
+  pk: "146"
+  fields:
+    item_code: "146"
+    name: "Production of other basic chemicals"
+    status: "True"
+    industry_sectors_id: "50"
+- model: 'master_data.IndustrySubSectors'
+  pk: "147"
+  fields:
+    item_code: "147"
+    name: "Production of fertilizers and nitrogen compounds"
+    status: "True"
+    industry_sectors_id: "50"
+- model: 'master_data.IndustrySubSectors'
+  pk: "148"
+  fields:
+    item_code: "148"
+    name: "Production of primary plastic"
+    status: "True"
+    industry_sectors_id: "50"
+- model: 'master_data.IndustrySubSectors'
+  pk: "149"
+  fields:
+    item_code: "149"
+    name: "Production of synthetic rubber in primary form"
+    status: "True"
+    industry_sectors_id: "50"
+- model: 'master_data.IndustrySubSectors'
+  pk: "150"
+  fields:
+    item_code: "150"
+    name: "Production of pesticides and other chemical products used in agriculture"
+    status: "True"
+    industry_sectors_id: "51"
+- model: 'master_data.IndustrySubSectors'
+  pk: "151"
+  fields:
+    item_code: "151"
+    name: "Production of paints, varnishes and similar coatings, mastics"
+    status: "True"
+    industry_sectors_id: "51"
+- model: 'master_data.IndustrySubSectors'
+  pk: "152"
+  fields:
+    item_code: "152"
+    name: "Production of printing ink"
+    status: "True"
+    industry_sectors_id: "51"
+- model: 'master_data.IndustrySubSectors'
+  pk: "153"
+  fields:
+    item_code: "153"
+    name: "Cosmetics production"
+    status: "True"
+    industry_sectors_id: "51"
+- model: 'master_data.IndustrySubSectors'
+  pk: "154"
+  fields:
+    item_code: "154"
+    name: "Production of soaps, detergents, polishes and hygiene products"
+    status: "True"
+    industry_sectors_id: "51"
+- model: 'master_data.IndustrySubSectors'
+  pk: "155"
+  fields:
+    item_code: "155"
+    name: "Manufacture of other unclassified chemical products"
+    status: "True"
+    industry_sectors_id: "51"
+- model: 'master_data.IndustrySubSectors'
+  pk: "156"
+  fields:
+    item_code: "156"
+    name: "Production of artificial fibers"
+    status: "True"
+    industry_sectors_id: "52"
+- model: 'master_data.IndustrySubSectors'
+  pk: "157"
+  fields:
+    item_code: "157"
+    name: "Producing all kinds of drugs"
+    status: "True"
+    industry_sectors_id: "53"
+- model: 'master_data.IndustrySubSectors'
+  pk: "158"
+  fields:
+    item_code: "158"
+    name: "Production of pharmaceutical chemicals and medicinal materials"
+    status: "True"
+    industry_sectors_id: "53"
+- model: 'master_data.IndustrySubSectors'
+  pk: "159"
+  fields:
+    item_code: "159"
+    name: "Production of rubber tubes and tires; retreading and recycling rubber tires"
+    status: "True"
+    industry_sectors_id: "54"
+- model: 'master_data.IndustrySubSectors'
+  pk: "160"
+  fields:
+    item_code: "160"
+    name: "Manufacture of other products from rubber"
+    status: "True"
+    industry_sectors_id: "54"
+- model: 'master_data.IndustrySubSectors'
+  pk: "161"
+  fields:
+    item_code: "161"
+    name: "Production of packaging from plastic"
+    status: "True"
+    industry_sectors_id: "55"
+- model: 'master_data.IndustrySubSectors'
+  pk: "162"
+  fields:
+    item_code: "162"
+    name: "Manufacture of other products from plastic"
+    status: "True"
+    industry_sectors_id: "55"
+- model: 'master_data.IndustrySubSectors'
+  pk: "163"
+  fields:
+    item_code: "163"
+    name: "Production of flat glass and products from flat glass"
+    status: "True"
+    industry_sectors_id: "56"
+- model: 'master_data.IndustrySubSectors'
+  pk: "164"
+  fields:
+    item_code: "164"
+    name: "Production of hollow glass and products from hollow glass"
+    status: "True"
+    industry_sectors_id: "56"
+- model: 'master_data.IndustrySubSectors'
+  pk: "165"
+  fields:
+    item_code: "165"
+    name: "Production of fiberglass and products from fiberglass"
+    status: "True"
+    industry_sectors_id: "56"
+- model: 'master_data.IndustrySubSectors'
+  pk: "166"
+  fields:
+    item_code: "166"
+    name: "Manufacture of other glass and products from glass"
+    status: "True"
+    industry_sectors_id: "56"
+- model: 'master_data.IndustrySubSectors'
+  pk: "167"
+  fields:
+    item_code: "167"
+    name: "Production of refractory products"
+    status: "True"
+    industry_sectors_id: "57"
+- model: 'master_data.IndustrySubSectors'
+  pk: "168"
+  fields:
+    item_code: "168"
+    name: "Production of construction materials from clay"
+    status: "True"
+    industry_sectors_id: "57"
+- model: 'master_data.IndustrySubSectors'
+  pk: "169"
+  fields:
+    item_code: "169"
+    name: "Manufacture of other ceramic products"
+    status: "True"
+    industry_sectors_id: "57"
+- model: 'master_data.IndustrySubSectors'
+  pk: "170"
+  fields:
+    item_code: "170"
+    name: "Cement Production"
+    status: "True"
+    industry_sectors_id: "57"
+- model: 'master_data.IndustrySubSectors'
+  pk: "171"
+  fields:
+    item_code: "171"
+    name: "Lime production"
+    status: "True"
+    industry_sectors_id: "57"
+- model: 'master_data.IndustrySubSectors'
+  pk: "172"
+  fields:
+    item_code: "172"
+    name: "Production of plaster"
+    status: "True"
+    industry_sectors_id: "57"
+- model: 'master_data.IndustrySubSectors'
+  pk: "173"
+  fields:
+    item_code: "173"
+    name: "Production of concrete and products from concrete, cement and plaster"
+    status: "True"
+    industry_sectors_id: "57"
+- model: 'master_data.IndustrySubSectors'
+  pk: "174"
+  fields:
+    item_code: "174"
+    name: "Cut, shape and finish stone"
+    status: "True"
+    industry_sectors_id: "57"
+- model: 'master_data.IndustrySubSectors'
+  pk: "175"
+  fields:
+    item_code: "175"
+    name: "Manufacture of products from other non-metallic minerals not elsewhere classified"
+    status: "True"
+    industry_sectors_id: "57"
+- model: 'master_data.IndustrySubSectors'
+  pk: "176"
+  fields:
+    item_code: "176"
+    name: "Producing iron, steel, and cast iron"
+    status: "True"
+    industry_sectors_id: "58"
+- model: 'master_data.IndustrySubSectors'
+  pk: "177"
+  fields:
+    item_code: "177"
+    name: "Production of precious metals"
+    status: "True"
+    industry_sectors_id: "59"
+- model: 'master_data.IndustrySubSectors'
+  pk: "178"
+  fields:
+    item_code: "178"
+    name: "Production of non-ferrous metals"
+    status: "True"
+    industry_sectors_id: "59"
+- model: 'master_data.IndustrySubSectors'
+  pk: "179"
+  fields:
+    item_code: "179"
+    name: "Cast iron and steel"
+    status: "True"
+    industry_sectors_id: "60"
+- model: 'master_data.IndustrySubSectors'
+  pk: "180"
+  fields:
+    item_code: "180"
+    name: "Non-ferrous metal casting"
+    status: "True"
+    industry_sectors_id: "60"
+- model: 'master_data.IndustrySubSectors'
+  pk: "181"
+  fields:
+    item_code: "181"
+    name: "Production of metal structures"
+    status: "True"
+    industry_sectors_id: "61"
+- model: 'master_data.IndustrySubSectors'
+  pk: "182"
+  fields:
+    item_code: "182"
+    name: "Manufacture of barrels, tanks and metal containers"
+    status: "True"
+    industry_sectors_id: "61"
+- model: 'master_data.IndustrySubSectors'
+  pk: "183"
+  fields:
+    item_code: "183"
+    name: "Boiler production (except central boilers)"
+    status: "True"
+    industry_sectors_id: "61"
+- model: 'master_data.IndustrySubSectors'
+  pk: "184"
+  fields:
+    item_code: "184"
+    name: "Production of weapons and ammunition"
+    status: "True"
+    industry_sectors_id: "62"
+- model: 'master_data.IndustrySubSectors'
+  pk: "185"
+  fields:
+    item_code: "185"
+    name: "Forging, stamping, pressing and rolling of metal; metal powder refining"
+    status: "True"
+    industry_sectors_id: "63"
+- model: 'master_data.IndustrySubSectors'
+  pk: "186"
+  fields:
+    item_code: "186"
+    name: "Mechanical; Metal treatment and coating"
+    status: "True"
+    industry_sectors_id: "63"
+- model: 'master_data.IndustrySubSectors'
+  pk: "187"
+  fields:
+    item_code: "187"
+    name: "Production of cutlery, hand tools and common metal items"
+    status: "True"
+    industry_sectors_id: "63"
+- model: 'master_data.IndustrySubSectors'
+  pk: "188"
+  fields:
+    item_code: "188"
+    name: "Manufacture of metal utensils for kitchens, toilets and dining rooms"
+    status: "True"
+    industry_sectors_id: "63"
+- model: 'master_data.IndustrySubSectors'
+  pk: "189"
+  fields:
+    item_code: "189"
+    name: "Manufacture of other remaining metal products not classified elsewhere"
+    status: "True"
+    industry_sectors_id: "63"
+- model: 'master_data.IndustrySubSectors'
+  pk: "190"
+  fields:
+    item_code: "190"
+    name: "Production of electronic components"
+    status: "True"
+    industry_sectors_id: "64"
+- model: 'master_data.IndustrySubSectors'
+  pk: "191"
+  fields:
+    item_code: "191"
+    name: "Manufacture of computers and computer peripheral devices"
+    status: "True"
+    industry_sectors_id: "65"
+- model: 'master_data.IndustrySubSectors'
+  pk: "192"
+  fields:
+    item_code: "192"
+    name: "Production of communication equipment"
+    status: "True"
+    industry_sectors_id: "66"
+- model: 'master_data.IndustrySubSectors'
+  pk: "193"
+  fields:
+    item_code: "193"
+    name: "Producing consumer electronic products"
+    status: "True"
+    industry_sectors_id: "67"
+- model: 'master_data.IndustrySubSectors'
+  pk: "194"
+  fields:
+    item_code: "194"
+    name: "Manufacture of measuring, testing, navigation and control equipment"
+    status: "True"
+    industry_sectors_id: "68"
+- model: 'master_data.IndustrySubSectors'
+  pk: "195"
+  fields:
+    item_code: "195"
+    name: "Watch production"
+    status: "True"
+    industry_sectors_id: "68"
+- model: 'master_data.IndustrySubSectors'
+  pk: "196"
+  fields:
+    item_code: "196"
+    name: "Manufacture of radiation equipment, electronic equipment in medicine, electrotherapy"
+    status: "True"
+    industry_sectors_id: "69"
+- model: 'master_data.IndustrySubSectors'
+  pk: "197"
+  fields:
+    item_code: "197"
+    name: "Manufacture of optical equipment and instruments"
+    status: "True"
+    industry_sectors_id: "70"
+- model: 'master_data.IndustrySubSectors'
+  pk: "198"
+  fields:
+    item_code: "198"
+    name: "Production of tapes, magnetic and optical discs"
+    status: "True"
+    industry_sectors_id: "71"
+- model: 'master_data.IndustrySubSectors'
+  pk: "199"
+  fields:
+    item_code: "199"
+    name: "Manufacture of motors and generators"
+    status: "True"
+    industry_sectors_id: "72"
+- model: 'master_data.IndustrySubSectors'
+  pk: "200"
+  fields:
+    item_code: "200"
+    name: "Manufacture of electrical transformers, electrical distribution and control equipment"
+    status: "True"
+    industry_sectors_id: "72"
+- model: 'master_data.IndustrySubSectors'
+  pk: "201"
+  fields:
+    item_code: "201"
+    name: "Production of batteries and accumulators"
+    status: "True"
+    industry_sectors_id: "73"
+- model: 'master_data.IndustrySubSectors'
+  pk: "202"
+  fields:
+    item_code: "202"
+    name: "Production of cables and optical cables"
+    status: "True"
+    industry_sectors_id: "74"
+- model: 'master_data.IndustrySubSectors'
+  pk: "203"
+  fields:
+    item_code: "203"
+    name: "Manufacture of wires, cables and other electronics"
+    status: "True"
+    industry_sectors_id: "74"
+- model: 'master_data.IndustrySubSectors'
+  pk: "204"
+  fields:
+    item_code: "204"
+    name: "Producing all kinds of electric wire equipment"
+    status: "True"
+    industry_sectors_id: "74"
+- model: 'master_data.IndustrySubSectors'
+  pk: "205"
+  fields:
+    item_code: "205"
+    name: "Production of electrical lighting equipment"
+    status: "True"
+    industry_sectors_id: "75"
+- model: 'master_data.IndustrySubSectors'
+  pk: "206"
+  fields:
+    item_code: "206"
+    name: "Production of household electrical appliances"
+    status: "True"
+    industry_sectors_id: "76"
+- model: 'master_data.IndustrySubSectors'
+  pk: "207"
+  fields:
+    item_code: "207"
+    name: "Manufacture of other electrical equipment"
+    status: "True"
+    industry_sectors_id: "77"
+- model: 'master_data.IndustrySubSectors'
+  pk: "208"
+  fields:
+    item_code: "208"
+    name: "Manufacture of engines and turbines (except aircraft, car, motorcycle and motorbike engines)"
+    status: "True"
+    industry_sectors_id: "78"
+- model: 'master_data.IndustrySubSectors'
+  pk: "209"
+  fields:
+    item_code: "209"
+    name: "Manufacture of equipment using condensed energy"
+    status: "True"
+    industry_sectors_id: "78"
+- model: 'master_data.IndustrySubSectors'
+  pk: "210"
+  fields:
+    item_code: "210"
+    name: "Manufacture of pumps, compressors, faucets and other valves"
+    status: "True"
+    industry_sectors_id: "78"
+- model: 'master_data.IndustrySubSectors'
+  pk: "211"
+  fields:
+    item_code: "211"
+    name: "Manufacture of balls, gears, gearboxes, control and motion transmission parts"
+    status: "True"
+    industry_sectors_id: "78"
+- model: 'master_data.IndustrySubSectors'
+  pk: "212"
+  fields:
+    item_code: "212"
+    name: "Manufacture of ovens, furnaces and kilns"
+    status: "True"
+    industry_sectors_id: "78"
+- model: 'master_data.IndustrySubSectors'
+  pk: "213"
+  fields:
+    item_code: "213"
+    name: "Manufacture of lifting, lowering and loading equipment"
+    status: "True"
+    industry_sectors_id: "78"
+- model: 'master_data.IndustrySubSectors'
+  pk: "214"
+  fields:
+    item_code: "214"
+    name: "Manufacture of machinery and office equipment (except computers and computer peripherals)"
+    status: "True"
+    industry_sectors_id: "78"
+- model: 'master_data.IndustrySubSectors'
+  pk: "215"
+  fields:
+    item_code: "215"
+    name: "Manufacture of hand tools powered by motors or compressed air"
+    status: "True"
+    industry_sectors_id: "78"
+- model: 'master_data.IndustrySubSectors'
+  pk: "216"
+  fields:
+    item_code: "216"
+    name: "Manufacture of other common machines"
+    status: "True"
+    industry_sectors_id: "78"
+- model: 'master_data.IndustrySubSectors'
+  pk: "217"
+  fields:
+    item_code: "217"
+    name: "Manufacture of agricultural and forestry machines"
+    status: "True"
+    industry_sectors_id: "79"
+- model: 'master_data.IndustrySubSectors'
+  pk: "218"
+  fields:
+    item_code: "218"
+    name: "Manufacture of machine tools and metal forming machines"
+    status: "True"
+    industry_sectors_id: "79"
+- model: 'master_data.IndustrySubSectors'
+  pk: "219"
+  fields:
+    item_code: "219"
+    name: "Manufacture of metallurgical machines"
+    status: "True"
+    industry_sectors_id: "79"
+- model: 'master_data.IndustrySubSectors'
+  pk: "220"
+  fields:
+    item_code: "220"
+    name: "Manufacture of mining and construction machinery"
+    status: "True"
+    industry_sectors_id: "79"
+- model: 'master_data.IndustrySubSectors'
+  pk: "221"
+  fields:
+    item_code: "221"
+    name: "Manufacture of food, beverage and tobacco processing machines"
+    status: "True"
+    industry_sectors_id: "79"
+- model: 'master_data.IndustrySubSectors'
+  pk: "222"
+  fields:
+    item_code: "222"
+    name: "Manufacturing machines for the textile, garment and leather industries"
+    status: "True"
+    industry_sectors_id: "79"
+- model: 'master_data.IndustrySubSectors'
+  pk: "223"
+  fields:
+    item_code: "223"
+    name: "Manufacture of construction materials production machines"
+    status: "True"
+    industry_sectors_id: "79"
+- model: 'master_data.IndustrySubSectors'
+  pk: "224"
+  fields:
+    item_code: "224"
+    name: "Manufacture of other specialized machines not classified elsewhere"
+    status: "True"
+    industry_sectors_id: "79"
+- model: 'master_data.IndustrySubSectors'
+  pk: "225"
+  fields:
+    item_code: "225"
+    name: "Manufacture of cars and other motor vehicles"
+    status: "True"
+    industry_sectors_id: "80"
+- model: 'master_data.IndustrySubSectors'
+  pk: "226"
+  fields:
+    item_code: "226"
+    name: "Manufacture of car bodies and other motor vehicles, trailers and semi-trailers"
+    status: "True"
+    industry_sectors_id: "81"
+- model: 'master_data.IndustrySubSectors'
+  pk: "227"
+  fields:
+    item_code: "227"
+    name: "Manufacture of spare parts and accessories for cars and other motor vehicles"
+    status: "True"
+    industry_sectors_id: "82"
+- model: 'master_data.IndustrySubSectors'
+  pk: "228"
+  fields:
+    item_code: "228"
+    name: "Shipbuilding and floating structures"
+    status: "True"
+    industry_sectors_id: "83"
+- model: 'master_data.IndustrySubSectors'
+  pk: "229"
+  fields:
+    item_code: "229"
+    name: "Building boats, sports and recreational boats"
+    status: "True"
+    industry_sectors_id: "83"
+- model: 'master_data.IndustrySubSectors'
+  pk: "230"
+  fields:
+    item_code: "230"
+    name: "Manufacture of locomotives, trams and rolling stock"
+    status: "True"
+    industry_sectors_id: "84"
+- model: 'master_data.IndustrySubSectors'
+  pk: "231"
+  fields:
+    item_code: "231"
+    name: "Manufacture of aircraft, spacecraft and related machinery"
+    status: "True"
+    industry_sectors_id: "85"
+- model: 'master_data.IndustrySubSectors'
+  pk: "232"
+  fields:
+    item_code: "232"
+    name: "Production of combat motor vehicles used in the military"
+    status: "True"
+    industry_sectors_id: "86"
+- model: 'master_data.IndustrySubSectors'
+  pk: "233"
+  fields:
+    item_code: "233"
+    name: "Manufacture of motorbikes and motorbikes"
+    status: "True"
+    industry_sectors_id: "87"
+- model: 'master_data.IndustrySubSectors'
+  pk: "234"
+  fields:
+    item_code: "234"
+    name: "Manufacture of bicycles and vehicles for disabled people"
+    status: "True"
+    industry_sectors_id: "87"
+- model: 'master_data.IndustrySubSectors'
+  pk: "235"
+  fields:
+    item_code: "235"
+    name: "Production of vehicles and other transport equipment not classified elsewhere"
+    status: "True"
+    industry_sectors_id: "87"
+- model: 'master_data.IndustrySubSectors'
+  pk: "236"
+  fields:
+    item_code: "236"
+    name: "Production of wooden beds, cabinets, tables and chairs"
+    status: "True"
+    industry_sectors_id: "88"
+- model: 'master_data.IndustrySubSectors'
+  pk: "237"
+  fields:
+    item_code: "237"
+    name: "Production of metal beds, cabinets, tables and chairs"
+    status: "True"
+    industry_sectors_id: "88"
+- model: 'master_data.IndustrySubSectors'
+  pk: "238"
+  fields:
+    item_code: "238"
+    name: "Manufacture of beds, cabinets, tables, chairs from other materials"
+    status: "True"
+    industry_sectors_id: "88"
+- model: 'master_data.IndustrySubSectors'
+  pk: "239"
+  fields:
+    item_code: "239"
+    name: "Production of jewelry and related details"
+    status: "True"
+    industry_sectors_id: "89"
+- model: 'master_data.IndustrySubSectors'
+  pk: "240"
+  fields:
+    item_code: "240"
+    name: "Production of imitation jewelry and related details"
+    status: "True"
+    industry_sectors_id: "89"
+- model: 'master_data.IndustrySubSectors'
+  pk: "241"
+  fields:
+    item_code: "241"
+    name: "Production of musical instruments"
+    status: "True"
+    industry_sectors_id: "90"
+- model: 'master_data.IndustrySubSectors'
+  pk: "242"
+  fields:
+    item_code: "242"
+    name: "Production of fitness and sports equipment"
+    status: "True"
+    industry_sectors_id: "91"
+- model: 'master_data.IndustrySubSectors'
+  pk: "243"
+  fields:
+    item_code: "243"
+    name: "Production of toys and games"
+    status: "True"
+    industry_sectors_id: "92"
+- model: 'master_data.IndustrySubSectors'
+  pk: "244"
+  fields:
+    item_code: "244"
+    name: "Manufacture of medical and dental equipment and instruments"
+    status: "True"
+    industry_sectors_id: "93"
+- model: 'master_data.IndustrySubSectors'
+  pk: "245"
+  fields:
+    item_code: "245"
+    name: "Production of orthopedic and rehabilitation instruments"
+    status: "True"
+    industry_sectors_id: "93"
+- model: 'master_data.IndustrySubSectors'
+  pk: "246"
+  fields:
+    item_code: "246"
+    name: "Other production not yet classified"
+    status: "True"
+    industry_sectors_id: "94"
+- model: 'master_data.IndustrySubSectors'
+  pk: "247"
+  fields:
+    item_code: "247"
+    name: "Repair of prefabricated metal products"
+    status: "True"
+    industry_sectors_id: "95"
+- model: 'master_data.IndustrySubSectors'
+  pk: "248"
+  fields:
+    item_code: "248"
+    name: "Repair of machinery and equipment"
+    status: "True"
+    industry_sectors_id: "95"
+- model: 'master_data.IndustrySubSectors'
+  pk: "249"
+  fields:
+    item_code: "249"
+    name: "Repair of electronic and optical equipment"
+    status: "True"
+    industry_sectors_id: "95"
+- model: 'master_data.IndustrySubSectors'
+  pk: "250"
+  fields:
+    item_code: "250"
+    name: "Repair of electrical equipment"
+    status: "True"
+    industry_sectors_id: "95"
+- model: 'master_data.IndustrySubSectors'
+  pk: "251"
+  fields:
+    item_code: "251"
+    name: "Repair and maintenance of means of transport (except cars, motorbikes, motorbikes and other motor vehicles)"
+    status: "True"
+    industry_sectors_id: "95"
+- model: 'master_data.IndustrySubSectors'
+  pk: "252"
+  fields:
+    item_code: "252"
+    name: "Repair other equipment"
+    status: "True"
+    industry_sectors_id: "95"
+- model: 'master_data.IndustrySubSectors'
+  pk: "253"
+  fields:
+    item_code: "253"
+    name: "Installation of machinery and industrial equipment"
+    status: "True"
+    industry_sectors_id: "96"
+- model: 'master_data.IndustrySubSectors'
+  pk: "254"
+  fields:
+    item_code: "254"
+    name: "Hydroelectric"
+    status: "True"
+    industry_sectors_id: "97"
+- model: 'master_data.IndustrySubSectors'
+  pk: "255"
+  fields:
+    item_code: "255"
+    name: "Coal thermal power"
+    status: "True"
+    industry_sectors_id: "97"
+- model: 'master_data.IndustrySubSectors'
+  pk: "256"
+  fields:
+    item_code: "256"
+    name: "Gas thermal power"
+    status: "True"
+    industry_sectors_id: "97"
+- model: 'master_data.IndustrySubSectors'
+  pk: "257"
+  fields:
+    item_code: "257"
+    name: "Nuclear power"
+    status: "True"
+    industry_sectors_id: "97"
+- model: 'master_data.IndustrySubSectors'
+  pk: "258"
+  fields:
+    item_code: "258"
+    name: "Wind electricity"
+    status: "True"
+    industry_sectors_id: "97"
+- model: 'master_data.IndustrySubSectors'
+  pk: "259"
+  fields:
+    item_code: "259"
+    name: "Solar power"
+    status: "True"
+    industry_sectors_id: "97"
+- model: 'master_data.IndustrySubSectors'
+  pk: "260"
+  fields:
+    item_code: "260"
+    name: "Other electricity"
+    status: "True"
+    industry_sectors_id: "97"
+- model: 'master_data.IndustrySubSectors'
+  pk: "261"
+  fields:
+    item_code: "261"
+    name: "Transmission and distribution of electricity"
+    status: "True"
+    industry_sectors_id: "97"
+- model: 'master_data.IndustrySubSectors'
+  pk: "262"
+  fields:
+    item_code: "262"
+    name: "Electricity transmission"
+    status: "True"
+    industry_sectors_id: "97"
+- model: 'master_data.IndustrySubSectors'
+  pk: "263"
+  fields:
+    item_code: "263"
+    name: "Electricity distribution"
+    status: "True"
+    industry_sectors_id: "97"
+- model: 'master_data.IndustrySubSectors'
+  pk: "264"
+  fields:
+    item_code: "264"
+    name: "Gas production"
+    status: "True"
+    industry_sectors_id: "98"
+- model: 'master_data.IndustrySubSectors'
+  pk: "265"
+  fields:
+    item_code: "265"
+    name: "Distributing gas fuel by pipeline"
+    status: "True"
+    industry_sectors_id: "98"
+- model: 'master_data.IndustrySubSectors'
+  pk: "266"
+  fields:
+    item_code: "266"
+    name: "Producing and distributing steam, hot water and air conditioning"
+    status: "True"
+    industry_sectors_id: "99"
+- model: 'master_data.IndustrySubSectors'
+  pk: "267"
+  fields:
+    item_code: "267"
+    name: "Ice production"
+    status: "True"
+    industry_sectors_id: "99"
+- model: 'master_data.IndustrySubSectors'
+  pk: "268"
+  fields:
+    item_code: "268"
+    name: "Water exploitation, treatment and supply"
+    status: "True"
+    industry_sectors_id: "100"
+- model: 'master_data.IndustrySubSectors'
+  pk: "269"
+  fields:
+    item_code: "269"
+    name: "Drainage"
+    status: "True"
+    industry_sectors_id: "101"
+- model: 'master_data.IndustrySubSectors'
+  pk: "270"
+  fields:
+    item_code: "270"
+    name: "Wastewater treatment"
+    status: "True"
+    industry_sectors_id: "101"
+- model: 'master_data.IndustrySubSectors'
+  pk: "271"
+  fields:
+    item_code: "271"
+    name: "Collection of non-hazardous waste"
+    status: "True"
+    industry_sectors_id: "102"
+- model: 'master_data.IndustrySubSectors'
+  pk: "272"
+  fields:
+    item_code: "272"
+    name: "Collect medical waste"
+    status: "True"
+    industry_sectors_id: "102"
+- model: 'master_data.IndustrySubSectors'
+  pk: "273"
+  fields:
+    item_code: "273"
+    name: "Collect other hazardous waste"
+    status: "True"
+    industry_sectors_id: "102"
+- model: 'master_data.IndustrySubSectors'
+  pk: "274"
+  fields:
+    item_code: "274"
+    name: "Treat and destroy non-hazardous waste"
+    status: "True"
+    industry_sectors_id: "103"
+- model: 'master_data.IndustrySubSectors'
+  pk: "275"
+  fields:
+    item_code: "275"
+    name: "Treatment and destruction of medical waste"
+    status: "True"
+    industry_sectors_id: "103"
+- model: 'master_data.IndustrySubSectors'
+  pk: "276"
+  fields:
+    item_code: "276"
+    name: "Treat and destroy other hazardous waste"
+    status: "True"
+    industry_sectors_id: "103"
+- model: 'master_data.IndustrySubSectors'
+  pk: "277"
+  fields:
+    item_code: "277"
+    name: "Recycling scrap metal"
+    status: "True"
+    industry_sectors_id: "104"
+- model: 'master_data.IndustrySubSectors'
+  pk: "278"
+  fields:
+    item_code: "278"
+    name: "Recycling of non-metallic scrap"
+    status: "True"
+    industry_sectors_id: "104"
+- model: 'master_data.IndustrySubSectors'
+  pk: "279"
+  fields:
+    item_code: "279"
+    name: "Pollution treatment and other waste management activities"
+    status: "True"
+    industry_sectors_id: "105"
+- model: 'master_data.IndustrySubSectors'
+  pk: "280"
+  fields:
+    item_code: "280"
+    name: "Build houses to live in"
+    status: "True"
+    industry_sectors_id: "106"
+- model: 'master_data.IndustrySubSectors'
+  pk: "281"
+  fields:
+    item_code: "281"
+    name: "Building a house not for living"
+    status: "True"
+    industry_sectors_id: "106"
+- model: 'master_data.IndustrySubSectors'
+  pk: "282"
+  fields:
+    item_code: "282"
+    name: "Construction of railway works"
+    status: "True"
+    industry_sectors_id: "107"
+- model: 'master_data.IndustrySubSectors'
+  pk: "283"
+  fields:
+    item_code: "283"
+    name: "Construction of road works"
+    status: "True"
+    industry_sectors_id: "107"
+- model: 'master_data.IndustrySubSectors'
+  pk: "284"
+  fields:
+    item_code: "284"
+    name: "Construction of electrical projects"
+    status: "True"
+    industry_sectors_id: "108"
+- model: 'master_data.IndustrySubSectors'
+  pk: "285"
+  fields:
+    item_code: "285"
+    name: "Construction of water supply and drainage works"
+    status: "True"
+    industry_sectors_id: "108"
+- model: 'master_data.IndustrySubSectors'
+  pk: "286"
+  fields:
+    item_code: "286"
+    name: "Construction of telecommunications and communication projects"
+    status: "True"
+    industry_sectors_id: "108"
+- model: 'master_data.IndustrySubSectors'
+  pk: "287"
+  fields:
+    item_code: "287"
+    name: "Construction of other public works"
+    status: "True"
+    industry_sectors_id: "108"
+- model: 'master_data.IndustrySubSectors'
+  pk: "288"
+  fields:
+    item_code: "288"
+    name: "Construction of water works"
+    status: "True"
+    industry_sectors_id: "109"
+- model: 'master_data.IndustrySubSectors'
+  pk: "289"
+  fields:
+    item_code: "289"
+    name: "Construction of mining projects"
+    status: "True"
+    industry_sectors_id: "109"
+- model: 'master_data.IndustrySubSectors'
+  pk: "290"
+  fields:
+    item_code: "290"
+    name: "Construction of processing and manufacturing works"
+    status: "True"
+    industry_sectors_id: "109"
+- model: 'master_data.IndustrySubSectors'
+  pk: "291"
+  fields:
+    item_code: "291"
+    name: "Construction of other civil engineering works"
+    status: "True"
+    industry_sectors_id: "109"
+- model: 'master_data.IndustrySubSectors'
+  pk: "292"
+  fields:
+    item_code: "292"
+    name: "Collapse"
+    status: "True"
+    industry_sectors_id: "110"
+- model: 'master_data.IndustrySubSectors'
+  pk: "293"
+  fields:
+    item_code: "293"
+    name: "Prepare surface"
+    status: "True"
+    industry_sectors_id: "110"
+- model: 'master_data.IndustrySubSectors'
+  pk: "294"
+  fields:
+    item_code: "294"
+    name: "Installation of electrical systems"
+    status: "True"
+    industry_sectors_id: "111"
+- model: 'master_data.IndustrySubSectors'
+  pk: "295"
+  fields:
+    item_code: "295"
+    name: "Installation of the system water supply and drainage"
+    status: "True"
+    industry_sectors_id: "111"
+- model: 'master_data.IndustrySubSectors'
+  pk: "296"
+  fields:
+    item_code: "296"
+    name: "Install heating and air conditioning systems"
+    status: "True"
+    industry_sectors_id: "111"
+- model: 'master_data.IndustrySubSectors'
+  pk: "297"
+  fields:
+    item_code: "297"
+    name: "Installation of other construction systems"
+    status: "True"
+    industry_sectors_id: "111"
+- model: 'master_data.IndustrySubSectors'
+  pk: "298"
+  fields:
+    item_code: "298"
+    name: "finish construction"
+    status: "True"
+    industry_sectors_id: "112"
+- model: 'master_data.IndustrySubSectors'
+  pk: "299"
+  fields:
+    item_code: "299"
+    name: "Other specialized construction activities"
+    status: "True"
+    industry_sectors_id: "113"
+- model: 'master_data.IndustrySubSectors'
+  pk: "300"
+  fields:
+    item_code: "300"
+    name: "Wholesale of passenger cars (9 seats or less)"
+    status: "True"
+    industry_sectors_id: "114"
+- model: 'master_data.IndustrySubSectors'
+  pk: "301"
+  fields:
+    item_code: "301"
+    name: "Wholesale of other motor vehicles"
+    status: "True"
+    industry_sectors_id: "114"
+- model: 'master_data.IndustrySubSectors'
+  pk: "302"
+  fields:
+    item_code: "302"
+    name: "Retail sale of passenger cars (9 seats or less)"
+    status: "True"
+    industry_sectors_id: "114"
+- model: 'master_data.IndustrySubSectors'
+  pk: "303"
+  fields:
+    item_code: "303"
+    name: "Car dealership (9 seats or less)"
+    status: "True"
+    industry_sectors_id: "114"
+- model: 'master_data.IndustrySubSectors'
+  pk: "304"
+  fields:
+    item_code: "304"
+    name: "Other motor vehicle dealers"
+    status: "True"
+    industry_sectors_id: "114"
+- model: 'master_data.IndustrySubSectors'
+  pk: "305"
+  fields:
+    item_code: "305"
+    name: "Maintenance and repair of cars and other motor vehicles"
+    status: "True"
+    industry_sectors_id: "115"
+- model: 'master_data.IndustrySubSectors'
+  pk: "306"
+  fields:
+    item_code: "306"
+    name: "Wholesale of spare parts and auxiliary parts of automobiles and other motor vehicles"
+    status: "True"
+    industry_sectors_id: "116"
+- model: 'master_data.IndustrySubSectors'
+  pk: "307"
+  fields:
+    item_code: "307"
+    name: "Retailing spare parts and accessories for passenger cars (9 seats or less)"
+    status: "True"
+    industry_sectors_id: "116"
+- model: 'master_data.IndustrySubSectors'
+  pk: "308"
+  fields:
+    item_code: "308"
+    name: "Dealer of spare parts and auxiliary parts of automobiles and other motor vehicles"
+    status: "True"
+    industry_sectors_id: "116"
+- model: 'master_data.IndustrySubSectors'
+  pk: "309"
+  fields:
+    item_code: "309"
+    name: "Wholesale of motorbikes and motorbikes"
+    status: "True"
+    industry_sectors_id: "117"
+- model: 'master_data.IndustrySubSectors'
+  pk: "310"
+  fields:
+    item_code: "310"
+    name: "Retail sale of motorbikes and motorbikes"
+    status: "True"
+    industry_sectors_id: "117"
+- model: 'master_data.IndustrySubSectors'
+  pk: "311"
+  fields:
+    item_code: "311"
+    name: "Motorcycle and motorbike dealership"
+    status: "True"
+    industry_sectors_id: "117"
+- model: 'master_data.IndustrySubSectors'
+  pk: "312"
+  fields:
+    item_code: "312"
+    name: "Maintenance and repair of motorbikes and motorbikes"
+    status: "True"
+    industry_sectors_id: "117"
+- model: 'master_data.IndustrySubSectors'
+  pk: "313"
+  fields:
+    item_code: "313"
+    name: "Wholesale of spare parts and accessories for motorbikes and motorbikes"
+    status: "True"
+    industry_sectors_id: "117"
+- model: 'master_data.IndustrySubSectors'
+  pk: "314"
+  fields:
+    item_code: "314"
+    name: "Retail of spare parts and accessories for motorbikes and motorbikes"
+    status: "True"
+    industry_sectors_id: "117"
+- model: 'master_data.IndustrySubSectors'
+  pk: "315"
+  fields:
+    item_code: "315"
+    name: "Dealer of spare parts and accessories for motorbikes and motorbikes"
+    status: "True"
+    industry_sectors_id: "117"
+- model: 'master_data.IndustrySubSectors'
+  pk: "316"
+  fields:
+    item_code: "316"
+    name: "Agent selling goods"
+    status: "True"
+    industry_sectors_id: "118"
+- model: 'master_data.IndustrySubSectors'
+  pk: "317"
+  fields:
+    item_code: "317"
+    name: "Brokerage for buying and selling goods"
+    status: "True"
+    industry_sectors_id: "118"
+- model: 'master_data.IndustrySubSectors'
+  pk: "318"
+  fields:
+    item_code: "318"
+    name: "Auction of goods"
+    status: "True"
+    industry_sectors_id: "118"
+- model: 'master_data.IndustrySubSectors'
+  pk: "319"
+  fields:
+    item_code: "319"
+    name: "Wholesale of rice, corn and other grains"
+    status: "True"
+    industry_sectors_id: "119"
+- model: 'master_data.IndustrySubSectors'
+  pk: "320"
+  fields:
+    item_code: "320"
+    name: "Wholesale flowers and plants"
+    status: "True"
+    industry_sectors_id: "119"
+- model: 'master_data.IndustrySubSectors'
+  pk: "321"
+  fields:
+    item_code: "321"
+    name: "Wholesale of live animals"
+    status: "True"
+    industry_sectors_id: "119"
+- model: 'master_data.IndustrySubSectors'
+  pk: "322"
+  fields:
+    item_code: "322"
+    name: "Wholesale of food and feed ingredients for livestock, poultry and aquaculture"
+    status: "True"
+    industry_sectors_id: "119"
+- model: 'master_data.IndustrySubSectors'
+  pk: "323"
+  fields:
+    item_code: "323"
+    name: "Wholesale of other agricultural and forestry raw materials (except wood, bamboo)"
+    status: "True"
+    industry_sectors_id: "119"
+- model: 'master_data.IndustrySubSectors'
+  pk: "324"
+  fields:
+    item_code: "324"
+    name: "Wholesale of rice, wheat, other grains, flour"
+    status: "True"
+    industry_sectors_id: "120"
+- model: 'master_data.IndustrySubSectors'
+  pk: "325"
+  fields:
+    item_code: "325"
+    name: "Wholesale of meat and meat products"
+    status: "True"
+    industry_sectors_id: "120"
+- model: 'master_data.IndustrySubSectors'
+  pk: "326"
+  fields:
+    item_code: "326"
+    name: "Wholesale of seafood"
+    status: "True"
+    industry_sectors_id: "120"
+- model: 'master_data.IndustrySubSectors'
+  pk: "327"
+  fields:
+    item_code: "327"
+    name: "Wholesale of vegetables and fruits"
+    status: "True"
+    industry_sectors_id: "120"
+- model: 'master_data.IndustrySubSectors'
+  pk: "328"
+  fields:
+    item_code: "328"
+    name: "Wholesale coffee"
+    status: "True"
+    industry_sectors_id: "120"
+- model: 'master_data.IndustrySubSectors'
+  pk: "329"
+  fields:
+    item_code: "329"
+    name: "Wholesale tea"
+    status: "True"
+    industry_sectors_id: "120"
+- model: 'master_data.IndustrySubSectors'
+  pk: "330"
+  fields:
+    item_code: "330"
+    name: "Wholesale of sugar, milk and dairy products, confectionery and products processed from cereals, flour and starch"
+    status: "True"
+    industry_sectors_id: "120"
+- model: 'master_data.IndustrySubSectors'
+  pk: "331"
+  fields:
+    item_code: "331"
+    name: "Wholesale of other foods"
+    status: "True"
+    industry_sectors_id: "120"
+- model: 'master_data.IndustrySubSectors'
+  pk: "332"
+  fields:
+    item_code: "332"
+    name: "Wholesale of alcoholic beverages"
+    status: "True"
+    industry_sectors_id: "120"
+- model: 'master_data.IndustrySubSectors'
+  pk: "333"
+  fields:
+    item_code: "333"
+    name: "Wholesale of non-alcoholic beverages"
+    status: "True"
+    industry_sectors_id: "120"
+- model: 'master_data.IndustrySubSectors'
+  pk: "334"
+  fields:
+    item_code: "334"
+    name: "Wholesale of tobacco and pipe tobacco products"
+    status: "True"
+    industry_sectors_id: "120"
+- model: 'master_data.IndustrySubSectors'
+  pk: "335"
+  fields:
+    item_code: "335"
+    name: "Wholesale fabric"
+    status: "True"
+    industry_sectors_id: "121"
+- model: 'master_data.IndustrySubSectors'
+  pk: "336"
+  fields:
+    item_code: "336"
+    name: "Wholesale of carpets, mattresses, blankets, drapes, curtains, bed sheets, pillows and other textiles"
+    status: "True"
+    industry_sectors_id: "121"
+- model: 'master_data.IndustrySubSectors'
+  pk: "337"
+  fields:
+    item_code: "337"
+    name: "Wholesale apparel"
+    status: "True"
+    industry_sectors_id: "121"
+- model: 'master_data.IndustrySubSectors'
+  pk: "338"
+  fields:
+    item_code: "338"
+    name: "Wholesale footwear"
+    status: "True"
+    industry_sectors_id: "121"
+- model: 'master_data.IndustrySubSectors'
+  pk: "339"
+  fields:
+    item_code: "339"
+    name: "Wholesale of suitcases, briefcases, bags, wallets, other leather and leatherette goods"
+    status: "True"
+    industry_sectors_id: "121"
+- model: 'master_data.IndustrySubSectors'
+  pk: "340"
+  fields:
+    item_code: "340"
+    name: "Wholesale of pharmaceuticals and medical instruments"
+    status: "True"
+    industry_sectors_id: "121"
+- model: 'master_data.IndustrySubSectors'
+  pk: "341"
+  fields:
+    item_code: "341"
+    name: "Wholesale of perfumes, cosmetics and hygiene products"
+    status: "True"
+    industry_sectors_id: "121"
+- model: 'master_data.IndustrySubSectors'
+  pk: "342"
+  fields:
+    item_code: "342"
+    name: "Wholesale in pottery, porcelain, glass"
+    status: "True"
+    industry_sectors_id: "121"
+- model: 'master_data.IndustrySubSectors'
+  pk: "343"
+  fields:
+    item_code: "343"
+    name: "Wholesale of household electrical appliances, lamps and electric light sets"
+    status: "True"
+    industry_sectors_id: "121"
+- model: 'master_data.IndustrySubSectors'
+  pk: "344"
+  fields:
+    item_code: "344"
+    name: "Wholesale of beds, wardrobes, tables, chairs and similar furniture"
+    status: "True"
+    industry_sectors_id: "121"
+- model: 'master_data.IndustrySubSectors'
+  pk: "345"
+  fields:
+    item_code: "345"
+    name: "Wholesale of books, newspapers, magazines, stationery"
+    status: "True"
+    industry_sectors_id: "121"
+- model: 'master_data.IndustrySubSectors'
+  pk: "346"
+  fields:
+    item_code: "346"
+    name: "Wholesale of fitness and sports equipment"
+    status: "True"
+    industry_sectors_id: "121"
+- model: 'master_data.IndustrySubSectors'
+  pk: "347"
+  fields:
+    item_code: "347"
+    name: "Wholesale of other household appliances not classified elsewhere"
+    status: "True"
+    industry_sectors_id: "121"
+- model: 'master_data.IndustrySubSectors'
+  pk: "348"
+  fields:
+    item_code: "348"
+    name: "Wholesale of computers, peripherals and software"
+    status: "True"
+    industry_sectors_id: "122"
+- model: 'master_data.IndustrySubSectors'
+  pk: "349"
+  fields:
+    item_code: "349"
+    name: "Wholesale of electronic and telecommunications equipment and components"
+    status: "True"
+    industry_sectors_id: "122"
+- model: 'master_data.IndustrySubSectors'
+  pk: "350"
+  fields:
+    item_code: "350"
+    name: "Wholesale of agricultural machinery, equipment and spare parts"
+    status: "True"
+    industry_sectors_id: "122"
+- model: 'master_data.IndustrySubSectors'
+  pk: "351"
+  fields:
+    item_code: "351"
+    name: "Wholesale of mining and construction machinery, equipment and spare parts"
+    status: "True"
+    industry_sectors_id: "122"
+- model: 'master_data.IndustrySubSectors'
+  pk: "352"
+  fields:
+    item_code: "352"
+    name: "Wholesale of machinery, electrical equipment, electrical materials (generators, electric motors, wires and other equipment used in electrical circuits)"
+    status: "True"
+    industry_sectors_id: "122"
+- model: 'master_data.IndustrySubSectors'
+  pk: "353"
+  fields:
+    item_code: "353"
+    name: "Wholesale of machinery, equipment and spare parts for textile, garment and footwear machines"
+    status: "True"
+    industry_sectors_id: "122"
+- model: 'master_data.IndustrySubSectors'
+  pk: "354"
+  fields:
+    item_code: "354"
+    name: "Wholesale of office machinery, equipment and spare parts (except computers and peripheral equipment)"
+    status: "True"
+    industry_sectors_id: "122"
+- model: 'master_data.IndustrySubSectors'
+  pk: "355"
+  fields:
+    item_code: "355"
+    name: "Wholesale of machinery, medical equipment"
+    status: "True"
+    industry_sectors_id: "122"
+- model: 'master_data.IndustrySubSectors'
+  pk: "356"
+  fields:
+    item_code: "356"
+    name: "Wholesale of other uncategorized machinery, equipment and spare parts"
+    status: "True"
+    industry_sectors_id: "122"
+- model: 'master_data.IndustrySubSectors'
+  pk: "357"
+  fields:
+    item_code: "357"
+    name: "Wholesale of coal and other solid fuels"
+    status: "True"
+    industry_sectors_id: "123"
+- model: 'master_data.IndustrySubSectors'
+  pk: "358"
+  fields:
+    item_code: "358"
+    name: "Wholesale crude oil"
+    status: "True"
+    industry_sectors_id: "123"
+- model: 'master_data.IndustrySubSectors'
+  pk: "359"
+  fields:
+    item_code: "359"
+    name: "Wholesale of petroleum and related products"
+    status: "True"
+    industry_sectors_id: "123"
+- model: 'master_data.IndustrySubSectors'
+  pk: "360"
+  fields:
+    item_code: "360"
+    name: "Wholesale of gas and related products"
+    status: "True"
+    industry_sectors_id: "123"
+- model: 'master_data.IndustrySubSectors'
+  pk: "361"
+  fields:
+    item_code: "361"
+    name: "Wholesale of metal ores"
+    status: "True"
+    industry_sectors_id: "123"
+- model: 'master_data.IndustrySubSectors'
+  pk: "362"
+  fields:
+    item_code: "362"
+    name: "Wholesale of iron and steel"
+    status: "True"
+    industry_sectors_id: "123"
+- model: 'master_data.IndustrySubSectors'
+  pk: "363"
+  fields:
+    item_code: "363"
+    name: "Wholesale of other metals"
+    status: "True"
+    industry_sectors_id: "123"
+- model: 'master_data.IndustrySubSectors'
+  pk: "364"
+  fields:
+    item_code: "364"
+    name: "Wholesale of gold, silver and other precious metals"
+    status: "True"
+    industry_sectors_id: "123"
+- model: 'master_data.IndustrySubSectors'
+  pk: "365"
+  fields:
+    item_code: "365"
+    name: "Wholesale of bamboo, wood and processed wood"
+    status: "True"
+    industry_sectors_id: "123"
+- model: 'master_data.IndustrySubSectors'
+  pk: "366"
+  fields:
+    item_code: "366"
+    name: "Wholesale of cement"
+    status: "True"
+    industry_sectors_id: "123"
+- model: 'master_data.IndustrySubSectors'
+  pk: "367"
+  fields:
+    item_code: "367"
+    name: "Wholesale brick, tile, stone, sand and gravel"
+    status: "True"
+    industry_sectors_id: "123"
+- model: 'master_data.IndustrySubSectors'
+  pk: "368"
+  fields:
+    item_code: "368"
+    name: "Wholesale of construction glass"
+    status: "True"
+    industry_sectors_id: "123"
+- model: 'master_data.IndustrySubSectors'
+  pk: "369"
+  fields:
+    item_code: "369"
+    name: "Wholesale of paint and varnish"
+    status: "True"
+    industry_sectors_id: "123"
+- model: 'master_data.IndustrySubSectors'
+  pk: "370"
+  fields:
+    item_code: "370"
+    name: "Wholesale of tiles and sanitary equipment"
+    status: "True"
+    industry_sectors_id: "123"
+- model: 'master_data.IndustrySubSectors'
+  pk: "371"
+  fields:
+    item_code: "371"
+    name: "Wholesale of hardware"
+    status: "True"
+    industry_sectors_id: "123"
+- model: 'master_data.IndustrySubSectors'
+  pk: "372"
+  fields:
+    item_code: "372"
+    name: "Wholesale of materials and other installation equipment in construction"
+    status: "True"
+    industry_sectors_id: "123"
+- model: 'master_data.IndustrySubSectors'
+  pk: "373"
+  fields:
+    item_code: "373"
+    name: "Wholesale of fertilizers, pesticides and other chemicals used in agriculture"
+    status: "True"
+    industry_sectors_id: "123"
+- model: 'master_data.IndustrySubSectors'
+  pk: "374"
+  fields:
+    item_code: "374"
+    name: "Wholesale of other chemicals (except those used in agriculture)"
+    status: "True"
+    industry_sectors_id: "123"
+- model: 'master_data.IndustrySubSectors'
+  pk: "375"
+  fields:
+    item_code: "375"
+    name: "Wholesale of plastic in primary form"
+    status: "True"
+    industry_sectors_id: "123"
+- model: 'master_data.IndustrySubSectors'
+  pk: "376"
+  fields:
+    item_code: "376"
+    name: "Wholesale rubber"
+    status: "True"
+    industry_sectors_id: "123"
+- model: 'master_data.IndustrySubSectors'
+  pk: "377"
+  fields:
+    item_code: "377"
+    name: "Wholesale of silk, fiber, textile yarn"
+    status: "True"
+    industry_sectors_id: "123"
+- model: 'master_data.IndustrySubSectors'
+  pk: "378"
+  fields:
+    item_code: "378"
+    name: "Wholesale of garment and footwear accessories"
+    status: "True"
+    industry_sectors_id: "123"
+- model: 'master_data.IndustrySubSectors'
+  pk: "379"
+  fields:
+    item_code: "379"
+    name: "Wholesale of scrap, metal and non-metal scrap"
+    status: "True"
+    industry_sectors_id: "123"
+- model: 'master_data.IndustrySubSectors'
+  pk: "380"
+  fields:
+    item_code: "380"
+    name: "Other remaining specialized wholesale has not been classified yet"
+    status: "True"
+    industry_sectors_id: "123"
+- model: 'master_data.IndustrySubSectors'
+  pk: "381"
+  fields:
+    item_code: "381"
+    name: "Wholesale synthetic"
+    status: "True"
+    industry_sectors_id: "124"
+- model: 'master_data.IndustrySubSectors'
+  pk: "382"
+  fields:
+    item_code: "382"
+    name: "Supermarket retail"
+    status: "True"
+    industry_sectors_id: "125"
+- model: 'master_data.IndustrySubSectors'
+  pk: "383"
+  fields:
+    item_code: "383"
+    name: "Retail in convenience stores (Minimarket)"
+    status: "True"
+    industry_sectors_id: "125"
+- model: 'master_data.IndustrySubSectors'
+  pk: "384"
+  fields:
+    item_code: "384"
+    name: "Retail in other general stores"
+    status: "True"
+    industry_sectors_id: "125"
+- model: 'master_data.IndustrySubSectors'
+  pk: "385"
+  fields:
+    item_code: "385"
+    name: "Supermarket retail"
+    status: "True"
+    industry_sectors_id: "125"
+- model: 'master_data.IndustrySubSectors'
+  pk: "386"
+  fields:
+    item_code: "386"
+    name: "Retail in convenience stores (Minimarket)"
+    status: "True"
+    industry_sectors_id: "125"
+- model: 'master_data.IndustrySubSectors'
+  pk: "387"
+  fields:
+    item_code: "387"
+    name: "Retail in other general stores"
+    status: "True"
+    industry_sectors_id: "125"
+- model: 'master_data.IndustrySubSectors'
+  pk: "388"
+  fields:
+    item_code: "388"
+    name: "Retail food in specialized stores"
+    status: "True"
+    industry_sectors_id: "126"
+- model: 'master_data.IndustrySubSectors'
+  pk: "389"
+  fields:
+    item_code: "389"
+    name: "Retailing meat and meat products in specialized stores"
+    status: "True"
+    industry_sectors_id: "126"
+- model: 'master_data.IndustrySubSectors'
+  pk: "390"
+  fields:
+    item_code: "390"
+    name: "Retailing seafood in specialized stores"
+    status: "True"
+    industry_sectors_id: "126"
+- model: 'master_data.IndustrySubSectors'
+  pk: "391"
+  fields:
+    item_code: "391"
+    name: "Retailing vegetables and fruits in specialized stores"
+    status: "True"
+    industry_sectors_id: "126"
+- model: 'master_data.IndustrySubSectors'
+  pk: "392"
+  fields:
+    item_code: "392"
+    name: "Retail sale of sugar, milk and milk products, cakes, jams, candy and processed products from cups, flour and starch in specialized stores"
+    status: "True"
+    industry_sectors_id: "126"
+- model: 'master_data.IndustrySubSectors'
+  pk: "393"
+  fields:
+    item_code: "393"
+    name: "Retail sale of other foods in specialized stores"
+    status: "True"
+    industry_sectors_id: "126"
+- model: 'master_data.IndustrySubSectors'
+  pk: "394"
+  fields:
+    item_code: "394"
+    name: "Retailing of beverages in specialized stores"
+    status: "True"
+    industry_sectors_id: "126"
+- model: 'master_data.IndustrySubSectors'
+  pk: "395"
+  fields:
+    item_code: "395"
+    name: "Retailing tobacco and pipe tobacco products in specialized stores"
+    status: "True"
+    industry_sectors_id: "126"
+- model: 'master_data.IndustrySubSectors'
+  pk: "396"
+  fields:
+    item_code: "396"
+    name: "Retailing motor fuel in specialized stores"
+    status: "True"
+    industry_sectors_id: "127"
+- model: 'master_data.IndustrySubSectors'
+  pk: "397"
+  fields:
+    item_code: "397"
+    name: "Retailing of computers, peripheral devices, and software in specialized stores"
+    status: "True"
+    industry_sectors_id: "128"
+- model: 'master_data.IndustrySubSectors'
+  pk: "398"
+  fields:
+    item_code: "398"
+    name: "Retailing telecommunications equipment in specialized stores"
+    status: "True"
+    industry_sectors_id: "128"
+- model: 'master_data.IndustrySubSectors'
+  pk: "399"
+  fields:
+    item_code: "399"
+    name: "Retailing audio-visual equipment in specialized stores"
+    status: "True"
+    industry_sectors_id: "128"
+- model: 'master_data.IndustrySubSectors'
+  pk: "400"
+  fields:
+    item_code: "400"
+    name: "Retail fabric in specialized stores"
+    status: "True"
+    industry_sectors_id: "129"
+- model: 'master_data.IndustrySubSectors'
+  pk: "401"
+  fields:
+    item_code: "401"
+    name: "Retail sale of wool, yarn, sewing thread and other textiles in specialized stores"
+    status: "True"
+    industry_sectors_id: "129"
+- model: 'master_data.IndustrySubSectors'
+  pk: "402"
+  fields:
+    item_code: "402"
+    name: "Retailing hardware in specialized stores"
+    status: "True"
+    industry_sectors_id: "129"
+- model: 'master_data.IndustrySubSectors'
+  pk: "403"
+  fields:
+    item_code: "403"
+    name: "Retailing of paints, colors, and varnishes in specialized stores"
+    status: "True"
+    industry_sectors_id: "129"
+- model: 'master_data.IndustrySubSectors'
+  pk: "404"
+  fields:
+    item_code: "404"
+    name: "Retail construction glass in specialized stores"
+    status: "True"
+    industry_sectors_id: "129"
+- model: 'master_data.IndustrySubSectors'
+  pk: "405"
+  fields:
+    item_code: "405"
+    name: "Retailing cement, bricks, tiles, stone, sand and gravel, iron and steel and other construction materials in specialized stores"
+    status: "True"
+    industry_sectors_id: "129"
+- model: 'master_data.IndustrySubSectors'
+  pk: "406"
+  fields:
+    item_code: "406"
+    name: "Retail of tiles and sanitary equipment in specialized stores"
+    status: "True"
+    industry_sectors_id: "129"
+- model: 'master_data.IndustrySubSectors'
+  pk: "407"
+  fields:
+    item_code: "407"
+    name: "Retailing other installation equipment in construction in specialized stores"
+    status: "True"
+    industry_sectors_id: "129"
+- model: 'master_data.IndustrySubSectors'
+  pk: "408"
+  fields:
+    item_code: "408"
+    name: "Retail of carpets, mattresses, blankets, drapes, curtains, wall and floor coverings in specialized stores"
+    status: "True"
+    industry_sectors_id: "129"
+- model: 'master_data.IndustrySubSectors'
+  pk: "409"
+  fields:
+    item_code: "409"
+    name: "Retailing of household electrical appliances, lamps and electric light sets in specialized stores"
+    status: "True"
+    industry_sectors_id: "129"
+- model: 'master_data.IndustrySubSectors'
+  pk: "410"
+  fields:
+    item_code: "410"
+    name: "Retailing of beds, wardrobes, tables, chairs and similar furniture in specialized stores"
+    status: "True"
+    industry_sectors_id: "129"
+- model: 'master_data.IndustrySubSectors'
+  pk: "411"
+  fields:
+    item_code: "411"
+    name: "Retailing household appliances made of ceramic, porcelain, and glass in specialized stores"
+    status: "True"
+    industry_sectors_id: "129"
+- model: 'master_data.IndustrySubSectors'
+  pk: "412"
+  fields:
+    item_code: "412"
+    name: "Retailing of musical instruments in specialized stores"
+    status: "True"
+    industry_sectors_id: "129"
+- model: 'master_data.IndustrySubSectors'
+  pk: "413"
+  fields:
+    item_code: "413"
+    name: "Retail sale of other remaining household appliances not elsewhere classified in specialized stores"
+    status: "True"
+    industry_sectors_id: "129"
+- model: 'master_data.IndustrySubSectors'
+  pk: "414"
+  fields:
+    item_code: "414"
+    name: "Retailing books, newspapers, magazines and stationery in specialized stores"
+    status: "True"
+    industry_sectors_id: "130"
+- model: 'master_data.IndustrySubSectors'
+  pk: "415"
+  fields:
+    item_code: "415"
+    name: "Retailing audio and video tapes (including blank tapes and discs) in specialized stores"
+    status: "True"
+    industry_sectors_id: "130"
+- model: 'master_data.IndustrySubSectors'
+  pk: "416"
+  fields:
+    item_code: "416"
+    name: "Retailing of fitness and sports equipment and tools in specialized stores"
+    status: "True"
+    industry_sectors_id: "130"
+- model: 'master_data.IndustrySubSectors'
+  pk: "417"
+  fields:
+    item_code: "417"
+    name: "Retailing of games and toys in specialized stores"
+    status: "True"
+    industry_sectors_id: "130"
+- model: 'master_data.IndustrySubSectors'
+  pk: "418"
+  fields:
+    item_code: "418"
+    name: "Retailing of garments in specialized stores"
+    status: "True"
+    industry_sectors_id: "131"
+- model: 'master_data.IndustrySubSectors'
+  pk: "419"
+  fields:
+    item_code: "419"
+    name: "Retailing footwear in specialized stores"
+    status: "True"
+    industry_sectors_id: "131"
+- model: 'master_data.IndustrySubSectors'
+  pk: "420"
+  fields:
+    item_code: "420"
+    name: "Retailing briefcases, bags, wallets, other leather and leatherette goods in specialized stores"
+    status: "True"
+    industry_sectors_id: "131"
+- model: 'master_data.IndustrySubSectors'
+  pk: "421"
+  fields:
+    item_code: "421"
+    name: "Retailing pharmaceuticals and medical instruments in specialized stores"
+    status: "True"
+    industry_sectors_id: "131"
+- model: 'master_data.IndustrySubSectors'
+  pk: "422"
+  fields:
+    item_code: "422"
+    name: "Retailing perfumes, cosmetics and toiletries in specialized stores"
+    status: "True"
+    industry_sectors_id: "131"
+- model: 'master_data.IndustrySubSectors'
+  pk: "423"
+  fields:
+    item_code: "423"
+    name: "Selling oriental medicine and traditional medicine in specialized stores"
+    status: "True"
+    industry_sectors_id: "131"
+- model: 'master_data.IndustrySubSectors'
+  pk: "424"
+  fields:
+    item_code: "424"
+    name: "Retail of flowers, ornamental plants, ornamental fish, ornamental birds, and ornamental pets in specialized stores"
+    status: "True"
+    industry_sectors_id: "131"
+- model: 'master_data.IndustrySubSectors'
+  pk: "425"
+  fields:
+    item_code: "425"
+    name: "Retailing gold, silver, precious and semi-precious stones, and jewelry in specialized stores"
+    status: "True"
+    industry_sectors_id: "131"
+- model: 'master_data.IndustrySubSectors'
+  pk: "426"
+  fields:
+    item_code: "426"
+    name: "Retailing souvenirs, wicker products, and handicrafts in specialized stores"
+    status: "True"
+    industry_sectors_id: "131"
+- model: 'master_data.IndustrySubSectors'
+  pk: "427"
+  fields:
+    item_code: "427"
+    name: "Retailing of paintings, photographs and other works of art (except antiques) in specialized stores"
+    status: "True"
+    industry_sectors_id: "131"
+- model: 'master_data.IndustrySubSectors'
+  pk: "428"
+  fields:
+    item_code: "428"
+    name: "Retailing kerosene, gas, and fuel coal for household use in specialized stores"
+    status: "True"
+    industry_sectors_id: "131"
+- model: 'master_data.IndustrySubSectors'
+  pk: "429"
+  fields:
+    item_code: "429"
+    name: "Retailing of watches and eyeglasses in specialized stores"
+    status: "True"
+    industry_sectors_id: "131"
+- model: 'master_data.IndustrySubSectors'
+  pk: "430"
+  fields:
+    item_code: "430"
+    name: "Retail of cameras, film and photographic materials in specialized stores"
+    status: "True"
+    industry_sectors_id: "131"
+- model: 'master_data.IndustrySubSectors'
+  pk: "431"
+  fields:
+    item_code: "431"
+    name: "Retailing bicycles and spare parts in specialized stores"
+    status: "True"
+    industry_sectors_id: "131"
+- model: 'master_data.IndustrySubSectors'
+  pk: "432"
+  fields:
+    item_code: "432"
+    name: "Retail sale of other new goods not elsewhere classified in specialized stores"
+    status: "True"
+    industry_sectors_id: "131"
+- model: 'master_data.IndustrySubSectors'
+  pk: "433"
+  fields:
+    item_code: "433"
+    name: "Retail sale of used garments in specialized stores"
+    status: "True"
+    industry_sectors_id: "131"
+- model: 'master_data.IndustrySubSectors'
+  pk: "434"
+  fields:
+    item_code: "434"
+    name: "Retail sale of other used goods in specialized stores"
+    status: "True"
+    industry_sectors_id: "131"
+- model: 'master_data.IndustrySubSectors'
+  pk: "435"
+  fields:
+    item_code: "435"
+    name: "Mobile food retail or at the market"
+    status: "True"
+    industry_sectors_id: "132"
+- model: 'master_data.IndustrySubSectors'
+  pk: "436"
+  fields:
+    item_code: "436"
+    name: "Retailing dry food, industrial food, sugar, milk, confectionery on the go or at the market"
+    status: "True"
+    industry_sectors_id: "132"
+- model: 'master_data.IndustrySubSectors'
+  pk: "437"
+  fields:
+    item_code: "437"
+    name: "Retailing of beverages via mobile devices or at markets"
+    status: "True"
+    industry_sectors_id: "132"
+- model: 'master_data.IndustrySubSectors'
+  pk: "438"
+  fields:
+    item_code: "438"
+    name: "Retailing of tobacco and waterpipe tobacco products via mobile devices or at markets"
+    status: "True"
+    industry_sectors_id: "132"
+- model: 'master_data.IndustrySubSectors'
+  pk: "439"
+  fields:
+    item_code: "439"
+    name: "Retail sale of fresh and frozen livestock and poultry meat on mobile or at the market"
+    status: "True"
+    industry_sectors_id: "132"
+- model: 'master_data.IndustrySubSectors'
+  pk: "440"
+  fields:
+    item_code: "440"
+    name: "Retailing fresh and frozen seafood on the go or at the market"
+    status: "True"
+    industry_sectors_id: "132"
+- model: 'master_data.IndustrySubSectors'
+  pk: "441"
+  fields:
+    item_code: "441"
+    name: "Retailing vegetables and fruits on mobile or at the market"
+    status: "True"
+    industry_sectors_id: "132"
+- model: 'master_data.IndustrySubSectors'
+  pk: "442"
+  fields:
+    item_code: "442"
+    name: "Retail sale of cooked foods on mobile or at the market"
+    status: "True"
+    industry_sectors_id: "132"
+- model: 'master_data.IndustrySubSectors'
+  pk: "443"
+  fields:
+    item_code: "443"
+    name: "Retail sale of other uncategorized foods"
+    status: "True"
+    industry_sectors_id: "132"
+- model: 'master_data.IndustrySubSectors'
+  pk: "444"
+  fields:
+    item_code: "444"
+    name: "Retailing of textiles via mobile devices or at markets"
+    status: "True"
+    industry_sectors_id: "132"
+- model: 'master_data.IndustrySubSectors'
+  pk: "445"
+  fields:
+    item_code: "445"
+    name: "Mobile retail of garments or at markets"
+    status: "True"
+    industry_sectors_id: "132"
+- model: 'master_data.IndustrySubSectors'
+  pk: "446"
+  fields:
+    item_code: "446"
+    name: "Retailing footwear via mobile devices or at markets"
+    status: "True"
+    industry_sectors_id: "132"
+- model: 'master_data.IndustrySubSectors'
+  pk: "447"
+  fields:
+    item_code: "447"
+    name: "Retailing mobile information and communication technology equipment or at the market"
+    status: "True"
+    industry_sectors_id: "132"
+- model: 'master_data.IndustrySubSectors'
+  pk: "448"
+  fields:
+    item_code: "448"
+    name: "Retailing of hardware, paint, glass and other installation equipment in mobile construction or at the market"
+    status: "True"
+    industry_sectors_id: "132"
+- model: 'master_data.IndustrySubSectors'
+  pk: "449"
+  fields:
+    item_code: "449"
+    name: "Retail of carpets, mattresses, blankets, drapes, curtains, wall and floor coverings on mobile or at the market"
+    status: "True"
+    industry_sectors_id: "132"
+- model: 'master_data.IndustrySubSectors'
+  pk: "450"
+  fields:
+    item_code: "450"
+    name: "Retail sale of household electrical appliances, beds, cabinets, tables, chairs and similar furniture, lamps and electric light sets, other household appliances not elsewhere classified, mobile or at the market"
+    status: "True"
+    industry_sectors_id: "132"
+- model: 'master_data.IndustrySubSectors'
+  pk: "451"
+  fields:
+    item_code: "451"
+    name: "Retailing cultural and entertainment goods via mobile devices or at markets"
+    status: "True"
+    industry_sectors_id: "132"
+- model: 'master_data.IndustrySubSectors'
+  pk: "452"
+  fields:
+    item_code: "452"
+    name: "Retailing cosmetics and hygiene products on mobile or at the market"
+    status: "True"
+    industry_sectors_id: "132"
+- model: 'master_data.IndustrySubSectors'
+  pk: "453"
+  fields:
+    item_code: "453"
+    name: "Retailing of ceramic and glass products on mobile or at the market"
+    status: "True"
+    industry_sectors_id: "132"
+- model: 'master_data.IndustrySubSectors'
+  pk: "454"
+  fields:
+    item_code: "454"
+    name: "Retailing fresh flowers and ornamental plants on mobile or at the market"
+    status: "True"
+    industry_sectors_id: "132"
+- model: 'master_data.IndustrySubSectors'
+  pk: "455"
+  fields:
+    item_code: "455"
+    name: "Retailing gold, silver, precious and semi-precious stones, and jewelry mobile or at the market"
+    status: "True"
+    industry_sectors_id: "132"
+- model: 'master_data.IndustrySubSectors'
+  pk: "456"
+  fields:
+    item_code: "456"
+    name: "Retailing of souvenirs, wicker products, and handicrafts on mobile or at the market"
+    status: "True"
+    industry_sectors_id: "132"
+- model: 'master_data.IndustrySubSectors'
+  pk: "457"
+  fields:
+    item_code: "457"
+    name: "Retailing of watches and eyeglasses on mobile or at the market"
+    status: "True"
+    industry_sectors_id: "132"
+- model: 'master_data.IndustrySubSectors'
+  pk: "458"
+  fields:
+    item_code: "458"
+    name: "Retailing bicycles and spare parts mobile or at the market"
+    status: "True"
+    industry_sectors_id: "132"
+- model: 'master_data.IndustrySubSectors'
+  pk: "459"
+  fields:
+    item_code: "459"
+    name: "Retailing used goods on mobile or at the market"
+    status: "True"
+    industry_sectors_id: "132"
+- model: 'master_data.IndustrySubSectors'
+  pk: "460"
+  fields:
+    item_code: "460"
+    name: "Retail sale of other goods not elsewhere classified, mobile or at markets"
+    status: "True"
+    industry_sectors_id: "132"
+- model: 'master_data.IndustrySubSectors'
+  pk: "461"
+  fields:
+    item_code: "461"
+    name: "Retail by order via post or internet"
+    status: "True"
+    industry_sectors_id: "133"
+- model: 'master_data.IndustrySubSectors'
+  pk: "462"
+  fields:
+    item_code: "462"
+    name: "Other forms of retail not yet classified"
+    status: "True"
+    industry_sectors_id: "133"
+- model: 'master_data.IndustrySubSectors'
+  pk: "463"
+  fields:
+    item_code: "463"
+    name: "Railway passenger transport"
+    status: "True"
+    industry_sectors_id: "134"
+- model: 'master_data.IndustrySubSectors'
+  pk: "464"
+  fields:
+    item_code: "464"
+    name: "Railway freight transport"
+    status: "True"
+    industry_sectors_id: "134"
+- model: 'master_data.IndustrySubSectors'
+  pk: "465"
+  fields:
+    item_code: "465"
+    name: "Transport passengers by bus within the city"
+    status: "True"
+    industry_sectors_id: "135"
+- model: 'master_data.IndustrySubSectors'
+  pk: "466"
+  fields:
+    item_code: "466"
+    name: "Transport passengers by bus between inner city and suburbs, inter-province"
+    status: "True"
+    industry_sectors_id: "135"
+- model: 'master_data.IndustrySubSectors'
+  pk: "467"
+  fields:
+    item_code: "467"
+    name: "Transporting passengers by other types of buses"
+    status: "True"
+    industry_sectors_id: "135"
+- model: 'master_data.IndustrySubSectors'
+  pk: "468"
+  fields:
+    item_code: "468"
+    name: "Transport passengers by underground railway system or elevated railway system"
+    status: "True"
+    industry_sectors_id: "136"
+- model: 'master_data.IndustrySubSectors'
+  pk: "469"
+  fields:
+    item_code: "469"
+    name: "Transport passengers by taxi"
+    status: "True"
+    industry_sectors_id: "136"
+- model: 'master_data.IndustrySubSectors'
+  pk: "470"
+  fields:
+    item_code: "470"
+    name: "Transporting passengers by motorbikes, mopeds and other motor vehicles"
+    status: "True"
+    industry_sectors_id: "136"
+- model: 'master_data.IndustrySubSectors'
+  pk: "471"
+  fields:
+    item_code: "471"
+    name: "Other types of road passenger transport in inner cities and suburbs (except buses)"
+    status: "True"
+    industry_sectors_id: "136"
+- model: 'master_data.IndustrySubSectors'
+  pk: "472"
+  fields:
+    item_code: "472"
+    name: "Transporting passengers by intra-provincial and inter-provincial buses"
+    status: "True"
+    industry_sectors_id: "136"
+- model: 'master_data.IndustrySubSectors'
+  pk: "473"
+  fields:
+    item_code: "473"
+    name: "Other road passenger transport not classified elsewhere"
+    status: "True"
+    industry_sectors_id: "136"
+- model: 'master_data.IndustrySubSectors'
+  pk: "474"
+  fields:
+    item_code: "474"
+    name: "Cargo transportation by specialized automobiles"
+    status: "True"
+    industry_sectors_id: "136"
+- model: 'master_data.IndustrySubSectors'
+  pk: "475"
+  fields:
+    item_code: "475"
+    name: "Transporting goods by other types of cars (except specialized cars)"
+    status: "True"
+    industry_sectors_id: "136"
+- model: 'master_data.IndustrySubSectors'
+  pk: "476"
+  fields:
+    item_code: "476"
+    name: "Transporting goods by other types of motor vehicles"
+    status: "True"
+    industry_sectors_id: "136"
+- model: 'master_data.IndustrySubSectors'
+  pk: "477"
+  fields:
+    item_code: "477"
+    name: "Transporting goods by rudimentary vehicles"
+    status: "True"
+    industry_sectors_id: "136"
+- model: 'master_data.IndustrySubSectors'
+  pk: "478"
+  fields:
+    item_code: "478"
+    name: "Transporting goods by other road vehicles"
+    status: "True"
+    industry_sectors_id: "136"
+- model: 'master_data.IndustrySubSectors'
+  pk: "479"
+  fields:
+    item_code: "479"
+    name: "Pipeline transportation"
+    status: "True"
+    industry_sectors_id: "137"
+- model: 'master_data.IndustrySubSectors'
+  pk: "480"
+  fields:
+    item_code: "480"
+    name: "Coastal and ocean passenger transport"
+    status: "True"
+    industry_sectors_id: "138"
+- model: 'master_data.IndustrySubSectors'
+  pk: "481"
+  fields:
+    item_code: "481"
+    name: "Coastal passenger transport"
+    status: "True"
+    industry_sectors_id: "138"
+- model: 'master_data.IndustrySubSectors'
+  pk: "482"
+  fields:
+    item_code: "482"
+    name: "Ocean passenger transport"
+    status: "True"
+    industry_sectors_id: "138"
+- model: 'master_data.IndustrySubSectors'
+  pk: "483"
+  fields:
+    item_code: "483"
+    name: "Coastal freight transport"
+    status: "True"
+    industry_sectors_id: "138"
+- model: 'master_data.IndustrySubSectors'
+  pk: "484"
+  fields:
+    item_code: "484"
+    name: "Ocean freight transport"
+    status: "True"
+    industry_sectors_id: "138"
+- model: 'master_data.IndustrySubSectors'
+  pk: "485"
+  fields:
+    item_code: "485"
+    name: "Transporting passengers on inland waterways by motor vehicles"
+    status: "True"
+    industry_sectors_id: "139"
+- model: 'master_data.IndustrySubSectors'
+  pk: "486"
+  fields:
+    item_code: "486"
+    name: "Transporting passengers on inland waterways by rudimentary means"
+    status: "True"
+    industry_sectors_id: "139"
+- model: 'master_data.IndustrySubSectors'
+  pk: "487"
+  fields:
+    item_code: "487"
+    name: "Transporting goods by inland waterway by motor vehicle"
+    status: "True"
+    industry_sectors_id: "139"
+- model: 'master_data.IndustrySubSectors'
+  pk: "488"
+  fields:
+    item_code: "488"
+    name: "Transporting goods by inland waterway by rudimentary means"
+    status: "True"
+    industry_sectors_id: "139"
+- model: 'master_data.IndustrySubSectors'
+  pk: "489"
+  fields:
+    item_code: "489"
+    name: "Transporting passengers by air according to fixed routes and schedules"
+    status: "True"
+    industry_sectors_id: "140"
+- model: 'master_data.IndustrySubSectors'
+  pk: "490"
+  fields:
+    item_code: "490"
+    name: "Other types of air passenger transport"
+    status: "True"
+    industry_sectors_id: "140"
+- model: 'master_data.IndustrySubSectors'
+  pk: "491"
+  fields:
+    item_code: "491"
+    name: "Transporting air cargo according to fixed routes and schedules"
+    status: "True"
+    industry_sectors_id: "141"
+- model: 'master_data.IndustrySubSectors'
+  pk: "492"
+  fields:
+    item_code: "492"
+    name: "Other types of air cargo transportation"
+    status: "True"
+    industry_sectors_id: "141"
+- model: 'master_data.IndustrySubSectors'
+  pk: "493"
+  fields:
+    item_code: "493"
+    name: "Warehousing and storing goods in bonded warehouses"
+    status: "True"
+    industry_sectors_id: "142"
+- model: 'master_data.IndustrySubSectors'
+  pk: "494"
+  fields:
+    item_code: "494"
+    name: "Warehousing and storing goods in cold warehouses (except bonded warehouses)"
+    status: "True"
+    industry_sectors_id: "142"
+- model: 'master_data.IndustrySubSectors'
+  pk: "495"
+  fields:
+    item_code: "495"
+    name: "Warehousing and storing goods in other types of warehouses"
+    status: "True"
+    industry_sectors_id: "142"
+- model: 'master_data.IndustrySubSectors'
+  pk: "496"
+  fields:
+    item_code: "496"
+    name: "Direct support service activities for rail transport"
+    status: "True"
+    industry_sectors_id: "143"
+- model: 'master_data.IndustrySubSectors'
+  pk: "497"
+  fields:
+    item_code: "497"
+    name: "Seaport operating activities"
+    status: "True"
+    industry_sectors_id: "143"
+- model: 'master_data.IndustrySubSectors'
+  pk: "498"
+  fields:
+    item_code: "498"
+    name: "Support service activities related to coastal and ocean transportation"
+    status: "True"
+    industry_sectors_id: "143"
+- model: 'master_data.IndustrySubSectors'
+  pk: "499"
+  fields:
+    item_code: "499"
+    name: "Inland waterway port operating activities"
+    status: "True"
+    industry_sectors_id: "143"
+- model: 'master_data.IndustrySubSectors'
+  pk: "500"
+  fields:
+    item_code: "500"
+    name: "Support service activities related to inland waterway transport"
+    status: "True"
+    industry_sectors_id: "143"
+- model: 'master_data.IndustrySubSectors'
+  pk: "501"
+  fields:
+    item_code: "501"
+    name: "Flight control service"
+    status: "True"
+    industry_sectors_id: "143"
+- model: 'master_data.IndustrySubSectors'
+  pk: "502"
+  fields:
+    item_code: "502"
+    name: "Airport operations management services"
+    status: "True"
+    industry_sectors_id: "143"
+- model: 'master_data.IndustrySubSectors'
+  pk: "503"
+  fields:
+    item_code: "503"
+    name: "Support service activities related to air transport"
+    status: "True"
+    industry_sectors_id: "143"
+- model: 'master_data.IndustrySubSectors'
+  pk: "504"
+  fields:
+    item_code: "504"
+    name: "Loading and unloading railway station goods"
+    status: "True"
+    industry_sectors_id: "143"
+- model: 'master_data.IndustrySubSectors'
+  pk: "505"
+  fields:
+    item_code: "505"
+    name: "Loading and unloading road goods"
+    status: "True"
+    industry_sectors_id: "143"
+- model: 'master_data.IndustrySubSectors'
+  pk: "506"
+  fields:
+    item_code: "506"
+    name: "Loading and unloading seaport goods"
+    status: "True"
+    industry_sectors_id: "143"
+- model: 'master_data.IndustrySubSectors'
+  pk: "507"
+  fields:
+    item_code: "507"
+    name: "Loading and unloading river port goods"
+    status: "True"
+    industry_sectors_id: "143"
+- model: 'master_data.IndustrySubSectors'
+  pk: "508"
+  fields:
+    item_code: "508"
+    name: "Loading and unloading airport cargo"
+    status: "True"
+    industry_sectors_id: "143"
+- model: 'master_data.IndustrySubSectors'
+  pk: "509"
+  fields:
+    item_code: "509"
+    name: "Loading and unloading other types of goods"
+    status: "True"
+    industry_sectors_id: "143"
+- model: 'master_data.IndustrySubSectors'
+  pk: "510"
+  fields:
+    item_code: "510"
+    name: "Bus station operating activities"
+    status: "True"
+    industry_sectors_id: "143"
+- model: 'master_data.IndustrySubSectors'
+  pk: "511"
+  fields:
+    item_code: "511"
+    name: "Management and operation of highways, bridges and tunnels"
+    status: "True"
+    industry_sectors_id: "143"
+- model: 'master_data.IndustrySubSectors'
+  pk: "512"
+  fields:
+    item_code: "512"
+    name: "Parking lot management and road vehicle maintenance activities"
+    status: "True"
+    industry_sectors_id: "143"
+- model: 'master_data.IndustrySubSectors'
+  pk: "513"
+  fields:
+    item_code: "513"
+    name: "Other support service activities related to road transport"
+    status: "True"
+    industry_sectors_id: "143"
+- model: 'master_data.IndustrySubSectors'
+  pk: "514"
+  fields:
+    item_code: "514"
+    name: "Agent and freight forwarding services"
+    status: "True"
+    industry_sectors_id: "143"
+- model: 'master_data.IndustrySubSectors'
+  pk: "515"
+  fields:
+    item_code: "515"
+    name: "Logistics"
+    status: "True"
+    industry_sectors_id: "143"
+- model: 'master_data.IndustrySubSectors'
+  pk: "516"
+  fields:
+    item_code: "516"
+    name: "Other support services related to transportation not classified elsewhere"
+    status: "True"
+    industry_sectors_id: "143"
+- model: 'master_data.IndustrySubSectors'
+  pk: "517"
+  fields:
+    item_code: "517"
+    name: "Postal"
+    status: "True"
+    industry_sectors_id: "144"
+- model: 'master_data.IndustrySubSectors'
+  pk: "518"
+  fields:
+    item_code: "518"
+    name: "Delivery"
+    status: "True"
+    industry_sectors_id: "145"
+- model: 'master_data.IndustrySubSectors'
+  pk: "519"
+  fields:
+    item_code: "519"
+    name: "Hotel"
+    status: "True"
+    industry_sectors_id: "146"
+- model: 'master_data.IndustrySubSectors'
+  pk: "520"
+  fields:
+    item_code: "520"
+    name: "Villa or apartment for short-term accommodation business"
+    status: "True"
+    industry_sectors_id: "146"
+- model: 'master_data.IndustrySubSectors'
+  pk: "521"
+  fields:
+    item_code: "521"
+    name: "Guest houses and motels provide short-term accommodation services"
+    status: "True"
+    industry_sectors_id: "146"
+- model: 'master_data.IndustrySubSectors'
+  pk: "522"
+  fields:
+    item_code: "522"
+    name: "Boarding houses, motel rooms and similar short-term accommodation establishments"
+    status: "True"
+    industry_sectors_id: "146"
+- model: 'master_data.IndustrySubSectors'
+  pk: "523"
+  fields:
+    item_code: "523"
+    name: "Student dormitory"
+    status: "True"
+    industry_sectors_id: "147"
+- model: 'master_data.IndustrySubSectors'
+  pk: "524"
+  fields:
+    item_code: "524"
+    name: "Accommodation on mobile vehicles, tents, and camps used for temporary rest"
+    status: "True"
+    industry_sectors_id: "147"
+- model: 'master_data.IndustrySubSectors'
+  pk: "525"
+  fields:
+    item_code: "525"
+    name: "Other accommodation facilities not yet classified"
+    status: "True"
+    industry_sectors_id: "147"
+- model: 'master_data.IndustrySubSectors'
+  pk: "526"
+  fields:
+    item_code: "526"
+    name: "Restaurants, eateries, food stalls (except fast food chain restaurants)"
+    status: "True"
+    industry_sectors_id: "148"
+- model: 'master_data.IndustrySubSectors'
+  pk: "527"
+  fields:
+    item_code: "527"
+    name: "The restaurant belongs to a fast food chain"
+    status: "True"
+    industry_sectors_id: "148"
+- model: 'master_data.IndustrySubSectors'
+  pk: "528"
+  fields:
+    item_code: "528"
+    name: "Other mobile catering services"
+    status: "True"
+    industry_sectors_id: "148"
+- model: 'master_data.IndustrySubSectors'
+  pk: "529"
+  fields:
+    item_code: "529"
+    name: "Providing catering services under occasional contracts with customers"
+    status: "True"
+    industry_sectors_id: "149"
+- model: 'master_data.IndustrySubSectors'
+  pk: "530"
+  fields:
+    item_code: "530"
+    name: "Other food and beverage services"
+    status: "True"
+    industry_sectors_id: "149"
+- model: 'master_data.IndustrySubSectors'
+  pk: "531"
+  fields:
+    item_code: "531"
+    name: "Pub, beer, bar"
+    status: "True"
+    industry_sectors_id: "150"
+- model: 'master_data.IndustrySubSectors'
+  pk: "532"
+  fields:
+    item_code: "532"
+    name: "Coffee shop, refreshments"
+    status: "True"
+    industry_sectors_id: "150"
+- model: 'master_data.IndustrySubSectors'
+  pk: "533"
+  fields:
+    item_code: "533"
+    name: "Other beverage service"
+    status: "True"
+    industry_sectors_id: "150"
+- model: 'master_data.IndustrySubSectors'
+  pk: "534"
+  fields:
+    item_code: "534"
+    name: "Publishing books online"
+    status: "True"
+    industry_sectors_id: "151"
+- model: 'master_data.IndustrySubSectors'
+  pk: "535"
+  fields:
+    item_code: "535"
+    name: "Publishing other books"
+    status: "True"
+    industry_sectors_id: "151"
+- model: 'master_data.IndustrySubSectors'
+  pk: "536"
+  fields:
+    item_code: "536"
+    name: "Publish online directories and addresses"
+    status: "True"
+    industry_sectors_id: "151"
+- model: 'master_data.IndustrySubSectors'
+  pk: "537"
+  fields:
+    item_code: "537"
+    name: "Publish other directories and addresses"
+    status: "True"
+    industry_sectors_id: "151"
+- model: 'master_data.IndustrySubSectors'
+  pk: "538"
+  fields:
+    item_code: "538"
+    name: "Publish newspapers, magazines and online periodicals"
+    status: "True"
+    industry_sectors_id: "151"
+- model: 'master_data.IndustrySubSectors'
+  pk: "539"
+  fields:
+    item_code: "539"
+    name: "Publishing newspapers, magazines and other periodicals"
+    status: "True"
+    industry_sectors_id: "151"
+- model: 'master_data.IndustrySubSectors'
+  pk: "540"
+  fields:
+    item_code: "540"
+    name: "Other online publishing activities"
+    status: "True"
+    industry_sectors_id: "151"
+- model: 'master_data.IndustrySubSectors'
+  pk: "541"
+  fields:
+    item_code: "541"
+    name: "Other publishing activities"
+    status: "True"
+    industry_sectors_id: "151"
+- model: 'master_data.IndustrySubSectors'
+  pk: "542"
+  fields:
+    item_code: "542"
+    name: "Software publishing"
+    status: "True"
+    industry_sectors_id: "152"
+- model: 'master_data.IndustrySubSectors'
+  pk: "543"
+  fields:
+    item_code: "543"
+    name: "Movie production activities"
+    status: "True"
+    industry_sectors_id: "153"
+- model: 'master_data.IndustrySubSectors'
+  pk: "544"
+  fields:
+    item_code: "544"
+    name: "Video film production activities"
+    status: "True"
+    industry_sectors_id: "153"
+- model: 'master_data.IndustrySubSectors'
+  pk: "545"
+  fields:
+    item_code: "545"
+    name: "Television program production activities"
+    status: "True"
+    industry_sectors_id: "153"
+- model: 'master_data.IndustrySubSectors'
+  pk: "546"
+  fields:
+    item_code: "546"
+    name: "Post-production activities"
+    status: "True"
+    industry_sectors_id: "153"
+- model: 'master_data.IndustrySubSectors'
+  pk: "547"
+  fields:
+    item_code: "547"
+    name: "Movie, video and television program distribution activities"
+    status: "True"
+    industry_sectors_id: "153"
+- model: 'master_data.IndustrySubSectors'
+  pk: "548"
+  fields:
+    item_code: "548"
+    name: "Fixed movie screening activities"
+    status: "True"
+    industry_sectors_id: "153"
+- model: 'master_data.IndustrySubSectors'
+  pk: "549"
+  fields:
+    item_code: "549"
+    name: "Mobile movie screening activities"
+    status: "True"
+    industry_sectors_id: "153"
+- model: 'master_data.IndustrySubSectors'
+  pk: "550"
+  fields:
+    item_code: "550"
+    name: "Music recording and publishing activities"
+    status: "True"
+    industry_sectors_id: "154"
+- model: 'master_data.IndustrySubSectors'
+  pk: "551"
+  fields:
+    item_code: "551"
+    name: "Radio activities"
+    status: "True"
+    industry_sectors_id: "155"
+- model: 'master_data.IndustrySubSectors'
+  pk: "552"
+  fields:
+    item_code: "552"
+    name: "Television activities"
+    status: "True"
+    industry_sectors_id: "156"
+- model: 'master_data.IndustrySubSectors'
+  pk: "553"
+  fields:
+    item_code: "553"
+    name: "Cable, satellite and other subscription programs"
+    status: "True"
+    industry_sectors_id: "156"
+- model: 'master_data.IndustrySubSectors'
+  pk: "554"
+  fields:
+    item_code: "554"
+    name: "Direct provision of wired telecommunications services"
+    status: "True"
+    industry_sectors_id: "157"
+- model: 'master_data.IndustrySubSectors'
+  pk: "555"
+  fields:
+    item_code: "555"
+    name: "Wired telecommunications service provision activities use access rights to other units' telecommunications infrastructure"
+    status: "True"
+    industry_sectors_id: "157"
+- model: 'master_data.IndustrySubSectors'
+  pk: "556"
+  fields:
+    item_code: "556"
+    name: "Direct provision of wireless telecommunications services"
+    status: "True"
+    industry_sectors_id: "158"
+- model: 'master_data.IndustrySubSectors'
+  pk: "557"
+  fields:
+    item_code: "557"
+    name: "Wireless telecommunications service provision activities use access rights to other units' telecommunications infrastructure"
+    status: "True"
+    industry_sectors_id: "158"
+- model: 'master_data.IndustrySubSectors'
+  pk: "558"
+  fields:
+    item_code: "558"
+    name: "Satellite telecommunications activities"
+    status: "True"
+    industry_sectors_id: "159"
+- model: 'master_data.IndustrySubSectors'
+  pk: "559"
+  fields:
+    item_code: "559"
+    name: "Operation of internet access points"
+    status: "True"
+    industry_sectors_id: "160"
+- model: 'master_data.IndustrySubSectors'
+  pk: "560"
+  fields:
+    item_code: "560"
+    name: "Other telecommunications activities not yet classified"
+    status: "True"
+    industry_sectors_id: "160"
+- model: 'master_data.IndustrySubSectors'
+  pk: "561"
+  fields:
+    item_code: "561"
+    name: "Computer Programming"
+    status: "True"
+    industry_sectors_id: "161"
+- model: 'master_data.IndustrySubSectors'
+  pk: "562"
+  fields:
+    item_code: "562"
+    name: "Computer consulting and computer system administration"
+    status: "True"
+    industry_sectors_id: "161"
+- model: 'master_data.IndustrySubSectors'
+  pk: "563"
+  fields:
+    item_code: "563"
+    name: "Information technology service activities and other services related to computers"
+    status: "True"
+    industry_sectors_id: "161"
+- model: 'master_data.IndustrySubSectors'
+  pk: "564"
+  fields:
+    item_code: "564"
+    name: "Data processing, leasing and related activities"
+    status: "True"
+    industry_sectors_id: "162"
+- model: 'master_data.IndustrySubSectors'
+  pk: "565"
+  fields:
+    item_code: "565"
+    name: "Portal"
+    status: "True"
+    industry_sectors_id: "162"
+- model: 'master_data.IndustrySubSectors'
+  pk: "566"
+  fields:
+    item_code: "566"
+    name: "News activities"
+    status: "True"
+    industry_sectors_id: "163"
+- model: 'master_data.IndustrySubSectors'
+  pk: "567"
+  fields:
+    item_code: "567"
+    name: "Other information services not classified elsewhere"
+    status: "True"
+    industry_sectors_id: "163"
+- model: 'master_data.IndustrySubSectors'
+  pk: "568"
+  fields:
+    item_code: "568"
+    name: "Central banking operations"
+    status: "True"
+    industry_sectors_id: "164"
+- model: 'master_data.IndustrySubSectors'
+  pk: "569"
+  fields:
+    item_code: "569"
+    name: "Other monetary intermediary activities"
+    status: "True"
+    industry_sectors_id: "164"
+- model: 'master_data.IndustrySubSectors'
+  pk: "570"
+  fields:
+    item_code: "570"
+    name: "Asset holding company activities"
+    status: "True"
+    industry_sectors_id: "165"
+- model: 'master_data.IndustrySubSectors'
+  pk: "571"
+  fields:
+    item_code: "571"
+    name: "Activities of trust funds, foundations and other financial institutions"
+    status: "True"
+    industry_sectors_id: "166"
+- model: 'master_data.IndustrySubSectors'
+  pk: "572"
+  fields:
+    item_code: "572"
+    name: "Financial leasing activities"
+    status: "True"
+    industry_sectors_id: "167"
+- model: 'master_data.IndustrySubSectors'
+  pk: "573"
+  fields:
+    item_code: "573"
+    name: "Other credit granting activities"
+    status: "True"
+    industry_sectors_id: "167"
+- model: 'master_data.IndustrySubSectors'
+  pk: "574"
+  fields:
+    item_code: "574"
+    name: "Other uncategorized Financial service (except insurance and social insurance)"
+    status: "True"
+    industry_sectors_id: "167"
+- model: 'master_data.IndustrySubSectors'
+  pk: "575"
+  fields:
+    item_code: "575"
+    name: "Life insurance"
+    status: "True"
+    industry_sectors_id: "168"
+- model: 'master_data.IndustrySubSectors'
+  pk: "576"
+  fields:
+    item_code: "576"
+    name: "Non-life insurance"
+    status: "True"
+    industry_sectors_id: "168"
+- model: 'master_data.IndustrySubSectors'
+  pk: "577"
+  fields:
+    item_code: "577"
+    name: "Health insurance"
+    status: "True"
+    industry_sectors_id: "168"
+- model: 'master_data.IndustrySubSectors'
+  pk: "578"
+  fields:
+    item_code: "578"
+    name: "Health Insurance"
+    status: "True"
+    industry_sectors_id: "168"
+- model: 'master_data.IndustrySubSectors'
+  pk: "579"
+  fields:
+    item_code: "579"
+    name: "Other health insurance"
+    status: "True"
+    industry_sectors_id: "168"
+- model: 'master_data.IndustrySubSectors'
+  pk: "580"
+  fields:
+    item_code: "580"
+    name: "Reinsurance"
+    status: "True"
+    industry_sectors_id: "169"
+- model: 'master_data.IndustrySubSectors'
+  pk: "581"
+  fields:
+    item_code: "581"
+    name: "Social insurance"
+    status: "True"
+    industry_sectors_id: "170"
+- model: 'master_data.IndustrySubSectors'
+  pk: "582"
+  fields:
+    item_code: "582"
+    name: "Financial market management"
+    status: "True"
+    industry_sectors_id: "171"
+- model: 'master_data.IndustrySubSectors'
+  pk: "583"
+  fields:
+    item_code: "583"
+    name: "Brokerage of commodity and stock contracts"
+    status: "True"
+    industry_sectors_id: "171"
+- model: 'master_data.IndustrySubSectors'
+  pk: "584"
+  fields:
+    item_code: "584"
+    name: "Financial services support activities have not been classified yet"
+    status: "True"
+    industry_sectors_id: "171"
+- model: 'master_data.IndustrySubSectors'
+  pk: "585"
+  fields:
+    item_code: "585"
+    name: "Assess risks and damages"
+    status: "True"
+    industry_sectors_id: "172"
+- model: 'master_data.IndustrySubSectors'
+  pk: "586"
+  fields:
+    item_code: "586"
+    name: "Activities of insurance agents and brokers"
+    status: "True"
+    industry_sectors_id: "172"
+- model: 'master_data.IndustrySubSectors'
+  pk: "587"
+  fields:
+    item_code: "587"
+    name: "Other support activities for insurance and social insurance"
+    status: "True"
+    industry_sectors_id: "172"
+- model: 'master_data.IndustrySubSectors'
+  pk: "588"
+  fields:
+    item_code: "588"
+    name: "Fund management activities"
+    status: "True"
+    industry_sectors_id: "173"
+- model: 'master_data.IndustrySubSectors'
+  pk: "589"
+  fields:
+    item_code: "589"
+    name: "Buy and sell houses and residential land use rights"
+    status: "True"
+    industry_sectors_id: "174"
+- model: 'master_data.IndustrySubSectors'
+  pk: "590"
+  fields:
+    item_code: "590"
+    name: "Buy and sell houses and non-residential land use rights"
+    status: "True"
+    industry_sectors_id: "174"
+- model: 'master_data.IndustrySubSectors'
+  pk: "591"
+  fields:
+    item_code: "591"
+    name: "Rent, operate, and manage housing and residential land"
+    status: "True"
+    industry_sectors_id: "174"
+- model: 'master_data.IndustrySubSectors'
+  pk: "592"
+  fields:
+    item_code: "592"
+    name: "Leasing, operating, and managing non-residential houses and land"
+    status: "True"
+    industry_sectors_id: "174"
+- model: 'master_data.IndustrySubSectors'
+  pk: "593"
+  fields:
+    item_code: "593"
+    name: "Other real estate business"
+    status: "True"
+    industry_sectors_id: "174"
+- model: 'master_data.IndustrySubSectors'
+  pk: "594"
+  fields:
+    item_code: "594"
+    name: "Consulting, real estate brokerage, land use rights"
+    status: "True"
+    industry_sectors_id: "175"
+- model: 'master_data.IndustrySubSectors'
+  pk: "595"
+  fields:
+    item_code: "595"
+    name: "Auction of real estate and land use rights"
+    status: "True"
+    industry_sectors_id: "175"
+- model: 'master_data.IndustrySubSectors'
+  pk: "596"
+  fields:
+    item_code: "596"
+    name: "Representation and legal consulting activities"
+    status: "True"
+    industry_sectors_id: "176"
+- model: 'master_data.IndustrySubSectors'
+  pk: "597"
+  fields:
+    item_code: "597"
+    name: "General guidance and advice, preparation of legal documents"
+    status: "True"
+    industry_sectors_id: "176"
+- model: 'master_data.IndustrySubSectors'
+  pk: "598"
+  fields:
+    item_code: "598"
+    name: "Other legal activities"
+    status: "True"
+    industry_sectors_id: "176"
+- model: 'master_data.IndustrySubSectors'
+  pk: "599"
+  fields:
+    item_code: "599"
+    name: "Activities related to accounting, auditing and tax consulting"
+    status: "True"
+    industry_sectors_id: "177"
+- model: 'master_data.IndustrySubSectors'
+  pk: "600"
+  fields:
+    item_code: "600"
+    name: "Head office operations"
+    status: "True"
+    industry_sectors_id: "178"
+- model: 'master_data.IndustrySubSectors'
+  pk: "601"
+  fields:
+    item_code: "601"
+    name: "Management consulting activities"
+    status: "True"
+    industry_sectors_id: "179"
+- model: 'master_data.IndustrySubSectors'
+  pk: "602"
+  fields:
+    item_code: "602"
+    name: "Architectural activities"
+    status: "True"
+    industry_sectors_id: "180"
+- model: 'master_data.IndustrySubSectors'
+  pk: "603"
+  fields:
+    item_code: "603"
+    name: "Surveying and mapping activities"
+    status: "True"
+    industry_sectors_id: "180"
+- model: 'master_data.IndustrySubSectors'
+  pk: "604"
+  fields:
+    item_code: "604"
+    name: "Geological and water resource exploration activities"
+    status: "True"
+    industry_sectors_id: "180"
+- model: 'master_data.IndustrySubSectors'
+  pk: "605"
+  fields:
+    item_code: "605"
+    name: "Other related technical consulting activities"
+    status: "True"
+    industry_sectors_id: "180"
+- model: 'master_data.IndustrySubSectors'
+  pk: "606"
+  fields:
+    item_code: "606"
+    name: "Technical testing and analysis"
+    status: "True"
+    industry_sectors_id: "181"
+- model: 'master_data.IndustrySubSectors'
+  pk: "607"
+  fields:
+    item_code: "607"
+    name: "Scientific research and technological development in the field of natural sciences"
+    status: "True"
+    industry_sectors_id: "182"
+- model: 'master_data.IndustrySubSectors'
+  pk: "608"
+  fields:
+    item_code: "608"
+    name: "Scientific research and technological development in the field of science, engineering and technology"
+    status: "True"
+    industry_sectors_id: "182"
+- model: 'master_data.IndustrySubSectors'
+  pk: "609"
+  fields:
+    item_code: "609"
+    name: "Scientific research and technological development in the field of medical science and pharmacy"
+    status: "True"
+    industry_sectors_id: "182"
+- model: 'master_data.IndustrySubSectors'
+  pk: "610"
+  fields:
+    item_code: "610"
+    name: "Scientific research and technological development in the field of agricultural science"
+    status: "True"
+    industry_sectors_id: "182"
+- model: 'master_data.IndustrySubSectors'
+  pk: "611"
+  fields:
+    item_code: "611"
+    name: "Scientific research and technological development in the field of social sciences"
+    status: "True"
+    industry_sectors_id: "183"
+- model: 'master_data.IndustrySubSectors'
+  pk: "612"
+  fields:
+    item_code: "612"
+    name: "Scientific research and technological development in the field of humanities"
+    status: "True"
+    industry_sectors_id: "183"
+- model: 'master_data.IndustrySubSectors'
+  pk: "613"
+  fields:
+    item_code: "613"
+    name: "Advertisement"
+    status: "True"
+    industry_sectors_id: "184"
+- model: 'master_data.IndustrySubSectors'
+  pk: "614"
+  fields:
+    item_code: "614"
+    name: "market research and opinion polls"
+    status: "True"
+    industry_sectors_id: "185"
+- model: 'master_data.IndustrySubSectors'
+  pk: "615"
+  fields:
+    item_code: "615"
+    name: "Specialized design activities"
+    status: "True"
+    industry_sectors_id: "186"
+- model: 'master_data.IndustrySubSectors'
+  pk: "616"
+  fields:
+    item_code: "616"
+    name: "Photography activities"
+    status: "True"
+    industry_sectors_id: "187"
+- model: 'master_data.IndustrySubSectors'
+  pk: "617"
+  fields:
+    item_code: "617"
+    name: "Hydrometeorological activities"
+    status: "True"
+    industry_sectors_id: "188"
+- model: 'master_data.IndustrySubSectors'
+  pk: "618"
+  fields:
+    item_code: "618"
+    name: "Other remaining Professional, scientific and technological service have not been classified yet"
+    status: "True"
+    industry_sectors_id: "188"
+- model: 'master_data.IndustrySubSectors'
+  pk: "619"
+  fields:
+    item_code: "619"
+    name: "Veterinary activities"
+    status: "True"
+    industry_sectors_id: "189"
+- model: 'master_data.IndustrySubSectors'
+  pk: "620"
+  fields:
+    item_code: "620"
+    name: "Car for rent"
+    status: "True"
+    industry_sectors_id: "190"
+- model: 'master_data.IndustrySubSectors'
+  pk: "621"
+  fields:
+    item_code: "621"
+    name: "Rental of other motor vehicles"
+    status: "True"
+    industry_sectors_id: "190"
+- model: 'master_data.IndustrySubSectors'
+  pk: "622"
+  fields:
+    item_code: "622"
+    name: "Rental of sports and entertainment equipment"
+    status: "True"
+    industry_sectors_id: "191"
+- model: 'master_data.IndustrySubSectors'
+  pk: "623"
+  fields:
+    item_code: "623"
+    name: "Rental of video tapes and discs"
+    status: "True"
+    industry_sectors_id: "191"
+- model: 'master_data.IndustrySubSectors'
+  pk: "624"
+  fields:
+    item_code: "624"
+    name: "Rental of other personal and household items"
+    status: "True"
+    industry_sectors_id: "191"
+- model: 'master_data.IndustrySubSectors'
+  pk: "625"
+  fields:
+    item_code: "625"
+    name: "Rental of agricultural and forestry machinery and equipment without operator"
+    status: "True"
+    industry_sectors_id: "192"
+- model: 'master_data.IndustrySubSectors'
+  pk: "626"
+  fields:
+    item_code: "626"
+    name: "Rental of construction machinery and equipment without operator"
+    status: "True"
+    industry_sectors_id: "192"
+- model: 'master_data.IndustrySubSectors'
+  pk: "627"
+  fields:
+    item_code: "627"
+    name: "Rental of machinery and office equipment (including computers) without operator"
+    status: "True"
+    industry_sectors_id: "192"
+- model: 'master_data.IndustrySubSectors'
+  pk: "628"
+  fields:
+    item_code: "628"
+    name: "Renting airplanes and flying vehicles without a pilot"
+    status: "True"
+    industry_sectors_id: "192"
+- model: 'master_data.IndustrySubSectors'
+  pk: "629"
+  fields:
+    item_code: "629"
+    name: "Rental of ships, boats and floating structures without operator"
+    status: "True"
+    industry_sectors_id: "192"
+- model: 'master_data.IndustrySubSectors'
+  pk: "630"
+  fields:
+    item_code: "630"
+    name: "Rental of machinery, equipment and other tangible items, without operator not elsewhere classified"
+    status: "True"
+    industry_sectors_id: "192"
+- model: 'master_data.IndustrySubSectors'
+  pk: "631"
+  fields:
+    item_code: "631"
+    name: "Activities of labor and employment consulting, introduction and brokerage centers and agencies"
+    status: "True"
+    industry_sectors_id: "194"
+- model: 'master_data.IndustrySubSectors'
+  pk: "632"
+  fields:
+    item_code: "632"
+    name: "Temporary labor supply"
+    status: "True"
+    industry_sectors_id: "195"
+- model: 'master_data.IndustrySubSectors'
+  pk: "633"
+  fields:
+    item_code: "633"
+    name: "Supply and management of domestic labor resources"
+    status: "True"
+    industry_sectors_id: "196"
+- model: 'master_data.IndustrySubSectors'
+  pk: "634"
+  fields:
+    item_code: "634"
+    name: "Supply and manage labor resources to work abroad"
+    status: "True"
+    industry_sectors_id: "196"
+- model: 'master_data.IndustrySubSectors'
+  pk: "635"
+  fields:
+    item_code: "635"
+    name: "Travel agency"
+    status: "True"
+    industry_sectors_id: "197"
+- model: 'master_data.IndustrySubSectors'
+  pk: "636"
+  fields:
+    item_code: "636"
+    name: "Tour operator"
+    status: "True"
+    industry_sectors_id: "197"
+- model: 'master_data.IndustrySubSectors'
+  pk: "637"
+  fields:
+    item_code: "637"
+    name: "Reservation services and support services related to promotion and organization of tours"
+    status: "True"
+    industry_sectors_id: "198"
+- model: 'master_data.IndustrySubSectors'
+  pk: "638"
+  fields:
+    item_code: "638"
+    name: "Private security activities"
+    status: "True"
+    industry_sectors_id: "199"
+- model: 'master_data.IndustrySubSectors'
+  pk: "639"
+  fields:
+    item_code: "639"
+    name: "System services ensure safety"
+    status: "True"
+    industry_sectors_id: "200"
+- model: 'master_data.IndustrySubSectors'
+  pk: "640"
+  fields:
+    item_code: "640"
+    name: "Investigation service"
+    status: "True"
+    industry_sectors_id: "201"
+- model: 'master_data.IndustrySubSectors'
+  pk: "641"
+  fields:
+    item_code: "641"
+    name: "General support service"
+    status: "True"
+    industry_sectors_id: "202"
+- model: 'master_data.IndustrySubSectors'
+  pk: "642"
+  fields:
+    item_code: "642"
+    name: "General house cleaning"
+    status: "True"
+    industry_sectors_id: "203"
+- model: 'master_data.IndustrySubSectors'
+  pk: "643"
+  fields:
+    item_code: "643"
+    name: "Industrial cleaning and specialized projects"
+    status: "True"
+    industry_sectors_id: "203"
+- model: 'master_data.IndustrySubSectors'
+  pk: "644"
+  fields:
+    item_code: "644"
+    name: "Landscape care and maintenance services"
+    status: "True"
+    industry_sectors_id: "204"
+- model: 'master_data.IndustrySubSectors'
+  pk: "645"
+  fields:
+    item_code: "645"
+    name: "General office administrative services"
+    status: "True"
+    industry_sectors_id: "205"
+- model: 'master_data.IndustrySubSectors'
+  pk: "646"
+  fields:
+    item_code: "646"
+    name: "Photo, prepare documents"
+    status: "True"
+    industry_sectors_id: "205"
+- model: 'master_data.IndustrySubSectors'
+  pk: "647"
+  fields:
+    item_code: "647"
+    name: "Other special office support activities"
+    status: "True"
+    industry_sectors_id: "205"
+- model: 'master_data.IndustrySubSectors'
+  pk: "648"
+  fields:
+    item_code: "648"
+    name: "Service operations related to calls"
+    status: "True"
+    industry_sectors_id: "206"
+- model: 'master_data.IndustrySubSectors'
+  pk: "649"
+  fields:
+    item_code: "649"
+    name: "Organize trade introduction and promotion"
+    status: "True"
+    industry_sectors_id: "207"
+- model: 'master_data.IndustrySubSectors'
+  pk: "650"
+  fields:
+    item_code: "650"
+    name: "Payment and credit support service activities"
+    status: "True"
+    industry_sectors_id: "208"
+- model: 'master_data.IndustrySubSectors'
+  pk: "651"
+  fields:
+    item_code: "651"
+    name: "Packing service"
+    status: "True"
+    industry_sectors_id: "208"
+- model: 'master_data.IndustrySubSectors'
+  pk: "652"
+  fields:
+    item_code: "652"
+    name: "Other remaining business support service activities have not been classified yet"
+    status: "True"
+    industry_sectors_id: "208"
+- model: 'master_data.IndustrySubSectors'
+  pk: "653"
+  fields:
+    item_code: "653"
+    name: "Activities of the Communist Party and socio-political organizations"
+    status: "True"
+    industry_sectors_id: "209"
+- model: 'master_data.IndustrySubSectors'
+  pk: "654"
+  fields:
+    item_code: "654"
+    name: "General state management and general economic activities"
+    status: "True"
+    industry_sectors_id: "209"
+- model: 'master_data.IndustrySubSectors'
+  pk: "655"
+  fields:
+    item_code: "655"
+    name: "State management activities in the fields of health, education, culture and other social services (except mandatory social security)"
+    status: "True"
+    industry_sectors_id: "209"
+- model: 'master_data.IndustrySubSectors'
+  pk: "656"
+  fields:
+    item_code: "656"
+    name: "State management activities in specialized economic fields"
+    status: "True"
+    industry_sectors_id: "209"
+- model: 'master_data.IndustrySubSectors'
+  pk: "657"
+  fields:
+    item_code: "657"
+    name: "Foreign affairs activities"
+    status: "True"
+    industry_sectors_id: "210"
+- model: 'master_data.IndustrySubSectors'
+  pk: "658"
+  fields:
+    item_code: "658"
+    name: "Defense activities"
+    status: "True"
+    industry_sectors_id: "210"
+- model: 'master_data.IndustrySubSectors'
+  pk: "659"
+  fields:
+    item_code: "659"
+    name: "Security activities, social order and safety"
+    status: "True"
+    industry_sectors_id: "210"
+- model: 'master_data.IndustrySubSectors'
+  pk: "660"
+  fields:
+    item_code: "660"
+    name: "Compulsory social security activities"
+    status: "True"
+    industry_sectors_id: "211"
+- model: 'master_data.IndustrySubSectors'
+  pk: "661"
+  fields:
+    item_code: "661"
+    name: "Kindergarten education"
+    status: "True"
+    industry_sectors_id: "212"
+- model: 'master_data.IndustrySubSectors'
+  pk: "662"
+  fields:
+    item_code: "662"
+    name: "Kindergarten education"
+    status: "True"
+    industry_sectors_id: "212"
+- model: 'master_data.IndustrySubSectors'
+  pk: "663"
+  fields:
+    item_code: "663"
+    name: "Primary education"
+    status: "True"
+    industry_sectors_id: "213"
+- model: 'master_data.IndustrySubSectors'
+  pk: "664"
+  fields:
+    item_code: "664"
+    name: "Secondary education"
+    status: "True"
+    industry_sectors_id: "213"
+- model: 'master_data.IndustrySubSectors'
+  pk: "665"
+  fields:
+    item_code: "665"
+    name: "High school education"
+    status: "True"
+    industry_sectors_id: "213"
+- model: 'master_data.IndustrySubSectors'
+  pk: "666"
+  fields:
+    item_code: "666"
+    name: "Primary training"
+    status: "True"
+    industry_sectors_id: "214"
+- model: 'master_data.IndustrySubSectors'
+  pk: "667"
+  fields:
+    item_code: "667"
+    name: "Intermediate training"
+    status: "True"
+    industry_sectors_id: "214"
+- model: 'master_data.IndustrySubSectors'
+  pk: "668"
+  fields:
+    item_code: "668"
+    name: "College training"
+    status: "True"
+    industry_sectors_id: "214"
+- model: 'master_data.IndustrySubSectors'
+  pk: "669"
+  fields:
+    item_code: "669"
+    name: "University training"
+    status: "True"
+    industry_sectors_id: "215"
+- model: 'master_data.IndustrySubSectors'
+  pk: "670"
+  fields:
+    item_code: "670"
+    name: "Master's training"
+    status: "True"
+    industry_sectors_id: "215"
+- model: 'master_data.IndustrySubSectors'
+  pk: "671"
+  fields:
+    item_code: "671"
+    name: "Doctoral training"
+    status: "True"
+    industry_sectors_id: "215"
+- model: 'master_data.IndustrySubSectors'
+  pk: "672"
+  fields:
+    item_code: "672"
+    name: "Sports education and entertainment"
+    status: "True"
+    industry_sectors_id: "216"
+- model: 'master_data.IndustrySubSectors'
+  pk: "673"
+  fields:
+    item_code: "673"
+    name: "Cultural and artistic education"
+    status: "True"
+    industry_sectors_id: "216"
+- model: 'master_data.IndustrySubSectors'
+  pk: "674"
+  fields:
+    item_code: "674"
+    name: "Other education has not been classified yet"
+    status: "True"
+    industry_sectors_id: "216"
+- model: 'master_data.IndustrySubSectors'
+  pk: "675"
+  fields:
+    item_code: "675"
+    name: "Educational support services"
+    status: "True"
+    industry_sectors_id: "217"
+- model: 'master_data.IndustrySubSectors'
+  pk: "676"
+  fields:
+    item_code: "676"
+    name: "Activities of hospitals"
+    status: "True"
+    industry_sectors_id: "218"
+- model: 'master_data.IndustrySubSectors'
+  pk: "677"
+  fields:
+    item_code: "677"
+    name: "Activities of health stations and health stations of ministries/sectors"
+    status: "True"
+    industry_sectors_id: "218"
+- model: 'master_data.IndustrySubSectors'
+  pk: "678"
+  fields:
+    item_code: "678"
+    name: "Activities of general and specialized clinics"
+    status: "True"
+    industry_sectors_id: "219"
+- model: 'master_data.IndustrySubSectors'
+  pk: "679"
+  fields:
+    item_code: "679"
+    name: "Activities of dental clinics"
+    status: "True"
+    industry_sectors_id: "219"
+- model: 'master_data.IndustrySubSectors'
+  pk: "680"
+  fields:
+    item_code: "680"
+    name: "Preventive medical activities"
+    status: "True"
+    industry_sectors_id: "220"
+- model: 'master_data.IndustrySubSectors'
+  pk: "681"
+  fields:
+    item_code: "681"
+    name: "Operations of orthopedic and rehabilitation facility systems"
+    status: "True"
+    industry_sectors_id: "220"
+- model: 'master_data.IndustrySubSectors'
+  pk: "682"
+  fields:
+    item_code: "682"
+    name: "Other medical activities not yet classified"
+    status: "True"
+    industry_sectors_id: "220"
+- model: 'master_data.IndustrySubSectors'
+  pk: "683"
+  fields:
+    item_code: "683"
+    name: "Activities of nursing and nursing facilities for wounded and sick soldiers"
+    status: "True"
+    industry_sectors_id: "221"
+- model: 'master_data.IndustrySubSectors'
+  pk: "684"
+  fields:
+    item_code: "684"
+    name: "Activities of nurturing and nursing facilities for other subjects"
+    status: "True"
+    industry_sectors_id: "221"
+- model: 'master_data.IndustrySubSectors'
+  pk: "685"
+  fields:
+    item_code: "685"
+    name: "Health care activities for people with disabilities and mental illness"
+    status: "True"
+    industry_sectors_id: "222"
+- model: 'master_data.IndustrySubSectors'
+  pk: "686"
+  fields:
+    item_code: "686"
+    name: "Health care, detoxification and rehabilitation activities for addicts"
+    status: "True"
+    industry_sectors_id: "222"
+- model: 'master_data.IndustrySubSectors'
+  pk: "687"
+  fields:
+    item_code: "687"
+    name: "Health care activities for people with meritorious service (except wounded and sick soldiers)"
+    status: "True"
+    industry_sectors_id: "223"
+- model: 'master_data.IndustrySubSectors'
+  pk: "688"
+  fields:
+    item_code: "688"
+    name: "Health care activities for the elderly"
+    status: "True"
+    industry_sectors_id: "223"
+- model: 'master_data.IndustrySubSectors'
+  pk: "689"
+  fields:
+    item_code: "689"
+    name: "Health care activities for people with disabilities"
+    status: "True"
+    industry_sectors_id: "223"
+- model: 'master_data.IndustrySubSectors'
+  pk: "690"
+  fields:
+    item_code: "690"
+    name: "Medical treatment and dignity restoration activities for prostitutes"
+    status: "True"
+    industry_sectors_id: "224"
+- model: 'master_data.IndustrySubSectors'
+  pk: "691"
+  fields:
+    item_code: "691"
+    name: "Other centralized care activities not yet classified"
+    status: "True"
+    industry_sectors_id: "224"
+- model: 'master_data.IndustrySubSectors'
+  pk: "692"
+  fields:
+    item_code: "692"
+    name: "Social assistance activities are not focused on people with meritorious services (except wounded and sick soldiers)"
+    status: "True"
+    industry_sectors_id: "225"
+- model: 'master_data.IndustrySubSectors'
+  pk: "693"
+  fields:
+    item_code: "693"
+    name: "Social support activities are not focused on wounded and sick soldiers"
+    status: "True"
+    industry_sectors_id: "225"
+- model: 'master_data.IndustrySubSectors'
+  pk: "694"
+  fields:
+    item_code: "694"
+    name: "Social support activities are not focused on the elderly and people with disabilities"
+    status: "True"
+    industry_sectors_id: "225"
+- model: 'master_data.IndustrySubSectors'
+  pk: "695"
+  fields:
+    item_code: "695"
+    name: "Other unfocused social assistance activities"
+    status: "True"
+    industry_sectors_id: "226"
+- model: 'master_data.IndustrySubSectors'
+  pk: "696"
+  fields:
+    item_code: "696"
+    name: "Creative, artistic and entertainment activities"
+    status: "True"
+    industry_sectors_id: "227"
+- model: 'master_data.IndustrySubSectors'
+  pk: "697"
+  fields:
+    item_code: "697"
+    name: "Library and archive activities"
+    status: "True"
+    industry_sectors_id: "228"
+- model: 'master_data.IndustrySubSectors'
+  pk: "698"
+  fields:
+    item_code: "698"
+    name: "Conservation and museum activities"
+    status: "True"
+    industry_sectors_id: "228"
+- model: 'master_data.IndustrySubSectors'
+  pk: "699"
+  fields:
+    item_code: "699"
+    name: "Activities of botanical gardens, zoos and nature reserves"
+    status: "True"
+    industry_sectors_id: "228"
+- model: 'master_data.IndustrySubSectors'
+  pk: "700"
+  fields:
+    item_code: "700"
+    name: "Lottery activities"
+    status: "True"
+    industry_sectors_id: "229"
+- model: 'master_data.IndustrySubSectors'
+  pk: "701"
+  fields:
+    item_code: "701"
+    name: "Betting and gambling activities"
+    status: "True"
+    industry_sectors_id: "229"
+- model: 'master_data.IndustrySubSectors'
+  pk: "702"
+  fields:
+    item_code: "702"
+    name: "Operation of sports facilities"
+    status: "True"
+    industry_sectors_id: "230"
+- model: 'master_data.IndustrySubSectors'
+  pk: "703"
+  fields:
+    item_code: "703"
+    name: "Activities of sports clubs"
+    status: "True"
+    industry_sectors_id: "230"
+- model: 'master_data.IndustrySubSectors'
+  pk: "704"
+  fields:
+    item_code: "704"
+    name: "Other sports activities"
+    status: "True"
+    industry_sectors_id: "230"
+- model: 'master_data.IndustrySubSectors'
+  pk: "705"
+  fields:
+    item_code: "705"
+    name: "Operation of amusement parks and theme parks"
+    status: "True"
+    industry_sectors_id: "231"
+- model: 'master_data.IndustrySubSectors'
+  pk: "706"
+  fields:
+    item_code: "706"
+    name: "Other entertainment activities not yet classified"
+    status: "True"
+    industry_sectors_id: "231"
+- model: 'master_data.IndustrySubSectors'
+  pk: "707"
+  fields:
+    item_code: "707"
+    name: "Activities of business associations and entrepreneurs"
+    status: "True"
+    industry_sectors_id: "232"
+- model: 'master_data.IndustrySubSectors'
+  pk: "708"
+  fields:
+    item_code: "708"
+    name: "Activities of professional associations"
+    status: "True"
+    industry_sectors_id: "232"
+- model: 'master_data.IndustrySubSectors'
+  pk: "709"
+  fields:
+    item_code: "709"
+    name: "Trade union activities"
+    status: "True"
+    industry_sectors_id: "233"
+- model: 'master_data.IndustrySubSectors'
+  pk: "710"
+  fields:
+    item_code: "710"
+    name: "Activities of religious organizations"
+    status: "True"
+    industry_sectors_id: "234"
+- model: 'master_data.IndustrySubSectors'
+  pk: "711"
+  fields:
+    item_code: "711"
+    name: "Activities of other organizations have not been classified"
+    status: "True"
+    industry_sectors_id: "234"
+- model: 'master_data.IndustrySubSectors'
+  pk: "712"
+  fields:
+    item_code: "712"
+    name: "Repair computers and peripheral devices"
+    status: "True"
+    industry_sectors_id: "235"
+- model: 'master_data.IndustrySubSectors'
+  pk: "713"
+  fields:
+    item_code: "713"
+    name: "Repair communication equipment"
+    status: "True"
+    industry_sectors_id: "235"
+- model: 'master_data.IndustrySubSectors'
+  pk: "714"
+  fields:
+    item_code: "714"
+    name: "Repair of household electronic audio-visual equipment"
+    status: "True"
+    industry_sectors_id: "236"
+- model: 'master_data.IndustrySubSectors'
+  pk: "715"
+  fields:
+    item_code: "715"
+    name: "Repair of equipment and household appliances"
+    status: "True"
+    industry_sectors_id: "236"
+- model: 'master_data.IndustrySubSectors'
+  pk: "716"
+  fields:
+    item_code: "716"
+    name: "Repair shoes, sandals, leather and leatherette goods"
+    status: "True"
+    industry_sectors_id: "236"
+- model: 'master_data.IndustrySubSectors'
+  pk: "717"
+  fields:
+    item_code: "717"
+    name: "Repair beds, cabinets, tables, chairs and similar furniture"
+    status: "True"
+    industry_sectors_id: "236"
+- model: 'master_data.IndustrySubSectors'
+  pk: "718"
+  fields:
+    item_code: "718"
+    name: "Repair of bicycles, watches, other personal and household items not classified elsewhere"
+    status: "True"
+    industry_sectors_id: "236"
+- model: 'master_data.IndustrySubSectors'
+  pk: "719"
+  fields:
+    item_code: "719"
+    name: "Sauna, massage and similar health promotion services (except sports activities)"
+    status: "True"
+    industry_sectors_id: "237"
+- model: 'master_data.IndustrySubSectors'
+  pk: "720"
+  fields:
+    item_code: "720"
+    name: "Laundry, cleaning of textile and fur products"
+    status: "True"
+    industry_sectors_id: "238"
+- model: 'master_data.IndustrySubSectors'
+  pk: "721"
+  fields:
+    item_code: "721"
+    name: "Haircut, hairdo, shampoo"
+    status: "True"
+    industry_sectors_id: "239"
+- model: 'master_data.IndustrySubSectors'
+  pk: "722"
+  fields:
+    item_code: "722"
+    name: "Funeral service activities"
+    status: "True"
+    industry_sectors_id: "239"
+- model: 'master_data.IndustrySubSectors'
+  pk: "723"
+  fields:
+    item_code: "723"
+    name: "Wedding service activities"
+    status: "True"
+    industry_sectors_id: "239"
+- model: 'master_data.IndustrySubSectors'
+  pk: "724"
+  fields:
+    item_code: "724"
+    name: "Other personal service activities remain unclassified"
+    status: "True"
+    industry_sectors_id: "239"
+- model: 'master_data.IndustrySubSectors'
+  pk: "725"
+  fields:
+    item_code: "725"
+    name: "Housework activities in households"
+    status: "True"
+    industry_sectors_id: "240"
+- model: 'master_data.IndustrySubSectors'
+  pk: "726"
+  fields:
+    item_code: "726"
+    name: "Production of material products for self-consumption by households"
+    status: "True"
+    industry_sectors_id: "241"
+- model: 'master_data.IndustrySubSectors'
+  pk: "727"
+  fields:
+    item_code: "727"
+    name: "Production of products and services for self-consumption by households"
+    status: "True"
+    industry_sectors_id: "242"
+- model: 'master_data.IndustrySubSectors'
+  pk: "728"
+  fields:
+    item_code: "728"
+    name: "Activities of international organizations and agencies"
+    status: "True"
+    industry_sectors_id: "243"

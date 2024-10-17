@@ -1,0 +1,126 @@
+- model: 'master_data.Industry'
+  pk: "1"
+  fields:
+    item_code: "1"
+    name: "All"
+    status: "True"
+- model: 'master_data.Industry'
+  pk: "2"
+  fields:
+    item_code: "2"
+    name: "Agriculture, forestry and fisheries"
+    status: "True"
+- model: 'master_data.Industry'
+  pk: "3"
+  fields:
+    item_code: "3"
+    name: "Extractive"
+    status: "True"
+- model: 'master_data.Industry'
+  pk: "4"
+  fields:
+    item_code: "4"
+    name: "Manufacturing and processing industry"
+    status: "True"
+- model: 'master_data.Industry'
+  pk: "5"
+  fields:
+    item_code: "5"
+    name: "Production and distribution of fuel"
+    status: "True"
+- model: 'master_data.Industry'
+  pk: "6"
+  fields:
+    item_code: "6"
+    name: "Water supply and environment"
+    status: "True"
+- model: 'master_data.Industry'
+  pk: "7"
+  fields:
+    item_code: "7"
+    name: "Construction"
+    status: "True"
+- model: 'master_data.Industry'
+  pk: "8"
+  fields:
+    item_code: "8"
+    name: "Wholesale and retail"
+    status: "True"
+- model: 'master_data.Industry'
+  pk: "9"
+  fields:
+    item_code: "9"
+    name: "Warehouse transportation"
+    status: "True"
+- model: 'master_data.Industry'
+  pk: "10"
+  fields:
+    item_code: "10"
+    name: "Accommodation and dining service"
+    status: "True"
+- model: 'master_data.Industry'
+  pk: "11"
+  fields:
+    item_code: "11"
+    name: "Information and communication"
+    status: "True"
+- model: 'master_data.Industry'
+  pk: "12"
+  fields:
+    item_code: "12"
+    name: "Financial, banking and insurance"
+    status: "True"
+- model: 'master_data.Industry'
+  pk: "13"
+  fields:
+    item_code: "13"
+    name: "Real estate business"
+    status: "True"
+- model: 'master_data.Industry'
+  pk: "14"
+  fields:
+    item_code: "14"
+    name: "Professional, scientific and technological service"
+    status: "True"
+- model: 'master_data.Industry'
+  pk: "15"
+  fields:
+    item_code: "15"
+    name: "Administrative and support service"
+    status: "True"
+- model: 'master_data.Industry'
+  pk: "16"
+  fields:
+    item_code: "16"
+    name: "Public administration"
+    status: "True"
+- model: 'master_data.Industry'
+  pk: "17"
+  fields:
+    item_code: "17"
+    name: "Education and training"
+    status: "True"
+- model: 'master_data.Industry'
+  pk: "18"
+  fields:
+    item_code: "18"
+    name: "Medical and social aid"
+    status: "True"
+- model: 'master_data.Industry'
+  pk: "19"
+  fields:
+    item_code: "19"
+    name: "Art, fun and entertainment"
+    status: "True"
+- model: 'master_data.Industry'
+  pk: "20"
+  fields:
+    item_code: "20"
+    name: "Other service"
+    status: "True"
+- model: 'master_data.Industry'
+  pk: "21"
+  fields:
+    item_code: "22"
+    name: "International organization and agency"
+    status: "True"

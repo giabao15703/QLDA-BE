@@ -1,0 +1,11 @@
+- model: 'master_data.language'
+  pk: 1
+  fields:
+    name: English
+    item_code: en
+    
+- model: 'master_data.language'
+  pk: 2
+  fields:
+    name: Vietnamese
+    item_code: vi

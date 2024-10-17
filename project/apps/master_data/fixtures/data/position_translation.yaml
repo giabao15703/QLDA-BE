@@ -1,0 +1,130 @@
+- model: 'master_data.positionTranslation'
+  pk: 1
+  fields:
+    name: Nghiên cứu & Phát triển 
+    position : 1
+    language_code: vi
+
+- model: 'master_data.positionTranslation'
+  pk: 2
+  fields:
+    name: Công nghệ 
+    position : 2
+    language_code: vi
+
+- model: 'master_data.positionTranslation'
+  pk: 3
+  fields:
+    name: Pháp lý & Tuân thủ 
+    position : 3
+    language_code: vi
+
+- model: 'master_data.positionTranslation'
+  pk: 4
+  fields:
+    name: Hậu cần 
+    position : 4
+    language_code: vi
+
+- model: 'master_data.positionTranslation'
+  pk: 5
+  fields:
+    name: Quản lý 
+    position : 5
+    language_code: vi
+
+
+
+- model: 'master_data.positionTranslation'
+  pk: 6
+  fields:
+    name: Tiếp thị    
+    position : 6
+    language_code: vi
+
+- model: 'master_data.positionTranslation'
+  pk: 7
+  fields:
+    name: Khác 
+    position : 7
+    language_code: vi
+
+- model: 'master_data.positionTranslation'
+  pk: 8
+  fields:
+    name: Mua sắm 
+    position : 8
+    language_code: vi
+- model: 'master_data.positionTranslation'
+  pk: 9
+  fields:
+    name: Sản xuất 
+    position : 9
+    language_code: vi
+- model: 'master_data.positionTranslation'
+  pk: 10
+  fields:
+    name: Quản lý dự án 
+    position : 10
+    language_code: vi
+- model: 'master_data.positionTranslation'
+  pk: 11
+  fields:
+    name: Quản lý chất lượng 
+    position : 11
+    language_code: vi
+- model: 'master_data.positionTranslation'
+  pk: 12
+  fields:
+    name: Chuỗi cung ứng 
+    position : 12
+    language_code: vi
+- model: 'master_data.positionTranslation'
+  pk: 13
+  fields:
+    name: Bán hàng 
+    position : 13
+    language_code: vi
+- model: 'master_data.positionTranslation'
+  pk: 14
+  fields:
+    name: Dịch vụ 
+    position : 14
+    language_code: vi
+- model: 'master_data.positionTranslation'
+  pk: 15
+  fields:
+    name: Tài chính & Kế toán 
+    position : 15
+    language_code: vi
+- model: 'master_data.positionTranslation'
+  pk: 16
+  fields:
+    name: Hành chính 
+    position : 16
+    language_code: vi
+- model: 'master_data.positionTranslation'
+  pk: 17
+  fields:
+    name: Nhân sự 
+    position : 17
+    language_code: vi
+- model: 'master_data.positionTranslation'
+  pk: 18
+  fields:
+    name: Kỹ thuật & cơ khí 
+    position : 18
+    language_code: vi
+- model: 'master_data.positionTranslation'
+  pk: 19
+  fields:
+    name: Phát triển kinh doanh 
+    position : 19
+    language_code: vi
+- model: 'master_data.positionTranslation'
+  pk: 20
+  fields:
+    name: Đào tạo & phát triển 
+    position : 20
+    language_code: vi
+

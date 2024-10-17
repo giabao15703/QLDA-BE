@@ -1,0 +1,8 @@
+- model: 'master_data.contractType'
+  pk: 1
+  fields:
+    name: Spot Buy
+- model: 'master_data.contractType'
+  pk: 2
+  fields:
+    name: Frame Contract

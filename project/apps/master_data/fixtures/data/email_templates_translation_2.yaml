@@ -1,0 +1,1505 @@
+- model: master_data.emailtemplatestranslation
+  pk: 55
+  fields:
+    language_code: en
+    email_templates: 1
+    title: Welcome to Nextpro! You are invited to register
+    content: '<p><img src="{{image}}" alt="" width="189" height="30" /></p> <hr />
+      <p>Dear <span style="color: red;"> {{name}} </span></p> <p>&nbsp;</p> <p>You
+      have recently been invited to create account on NextPro Auction Platform. Click
+      the <a href="{{link}}"> link</a> to register your account with NextPro.</p>
+      <p >NextPro creates a platform to connect potential buyers and suppliers set
+      up on the NextPro Auction Platform, thereby increasing trading opportunities
+      for all parties, which means increasing sales for suppliers through search criteria
+      that match the actual requirements of the buyer, best suited to the capabilities
+      and experiences of the supplier.</p> <p >We aim to Vietnam and International
+      Suppliers wishing to increase sales, seek quality requirements from buyers,
+      transparency in competition.</p> <p>&nbsp;</p> <p>Many Thanks and Best Regards,</p>
+      <p>Customer Service</p> <p>&nbsp;</p> <p><strong>NextPro International Procurement
+      Service Company Limited</strong></p> <p>10th Floor, Miss Ao Dai Tower</p> <p>21
+      Nguyen Trung Ngan st.,</p> <p>Ben Nghe Ward, District 1,</p> <p>Ho Chi Minh
+      City, Vietnam</p> <p><a href="info@nextpro.io">info@nextpro.io</a> | <a href="http://www.nextpro.io">www.nextpro.io</a></p>
+      <p>&nbsp;</p> <hr /> <p><span style="color: gray;">The information contained
+      in this e-mail is intended only for its addressee and may contain confidential
+      and/or privileged information. If you are not the intended recipient, you are
+      hereby notified that reading, saving, distribution or use of the content of
+      this e-mail is prohibited. If you have received this e-mail in error, please
+      notify the sender and delete the e-mail.</span></p>'
+- model: master_data.emailtemplatestranslation
+  pk: 56
+  fields:
+    language_code: en
+    email_templates: 2
+    title: Welcome to Nextpro! You are invited to register
+    content: '<p><img src="{{image}}" alt="" width="189" height="30" /></p> <hr />
+      <p>Dear <span style="color: red;"> {{name}} </span></p> <p>&nbsp;</p> <p>You
+      have recently been invited to create account on NextPro Auction Platform. Click
+      the <a href="{{link}}"> link</a> to register your account with NextPro.</p>
+      <p>NextPro is the outsourced service provider and procurement solution with
+      NextPro strategic procurement team that can positively impact to business operations
+      through a complete and comprehensive procurement process of NextPro from the
+      power of bundled procurement and abundant supply.</p> <p>We with a team of experienced
+      experts bring strategic procurement solutions in order to better monitor costs,
+      provide procurement platforms applying the best AI technology always updated
+      with international trends and standards.</p> <p>We aim to Vietnamese and International
+      businesses wishing to develop procurement system to better control costs, increase
+      transparency, improve supplier quality and improve management capabilities.</p>
+      <p>&nbsp;</p> <p>Many Thanks and Best Regards,</p> <p>Customer Service</p> <p>&nbsp;</p>
+      <p><strong>NextPro International Procurement Service Company Limited</strong></p>
+      <p>10th Floor, Miss Ao Dai Tower</p> <p>21 Nguyen Trung Ngan st.,</p> <p>Ben
+      Nghe Ward, District 1,</p> <p>Ho Chi Minh City, Vietnam</p>
+
+      <p><a href="info@nextpro.io">info@nextpro.io</a> | <a href="http://www.nextpro.io">www.nextpro.io</a></p>
+      <p>&nbsp;</p> <hr /> <p><span style="color :gray;">The information contained
+      in this e-mail is intended only for its addressee and may contain confidential
+      and/or privileged information. If you are not the intended recipient, you are
+      hereby notified that reading, saving, distribution or use of the content of
+      this e-mail is prohibited. If you have received this e-mail in error, please
+      notify the sender and delete the e-mail.</span></p>'
+- model: master_data.emailtemplatestranslation
+  pk: 57
+  fields:
+    language_code: en
+    email_templates: 3
+    title: NextPro - Create New Password
+    content: '<img src={{image}} alt="" width="189" height="30" /></span></p> <hr
+      /> <p>Dear <span style="color: red;"> {{name}}, </span></p> <br> <p>You recently
+      requested to reset your password for your NextPro account. Click the button
+      below to reset it.</p> <table style="width: 29.9939%;"> <tbody> <tr> <td" style="width:
+      100%;"><a href="https://auction.nextpro.io/auth/create-new-password/{{Token}}"><button
+      style="background-color: navy; color: red;" name="button" type="button"><strong>Reset
+      your password</strong></button></a></td> </tr> </tbody> </table> <p>If you did
+      not request a password reset, please ignore this email or reply to let us know.</p>
+      <br> <p>Many Thanks and Best Regards</p> <p>Customer Service</p> <br> <p><strong>NextPro
+      International Procurement Service Company Limited</strong></p> <p>10th Floor,
+      Miss Ao Dai Tower</p> <p>21 Nguyen Trung Ngan st.,</p> <p>Ben Nghe Ward, District
+      1,</p> <p>Ho Chi Minh City, Vietnam</p>
+
+      <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> |
+      <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+      <hr /> <p><span style="font-weight: 400; color: gray;">The information contained
+      in this e-mail is intended only for its addressee and may contain confidential
+      and/or privileged information. If you are not the intended recipient, you are
+      hereby notified that reading, saving, distribution or use of the content of
+      this e-mail is prohibited. If you have received this e-mail in error, please
+      notify the sender and delete the e-mail.</span></p>'
+- model: master_data.emailtemplatestranslation
+  pk: 58
+  fields:
+    language_code: en
+    email_templates: 4
+    title: "Notification to Buyer for successfully publishing E-Auction \u2013 E-Auction\
+      \  {{auction_item_code}}"
+    content: '<img src={{image}} alt="" width="189" height="30" /></span></p> <hr
+      /> <p>Dear Mr./Mrs.<span style="color: red;"> {{name}}, </span></p><br> <p>We
+      are officially notifying you that the E-Auction {{auction_title}} with the E-Auction
+      No. {{auction_item_code}} has been published successfully.&nbsp;</p> <p>To view
+      your E-Auction details, please login with your buyer account by using the following
+      link: <a href="https://auction.nextpro.io/auth/login">login now</a>.&nbsp;</p>
+      <p>&nbsp;</p> <p>Many Thanks and Best Regards,</p> <p>Customer Service</p> <br>
+      <p><strong>NextPro International Procurement Service Company Limited</strong></p>
+      <p>10th Floor, Miss Ao Dai Tower</p> <p>21 Nguyen Trung Ngan st.,</p> <p>Ben
+      Nghe Ward, District 1,</p> <p>Ho Chi Minh City, Vietnam</p>
+
+      <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span> |
+      <a href="https://www.nextpro.io"><span style="font-weight: 400;">www.nextpro.io</span></a></p>
+      <hr /> <p><span style="font-weight: 400; color: gray;">The information contained
+      in this e-mail is intended only for its addressee and may contain confidential
+      and/or privileged information. If you are not the intended recipient, you are
+      hereby notified that reading, saving, distribution or use of the content of
+      this e-mail is prohibited. If you have received this e-mail in error, please
+      notify the sender and delete the e-mail.</span></p>'
+- model: master_data.emailtemplatestranslation
+  pk: 59
+  fields:
+    language_code: en
+    email_templates: 5
+    title: NextPro - Invitation to participate in a bidding
+    content: '<p><img src={{image}} alt="" width="189" height="30" /></p> <hr> <p>Dear
+      Mr/Ms.<span style="color: #ff6600;"> {{name}} </span>,</p><br> <p>We are officially
+      notifying you that<span style="color: #ff6600;"> {{company_long_name}}</span>
+      has invited you to participate in the E-Auction <span style="color: #ff6600;">{{auction_title}}</span>
+      with the E-Auction<span style="color: #ff6600;"> {{auction_item_code}}</span>
+      on<span style="color: #ff6600;"> {{start_time_date}}</span> starting at <span
+      style="color: #ff6600;">{{start_time}}</span> and is looking forward to your
+      participation on the NextPro E-Auction Platform.<br /><br /><br /></p> <p>In
+      order to access the E-Auction <span style="color: #ff6600;">{{auction_title}}</span>
+      with the E-Auction <span style="color: #ff6600;">{{auction_item_code}}</span>,
+      please use the following link: <a style="color: #0000ff;" href="https://auction.nextpro.io/e-auction/detail/{{AuctionID}}">login
+      now</a></p> <p>If you wish neither participate in this auction nor receive any
+      further related correspondence, you may decline participation with one click:
+      <a style="color: #0000ff;" href="https://auction.nextpro.io/e-auction/detail/{{AuctionID}}">decline
+      participation here</a></p> <p>In case you have questions, please contact the
+      responsible buyer.</p> <p>Many thanks and Best regards,</p> <p>Customer Service</p>
+      <p><strong>NextPro International Procurement Service Company Limited</strong><br
+      />10th Floor, Miss Ao Dai Tower<br />21 Nguyen Trung Ngan st.,<br />Ben Nghe
+      ward, District 1,<br />Ho Chi Minh City, Vietnam<br />info@nextpro.io | <a href="http://www.nextpro.io">www.nextpro.io</a></p>
+      <hr> <p style="color: gray;">The information contained in this e-mail is intended
+      only for its addressee and may contain confidential and/or privileged information.
+      If you are not the intended recipient, you are hereby notified that reading,
+      saving, distribution or use of the content of this e-mail is prohibited. If
+      you have received this e-mail in error, please notify the sender and delete
+      the e-mail.</p>'
+- model: master_data.emailtemplatestranslation
+  pk: 60
+  fields:
+    language_code: en
+    email_templates: 6
+    title: NextPro - Activate Account
+    content: "<img src={{image}} alt=\"\" width=\"189\" height=\"30\" /></span></p>\
+      \ <hr /> <p>Dear Mr./Mrs.<span style=\"color: red;\"> {{name}}, </span></p><br>\
+      \ <p>This email contains your personal access data for the NextPro Auction Platform</span></p>\
+      \ <p><strong>Your Login ID:</strong> <span style=\"color: red;\">{{username}}</span></p>\
+      \ <p><strong>Your temporary password:</strong> <span style=\"color: red;\">{{password}}</span></p>\
+      \ <p>Please note that using the copy/paste method of the access information\
+      \ may result in errors if done incorrectly. We always recommend that you enter\
+      \ your access information manually.</span></p> <p>Another important note this\
+      \ is your initial preliminary information for account activation, please provide\
+      \ additional informations in the tab \u201CCore business\u201D of your profile\
+      \ to maximize your presence when buyers search for information related to your\
+      \ core business.</p> <p>For data and privacy purposes, you must change the temporary\
+      \ password provided by us during your first Login attempt. To do so, please\
+      \ follow the instructions given to you by the system</span></p> <p>To access\
+      \ the NextPro Auction platform, please use the following link: </span><a style=\"\
+      font-weight: 400;\" href=\"https://auction.nextpro.io/auth/login\">login now</a></p><br>\
+      \ <p>&nbsp;</p> <p>Many Thanks and Best Regards,</p> <p>Customer Service</p>\
+      \ <br> <p><strong>NextPro International Procurement Service Company Limited</strong></p>\
+      \ <p>10th Floor, Miss Ao Dai Tower</p> <p>21 Nguyen Trung Ngan st.,</p> <p>Ben\
+      \ Nghe Ward, District 1,</p> <p>Ho Chi Minh City, Vietnam</p>\n<p><span style=\"\
+      font-weight: 400; color: #0000ff;\">info@nextpro.io</span> | <a href=\"https://www.nextpro.io\"\
+      ><span style=\"font-weight: 400;\">www.nextpro.io</span></a></p> <hr /> <p><span\
+      \ style=\"font-weight: 400; color: gray;\">The information contained in this\
+      \ e-mail is intended only for its addressee and may contain confidential and/or\
+      \ privileged information. If you are not the intended recipient, you are hereby\
+      \ notified that reading, saving, distribution or use of the content of this\
+      \ e-mail is prohibited. If you have received this e-mail in error, please notify\
+      \ the sender and delete the e-mail.</span></p>"
+- model: master_data.emailtemplatestranslation
+  pk: 61
+  fields:
+    language_code: en
+    email_templates: 7
+    title: NextPro - Activate Account
+    content: '<p><img src={{image}} alt="" width="189" height="30" /></p> <hr> <p>Dear
+      </span><span style="color:red"> {{name}}, </span></p> <br> <p>This email contains
+      your personal access data for the NextPro trading platform.&nbsp;</p> <p style="text-align:
+      left;"><strong>Your Login ID:</strong><span style="color:red">{{username}}</span></p>
+      <p style="text-align: left;"><strong>Your temporary password:</strong> <span
+      style="color:red">{{password}}</span></p> <p>Please note that using the copy/paste
+      method of the access information may result in errors if done incorrectly. We
+      always recommend that you enter your access information manually.&nbsp;</span></p>
+      <p>For data and privacy purposes, you must change the temporary password provided
+      by us during your first Login attempt. To do so, please follow the instructions
+      given to you by the system.&nbsp;</span></p> <p>To access the NextPro Auction
+      Platform, please use the following link: </span><a href ="https://auction.nextpro.io/auth/login">login
+      now</a></p> <br> <p>Many Thanks and Best Regards,</p> <p>Customer Service</p>
+      <br> <p><strong>NextPro International Procurement Service Company Limited</strong></p>
+      <p>10th Floor, Miss Ao Dai Tower</p> <p>21 Nguyen Trung Ngan st.,</p> <p>Ben
+      Nghe Ward, District 1,</p> <p>Ho Chi Minh City, Vietnam</p> <p><a href="info@nextpro.io">info@nextpro.io</a>
+      | </span><a href="http://www.nextpro.io">www.nextpro.io</a></p> <br> <hr> <p><span
+      style="color:gray">The information contained in this e-mail is intended only
+      for its addressee and may contain confidential and/or privileged information.
+      If you are not the intended recipient, you are hereby notified that reading,
+      saving, distribution or use of the content of this e-mail is prohibited. If
+      you have received this e-mail in error, please notify the sender and delete
+      the e-mail.</span></p>'
+- model: master_data.emailtemplatestranslation
+  pk: 62
+  fields:
+    language_code: en
+    email_templates: 8
+    title: NextPro - Notification for E-Auction ended
+    content: ' <p><span style="font-weight: 400;"> <img src= {{image}} alt="" width="189"
+      height="30" /></span></p> <hr /> <p><span style="font-weight: 400;">Dear Mr./Mrs.
+      </span><span style="font-weight: 400; color: #ff0000;"> {{name}}</span><span
+      style="font-weight: 400;">,</span></p> <p><br />We are officially notifying
+      you that the E-Auction <span style="color: #ff0000;">{{auction_title}}</span>&nbsp;
+      with the E-Auction No. <span style="color: #ff0000;">{{auction_item_code}}</span>&nbsp;has
+      been ended. You have submitted<span style="color: #ff0000;">&nbsp;{{number_bid}}</span>&nbsp;
+      bids during E-Auction time. <br />To view your E-Auction details, please login
+      with your account by using the following link: <a style="font-weight: 400;"
+      href="https://auction.nextpro.io/auth/login">login now</a>.</p> <p>Many thanks
+      and Best regards,<br />Customer Service</p> <p>&nbsp;</p> <p><strong>NextPro
+      International Procurement Service Company Limited</strong></p> <p><span style="font-weight:
+      400;">10th Floor, Miss Ao Dai Tower</span></p> <p><span style="font-weight:
+      400;">21 Nguyen Trung Ngan st.,</span></p> <p><span style="font-weight: 400;">Ben
+      Nghe Ward, District 1,</span></p> <p><span style="font-weight: 400;">Ho Chi
+      Minh City, Vietnam</span></p> <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span><a
+      style="font-weight: 400;" href="http://info@nextpro.io"> | </a><a href="http://www.nextpro.io"><span
+      style="font-weight: 400;">www.nextpro.io</span></a></p> <hr /> <p><span style="font-weight:
+      400; color: gray;">The information contained in this e-mail is intended only
+      for its addressee and may contain confidential and/or privileged information.
+      If you are not the intended recipient, you are hereby notified that reading,
+      saving, distribution or use of the content of this e-mail is prohibited. If
+      you have received this e-mail in error, please notify the sender and delete
+      the e-mail.</span></p>'
+- model: master_data.emailtemplatestranslation
+  pk: 63
+  fields:
+    language_code: en
+    email_templates: 9
+    title: NextPro - Notification for E-Auction ended
+    content: '<p><span style="font-weight: 400;"> <img src={{image}} alt="" width="189"
+      height="30" /></span></p> <hr /> <p><span style="font-weight: 400;">Dear Mr./Mrs.
+      </span><span style="font-weight: 400; color: #ff0000;"> {{name}}</span><span
+      style="font-weight: 400;">,</span></p> <p><br />We are officially notifying
+      you that your E-Auction <span style="color: #ff0000;">{{auction_title}}</span>&nbsp;
+      with the E-Auction No.<span style="color: #ff0000;">{{auction_item_code}}</span>&nbsp;
+      has been ended successfully. <span style="color: #ff0000;">{{total_number_bid}}
+      </span>&nbsp;bids have been submitted. </p> <p>To view your E-Auction details,
+      please login with your account by using the following link: <a style="font-weight:
+      400;" href="https://auction.nextpro.io/auth/login">login now</a>.</p> <p>Many
+      thanks and Best regards,<br />Customer Service</p> <p>&nbsp;</p> <p><strong>NextPro
+      International Procurement Service Company Limited</strong></p> <p><span style="font-weight:
+      400;">10th Floor, Miss Ao Dai Tower</span></p> <p><span style="font-weight:
+      400;">21 Nguyen Trung Ngan st.,</span></p> <p><span style="font-weight: 400;">Ben
+      Nghe Ward, District 1,</span></p> <p><span style="font-weight: 400;">Ho Chi
+      Minh City, Vietnam</span></p> <p><span style="font-weight: 400; color: #0000ff;">info@nextpro.io</span><a
+      style="font-weight: 400;" href="http://info@nextpro.io"> | </a><a href="http://www.nextpro.io"><span
+      style="font-weight: 400;">www.nextpro.io</span></a></p> <hr /> <p><span style="font-weight:
+      400; color: gray;">The information contained in this e-mail is intended only
+      for its addressee and may contain confidential and/or privileged information.
+      If you are not the intended recipient, you are hereby notified that reading,
+      saving, distribution or use of the content of this e-mail is prohibited. If
+      you have received this e-mail in error, please notify the sender and delete
+      the e-mail.</span></p>'
+- model: master_data.emailtemplatestranslation
+  pk: 64
+  fields:
+    language_code: en
+    email_templates: 10
+    title: Congratulations! Your NextPro profile has been upgraded
+    content: '<p><img src="{{image}}" alt="" width="189" height="30" /></p> <hr />
+      <p>Dear Mr./Mrs.<span style="color: red;"> {{name}} </span>,</p> <p>We wish
+      to thank you for choosing NextPro to collaborate during last past time. By this
+      email, NextPro would like to inform that your profile has been upgraded to <span
+      style="color: #ff0000;">{{scheme}} </span>account. To see more details of your
+      account benefits, please access the </span><a style="font-weight: 400;" href={{link}}>link</a></p>
+      <p>Thank you for giving us the more opportunity to serve you better.</p> <p>&nbsp;</p>
+      <p>Many Thanks and Best Regards,</p> <p>Customer Service</p> <p>&nbsp;</p> <p><strong>NextPro
+      International Procurement Service Company Limited</strong></p> <p>10th Floor,
+      Miss Ao Dai Tower</p> <p>21 Nguyen Trung Ngan st.,</p> <p>Ben Nghe Ward, District
+      1,</p> <p>Ho Chi Minh City, Vietnam</p>
+
+      <p><u><a href="http://www.nextpro.io/">info@nextpro.io</a></u> <u><a href="http://www.nextpro.io/">www.nextpro.io</a></u></p>
+      <hr /> <p style="color: gray;">The information contained in this e-mail is intended
+      only for its addressee and may contain confidential and/or privileged information.
+      If you are not the intended recipient, you are hereby notified that reading,
+      saving, distribution or use of the content of this e-mail is prohibited. If
+      you have received this e-mail in error, please notify the sender and delete
+      the e-mail.</p> <p>&nbsp;</p>'
+- model: master_data.emailtemplatestranslation
+  pk: 65
+  fields:
+    language_code: en
+    email_templates: 11
+    title: Congratulations! You have already succesfully registered SICP program with
+      NextPro
+    content: '<p><img src="{{image}}" alt="" width="189" height="30" /></p> <hr />
+      <p>Dear Mr./Mrs. <span style="color: red;">{{name}} </span>,</p> <p>We wish
+      to thank you for choosing NextPro to collaborate during last past time.</p>
+      <p>We would like to inform that your request of SICP with<span style="color:
+      #ff0000;"> {{scheme}} </span>&nbsp;account has been successfully registered.
+      Please access to the <a style="font-weight: 400;" href="{{link}}">link</a> for
+      uploading required documents then NextPro will review and provide the results
+      at soonest.</p> <p>Thank you for giving us the more opportunity to serve you
+      better.</p> <p>&nbsp;</p> <p>Many Thanks and Best Regards,</p> <p>Customer Service</p>
+      <p>&nbsp;</p> <p><strong>NextPro International Procurement Service Company Limited</strong></p>
+      <p>10th Floor, Miss Ao Dai Tower</p> <p>21 Nguyen Trung Ngan st.,</p> <p>Ben
+      Nghe Ward, District 1,</p> <p>Ho Chi Minh City, Vietnam</p>
+
+      <p><u><a href="http://www.nextpro.io/">info@nextpro.io</a></u> <u><a href="http://www.nextpro.io/">www.nextpro.io</a></u></p>
+      <hr /> <p style="color: gray;">The information contained in this e-mail is intended
+      only for its addressee and may contain confidential and/or privileged information.
+      If you are not the intended recipient, you are hereby notified that reading,
+      saving, distribution or use of the content of this e-mail is prohibited. If
+      you have received this e-mail in error, please notify the sender and delete
+      the e-mail.</p> <p>&nbsp;</p>'
+- model: master_data.emailtemplatestranslation
+  pk: 66
+  fields:
+    language_code: en
+    email_templates: 12
+    title: Confirmation for Refund Request on NextPro Auction Platform
+    content: '<p><img src="{{image}}" alt="" width="189" height="30" /></p> <hr />
+      <p>Dear Mr./Mrs. <span style="color: red;">{{name}} </span>,</p> <p>We wish
+      to thank you for choosing NextPro to collaborate during last past time. You
+      have recently requested NextPro to refund to your bank account, to make sure
+      this is an official request from you, please confirm by clicking on this &nbsp;<u><a
+      href="http://www.nextpro.io/">link</a>.</u></p> <p>Thank you for giving us the
+      more opportunity to serve you better.</p> <p>&nbsp;</p> <p>Many Thanks and Best
+      Regards,</p> <p>Customer Service</p> <p>&nbsp;</p> <p><strong>NextPro International
+      Procurement Service Company Limited</strong></p> <p>10th Floor, Miss Ao Dai
+      Tower</p> <p>21 Nguyen Trung Ngan st.,</p> <p>Ben Nghe Ward, District 1,</p>
+      <p>Ho Chi Minh City, Vietnam</p>
+
+      <p><u><a href="http://www.nextpro.io/">info@nextpro.io</a></u> <u><a href="http://www.nextpro.io/">www.nextpro.io</a></u></p>
+      <hr /> <p style="color: gray;">The information contained in this e-mail is intended
+      only for its addressee and may contain confidential and/or privileged information.
+      If you are not the intended recipient, you are hereby notified that reading,
+      saving, distribution or use of the content of this e-mail is prohibited. If
+      you have received this e-mail in error, please notify the sender and delete
+      the e-mail.</p> <p>&nbsp;</p>'
+- model: master_data.emailtemplatestranslation
+  pk: 67
+  fields:
+    language_code: en
+    email_templates: 13
+    title: Your request to refund with NextPro has been submitted successfully
+    content: '<p><img src="{{image}}" alt="" width="189" height="30" /></p> <hr />
+      <p>Dear Mr./Mrs. <span style="color: red;">{{name}} </span>,</p> <p >We wish
+      to thank you for choosing NextPro to collaborate during last past time. By this
+      email, NextPro would like to inform that your refund request has been well received
+      by NextPro. Kindly check your registered bank account balance within 7 -10 days
+      from this email date.</p> <p>Thank you for giving us the more opportunity to
+      serve you better.</p> <p>&nbsp;</p> <p>Many Thanks and Best Regards,</p> <p>Customer
+      Service</p> <p>&nbsp;</p> <p><strong>NextPro International Procurement Service
+      Company Limited</strong></p> <p>10th Floor, Miss Ao Dai Tower</p> <p>21 Nguyen
+      Trung Ngan st.,</p> <p>Ben Nghe Ward, District 1,</p> <p>Ho Chi Minh City, Vietnam</p>
+
+      <p><u><a href="http://www.nextpro.io/">info@nextpro.io</a></u> <u><a href="http://www.nextpro.io/">www.nextpro.io</a></u></p>
+      <hr /> <p style="color: gray;">The information contained in this e-mail is intended
+      only for its addressee and may contain confidential and/or privileged information.
+      If you are not the intended recipient, you are hereby notified that reading,
+      saving, distribution or use of the content of this e-mail is prohibited. If
+      you have received this e-mail in error, please notify the sender and delete
+      the e-mail.</p> <p>&nbsp;</p>'
+- model: master_data.emailtemplatestranslation
+  pk: 68
+  fields:
+    language_code: en
+    email_templates: 14
+    title: Reminder for Deposit to publish E-Auction No. {{auction_item_code}} on
+      NextPro
+    content: '<p><img src="{{image}}" alt="" width="189" height="30" /></p> <hr />
+      <p>Dear Mr./Mrs. <span style="color: red;">{{name}} </span>,</p> <p>We wish
+      to thank you for choosing NextPro to collaborate during last past time.</p>
+      <p> You have recently initiated an E-Auction request on the NextPro E-Auction
+      Platform with draft ID <span style="color: #ff0000;">{{auction_item_code}}</span>
+      but we have not yet noticed you make a deposit, please visit this <a style="font-weight:
+      400;" href="{{link}}">link</a></span>  and make a deposit, after the deposit
+      is completed you can then publish E-Auction.</p> <p>Thank you for giving us
+      the more opportunity to serve you better.</p> <p>&nbsp;</p> <p>Many Thanks and
+      Best Regards,</p> <p>Customer Service</p> <p>&nbsp;</p> <p><strong>NextPro International
+      Procurement Service Company Limited</strong></p> <p>10th Floor, Miss Ao Dai
+      Tower</p> <p>21 Nguyen Trung Ngan st.,</p> <p>Ben Nghe Ward, District 1,</p>
+      <p>Ho Chi Minh City, Vietnam</p>
+
+      <p><u><a href="http://www.nextpro.io/">info@nextpro.io</a></u> <u><a href="http://www.nextpro.io/">www.nextpro.io</a></u></p>
+      <hr /> <p style="color: gray;">The information contained in this e-mail is intended
+      only for its addressee and may contain confidential and/or privileged information.
+      If you are not the intended recipient, you are hereby notified that reading,
+      saving, distribution or use of the content of this e-mail is prohibited. If
+      you have received this e-mail in error, please notify the sender and delete
+      the e-mail.</p> <p>&nbsp;</p>'
+- model: master_data.emailtemplatestranslation
+  pk: 69
+  fields:
+    language_code: en
+    email_templates: 15
+    title: Reminder for Deposit to attend E-Auction No. {{auction_item_code}} on NextPro
+    content: '<p><img src="{{image}}" alt="" width="189" height="30" /></p> <hr />
+      <p>Dear Mr./Mrs. <span style="color: red;">{{name}} </span>,</p> <p>We wish
+      to thank you for choosing NextPro to collaborate during last past time.</p>
+      <p>You have recently been invited to attend an E-Auction request on the NextPro
+      E-Auction Platform with draft ID <span style="color: #ff0000;">{{auction_item_code}}</span>
+      by <span style="color: #ff0000;">{{buyer_name}}</span> but we have not yet noticed
+      you make a deposit, please visit this  <a style="font-weight: 400;" href="{{link}}">link</a>
+      and make a deposit, after the deposit is completed then you can then attend
+      to bid for E-Auction on defined period.</p> <p>Thank you for giving us the more
+      opportunity to serve you better.</p> <p>&nbsp;</p> <p>Many Thanks and Best Regards,</p>
+      <p>Customer Service</p> <p>&nbsp;</p> <p><strong>NextPro International Procurement
+      Service Company Limited</strong></p> <p>10th Floor, Miss Ao Dai Tower</p> <p>21
+      Nguyen Trung Ngan st.,</p> <p>Ben Nghe Ward, District 1,</p> <p>Ho Chi Minh
+      City, Vietnam</p>
+
+      <p><u><a href="http://www.nextpro.io/">info@nextpro.io</a></u> <u><a href="http://www.nextpro.io/">www.nextpro.io</a></u></p>
+      <hr /> <p style="color: gray;">The information contained in this e-mail is intended
+      only for its addressee and may contain confidential and/or privileged information.
+      If you are not the intended recipient, you are hereby notified that reading,
+      saving, distribution or use of the content of this e-mail is prohibited. If
+      you have received this e-mail in error, please notify the sender and delete
+      the e-mail.</p> <p>&nbsp;</p>'
+- model: master_data.emailtemplatestranslation
+  pk: 70
+  fields:
+    language_code: en
+    email_templates: 16
+    title: 1st reminder for pending payment of order No.{{order_no}} on NextPro
+    content: '<p><img src="{{image}}" alt="" width="189" height="30" /></p> <hr />
+      <p>Dear Mr./Mrs. span style="color: red;">{{name}} </span>,</p> <p>We wish to
+      thank you for choosing NextPro to collaborate during last past time. By this
+      email, NextPro would like to inform that your confirmed order No.<span style="color:
+      #ff0000;">{{order_no}}</span> has not been paid yet. Please access this <a style="font-weight:
+      400;" href="{{link}}">link&nbsp;</a> to do payment.</p> <p>Thank you for giving
+      us the more opportunity to serve you better.</p> <p>&nbsp;</p> <p>Many Thanks
+      and Best Regards,</p> <p>Customer Service</p> <p>&nbsp;</p> <p><strong>NextPro
+      International Procurement Service Company Limited</strong></p> <p>10th Floor,
+      Miss Ao Dai Tower</p> <p>21 Nguyen Trung Ngan st.,</p> <p>Ben Nghe Ward, District
+      1,</p> <p>Ho Chi Minh City, Vietnam</p>
+
+      <p><u><a href="http://www.nextpro.io/">info@nextpro.io</a></u> <u><a href="http://www.nextpro.io/">www.nextpro.io</a></u></p>
+      <hr /> <p style="color: gray;">The information contained in this e-mail is intended
+      only for its addressee and may contain confidential and/or privileged information.
+      If you are not the intended recipient, you are hereby notified that reading,
+      saving, distribution or use of the content of this e-mail is prohibited. If
+      you have received this e-mail in error, please notify the sender and delete
+      the e-mail.</p> <p>&nbsp;</p>'
+- model: master_data.emailtemplatestranslation
+  pk: 71
+  fields:
+    language_code: en
+    email_templates: 17
+    title: 2st reminder for pending payment of order No.{{order_no}} on NextPro
+    content: '<p><img src="{{image}}" alt="" width="189" height="30" /></p> <hr />
+      <p>Dear Mr./Mrs. <span style="color: red;">{{name}} </span>,</p> <p>We wish
+      to thank you for choosing NextPro to collaborate during last past time. By this
+      email, NextPro would like to inform that your confirmed order No. <span style="color:
+      #ff0000;">{{order_no}}</span> has not been paid yet. Please access this <a style="font-weight:
+      400;" href="{{link}}">link&nbsp;</a> to do payment.</p> <p>Thank you for giving
+      us the more opportunity to serve you better.</p> <p>&nbsp;</p> <p>Many Thanks
+      and Best Regards,</p> <p>Customer Service</p> <p>&nbsp;</p> <p><strong>NextPro
+      International Procurement Service Company Limited</strong></p> <p>10th Floor,
+      Miss Ao Dai Tower</p> <p>21 Nguyen Trung Ngan st.,</p> <p>Ben Nghe Ward, District
+      1,</p> <p>Ho Chi Minh City, Vietnam</p>
+
+      <p><u><a href="http://www.nextpro.io/">info@nextpro.io</a></u> <u><a href="http://www.nextpro.io/">www.nextpro.io</a></u></p>
+      <hr /> <p style="color: gray;">The information contained in this e-mail is intended
+      only for its addressee and may contain confidential and/or privileged information.
+      If you are not the intended recipient, you are hereby notified that reading,
+      saving, distribution or use of the content of this e-mail is prohibited. If
+      you have received this e-mail in error, please notify the sender and delete
+      the e-mail.</p> <p>&nbsp;</p>'
+- model: master_data.emailtemplatestranslation
+  pk: 72
+  fields:
+    language_code: en
+    email_templates: 18
+    title: 3st reminder for pending payment of order No.{{order_no}} on NextPro
+    content: '<p><img src="{{image}}" alt="" width="189" height="30" /></p> <hr />
+      <p>Dear Mr./Mrs. <span style="color: red;">{{name}} </span>,</p> <p>We wish
+      to thank you for choosing NextPro to collaborate during last past time. By this
+      email, NextPro would like to inform that your confirmed order No. <span style="color:
+      #ff0000;">{{order_no}}</span> has not been paid yet. Please access this <a style="font-weight:
+      400;" href="{{link}}">link&nbsp;</a> to do payment.</p> <p>Thank you for giving
+      us the more opportunity to serve you better.</p> <p>&nbsp;</p> <p>Many Thanks
+      and Best Regards,</p> <p>Customer Service</p> <p>&nbsp;</p> <p><strong>NextPro
+      International Procurement Service Company Limited</strong></p> <p>10th Floor,
+      Miss Ao Dai Tower</p> <p>21 Nguyen Trung Ngan st.,</p> <p>Ben Nghe Ward, District
+      1,</p> <p>Ho Chi Minh City, Vietnam</p>
+
+      <p><u><a href="http://www.nextpro.io/">info@nextpro.io</a></u> <u><a href="http://www.nextpro.io/">www.nextpro.io</a></u></p>
+      <hr /> <p style="color: gray;">The information contained in this e-mail is intended
+      only for its addressee and may contain confidential and/or privileged information.
+      If you are not the intended recipient, you are hereby notified that reading,
+      saving, distribution or use of the content of this e-mail is prohibited. If
+      you have received this e-mail in error, please notify the sender and delete
+      the e-mail.</p> <p>&nbsp;</p>'
+- model: master_data.emailtemplatestranslation
+  pk: 73
+  fields:
+    language_code: en
+    email_templates: 19
+    title: Order No.{{order_no}} has been paid successfully
+    content: '<p><img src="{{image}}" alt="" width="189" height="30" /></p> <hr />
+      <p>Dear Mr./Mrs.<span style="color: red;">{{name}} </span>,</p> <p>&nbsp;</p>
+      <p>We wish to thank you for choosing NextPro to collaborate during last past
+      time. By this email, NextPro would like to inform that your confirmed order
+      No.<span style="color: #ff0000;">{{order_no}}</span> has been paid successfully.</p>
+      <p>Thank you for giving us the more opportunity to serve you better.</p> <p>&nbsp;</p>
+      <p>Many Thanks and Best Regards,</p> <p>Customer Service</p> <p>&nbsp;</p> <p><strong>NextPro
+      International Procurement Service Company Limited</strong></p> <p>10th Floor,
+      Miss Ao Dai Tower</p> <p>21 Nguyen Trung Ngan st.,</p> <p>Ben Nghe Ward, District
+      1,</p> <p>Ho Chi Minh City, Vietnam</p>
+
+      <p><u><a href="http://www.nextpro.io/">info@nextpro.io</a></u> <u><a href="http://www.nextpro.io/">www.nextpro.io</a></u></p>
+      <hr /> <p style="color: gray;">The information contained in this e-mail is intended
+      only for its addressee and may contain confidential and/or privileged information.
+      If you are not the intended recipient, you are hereby notified that reading,
+      saving, distribution or use of the content of this e-mail is prohibited. If
+      you have received this e-mail in error, please notify the sender and delete
+      the e-mail.</p> <p>&nbsp;</p>'
+- model: master_data.emailtemplatestranslation
+  pk: 74
+  fields:
+    language_code: en
+    email_templates: 20
+    title: Order No.{{order_no}} with Bank Transfer Method has been received by NextPro
+    content: '<p><img src="{{image}}" alt="" width="189" height="30" /></p> <hr />
+      <p>Dear Mr./Mrs.<span style="color: red;">{{name}} </span>,</p> <p>&nbsp;</p>
+      <p>We wish to thank you for choosing NextPro to collaborate during last past
+      time. By this email, NextPro would like to inform that your confirmed order
+      No.<span style="color: #ff0000;">{{order_no}}</span> with Bank Transfer Method
+      has been well received by NextPro. We will process this request and inform you
+      within 1-3 days.</p> <p>Thank you for giving us the more opportunity to serve
+      you better.</p> <p>&nbsp;</p> <p>Many Thanks and Best Regards,</p> <p>Customer
+      Service</p> <p>&nbsp;</p> <p><strong>NextPro International Procurement Service
+      Company Limited</strong></p> <p>10th Floor, Miss Ao Dai Tower</p> <p>21 Nguyen
+      Trung Ngan st.,</p> <p>Ben Nghe Ward, District 1,</p> <p>Ho Chi Minh City, Vietnam</p>
+
+      <p><u><a href="http://www.nextpro.io/">info@nextpro.io</a></u> <u><a href="http://www.nextpro.io/">www.nextpro.io</a></u></p>
+      <hr /> <p style="color: gray;">The information contained in this e-mail is intended
+      only for its addressee and may contain confidential and/or privileged information.
+      If you are not the intended recipient, you are hereby notified that reading,
+      saving, distribution or use of the content of this e-mail is prohibited. If
+      you have received this e-mail in error, please notify the sender and delete
+      the e-mail.</p> <p>&nbsp;</p>'
+- model: master_data.emailtemplatestranslation
+  pk: 75
+  fields:
+    language_code: en
+    email_templates: 21
+    title: Your deposit amount for Auction No.{{auction_item_code}} has been refunded
+      to NextPro account
+    content: '<p><img src="{{image}}" alt="" width="189" height="30" /></p> <hr />
+      <p>Dear Mr./Mrs. <span style="color: red;">{{name}} </span>,</p> <p>&nbsp;</p>
+      <p>We wish to thank you for choosing NextPro to collaborate during last past
+      time. By this email, NextPro would like to inform that the deposit amount for
+      Auction No.<span style="color: #ff0000;">{{auction_item_code}}</span> has been
+      refunded to your NextPro account, kindly access the  <a style="font-weight:
+      400;" href="{{link}}">link</a> to check the account balance.</p> <p>Thank you
+      for giving us the more opportunity to serve you better.</p> <p>&nbsp;</p> <p>Many
+      Thanks and Best Regards,</p> <p>Customer Service</p> <p>&nbsp;</p> <p><strong>NextPro
+      International Procurement Service Company Limited</strong></p> <p>10th Floor,
+      Miss Ao Dai Tower</p> <p>21 Nguyen Trung Ngan st.,</p> <p>Ben Nghe Ward, District
+      1,</p> <p>Ho Chi Minh City, Vietnam</p>
+
+      <p><u><a href="http://www.nextpro.io/">info@nextpro.io</a></u> <u><a href="http://www.nextpro.io/">www.nextpro.io</a></u></p>
+      <hr /> <p style="color: gray;">The information contained in this e-mail is intended
+      only for its addressee and may contain confidential and/or privileged information.
+      If you are not the intended recipient, you are hereby notified that reading,
+      saving, distribution or use of the content of this e-mail is prohibited. If
+      you have received this e-mail in error, please notify the sender and delete
+      the e-mail.</p> <p>&nbsp;</p>'
+- model: master_data.emailtemplatestranslation
+  pk: 76
+  fields:
+    language_code: en
+    email_templates: 22
+    title: 'NextPro has charged deposit amount as service fee because you have cancelled
+      the auction No.{{auction_item_code}} '
+    content: '<p><img src="{{image}}" alt="" width="189" height="30" /></p> <hr />
+      <p>Dear Mr./Mrs. <span style="color: red;">{{name}} </span>,</p> <p>&nbsp;</p>
+      <p>We wish to thank you for choosing NextPro to collaborate during last past
+      time. By this email, NextPro would like to inform that the deposit amount for
+      Auction No.<span style="color: #ff0000;">{{auction_item_code}}</span> has been
+      charged as service fee due to your cancellation. Kindly check details in this  <a
+      style="font-weight: 400;" href="{{link}}">link</a> </p> <p>Thank you for giving
+      us the more opportunity to serve you better.</p> <p>&nbsp;</p> <p>Many Thanks
+      and Best Regards,</p> <p>Customer Service</p> <p>&nbsp;</p> <p><strong>NextPro
+      International Procurement Service Company Limited</strong></p> <p>10th Floor,
+      Miss Ao Dai Tower</p> <p>21 Nguyen Trung Ngan st.,</p> <p>Ben Nghe Ward, District
+      1,</p> <p>Ho Chi Minh City, Vietnam</p>
+
+      <p><u><a href="http://www.nextpro.io/">info@nextpro.io</a></u> <u><a href="http://www.nextpro.io/">www.nextpro.io</a></u></p>
+      <hr /> <p style="color: gray;">The information contained in this e-mail is intended
+      only for its addressee and may contain confidential and/or privileged information.
+      If you are not the intended recipient, you are hereby notified that reading,
+      saving, distribution or use of the content of this e-mail is prohibited. If
+      you have received this e-mail in error, please notify the sender and delete
+      the e-mail.</p> <p>&nbsp;</p>'
+- model: master_data.emailtemplatestranslation
+  pk: 77
+  fields:
+    language_code: en
+    email_templates: 23
+    title: 'NextPro has charged partial deposit amount as service fee and refund back
+      the rest deposit balance to NextPro account because you have been awarded to
+      the auction No.{{auction_item_code}} '
+    content: '<p><img src="{{image}}" alt="" width="189" height="30" /></p> <hr />
+      <p>Dear Mr./Mrs. <span style="color: red;">{{name}} </span>,</p> <p>&nbsp;</p>
+      <p>We wish to thank you for choosing NextPro to collaborate during last past
+      time. By this email, NextPro would like to inform that NextPro has charged partial
+      deposit amount as service fee and refund back the rest deposit balance to NextPro
+      account because you have been awarded to the auction No.<span style="color:
+      #ff0000;">{{auction_item_code}}</span>. Kindly check details in this &nbsp;</span></span></span><a
+      href="{{link}}">link</a></p> <p>Thank you for giving us the more opportunity
+      to serve you better.</p> <p>&nbsp;</p> <p>Many Thanks and Best Regards,</p>
+      <p>Customer Service</p> <p>&nbsp;</p> <p><strong>NextPro International Procurement
+      Service Company Limited</strong></p> <p>10th Floor, Miss Ao Dai Tower</p> <p>21
+      Nguyen Trung Ngan st.,</p> <p>Ben Nghe Ward, District 1,</p> <p>Ho Chi Minh
+      City, Vietnam</p>
+
+      <p><u><a href="http://www.nextpro.io/">info@nextpro.io</a></u> <u><a href="http://www.nextpro.io/">www.nextpro.io</a></u></p>
+      <hr /> <p style="color: gray;">The information contained in this e-mail is intended
+      only for its addressee and may contain confidential and/or privileged information.
+      If you are not the intended recipient, you are hereby notified that reading,
+      saving, distribution or use of the content of this e-mail is prohibited. If
+      you have received this e-mail in error, please notify the sender and delete
+      the e-mail.</p> <p>&nbsp;</p>'
+- model: master_data.emailtemplatestranslation
+  pk: 78
+  fields:
+    language_code: en
+    email_templates: 24
+    title: 'Your profile has already reached limit of E-Auction implementation '
+    content: '<p><img src="{{image}}" alt="" width="189" height="30" /></p> <hr />
+      <p>Dear Mr./Mrs. <span style="color: red;">{{name}} </span>,</p> <p>&nbsp;</p>
+      <p>We wish to thank you for choosing NextPro to collaborate during last past
+      time. By this email, NextPro would like to inform that the E-Auction numbers
+      of your account profile have already reached the maximum so you could not create
+      new E-Auction anymore.</p> <p>We still maintain your account profile status
+      until expiration but if you would like to have more E-Auction created, please
+      renew your account profile or buy new profile scheme  <a href="{{link}}"> link</a></p>
+      <p>Thank you for giving us the more opportunity to serve you better.</p> <p>&nbsp;</p>
+      <p>Many Thanks and Best Regards,</p> <p>Customer Service</p> <p>&nbsp;</p> <p><strong>NextPro
+      International Procurement Service Company Limited</strong></p> <p>10th Floor,
+      Miss Ao Dai Tower</p> <p>21 Nguyen Trung Ngan st.,</p> <p>Ben Nghe Ward, District
+      1,</p> <p>Ho Chi Minh City, Vietnam</p>
+
+      <p><u><a href="http://www.nextpro.io/">info@nextpro.io</a></u> <u><a href="http://www.nextpro.io/">www.nextpro.io</a></u></p>
+      <hr /> <p style="color: gray;">The information contained in this e-mail is intended
+      only for its addressee and may contain confidential and/or privileged information.
+      If you are not the intended recipient, you are hereby notified that reading,
+      saving, distribution or use of the content of this e-mail is prohibited. If
+      you have received this e-mail in error, please notify the sender and delete
+      the e-mail.</p> <p>&nbsp;</p>'
+- model: master_data.emailtemplatestranslation
+  pk: 79
+  fields:
+    language_code: en
+    email_templates: 25
+    title: 'Warning! Your NextPro account will expire in next 30 days '
+    content: '<p><img src="{{image}}" alt="" width="189" height="30" /></p> <hr />
+      <p>Dear Mr./Mrs. <span style="color: red;">{{name}} </span>,</p> <p>&nbsp;</p>
+      <p >We wish to thank you for choosing NextPro to collaborate during last past
+      time. By this email, NextPro would like to inform that your <span style="color:
+      #ff0000;">{{scheme}}</span> account will be expired in next 30 days. Easy to
+      renew or upgrade your account by one click to the <a href="{{link}}">link</a></p>
+      <p>Thank you for giving us the more opportunity to serve you better.</p> <p>&nbsp;</p>
+      <p>Many Thanks and Best Regards,</p> <p>Customer Service</p> <p>&nbsp;</p> <p><strong>NextPro
+      International Procurement Service Company Limited</strong></p> <p>10th Floor,
+      Miss Ao Dai Tower</p> <p>21 Nguyen Trung Ngan st.,</p> <p>Ben Nghe Ward, District
+      1,</p> <p>Ho Chi Minh City, Vietnam</p>
+
+      <p><u><a href="http://www.nextpro.io/">info@nextpro.io</a></u> <u><a href="http://www.nextpro.io/">www.nextpro.io</a></u></p>
+      <hr /> <p style="color: gray;">The information contained in this e-mail is intended
+      only for its addressee and may contain confidential and/or privileged information.
+      If you are not the intended recipient, you are hereby notified that reading,
+      saving, distribution or use of the content of this e-mail is prohibited. If
+      you have received this e-mail in error, please notify the sender and delete
+      the e-mail.</p> <p>&nbsp;</p>'
+- model: master_data.emailtemplatestranslation
+  pk: 80
+  fields:
+    language_code: en
+    email_templates: 26
+    title: 'Warning! Your NextPro account will expire in next 15 days '
+    content: '<p><img src="{{image}}" alt="" width="189" height="30" /></p> <hr />
+      <p>Dear Mr./Mrs. <span style="color: red;">{{name}} </span>,</p> <p>&nbsp;</p>
+      <p >We wish to thank you for choosing NextPro to collaborate during last past
+      time. By this email, NextPro would like to inform that your <span style="color:
+      #ff0000;">{{scheme}}</span> account will be expired in next 15 days. Easy to
+      renew or upgrade your account by one click to the <a href="{{link}}">link</a></p>
+      <p>Thank you for giving us the more opportunity to serve you better.</p> <p>&nbsp;</p>
+      <p>Many Thanks and Best Regards,</p> <p>Customer Service</p> <p>&nbsp;</p> <p><strong>NextPro
+      International Procurement Service Company Limited</strong></p> <p>10th Floor,
+      Miss Ao Dai Tower</p> <p>21 Nguyen Trung Ngan st.,</p> <p>Ben Nghe Ward, District
+      1,</p> <p>Ho Chi Minh City, Vietnam</p>
+
+      <p><u><a href="http://www.nextpro.io/">info@nextpro.io</a></u> <u><a href="http://www.nextpro.io/">www.nextpro.io</a></u></p>
+      <hr /> <p style="color: gray;">The information contained in this e-mail is intended
+      only for its addressee and may contain confidential and/or privileged information.
+      If you are not the intended recipient, you are hereby notified that reading,
+      saving, distribution or use of the content of this e-mail is prohibited. If
+      you have received this e-mail in error, please notify the sender and delete
+      the e-mail.</p> <p>&nbsp;</p>'
+- model: master_data.emailtemplatestranslation
+  pk: 81
+  fields:
+    language_code: en
+    email_templates: 27
+    title: 'Warning! Your NextPro account will expire in next 07 days '
+    content: '<p><img src="{{image}}" alt="" width="189" height="30" /></p> <hr />
+      <p>Dear Mr./Mrs. <span style="color: red;">{{name}} </span>,</p> <p>&nbsp;</p>
+      <p >We wish to thank you for choosing NextPro to collaborate during last past
+      time. By this email, NextPro would like to inform that your <span style="color:
+      #ff0000;">{{scheme}}</span> account will be expired in next 07 days. Easy to
+      renew or upgrade your account by one click to the <a href="{{link}}">link</a></p>
+      <p>Thank you for giving us the more opportunity to serve you better.</p> <p>&nbsp;</p>
+      <p>Many Thanks and Best Regards,</p> <p>Customer Service</p> <p>&nbsp;</p> <p><strong>NextPro
+      International Procurement Service Company Limited</strong></p> <p>10th Floor,
+      Miss Ao Dai Tower</p> <p>21 Nguyen Trung Ngan st.,</p> <p>Ben Nghe Ward, District
+      1,</p> <p>Ho Chi Minh City, Vietnam</p>
+
+      <p><u><a href="http://www.nextpro.io/">info@nextpro.io</a></u> <u><a href="http://www.nextpro.io/">www.nextpro.io</a></u></p>
+      <hr /> <p style="color: gray;">The information contained in this e-mail is intended
+      only for its addressee and may contain confidential and/or privileged information.
+      If you are not the intended recipient, you are hereby notified that reading,
+      saving, distribution or use of the content of this e-mail is prohibited. If
+      you have received this e-mail in error, please notify the sender and delete
+      the e-mail.</p> <p>&nbsp;</p>'
+- model: master_data.emailtemplatestranslation
+  pk: 82
+  fields:
+    language_code: en
+    email_templates: 28
+    title: 'Warning! Your NextPro account has already expired '
+    content: '<p><img src="{{image}}" alt="" width="189" height="30" /></p> <hr />
+      <p>Dear Mr./Mrs. <span style="color: red;">{{name}} </span>,</p> <p>&nbsp;</p>
+      <p>We wish to thank you for choosing NextPro to collaborate during last past
+      time. By this email, NextPro would like to inform that your <span style="color:
+      #ff0000;">{{Scheme}}</span> account has been already expired and switched to
+      <span style="color: #ff0000;"><strong>Unsecure</strong></span> account. Easy
+      to renew or upgrade your account by one click to the <a href="{{link}}">link</a></p>
+      <p>Thank you for giving us the more opportunity to serve you better.</p> <p>&nbsp;</p>
+      <p>Many Thanks and Best Regards,</p> <p>Customer Service</p> <p>&nbsp;</p> <p><strong>NextPro
+      International Procurement Service Company Limited</strong></p> <p>10th Floor,
+      Miss Ao Dai Tower</p> <p>21 Nguyen Trung Ngan st.,</p> <p>Ben Nghe Ward, District
+      1,</p> <p>Ho Chi Minh City, Vietnam</p>
+
+      <p><u><a href="http://www.nextpro.io/">info@nextpro.io</a></u> <u><a href="http://www.nextpro.io/">www.nextpro.io</a></u></p>
+      <hr /> <p style="color: gray;">The information contained in this e-mail is intended
+      only for its addressee and may contain confidential and/or privileged information.
+      If you are not the intended recipient, you are hereby notified that reading,
+      saving, distribution or use of the content of this e-mail is prohibited. If
+      you have received this e-mail in error, please notify the sender and delete
+      the e-mail.</p> <p>&nbsp;</p>'
+- model: master_data.emailtemplatestranslation
+  pk: 83
+  fields:
+    language_code: en
+    email_templates: 29
+    title: Reminder for Deposit to attend E-Auction No. {{auction_item_code}} on NextPro
+    content: '<p><img src="{{image}}" alt="" width="189" height="30" /></p> <hr />
+      <p>Dear Mr./Mrs. <span style="color: red;">{{name}} </span>,</p> <p>&nbsp;</p>
+      <p >We wish to thank you for choosing NextPro to collaborate during last past
+      time. </p> <p>You have recently been invited to attend an E-Auction request
+      on the NextPro E-Auction Platform with draft ID <span style="color: #ff0000;">{{auciton_item_code}}</span>
+      by <span style="color: #ff0000;">{{buyer_name}} </span> but we have not yet
+      noticed you make a deposit, please visit this <a href="{{link}}">link</a> and
+      make a deposit, after the deposit is completed then you can then attend to bid
+      for E-Auction on defined period.</p> <p>&nbsp;</p> <p>Thank you for giving us
+      the more opportunity to serve you better.</p> <p>&nbsp;</p> <p>Many Thanks and
+      Best Regards,</p> <p>Customer Service</p> <p>&nbsp;</p> <p><strong>NextPro International
+      Procurement Service Company Limited</strong></p> <p>10th Floor, Miss Ao Dai
+      Tower</p> <p>21 Nguyen Trung Ngan st.,</p> <p>Ben Nghe Ward, District 1,</p>
+      <p>Ho Chi Minh City, Vietnam</p>
+
+      <p><u><a href="http://www.nextpro.io/">info@nextpro.io</a></u> <u><a href="http://www.nextpro.io/">www.nextpro.io</a></u></p>
+      <hr /> <p style="color: gray;">The information contained in this e-mail is intended
+      only for its addressee and may contain confidential and/or privileged information.
+      If you are not the intended recipient, you are hereby notified that reading,
+      saving, distribution or use of the content of this e-mail is prohibited. If
+      you have received this e-mail in error, please notify the sender and delete
+      the e-mail.</p> <p>&nbsp;</p>'
+- model: master_data.emailtemplatestranslation
+  pk: 84
+  fields:
+    language_code: en
+    email_templates: 30
+    title: 'Congratulations! New published E-auction for Code: {{code}}'
+    content: '<p><img src="{{image}}" alt="" width="189" height="30" /></p> <hr />
+      <p>Dear <span style="color: red;"> {{name}} </span></p> <p>&nbsp;</p> <p>Congratulations
+      Mr./Mrs.<span style="color: red;">{{name}}</span> with Premium Affiliate Marketing/Ambassador
+      Program as <span style="color: red;">{{code}}</span> will be able to earn more
+      money with NextPro!</p> <p>Recently <span style="color: red;">{{buyer_name}}</span>
+      has published an Auction No.<span style="color: red;">{{auction_no}}</span>,
+      auction title <span style="color: red;">{{auction_title}}</span> with the value
+      around from <span style="color: red;">{{min_supplier_quote}}</span> to <span
+      style="color: red;">{{max_supplier_quote}}</span> and used your Premium Affiliate
+      Marketing/Ambassador code provided by you. Please keep following up further
+      emails from NextPro after awarding step to see more chance of earnings with
+      us.</p> <p>If you have any questions, please contact our service support team.
+      Thank you for your cooperation with NextPro during the past time.</p> <p>&nbsp;</p>
+      <p>Many Thanks and Best Regards,</p> <p>Customer Service</p> <p>&nbsp;</p> <p><strong>NextPro
+      International Procurement Service Company Limited</strong></p> <p>10th Floor,
+      Miss Ao Dai Tower</p> <p>21 Nguyen Trung Ngan st.,</p> <p>Ben Nghe Ward, District
+      1,</p> <p>Ho Chi Minh City, Vietnam</p>
+
+      <p><a href="info@nextpro.io">info@nextpro.io</a> | <a href="http://www.nextpro.io">www.nextpro.io</a></p>
+      <p>&nbsp;</p> <hr /> <p><span style="color: gray;">The information contained
+      in this e-mail is intended only for its addressee and may contain confidential
+      and/or privileged information. If you are not the intended recipient, you are
+      hereby notified that reading, saving, distribution or use of the content of
+      this e-mail is prohibited. If you have received this e-mail in error, please
+      notify the sender and delete the e-mail.</span></p>'
+- model: master_data.emailtemplatestranslation
+  pk: 85
+  fields:
+    language_code: en
+    email_templates: 31
+    title: 'Congratulations! New earning transaction of E-auction for Code: {{code}}'
+    content: '<p><img src="{{image}}" alt="" width="189" height="30" /></p> <hr />
+      <p>Dear <span style="color: red;"> {{name}} </span></p> <p>&nbsp;</p> <p>Congratulations
+      Mr./Mrs.<span style="color: red;">{{name}}</span> with Premium Affiliate Marketing/Ambassador
+      Program as <span style="color: red;">{{code}}</span> has earned more money with
+      NextPro today!</p> <p>&nbsp;</p> <p>Recently <span style="color: red;">{{buyer_name}}</span>
+      has successfully awarded to their supplier for an Auction No.<span style="color:
+      red;">{{auction_no}}</span>, auction title <span style="color: red;">{{aution_title}}</span>
+      with the total paid value amount is <span style="color: red;">{{supplier_charged_amount}}</span>
+      so you are rewarded with the value of your agreed scheme benefit percentage
+      x <span style="color: red;">{{supplier_charged_amount}}</span>.</p> <p>Please
+      check your bank account registered with NextPro within next 30 days to see your
+      balance.</p> <p>If you have any questions, please contact our service support
+      team. Thank you for your cooperation with NextPro during the past time.</p>
+      <p><br /><br /></p> <p>&nbsp;</p> <p>Many Thanks and Best Regards,</p> <p>Customer
+      Service</p> <p>&nbsp;</p> <p><strong>NextPro International Procurement Service
+      Company Limited</strong></p> <p>10th Floor, Miss Ao Dai Tower</p> <p>21 Nguyen
+      Trung Ngan st.,</p> <p>Ben Nghe Ward, District 1,</p> <p>Ho Chi Minh City, Vietnam</p>
+
+      <p><a href="info@nextpro.io">info@nextpro.io</a> | <a href="http://www.nextpro.io">www.nextpro.io</a></p>
+      <p>&nbsp;</p> <hr /> <p><span style="color: gray;">The information contained
+      in this e-mail is intended only for its addressee and may contain confidential
+      and/or privileged information. If you are not the intended recipient, you are
+      hereby notified that reading, saving, distribution or use of the content of
+      this e-mail is prohibited. If you have received this e-mail in error, please
+      notify the sender and delete the e-mail.</span></p>'
+- model: master_data.emailtemplatestranslation
+  pk: 86
+  fields:
+    language_code: en
+    email_templates: 32
+    title: Notification to Buyer for cancellation e-Auction {{auction_item_code}}
+    content: '<p><img src="{{image}}" alt="" width="189" height="30" /></p> <hr />
+      <p>Dear <span style="color: red;"> {{name}} </span></p> <p>&nbsp;</p> <p>We
+      are officially notifying that you have cancelled the e-Auction <span  style="color:
+      red;">{{auction_title}} </span> with the number <span  style="color: red;">{{auction_item_code}}</span>
+      as reasons <span  style="color: red;">{{reason}}</span></p> <p>&nbsp;</p> <p><span
+      style="font-weight: 400;">To view your e-Auction details, please log on with
+      your buyer account by using the following link:<a href="{{link}}">log on now</a>
+      <p>&nbsp;</p> <p>Many Thanks and Best Regards,</p> <p>Customer Service</p> <p>&nbsp;</p>
+      <p><strong>NextPro International Procurement Service Company Limited</strong></p>
+      <p>10th Floor, Miss Ao Dai Tower</p> <p>21 Nguyen Trung Ngan st.,</p> <p>Ben
+      Nghe Ward, District 1,</p> <p>Ho Chi Minh City, Vietnam</p>
+
+      <p><a href="info@nextpro.io">info@nextpro.io</a> | <a href="http://www.nextpro.io">www.nextpro.io</a></p>
+      <p>&nbsp;</p> <hr /> <p><span style="color: gray;">The information contained
+      in this e-mail is intended only for its addressee and may contain confidential
+      and/or privileged information. If you are not the intended recipient, you are
+      hereby notified that reading, saving, distribution or use of the content of
+      this e-mail is prohibited. If you have received this e-mail in error, please
+      notify the sender and delete the e-mail.</span></p>'
+- model: master_data.emailtemplatestranslation
+  pk: 87
+  fields:
+    language_code: en
+    email_templates: 33
+    title: Notification to Supplier for E-Auction cancellation - E-Auction {{auction_item_code}}
+    content: '<p><img src="{{image}}" alt="" width="189" height="30" /></p> <hr />
+      <p>Dear <span style="color: red;"> {{name}} </span></p> <p>&nbsp;</p> <p>We
+      are officially notifying you that  <span style="color: red;">{{buyer_company_name}}</span>
+      has cancelled the E-Auction  <span style="color: red;">{{Title}}</span> with
+      the E-Auction No.  <span style="color: red;">{{auction_item_code}}</span></p>
+      <p><span style="font-weight: 400;">Please see the reason of cancellation <span
+      style="color: red;">{{reason}}.</span></p> <p>In case you have questions, please
+      contact the responsible buyer.</span></p> <p>&nbsp;</p> <p>Many Thanks and Best
+      Regards,</p> <p>Customer Service</p> <p>&nbsp;</p> <p><strong>NextPro International
+      Procurement Service Company Limited</strong></p> <p>10th Floor, Miss Ao Dai
+      Tower</p> <p>21 Nguyen Trung Ngan st.,</p> <p>Ben Nghe Ward, District 1,</p>
+      <p>Ho Chi Minh City, Vietnam</p>
+
+      <p><a href="info@nextpro.io">info@nextpro.io</a> | <a href="http://www.nextpro.io">www.nextpro.io</a></p>
+      <p>&nbsp;</p> <hr /> <p><span style="color: gray;">The information contained
+      in this e-mail is intended only for its addressee and may contain confidential
+      and/or privileged information. If you are not the intended recipient, you are
+      hereby notified that reading, saving, distribution or use of the content of
+      this e-mail is prohibited. If you have received this e-mail in error, please
+      notify the sender and delete the e-mail.</span></p>'
+- model: master_data.emailtemplatestranslation
+  pk: 88
+  fields:
+    language_code: en
+    email_templates: 34
+    title: 'Congratulations! New Earning Transaction Of Registration For Code: {{pro_code}}.'
+    content: '<p><img src="{{image}}" alt="" width="189" height="30" /></p> <hr />
+      <p>Dear Mr./Mrs.<span style="color: red;"> {{name}} </span>,</p> <br> <p>Congratulations
+      Ambassador <span style="color: red;">{{name}}</span> with Ambassador Code as
+      <span style="color: red;">{{pro_code}}</span> has earned more money with NextPro
+      today!</p> <br> <p>Recently a customer name <span style="color: red;">{{user_name}}</span>
+      has made a payment to successfully purchase the <span style="color: red;">{{profile_name}}</span>
+      upgrade service package with the total paid value amount <span style="color:
+      red;">{% load humanize %}{{profile_amount|intcomma}} VND</span>, so you are
+      rewarded with <span style="color: red;">{{commission}}%</span> equal to value
+      of <span style="color: red;">{% load humanize %}{{commission_amount|intcomma}}
+      VND</span>.</p> <p>The payment to your bank account will be after the next consolidation
+      round.</p> <p>If you have any questions, please contact our service support
+      team. Thank you for your cooperation with NextPro during the past time.</p>
+      <br> <p>Many Thanks and Best Regards,</p> <p>Customer Service</p> <br> <p><strong>NextPro
+      International Procurement Service Company Limited</strong></p> <p>10th Floor,
+      Miss Ao Dai Tower</p> <p>21 Nguyen Trung Ngan st.,</p> <p>Ben Nghe Ward, District
+      1,</p> <p>Ho Chi Minh City, Vietnam</p>
+
+      <p><u><a href="http://www.nextpro.io/">info@nextpro.io</a></u> <u><a href="http://www.nextpro.io/">www.nextpro.io</a></u></p>
+      <hr /> <p style="color: gray;">The information contained in this e-mail is intended
+      only for its addressee and may contain confidential and/or privileged information.
+      If you are not the intended recipient, you are hereby notified that reading,
+      saving, distribution or use of the content of this e-mail is prohibited. If
+      you have received this e-mail in error, please notify the sender and delete
+      the e-mail.</p> <p>&nbsp;</p>'
+- model: master_data.emailtemplatestranslation
+  pk: 89
+  fields:
+    language_code: en
+    email_templates: 35
+    title: Invitation of new RFX for appointed supplier
+    content: "<table style=\"width:100%;\"><tr><td><img src=\"{{image}}\" alt=\"\"\
+      \ width=\"189\" height=\"30\" /></td><td style=\"text-align: right; padding-top:\
+      \ 15px\">RFx invitation</td></tr></table> <hr /> <p>Dear Mr./Mrs: <span style=\"\
+      color: blue;\">{{supplier_user_name}},</span></p> <p>You are invited to submit\
+      \ a RFx to provide an <span style=\"color: blue;\">{{title}}</span> to the <span\
+      \ style=\"color: blue;\">{{buyer_name}}</span> with RFx no. <span style=\"color:\
+      \ blue;\">{{item_code}}</span> that is available on <a href=\"https://auction.nextpro.io/auth/login\"\
+      >link</a>.</p> <p>By participating in this RFx, you are indicating your acceptance\
+      \ to be bound by the guidelines set out in mentioned RFx and attachments. We\
+      \ provide together with mentioned RFx the key details of <span style=\"color:\
+      \ blue;\">{{buyer_name}}</span> requirements, which you should take into account\
+      \ before submitting your response.<p/> <p>The response needs to be submitted\
+      \ to RFx no. <span style=\"color: blue;\">{{item_code}}</span> by <span style=\"\
+      color: blue;\">{{due_date}},</span> <span style=\"color: blue;\">{{time_value}}</span>\
+      \ via the <a href=\"https://auction.nextpro.io/auth/login\">link</a> in this\
+      \ email.</p> <p>Please direct any questions regarding the RFx no. <span style=\"\
+      color: blue;\">{{item_code}}</span> content or process to the <span style=\"\
+      color: blue;\">{{buyer_name}}</span> representatives named in mentioned RFx.\
+      \ You should not contact other <span style=\"color: blue;\">{{buyer_name}}</span>\u2019\
+      s personnel unless directed to do so by the <span style=\"color: blue;\">{{buyer_name}}</span>\
+      \ representative. <span style=\"color: blue;\">{{buyer_name}}</span> reserves\
+      \ the right to disqualify and reject submitted RFx from suppliers who do not\
+      \ comply with these guidelines. All questions should be submitted in writing\
+      \ either by NextPro trading platform or to the email address in mentioned RFx.</p>\
+      \ <p>By smart selection of NextPro system, we believe this RFx is the best match\
+      \ to your company profile!</p> <p>&nbsp;</p> <p>Many Thanks and Best Regards,</p>\
+      \ <p>Customer Service</p> <p>&nbsp;</p> <p><strong>NextPro International Procurement\
+      \ Service Company Limited</strong></p> <p>10th Floor, Miss Ao Dai Tower</p>\
+      \ <p>21 Nguyen Trung Ngan st.,</p> <p>Ben Nghe Ward, District 1,</p> <p>Ho Chi\
+      \ Minh City, Vietnam</p>\n<p><a href=\"info@nextpro.io\">info@nextpro.io</a>\
+      \ | <a href=\"http://www.nextpro.io\">www.nextpro.io</a></p> <p>&nbsp;</p> <hr\
+      \ /> <p><span style=\"color: gray;\">The information contained in this e-mail\
+      \ is intended only for its addressee and may contain confidential and/or privileged\
+      \ information. If you are not the intended recipient, you are hereby notified\
+      \ that reading, saving, distribution or use of the content of this e-mail is\
+      \ prohibited. If you have received this e-mail in error, please notify the sender\
+      \ and delete the e-mail.</span></p>"
+- model: master_data.emailtemplatestranslation
+  pk: 90
+  fields:
+    language_code: en
+    email_templates: 36
+    title: Invitation of new RFX for schemed supplier
+    content: "<table style=\"width:100%;\"><tr><td><img src=\"{{image}}\" alt=\"\"\
+      \ width=\"189\" height=\"30\" /></td><td style=\"text-align: right; padding-top:\
+      \ 15px\">RFx invitation</td></tr></table> <hr /> <p>Dear Mr./Mrs: <span style=\"\
+      color: blue;\">{{supplier_user_name}},</span></p> <p>Now available on link for\
+      \ RFx no. <span style=\"color: blue;\">{{item_code}}</span> to submit a response\
+      \ to provide an <span style=\"color: blue;\">{{title}}</span> to the <span style=\"\
+      color: blue;\">{{buyer_name}}</span>. Your company has been selected by intelligence\
+      \ system of NextPro that we believe this available RFx is the best fit to your\
+      \ company profile.</p> <p>By participating in this RFx, you are indicating your\
+      \ acceptance to be bound by the guidelines set out in mentioned RFx and attachments.\
+      \ We provide together with mentioned RFx the key details of <span style=\"color:\
+      \ blue;\">{{buyer_name}}</span> requirements, which you should take into account\
+      \ before submitting your response. <p/> <p>The response needs to be submitted\
+      \ to RFx no. <span style=\"color: blue;\">{{item_code}}</span> by <span style=\"\
+      color: blue;\">{{due_date}},</span> <span style=\"color: blue;\">{{time_value}}</span>\
+      \ via the <a href=\"https://auction.nextpro.io/auth/login\">link</a> in this\
+      \ email.</p> <p>Please direct any questions regarding the RFx no. <span style=\"\
+      color: blue;\">{{item_code}}</span> content or process to the <span style=\"\
+      color: blue;\">{{buyer_name}}</span> representatives named in mentioned RFx.\
+      \ You should not contact other <span style=\"color: blue;\">{{buyer_name}}</span>\u2019\
+      s personnel unless directed to do so by the <span style=\"color: blue;\">{{buyer_name}}</span>\
+      \ representative. <span style=\"color: blue;\">{{buyer_name}}</span> reserves\
+      \ the right to disqualify and reject submitted RFx from suppliers who do not\
+      \ comply with these guidelines. All questions should be submitted in writing\
+      \ either by NextPro trading platform or to the email address in mentioned RFx.</p>\
+      \ <p>By smart selection of NextPro system, we believe this RFx is the best match\
+      \ to your company profile!</p> <p>&nbsp;</p> <p>Many Thanks and Best Regards,</p>\
+      \ <p>Customer Service</p> <p>&nbsp;</p> <p><strong>NextPro International Procurement\
+      \ Service Company Limited</strong></p> <p>10th Floor, Miss Ao Dai Tower</p>\
+      \ <p>21 Nguyen Trung Ngan st.,</p> <p>Ben Nghe Ward, District 1,</p> <p>Ho Chi\
+      \ Minh City, Vietnam</p>\n<p><a href=\"info@nextpro.io\">info@nextpro.io</a>\
+      \ | <a href=\"http://www.nextpro.io\">www.nextpro.io</a></p> <p>&nbsp;</p> <hr\
+      \ /> <p><span style=\"color: gray;\">The information contained in this e-mail\
+      \ is intended only for its addressee and may contain confidential and/or privileged\
+      \ information. If you are not the intended recipient, you are hereby notified\
+      \ that reading, saving, distribution or use of the content of this e-mail is\
+      \ prohibited. If you have received this e-mail in error, please notify the sender\
+      \ and delete the e-mail.</span></p>"
+- model: master_data.emailtemplatestranslation
+  pk: 91
+  fields:
+    language_code: en
+    email_templates: 37
+    title: Notification to Buyer for Expire Date and Cost Comparison of RFx
+    content: '<table style="width:100%;"><tr><td><img src="{{image}}" alt="" width="189"
+      height="30" /></td><td style="text-align: right; padding-top: 15px">Cost comparison</td></tr></table>
+      <hr /> <p>Dear Mr./Mrs: <span style="color: blue;"> {{buyer_user_name}},</span></p>
+      <p>Your RFx - <span style="color: blue;">{{title}}</span> with the RFx no. <span
+      style="color: blue;">{{item_code}}</span> has ended successfully. There are
+      <span style="color: blue;">{{number}}</span> quotations have been submitted
+      in the mentioned RFx.</p> <p>To view the submitted quotations as well as cost
+      comparison table, please log on with your buyer account and the matching password
+      using the following link: <a href="https://auction.nextpro.io/auth/login">log
+      on now</a></p> <p>&nbsp;</p> <p>Many Thanks and Best Regards,</p> <p>Customer
+      Service</p> <p>&nbsp;</p> <p><strong>NextPro International Procurement Service
+      Company Limited</strong></p> <p>10th Floor, Miss Ao Dai Tower</p> <p>21 Nguyen
+      Trung Ngan st.,</p> <p>Ben Nghe Ward, District 1,</p> <p>Ho Chi Minh City, Vietnam</p>
+
+      <p><a href="info@nextpro.io">info@nextpro.io</a> | <a href="http://www.nextpro.io">www.nextpro.io</a></p>
+      <p>&nbsp;</p> <hr /> <p><span style="color: gray;">The information contained
+      in this e-mail is intended only for its addressee and may contain confidential
+      and/or privileged information. If you are not the intended recipient, you are
+      hereby notified that reading, saving, distribution or use of the content of
+      this e-mail is prohibited. If you have received this e-mail in error, please
+      notify the sender and delete the e-mail.</span></p>'
+- model: master_data.emailtemplatestranslation
+  pk: 92
+  fields:
+    language_code: en
+    email_templates: 38
+    title: Rejection Letter to Suppliers for RFx Response
+    content: '<table style="width:100%;"><tr><td><img src="{{image}}" alt="" width="189"
+      height="30" /></td><td style="text-align: right; padding-top: 15px">Rejection
+      letter</td></tr></table> <hr /> <p>Dear Mr./Mrs: <span style="color: blue;">{{supplier_user_name}},</span></p>
+      <p>The purpose of this letter is to inform you that the evaluation of your proposals
+      in response to the subject RFx no. <span style="color: blue;">{{item_code}}</span>,
+      issued by buying company <span style="color: blue;">{{buyer_name}}</span> which
+      has been completed.</p> <p>The Technical Evaluation Committee of buying company
+      evaluated all proposals in strict accordance with the evaluation criteria set
+      forth in the mentioned RFx.  We regret to inform you that your company proposal
+      was not selected for award. The reason of rejection is <span style="color: blue;">{{reason}}</span>.</p>
+      <p>We want to thank you for your proposal and your interest in this engagement,
+      and we look forward to your future participation in future RFx for similar engagements.</p>
+      <p>Should you have any questions about this matter, please feel free to contact
+      us.</p> <p>&nbsp;</p> <p>Many Thanks and Best Regards,</p> <p>Customer Service</p>
+      <p>&nbsp;</p> <p><strong>NextPro International Procurement Service Company Limited</strong></p>
+      <p>10th Floor, Miss Ao Dai Tower</p> <p>21 Nguyen Trung Ngan st.,</p> <p>Ben
+      Nghe Ward, District 1,</p> <p>Ho Chi Minh City, Vietnam</p>
+
+      <p><a href="info@nextpro.io">info@nextpro.io</a> | <a href="http://www.nextpro.io">www.nextpro.io</a></p>
+      <p>&nbsp;</p> <hr /> <p><span style="color: gray;">The information contained
+      in this e-mail is intended only for its addressee and may contain confidential
+      and/or privileged information. If you are not the intended recipient, you are
+      hereby notified that reading, saving, distribution or use of the content of
+      this e-mail is prohibited. If you have received this e-mail in error, please
+      notify the sender and delete the e-mail.</span></p>'
+- model: master_data.emailtemplatestranslation
+  pk: 93
+  fields:
+    language_code: en
+    email_templates: 39
+    title: RFQ Approval Submission
+    content: '<table style="width:100%;"><tr><td><img src="{{image}}" alt="" width="189"
+      height="30" /></td><td style="text-align: right; padding-top: 15px">RFQ Approval
+      submission</td></tr></table> <hr /> <p>Dear Mr./Mrs: <span style="color: blue;">{{buyer_user_name}},</span></p>
+      <p>Your buyer <span style="color: blue;">{{buyer_name}}</span> has just submitted
+      the request for quotation no. <span style="color: blue;">{{item_code}}</span>
+      with title <span style="color: blue;">{{title}}</span>, total budget <span style="color:
+      blue;">{{bubget}}</span> <span style="color: blue;">{{currency}}</span> and
+      looking for your approval via this <a href="https://auction.nextpro.io/auth/login">link</a>.</p>
+      <p>&nbsp;</p> <p>Many Thanks and Best Regards,</p> <p>Customer Service</p> <p>&nbsp;</p>
+      <p><strong>NextPro International Procurement Service Company Limited</strong></p>
+      <p>10th Floor, Miss Ao Dai Tower</p> <p>21 Nguyen Trung Ngan st.,</p> <p>Ben
+      Nghe Ward, District 1,</p> <p>Ho Chi Minh City, Vietnam</p>
+
+      <p><a href="info@nextpro.io">info@nextpro.io</a> | <a href="http://www.nextpro.io">www.nextpro.io</a></p>
+      <p>&nbsp;</p> <hr /> <p><span style="color: gray;">The information contained
+      in this e-mail is intended only for its addressee and may contain confidential
+      and/or privileged information. If you are not the intended recipient, you are
+      hereby notified that reading, saving, distribution or use of the content of
+      this e-mail is prohibited. If you have received this e-mail in error, please
+      notify the sender and delete the e-mail.</span></p>'
+- model: master_data.emailtemplatestranslation
+  pk: 94
+  fields:
+    language_code: en
+    email_templates: 40
+    title: Approved RFQ notification
+    content: "<table style=\"width:100%;\"><tr><td><img src=\"{{image}}\" alt=\"\"\
+      \ width=\"189\" height=\"30\" /></td><td style=\"text-align: right; padding-top:\
+      \ 15px\">Approved RFQ notification</td></tr></table> <hr /> <p>Dear Mr./Mrs:\
+      \ <span style=\"color: blue;\">{{buyer_user_name}},</span></p> <p>Your request\
+      \ for quotation no. <span style=\"color: blue;\">{{item_code}}</span> with title\
+      \ <span style=\"color: blue;\">{{title}}</span>, total budget <span style=\"\
+      color: blue;\">{{bubget}}</span> <span style=\"color: blue;\">{{currency}}</span>\
+      \ has just approved by your manager and we posted this RFQ to suppliers\u2019\
+      \ network in NextPro platform, please waiting for competitive quote submission\
+      \ from suppliers.</p> <p>&nbsp;</p> <p>Many Thanks and Best Regards,</p> <p>Customer\
+      \ Service</p> <p>&nbsp;</p> <p><strong>NextPro International Procurement Service\
+      \ Company Limited</strong></p> <p>10th Floor, Miss Ao Dai Tower</p> <p>21 Nguyen\
+      \ Trung Ngan st.,</p> <p>Ben Nghe Ward, District 1,</p> <p>Ho Chi Minh City,\
+      \ Vietnam</p>\n<p><a href=\"info@nextpro.io\">info@nextpro.io</a> | <a href=\"\
+      http://www.nextpro.io\">www.nextpro.io</a></p> <p>&nbsp;</p> <hr /> <p><span\
+      \ style=\"color: gray;\">The information contained in this e-mail is intended\
+      \ only for its addressee and may contain confidential and/or privileged information.\
+      \ If you are not the intended recipient, you are hereby notified that reading,\
+      \ saving, distribution or use of the content of this e-mail is prohibited. If\
+      \ you have received this e-mail in error, please notify the sender and delete\
+      \ the e-mail.</span></p>"
+- model: master_data.emailtemplatestranslation
+  pk: 95
+  fields:
+    language_code: en
+    email_templates: 41
+    title: Email auto negotiation
+    content: '<table style="width:100%;"><tr><td><img src="{{image}}" alt="" width="189"
+      height="30" /></td><td style="text-align: right; padding-top: 15px">Auto price
+      negotiation</td></tr></table> <hr /> <p>Dear Mr./Mrs: <span style="color: blue;">{{supplier_user_name}},</span></p>
+      <p>Recently the RFQ that you have been participated no. <span style="color:
+      blue;">{{item_code}}</span>, title <span style="color: blue;">{{title}}</span>
+      issued by the purchasing company <span style="color: blue;">{{buyer_name}}</span>,
+      we would like to inform you that currently you are temporary a leader in this
+      transaction. Again, congratulation and please continue to follow up our email
+      communication for updating its status.</p> <p>&nbsp;</p> <p>Many Thanks and
+      Best Regards,</p> <p>Customer Service</p> <p>&nbsp;</p> <p><strong>NextPro International
+      Procurement Service Company Limited</strong></p> <p>10th Floor, Miss Ao Dai
+      Tower</p> <p>21 Nguyen Trung Ngan st.,</p> <p>Ben Nghe Ward, District 1,</p>
+      <p>Ho Chi Minh City, Vietnam</p>
+
+      <p><a href="info@nextpro.io">info@nextpro.io</a> | <a href="http://www.nextpro.io">www.nextpro.io</a></p>
+      <p>&nbsp;</p> <hr /> <p><span style="color: gray;">The information contained
+      in this e-mail is intended only for its addressee and may contain confidential
+      and/or privileged information. If you are not the intended recipient, you are
+      hereby notified that reading, saving, distribution or use of the content of
+      this e-mail is prohibited. If you have received this e-mail in error, please
+      notify the sender and delete the e-mail.</span></p>'
+- model: master_data.emailtemplatestranslation
+  pk: 96
+  fields:
+    language_code: en
+    email_templates: 42
+    title: Email auto negotiation
+    content: "<table style=\"width:100%;\"><tr><td><img src=\"{{image}}\" alt=\"\"\
+      \ width=\"189\" height=\"30\" /></td><td style=\"text-align: right; padding-top:\
+      \ 15px\">Auto price negotiation</td></tr></table> <hr /> <p>Dear Mr./Mrs: <span\
+      \ style=\"color: blue;\">{{supplier_user_name}},</span></p> <p>Recently the\
+      \ RFQ that you have been participated no. <span style=\"color: blue;\">{{item_code}}</span>,\
+      \ title <span style=\"color: blue;\">{{title}}</span> issued by the purchasing\
+      \ company <span style=\"color: blue;\">{{buyer_name}}</span>, we would like\
+      \ to inform you that your recently offering is not the best competitive one\
+      \ compared to others, it\u2019s meant all offer are quite close each other.\
+      \ Let\u2019s reduce more <span style=\"color: blue;\">{{percentage}}%</span>\
+      \ to be the best one if you don\u2019t want to pass this business opportunity\
+      \ to other supplier.</p> <p>&nbsp;</p> <p>Many Thanks and Best Regards,</p>\
+      \ <p>Customer Service</p> <p>&nbsp;</p> <p><strong>NextPro International Procurement\
+      \ Service Company Limited</strong></p> <p>10th Floor, Miss Ao Dai Tower</p>\
+      \ <p>21 Nguyen Trung Ngan st.,</p> <p>Ben Nghe Ward, District 1,</p> <p>Ho Chi\
+      \ Minh City, Vietnam</p>\n<p><a href=\"info@nextpro.io\">info@nextpro.io</a>\
+      \ | <a href=\"http://www.nextpro.io\">www.nextpro.io</a></p> <p>&nbsp;</p> <hr\
+      \ /> <p><span style=\"color: gray;\">The information contained in this e-mail\
+      \ is intended only for its addressee and may contain confidential and/or privileged\
+      \ information. If you are not the intended recipient, you are hereby notified\
+      \ that reading, saving, distribution or use of the content of this e-mail is\
+      \ prohibited. If you have received this e-mail in error, please notify the sender\
+      \ and delete the e-mail.</span></p>"
+- model: master_data.emailtemplatestranslation
+  pk: 97
+  fields:
+    language_code: en
+    email_templates: 43
+    title: Email auto negotiation
+    content: "<table style=\"width:100%;\"><tr><td><img src=\"{{image}}\" alt=\"\"\
+      \ width=\"189\" height=\"30\" /></td><td style=\"text-align: right; padding-top:\
+      \ 15px\">Auto price negotiation</td></tr></table> <hr /> <p>Dear Mr./Mrs: <span\
+      \ style=\"color: blue;\">{{supplier_user_name}},</span></p> <p>Recently the\
+      \ request for quotation that you have been participated no. <span style=\"color:\
+      \ blue;\">{{item_code}}</span>, title <span style=\"color: blue;\">{{title}}</span>\
+      \ issued by purchasing company <span style=\"color: blue;\">{{buyer_name}}</span>\
+      \ that has just submitted by another supplier with a better price than yours.\
+      \ Please reduce more <span style=\"color: blue;\">{{percentage}}%</span> to\
+      \ be the best one and don\u2019t miss your scale up business opportunity with\
+      \ this purchasing company.</p> <p>Note: don\u2019t forget to submit your next\
+      \ offer not later than <span style=\"color: blue;\">{{due_date}},</span> <span\
+      \ style=\"color: blue;\">{{time_value}}</span> via the <a href=\"https://auction.nextpro.io/auth/login\"\
+      >link</a> in this email.</p> <p>&nbsp;</p> <p>Many Thanks and Best Regards,</p>\
+      \ <p>Customer Service</p> <p>&nbsp;</p> <p><strong>NextPro International Procurement\
+      \ Service Company Limited</strong></p> <p>10th Floor, Miss Ao Dai Tower</p>\
+      \ <p>21 Nguyen Trung Ngan st.,</p> <p>Ben Nghe Ward, District 1,</p> <p>Ho Chi\
+      \ Minh City, Vietnam</p>\n<p><a href=\"info@nextpro.io\">info@nextpro.io</a>\
+      \ | <a href=\"http://www.nextpro.io\">www.nextpro.io</a></p> <p>&nbsp;</p> <hr\
+      \ /> <p><span style=\"color: gray;\">The information contained in this e-mail\
+      \ is intended only for its addressee and may contain confidential and/or privileged\
+      \ information. If you are not the intended recipient, you are hereby notified\
+      \ that reading, saving, distribution or use of the content of this e-mail is\
+      \ prohibited. If you have received this e-mail in error, please notify the sender\
+      \ and delete the e-mail.</span></p>"
+- model: master_data.emailtemplatestranslation
+  pk: 98
+  fields:
+    language_code: en
+    email_templates: 44
+    title: Cost comparison
+    content: '<table style="width:100%;"><tr><td><img src="{{image}}" alt="" width="189"
+      height="30" /></td><td style="text-align: right; padding-top: 15px">Cost comparison</td></tr></table>
+      <hr /> <p>Dear Mr./Mrs: <span style="color: blue;">{{buyer_user_name}},</span></p>
+      <p>The request for quotation no. <span style="color: blue;">{{item_code}}</span>,
+      title <span style="color: blue;">{{title}}</span> already finished successfully
+      for quote submission, there are <span style="color: blue;">{{number}}</span>
+      quotes have been submitted, to view detail and cost comparison please login
+      your official account by the following link: <a href="https://auction.nextpro.io/auth/login">login
+      now</a>.</p> <p>&nbsp;</p> <p>Many Thanks and Best Regards,</p> <p>Customer
+      Service</p> <p>&nbsp;</p> <p><strong>NextPro International Procurement Service
+      Company Limited</strong></p> <p>10th Floor, Miss Ao Dai Tower</p> <p>21 Nguyen
+      Trung Ngan st.,</p> <p>Ben Nghe Ward, District 1,</p> <p>Ho Chi Minh City, Vietnam</p>
+
+      <p><a href="info@nextpro.io">info@nextpro.io</a> | <a href="http://www.nextpro.io">www.nextpro.io</a></p>
+      <p>&nbsp;</p> <hr /> <p><span style="color: gray;">The information contained
+      in this e-mail is intended only for its addressee and may contain confidential
+      and/or privileged information. If you are not the intended recipient, you are
+      hereby notified that reading, saving, distribution or use of the content of
+      this e-mail is prohibited. If you have received this e-mail in error, please
+      notify the sender and delete the e-mail.</span></p>'
+- model: master_data.emailtemplatestranslation
+  pk: 99
+  fields:
+    language_code: en
+    email_templates: 45
+    title: Supplier awarding approval
+    content: '<table style="width:100%;"><tr><td><img src="{{image}}" alt="" width="189"
+      height="30" /></td><td style="text-align: right; padding-top: 15px">Supplier
+      awarding approval</td></tr></table> <hr /> <p>Dear Mr./Mrs: <span style="color:
+      blue;">{{buyer_user_name}},</span></p> <p>The request for quotation no. <span
+      style="color: blue;">{{item_code}}</span>, title <span style="color: blue;">{{title}}</span>
+      already finished successfully for quote submission, your responsible buyer would
+      like to propose for supplier awarding to supplier <span style="color: blue;">{{supplier_name}}</span>
+      who has passed technical evaluation and because this supplier quoted the best
+      price than other, actual saving <span style="color: blue;">{{percentage}}%</span>
+      against approved budget (absolute amount saving: <span style="color: blue;">{{amount}}</span>
+      <span style="color: blue;">{{currency}}</span>).</p> <p>To view detail proposal
+      and cost comparison please login your official account by the following link:
+      <a href="https://auction.nextpro.io/auth/login">login now</a> and waiting for
+      your approval.</p> <p>&nbsp;</p> <p>Many Thanks and Best Regards,</p> <p>Customer
+      Service</p> <p>&nbsp;</p> <p><strong>NextPro International Procurement Service
+      Company Limited</strong></p> <p>10th Floor, Miss Ao Dai Tower</p> <p>21 Nguyen
+      Trung Ngan st.,</p> <p>Ben Nghe Ward, District 1,</p> <p>Ho Chi Minh City, Vietnam</p>
+
+      <p><a href="info@nextpro.io">info@nextpro.io</a> | <a href="http://www.nextpro.io">www.nextpro.io</a></p>
+      <p>&nbsp;</p> <hr /> <p><span style="color: gray;">The information contained
+      in this e-mail is intended only for its addressee and may contain confidential
+      and/or privileged information. If you are not the intended recipient, you are
+      hereby notified that reading, saving, distribution or use of the content of
+      this e-mail is prohibited. If you have received this e-mail in error, please
+      notify the sender and delete the e-mail.</span></p>'
+- model: master_data.emailtemplatestranslation
+  pk: 100
+  fields:
+    language_code: en
+    email_templates: 46
+    title: PO Sending to supplier
+    content: 'PO Sending to supplier'
+    content: '<p><img src="{{image}}" alt="" width="189" height="30" /></p>
+    <hr />
+    <p>Dear Mr/Ms.<span style="color: red;"> {{supplier_user_name}} </span></p>
+    <p>&nbsp;</p>
+    <p>Congratulations! the buyer company {{buyer_company_long_name}} has decided awarding to your company for RFQ no. <span style="color: blue;">{{item_code}}</span>, title <span style="color: blue;">{{title}}</span>. </p>
+    <p>&nbsp;</p>
+    <p>To view detail the purchase order, please login your official account by the following link: <a href="https://auction.nextpro.io/auth/login">login now</a> and waiting for your purchase order confirmation back in system to your buyer. </p>
+    <p>&nbsp;</p>
+    <p>Many Thanks and Best Regards,</p>
+    <p>Customer Service</p>
+    <p>&nbsp;</p>
+    <p><strong>NextPro International Procurement Service Company Limited</strong></p>
+    <p>4<sup>th</sup> Floor, 57 Le Thi Hong Gam</p>
+    <p>Nguyen Thai Binh Ward, District 1,</p>
+    <p>Ho Chi Minh City, Vietnam</p>
+    <p><a href="info@nextpro.io">info@nextpro.io</a> | <a href="http://www.nextpro.io">www.nextpro.io</a></p>
+    <p>&nbsp;</p>
+    <hr />
+    <p><span style="color: gray;">The information contained in this e-mail is intended only for its addressee and may contain confidential and/or privileged information. If you are not the intended recipient, you are hereby notified that reading, saving, distribution or use of the content of this e-mail is prohibited. If you have received this e-mail in error, please notify the sender and delete the e-mail.</span></p>'
+- model: master_data.emailtemplatestranslation
+  pk: 101
+  fields:
+    language_code: en
+    email_templates: 47
+    title: PO Confirmation
+    content: '<table style="width:100%;"><tr><td><img src="{{image}}" alt="" width="189"
+      height="30" /></td><td style="text-align: right; padding-top: 15px">PO confirmation</td></tr></table>
+      <hr /> <p>Dear Mr./Mrs: <span style="color: blue;">{{buyer_user_name}},</span></p>
+      <p>The purchase order no. <span style="color: blue;">{{item_code}}</span>, title
+      <span style="color: blue;">{{title}}</span> already confirmed by supplier <span
+      style="color: blue;">{{supplier_name}}</span>, please follow up next delivery
+      with supplier accordingly.</p> <p>&nbsp;</p> <p>Many Thanks and Best Regards,</p>
+      <p>Customer Service</p> <p>&nbsp;</p> <p><strong>NextPro International Procurement
+      Service Company Limited</strong></p> <p>10th Floor, Miss Ao Dai Tower</p> <p>21
+      Nguyen Trung Ngan st.,</p> <p>Ben Nghe Ward, District 1,</p> <p>Ho Chi Minh
+      City, Vietnam</p>
+
+      <p><a href="info@nextpro.io">info@nextpro.io</a> | <a href="http://www.nextpro.io">www.nextpro.io</a></p>
+      <p>&nbsp;</p> <hr /> <p><span style="color: gray;">The information contained
+      in this e-mail is intended only for its addressee and may contain confidential
+      and/or privileged information. If you are not the intended recipient, you are
+      hereby notified that reading, saving, distribution or use of the content of
+      this e-mail is prohibited. If you have received this e-mail in error, please
+      notify the sender and delete the e-mail.</span></p>'
+- model: master_data.emailtemplatestranslation
+  pk: 102
+  fields:
+    language_code: en
+    email_templates: 48
+    title: PO delivery notification
+    content: '<table style="width:100%;"><tr><td><img src="{{image}}" alt="" width="189"
+      height="30" /></td><td style="text-align: right; padding-top: 15px">PO delivery
+      notification</td></tr></table> <hr /> <p>Dear Mr./Mrs: <span style="color: blue;">{{buyer_user_name}},
+      {{supplier_user_name}},</span></p> <p>We would like to inform you that today
+      is delivery date of the purchase order no. <span style="color: blue;">{{item_code}}</span>,
+      title <span style="color: blue;">{{title}}</span>, please arrange goods/service
+      delivery and receiving in system accordingly.</p> <p>&nbsp;</p> <p>Many Thanks
+      and Best Regards,</p> <p>Customer Service</p> <p>&nbsp;</p> <p><strong>NextPro
+      International Procurement Service Company Limited</strong></p> <p>10th Floor,
+      Miss Ao Dai Tower</p> <p>21 Nguyen Trung Ngan st.,</p> <p>Ben Nghe Ward, District
+      1,</p> <p>Ho Chi Minh City, Vietnam</p>
+
+      <p><a href="info@nextpro.io">info@nextpro.io</a> | <a href="http://www.nextpro.io">www.nextpro.io</a></p>
+      <p>&nbsp;</p> <hr /> <p><span style="color: gray;">The information contained
+      in this e-mail is intended only for its addressee and may contain confidential
+      and/or privileged information. If you are not the intended recipient, you are
+      hereby notified that reading, saving, distribution or use of the content of
+      this e-mail is prohibited. If you have received this e-mail in error, please
+      notify the sender and delete the e-mail.</span></p>'
+- model: master_data.emailtemplatestranslation
+  pk: 103
+  fields:
+    language_code: en
+    email_templates: 49
+    title: RFQ Cancellation
+    content: '<table style="width:100%;"><tr><td><img src="{{image}}" alt="" width="189"
+      height="30" /></td><td style="text-align: right; padding-top: 15px">RFQ cancellation</td></tr></table>
+      <hr /> <p>Dear Mr./Mrs: <span style="color: blue;">{{buyer_user_name}},</span></p>
+      <p>You have just cancelled the request for quotation no. <span style="color:
+      blue;">{{item_code}}</span>, title <span style="color: blue;">{{title}}</span>.
+      According to your profile that you are allowed to cancel maximum up to <span
+      style="color: blue;">{{max_cancellation}}</span> RFQs. You have <span style="color:
+      blue;">{{remain_cancellation}}</span> RFQs remaining can be cancelled. Therefore,
+      in order to creatable the next RFQs then you have to upgrade your profile at
+      this <a href="https://auction.nextpro.io/auth/login">link</a> accordingly.</p>
+      <p>Thank you for choosing NextPro platform for your buying decision.</p> <p>&nbsp;</p>
+      <p>Many Thanks and Best Regards,</p> <p>Customer Service</p> <p>&nbsp;</p> <p><strong>NextPro
+      International Procurement Service Company Limited</strong></p> <p>10th Floor,
+      Miss Ao Dai Tower</p> <p>21 Nguyen Trung Ngan st.,</p> <p>Ben Nghe Ward, District
+      1,</p> <p>Ho Chi Minh City, Vietnam</p>
+
+      <p><a href="info@nextpro.io">info@nextpro.io</a> | <a href="http://www.nextpro.io">www.nextpro.io</a></p>
+      <p>&nbsp;</p> <hr /> <p><span style="color: gray;">The information contained
+      in this e-mail is intended only for its addressee and may contain confidential
+      and/or privileged information. If you are not the intended recipient, you are
+      hereby notified that reading, saving, distribution or use of the content of
+      this e-mail is prohibited. If you have received this e-mail in error, please
+      notify the sender and delete the e-mail.</span></p>'
+- model: master_data.emailtemplatestranslation
+  pk: 104
+  fields:
+    language_code: en
+    email_templates: 50
+    title: Supplier evaluation
+    content: '<table style="width:100%;"><tr><td><img src="{{image}}" alt="" width="189"
+      height="30" /></td><td style="text-align: right; padding-top: 15px">Supplier
+      evaluation</td></tr></table> <hr /> <p>Dear Mr./Mrs: <span style="color: blue;">{{supplier_user_name}},</span></p>
+      <p>Your buyer has just evaluated performance of the purchase order no. <span
+      style="color: blue;">{{item_code}}</span>, title <span style="color: blue;">{{title}}</span>.
+      To view detail, please login to <a href="https://auction.nextpro.io/auth/login">this
+      link</a> and give your feedback if any.</p> <p>&nbsp;</p> <p>Many Thanks and
+      Best Regards,</p> <p>Customer Service</p> <p>&nbsp;</p> <p><strong>NextPro International
+      Procurement Service Company Limited</strong></p> <p>10th Floor, Miss Ao Dai
+      Tower</p> <p>21 Nguyen Trung Ngan st.,</p> <p>Ben Nghe Ward, District 1,</p>
+      <p>Ho Chi Minh City, Vietnam</p>
+
+      <p><a href="info@nextpro.io">info@nextpro.io</a> | <a href="http://www.nextpro.io">www.nextpro.io</a></p>
+      <p>&nbsp;</p> <hr /> <p><span style="color: gray;">The information contained
+      in this e-mail is intended only for its addressee and may contain confidential
+      and/or privileged information. If you are not the intended recipient, you are
+      hereby notified that reading, saving, distribution or use of the content of
+      this e-mail is prohibited. If you have received this e-mail in error, please
+      notify the sender and delete the e-mail.</span></p>'
+- model: master_data.emailtemplatestranslation
+  pk: 105
+  fields:
+    language_code: en
+    email_templates: 51
+    title: Complete delivery notification
+    content: "<table style=\"width:100%;\"><tr><td><img src=\"{{image}}\" alt=\"\"\
+      \ width=\"189\" height=\"30\" /></td><td style=\"text-align: right; padding-top:\
+      \ 15px\">Complete delivery notification</td></tr></table> <hr /> <p>Dear Mr./Mrs:\
+      \ <span style=\"color: blue;\">{{buyer_user_name}},</span></p> <p>Your supplier\
+      \ has just completed delivery of the purchase order no. <span style=\"color:\
+      \ blue;\">{{item_code}}</span>, title <span style=\"color: blue;\">{{title}}</span>.\
+      \ Please login to <a href=\"https://auction.nextpro.io/auth/login\">this link</a>\
+      \ to evaluate a supplier\u2019s performance. This evaluation will be closed\
+      \ right after 8 hours and reach 5 stars rating if hear nothing from you.</p>\
+      \ <p>&nbsp;</p> <p>Many Thanks and Best Regards,</p> <p>Customer Service</p>\
+      \ <p>&nbsp;</p> <p><strong>NextPro International Procurement Service Company\
+      \ Limited</strong></p> <p>10th Floor, Miss Ao Dai Tower</p> <p>21 Nguyen Trung\
+      \ Ngan st.,</p> <p>Ben Nghe Ward, District 1,</p> <p>Ho Chi Minh City, Vietnam</p>\n\
+      <p><a href=\"info@nextpro.io\">info@nextpro.io</a> | <a href=\"http://www.nextpro.io\"\
+      >www.nextpro.io</a></p> <p>&nbsp;</p> <hr /> <p><span style=\"color: gray;\"\
+      >The information contained in this e-mail is intended only for its addressee\
+      \ and may contain confidential and/or privileged information. If you are not\
+      \ the intended recipient, you are hereby notified that reading, saving, distribution\
+      \ or use of the content of this e-mail is prohibited. If you have received this\
+      \ e-mail in error, please notify the sender and delete the e-mail.</span></p>"
+- model: master_data.emailtemplatestranslation
+  pk: 106
+  fields:
+    language_code: en
+    email_templates: 52
+    title: Email end of RFX notification
+    content: '<p><img src="{{image}}" alt="" width="189" height="30" /></p> <hr />
+      <p>Dear Mr./Mrs: <span style="color: blue;">{{buyer_user_name}},</span></p>
+      <p>Your RFx <span style="color: blue;">{{title}}</span> with the ID no. <span
+      style="color: blue;">{{item_code}}</span> has ended successfully. <span style="color:
+      blue;">{{number_submitted}}</span> offers have been submitted in the mentioned
+      RFx.</p> <p>To view your RFx, please login with your buyer account and the matching
+      password using the following link: <a href="https://auction.nextpro.io/auth/login">login
+      now</a>.</p> <p>&nbsp;</p> <p>Many Thanks and Best Regards,</p> <p>Customer
+      Service</p> <p>&nbsp;</p> <p><strong>NextPro International Procurement Service
+      Company Limited</strong></p> <p>10th Floor, Miss Ao Dai Tower</p> <p>21 Nguyen
+      Trung Ngan st.,</p> <p>Ben Nghe Ward, District 1,</p> <p>Ho Chi Minh City, Vietnam</p>
+
+      <p><a href="info@nextpro.io">info@nextpro.io</a> | <a href="http://www.nextpro.io">www.nextpro.io</a></p>
+      <p>&nbsp;</p> <hr /> <p><span style="color: gray;">The information contained
+      in this e-mail is intended only for its addressee and may contain confidential
+      and/or privileged information. If you are not the intended recipient, you are
+      hereby notified that reading, saving, distribution or use of the content of
+      this e-mail is prohibited. If you have received this e-mail in error, please
+      notify the sender and delete the e-mail.</span></p>'
+- model: master_data.emailtemplatestranslation
+  pk: 107
+  fields:
+    language_code: en
+    email_templates: 53
+    title: Email end of RFX notification
+    content: "<p><img src=\"{{image}}\" alt=\"\" width=\"189\" height=\"30\" /></p>\
+      \ <hr /> <p>Dear Mr./Mrs: <span style=\"color: blue;\">{{supplier_user_name}},</span></p>\
+      \ <p>Thank you for participating in the RFx <span style=\"color: blue;\">{{title}}</span>\
+      \ with the ID no. <span style=\"color: blue;\">{{item_code}}</span>, has been\
+      \ issued by the purchasing organization <span style=\"color: blue;\">{{buyer_company_name}}</span>\
+      \ has ended successfully. <span style=\"color: blue;\">{{number_submitted}}</span>\
+      \ offers have been submitted in the mentioned RFx.</p> <p>To view your RFx,\
+      \ please login with your buyer account and the matching password using the following\
+      \ link: <a href=\"https://auction.nextpro.io/auth/login\">login now</a>.</p>\
+      \ <p>Please wait for the result of next step for this RFx from the buyer\u2019\
+      s decision.</p> <p>&nbsp;</p> <p>Many Thanks and Best Regards,</p> <p>Customer\
+      \ Service</p> <p>&nbsp;</p> <p><strong>NextPro International Procurement Service\
+      \ Company Limited</strong></p> <p>10th Floor, Miss Ao Dai Tower</p> <p>21 Nguyen\
+      \ Trung Ngan st.,</p> <p>Ben Nghe Ward, District 1,</p> <p>Ho Chi Minh City,\
+      \ Vietnam</p>\n<p><a href=\"info@nextpro.io\">info@nextpro.io</a> | <a href=\"\
+      http://www.nextpro.io\">www.nextpro.io</a></p> <p>&nbsp;</p> <hr /> <p><span\
+      \ style=\"color: gray;\">The information contained in this e-mail is intended\
+      \ only for its addressee and may contain confidential and/or privileged information.\
+      \ If you are not the intended recipient, you are hereby notified that reading,\
+      \ saving, distribution or use of the content of this e-mail is prohibited. If\
+      \ you have received this e-mail in error, please notify the sender and delete\
+      \ the e-mail.</span></p>"
+- model: master_data.emailtemplatestranslation
+  pk: 108
+  fields:
+    language_code: en
+    email_templates: 54
+    title: PO Sending to buyer
+    content: '<p><img src="{{image}}" alt="" width="189" height="30" /></p> <hr />
+      <p>Dear Mr/Ms.<span style="color: red;"> {{buyer_name}} </span></p> <p>&nbsp;</p>
+      <p>Congratulations! the buyer company {{buyer_company_long_name}} has decided
+      awarding to your company for RFQ no. <span style="color: blue;">{{item_code}}</span>,
+      title <span style="color: blue;">{{title}}</span>. </p> <p>&nbsp;</p> <p>To
+      view detail the purchase order, please login your official account by the following
+      link: <a href="https://auction.nextpro.io/auth/login">login now</a> and waiting
+      for your purchase order confirmation back in system to your buyer. </p> <p>&nbsp;</p>
+      <p>Many Thanks and Best Regards,</p> <p>Customer Service</p> <p>&nbsp;</p> <p><strong>NextPro
+      International Procurement Service Company Limited</strong></p> <p>4<sup>th</sup>
+      Floor, 57 Le Thi Hong Gam</p> <p>Nguyen Thai Binh Ward, District 1,</p> <p>Ho
+      Chi Minh City, Vietnam</p> <p><a href="info@nextpro.io">info@nextpro.io</a>
+      | <a href="http://www.nextpro.io">www.nextpro.io</a></p> <p>&nbsp;</p> <hr />
+      <p><span style="color: gray;">The information contained in this e-mail is intended
+      only for its addressee and may contain confidential and/or privileged information.
+      If you are not the intended recipient, you are hereby notified that reading,
+      saving, distribution or use of the content of this e-mail is prohibited. If
+      you have received this e-mail in error, please notify the sender and delete
+      the e-mail.</span></p>'

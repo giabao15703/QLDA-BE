@@ -1,0 +1,366 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE HTML>
+<html lang="vi">
+
+<head>
+    <title></title>
+    <meta http-equiv=Content-Type content="text/html; charset=utf-8" />
+    <meta charset="UTF-8" />
+    <style>
+        @font-face {
+            font-family: font;
+            src: ("\static\times.ttf");
+        }
+        @font-face {
+            font-family: Roboto;
+            src: "\static\Roboto-Regular.ttf";
+        }
+
+        body {
+            font-family: Roboto;
+        }
+
+        .font_face {
+            font-family: Roboto;
+        }
+
+        .fs-8 {
+            font-size: 8pt;
+            margin-bottom: 0in;
+            text-align: left;
+            margin-left: 5px;
+        }
+
+        .w-100 {
+            width: 100% !important;
+        }
+
+        .mt-0 {
+            margin-top: 0 !important;
+        }
+
+        .mt-5px {
+            margin-top: 5px !important;
+        }
+
+
+
+        .fs-9 {
+            font-size: 9pt;
+            text-align: left;
+        }
+        .fs-9-center {
+            font-size: 9pt;
+            text-align: center;
+        }
+
+        .fs-10 {
+            font-size: 10pt;
+            margin-bottom: 0in;
+            text-align: left;
+            margin-left: 5px;
+        }
+
+        td {
+            border: 1px solid #000000;
+
+        }
+
+        tr.item-table-content td {
+            font-size: 14px;
+        }
+
+        tr.tr-fs-14 td {
+            font-size: 14px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        table.info-table {
+            padding: 1px;
+            border-spacing: 0;
+            border-collapse: separate;
+        }
+
+
+        table.item-table,
+        table.signature-table {
+            padding: 7px;
+            border-spacing: 0;
+            border-collapse: separate;
+        }
+
+        .bg-dark {
+            background-color: #bfbfbf;
+        }
+
+        .header {
+            width: 100%;
+        }
+
+        .header img {
+            height: 36px;
+            width: 120px;
+        }
+
+
+        table td {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        table {
+            table-layout: fixed;
+        }
+        
+        .inner-table-border {
+            vertical-align: top;
+            border: 0;
+        }
+
+        hr.line {
+            border: 0.5pt solid black;
+            width: 50%;
+            float: left;
+        }
+
+        .text-render {
+            color: red;
+        }
+        @media print {
+        #scores {
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div title="Header">
+        <p style="margin-top: 0.46in; margin-bottom: 0in; line-height: 100%; text-align: right; font-size: x-large;">
+            <i>Purchase Order</i>
+        </p>
+    </div>
+
+    <br/>
+    <br/>
+
+    <center>
+        <table class="info-table">
+            <tr>
+                <td style="vertical-align: top;">
+                    <p class="fs-10 mt-5px">Buyer: {{buyer_code}}</p>
+                    <p class="fs-10 mt-1px">{{buyer_company_name}}</p>
+                    <p class="fs-10 mt-1px">{{buyer_company_address}}</p>
+                    <p class="fs-10 mt-1px">VAT: {{buyer_company_tax}}</p>
+                </td>
+                <td style="vertical-align: top;">
+                    <table style="border: 1;border-spacing: 0;">
+                        <tr>
+                            <td class="inner-table-border" >
+                                <p class="fs-8 mt-5px">Purchase order no.</p>
+                                <p class="fs-10 mt-1px">{{item_code}}</p>
+                            </td>
+                            <td class="inner-table-border">
+                                <p class="fs-8 mt-5px">Date</p>
+                                <p class="fs-10 mt-1px">{{rfx_awarded_date}}</p>
+                            </td>
+                            <td class="inner-table-border">
+                                <p class="fs-8 mt-5px">Page</p>
+                                <p class="fs-10 mt-1px">1 of 2</p>
+                            </td>
+                        </tr>                        
+                        <tr>
+                            <td class="inner-table-border" >
+                                <p class="fs-8 mt-1px">Contact</p>
+                                <br/>
+                            </td>
+                            <td colspan=2 class="inner-table-border">
+                                <p class="fs-10 mt-1px">{{buyer_contact_name}}</p>
+                                <br/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="inner-table-border" >
+                                <p class="fs-8 mt-1px">Telephone</p>
+                                <br/>
+                            </td>
+                            <td colspan=2 class="inner-table-border">
+                                <p class="fs-10 mt-1px">{{buyer_phone}}</p>
+                                <br/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="inner-table-border" >
+                                <p class="fs-8 mt-1px">E-mail</p>
+                                <br/>
+                            </td>
+                            <td colspan=2 class="inner-table-border">
+                                <p class="fs-10 mt-1px">{{buyer_email}}</p>
+                                <br/>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">
+                    <p class="fs-10 mt-5px">Supplier: {{supplier_code}}</p>
+                    <p class="fs-10 mt-1px">{{supplier_company_name}}</p>
+                    <p class="fs-10 mt-1px">{{supplier_company_address}}</p>
+                </td>
+                <td style="vertical-align: top;">
+                    <table>                      
+                        <tr>
+                            <td class="inner-table-border" >
+                                <p class="fs-8 mt-1px">Contact</p>
+                            </td>
+                            <td colspan=2 class="inner-table-border">
+                                <p class="fs-10 mt-1px">{{supplier_name}}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="inner-table-border" >
+                                <p class="fs-8 mt-1px">E-mail</p>
+                            </td>
+                            <td colspan=2 class="inner-table-border">
+                                <p class="fs-10 mt-1px">{{supplier_email}}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="inner-table-border" >
+                                <p class="fs-8 mt-1px">Telephone</p>
+                            </td>
+                            <td colspan=2 class="inner-table-border">
+                                <p class="fs-10 mt-1px">{{supplier_phone}}</p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </center>
+    <p class="fs-9">This is a Purchase Order ('PO') to be entered into by and between {{buyer_company_name}}  ('Buyer') and/or its designated subsidiary or affiliate company (collectively, the 'Buyer') and a supplier {{supplier_company_name}} ('Supplier') in respect of supply of certain goods and/or services (the 'PO').</p>
+    <p class="fs-9">1.	This PO provides for the basic matters regarding the purchase and supply of the goods and/or services and shall govern any and all individual purchase transactions between the Parties, unless agreed otherwise. The conditions set forth herein and the Buyer's terms and conditions for the purchase of Goods and Services (as listed below) will apply to the individual purchase transaction between the Buyer and the Supplier.</p>
+    <p class="fs-9">2.	The agreed terms and conditions of the Parties required for the delivery of the goods and/or services concerned such as purchase price, delivery date shall be specified as listed below.</p>
+    <p class="fs-9">3.	This PO itself does not give rise to a purchase commitment on the part of the Buyer. Such obligations of the Parties exist only where a Purchase Order is sent to and confirmed by the Supplier on the Nextpro.io ecommerce platform.</p>
+    <p class="fs-9">4.	The effective term of this PO shall follow Price Validity specified in item description (the 'Effective Term'). Provided, however, that if, at the time of expiration or termination of this PO, there is any outstanding obligation of the Supplier, this PO shall be deemed to be effective until the date when such outstanding obligation has been fully performed. </p>
+    <p class="fs-9">5.	Amendments to the PO shall only be binding on the Buyer if agreed by the Buyer in writing in advance. Save that the Buyer can at any time assign its rights or obligations under the PO to any affiliate, neither Party shall assign or otherwise transfer the same or any of its rights and obligations thereunder whether in whole or in part without the prior written consent of the other Party.</p>
+    <p class="fs-9">6.	This PO shall become effective upon confirmation by both Buyer and Supplier on the Nextpro.io ecommerce platform including dates of signatures. No modification shall be valid and binding upon both Buyer and Supplier unless made in written form upon confirmation by both Buyer and Supplier.</p>
+    <p class="fs-9">7.	Payment terms: {{payment_term}} <br/> <br/>
+        Payment will be made the number of days thereafter as indicated in this PO.<br/> <br/>
+        Payment shall be remitted only after receipt of a properly prepared invoice and all supporting documents (goods receipt note, service receipt note, etc.) as follows: the invoice and documentation shall be received by the Buyer according to the above days on receiving date the goods or services. <br/> <br/>
+        Bank information: <br/>
+        Beneficiary name: {{beneficiary_name}} <br/>
+        Bank name: {{bank_name}}<br/>
+        Bank account number: {{bank_account_number}} <br/>
+    </p>
+    <p class="fs-9">8.	Delivery terms: {{delivery_term}}</p>
+    <p class="fs-9">9.	Delivery address: {{delivery_address}}
+        Country: {{buyer_company_country}} <br/>
+        State: {{buyer_company_state}} <br/>
+    </p></p>
+    <p class="fs-9">10.	Upon receipt of the Purchase Order directly from the user, the Supplier shall deliver the goods/ services with the required quantity and shall adhere to the delivery date as specified in the Purchase Order.</p>
+    <p class="fs-9">11.	Withholding taxes, where applicable, will be deducted from the invoice amount by the Buyer.</p>
+    
+    <br/>
+    <div  id="scores" style="page-break-before: always"> 
+        <pdf:nextpage /> 
+     </div> 
+     <div title="Header">
+        <p style="margin-top: 0.46in; margin-bottom: 0in; line-height: 100%; text-align: right; font-size: x-large;">
+            <i>Purchase Order</i>
+        </p>
+    </div>
+
+    <p class="fs-9">12.	The supply of services or goods will constitute Supplier's acknowledgement and acceptance of Buyer's GTC. This PO, including its subsequent Release Orders, the GTC and any clauses or signed documents referenced in this PO, contains the complete and final agreement between the Buyer and Supplier, and no other agreement modifying the GTC is binding upon Buyer unless made in writing and signed by the Buyer's authorized representative.</p>
+    <p class="fs-9">13.	Buyer's Terms & Conditions: {{terms_and_conditions}} <br/>
+        <br/>
+        Apart from the terms and conditions stated in this PO, the following terms & conditions shall respectively apply to this PO according to the nature of the transaction contemplated in this PO:<br/>
+        (i) General Purchase Terms and Conditions ('GPC') <br/>
+        (ii) Special Purchase Conditions for the Supply of Goods ('SPC Goods'); and <br/>
+        (iii) Special Purchase Conditions for the Supply of Services (’SPC Services’) <br/>
+        <br/>
+        Hereinafter Buyer’s Terms & Conditions<br/>
+        <br/>
+        The above Buyer’s Terms & Conditions are available at the link https://nextpro.io/term-conditions/ and shall be integral parts of the PO. In case of discrepancy between provisions of the PO and Buyer’s Terms & Conditions, the provisions of the PO shall prevail.<br/>
+        <br/>
+        The Supplier hereby confirms that it has accessed to, read and agreed to these Buyer’s Terms & Conditions available at the above link.
+    </p>
+    <p class="fs-9">14.	List of goods and services provided:</p>
+    <center style="margin-top: 20px;">
+        <table class="item-table">
+            <tr>
+                <td style="width: 5%;" class="bg-dark">
+                    <p class="fs-9"><b>Item</b></p>
+                </td>
+                <td style="width: 70%;" class="bg-dark">
+                    <p class="fs-9"><b>Part No./ Description/ Specification/ Delivery date </b></p>
+                </td>
+                <td style="width: 10%;" class="bg-dark">
+                    <p class="fs-9"><b>Quantity/ Unit</b></p>
+                </td>
+                <td class="bg-dark">
+                    <p class="fs-9"><b>Unit Price/ Currency</b></p>
+                </td>
+            </tr>
+            {% block list_item %}
+
+            {% for item in item_list %}
+            <tr class="item-table-content">
+                <td style="width: 5%;">
+                    <p>{{ forloop.counter}}</p>
+                </td>
+                <td style="width: 70%;">
+                    <p style="text-align: left">{{ item.name }} <br/>
+                        Part number (if any): {{ item.part_number }} <br/>
+                        Delivery from: {{ item.delivery_from }} <br/>
+                        Delivery to: {{ item.delivery_to }} <br/>
+                    </p>
+                </td>
+                <td style="width: 10%;">
+                    <p>{{item.quantity}}/ {{item.unit}}</p>
+                </td>
+                <td>
+                    <p>{{item.unit_price}}/ {{currency}}</p>
+                </td>
+            </tr>
+            {% endfor %}
+            {% endblock %}
+            <tr class="item-table-content">
+                <td colspan=3>
+                    <p class="fs-9-center"><b>Sub total amount</b></p>
+                </td>
+                <td>
+                    <p>{{sub_total_amount}}</p>
+                </td>
+            </tr>
+            <tr class="item-table-content">
+                <td colspan=3>
+                    <p class="fs-9-center"><b>VAT</b></p>
+                </td>
+                <td>
+                    <p>{{vat_amount}}</p>
+                </td>
+            </tr>
+            <tr class="item-table-content">
+                <td colspan=3>
+                    <p class="fs-9-center"><b>Grand total</b></p>
+                </td>
+                <td>
+                    <p>{{grand_total_amount}}</p>
+                </td>
+            </tr>
+        </table>
+    </center>
+    <p class="fs-10">{{buyer_company_name}}</p>
+    <br/>
+    <p>{{buyer_contact_name}}</p>
+    <p class="fs-10 mt-1px">{{rfx_awarded_date}}</p>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+- model: 'master_data.auctionType'
+  pk: 1
+  fields:
+    name: Traffic Light
+- model: 'master_data.auctionType'
+  pk: 2
+  fields:
+    name: Sealed Bid
+- model: 'master_data.auctionType'
+  pk: 3
+  fields:
+    name: Ranking
+- model: 'master_data.auctionType'
+  pk: 4
+  fields:
+    name: Prices
+- model: 'master_data.auctionType'
+  pk: 5
+  fields:
+    name: Dutch
+- model: 'master_data.auctionType'
+  pk: 6
+  fields:
+    name: Japanese

@@ -1,0 +1,12 @@
+- model: 'master_data.ClientFocus'
+  pk: 1
+  fields:
+    name:  Small Business (<10,000$)
+- model: 'master_data.ClientFocus'
+  pk: 2
+  fields:
+    name: Medium Business (10,000$-50,000$)
+- model: 'master_data.ClientFocus'
+  pk: 3
+  fields:
+    name:  Large Business (>50,000$)

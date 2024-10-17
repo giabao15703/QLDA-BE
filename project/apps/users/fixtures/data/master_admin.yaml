@@ -1,0 +1,26 @@
+
+- model: users.User
+  pk: 1
+  fields:  
+    username: '700001'
+    password: 'pbkdf2_sha256$150000$7nKQ8wFG95mm$MGN2otrncEjzAg393PNGJgoV266gXXru4fZdmpruoLs='  #123123
+    email: 'admin@nextpro.io'
+    user_type : 1
+
+- model: users.Admin
+  pk: 1
+  fields:  
+    user_id: '1'
+    long_name: ''
+
+- model: users.GroupPermission
+  pk: 1
+  fields:
+    role: 1
+  
+- model: users.UsersPermission
+  pk: 1
+  fields:
+    user: 1
+    permission: 1
+    status: 1

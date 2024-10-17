@@ -1,0 +1,13 @@
+
+@page {
+    size: A4 portrait;
+    margin: 1cm;
+}
+@font-face {
+    font-family: font;
+    src: "{% static '/Times New Roman 400.ttf' %}";
+}
+@font-face {
+    font-family: Roboto;
+    src: "{% static '/Roboto-Regular.ttf' %}";
+}

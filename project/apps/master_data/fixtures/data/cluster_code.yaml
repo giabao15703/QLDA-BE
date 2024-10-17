@@ -1,0 +1,2296 @@
+- model: 'master_data.clusterCode'
+  pk: "1"
+  fields:
+    item_code: "1"
+    name: "Household appliance"
+    status: "True"
+    family_code_id: "1"
+- model: 'master_data.clusterCode'
+  pk: "2"
+  fields:
+    item_code: "2"
+    name: "Audio, video device"
+    status: "True"
+    family_code_id: "1"
+- model: 'master_data.clusterCode'
+  pk: "3"
+  fields:
+    item_code: "3"
+    name: "Smart electronic appliance"
+    status: "True"
+    family_code_id: "1"
+- model: 'master_data.clusterCode'
+  pk: "4"
+  fields:
+    item_code: "4"
+    name: "Watch, jewelry, eyewear"
+    status: "True"
+    family_code_id: "2"
+- model: 'master_data.clusterCode'
+  pk: "5"
+  fields:
+    item_code: "5"
+    name: "Fashion accessory"
+    status: "True"
+    family_code_id: "2"
+- model: 'master_data.clusterCode'
+  pk: "6"
+  fields:
+    item_code: "6"
+    name: "Textile and leather product"
+    status: "True"
+    family_code_id: "2"
+- model: 'master_data.clusterCode'
+  pk: "7"
+  fields:
+    item_code: "7"
+    name: "Apparel"
+    status: "True"
+    family_code_id: "2"
+- model: 'master_data.clusterCode'
+  pk: "8"
+  fields:
+    item_code: "8"
+    name: "Toy and hobby"
+    status: "True"
+    family_code_id: "3"
+- model: 'master_data.clusterCode'
+  pk: "9"
+  fields:
+    item_code: "9"
+    name: "Gift and craft"
+    status: "True"
+    family_code_id: "3"
+- model: 'master_data.clusterCode'
+  pk: "10"
+  fields:
+    item_code: "10"
+    name: "Sport and entertainment"
+    status: "True"
+    family_code_id: "3"
+- model: 'master_data.clusterCode'
+  pk: "11"
+  fields:
+    item_code: "11"
+    name: "Shoe and accessory"
+    status: "True"
+    family_code_id: "4"
+- model: 'master_data.clusterCode'
+  pk: "12"
+  fields:
+    item_code: "12"
+    name: "Luggage, bag and case"
+    status: "True"
+    family_code_id: "4"
+- model: 'master_data.clusterCode'
+  pk: "13"
+  fields:
+    item_code: "13"
+    name: "Real estate"
+    status: "True"
+    family_code_id: "5"
+- model: 'master_data.clusterCode'
+  pk: "14"
+  fields:
+    item_code: "14"
+    name: "Light and lighting"
+    status: "True"
+    family_code_id: "5"
+- model: 'master_data.clusterCode'
+  pk: "15"
+  fields:
+    item_code: "15"
+    name: "Construction service"
+    status: "True"
+    family_code_id: "5"
+- model: 'master_data.clusterCode'
+  pk: "16"
+  fields:
+    item_code: "16"
+    name: "Scaffolding"
+    status: "True"
+    family_code_id: "5"
+- model: 'master_data.clusterCode'
+  pk: "17"
+  fields:
+    item_code: "17"
+    name: "Building safety system"
+    status: "True"
+    family_code_id: "5"
+- model: 'master_data.clusterCode'
+  pk: "18"
+  fields:
+    item_code: "18"
+    name: "Lighting system"
+    status: "True"
+    family_code_id: "5"
+- model: 'master_data.clusterCode'
+  pk: "19"
+  fields:
+    item_code: "19"
+    name: "Garden technique"
+    status: "True"
+    family_code_id: "5"
+- model: 'master_data.clusterCode'
+  pk: "20"
+  fields:
+    item_code: "20"
+    name: "Planning, project management"
+    status: "True"
+    family_code_id: "5"
+- model: 'master_data.clusterCode'
+  pk: "21"
+  fields:
+    item_code: "21"
+    name: "Public furniture"
+    status: "True"
+    family_code_id: "5"
+- model: 'master_data.clusterCode'
+  pk: "22"
+  fields:
+    item_code: "22"
+    name: "Company furniture"
+    status: "True"
+    family_code_id: "5"
+- model: 'master_data.clusterCode'
+  pk: "23"
+  fields:
+    item_code: "23"
+    name: "Household furniture"
+    status: "True"
+    family_code_id: "5"
+- model: 'master_data.clusterCode'
+  pk: "24"
+  fields:
+    item_code: "24"
+    name: "Furniture asscessory"
+    status: "True"
+    family_code_id: "5"
+- model: 'master_data.clusterCode'
+  pk: "25"
+  fields:
+    item_code: "25"
+    name: "Design and finished construction"
+    status: "True"
+    family_code_id: "5"
+- model: 'master_data.clusterCode'
+  pk: "26"
+  fields:
+    item_code: "26"
+    name: "Home decoration"
+    status: "True"
+    family_code_id: "5"
+- model: 'master_data.clusterCode'
+  pk: "27"
+  fields:
+    item_code: "27"
+    name: "Drive and engine for vehicle"
+    status: "True"
+    family_code_id: "6"
+- model: 'master_data.clusterCode'
+  pk: "28"
+  fields:
+    item_code: "28"
+    name: "Motor vehicle electric and electronic"
+    status: "True"
+    family_code_id: "6"
+- model: 'master_data.clusterCode'
+  pk: "29"
+  fields:
+    item_code: "29"
+    name: "Other vehicle system"
+    status: "True"
+    family_code_id: "6"
+- model: 'master_data.clusterCode'
+  pk: "30"
+  fields:
+    item_code: "30"
+    name: "Braking system and component"
+    status: "True"
+    family_code_id: "6"
+- model: 'master_data.clusterCode'
+  pk: "31"
+  fields:
+    item_code: "31"
+    name: "Automotive chassis and component"
+    status: "True"
+    family_code_id: "6"
+- model: 'master_data.clusterCode'
+  pk: "32"
+  fields:
+    item_code: "32"
+    name: "Fuel system component for vehicle"
+    status: "True"
+    family_code_id: "6"
+- model: 'master_data.clusterCode'
+  pk: "33"
+  fields:
+    item_code: "33"
+    name: "Exhaust gas machine, component and internal combustion engine"
+    status: "True"
+    family_code_id: "6"
+- model: 'master_data.clusterCode'
+  pk: "34"
+  fields:
+    item_code: "34"
+    name: "Interior for vehicle"
+    status: "True"
+    family_code_id: "6"
+- model: 'master_data.clusterCode'
+  pk: "35"
+  fields:
+    item_code: "35"
+    name: "Motor vehicle accessory"
+    status: "True"
+    family_code_id: "6"
+- model: 'master_data.clusterCode'
+  pk: "36"
+  fields:
+    item_code: "36"
+    name: "Body and body component"
+    status: "True"
+    family_code_id: "6"
+- model: 'master_data.clusterCode'
+  pk: "37"
+  fields:
+    item_code: "37"
+    name: "Bus"
+    status: "True"
+    family_code_id: "6"
+- model: 'master_data.clusterCode'
+  pk: "38"
+  fields:
+    item_code: "38"
+    name: "Other vehicle"
+    status: "True"
+    family_code_id: "6"
+- model: 'master_data.clusterCode'
+  pk: "39"
+  fields:
+    item_code: "39"
+    name: "Truck"
+    status: "True"
+    family_code_id: "6"
+- model: 'master_data.clusterCode'
+  pk: "40"
+  fields:
+    item_code: "40"
+    name: "Health and medical"
+    status: "True"
+    family_code_id: "7"
+- model: 'master_data.clusterCode'
+  pk: "41"
+  fields:
+    item_code: "41"
+    name: "Beauty and personal care"
+    status: "True"
+    family_code_id: "7"
+- model: 'master_data.clusterCode'
+  pk: "42"
+  fields:
+    item_code: "42"
+    name: "Computer system"
+    status: "True"
+    family_code_id: "8"
+- model: 'master_data.clusterCode'
+  pk: "43"
+  fields:
+    item_code: "43"
+    name: "Unified messaging system"
+    status: "True"
+    family_code_id: "8"
+- model: 'master_data.clusterCode'
+  pk: "44"
+  fields:
+    item_code: "44"
+    name: "Warehouse management and stores control system"
+    status: "True"
+    family_code_id: "8"
+- model: 'master_data.clusterCode'
+  pk: "45"
+  fields:
+    item_code: "45"
+    name: "Standard and system software"
+    status: "True"
+    family_code_id: "8"
+- model: 'master_data.clusterCode'
+  pk: "46"
+  fields:
+    item_code: "46"
+    name: "Application software"
+    status: "True"
+    family_code_id: "8"
+- model: 'master_data.clusterCode'
+  pk: "47"
+  fields:
+    item_code: "47"
+    name: "IT accessory unit"
+    status: "True"
+    family_code_id: "8"
+- model: 'master_data.clusterCode'
+  pk: "48"
+  fields:
+    item_code: "48"
+    name: "EDP supply material"
+    status: "True"
+    family_code_id: "8"
+- model: 'master_data.clusterCode'
+  pk: "49"
+  fields:
+    item_code: "49"
+    name: "Concrete reinforcing steel"
+    status: "True"
+    family_code_id: "9"
+- model: 'master_data.clusterCode'
+  pk: "50"
+  fields:
+    item_code: "50"
+    name: "Concrete component"
+    status: "True"
+    family_code_id: "9"
+- model: 'master_data.clusterCode'
+  pk: "51"
+  fields:
+    item_code: "51"
+    name: "Wood construction component"
+    status: "True"
+    family_code_id: "9"
+- model: 'master_data.clusterCode'
+  pk: "52"
+  fields:
+    item_code: "52"
+    name: "Element construction material"
+    status: "True"
+    family_code_id: "9"
+- model: 'master_data.clusterCode'
+  pk: "53"
+  fields:
+    item_code: "53"
+    name: "Building construction element"
+    status: "True"
+    family_code_id: "9"
+- model: 'master_data.clusterCode'
+  pk: "54"
+  fields:
+    item_code: "54"
+    name: "Fiber cement construction component"
+    status: "True"
+    family_code_id: "9"
+- model: 'master_data.clusterCode'
+  pk: "55"
+  fields:
+    item_code: "55"
+    name: "Binding agent"
+    status: "True"
+    family_code_id: "9"
+- model: 'master_data.clusterCode'
+  pk: "56"
+  fields:
+    item_code: "56"
+    name: "Coating agent"
+    status: "True"
+    family_code_id: "9"
+- model: 'master_data.clusterCode'
+  pk: "57"
+  fields:
+    item_code: "57"
+    name: "Coating agent for construction"
+    status: "True"
+    family_code_id: "9"
+- model: 'master_data.clusterCode'
+  pk: "58"
+  fields:
+    item_code: "58"
+    name: "Construction aggregate"
+    status: "True"
+    family_code_id: "9"
+- model: 'master_data.clusterCode'
+  pk: "59"
+  fields:
+    item_code: "59"
+    name: "Tile and board"
+    status: "True"
+    family_code_id: "9"
+- model: 'master_data.clusterCode'
+  pk: "60"
+  fields:
+    item_code: "60"
+    name: "Wood"
+    status: "True"
+    family_code_id: "9"
+- model: 'master_data.clusterCode'
+  pk: "61"
+  fields:
+    item_code: "61"
+    name: "Building industry chemical"
+    status: "True"
+    family_code_id: "9"
+- model: 'master_data.clusterCode'
+  pk: "62"
+  fields:
+    item_code: "62"
+    name: "Block"
+    status: "True"
+    family_code_id: "9"
+- model: 'master_data.clusterCode'
+  pk: "63"
+  fields:
+    item_code: "63"
+    name: "Building glass"
+    status: "True"
+    family_code_id: "9"
+- model: 'master_data.clusterCode'
+  pk: "64"
+  fields:
+    item_code: "64"
+    name: "Floor covering"
+    status: "True"
+    family_code_id: "9"
+- model: 'master_data.clusterCode'
+  pk: "65"
+  fields:
+    item_code: "65"
+    name: "Thermal insulation and sound absorbing material"
+    status: "True"
+    family_code_id: "9"
+- model: 'master_data.clusterCode'
+  pk: "66"
+  fields:
+    item_code: "66"
+    name: "Fire and water resistant material"
+    status: "True"
+    family_code_id: "9"
+- model: 'master_data.clusterCode'
+  pk: "67"
+  fields:
+    item_code: "67"
+    name: "Building construction material"
+    status: "True"
+    family_code_id: "9"
+- model: 'master_data.clusterCode'
+  pk: "68"
+  fields:
+    item_code: "68"
+    name: "Bituminous building material"
+    status: "True"
+    family_code_id: "9"
+- model: 'master_data.clusterCode'
+  pk: "69"
+  fields:
+    item_code: "69"
+    name: "Loam building material"
+    status: "True"
+    family_code_id: "9"
+- model: 'master_data.clusterCode'
+  pk: "70"
+  fields:
+    item_code: "70"
+    name: "Mortar"
+    status: "True"
+    family_code_id: "9"
+- model: 'master_data.clusterCode'
+  pk: "71"
+  fields:
+    item_code: "71"
+    name: "Band kernel"
+    status: "True"
+    family_code_id: "10"
+- model: 'master_data.clusterCode'
+  pk: "72"
+  fields:
+    item_code: "72"
+    name: "Kit pack, individual set"
+    status: "True"
+    family_code_id: "10"
+- model: 'master_data.clusterCode'
+  pk: "73"
+  fields:
+    item_code: "73"
+    name: "Implant"
+    status: "True"
+    family_code_id: "10"
+- model: 'master_data.clusterCode'
+  pk: "74"
+  fields:
+    item_code: "74"
+    name: "Patient care"
+    status: "True"
+    family_code_id: "10"
+- model: 'master_data.clusterCode'
+  pk: "75"
+  fields:
+    item_code: "75"
+    name: "Ostomy care"
+    status: "True"
+    family_code_id: "10"
+- model: 'master_data.clusterCode'
+  pk: "76"
+  fields:
+    item_code: "76"
+    name: "Incontinence care"
+    status: "True"
+    family_code_id: "10"
+- model: 'master_data.clusterCode'
+  pk: "77"
+  fields:
+    item_code: "77"
+    name: "Wound care"
+    status: "True"
+    family_code_id: "10"
+- model: 'master_data.clusterCode'
+  pk: "78"
+  fields:
+    item_code: "78"
+    name: "Functional diagnostic"
+    status: "True"
+    family_code_id: "10"
+- model: 'master_data.clusterCode'
+  pk: "79"
+  fields:
+    item_code: "79"
+    name: "Angiography, therapy vascular catheter"
+    status: "True"
+    family_code_id: "10"
+- model: 'master_data.clusterCode'
+  pk: "80"
+  fields:
+    item_code: "80"
+    name: "Fixing, compression"
+    status: "True"
+    family_code_id: "10"
+- model: 'master_data.clusterCode'
+  pk: "81"
+  fields:
+    item_code: "81"
+    name: "Drainage, biopsy, puncture"
+    status: "True"
+    family_code_id: "10"
+- model: 'master_data.clusterCode'
+  pk: "82"
+  fields:
+    item_code: "82"
+    name: "Immobilization therapy"
+    status: "True"
+    family_code_id: "10"
+- model: 'master_data.clusterCode'
+  pk: "83"
+  fields:
+    item_code: "83"
+    name: "Patient positioning"
+    status: "True"
+    family_code_id: "10"
+- model: 'master_data.clusterCode'
+  pk: "84"
+  fields:
+    item_code: "84"
+    name: "Wound closure"
+    status: "True"
+    family_code_id: "10"
+- model: 'master_data.clusterCode'
+  pk: "85"
+  fields:
+    item_code: "85"
+    name: "Instrument and small medical device"
+    status: "True"
+    family_code_id: "10"
+- model: 'master_data.clusterCode'
+  pk: "86"
+  fields:
+    item_code: "86"
+    name: "Medical instrument"
+    status: "True"
+    family_code_id: "10"
+- model: 'master_data.clusterCode'
+  pk: "87"
+  fields:
+    item_code: "87"
+    name: "Anesthesia, intensive care, dialysis, hemofiltration"
+    status: "True"
+    family_code_id: "10"
+- model: 'master_data.clusterCode'
+  pk: "88"
+  fields:
+    item_code: "88"
+    name: "Medical system and product"
+    status: "True"
+    family_code_id: "10"
+- model: 'master_data.clusterCode'
+  pk: "89"
+  fields:
+    item_code: "89"
+    name: "Endoscopy, endo therapy, minimally invasive surgery (MIS)"
+    status: "True"
+    family_code_id: "10"
+- model: 'master_data.clusterCode'
+  pk: "90"
+  fields:
+    item_code: "90"
+    name: "Gastrointestinal tube, technique, enteral feeding"
+    status: "True"
+    family_code_id: "10"
+- model: 'master_data.clusterCode'
+  pk: "91"
+  fields:
+    item_code: "91"
+    name: "Operation covering need"
+    status: "True"
+    family_code_id: "10"
+- model: 'master_data.clusterCode'
+  pk: "92"
+  fields:
+    item_code: "92"
+    name: "Clinic and practice facility"
+    status: "True"
+    family_code_id: "10"
+- model: 'master_data.clusterCode'
+  pk: "93"
+  fields:
+    item_code: "93"
+    name: "Rehabilitation"
+    status: "True"
+    family_code_id: "10"
+- model: 'master_data.clusterCode'
+  pk: "94"
+  fields:
+    item_code: "94"
+    name: "Alternative medicine article"
+    status: "True"
+    family_code_id: "10"
+- model: 'master_data.clusterCode'
+  pk: "95"
+  fields:
+    item_code: "95"
+    name: "Surgical technique device"
+    status: "True"
+    family_code_id: "10"
+- model: 'master_data.clusterCode'
+  pk: "96"
+  fields:
+    item_code: "96"
+    name: "Injection, infusion, transfusion"
+    status: "True"
+    family_code_id: "10"
+- model: 'master_data.clusterCode'
+  pk: "97"
+  fields:
+    item_code: "97"
+    name: "Urology"
+    status: "True"
+    family_code_id: "10"
+- model: 'master_data.clusterCode'
+  pk: "98"
+  fields:
+    item_code: "98"
+    name: "Sterilization"
+    status: "True"
+    family_code_id: "10"
+- model: 'master_data.clusterCode'
+  pk: "99"
+  fields:
+    item_code: "99"
+    name: "Physiotherapy"
+    status: "True"
+    family_code_id: "10"
+- model: 'master_data.clusterCode'
+  pk: "100"
+  fields:
+    item_code: "100"
+    name: "Radiology"
+    status: "True"
+    family_code_id: "10"
+- model: 'master_data.clusterCode'
+  pk: "101"
+  fields:
+    item_code: "101"
+    name: "Other service"
+    status: "True"
+    family_code_id: "11"
+- model: 'master_data.clusterCode'
+  pk: "102"
+  fields:
+    item_code: "102"
+    name: "Renting, leasing"
+    status: "True"
+    family_code_id: "11"
+- model: 'master_data.clusterCode'
+  pk: "103"
+  fields:
+    item_code: "103"
+    name: "Training and workshop"
+    status: "True"
+    family_code_id: "11"
+- model: 'master_data.clusterCode'
+  pk: "104"
+  fields:
+    item_code: "104"
+    name: "Security service"
+    status: "True"
+    family_code_id: "11"
+- model: 'master_data.clusterCode'
+  pk: "105"
+  fields:
+    item_code: "105"
+    name: "Catering"
+    status: "True"
+    family_code_id: "11"
+- model: 'master_data.clusterCode'
+  pk: "106"
+  fields:
+    item_code: "106"
+    name: "Personal service"
+    status: "True"
+    family_code_id: "11"
+- model: 'master_data.clusterCode'
+  pk: "107"
+  fields:
+    item_code: "107"
+    name: "IT service"
+    status: "True"
+    family_code_id: "11"
+- model: 'master_data.clusterCode'
+  pk: "108"
+  fields:
+    item_code: "108"
+    name: "Translation service"
+    status: "True"
+    family_code_id: "11"
+- model: 'master_data.clusterCode'
+  pk: "109"
+  fields:
+    item_code: "109"
+    name: "Test and measurement service"
+    status: "True"
+    family_code_id: "11"
+- model: 'master_data.clusterCode'
+  pk: "110"
+  fields:
+    item_code: "110"
+    name: "Travelling service"
+    status: "True"
+    family_code_id: "11"
+- model: 'master_data.clusterCode'
+  pk: "111"
+  fields:
+    item_code: "111"
+    name: "Logistic service"
+    status: "True"
+    family_code_id: "11"
+- model: 'master_data.clusterCode'
+  pk: "112"
+  fields:
+    item_code: "112"
+    name: "Conference, fair and event service"
+    status: "True"
+    family_code_id: "11"
+- model: 'master_data.clusterCode'
+  pk: "113"
+  fields:
+    item_code: "113"
+    name: "Printing service"
+    status: "True"
+    family_code_id: "11"
+- model: 'master_data.clusterCode'
+  pk: "114"
+  fields:
+    item_code: "114"
+    name: "Marketing and advertising service"
+    status: "True"
+    family_code_id: "11"
+- model: 'master_data.clusterCode'
+  pk: "115"
+  fields:
+    item_code: "115"
+    name: "Finance service and assurance"
+    status: "True"
+    family_code_id: "11"
+- model: 'master_data.clusterCode'
+  pk: "116"
+  fields:
+    item_code: "116"
+    name: "Consulting and information service"
+    status: "True"
+    family_code_id: "11"
+- model: 'master_data.clusterCode'
+  pk: "117"
+  fields:
+    item_code: "117"
+    name: "Commercial service"
+    status: "True"
+    family_code_id: "11"
+- model: 'master_data.clusterCode'
+  pk: "118"
+  fields:
+    item_code: "118"
+    name: "Office service"
+    status: "True"
+    family_code_id: "11"
+- model: 'master_data.clusterCode'
+  pk: "119"
+  fields:
+    item_code: "119"
+    name: "Motor vehicle service"
+    status: "True"
+    family_code_id: "11"
+- model: 'master_data.clusterCode'
+  pk: "120"
+  fields:
+    item_code: "120"
+    name: "Waste disposal service"
+    status: "True"
+    family_code_id: "11"
+- model: 'master_data.clusterCode'
+  pk: "121"
+  fields:
+    item_code: "121"
+    name: "Technical supervision"
+    status: "True"
+    family_code_id: "11"
+- model: 'master_data.clusterCode'
+  pk: "122"
+  fields:
+    item_code: "122"
+    name: "Quality and environmental management"
+    status: "True"
+    family_code_id: "11"
+- model: 'master_data.clusterCode'
+  pk: "123"
+  fields:
+    item_code: "123"
+    name: "Facility management"
+    status: "True"
+    family_code_id: "11"
+- model: 'master_data.clusterCode'
+  pk: "124"
+  fields:
+    item_code: "124"
+    name: "Archive, document management"
+    status: "True"
+    family_code_id: "11"
+- model: 'master_data.clusterCode'
+  pk: "125"
+  fields:
+    item_code: "125"
+    name: "Technical documentation"
+    status: "True"
+    family_code_id: "11"
+- model: 'master_data.clusterCode'
+  pk: "126"
+  fields:
+    item_code: "126"
+    name: "Media design"
+    status: "True"
+    family_code_id: "11"
+- model: 'master_data.clusterCode'
+  pk: "127"
+  fields:
+    item_code: "127"
+    name: "Technical calculation"
+    status: "True"
+    family_code_id: "11"
+- model: 'master_data.clusterCode'
+  pk: "128"
+  fields:
+    item_code: "128"
+    name: "Industry cleaning"
+    status: "True"
+    family_code_id: "11"
+- model: 'master_data.clusterCode'
+  pk: "129"
+  fields:
+    item_code: "129"
+    name: "Industrial brush"
+    status: "True"
+    family_code_id: "12"
+- model: 'master_data.clusterCode'
+  pk: "130"
+  fields:
+    item_code: "130"
+    name: "Wheel"
+    status: "True"
+    family_code_id: "12"
+- model: 'master_data.clusterCode'
+  pk: "131"
+  fields:
+    item_code: "131"
+    name: "Ball"
+    status: "True"
+    family_code_id: "12"
+- model: 'master_data.clusterCode'
+  pk: "132"
+  fields:
+    item_code: "132"
+    name: "Ventilator, blower"
+    status: "True"
+    family_code_id: "12"
+- model: 'master_data.clusterCode'
+  pk: "133"
+  fields:
+    item_code: "133"
+    name: "Pump"
+    status: "True"
+    family_code_id: "12"
+- model: 'master_data.clusterCode'
+  pk: "134"
+  fields:
+    item_code: "134"
+    name: "Roller"
+    status: "True"
+    family_code_id: "12"
+- model: 'master_data.clusterCode'
+  pk: "135"
+  fields:
+    item_code: "135"
+    name: "Tool for machine"
+    status: "True"
+    family_code_id: "12"
+- model: 'master_data.clusterCode'
+  pk: "136"
+  fields:
+    item_code: "136"
+    name: "Tool and hardware"
+    status: "True"
+    family_code_id: "12"
+- model: 'master_data.clusterCode'
+  pk: "137"
+  fields:
+    item_code: "137"
+    name: "Roll"
+    status: "True"
+    family_code_id: "12"
+- model: 'master_data.clusterCode'
+  pk: "138"
+  fields:
+    item_code: "138"
+    name: "Connector and mechanical fastening element"
+    status: "True"
+    family_code_id: "12"
+- model: 'master_data.clusterCode'
+  pk: "139"
+  fields:
+    item_code: "139"
+    name: "Assembly system"
+    status: "True"
+    family_code_id: "12"
+- model: 'master_data.clusterCode'
+  pk: "140"
+  fields:
+    item_code: "140"
+    name: "Shaft hub connection"
+    status: "True"
+    family_code_id: "12"
+- model: 'master_data.clusterCode'
+  pk: "141"
+  fields:
+    item_code: "141"
+    name: "Spring"
+    status: "True"
+    family_code_id: "12"
+- model: 'master_data.clusterCode'
+  pk: "142"
+  fields:
+    item_code: "142"
+    name: "Seal"
+    status: "True"
+    family_code_id: "12"
+- model: 'master_data.clusterCode'
+  pk: "143"
+  fields:
+    item_code: "143"
+    name: "Cover"
+    status: "True"
+    family_code_id: "12"
+- model: 'master_data.clusterCode'
+  pk: "144"
+  fields:
+    item_code: "144"
+    name: "Master pattern machine"
+    status: "True"
+    family_code_id: "12"
+- model: 'master_data.clusterCode'
+  pk: "145"
+  fields:
+    item_code: "145"
+    name: "Machine for producing of connection"
+    status: "True"
+    family_code_id: "12"
+- model: 'master_data.clusterCode'
+  pk: "146"
+  fields:
+    item_code: "146"
+    name: "Separating machine"
+    status: "True"
+    family_code_id: "12"
+- model: 'master_data.clusterCode'
+  pk: "147"
+  fields:
+    item_code: "147"
+    name: "Semiconductor industry machine"
+    status: "True"
+    family_code_id: "12"
+- model: 'master_data.clusterCode'
+  pk: "148"
+  fields:
+    item_code: "148"
+    name: "Special technologies machine"
+    status: "True"
+    family_code_id: "12"
+- model: 'master_data.clusterCode'
+  pk: "149"
+  fields:
+    item_code: "149"
+    name: "Plastic and rubber industry machine"
+    status: "True"
+    family_code_id: "12"
+- model: 'master_data.clusterCode'
+  pk: "150"
+  fields:
+    item_code: "150"
+    name: "Machine for machining of metal, other application"
+    status: "True"
+    family_code_id: "12"
+- model: 'master_data.clusterCode'
+  pk: "151"
+  fields:
+    item_code: "151"
+    name: "Water, sanitary technical machine"
+    status: "True"
+    family_code_id: "12"
+- model: 'master_data.clusterCode'
+  pk: "152"
+  fields:
+    item_code: "152"
+    name: "Machinery"
+    status: "True"
+    family_code_id: "12"
+- model: 'master_data.clusterCode'
+  pk: "153"
+  fields:
+    item_code: "153"
+    name: "Compressor"
+    status: "True"
+    family_code_id: "12"
+- model: 'master_data.clusterCode'
+  pk: "154"
+  fields:
+    item_code: "154"
+    name: "Electrical and electronic industry machine"
+    status: "True"
+    family_code_id: "12"
+- model: 'master_data.clusterCode'
+  pk: "155"
+  fields:
+    item_code: "155"
+    name: "Forming machine"
+    status: "True"
+    family_code_id: "12"
+- model: 'master_data.clusterCode'
+  pk: "156"
+  fields:
+    item_code: "156"
+    name: "Industrial cleaning machine"
+    status: "True"
+    family_code_id: "12"
+- model: 'master_data.clusterCode'
+  pk: "157"
+  fields:
+    item_code: "157"
+    name: "Surface treatment machine"
+    status: "True"
+    family_code_id: "12"
+- model: 'master_data.clusterCode'
+  pk: "158"
+  fields:
+    item_code: "158"
+    name: "Shaft bushing (machine element)"
+    status: "True"
+    family_code_id: "12"
+- model: 'master_data.clusterCode'
+  pk: "159"
+  fields:
+    item_code: "159"
+    name: "Sleeve"
+    status: "True"
+    family_code_id: "12"
+- model: 'master_data.clusterCode'
+  pk: "160"
+  fields:
+    item_code: "160"
+    name: "Accessory and component for manufacturing machine"
+    status: "True"
+    family_code_id: "12"
+- model: 'master_data.clusterCode'
+  pk: "161"
+  fields:
+    item_code: "161"
+    name: "Lubricating equipment"
+    status: "True"
+    family_code_id: "12"
+- model: 'master_data.clusterCode'
+  pk: "162"
+  fields:
+    item_code: "162"
+    name: "Other standard element"
+    status: "True"
+    family_code_id: "12"
+- model: 'master_data.clusterCode'
+  pk: "163"
+  fields:
+    item_code: "163"
+    name: "Guide element"
+    status: "True"
+    family_code_id: "12"
+- model: 'master_data.clusterCode'
+  pk: "164"
+  fields:
+    item_code: "164"
+    name: "Structural component for vibration damping"
+    status: "True"
+    family_code_id: "12"
+- model: 'master_data.clusterCode'
+  pk: "165"
+  fields:
+    item_code: "165"
+    name: "Control and operating part"
+    status: "True"
+    family_code_id: "12"
+- model: 'master_data.clusterCode'
+  pk: "166"
+  fields:
+    item_code: "166"
+    name: "Other machine element"
+    status: "True"
+    family_code_id: "12"
+- model: 'master_data.clusterCode'
+  pk: "167"
+  fields:
+    item_code: "167"
+    name: "Shaft"
+    status: "True"
+    family_code_id: "12"
+- model: 'master_data.clusterCode'
+  pk: "168"
+  fields:
+    item_code: "168"
+    name: "Bearing"
+    status: "True"
+    family_code_id: "12"
+- model: 'master_data.clusterCode'
+  pk: "169"
+  fields:
+    item_code: "169"
+    name: "Washer"
+    status: "True"
+    family_code_id: "12"
+- model: 'master_data.clusterCode'
+  pk: "170"
+  fields:
+    item_code: "170"
+    name: "Antenna, antenna array"
+    status: "True"
+    family_code_id: "13"
+- model: 'master_data.clusterCode'
+  pk: "171"
+  fields:
+    item_code: "171"
+    name: "Board and projection wall"
+    status: "True"
+    family_code_id: "13"
+- model: 'master_data.clusterCode'
+  pk: "172"
+  fields:
+    item_code: "172"
+    name: "Electroacoustic and video system"
+    status: "True"
+    family_code_id: "13"
+- model: 'master_data.clusterCode'
+  pk: "173"
+  fields:
+    item_code: "173"
+    name: "Telephone system"
+    status: "True"
+    family_code_id: "13"
+- model: 'master_data.clusterCode'
+  pk: "174"
+  fields:
+    item_code: "174"
+    name: "Navigation system"
+    status: "True"
+    family_code_id: "13"
+- model: 'master_data.clusterCode'
+  pk: "175"
+  fields:
+    item_code: "175"
+    name: "Electronic information system"
+    status: "True"
+    family_code_id: "13"
+- model: 'master_data.clusterCode'
+  pk: "176"
+  fields:
+    item_code: "176"
+    name: "Radio installation and set"
+    status: "True"
+    family_code_id: "13"
+- model: 'master_data.clusterCode'
+  pk: "177"
+  fields:
+    item_code: "177"
+    name: "Monitor and projector"
+    status: "True"
+    family_code_id: "13"
+- model: 'master_data.clusterCode'
+  pk: "178"
+  fields:
+    item_code: "178"
+    name: "Moderation equipment"
+    status: "True"
+    family_code_id: "13"
+- model: 'master_data.clusterCode'
+  pk: "179"
+  fields:
+    item_code: "179"
+    name: "Display appliance"
+    status: "True"
+    family_code_id: "13"
+- model: 'master_data.clusterCode'
+  pk: "180"
+  fields:
+    item_code: "180"
+    name: "Technical conference equipment"
+    status: "True"
+    family_code_id: "13"
+- model: 'master_data.clusterCode'
+  pk: "181"
+  fields:
+    item_code: "181"
+    name: "Event and fair equipment"
+    status: "True"
+    family_code_id: "13"
+- model: 'master_data.clusterCode'
+  pk: "182"
+  fields:
+    item_code: "182"
+    name: "Other presentation equipment"
+    status: "True"
+    family_code_id: "13"
+- model: 'master_data.clusterCode'
+  pk: "183"
+  fields:
+    item_code: "183"
+    name: "Telecommunication device"
+    status: "True"
+    family_code_id: "13"
+- model: 'master_data.clusterCode'
+  pk: "184"
+  fields:
+    item_code: "184"
+    name: "Advertising material and equipment"
+    status: "True"
+    family_code_id: "13"
+- model: 'master_data.clusterCode'
+  pk: "185"
+  fields:
+    item_code: "185"
+    name: "Security and protection"
+    status: "True"
+    family_code_id: "14"
+- model: 'master_data.clusterCode'
+  pk: "186"
+  fields:
+    item_code: "186"
+    name: "Occupational safety equipment for sound and vibration protection"
+    status: "True"
+    family_code_id: "14"
+- model: 'master_data.clusterCode'
+  pk: "187"
+  fields:
+    item_code: "187"
+    name: "Occupational safety equipment"
+    status: "True"
+    family_code_id: "14"
+- model: 'master_data.clusterCode'
+  pk: "188"
+  fields:
+    item_code: "188"
+    name: "Fire protection equipment"
+    status: "True"
+    family_code_id: "14"
+- model: 'master_data.clusterCode'
+  pk: "189"
+  fields:
+    item_code: "189"
+    name: "Labor protective clothing"
+    status: "True"
+    family_code_id: "14"
+- model: 'master_data.clusterCode'
+  pk: "190"
+  fields:
+    item_code: "190"
+    name: "Abrasive and polishing agent"
+    status: "True"
+    family_code_id: "15"
+- model: 'master_data.clusterCode'
+  pk: "191"
+  fields:
+    item_code: "191"
+    name: "Tool for other application"
+    status: "True"
+    family_code_id: "15"
+- model: 'master_data.clusterCode'
+  pk: "192"
+  fields:
+    item_code: "192"
+    name: "Pneumatic tool"
+    status: "True"
+    family_code_id: "15"
+- model: 'master_data.clusterCode'
+  pk: "193"
+  fields:
+    item_code: "193"
+    name: "Hand tool"
+    status: "True"
+    family_code_id: "15"
+- model: 'master_data.clusterCode'
+  pk: "194"
+  fields:
+    item_code: "194"
+    name: "Gasoline tool"
+    status: "True"
+    family_code_id: "15"
+- model: 'master_data.clusterCode'
+  pk: "195"
+  fields:
+    item_code: "195"
+    name: "Electromotive tool and small machine"
+    status: "True"
+    family_code_id: "15"
+- model: 'master_data.clusterCode'
+  pk: "196"
+  fields:
+    item_code: "196"
+    name: "Measuring and testing tool"
+    status: "True"
+    family_code_id: "15"
+- model: 'master_data.clusterCode'
+  pk: "197"
+  fields:
+    item_code: "197"
+    name: "Hydraulic tool and machine"
+    status: "True"
+    family_code_id: "15"
+- model: 'master_data.clusterCode'
+  pk: "198"
+  fields:
+    item_code: "198"
+    name: "Cutting part"
+    status: "True"
+    family_code_id: "15"
+- model: 'master_data.clusterCode'
+  pk: "199"
+  fields:
+    item_code: "199"
+    name: "Filling and emptying device"
+    status: "True"
+    family_code_id: "15"
+- model: 'master_data.clusterCode'
+  pk: "200"
+  fields:
+    item_code: "200"
+    name: "Cast metal part"
+    status: "True"
+    family_code_id: "15"
+- model: 'master_data.clusterCode'
+  pk: "201"
+  fields:
+    item_code: "201"
+    name: "Soldering equipment"
+    status: "True"
+    family_code_id: "15"
+- model: 'master_data.clusterCode'
+  pk: "202"
+  fields:
+    item_code: "202"
+    name: "Other component for conveying technology"
+    status: "True"
+    family_code_id: "15"
+- model: 'master_data.clusterCode'
+  pk: "203"
+  fields:
+    item_code: "203"
+    name: "Workshop equipment"
+    status: "True"
+    family_code_id: "15"
+- model: 'master_data.clusterCode'
+  pk: "204"
+  fields:
+    item_code: "204"
+    name: "Load suspension equipment"
+    status: "True"
+    family_code_id: "15"
+- model: 'master_data.clusterCode'
+  pk: "205"
+  fields:
+    item_code: "205"
+    name: "Non continuous conveyor"
+    status: "True"
+    family_code_id: "16"
+- model: 'master_data.clusterCode'
+  pk: "206"
+  fields:
+    item_code: "206"
+    name: "Sensor (according to application)"
+    status: "True"
+    family_code_id: "16"
+- model: 'master_data.clusterCode'
+  pk: "207"
+  fields:
+    item_code: "207"
+    name: "Sensor inductive"
+    status: "True"
+    family_code_id: "16"
+- model: 'master_data.clusterCode'
+  pk: "208"
+  fields:
+    item_code: "208"
+    name: "Sensor for physical quantity"
+    status: "True"
+    family_code_id: "16"
+- model: 'master_data.clusterCode'
+  pk: "209"
+  fields:
+    item_code: "209"
+    name: "Sensor capacitive"
+    status: "True"
+    family_code_id: "16"
+- model: 'master_data.clusterCode'
+  pk: "210"
+  fields:
+    item_code: "210"
+    name: "Other sensor"
+    status: "True"
+    family_code_id: "16"
+- model: 'master_data.clusterCode'
+  pk: "211"
+  fields:
+    item_code: "211"
+    name: "Conveyor technology"
+    status: "True"
+    family_code_id: "16"
+- model: 'master_data.clusterCode'
+  pk: "212"
+  fields:
+    item_code: "212"
+    name: "Other conveyor technology"
+    status: "True"
+    family_code_id: "16"
+- model: 'master_data.clusterCode'
+  pk: "213"
+  fields:
+    item_code: "213"
+    name: "Measuring and testing technology for specific quantity"
+    status: "True"
+    family_code_id: "16"
+- model: 'master_data.clusterCode'
+  pk: "214"
+  fields:
+    item_code: "214"
+    name: "Welding technique"
+    status: "True"
+    family_code_id: "16"
+- model: 'master_data.clusterCode'
+  pk: "215"
+  fields:
+    item_code: "215"
+    name: "Filtering technology"
+    status: "True"
+    family_code_id: "16"
+- model: 'master_data.clusterCode'
+  pk: "216"
+  fields:
+    item_code: "216"
+    name: "Storage and rack system"
+    status: "True"
+    family_code_id: "16"
+- model: 'master_data.clusterCode'
+  pk: "217"
+  fields:
+    item_code: "217"
+    name: "Material and goods handling system"
+    status: "True"
+    family_code_id: "16"
+- model: 'master_data.clusterCode'
+  pk: "218"
+  fields:
+    item_code: "218"
+    name: "Accessory for sensoric"
+    status: "True"
+    family_code_id: "16"
+- model: 'master_data.clusterCode'
+  pk: "219"
+  fields:
+    item_code: "219"
+    name: "Compensator and bellow for tube"
+    status: "True"
+    family_code_id: "17"
+- model: 'master_data.clusterCode'
+  pk: "220"
+  fields:
+    item_code: "220"
+    name: "Component for water pollution prevention treatment"
+    status: "True"
+    family_code_id: "17"
+- model: 'master_data.clusterCode'
+  pk: "221"
+  fields:
+    item_code: "221"
+    name: "Tube"
+    status: "True"
+    family_code_id: "17"
+- model: 'master_data.clusterCode'
+  pk: "222"
+  fields:
+    item_code: "222"
+    name: "Hose"
+    status: "True"
+    family_code_id: "17"
+- model: 'master_data.clusterCode'
+  pk: "223"
+  fields:
+    item_code: "223"
+    name: "Armature"
+    status: "True"
+    family_code_id: "17"
+- model: 'master_data.clusterCode'
+  pk: "224"
+  fields:
+    item_code: "224"
+    name: "Canal and pipe fitting piece"
+    status: "True"
+    family_code_id: "17"
+- model: 'master_data.clusterCode'
+  pk: "225"
+  fields:
+    item_code: "225"
+    name: "Pipe and hose accessory"
+    status: "True"
+    family_code_id: "17"
+- model: 'master_data.clusterCode'
+  pk: "226"
+  fields:
+    item_code: "226"
+    name: "Component for water protection purpose"
+    status: "True"
+    family_code_id: "17"
+- model: 'master_data.clusterCode'
+  pk: "227"
+  fields:
+    item_code: "227"
+    name: "Sewage work component"
+    status: "True"
+    family_code_id: "17"
+- model: 'master_data.clusterCode'
+  pk: "228"
+  fields:
+    item_code: "228"
+    name: "Component for air purity maintenance"
+    status: "True"
+    family_code_id: "17"
+- model: 'master_data.clusterCode'
+  pk: "229"
+  fields:
+    item_code: "229"
+    name: "Fumigation equipment"
+    status: "True"
+    family_code_id: "17"
+- model: 'master_data.clusterCode'
+  pk: "230"
+  fields:
+    item_code: "230"
+    name: "Appliances for slurry drainage and treatment"
+    status: "True"
+    family_code_id: "17"
+- model: 'master_data.clusterCode'
+  pk: "231"
+  fields:
+    item_code: "231"
+    name: "Oil hydraulic"
+    status: "True"
+    family_code_id: "18"
+- model: 'master_data.clusterCode'
+  pk: "232"
+  fields:
+    item_code: "232"
+    name: "Chemical"
+    status: "True"
+    family_code_id: "18"
+- model: 'master_data.clusterCode'
+  pk: "233"
+  fields:
+    item_code: "233"
+    name: "Chemical (according to application)"
+    status: "True"
+    family_code_id: "18"
+- model: 'master_data.clusterCode'
+  pk: "234"
+  fields:
+    item_code: "234"
+    name: "Pneumatic"
+    status: "True"
+    family_code_id: "18"
+- model: 'master_data.clusterCode'
+  pk: "235"
+  fields:
+    item_code: "235"
+    name: "Water-hydraulic"
+    status: "True"
+    family_code_id: "18"
+- model: 'master_data.clusterCode'
+  pk: "236"
+  fields:
+    item_code: "236"
+    name: "Chemical technical product"
+    status: "True"
+    family_code_id: "18"
+- model: 'master_data.clusterCode'
+  pk: "237"
+  fields:
+    item_code: "237"
+    name: "Other chemical industrial material"
+    status: "True"
+    family_code_id: "18"
+- model: 'master_data.clusterCode'
+  pk: "238"
+  fields:
+    item_code: "238"
+    name: "Electromechanic"
+    status: "True"
+    family_code_id: "19"
+- model: 'master_data.clusterCode'
+  pk: "239"
+  fields:
+    item_code: "239"
+    name: "Electrical connection technology"
+    status: "True"
+    family_code_id: "19"
+- model: 'master_data.clusterCode'
+  pk: "240"
+  fields:
+    item_code: "240"
+    name: "Electrical equipment"
+    status: "True"
+    family_code_id: "19"
+- model: 'master_data.clusterCode'
+  pk: "241"
+  fields:
+    item_code: "241"
+    name: "Drive system"
+    status: "True"
+    family_code_id: "20"
+- model: 'master_data.clusterCode'
+  pk: "242"
+  fields:
+    item_code: "242"
+    name: "Control technique"
+    status: "True"
+    family_code_id: "20"
+- model: 'master_data.clusterCode'
+  pk: "243"
+  fields:
+    item_code: "243"
+    name: "Automation solution machine"
+    status: "True"
+    family_code_id: "20"
+- model: 'master_data.clusterCode'
+  pk: "244"
+  fields:
+    item_code: "244"
+    name: "Driving component"
+    status: "True"
+    family_code_id: "20"
+- model: 'master_data.clusterCode'
+  pk: "245"
+  fields:
+    item_code: "245"
+    name: "Assembly technique"
+    status: "True"
+    family_code_id: "21"
+- model: 'master_data.clusterCode'
+  pk: "246"
+  fields:
+    item_code: "246"
+    name: "Industrial robot equipment"
+    status: "True"
+    family_code_id: "21"
+- model: 'master_data.clusterCode'
+  pk: "247"
+  fields:
+    item_code: "247"
+    name: "Handling equipment"
+    status: "True"
+    family_code_id: "21"
+- model: 'master_data.clusterCode'
+  pk: "248"
+  fields:
+    item_code: "248"
+    name: "Rubber and plastic"
+    status: "True"
+    family_code_id: "22"
+- model: 'master_data.clusterCode'
+  pk: "249"
+  fields:
+    item_code: "249"
+    name: "Minerals and metallurgy"
+    status: "True"
+    family_code_id: "22"
+- model: 'master_data.clusterCode'
+  pk: "250"
+  fields:
+    item_code: "250"
+    name: "Energy"
+    status: "True"
+    family_code_id: "22"
+- model: 'master_data.clusterCode'
+  pk: "251"
+  fields:
+    item_code: "251"
+    name: "Metal construction"
+    status: "True"
+    family_code_id: "23"
+- model: 'master_data.clusterCode'
+  pk: "252"
+  fields:
+    item_code: "252"
+    name: "Component for jig and fixture construction"
+    status: "True"
+    family_code_id: "23"
+- model: 'master_data.clusterCode'
+  pk: "253"
+  fields:
+    item_code: "253"
+    name: "Surface treatment and technology"
+    status: "True"
+    family_code_id: "23"
+- model: 'master_data.clusterCode'
+  pk: "254"
+  fields:
+    item_code: "254"
+    name: "Saw part"
+    status: "True"
+    family_code_id: "23"
+- model: 'master_data.clusterCode'
+  pk: "255"
+  fields:
+    item_code: "255"
+    name: "Fabrication service"
+    status: "True"
+    family_code_id: "23"
+- model: 'master_data.clusterCode'
+  pk: "256"
+  fields:
+    item_code: "256"
+    name: "Machinery and service"
+    status: "True"
+    family_code_id: "23"
+- model: 'master_data.clusterCode'
+  pk: "257"
+  fields:
+    item_code: "257"
+    name: "Assembly service"
+    status: "True"
+    family_code_id: "23"
+- model: 'master_data.clusterCode'
+  pk: "258"
+  fields:
+    item_code: "258"
+    name: "Complex manufacturing service"
+    status: "True"
+    family_code_id: "23"
+- model: 'master_data.clusterCode'
+  pk: "259"
+  fields:
+    item_code: "259"
+    name: "Mounded part of plastic, rubber"
+    status: "True"
+    family_code_id: "23"
+- model: 'master_data.clusterCode'
+  pk: "260"
+  fields:
+    item_code: "260"
+    name: "Metal working"
+    status: "True"
+    family_code_id: "23"
+- model: 'master_data.clusterCode'
+  pk: "261"
+  fields:
+    item_code: "261"
+    name: "Welding part, metal"
+    status: "True"
+    family_code_id: "23"
+- model: 'master_data.clusterCode'
+  pk: "262"
+  fields:
+    item_code: "262"
+    name: "Grinding part"
+    status: "True"
+    family_code_id: "23"
+- model: 'master_data.clusterCode'
+  pk: "263"
+  fields:
+    item_code: "263"
+    name: "Prototype and sample part, industrial, model construction"
+    status: "True"
+    family_code_id: "23"
+- model: 'master_data.clusterCode'
+  pk: "264"
+  fields:
+    item_code: "264"
+    name: "Other moulded and structural part"
+    status: "True"
+    family_code_id: "23"
+- model: 'master_data.clusterCode'
+  pk: "265"
+  fields:
+    item_code: "265"
+    name: "Milling part, milling metal"
+    status: "True"
+    family_code_id: "23"
+- model: 'master_data.clusterCode'
+  pk: "266"
+  fields:
+    item_code: "266"
+    name: "Tube metal part"
+    status: "True"
+    family_code_id: "23"
+- model: 'master_data.clusterCode'
+  pk: "267"
+  fields:
+    item_code: "267"
+    name: "Sheet metal part, sheet metal working"
+    status: "True"
+    family_code_id: "23"
+- model: 'master_data.clusterCode'
+  pk: "268"
+  fields:
+    item_code: "268"
+    name: "Turning part, metal"
+    status: "True"
+    family_code_id: "23"
+- model: 'master_data.clusterCode'
+  pk: "269"
+  fields:
+    item_code: "269"
+    name: "Other manufacturing"
+    status: "True"
+    family_code_id: "23"
+- model: 'master_data.clusterCode'
+  pk: "270"
+  fields:
+    item_code: "270"
+    name: "Tool and mold making"
+    status: "True"
+    family_code_id: "23"
+- model: 'master_data.clusterCode'
+  pk: "271"
+  fields:
+    item_code: "271"
+    name: "Thread fabrication part"
+    status: "True"
+    family_code_id: "23"
+- model: 'master_data.clusterCode'
+  pk: "272"
+  fields:
+    item_code: "272"
+    name: "Change material property"
+    status: "True"
+    family_code_id: "23"
+- model: 'master_data.clusterCode'
+  pk: "273"
+  fields:
+    item_code: "273"
+    name: "Structural part, processing plastic"
+    status: "True"
+    family_code_id: "23"
+- model: 'master_data.clusterCode'
+  pk: "274"
+  fields:
+    item_code: "274"
+    name: "Punching and bending part"
+    status: "True"
+    family_code_id: "23"
+- model: 'master_data.clusterCode'
+  pk: "275"
+  fields:
+    item_code: "275"
+    name: "Machining center, flexible manufacturing cell and production system"
+    status: "True"
+    family_code_id: "23"
+- model: 'master_data.clusterCode'
+  pk: "276"
+  fields:
+    item_code: "276"
+    name: "Elastomer and rubber semi manufactured goods"
+    status: "True"
+    family_code_id: "24"
+- model: 'master_data.clusterCode'
+  pk: "277"
+  fields:
+    item_code: "277"
+    name: "Technical textile"
+    status: "True"
+    family_code_id: "24"
+- model: 'master_data.clusterCode'
+  pk: "278"
+  fields:
+    item_code: "278"
+    name: "Metal semi manufactured goods"
+    status: "True"
+    family_code_id: "24"
+- model: 'master_data.clusterCode'
+  pk: "279"
+  fields:
+    item_code: "279"
+    name: "Material, raw product, raw material"
+    status: "True"
+    family_code_id: "24"
+- model: 'master_data.clusterCode'
+  pk: "280"
+  fields:
+    item_code: "280"
+    name: "Plastic semi manufactured goods"
+    status: "True"
+    family_code_id: "24"
+- model: 'master_data.clusterCode'
+  pk: "281"
+  fields:
+    item_code: "281"
+    name: "Glass semi manufactured goods"
+    status: "True"
+    family_code_id: "24"
+- model: 'master_data.clusterCode'
+  pk: "282"
+  fields:
+    item_code: "282"
+    name: "Agriculture"
+    status: "True"
+    family_code_id: "25"
+- model: 'master_data.clusterCode'
+  pk: "283"
+  fields:
+    item_code: "283"
+    name: "Food and beverage"
+    status: "True"
+    family_code_id: "25"
+- model: 'master_data.clusterCode'
+  pk: "284"
+  fields:
+    item_code: "284"
+    name: "Waste container"
+    status: "True"
+    family_code_id: "26"
+- model: 'master_data.clusterCode'
+  pk: "285"
+  fields:
+    item_code: "285"
+    name: "Office technology"
+    status: "True"
+    family_code_id: "26"
+- model: 'master_data.clusterCode'
+  pk: "286"
+  fields:
+    item_code: "286"
+    name: "Bank technology"
+    status: "True"
+    family_code_id: "26"
+- model: 'master_data.clusterCode'
+  pk: "287"
+  fields:
+    item_code: "287"
+    name: "Other office supply"
+    status: "True"
+    family_code_id: "26"
+- model: 'master_data.clusterCode'
+  pk: "288"
+  fields:
+    item_code: "288"
+    name: "Office and school supplies"
+    status: "True"
+    family_code_id: "26"
+- model: 'master_data.clusterCode'
+  pk: "289"
+  fields:
+    item_code: "289"
+    name: "Paper and label"
+    status: "True"
+    family_code_id: "26"
+- model: 'master_data.clusterCode'
+  pk: "290"
+  fields:
+    item_code: "290"
+    name: "Indoor, outdoor installation"
+    status: "True"
+    family_code_id: "26"
+- model: 'master_data.clusterCode'
+  pk: "291"
+  fields:
+    item_code: "291"
+    name: "Cash and payment system"
+    status: "True"
+    family_code_id: "26"
+- model: 'master_data.clusterCode'
+  pk: "292"
+  fields:
+    item_code: "292"
+    name: "Office furniture"
+    status: "True"
+    family_code_id: "26"
+- model: 'master_data.clusterCode'
+  pk: "293"
+  fields:
+    item_code: "293"
+    name: "Form and register book"
+    status: "True"
+    family_code_id: "26"
+- model: 'master_data.clusterCode'
+  pk: "294"
+  fields:
+    item_code: "294"
+    name: "File and cover"
+    status: "True"
+    family_code_id: "26"
+- model: 'master_data.clusterCode'
+  pk: "295"
+  fields:
+    item_code: "295"
+    name: "Desk need"
+    status: "True"
+    family_code_id: "26"
+- model: 'master_data.clusterCode'
+  pk: "296"
+  fields:
+    item_code: "296"
+    name: "Advertising material"
+    status: "True"
+    family_code_id: "26"
+- model: 'master_data.clusterCode'
+  pk: "297"
+  fields:
+    item_code: "297"
+    name: "Air conditioning, ventilation system and component"
+    status: "True"
+    family_code_id: "27"
+- model: 'master_data.clusterCode'
+  pk: "298"
+  fields:
+    item_code: "298"
+    name: "System of communication engineering"
+    status: "True"
+    family_code_id: "27"
+- model: 'master_data.clusterCode'
+  pk: "299"
+  fields:
+    item_code: "299"
+    name: "Heating, ventilation device and air conditioner"
+    status: "True"
+    family_code_id: "27"
+- model: 'master_data.clusterCode'
+  pk: "300"
+  fields:
+    item_code: "300"
+    name: "System and component for cooling and refrigeration engineering"
+    status: "True"
+    family_code_id: "27"
+- model: 'master_data.clusterCode'
+  pk: "301"
+  fields:
+    item_code: "301"
+    name: "Thermal protection machine"
+    status: "True"
+    family_code_id: "27"
+- model: 'master_data.clusterCode'
+  pk: "302"
+  fields:
+    item_code: "302"
+    name: "Production machine"
+    status: "True"
+    family_code_id: "27"
+- model: 'master_data.clusterCode'
+  pk: "303"
+  fields:
+    item_code: "303"
+    name: "Special machine"
+    status: "True"
+    family_code_id: "27"
+- model: 'master_data.clusterCode'
+  pk: "304"
+  fields:
+    item_code: "304"
+    name: "Environmental engineering machine"
+    status: "True"
+    family_code_id: "27"
+- model: 'master_data.clusterCode'
+  pk: "305"
+  fields:
+    item_code: "305"
+    name: "Automotive industry machine"
+    status: "True"
+    family_code_id: "27"
+- model: 'master_data.clusterCode'
+  pk: "306"
+  fields:
+    item_code: "306"
+    name: "Machine for polygraphists industry"
+    status: "True"
+    family_code_id: "27"
+- model: 'master_data.clusterCode'
+  pk: "307"
+  fields:
+    item_code: "307"
+    name: "Machine for the chemical and the petrochemical industry"
+    status: "True"
+    family_code_id: "27"
+- model: 'master_data.clusterCode'
+  pk: "308"
+  fields:
+    item_code: "308"
+    name: "Manufacturing industry machine"
+    status: "True"
+    family_code_id: "27"
+- model: 'master_data.clusterCode'
+  pk: "309"
+  fields:
+    item_code: "309"
+    name: "Machine and component for metallurgy"
+    status: "True"
+    family_code_id: "27"
+- model: 'master_data.clusterCode'
+  pk: "310"
+  fields:
+    item_code: "310"
+    name: "Machine and component for process engineering"
+    status: "True"
+    family_code_id: "27"
+- model: 'master_data.clusterCode'
+  pk: "311"
+  fields:
+    item_code: "311"
+    name: "Packaging and printing"
+    status: "True"
+    family_code_id: "28"
+- model: 'master_data.clusterCode'
+  pk: "312"
+  fields:
+    item_code: "312"
+    name: "Pigment and dye stuff"
+    status: "True"
+    family_code_id: "28"
+- model: 'master_data.clusterCode'
+  pk: "313"
+  fields:
+    item_code: "313"
+    name: "Preservative"
+    status: "True"
+    family_code_id: "28"
+- model: 'master_data.clusterCode'
+  pk: "314"
+  fields:
+    item_code: "314"
+    name: "Lubricant"
+    status: "True"
+    family_code_id: "28"
+- model: 'master_data.clusterCode'
+  pk: "315"
+  fields:
+    item_code: "315"
+    name: "Antifreeze"
+    status: "True"
+    family_code_id: "28"
+- model: 'master_data.clusterCode'
+  pk: "316"
+  fields:
+    item_code: "316"
+    name: "Solvating and thinning agent"
+    status: "True"
+    family_code_id: "28"
+- model: 'master_data.clusterCode'
+  pk: "317"
+  fields:
+    item_code: "317"
+    name: "Adhesive"
+    status: "True"
+    family_code_id: "28"
+- model: 'master_data.clusterCode'
+  pk: "318"
+  fields:
+    item_code: "318"
+    name: "Refridgerant"
+    status: "True"
+    family_code_id: "28"
+- model: 'master_data.clusterCode'
+  pk: "319"
+  fields:
+    item_code: "319"
+    name: "Marking and labelling"
+    status: "True"
+    family_code_id: "28"
+- model: 'master_data.clusterCode'
+  pk: "320"
+  fields:
+    item_code: "320"
+    name: "Hydraulic fluid"
+    status: "True"
+    family_code_id: "28"
+- model: 'master_data.clusterCode'
+  pk: "321"
+  fields:
+    item_code: "321"
+    name: "Technical gas"
+    status: "True"
+    family_code_id: "28"
+- model: 'master_data.clusterCode'
+  pk: "322"
+  fields:
+    item_code: "322"
+    name: "Storage"
+    status: "True"
+    family_code_id: "28"
+- model: 'master_data.clusterCode'
+  pk: "323"
+  fields:
+    item_code: "323"
+    name: "Fuel"
+    status: "True"
+    family_code_id: "28"
+- model: 'master_data.clusterCode'
+  pk: "324"
+  fields:
+    item_code: "324"
+    name: "Sealing material"
+    status: "True"
+    family_code_id: "28"
+- model: 'master_data.clusterCode'
+  pk: "325"
+  fields:
+    item_code: "325"
+    name: "Cleaning material"
+    status: "True"
+    family_code_id: "28"
+- model: 'master_data.clusterCode'
+  pk: "326"
+  fields:
+    item_code: "326"
+    name: "Other auxiliary material"
+    status: "True"
+    family_code_id: "28"
+- model: 'master_data.clusterCode'
+  pk: "327"
+  fields:
+    item_code: "327"
+    name: "Cold and heat transfer agent"
+    status: "True"
+    family_code_id: "28"
+- model: 'master_data.clusterCode'
+  pk: "328"
+  fields:
+    item_code: "328"
+    name: "Technical spray"
+    status: "True"
+    family_code_id: "28"

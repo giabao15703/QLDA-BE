@@ -1,0 +1,38 @@
+from django.db import models
+
+class AuctionError(models.TextChoices):
+    AUCTION_01 = "You must type the required field(s)."
+    AUCTION_02 = "Please choose type of max price when selecting True for setting max price."
+    AUCTION_03 = "Please check individual or maximum price"
+    AUCTION_04 = "Please fill max price for entire Auction."
+    AUCTION_05 = "You must type the required auction extension ."
+    AUCTION_06 = "You must type the  views disabled required ."
+    AUCTION_07 = "Please fill the rest time you want to the information of suppliers be disabled."
+    AUCTION_08 = "You must select the way how to trigger when chosing Automatic extension."
+    AUCTION_09 = "You must type the number of ranking when chosing the second way trigger."
+    AUCTION_10 = "You must type a number lower than or equal to the number of suppliers."
+    AUCTION_11 = "You must type the required trigger time."
+    AUCTION_12 = "Please fill the time you want to the information of suppliers be disabled."
+    AUCTION_13 = "Default: Bidder sees the best bid "
+    AUCTION_14 = "Please fill in minimum bid step and maximum bid step."
+    AUCTION_15 = "You set max price per position. \n Please fill value of max price not greater or lower than 80 percent average value of suppliers for each item."
+    AUCTION_16 = "Initial price must be lower than end price."
+    AUCTION_17 = "You must type valid price step."
+    AUCTION_18 = "Initial price must be greater than end price."
+    AUCTION_19 = (
+        "You choose max price for entire Auction. \n Please fill in max price such that value of all items between 0,2 and 1,8 average of all items."
+    )
+    AUCTION_20 = "Please check price level for yellow, target price, minimum bid step and maximum bid step, maybe one of these fields be incomplete"
+    AUCTION_21 = "Please fill value of max price for all items as chosing setting True"
+    AUCTION_22 = "The number of Auction has exceeded the amount"
+    AUCTION_23 = "Auction status must be 1 or 2"
+    AUCTION_24 = "You must type the  warning minutes required field."
+    AUCTION_25 = "Invalid percentage"
+    AUCTION_26 = "The total percentage must be 100 percent "
+    AUCTION_27 = "The maximum number of offers is 5"
+    AUCTION_28 = "Please fill value of changed starting price."
+    AUCTION_29 = "Your new starting price not be greater 80 percent than starting price."
+    AUCTION_30 = "Total of confirm price not be greater than total of your starting price and error not over 80 percent of starting price."
+    AUCTION_31 = "Auction is does not exist"
+    AUCTION_32 = "Supplier not in participant"
+

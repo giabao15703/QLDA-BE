@@ -1,0 +1,89 @@
+- model: 'master_data.reason'
+  pk: 1
+  fields:
+    name: Your prices are higher than our budget.
+    item_code: 1
+
+- model: 'master_data.reason'
+  pk: 2
+  fields:
+    name: 'Your quotation does not meet our requirements (Delivery date, Commercial terms, others: CO,CQ; …).'
+    item_code: 2
+
+- model: 'master_data.reason'
+  pk: 3
+  fields:
+    name: Your prices not submitted in platform.
+    item_code: 3
+
+- model: 'master_data.reason'
+  pk: 4
+  fields:
+      name: Your prices are not the most competitive one among suppliers.
+      item_code: 4
+
+- model: 'master_data.reason'
+  pk: 5
+  fields:
+    name: Your proposal is not matched our requirement / satisfication.
+    item_code: 5
+
+- model: 'master_data.reason'
+  pk: 6
+  fields:
+    name: Our demand is not required anymore.
+    item_code: 6
+
+- model: 'master_data.reason'
+  pk: 7
+  fields:
+    name: We decided to make in house production instead of buying.
+    item_code: 7
+
+- model: 'master_data.reason'
+  pk: 8
+  fields:
+    name: Your company profile is not matched our supplier minimum requirement.
+    item_code: 8
+
+- model: 'master_data.reason'
+  pk: 9
+  fields:
+    name: Due to high dependence.
+    item_code: 9
+
+- model: 'master_data.reason'
+  pk: 10
+  fields:
+    name: We do not prefer unsecure profile supplier.
+    item_code: 10
+
+- model: 'master_data.reason'
+  pk: 11
+  fields:
+    name: Your company is belonged to our sanction list.
+    item_code: 11
+
+- model: 'master_data.reason'
+  pk: 12
+  fields:
+    name: We prefer higher certified supplier.
+    item_code: 12
+
+- model: 'master_data.reason'
+  pk: 13
+  fields:
+    name: We prefer to award supplier with core business matching our requirement as much. 
+    item_code: 13
+
+- model: 'master_data.reason'
+  pk: 14
+  fields:
+    name: We prefer higher responsiveness from supplier
+    item_code: 14
+
+- model: 'master_data.reason'
+  pk: 15
+  fields:
+    name: We expect supplier to provide more advance solutions.
+    item_code: 15

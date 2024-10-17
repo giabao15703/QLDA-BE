@@ -1,0 +1,31 @@
+- model: 'master_data.Bank' 
+  pk: 1
+  fields: 
+    item_code: "Agribank"
+    name : "Vietnam Bank for Agriculture and Rural Development"
+- model: 'master_data.Bank' 
+  pk: 2
+  fields: 
+    item_code: "ACB"
+    name : "Asia Commercial Joint Stock Bank"
+- model: 'master_data.Bank' 
+  pk: 3
+  fields: 
+    item_code: "HDBank"
+    name : "Ho Chi Minh City Housing Development Bank"
+- model: 'master_data.Bank' 
+  pk: 4
+  fields: 
+    item_code: "Saigonbank"
+    name : "Sai Gon Thuong Tin Bank"
+- model: 'master_data.Bank' 
+  pk: 5
+  fields: 
+    item_code: "Vietcombank"
+    name : "JSC Bank for Foreign Trade of Vietnam"
+- model: 'master_data.Bank' 
+  pk: 6
+  fields: 
+    item_code: "VietinBank"
+    name : "Vietnam Joint Stock Commercial Bank for Industry and Trade"
+    

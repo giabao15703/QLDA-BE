@@ -1,0 +1,322 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE HTML>
+<html lang="vi">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <style>
+        @page {
+            size: A4 portrait;
+            margin: 1cm;
+        }
+        @font-face {
+            font-family: font;
+            src: "{% static '/Times New Roman 400.ttf' %}";
+        }
+        @font-face {
+            font-family: Roboto;
+            src: "{% static '/Roboto-Regular.ttf' %}";
+        }
+        body {
+            font-family: "Roboto", sans-serif;
+        }
+
+        .font_face {
+            font-family: "Roboto", sans-serif;
+        }
+
+        .fs-8 {
+            font-size: 8pt;
+            margin-bottom: 0in;
+            text-align: left;
+            margin-left: 5px;
+        }
+
+        .w-100 {
+            width: 100% !important;
+        }
+
+        .mt-0 {
+            margin-top: 0 !important;
+        }
+
+        .mt-5px {
+            margin-top: 5px !important;
+        }
+
+
+
+        .fs-9 {
+            font-size: 9pt;
+            text-align: center;
+        }
+
+        td {
+            border: 1px solid #000000;
+
+        }
+
+        tr.detail-table-content td {
+            font-size: 14px;
+        }
+
+        tr.tr-fs-14 td {
+            font-size: 14px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        table.info-table {
+            padding: 1px;
+            border-spacing: 0;
+            border-collapse: separate;
+        }
+
+
+        table.detail-table,
+        table.signature-table {
+            padding: 7px;
+            border-spacing: 0;
+            border-collapse: separate;
+        }
+
+        .bg-dark {
+            background-color: #bfbfbf;
+        }
+
+        .header {
+            width: 100%;
+        }
+
+        .header img {
+            height: 36px;
+            width: 120px;
+        }
+
+
+        table td {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        table {
+            table-layout: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header" style="padding-bottom: -27px;">
+        <div style="width: 50%;text-align: left; float: left">
+            <img src="/project/static/invoice.png">
+        </div>
+        <div style="float: right; width: 50%; text-align: right;">
+            <p style="font-size:15px;">
+                Beyond Procurement Standard & Compliance
+            </p>
+        </div>
+    </div>
+    <hr style="margin-top: 0px !important; width: 100%;">
+    <div class="title">
+        <p style="text-align: right;font-size: 35px;  margin-bottom: -120; "><b> DRAFT INVOICE</b></p>
+    </div>
+
+    <center>
+        <table class="info-table">
+            <tr>
+                <td valign="top" style="border: 1px solid #000000; width: 33.33%;">
+                    <p class="fs-8" style="padding-top: 10px;"><b>Bill from:</b></p>
+                    <p class="fs-8 mt-5px"><b> Company Name</b>:NextPro International Procurement Service Co., Ltd. </p>
+                    <p class="fs-8 mt-5px"><b> Tax code:</b>0316185082</p>
+                    <p class="fs-8 mt-5px"><b> Address</b>:10th floor, Ao Dai Office Building,</p>
+                    <p class="fs-8 mt-0">
+                        <span> 21 Nguyen Trung Ngan st,</span>
+                        <br>
+                        <span> Ben Nghe Ward, District 1,</span>
+                        <br>
+                        <span> Ho Chi Minh City,Vietnam</span>
+                    </p>
+                </td>
+                <td style="width: 33.33%; vertical-align: top;">
+                    <p class="fs-8" style="padding-top: 10px;"><b>Bill to:</b></p>
+                    <p class="fs-8 mt-5px "><b> Company Name</b>:<span class="font_face">{% block company_full_name %}
+                            {{ company_full_name}}
+                            {% endblock %}</span></p>
+                    <p class="fs-8 mt-5px"><b> Tax code:</b>{% block company_tax %}
+                        {{ company_tax}}
+                        {% endblock %}</p>
+                    <p class="fs-8 mt-5px"><b> Address</b>:<span class="font_face"> {% block Address %}
+                            {{ company_address}}
+                            {% endblock %}</span></p>
+                    <p class="fs-8 mt-5px"><b> Phone</b>:{% block phone %}
+                        {{ phone}}
+                        {% endblock %}</p>
+
+                </td>
+                <td style="width: 33.34%; vertical-align: top;">
+                    <p class="fs-8" style="padding-top: 10px;"><b>Invoice No</b>:{% block invoice_no %}
+                        {{ invoice_no}}
+                        {% endblock %}</p>
+                    <p class="fs-8 mt-5px"><b>Invoice Date</b>: {% block invoice_date %}
+                        {{ invoice_date}}
+                        {% endblock %}</p>
+                </td>
+            </tr>
+        </table>
+    </center>
+
+    <center style="margin-top: 40px;">
+        <table class="detail-table">
+            <tr>
+                <td style="width: 10%;" class="bg-dark">
+                    <p class="fs-9"><b>No.</b></p>
+                </td>
+                <td style="width: 35%;" class="bg-dark">
+                    <p class="fs-9"><b>Description</b></p>
+                </td>
+                <td style="width: 15%;" class="bg-dark">
+                    <p class="fs-9"><b>Quantity</b></p>
+                </td>
+                <td style="width: 20%;" class="bg-dark">
+                    <p class="fs-9"><b>Unit Price (VND)</b></p>
+                </td>
+                <td style="width: 20%;" class="bg-dark">
+                    <p class="fs-9"><b>Total Amount (VND)</b></p>
+                </td>
+            </tr>
+            {% block list_detail %}
+
+            {% for detail in detail_list %}
+            <tr class="detail-table-content">
+                <td style="width: 10%;">
+                    <p>{{ forloop.counter}}</p>
+                </td>
+                <td style="width: 35%;">
+                    <p style="text-align: left">{{detail.description}}</p>
+                </td>
+                <td style="width: 15%;">
+                    <p>{{detail.quantity}}</p>
+                </td>
+                <td style="width: 20%;">
+                    <p>{{detail.unit_price}}</p>
+                </td>
+                <td style="width: 20%;">
+                    <p>{{detail.total_amount}}</p>
+                </td>
+            </tr>
+            {% endfor %}
+            {% endblock %}
+
+            <tr class="tr-fs-14">
+                <td colspan="4" style="border: 1px solid #000000;">
+                    <p style="text-align: left">
+                        <b>
+                            Subtotal
+                        </b>
+                    </p>
+                </td>
+                <td style="border: 1px solid #000000; vertical-align: top;">
+                    <p>
+                        {% block subtotal %}
+                        {{sub_total}}
+                        {% endblock %}
+                    </p>
+                </td>
+            </tr>
+
+            <tr class="tr-fs-14">
+                <td colspan="4" style="border: 1px solid #000000;">
+                    <p style="text-align: left">
+                        <b>Tax</b>
+                    </p>
+                </td>
+                <td style="border: 1px solid #000000; vertical-align: top;">
+                    <p>
+                        {% block tax %}
+                        {{tax}}
+                        {% endblock %}
+                    </p>
+                </td>
+            </tr>
+            <tr class="tr-fs-14">
+                <td colspan="4" style="border: 1px solid #000000;">
+                    <p style="text-align: left;">
+                        <b>Total</b>
+                    </p>
+                </td>
+                <td style="border: 1px solid #000000; vertical-align: top;">
+                    <p><b>
+                            {% block total %}
+                            {{total}}
+                            {% endblock %}
+                        </b>
+                    </p>
+                </td>
+            </tr>
+            <tr class="tr-fs-14">
+                <td colspan="5" style="border: 1px solid #000000;">
+                    <p style="text-align: left; color: black;" class="font_face">
+                        Amount in words:
+                        {% block total_string %}
+                        {{total_string}}
+                        {% endblock %}
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </center>
+    </p>
+    <p style="margin-bottom: 0.11in; line-height: 108%; text-align: justify;">
+        <i style="font-size: 12px;">
+            Please
+            note that this Draft Invoice is only intended to check and reference
+            service purchase information and is not effective for other payment
+            and commerce. NextPro will not bear any responsibility directly or
+            indirectly in connection with the misuse of this Draft Invoice.
+        </i>
+    </p>
+    <center>
+        <table class="signature-table">
+            <col style="width: 50%;" />
+            <col style="width: 50%;" />
+            <tr>
+                <td style="border: 1px solid #000000; background-color: #bfbfbf">
+                    <p style="text-align: center;">
+                        <b style="font-size: 12px;">
+                            Seller Signature
+                        </b>
+                    </p>
+                </td>
+                <td style="border: 1px solid #000000; padding: 0in 0.08in;background-color: #bfbfbf">
+                    <p style="text-align: center;">
+                        <b style="font-size: 12px;">
+                            {% block user_type %}
+                            {{user_type}}
+                            {% endblock %}
+                            Signature
+                        </b>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #000000; height: 90px;">
+                </td>
+                <td style="border: 1px solid #000000; height: 90px;">
+                </td>
+            </tr>
+        </table>
+    </center>
+    <p style="margin-bottom: 0.11in; line-height: 108%">
+    </p>
+    <div title="footer">
+        <p style="margin-top: 0.46in; margin-bottom: 0in; line-height: 100%; text-align: center;">
+            <i>Draft Invoice from NextPro</i>
+        </p>
+    </div>
+</body>
+
+</html>

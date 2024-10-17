@@ -1,0 +1,616 @@
+- model: 'sale_schema.auctionFee' 
+  pk: 1
+  fields: 
+    min_value: 0
+    max_value: 586250000
+    percentage: 2
+
+- model: 'sale_schema.auctionFee' 
+  pk: 2
+  fields: 
+    min_value: 586273450
+    max_value: 820750000
+    percentage: 1.99
+
+- model: 'sale_schema.auctionFee' 
+  pk: 3
+  fields: 
+    min_value: 820773450
+    max_value: 1055250000
+    percentage: 1.98
+
+- model: 'sale_schema.auctionFee' 
+  pk: 4
+  fields: 
+    min_value: 1055273450
+    max_value: 1289750000
+    percentage: 1.97
+
+- model: 'sale_schema.auctionFee' 
+  pk: 5
+  fields: 
+    min_value: 1289773450
+    max_value: 1524250000
+    percentage: 1.96
+
+- model: 'sale_schema.auctionFee' 
+  pk: 6
+  fields: 
+    min_value: 1524273450
+    max_value: 1758750000
+    percentage: 1.95
+
+- model: 'sale_schema.auctionFee' 
+  pk: 7
+  fields: 
+    min_value: 1758773450
+    max_value: 1993250000
+    percentage: 1.94
+
+- model: 'sale_schema.auctionFee' 
+  pk: 8
+  fields: 
+    min_value: 1993273450
+    max_value: 2227750000
+    percentage: 1.93
+
+- model: 'sale_schema.auctionFee' 
+  pk: 9
+  fields: 
+    min_value: 2227773450
+    max_value: 2462250000
+    percentage: 1.92
+
+- model: 'sale_schema.auctionFee' 
+  pk: 10
+  fields: 
+    min_value: 2462273450
+    max_value: 2696750000
+    percentage: 1.91
+
+- model: 'sale_schema.auctionFee' 
+  pk: 11
+  fields: 
+    min_value: 2696773450
+    max_value: 2931250000
+    percentage: 1.9
+- model: 'sale_schema.auctionFee' 
+  pk: 12
+  fields: 
+    min_value: 2931273450
+    max_value: 3165750000
+    percentage: 1.89
+- model: 'sale_schema.auctionFee' 
+  pk: 13
+  fields: 
+    min_value: 3165773450
+    max_value: 3400250000
+    percentage: 1.88
+- model: 'sale_schema.auctionFee' 
+  pk: 14
+  fields: 
+    min_value: 3400273450
+    max_value: 3634750000
+    percentage: 1.87
+- model: 'sale_schema.auctionFee' 
+  pk: 15
+  fields: 
+    min_value: 3634773450
+    max_value: 3869250000
+    percentage: 1.86
+- model: 'sale_schema.auctionFee' 
+  pk: 16
+  fields: 
+    min_value: 3869273450
+    max_value: 4103750000
+    percentage: 1.85
+- model: 'sale_schema.auctionFee' 
+  pk: 17
+  fields: 
+    min_value: 4103773450
+    max_value: 4338250000
+    percentage: 1.84
+- model: 'sale_schema.auctionFee' 
+  pk: 18
+  fields: 
+    min_value: 4338273450
+    max_value: 4572750000
+    percentage: 1.83
+- model: 'sale_schema.auctionFee' 
+  pk: 19
+  fields: 
+    min_value: 4572773450
+    max_value: 4807250000
+    percentage: 1.82
+- model: 'sale_schema.auctionFee' 
+  pk: 20
+  fields: 
+    min_value: 4807273450
+    max_value: 5041750000
+    percentage: 1.81
+- model: 'sale_schema.auctionFee' 
+  pk: 21
+  fields: 
+    min_value: 5041773450
+    max_value: 5276250000
+    percentage: 1.8
+- model: 'sale_schema.auctionFee' 
+  pk: 22
+  fields: 
+    min_value: 5276273450
+    max_value: 5510750000
+    percentage: 1.79
+- model: 'sale_schema.auctionFee' 
+  pk: 23
+  fields: 
+    min_value: 5510773450
+    max_value: 5745250000
+    percentage: 1.78
+- model: 'sale_schema.auctionFee' 
+  pk: 24
+  fields: 
+    min_value: 5745273450
+    max_value: 5979750000
+    percentage: 1.77
+- model: 'sale_schema.auctionFee' 
+  pk: 25
+  fields: 
+    min_value: 5979773450
+    max_value: 6214250000
+    percentage: 1.76
+- model: 'sale_schema.auctionFee' 
+  pk: 26
+  fields: 
+    min_value: 6214273450
+    max_value: 6448750000
+    percentage: 1.75
+- model: 'sale_schema.auctionFee' 
+  pk: 27
+  fields: 
+    min_value: 6448773450
+    max_value: 6683250000
+    percentage: 1.74
+- model: 'sale_schema.auctionFee' 
+  pk: 28
+  fields: 
+    min_value: 6683273450
+    max_value: 6917750000
+    percentage: 1.73
+- model: 'sale_schema.auctionFee' 
+  pk: 29
+  fields: 
+    min_value: 6917773450
+    max_value: 7152250000
+    percentage: 1.72
+- model: 'sale_schema.auctionFee' 
+  pk: 30
+  fields: 
+    min_value: 7152273450
+    max_value: 7386750000
+    percentage: 1.71
+- model: 'sale_schema.auctionFee' 
+  pk: 31
+  fields: 
+    min_value: 7386773450
+    max_value: 7621250000
+    percentage: 1.7
+- model: 'sale_schema.auctionFee' 
+  pk: 32
+  fields: 
+    min_value: 7621273450
+    max_value: 7855750000
+    percentage: 1.69
+- model: 'sale_schema.auctionFee' 
+  pk: 33
+  fields: 
+    min_value: 7855773450
+    max_value: 8090250000
+    percentage: 1.68
+- model: 'sale_schema.auctionFee' 
+  pk: 34
+  fields: 
+    min_value: 8090273450
+    max_value: 8324750000
+    percentage: 1.67
+- model: 'sale_schema.auctionFee' 
+  pk: 35
+  fields: 
+    min_value: 8324773450
+    max_value: 8559250000
+    percentage: 1.66
+- model: 'sale_schema.auctionFee' 
+  pk: 36
+  fields: 
+    min_value: 8559273450
+    max_value: 8793750000
+    percentage: 1.65
+- model: 'sale_schema.auctionFee' 
+  pk: 37
+  fields: 
+    min_value: 8793773450
+    max_value: 9028250000
+    percentage: 1.64
+- model: 'sale_schema.auctionFee' 
+  pk: 38
+  fields: 
+    min_value: 9028273450
+    max_value: 9262750000
+    percentage: 1.63
+- model: 'sale_schema.auctionFee' 
+  pk: 39
+  fields: 
+    min_value: 9262773450
+    max_value: 9497250000
+    percentage: 1.62
+- model: 'sale_schema.auctionFee' 
+  pk: 40
+  fields: 
+    min_value: 9497273450
+    max_value: 9731750000
+    percentage: 1.61
+- model: 'sale_schema.auctionFee' 
+  pk: 41
+  fields: 
+    min_value: 9731773450
+    max_value: 9966250000
+    percentage: 1.6
+- model: 'sale_schema.auctionFee' 
+  pk: 42
+  fields: 
+    min_value: 9966273450
+    max_value: 10200750000
+    percentage: 1.59
+- model: 'sale_schema.auctionFee' 
+  pk: 43
+  fields: 
+    min_value: 10200773450
+    max_value: 10435250000
+    percentage: 1.58
+- model: 'sale_schema.auctionFee' 
+  pk: 44
+  fields: 
+    min_value: 10435273450
+    max_value: 10669750000
+    percentage: 1.57
+- model: 'sale_schema.auctionFee' 
+  pk: 45
+  fields: 
+    min_value: 10669773450
+    max_value: 10904250000
+    percentage: 1.56
+- model: 'sale_schema.auctionFee' 
+  pk: 46
+  fields: 
+    min_value: 10904273450
+    max_value: 11138750000
+    percentage: 1.55
+- model: 'sale_schema.auctionFee' 
+  pk: 47
+  fields: 
+    min_value: 11138773450
+    max_value: 11373250000
+    percentage: 1.54
+- model: 'sale_schema.auctionFee' 
+  pk: 48
+  fields: 
+    min_value: 11373273450
+    max_value: 11607750000
+    percentage: 1.53
+- model: 'sale_schema.auctionFee' 
+  pk: 49
+  fields: 
+    min_value: 11607773450
+    max_value: 11842250000
+    percentage: 1.52
+- model: 'sale_schema.auctionFee' 
+  pk: 50
+  fields: 
+    min_value: 11842273450
+    max_value: 12076750000
+    percentage: 1.51
+- model: 'sale_schema.auctionFee' 
+  pk: 51
+  fields: 
+    min_value: 12076773450
+    max_value: 12311250000
+    percentage: 1.5
+- model: 'sale_schema.auctionFee' 
+  pk: 52
+  fields: 
+    min_value: 12311273450
+    max_value: 12545750000
+    percentage: 1.49
+- model: 'sale_schema.auctionFee' 
+  pk: 53
+  fields: 
+    min_value: 12545773450
+    max_value: 12780250000
+    percentage: 1.48
+- model: 'sale_schema.auctionFee' 
+  pk: 54
+  fields: 
+    min_value: 12780273450
+    max_value: 13014750000
+    percentage: 1.47
+- model: 'sale_schema.auctionFee' 
+  pk: 55
+  fields: 
+    min_value: 13014773450
+    max_value: 13249250000
+    percentage: 1.46
+- model: 'sale_schema.auctionFee' 
+  pk: 56
+  fields: 
+    min_value: 13249273450
+    max_value: 13483750000
+    percentage: 1.45
+- model: 'sale_schema.auctionFee' 
+  pk: 57
+  fields: 
+    min_value: 13483773450
+    max_value: 13718250000
+    percentage: 1.44
+- model: 'sale_schema.auctionFee' 
+  pk: 58
+  fields: 
+    min_value: 13718273450
+    max_value: 13952750000
+    percentage: 1.43
+- model: 'sale_schema.auctionFee' 
+  pk: 59
+  fields: 
+    min_value: 13952773450
+    max_value: 14187250000
+    percentage: 1.42
+- model: 'sale_schema.auctionFee' 
+  pk: 60
+  fields: 
+    min_value: 14187273450
+    max_value: 14421750000
+    percentage: 1.41
+- model: 'sale_schema.auctionFee' 
+  pk: 61
+  fields: 
+    min_value: 14421773450
+    max_value: 14656250000
+    percentage: 1.4
+- model: 'sale_schema.auctionFee' 
+  pk: 62
+  fields: 
+    min_value: 14656273450
+    max_value: 14890750000
+    percentage: 1.39
+- model: 'sale_schema.auctionFee' 
+  pk: 63
+  fields: 
+    min_value: 14890773450
+    max_value: 15125250000
+    percentage: 1.38
+- model: 'sale_schema.auctionFee' 
+  pk: 64
+  fields: 
+    min_value: 15125273450
+    max_value: 15359750000
+    percentage: 1.37
+- model: 'sale_schema.auctionFee' 
+  pk: 65
+  fields: 
+    min_value: 15359773450
+    max_value: 15594250000
+    percentage: 1.36
+- model: 'sale_schema.auctionFee' 
+  pk: 66
+  fields: 
+    min_value: 15594273450
+    max_value: 15828750000
+    percentage: 1.35
+- model: 'sale_schema.auctionFee' 
+  pk: 67
+  fields: 
+    min_value: 15828773450
+    max_value: 16063250000
+    percentage: 1.34
+- model: 'sale_schema.auctionFee' 
+  pk: 68
+  fields: 
+    min_value: 16063273450
+    max_value: 16297750000
+    percentage: 1.33
+- model: 'sale_schema.auctionFee' 
+  pk: 69
+  fields: 
+    min_value: 16297773450
+    max_value: 16532250000
+    percentage: 1.32
+- model: 'sale_schema.auctionFee' 
+  pk: 70
+  fields: 
+    min_value: 16532273450
+    max_value: 16766750000
+    percentage: 1.31
+- model: 'sale_schema.auctionFee' 
+  pk: 71
+  fields: 
+    min_value: 16766773450
+    max_value: 17001250000
+    percentage: 1.3
+- model: 'sale_schema.auctionFee' 
+  pk: 72
+  fields: 
+    min_value: 17001273450
+    max_value: 17235750000
+    percentage: 1.29
+- model: 'sale_schema.auctionFee' 
+  pk: 73
+  fields: 
+    min_value: 17235773450
+    max_value: 17470250000
+    percentage: 1.28
+- model: 'sale_schema.auctionFee' 
+  pk: 74
+  fields: 
+    min_value: 17470273450
+    max_value: 17704750000
+    percentage: 1.27
+- model: 'sale_schema.auctionFee' 
+  pk: 75
+  fields: 
+    min_value: 17704773450
+    max_value: 17939250000
+    percentage: 1.26
+- model: 'sale_schema.auctionFee' 
+  pk: 76
+  fields: 
+    min_value: 17939273450
+    max_value: 18173750000
+    percentage: 1.25
+- model: 'sale_schema.auctionFee' 
+  pk: 77
+  fields: 
+    min_value: 18173773450
+    max_value: 18408250000
+    percentage: 1.24
+- model: 'sale_schema.auctionFee' 
+  pk: 78
+  fields: 
+    min_value: 18408273450
+    max_value: 18642750000
+    percentage: 1.23
+- model: 'sale_schema.auctionFee' 
+  pk: 79
+  fields: 
+    min_value: 18642773450
+    max_value: 18877250000
+    percentage: 1.22
+- model: 'sale_schema.auctionFee' 
+  pk: 80
+  fields: 
+    min_value: 18877273450
+    max_value: 19111750000
+    percentage: 1.21
+- model: 'sale_schema.auctionFee' 
+  pk: 81
+  fields: 
+    min_value: 19111773450
+    max_value: 19346250000
+    percentage: 1.2
+- model: 'sale_schema.auctionFee' 
+  pk: 82
+  fields: 
+    min_value: 19346273450
+    max_value: 19580750000
+    percentage: 1.19
+- model: 'sale_schema.auctionFee' 
+  pk: 83
+  fields: 
+    min_value: 19580773450
+    max_value: 19815250000
+    percentage: 1.18
+- model: 'sale_schema.auctionFee' 
+  pk: 84
+  fields: 
+    min_value: 19815273450
+    max_value: 20049750000
+    percentage: 1.17
+- model: 'sale_schema.auctionFee' 
+  pk: 85
+  fields: 
+    min_value: 20049773450
+    max_value: 20284250000
+    percentage: 1.16
+- model: 'sale_schema.auctionFee' 
+  pk: 86
+  fields: 
+    min_value: 20284273450
+    max_value: 20518750000
+    percentage: 1.15
+- model: 'sale_schema.auctionFee' 
+  pk: 87
+  fields: 
+    min_value: 20518773450
+    max_value: 20753250000
+    percentage: 1.14
+- model: 'sale_schema.auctionFee' 
+  pk: 88
+  fields: 
+    min_value: 20753273450
+    max_value: 20987750000
+    percentage: 1.13
+- model: 'sale_schema.auctionFee' 
+  pk: 89
+  fields: 
+    min_value: 20987773450
+    max_value: 21222250000
+    percentage: 1.12
+- model: 'sale_schema.auctionFee' 
+  pk: 90
+  fields: 
+    min_value: 21222273450
+    max_value: 21456750000
+    percentage: 1.11
+- model: 'sale_schema.auctionFee' 
+  pk: 91
+  fields: 
+    min_value: 21456773450
+    max_value: 21691250000
+    percentage: 1.1
+- model: 'sale_schema.auctionFee' 
+  pk: 92
+  fields: 
+    min_value: 21691273450
+    max_value: 21925750000
+    percentage: 1.09
+- model: 'sale_schema.auctionFee' 
+  pk: 93
+  fields: 
+    min_value: 21925773450
+    max_value: 22160250000
+    percentage: 1.08
+- model: 'sale_schema.auctionFee' 
+  pk: 94
+  fields: 
+    min_value: 22160273450
+    max_value: 22394750000
+    percentage: 1.07
+- model: 'sale_schema.auctionFee' 
+  pk: 95
+  fields: 
+    min_value: 22394773450
+    max_value: 22629250000
+    percentage: 1.06
+- model: 'sale_schema.auctionFee' 
+  pk: 96
+  fields: 
+    min_value: 22629273450
+    max_value: 22863750000
+    percentage: 1.05
+- model: 'sale_schema.auctionFee' 
+  pk: 97
+  fields: 
+    min_value: 22863773450
+    max_value: 23098250000
+    percentage: 1.04
+- model: 'sale_schema.auctionFee' 
+  pk: 98
+  fields: 
+    min_value: 23098273450
+    max_value: 23332750000
+    percentage: 1.03
+- model: 'sale_schema.auctionFee' 
+  pk: 99
+  fields: 
+    min_value: 23332773450
+    max_value: 23567250000
+    percentage: 1.02
+- model: 'sale_schema.auctionFee' 
+  pk: 100
+  fields: 
+    min_value: 23567273450
+    max_value: 23801750000
+    percentage: 1.01
+- model: 'sale_schema.auctionFee' 
+  pk: 101
+  fields: 
+    min_value: 23801773450
+    max_value: 24036250000
+    percentage: 1

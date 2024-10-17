@@ -1,0 +1,2916 @@
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "1"
+  fields:
+    industry_sectors_id: "1"
+    language_code: "en"
+    name: "All"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "2"
+  fields:
+    industry_sectors_id: "1"
+    language_code: "vi"
+    name: "Tất cả"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "3"
+  fields:
+    industry_sectors_id: "2"
+    language_code: "en"
+    name: "Plant trees every year"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "4"
+  fields:
+    industry_sectors_id: "2"
+    language_code: "vi"
+    name: "Trồng cây hàng năm"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "5"
+  fields:
+    industry_sectors_id: "3"
+    language_code: "en"
+    name: "Perennial crops"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "6"
+  fields:
+    industry_sectors_id: "3"
+    language_code: "vi"
+    name: "Trồng cây lâu năm"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "7"
+  fields:
+    industry_sectors_id: "4"
+    language_code: "en"
+    name: "Multiply and care for agricultural seedlings"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "8"
+  fields:
+    industry_sectors_id: "4"
+    language_code: "vi"
+    name: "Nhân và chăm sóc cây giống nông nghiệp"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "9"
+  fields:
+    industry_sectors_id: "5"
+    language_code: "en"
+    name: "Breed"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "10"
+  fields:
+    industry_sectors_id: "5"
+    language_code: "vi"
+    name: "Chăn nuôi"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "11"
+  fields:
+    industry_sectors_id: "6"
+    language_code: "en"
+    name: "Mixed farming and animal husbandry"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "12"
+  fields:
+    industry_sectors_id: "6"
+    language_code: "vi"
+    name: "Trồng trọt, chăn nuôi hỗn hợp"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "13"
+  fields:
+    industry_sectors_id: "7"
+    language_code: "en"
+    name: "Agricultural service activities"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "14"
+  fields:
+    industry_sectors_id: "7"
+    language_code: "vi"
+    name: "Hoạt động dịch vụ nông nghiệp"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "15"
+  fields:
+    industry_sectors_id: "8"
+    language_code: "en"
+    name: "Hunting, trapping and related service activities"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "16"
+  fields:
+    industry_sectors_id: "8"
+    language_code: "vi"
+    name: "Săn bắt, đánh bẫy và hoạt động dịch vụ có liên quan"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "17"
+  fields:
+    industry_sectors_id: "9"
+    language_code: "en"
+    name: "Planting forests, taking care of forests and nurturing forestry trees"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "18"
+  fields:
+    industry_sectors_id: "9"
+    language_code: "vi"
+    name: "Trồng rừng, chăm sóc rừng và ươm giống cây lâm nghiệp"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "19"
+  fields:
+    industry_sectors_id: "10"
+    language_code: "en"
+    name: "Wood gathering"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "20"
+  fields:
+    industry_sectors_id: "10"
+    language_code: "vi"
+    name: "Khai thác gỗ"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "21"
+  fields:
+    industry_sectors_id: "11"
+    language_code: "en"
+    name: "Exploitation and collection of other forest products except wood"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "22"
+  fields:
+    industry_sectors_id: "11"
+    language_code: "vi"
+    name: "Khai thác, thu nhặt lâm sản khác trừ gỗ"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "23"
+  fields:
+    industry_sectors_id: "12"
+    language_code: "en"
+    name: "Forestry service activities"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "24"
+  fields:
+    industry_sectors_id: "12"
+    language_code: "vi"
+    name: "Hoạt động dịch vụ lâm nghiệp"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "25"
+  fields:
+    industry_sectors_id: "13"
+    language_code: "en"
+    name: "Fisheries"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "26"
+  fields:
+    industry_sectors_id: "13"
+    language_code: "vi"
+    name: "Khai thác thủy sản"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "27"
+  fields:
+    industry_sectors_id: "14"
+    language_code: "en"
+    name: "Aquaculture"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "28"
+  fields:
+    industry_sectors_id: "14"
+    language_code: "vi"
+    name: "Nuôi trồng thủy sản"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "29"
+  fields:
+    industry_sectors_id: "15"
+    language_code: "en"
+    name: "Mining and collecting hard coal"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "30"
+  fields:
+    industry_sectors_id: "15"
+    language_code: "vi"
+    name: "Khai thác và thu gom than cứng"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "31"
+  fields:
+    industry_sectors_id: "16"
+    language_code: "en"
+    name: "Mining and collecting lignite coal"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "32"
+  fields:
+    industry_sectors_id: "16"
+    language_code: "vi"
+    name: "Khai thác và thu gom than non"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "33"
+  fields:
+    industry_sectors_id: "17"
+    language_code: "en"
+    name: "Crude oil exploitation"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "34"
+  fields:
+    industry_sectors_id: "17"
+    language_code: "vi"
+    name: "Khai thác dầu thô"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "35"
+  fields:
+    industry_sectors_id: "18"
+    language_code: "en"
+    name: "Natural gas exploitation"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "36"
+  fields:
+    industry_sectors_id: "18"
+    language_code: "vi"
+    name: "Khai thác khí đốt tự nhiên"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "37"
+  fields:
+    industry_sectors_id: "19"
+    language_code: "en"
+    name: "Iron ore mining"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "38"
+  fields:
+    industry_sectors_id: "19"
+    language_code: "vi"
+    name: "Khai thác quặng sắt"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "39"
+  fields:
+    industry_sectors_id: "20"
+    language_code: "en"
+    name: "Mining of non-ferrous ores (except rare metal ores)"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "40"
+  fields:
+    industry_sectors_id: "20"
+    language_code: "vi"
+    name: "Khai thác quặng không chứa sắt (trừ quặng kim loại quý hiếm)"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "41"
+  fields:
+    industry_sectors_id: "21"
+    language_code: "en"
+    name: "Mining rare metal ores"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "42"
+  fields:
+    industry_sectors_id: "21"
+    language_code: "vi"
+    name: "Khai thác quặng kim loại quý hiếm"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "43"
+  fields:
+    industry_sectors_id: "22"
+    language_code: "en"
+    name: "Exploitation of stone, sand, gravel and clay"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "44"
+  fields:
+    industry_sectors_id: "22"
+    language_code: "vi"
+    name: "Khai thác đá, cát, sỏi, đất sét"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "45"
+  fields:
+    industry_sectors_id: "23"
+    language_code: "en"
+    name: "Mining has not been classified yet"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "46"
+  fields:
+    industry_sectors_id: "23"
+    language_code: "vi"
+    name: "Khai khoáng chưa được phân vào đâu"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "47"
+  fields:
+    industry_sectors_id: "24"
+    language_code: "en"
+    name: "Service activities supporting crude oil and natural gas exploitation"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "48"
+  fields:
+    industry_sectors_id: "24"
+    language_code: "vi"
+    name: "Hoạt động dịch vụ hỗ trợ khai thác dầu thô và khí tự nhiên"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "49"
+  fields:
+    industry_sectors_id: "25"
+    language_code: "en"
+    name: "Other mining support service activities"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "50"
+  fields:
+    industry_sectors_id: "25"
+    language_code: "vi"
+    name: "Hoạt động dịch vụ hỗ trợ khai khoáng khác"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "51"
+  fields:
+    industry_sectors_id: "26"
+    language_code: "en"
+    name: "Processing and preserving meat and meat products"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "52"
+  fields:
+    industry_sectors_id: "26"
+    language_code: "vi"
+    name: "Chế biến, bảo quản thịt và các sản phẩm từ thịt"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "53"
+  fields:
+    industry_sectors_id: "27"
+    language_code: "en"
+    name: "Processing and preserving aquatic products and aquatic products"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "54"
+  fields:
+    industry_sectors_id: "27"
+    language_code: "vi"
+    name: "Chế biến, bảo quản thuỷ sản và các sản phẩm từ thuỷ sản"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "55"
+  fields:
+    industry_sectors_id: "28"
+    language_code: "en"
+    name: "Processing and preserving fruits and vegetables"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "56"
+  fields:
+    industry_sectors_id: "28"
+    language_code: "vi"
+    name: "Chế biến và bảo quản rau quả"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "57"
+  fields:
+    industry_sectors_id: "29"
+    language_code: "en"
+    name: "Production of animal and vegetable oils and fats"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "58"
+  fields:
+    industry_sectors_id: "29"
+    language_code: "vi"
+    name: "Sản xuất dầu, mỡ động, thực vật"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "59"
+  fields:
+    industry_sectors_id: "30"
+    language_code: "en"
+    name: "Processing milk and dairy products"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "60"
+  fields:
+    industry_sectors_id: "30"
+    language_code: "vi"
+    name: "Chế biến sữa và các sản phẩm từ sữa"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "61"
+  fields:
+    industry_sectors_id: "31"
+    language_code: "en"
+    name: "Milling and flour production"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "62"
+  fields:
+    industry_sectors_id: "31"
+    language_code: "vi"
+    name: "Xay xát và sản xuất bột"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "63"
+  fields:
+    industry_sectors_id: "32"
+    language_code: "en"
+    name: "Other food production"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "64"
+  fields:
+    industry_sectors_id: "32"
+    language_code: "vi"
+    name: "Sản xuất thực phẩm khác"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "65"
+  fields:
+    industry_sectors_id: "33"
+    language_code: "en"
+    name: "Producing animal feed, poultry and aquatic products"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "66"
+  fields:
+    industry_sectors_id: "33"
+    language_code: "vi"
+    name: "Sản xuất thức ăn gia súc, gia cầm và thuỷ sản"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "67"
+  fields:
+    industry_sectors_id: "34"
+    language_code: "en"
+    name: "Beverage production"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "68"
+  fields:
+    industry_sectors_id: "34"
+    language_code: "vi"
+    name: "Sản xuất đồ uống"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "69"
+  fields:
+    industry_sectors_id: "35"
+    language_code: "en"
+    name: "Production of tobacco products"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "70"
+  fields:
+    industry_sectors_id: "35"
+    language_code: "vi"
+    name: "Sản xuất sản phẩm thuốc lá"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "71"
+  fields:
+    industry_sectors_id: "36"
+    language_code: "en"
+    name: "Production of yarn, woven fabric and finishing of textile products"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "72"
+  fields:
+    industry_sectors_id: "36"
+    language_code: "vi"
+    name: "Sản xuất sợi, vải dệt thoi và hoàn thiện sản phẩm dệt"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "73"
+  fields:
+    industry_sectors_id: "37"
+    language_code: "en"
+    name: "Manufacture of other textiles"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "74"
+  fields:
+    industry_sectors_id: "37"
+    language_code: "vi"
+    name: "Sản xuất hàng dệt khác"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "75"
+  fields:
+    industry_sectors_id: "38"
+    language_code: "en"
+    name: "Sewing costumes (except costumes made from fur)"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "76"
+  fields:
+    industry_sectors_id: "38"
+    language_code: "vi"
+    name: "May trang phục (trừ trang phục từ da lông thú)"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "77"
+  fields:
+    industry_sectors_id: "39"
+    language_code: "en"
+    name: "Production of products from fur skin"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "78"
+  fields:
+    industry_sectors_id: "39"
+    language_code: "vi"
+    name: "Sản xuất sản phẩm từ da lông thú"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "79"
+  fields:
+    industry_sectors_id: "40"
+    language_code: "en"
+    name: "Production of knitted and crocheted clothes"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "80"
+  fields:
+    industry_sectors_id: "40"
+    language_code: "vi"
+    name: "Sản xuất trang phục dệt kim, đan móc"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "81"
+  fields:
+    industry_sectors_id: "41"
+    language_code: "en"
+    name: "Tanning and preliminary processing of leather; production of suitcases, bags, saddle cushions; Preparing and dyeing fur skins"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "82"
+  fields:
+    industry_sectors_id: "41"
+    language_code: "vi"
+    name: "Thuộc, sơ chế da; sản xuất va li, túi xách, yên đệm; sơ chế và nhuộm da lông thú"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "83"
+  fields:
+    industry_sectors_id: "42"
+    language_code: "en"
+    name: "Producing shoes"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "84"
+  fields:
+    industry_sectors_id: "42"
+    language_code: "vi"
+    name: "Sản xuất giày, dép"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "85"
+  fields:
+    industry_sectors_id: "43"
+    language_code: "en"
+    name: "Sawing, sawing, planing wood and preserving wood"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "86"
+  fields:
+    industry_sectors_id: "43"
+    language_code: "vi"
+    name: "Cưa, xẻ, bào gỗ và bảo quản gỗ"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "87"
+  fields:
+    industry_sectors_id: "44"
+    language_code: "en"
+    name: "Manufacture of products from wood, bamboo (except beds, cabinets, tables, chairs); manufacturing products from straw and plaiting materials"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "88"
+  fields:
+    industry_sectors_id: "44"
+    language_code: "vi"
+    name: "Sản xuất sản phẩm từ gỗ, tre, nứa (trừ giường, tủ, bàn, ghế); sản xuất sản phẩm từ rơm, rạ và vật liệu tết bện"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "89"
+  fields:
+    industry_sectors_id: "45"
+    language_code: "en"
+    name: "Production of paper and paper products"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "90"
+  fields:
+    industry_sectors_id: "45"
+    language_code: "vi"
+    name: "Sản xuất giấy và sản phẩm từ giấy"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "91"
+  fields:
+    industry_sectors_id: "46"
+    language_code: "en"
+    name: "Printing and printing-related services"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "92"
+  fields:
+    industry_sectors_id: "46"
+    language_code: "vi"
+    name: "In ấn và dịch vụ liên quan đến in"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "93"
+  fields:
+    industry_sectors_id: "47"
+    language_code: "en"
+    name: "Copy records of all types"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "94"
+  fields:
+    industry_sectors_id: "47"
+    language_code: "vi"
+    name: "Sao chép bản ghi các loại"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "95"
+  fields:
+    industry_sectors_id: "48"
+    language_code: "en"
+    name: "Production of coke"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "96"
+  fields:
+    industry_sectors_id: "48"
+    language_code: "vi"
+    name: "Sản xuất than cốc"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "97"
+  fields:
+    industry_sectors_id: "49"
+    language_code: "en"
+    name: "Production of refined petroleum products"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "98"
+  fields:
+    industry_sectors_id: "49"
+    language_code: "vi"
+    name: "Sản xuất sản phẩm dầu mỏ tinh chế"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "99"
+  fields:
+    industry_sectors_id: "50"
+    language_code: "en"
+    name: "Production of basic chemicals, fertilizers and nitrogen compounds; Production of plastic and synthetic rubber in primary forms"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "100"
+  fields:
+    industry_sectors_id: "50"
+    language_code: "vi"
+    name: "Sản xuất hoá chất cơ bản, phân bón và hợp chất ni tơ; sản xuất plastic và cao su tổng hợp dạng nguyên sinh"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "101"
+  fields:
+    industry_sectors_id: "51"
+    language_code: "en"
+    name: "Manufacture of other chemical products"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "102"
+  fields:
+    industry_sectors_id: "51"
+    language_code: "vi"
+    name: "Sản xuất sản phẩm hoá chất khác"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "103"
+  fields:
+    industry_sectors_id: "52"
+    language_code: "en"
+    name: "Production of artificial fibers"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "104"
+  fields:
+    industry_sectors_id: "52"
+    language_code: "vi"
+    name: "Sản xuất sợi nhân tạo"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "105"
+  fields:
+    industry_sectors_id: "53"
+    language_code: "en"
+    name: "Production of drugs, pharmaceutical chemicals and medicinal materials"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "106"
+  fields:
+    industry_sectors_id: "53"
+    language_code: "vi"
+    name: "Sản xuất thuốc, hoá dược và dược liệu"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "107"
+  fields:
+    industry_sectors_id: "54"
+    language_code: "en"
+    name: "Manufacture of products from rubber"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "108"
+  fields:
+    industry_sectors_id: "54"
+    language_code: "vi"
+    name: "Sản xuất sản phẩm từ cao su"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "109"
+  fields:
+    industry_sectors_id: "55"
+    language_code: "en"
+    name: "Manufacture of products from plastic"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "110"
+  fields:
+    industry_sectors_id: "55"
+    language_code: "vi"
+    name: "Sản xuất sản phẩm từ plastic"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "111"
+  fields:
+    industry_sectors_id: "56"
+    language_code: "en"
+    name: "Production of glass and products from glass"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "112"
+  fields:
+    industry_sectors_id: "56"
+    language_code: "vi"
+    name: "Sản xuất thủy tinh và sản phẩm từ thủy tinh"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "113"
+  fields:
+    industry_sectors_id: "57"
+    language_code: "en"
+    name: "Production of products from non-metallic minerals not classified elsewhere"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "114"
+  fields:
+    industry_sectors_id: "57"
+    language_code: "vi"
+    name: "Sản xuất sản phẩm từ khoáng phi kim loại chưa được phân vào đâu"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "115"
+  fields:
+    industry_sectors_id: "58"
+    language_code: "en"
+    name: "Producing iron, steel, and cast iron"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "116"
+  fields:
+    industry_sectors_id: "58"
+    language_code: "vi"
+    name: "Sản xuất sắt, thép, gang"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "117"
+  fields:
+    industry_sectors_id: "59"
+    language_code: "en"
+    name: "Production of precious and non-ferrous metals"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "118"
+  fields:
+    industry_sectors_id: "59"
+    language_code: "vi"
+    name: "Sản xuất kim loại quý và kim loại màu"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "119"
+  fields:
+    industry_sectors_id: "60"
+    language_code: "en"
+    name: "Metal casting"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "120"
+  fields:
+    industry_sectors_id: "60"
+    language_code: "vi"
+    name: "Đúc kim loại"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "121"
+  fields:
+    industry_sectors_id: "61"
+    language_code: "en"
+    name: "Manufacture of metal structures, barrels, tanks and boilers"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "122"
+  fields:
+    industry_sectors_id: "61"
+    language_code: "vi"
+    name: "Sản xuất các cấu kiện kim loại, thùng, bể chứa và nồi hơi"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "123"
+  fields:
+    industry_sectors_id: "62"
+    language_code: "en"
+    name: "Production of weapons and ammunition"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "124"
+  fields:
+    industry_sectors_id: "62"
+    language_code: "vi"
+    name: "Sản xuất vũ khí và đạn dược"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "125"
+  fields:
+    industry_sectors_id: "63"
+    language_code: "en"
+    name: "Manufacture of other metal products; Metal processing and processing services"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "126"
+  fields:
+    industry_sectors_id: "63"
+    language_code: "vi"
+    name: "Sản xuất sản phẩm khác bằng kim loại; các dịch vụ xử lý, gia công kim loại"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "127"
+  fields:
+    industry_sectors_id: "64"
+    language_code: "en"
+    name: "Production of electronic components"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "128"
+  fields:
+    industry_sectors_id: "64"
+    language_code: "vi"
+    name: "Sản xuất linh kiện điện tử"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "129"
+  fields:
+    industry_sectors_id: "65"
+    language_code: "en"
+    name: "Manufacture of computers and computer peripheral devices"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "130"
+  fields:
+    industry_sectors_id: "65"
+    language_code: "vi"
+    name: "Sản xuất máy vi tính và thiết bị ngoại vi của máy vi tính"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "131"
+  fields:
+    industry_sectors_id: "66"
+    language_code: "en"
+    name: "Production of communication equipment"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "132"
+  fields:
+    industry_sectors_id: "66"
+    language_code: "vi"
+    name: "Sản xuất thiết bị truyền thông"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "133"
+  fields:
+    industry_sectors_id: "67"
+    language_code: "en"
+    name: "Producing consumer electronic products"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "134"
+  fields:
+    industry_sectors_id: "67"
+    language_code: "vi"
+    name: "Sản xuất sản phẩm điện tử dân dụng"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "135"
+  fields:
+    industry_sectors_id: "68"
+    language_code: "en"
+    name: "Manufacture of measuring, testing, navigation and control equipment; watch production"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "136"
+  fields:
+    industry_sectors_id: "68"
+    language_code: "vi"
+    name: "Sản xuất thiết bị đo lường, kiểm tra, định hướng và điều khiển; sản xuất đồng hồ"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "137"
+  fields:
+    industry_sectors_id: "69"
+    language_code: "en"
+    name: "Manufacture of radiation equipment, electronic equipment in medicine, electrotherapy"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "138"
+  fields:
+    industry_sectors_id: "69"
+    language_code: "vi"
+    name: "Sản xuất thiết bị bức xạ, thiết bị điện tử trong y học, điện liệu pháp"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "139"
+  fields:
+    industry_sectors_id: "70"
+    language_code: "en"
+    name: "Manufacture of optical equipment and instruments"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "140"
+  fields:
+    industry_sectors_id: "70"
+    language_code: "vi"
+    name: "Sản xuất thiết bị và dụng cụ quang học"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "141"
+  fields:
+    industry_sectors_id: "71"
+    language_code: "en"
+    name: "Production of tapes, magnetic and optical discs"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "142"
+  fields:
+    industry_sectors_id: "71"
+    language_code: "vi"
+    name: "Sản xuất băng, đĩa từ tính và quang học"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "143"
+  fields:
+    industry_sectors_id: "72"
+    language_code: "en"
+    name: "Manufacture of motors, generators, electrical transformers, electrical distribution and control equipment"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "144"
+  fields:
+    industry_sectors_id: "72"
+    language_code: "vi"
+    name: "Sản xuất mô tơ, máy phát, biến thế điện, thiết bị phân phối và điều khiển điện"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "145"
+  fields:
+    industry_sectors_id: "73"
+    language_code: "en"
+    name: "Production of batteries and accumulators"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "146"
+  fields:
+    industry_sectors_id: "73"
+    language_code: "vi"
+    name: "Sản xuất pin và ắc quy"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "147"
+  fields:
+    industry_sectors_id: "74"
+    language_code: "en"
+    name: "Production of wires and conductor equipment"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "148"
+  fields:
+    industry_sectors_id: "74"
+    language_code: "vi"
+    name: "Sản xuất dây và thiết bị dây dẫn"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "149"
+  fields:
+    industry_sectors_id: "75"
+    language_code: "en"
+    name: "Production of electrical lighting equipment"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "150"
+  fields:
+    industry_sectors_id: "75"
+    language_code: "vi"
+    name: "Sản xuất thiết bị điện chiếu sáng"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "151"
+  fields:
+    industry_sectors_id: "76"
+    language_code: "en"
+    name: "Production of household electrical appliances"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "152"
+  fields:
+    industry_sectors_id: "76"
+    language_code: "vi"
+    name: "Sản xuất đồ điện dân dụng"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "153"
+  fields:
+    industry_sectors_id: "77"
+    language_code: "en"
+    name: "Manufacture of other electrical equipment"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "154"
+  fields:
+    industry_sectors_id: "77"
+    language_code: "vi"
+    name: "Sản xuất thiết bị điện khác"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "155"
+  fields:
+    industry_sectors_id: "78"
+    language_code: "en"
+    name: "Production of common machines"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "156"
+  fields:
+    industry_sectors_id: "78"
+    language_code: "vi"
+    name: "Sản xuất máy thông dụng"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "157"
+  fields:
+    industry_sectors_id: "79"
+    language_code: "en"
+    name: "Manufacture of specialized machines"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "158"
+  fields:
+    industry_sectors_id: "79"
+    language_code: "vi"
+    name: "Sản xuất máy chuyên dụng"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "159"
+  fields:
+    industry_sectors_id: "80"
+    language_code: "en"
+    name: "Manufacture of cars and other motor vehicles"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "160"
+  fields:
+    industry_sectors_id: "80"
+    language_code: "vi"
+    name: "Sản xuất ô tô và xe có động cơ khác"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "161"
+  fields:
+    industry_sectors_id: "81"
+    language_code: "en"
+    name: "Manufacture of car bodies and other motor vehicles, trailers and semi-trailers"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "162"
+  fields:
+    industry_sectors_id: "81"
+    language_code: "vi"
+    name: "Sản xuất thân xe ô tô và xe có động cơ khác, rơ moóc và bán rơ moóc"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "163"
+  fields:
+    industry_sectors_id: "82"
+    language_code: "en"
+    name: "Manufacture of spare parts and accessories for cars and other motor vehicles"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "164"
+  fields:
+    industry_sectors_id: "82"
+    language_code: "vi"
+    name: "Sản xuất phụ tùng và bộ phận phụ trợ cho xe ô tô và xe có động cơ khác"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "165"
+  fields:
+    industry_sectors_id: "83"
+    language_code: "en"
+    name: "Ship and boat building"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "166"
+  fields:
+    industry_sectors_id: "83"
+    language_code: "vi"
+    name: "Đóng tàu và thuyền"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "167"
+  fields:
+    industry_sectors_id: "84"
+    language_code: "en"
+    name: "Manufacture of locomotives, trams and rolling stock"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "168"
+  fields:
+    industry_sectors_id: "84"
+    language_code: "vi"
+    name: "Sản xuất đầu máy xe lửa, xe điện và toa xe"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "169"
+  fields:
+    industry_sectors_id: "85"
+    language_code: "en"
+    name: "Manufacture of aircraft, spacecraft and related machinery"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "170"
+  fields:
+    industry_sectors_id: "85"
+    language_code: "vi"
+    name: "Sản xuất máy bay, tàu vũ trụ và máy móc liên quan"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "171"
+  fields:
+    industry_sectors_id: "86"
+    language_code: "en"
+    name: "Production of combat motor vehicles used in the military"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "172"
+  fields:
+    industry_sectors_id: "86"
+    language_code: "vi"
+    name: "Sản xuất xe cơ giới chiến đấu dùng trong quân đội"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "173"
+  fields:
+    industry_sectors_id: "87"
+    language_code: "en"
+    name: "Production of vehicles and transport equipment has not been classified elsewhere"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "174"
+  fields:
+    industry_sectors_id: "87"
+    language_code: "vi"
+    name: "Sản xuất phương tiện và thiết bị vận tải chưa được phân vào đâu"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "175"
+  fields:
+    industry_sectors_id: "88"
+    language_code: "en"
+    name: "Production of beds, cabinets, tables, chairs"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "176"
+  fields:
+    industry_sectors_id: "88"
+    language_code: "vi"
+    name: "Sản xuất giường, tủ, bàn, ghế"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "177"
+  fields:
+    industry_sectors_id: "89"
+    language_code: "en"
+    name: "Production of jewelry, imitation jewelry and related details"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "178"
+  fields:
+    industry_sectors_id: "89"
+    language_code: "vi"
+    name: "Sản xuất đồ kim hoàn, đồ giả kim hoàn và các chi tiết liên quan"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "179"
+  fields:
+    industry_sectors_id: "90"
+    language_code: "en"
+    name: "Production of musical instruments"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "180"
+  fields:
+    industry_sectors_id: "90"
+    language_code: "vi"
+    name: "Sản xuất nhạc cụ"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "181"
+  fields:
+    industry_sectors_id: "91"
+    language_code: "en"
+    name: "Production of fitness and sports equipment"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "182"
+  fields:
+    industry_sectors_id: "91"
+    language_code: "vi"
+    name: "Sản xuất dụng cụ thể dục, thể thao"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "183"
+  fields:
+    industry_sectors_id: "92"
+    language_code: "en"
+    name: "Production of toys and games"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "184"
+  fields:
+    industry_sectors_id: "92"
+    language_code: "vi"
+    name: "Sản xuất đồ chơi, trò chơi"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "185"
+  fields:
+    industry_sectors_id: "93"
+    language_code: "en"
+    name: "Manufacture of medical, dental, orthopedic and rehabilitation equipment and instruments"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "186"
+  fields:
+    industry_sectors_id: "93"
+    language_code: "vi"
+    name: "Sản xuất thiết bị, dụng cụ y tế, nha khoa, chỉnh hình và phục hồi chức năng"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "187"
+  fields:
+    industry_sectors_id: "94"
+    language_code: "en"
+    name: "Other production not yet classified"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "188"
+  fields:
+    industry_sectors_id: "94"
+    language_code: "vi"
+    name: "Sản xuất khác chưa được phân vào đâu"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "189"
+  fields:
+    industry_sectors_id: "95"
+    language_code: "en"
+    name: "Repair and maintenance of machinery, equipment and prefabricated metal products"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "190"
+  fields:
+    industry_sectors_id: "95"
+    language_code: "vi"
+    name: "Sửa chữa và bảo dưỡng máy móc, thiết bị và sản phẩm kim loại đúc sẵn"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "191"
+  fields:
+    industry_sectors_id: "96"
+    language_code: "en"
+    name: "Installation of machinery and industrial equipment"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "192"
+  fields:
+    industry_sectors_id: "96"
+    language_code: "vi"
+    name: "Lắp đặt máy móc và thiết bị công nghiệp"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "193"
+  fields:
+    industry_sectors_id: "97"
+    language_code: "en"
+    name: "Production, transmission and distribution of electricity"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "194"
+  fields:
+    industry_sectors_id: "97"
+    language_code: "vi"
+    name: "Sản xuất, truyền tải và phân phối điện"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "195"
+  fields:
+    industry_sectors_id: "98"
+    language_code: "en"
+    name: "Gas production, gas fuel distribution by pipeline"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "196"
+  fields:
+    industry_sectors_id: "98"
+    language_code: "vi"
+    name: "Sản xuất khí đốt, phân phối nhiên liệu khí bằng đường ống"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "197"
+  fields:
+    industry_sectors_id: "99"
+    language_code: "en"
+    name: "Production and distribution of steam, hot water, air conditioning and ice production"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "198"
+  fields:
+    industry_sectors_id: "99"
+    language_code: "vi"
+    name: "Sản xuất, phân phối hơi nước, nước nóng, điều hoà không khí và sản xuất nước đá"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "199"
+  fields:
+    industry_sectors_id: "100"
+    language_code: "en"
+    name: "Water exploitation, treatment and supply"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "200"
+  fields:
+    industry_sectors_id: "100"
+    language_code: "vi"
+    name: "Khai thác, xử lý và cung cấp nước"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "201"
+  fields:
+    industry_sectors_id: "101"
+    language_code: "en"
+    name: "Drainage and wastewater treatment"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "202"
+  fields:
+    industry_sectors_id: "101"
+    language_code: "vi"
+    name: "Thoát nước và xử lý nước thải"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "203"
+  fields:
+    industry_sectors_id: "102"
+    language_code: "en"
+    name: "Garbage collection"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "204"
+  fields:
+    industry_sectors_id: "102"
+    language_code: "vi"
+    name: "Thu gom rác thải"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "205"
+  fields:
+    industry_sectors_id: "103"
+    language_code: "en"
+    name: "Waste treatment and destruction"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "206"
+  fields:
+    industry_sectors_id: "103"
+    language_code: "vi"
+    name: "Xử lý và tiêu hủy rác thải"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "207"
+  fields:
+    industry_sectors_id: "104"
+    language_code: "en"
+    name: "Scrap recycling"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "208"
+  fields:
+    industry_sectors_id: "104"
+    language_code: "vi"
+    name: "Tái chế phế liệu"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "209"
+  fields:
+    industry_sectors_id: "105"
+    language_code: "en"
+    name: "Pollution treatment and other waste management activities"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "210"
+  fields:
+    industry_sectors_id: "105"
+    language_code: "vi"
+    name: "Xử lý ô nhiễm và hoạt động quản lý chất thải khác"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "211"
+  fields:
+    industry_sectors_id: "106"
+    language_code: "en"
+    name: "Construction of houses of all kinds"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "212"
+  fields:
+    industry_sectors_id: "106"
+    language_code: "vi"
+    name: "Xây dựng nhà các loại"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "213"
+  fields:
+    industry_sectors_id: "107"
+    language_code: "en"
+    name: "Construction of railways and road projects"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "214"
+  fields:
+    industry_sectors_id: "107"
+    language_code: "vi"
+    name: "Xây dựng công trình đường sắt và đường bộ"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "215"
+  fields:
+    industry_sectors_id: "108"
+    language_code: "en"
+    name: "Construction of public works"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "216"
+  fields:
+    industry_sectors_id: "108"
+    language_code: "vi"
+    name: "Xây dựng công trình công ích"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "217"
+  fields:
+    industry_sectors_id: "109"
+    language_code: "en"
+    name: "Construction of other civil engineering works"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "218"
+  fields:
+    industry_sectors_id: "109"
+    language_code: "vi"
+    name: "Xây dựng công trình kỹ thuật dân dụng khác"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "219"
+  fields:
+    industry_sectors_id: "110"
+    language_code: "en"
+    name: "Demolition and site preparation"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "220"
+  fields:
+    industry_sectors_id: "110"
+    language_code: "vi"
+    name: "Phá dỡ và chuẩn bị mặt bằng"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "221"
+  fields:
+    industry_sectors_id: "111"
+    language_code: "en"
+    name: "Installing electrical systems, water supply and drainage systems and other construction installations"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "222"
+  fields:
+    industry_sectors_id: "111"
+    language_code: "vi"
+    name: "Lắp đặt hệ thống điện, hệ thống cấp thoát nước và lắp đặt xây dựng khác"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "223"
+  fields:
+    industry_sectors_id: "112"
+    language_code: "en"
+    name: "finish construction"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "224"
+  fields:
+    industry_sectors_id: "112"
+    language_code: "vi"
+    name: "Hoàn thiện công trình xây dựng"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "225"
+  fields:
+    industry_sectors_id: "113"
+    language_code: "en"
+    name: "Other specialized construction activities"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "226"
+  fields:
+    industry_sectors_id: "113"
+    language_code: "vi"
+    name: "Hoạt động xây dựng chuyên dụng khác"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "227"
+  fields:
+    industry_sectors_id: "114"
+    language_code: "en"
+    name: "Selling cars and other motor vehicles"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "228"
+  fields:
+    industry_sectors_id: "114"
+    language_code: "vi"
+    name: "Bán ô tô và xe có động cơ khác"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "229"
+  fields:
+    industry_sectors_id: "115"
+    language_code: "en"
+    name: "Maintenance and repair of cars and other motor vehicles"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "230"
+  fields:
+    industry_sectors_id: "115"
+    language_code: "vi"
+    name: "Bảo dưỡng, sửa chữa ô tô và xe có động cơ khác"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "231"
+  fields:
+    industry_sectors_id: "116"
+    language_code: "en"
+    name: "Sales of spare parts and accessories of automobiles and other motor vehicles"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "232"
+  fields:
+    industry_sectors_id: "116"
+    language_code: "vi"
+    name: "Bán phụ tùng và các bộ phận phụ trợ của ô tô và xe có động cơ khác"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "233"
+  fields:
+    industry_sectors_id: "117"
+    language_code: "en"
+    name: "Selling, maintaining and repairing motorbikes, motorbikes, spare parts and auxiliary parts of motorbikes and motorbikes"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "234"
+  fields:
+    industry_sectors_id: "117"
+    language_code: "vi"
+    name: "Bán, bảo dưỡng và sửa chữa mô tô, xe máy, phụ tùng và các bộ phận phụ trợ của mô tô, xe máy"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "235"
+  fields:
+    industry_sectors_id: "118"
+    language_code: "en"
+    name: "Agents, brokers, auctions of goods"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "236"
+  fields:
+    industry_sectors_id: "118"
+    language_code: "vi"
+    name: "Đại lý, môi giới, đấu giá hàng hóa"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "237"
+  fields:
+    industry_sectors_id: "119"
+    language_code: "en"
+    name: "Wholesale of agricultural and forestry raw materials (except wood, bamboo) and live animals"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "238"
+  fields:
+    industry_sectors_id: "119"
+    language_code: "vi"
+    name: "Bán buôn nông, lâm sản nguyên liệu (trừ gỗ, tre, nứa) và động vật sống"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "239"
+  fields:
+    industry_sectors_id: "120"
+    language_code: "en"
+    name: "Wholesale of food, beverages, tobacco and pipe tobacco products"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "240"
+  fields:
+    industry_sectors_id: "120"
+    language_code: "vi"
+    name: "Bán buôn lương thực, thực phẩm, đồ uống và sản phẩm thuốc lá, thuốc lào"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "241"
+  fields:
+    industry_sectors_id: "121"
+    language_code: "en"
+    name: "Wholesale of household appliances"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "242"
+  fields:
+    industry_sectors_id: "121"
+    language_code: "vi"
+    name: "Bán buôn đồ dùng gia đình"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "243"
+  fields:
+    industry_sectors_id: "122"
+    language_code: "en"
+    name: "Wholesale of machinery, equipment and spare parts"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "244"
+  fields:
+    industry_sectors_id: "122"
+    language_code: "vi"
+    name: "Bán buôn máy móc, thiết bị và phụ tùng máy"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "245"
+  fields:
+    industry_sectors_id: "123"
+    language_code: "en"
+    name: "Other specialized wholesale"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "246"
+  fields:
+    industry_sectors_id: "123"
+    language_code: "vi"
+    name: "Bán buôn chuyên doanh khác"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "247"
+  fields:
+    industry_sectors_id: "124"
+    language_code: "en"
+    name: "Wholesale synthetic"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "248"
+  fields:
+    industry_sectors_id: "124"
+    language_code: "vi"
+    name: "Bán buôn tổng hợp"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "249"
+  fields:
+    industry_sectors_id: "125"
+    language_code: "en"
+    name: "Retail in general stores"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "250"
+  fields:
+    industry_sectors_id: "125"
+    language_code: "vi"
+    name: "Bán lẻ trong các cửa hàng kinh doanh tổng hợp"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "251"
+  fields:
+    industry_sectors_id: "126"
+    language_code: "en"
+    name: "Retailing of food, beverages, or tobacco and pipe tobacco in specialized stores"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "252"
+  fields:
+    industry_sectors_id: "126"
+    language_code: "vi"
+    name: "Bán lẻ lương thực, thực phẩm, đồ uống hoặc thuốc lá, thuốc lào trong các cửa hàng chuyên doanh"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "253"
+  fields:
+    industry_sectors_id: "127"
+    language_code: "en"
+    name: "Retail sale of motor fuel in stores"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "254"
+  fields:
+    industry_sectors_id: "127"
+    language_code: "vi"
+    name: "Bán lẻ nhiên liệu động cơ trong các cửa hàng chuyên doanh"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "255"
+  fields:
+    industry_sectors_id: "128"
+    language_code: "en"
+    name: "Retailing information and communication technology equipment in specialized stores"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "256"
+  fields:
+    industry_sectors_id: "128"
+    language_code: "vi"
+    name: "Bán lẻ thiết bị công nghệ thông tin liên lạc trong các cửa hàng chuyên doanh"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "257"
+  fields:
+    industry_sectors_id: "129"
+    language_code: "en"
+    name: "Retailing other household appliances in specialized stores"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "258"
+  fields:
+    industry_sectors_id: "129"
+    language_code: "vi"
+    name: "Bán lẻ thiết bị gia đình khác trong các cửa hàng chuyên doanh"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "259"
+  fields:
+    industry_sectors_id: "130"
+    language_code: "en"
+    name: "Retailing cultural and entertainment goods in specialized stores"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "260"
+  fields:
+    industry_sectors_id: "130"
+    language_code: "vi"
+    name: "Bán lẻ hàng văn hóa, giải trí trong các cửa hàng chuyên doanh"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "261"
+  fields:
+    industry_sectors_id: "131"
+    language_code: "en"
+    name: "Retail of other goods in specialized stores"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "262"
+  fields:
+    industry_sectors_id: "131"
+    language_code: "vi"
+    name: "Bán lẻ hàng hóa khác trong các cửa hàng chuyên doanh"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "263"
+  fields:
+    industry_sectors_id: "132"
+    language_code: "en"
+    name: "Mobile retail or selling at markets"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "264"
+  fields:
+    industry_sectors_id: "132"
+    language_code: "vi"
+    name: "Bán lẻ lưu động hoặc bán tại chợ"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "265"
+  fields:
+    industry_sectors_id: "133"
+    language_code: "en"
+    name: "Other forms of retail (except in-store, mobile or market retail)"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "266"
+  fields:
+    industry_sectors_id: "133"
+    language_code: "vi"
+    name: "Bán lẻ hình thức khác (trừ bán lẻ tại cửa hàng, lưu động hoặc tại chợ)"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "267"
+  fields:
+    industry_sectors_id: "134"
+    language_code: "en"
+    name: "Rail transportation"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "268"
+  fields:
+    industry_sectors_id: "134"
+    language_code: "vi"
+    name: "Vận tải đường sắt"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "269"
+  fields:
+    industry_sectors_id: "135"
+    language_code: "en"
+    name: "Transport passengers by bus"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "270"
+  fields:
+    industry_sectors_id: "135"
+    language_code: "vi"
+    name: "Vận tải hành khách bằng xe buýt"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "271"
+  fields:
+    industry_sectors_id: "136"
+    language_code: "en"
+    name: "Other road transport"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "272"
+  fields:
+    industry_sectors_id: "136"
+    language_code: "vi"
+    name: "Vận tải đường bộ khác"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "273"
+  fields:
+    industry_sectors_id: "137"
+    language_code: "en"
+    name: "Pipeline transportation"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "274"
+  fields:
+    industry_sectors_id: "137"
+    language_code: "vi"
+    name: "Vận tải đường ống"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "275"
+  fields:
+    industry_sectors_id: "138"
+    language_code: "en"
+    name: "Coastal and ocean transport"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "276"
+  fields:
+    industry_sectors_id: "138"
+    language_code: "vi"
+    name: "Vận tải ven biển và viễn dương"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "277"
+  fields:
+    industry_sectors_id: "139"
+    language_code: "en"
+    name: "Inland waterway transport"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "278"
+  fields:
+    industry_sectors_id: "139"
+    language_code: "vi"
+    name: "Vận tải đường thủy nội địa"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "279"
+  fields:
+    industry_sectors_id: "140"
+    language_code: "en"
+    name: "Air passenger transport"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "280"
+  fields:
+    industry_sectors_id: "140"
+    language_code: "vi"
+    name: "Vận tải hành khách hàng không"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "281"
+  fields:
+    industry_sectors_id: "141"
+    language_code: "en"
+    name: "Air cargo transportation"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "282"
+  fields:
+    industry_sectors_id: "141"
+    language_code: "vi"
+    name: "Vận tải hàng hóa hàng không"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "283"
+  fields:
+    industry_sectors_id: "142"
+    language_code: "en"
+    name: "Warehousing and storage of goods"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "284"
+  fields:
+    industry_sectors_id: "142"
+    language_code: "vi"
+    name: "Kho bãi và lưu giữ hàng hóa"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "285"
+  fields:
+    industry_sectors_id: "143"
+    language_code: "en"
+    name: "Transport support service activities"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "286"
+  fields:
+    industry_sectors_id: "143"
+    language_code: "vi"
+    name: "Hoạt động dịch vụ hỗ trợ cho vận tải"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "287"
+  fields:
+    industry_sectors_id: "144"
+    language_code: "en"
+    name: "Postal"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "288"
+  fields:
+    industry_sectors_id: "144"
+    language_code: "vi"
+    name: "Bưu chính"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "289"
+  fields:
+    industry_sectors_id: "145"
+    language_code: "en"
+    name: "Delivery"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "290"
+  fields:
+    industry_sectors_id: "145"
+    language_code: "vi"
+    name: "Chuyển phát"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "291"
+  fields:
+    industry_sectors_id: "146"
+    language_code: "en"
+    name: "Short-stay services"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "292"
+  fields:
+    industry_sectors_id: "146"
+    language_code: "vi"
+    name: "Dịch vụ lưu trú ngắn ngày"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "293"
+  fields:
+    industry_sectors_id: "147"
+    language_code: "en"
+    name: "Other accommodation facilities"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "294"
+  fields:
+    industry_sectors_id: "147"
+    language_code: "vi"
+    name: "Cơ sở lưu trú khác"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "295"
+  fields:
+    industry_sectors_id: "148"
+    language_code: "en"
+    name: "Restaurants and mobile food services"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "296"
+  fields:
+    industry_sectors_id: "148"
+    language_code: "vi"
+    name: "Nhà hàng và các dịch vụ ăn uống phục vụ lưu động"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "297"
+  fields:
+    industry_sectors_id: "149"
+    language_code: "en"
+    name: "Providing occasional contract catering services and other catering services"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "298"
+  fields:
+    industry_sectors_id: "149"
+    language_code: "vi"
+    name: "Cung cấp dịch vụ ăn uống theo hợp đồng không thường xuyên và dịch vụ ăn uống khác"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "299"
+  fields:
+    industry_sectors_id: "150"
+    language_code: "en"
+    name: "Services for drinks"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "300"
+  fields:
+    industry_sectors_id: "150"
+    language_code: "vi"
+    name: "Dịch vụ phục vụ đồ uống"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "301"
+  fields:
+    industry_sectors_id: "151"
+    language_code: "en"
+    name: "Publishing books, periodicals and other publishing activities"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "302"
+  fields:
+    industry_sectors_id: "151"
+    language_code: "vi"
+    name: "Xuất bản sách, ấn phẩm định kỳ và các hoạt động xuất bản khác"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "303"
+  fields:
+    industry_sectors_id: "152"
+    language_code: "en"
+    name: "Software publishing"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "304"
+  fields:
+    industry_sectors_id: "152"
+    language_code: "vi"
+    name: "Xuất bản phần mềm"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "305"
+  fields:
+    industry_sectors_id: "153"
+    language_code: "en"
+    name: "Film activities and television program production"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "306"
+  fields:
+    industry_sectors_id: "153"
+    language_code: "vi"
+    name: "Hoạt động điện ảnh và sản xuất chương trình truyền hình"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "307"
+  fields:
+    industry_sectors_id: "154"
+    language_code: "en"
+    name: "Music recording and publishing activities"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "308"
+  fields:
+    industry_sectors_id: "154"
+    language_code: "vi"
+    name: "Hoạt động ghi âm và xuất bản âm nhạc"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "309"
+  fields:
+    industry_sectors_id: "155"
+    language_code: "en"
+    name: "Radio activities"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "310"
+  fields:
+    industry_sectors_id: "155"
+    language_code: "vi"
+    name: "Hoạt động phát thanh"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "311"
+  fields:
+    industry_sectors_id: "156"
+    language_code: "en"
+    name: "Television activities and provision of subscription programs"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "312"
+  fields:
+    industry_sectors_id: "156"
+    language_code: "vi"
+    name: "Hoạt động truyền hình và cung cấp chương trình thuê bao"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "313"
+  fields:
+    industry_sectors_id: "157"
+    language_code: "en"
+    name: "Wired telecommunications activities"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "314"
+  fields:
+    industry_sectors_id: "157"
+    language_code: "vi"
+    name: "Hoạt động viễn thông có dây"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "315"
+  fields:
+    industry_sectors_id: "158"
+    language_code: "en"
+    name: "Wireless telecommunications activities"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "316"
+  fields:
+    industry_sectors_id: "158"
+    language_code: "vi"
+    name: "Hoạt động viễn thông không dây"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "317"
+  fields:
+    industry_sectors_id: "159"
+    language_code: "en"
+    name: "Satellite telecommunications activities"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "318"
+  fields:
+    industry_sectors_id: "159"
+    language_code: "vi"
+    name: "Hoạt động viễn thông vệ tinh"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "319"
+  fields:
+    industry_sectors_id: "160"
+    language_code: "en"
+    name: "Other telecommunications activities"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "320"
+  fields:
+    industry_sectors_id: "160"
+    language_code: "vi"
+    name: "Hoạt động viễn thông khác"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "321"
+  fields:
+    industry_sectors_id: "161"
+    language_code: "en"
+    name: "Computer programming, consulting services and other activities related to computers"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "322"
+  fields:
+    industry_sectors_id: "161"
+    language_code: "vi"
+    name: "Lập trình máy vi tính, dịch vụ tư vấn và các hoạt động khác liên quan đến máy vi tính"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "323"
+  fields:
+    industry_sectors_id: "162"
+    language_code: "en"
+    name: "Data processing, leasing and related activities; portal"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "324"
+  fields:
+    industry_sectors_id: "162"
+    language_code: "vi"
+    name: "Xử lý dữ liệu, cho thuê và các hoạt động liên quan; cổng thông tin"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "325"
+  fields:
+    industry_sectors_id: "163"
+    language_code: "en"
+    name: "Other information services"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "326"
+  fields:
+    industry_sectors_id: "163"
+    language_code: "vi"
+    name: "Dịch vụ thông tin khác"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "327"
+  fields:
+    industry_sectors_id: "164"
+    language_code: "en"
+    name: "Monetary intermediary activities"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "328"
+  fields:
+    industry_sectors_id: "164"
+    language_code: "vi"
+    name: "Hoạt động trung gian tiền tệ"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "329"
+  fields:
+    industry_sectors_id: "165"
+    language_code: "en"
+    name: "Asset holding company activities"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "330"
+  fields:
+    industry_sectors_id: "165"
+    language_code: "vi"
+    name: "Hoạt động công ty nắm giữ tài sản"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "331"
+  fields:
+    industry_sectors_id: "166"
+    language_code: "en"
+    name: "Activities of trust funds, foundations and other financial institutions"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "332"
+  fields:
+    industry_sectors_id: "166"
+    language_code: "vi"
+    name: "Hoạt động quỹ tín thác, các quỹ và các tổ chức tài chính khác"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "333"
+  fields:
+    industry_sectors_id: "167"
+    language_code: "en"
+    name: "Other Financial service (except insurance and social insurance)"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "334"
+  fields:
+    industry_sectors_id: "167"
+    language_code: "vi"
+    name: "Hoạt động dịch vụ tài chính khác (trừ bảo hiểm và bảo hiểm xã hội)"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "335"
+  fields:
+    industry_sectors_id: "168"
+    language_code: "en"
+    name: "Insurance"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "336"
+  fields:
+    industry_sectors_id: "168"
+    language_code: "vi"
+    name: "Bảo hiểm"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "337"
+  fields:
+    industry_sectors_id: "169"
+    language_code: "en"
+    name: "Reinsurance"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "338"
+  fields:
+    industry_sectors_id: "169"
+    language_code: "vi"
+    name: "Tái bảo hiểm"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "339"
+  fields:
+    industry_sectors_id: "170"
+    language_code: "en"
+    name: "Social insurance"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "340"
+  fields:
+    industry_sectors_id: "170"
+    language_code: "vi"
+    name: "Bảo hiểm xã hội"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "341"
+  fields:
+    industry_sectors_id: "171"
+    language_code: "en"
+    name: "Financial service support activities (except insurance and social insurance)"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "342"
+  fields:
+    industry_sectors_id: "171"
+    language_code: "vi"
+    name: "Hoạt động hỗ trợ dịch vụ tài chính (trừ bảo hiểm và bảo hiểm xã hội)"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "343"
+  fields:
+    industry_sectors_id: "172"
+    language_code: "en"
+    name: "Insurance and social insurance support activities"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "344"
+  fields:
+    industry_sectors_id: "172"
+    language_code: "vi"
+    name: "Hoạt động hỗ trợ bảo hiểm và bảo hiểm xã hội"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "345"
+  fields:
+    industry_sectors_id: "173"
+    language_code: "en"
+    name: "Fund management activities"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "346"
+  fields:
+    industry_sectors_id: "173"
+    language_code: "vi"
+    name: "Hoạt động quản lý quỹ"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "347"
+  fields:
+    industry_sectors_id: "174"
+    language_code: "en"
+    name: "Real estate business, land use rights belonging to the owner, user or tenant"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "348"
+  fields:
+    industry_sectors_id: "174"
+    language_code: "vi"
+    name: "Kinh doanh bất động sản, quyền sử dụng đất thuộc chủ sở hữu, chủ sử dụng hoặc đi thuê"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "349"
+  fields:
+    industry_sectors_id: "175"
+    language_code: "en"
+    name: "Consulting, brokerage, real estate auction, land use rights auction"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "350"
+  fields:
+    industry_sectors_id: "175"
+    language_code: "vi"
+    name: "Tư vấn, môi giới, đấu giá bất động sản, đấu giá quyền sử dụng đất"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "351"
+  fields:
+    industry_sectors_id: "176"
+    language_code: "en"
+    name: "Legal activities"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "352"
+  fields:
+    industry_sectors_id: "176"
+    language_code: "vi"
+    name: "Hoạt động pháp luật"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "353"
+  fields:
+    industry_sectors_id: "177"
+    language_code: "en"
+    name: "Activities related to accounting, auditing and tax consulting"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "354"
+  fields:
+    industry_sectors_id: "177"
+    language_code: "vi"
+    name: "Hoạt động liên quan đến kế toán, kiểm toán và tư vấn về thuế"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "355"
+  fields:
+    industry_sectors_id: "178"
+    language_code: "en"
+    name: "Head office operations"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "356"
+  fields:
+    industry_sectors_id: "178"
+    language_code: "vi"
+    name: "Hoạt động của trụ sở văn phòng"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "357"
+  fields:
+    industry_sectors_id: "179"
+    language_code: "en"
+    name: "Management consulting activities"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "358"
+  fields:
+    industry_sectors_id: "179"
+    language_code: "vi"
+    name: "Hoạt động tư vấn quản lý"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "359"
+  fields:
+    industry_sectors_id: "180"
+    language_code: "en"
+    name: "Architectural activities and related technical consulting"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "360"
+  fields:
+    industry_sectors_id: "180"
+    language_code: "vi"
+    name: "Hoạt động kiến trúc và tư vấn kỹ thuật có liên quan"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "361"
+  fields:
+    industry_sectors_id: "181"
+    language_code: "en"
+    name: "Technical testing and analysis"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "362"
+  fields:
+    industry_sectors_id: "181"
+    language_code: "vi"
+    name: "Kiểm tra và phân tích kỹ thuật"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "363"
+  fields:
+    industry_sectors_id: "182"
+    language_code: "en"
+    name: "Scientific research and technological development in the field of natural sciences and engineering"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "364"
+  fields:
+    industry_sectors_id: "182"
+    language_code: "vi"
+    name: "Nghiên cứu khoa học và phát triển công nghệ trong lĩnh vực khoa học tự nhiên và kỹ thuật"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "365"
+  fields:
+    industry_sectors_id: "183"
+    language_code: "en"
+    name: "Scientific research and technological development in the field of social sciences and humanities"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "366"
+  fields:
+    industry_sectors_id: "183"
+    language_code: "vi"
+    name: "Nghiên cứu khoa học và phát triển công nghệ trong lĩnh vực khoa học xã hội và nhân văn"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "367"
+  fields:
+    industry_sectors_id: "184"
+    language_code: "en"
+    name: "Advertisement"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "368"
+  fields:
+    industry_sectors_id: "184"
+    language_code: "vi"
+    name: "Quảng cáo"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "369"
+  fields:
+    industry_sectors_id: "185"
+    language_code: "en"
+    name: "market research and opinion polls"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "370"
+  fields:
+    industry_sectors_id: "185"
+    language_code: "vi"
+    name: "Nghiên cứu thị trường và thăm dò dư luận"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "371"
+  fields:
+    industry_sectors_id: "186"
+    language_code: "en"
+    name: "Specialized design activities"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "372"
+  fields:
+    industry_sectors_id: "186"
+    language_code: "vi"
+    name: "Hoạt động thiết kế chuyên dụng"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "373"
+  fields:
+    industry_sectors_id: "187"
+    language_code: "en"
+    name: "Photography activities"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "374"
+  fields:
+    industry_sectors_id: "187"
+    language_code: "vi"
+    name: "Hoạt động nhiếp ảnh"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "375"
+  fields:
+    industry_sectors_id: "188"
+    language_code: "en"
+    name: "Other Professional, scientific and technological service not classified elsewhere"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "376"
+  fields:
+    industry_sectors_id: "188"
+    language_code: "vi"
+    name: "Dịch vụ chuyên môn, khoa học và công nghệ khác chưa được phân vào đâu"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "377"
+  fields:
+    industry_sectors_id: "189"
+    language_code: "en"
+    name: "Veterinary activities"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "378"
+  fields:
+    industry_sectors_id: "189"
+    language_code: "vi"
+    name: "Hoạt động thú y"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "379"
+  fields:
+    industry_sectors_id: "190"
+    language_code: "en"
+    name: "Motor vehicle rental"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "380"
+  fields:
+    industry_sectors_id: "190"
+    language_code: "vi"
+    name: "Cho thuê xe có động cơ"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "381"
+  fields:
+    industry_sectors_id: "191"
+    language_code: "en"
+    name: "Rent personal and household items"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "382"
+  fields:
+    industry_sectors_id: "191"
+    language_code: "vi"
+    name: "Cho thuê đồ dùng cá nhân và gia đình"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "383"
+  fields:
+    industry_sectors_id: "192"
+    language_code: "en"
+    name: "Rental of machinery, equipment and other tangible items without operator"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "384"
+  fields:
+    industry_sectors_id: "192"
+    language_code: "vi"
+    name: "Cho thuê máy móc, thiết bị và đồ dùng hữu hình khác không kèm người điều khiển"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "385"
+  fields:
+    industry_sectors_id: "193"
+    language_code: "en"
+    name: "Leasing non-financial intangible assets"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "386"
+  fields:
+    industry_sectors_id: "193"
+    language_code: "vi"
+    name: "Cho thuê tài sản vô hình phi tài chính"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "387"
+  fields:
+    industry_sectors_id: "194"
+    language_code: "en"
+    name: "Activities of labor and employment consulting, introduction and brokerage centers and agencies"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "388"
+  fields:
+    industry_sectors_id: "194"
+    language_code: "vi"
+    name: "Hoạt động của các trung tâm, đại lý tư vấn, giới thiệu và môi giới lao động, việc làm"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "389"
+  fields:
+    industry_sectors_id: "195"
+    language_code: "en"
+    name: "Temporary labor supply"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "390"
+  fields:
+    industry_sectors_id: "195"
+    language_code: "vi"
+    name: "Cung ứng lao động tạm thời"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "391"
+  fields:
+    industry_sectors_id: "196"
+    language_code: "en"
+    name: "Supply and management of labor resources"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "392"
+  fields:
+    industry_sectors_id: "196"
+    language_code: "vi"
+    name: "Cung ứng và quản lý nguồn lao động"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "393"
+  fields:
+    industry_sectors_id: "197"
+    language_code: "en"
+    name: "Activities of travel agents and tour businesses"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "394"
+  fields:
+    industry_sectors_id: "197"
+    language_code: "vi"
+    name: "Hoạt động của các đại lý du lịch, kinh doanh tua du lịch"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "395"
+  fields:
+    industry_sectors_id: "198"
+    language_code: "en"
+    name: "Reservation services and support services related to promotion and organization of tours"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "396"
+  fields:
+    industry_sectors_id: "198"
+    language_code: "vi"
+    name: "Dịch vụ đặt chỗ và các dịch vụ hỗ trợ liên quan đến quảng bá và tổ chức tua du lịch"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "397"
+  fields:
+    industry_sectors_id: "199"
+    language_code: "en"
+    name: "Private security activities"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "398"
+  fields:
+    industry_sectors_id: "199"
+    language_code: "vi"
+    name: "Hoạt động bảo vệ tư nhân"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "399"
+  fields:
+    industry_sectors_id: "200"
+    language_code: "en"
+    name: "System services ensure safety"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "400"
+  fields:
+    industry_sectors_id: "200"
+    language_code: "vi"
+    name: "Dịch vụ hệ thống bảo đảm an toàn"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "401"
+  fields:
+    industry_sectors_id: "201"
+    language_code: "en"
+    name: "Investigation service"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "402"
+  fields:
+    industry_sectors_id: "201"
+    language_code: "vi"
+    name: "Dịch vụ điều tra"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "403"
+  fields:
+    industry_sectors_id: "202"
+    language_code: "en"
+    name: "General support service"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "404"
+  fields:
+    industry_sectors_id: "202"
+    language_code: "vi"
+    name: "Dịch vụ hỗ trợ tổng hợp"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "405"
+  fields:
+    industry_sectors_id: "203"
+    language_code: "en"
+    name: "Cleaning service"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "406"
+  fields:
+    industry_sectors_id: "203"
+    language_code: "vi"
+    name: "Dịch vụ vệ sinh"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "407"
+  fields:
+    industry_sectors_id: "204"
+    language_code: "en"
+    name: "Landscape care and maintenance services"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "408"
+  fields:
+    industry_sectors_id: "204"
+    language_code: "vi"
+    name: "Dịch vụ chăm sóc và duy trì cảnh quan"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "409"
+  fields:
+    industry_sectors_id: "205"
+    language_code: "en"
+    name: "Administrative activities and office support"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "410"
+  fields:
+    industry_sectors_id: "205"
+    language_code: "vi"
+    name: "Hoạt động hành chính và hỗ trợ văn phòng"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "411"
+  fields:
+    industry_sectors_id: "206"
+    language_code: "en"
+    name: "Service operations related to calls"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "412"
+  fields:
+    industry_sectors_id: "206"
+    language_code: "vi"
+    name: "Hoạt động dịch vụ liên quan đến các cuộc gọi"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "413"
+  fields:
+    industry_sectors_id: "207"
+    language_code: "en"
+    name: "Organize trade introduction and promotion"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "414"
+  fields:
+    industry_sectors_id: "207"
+    language_code: "vi"
+    name: "Tổ chức giới thiệu và xúc tiến thương mại"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "415"
+  fields:
+    industry_sectors_id: "208"
+    language_code: "en"
+    name: "Other business support service activities have not been classified elsewhere"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "416"
+  fields:
+    industry_sectors_id: "208"
+    language_code: "vi"
+    name: "Hoạt động dịch vụ hỗ trợ kinh doanh khác chưa được phân vào đâu"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "417"
+  fields:
+    industry_sectors_id: "209"
+    language_code: "en"
+    name: "Activities of the Communist Party, socio-political organizations, state management and economic and social policy management"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "418"
+  fields:
+    industry_sectors_id: "209"
+    language_code: "vi"
+    name: "Hoạt động của Đảng cộng sản, tổ chức chính trị – xã hội, quản lý nhà nước và quản lý chính sách kinh tế, xã hội"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "419"
+  fields:
+    industry_sectors_id: "210"
+    language_code: "en"
+    name: "General service activities for the entire country"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "420"
+  fields:
+    industry_sectors_id: "210"
+    language_code: "vi"
+    name: "Hoạt động phục vụ chung cho toàn đất nước"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "421"
+  fields:
+    industry_sectors_id: "211"
+    language_code: "en"
+    name: "Compulsory social security activities"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "422"
+  fields:
+    industry_sectors_id: "211"
+    language_code: "vi"
+    name: "Hoạt động bảo đảm xã hội bắt buộc"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "423"
+  fields:
+    industry_sectors_id: "212"
+    language_code: "en"
+    name: "Preschool education"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "424"
+  fields:
+    industry_sectors_id: "212"
+    language_code: "vi"
+    name: "Giáo dục mầm non"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "425"
+  fields:
+    industry_sectors_id: "213"
+    language_code: "en"
+    name: "General education"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "426"
+  fields:
+    industry_sectors_id: "213"
+    language_code: "vi"
+    name: "Giáo dục phổ thông"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "427"
+  fields:
+    industry_sectors_id: "214"
+    language_code: "en"
+    name: "Job education"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "428"
+  fields:
+    industry_sectors_id: "214"
+    language_code: "vi"
+    name: "Giáo dục nghề nghiệp"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "429"
+  fields:
+    industry_sectors_id: "215"
+    language_code: "en"
+    name: "University education"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "430"
+  fields:
+    industry_sectors_id: "215"
+    language_code: "vi"
+    name: "Giáo dục đại học"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "431"
+  fields:
+    industry_sectors_id: "216"
+    language_code: "en"
+    name: "Other education"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "432"
+  fields:
+    industry_sectors_id: "216"
+    language_code: "vi"
+    name: "Giáo dục khác"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "433"
+  fields:
+    industry_sectors_id: "217"
+    language_code: "en"
+    name: "Educational support services"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "434"
+  fields:
+    industry_sectors_id: "217"
+    language_code: "vi"
+    name: "Dịch vụ hỗ trợ giáo dục"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "435"
+  fields:
+    industry_sectors_id: "218"
+    language_code: "en"
+    name: "Operations of hospitals and medical stations"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "436"
+  fields:
+    industry_sectors_id: "218"
+    language_code: "vi"
+    name: "Hoạt động của các bệnh viện, trạm y tế"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "437"
+  fields:
+    industry_sectors_id: "219"
+    language_code: "en"
+    name: "Activities of general, specialized and dental clinics"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "438"
+  fields:
+    industry_sectors_id: "219"
+    language_code: "vi"
+    name: "Hoạt động của các phòng khám đa khoa, chuyên khoa và nha khoa"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "439"
+  fields:
+    industry_sectors_id: "220"
+    language_code: "en"
+    name: "Other medical activities"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "440"
+  fields:
+    industry_sectors_id: "220"
+    language_code: "vi"
+    name: "Hoạt động y tế khác"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "441"
+  fields:
+    industry_sectors_id: "221"
+    language_code: "en"
+    name: "Activities of nursing and nursing facilities"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "442"
+  fields:
+    industry_sectors_id: "221"
+    language_code: "vi"
+    name: "Hoạt động của các cơ sở nuôi dưỡng, điều dưỡng"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "443"
+  fields:
+    industry_sectors_id: "222"
+    language_code: "en"
+    name: "Health care activities for people with disabilities, mental illness and addicts"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "444"
+  fields:
+    industry_sectors_id: "222"
+    language_code: "vi"
+    name: "Hoạt động chăm sóc sức khoẻ người bị thiểu năng, tâm thần và người nghiện"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "445"
+  fields:
+    industry_sectors_id: "223"
+    language_code: "en"
+    name: "Health care activities for people with meritorious services, the elderly and disabled people who are unable to take care of themselves"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "446"
+  fields:
+    industry_sectors_id: "223"
+    language_code: "vi"
+    name: "Hoạt động chăm sóc sức khoẻ người có công, người già và người khuyết tật không có khả năng tự chăm sóc"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "447"
+  fields:
+    industry_sectors_id: "224"
+    language_code: "en"
+    name: "Other centralized care activities"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "448"
+  fields:
+    industry_sectors_id: "224"
+    language_code: "vi"
+    name: "Hoạt động chăm sóc tập trung khác"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "449"
+  fields:
+    industry_sectors_id: "225"
+    language_code: "en"
+    name: "Social support activities are not focused on people with meritorious services, wounded and sick soldiers, the elderly and people with disabilities"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "450"
+  fields:
+    industry_sectors_id: "225"
+    language_code: "vi"
+    name: "Hoạt động trợ giúp xã hội không tập trung đối với người có công, thương bệnh binh, người già và người khuyết tật"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "451"
+  fields:
+    industry_sectors_id: "226"
+    language_code: "en"
+    name: "Other unfocused social assistance activities"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "452"
+  fields:
+    industry_sectors_id: "226"
+    language_code: "vi"
+    name: "Hoạt động trợ giúp xã hội không tập trung khác"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "453"
+  fields:
+    industry_sectors_id: "227"
+    language_code: "en"
+    name: "Creative, artistic and entertainment activities"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "454"
+  fields:
+    industry_sectors_id: "227"
+    language_code: "vi"
+    name: "Hoạt động sáng tác, nghệ thuật và giải trí"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "455"
+  fields:
+    industry_sectors_id: "228"
+    language_code: "en"
+    name: "Activities of libraries, archives, museums and other cultural activities"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "456"
+  fields:
+    industry_sectors_id: "228"
+    language_code: "vi"
+    name: "Hoạt động của thư viện, lưu trữ, bảo tàng và các hoạt động văn hóa khác"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "457"
+  fields:
+    industry_sectors_id: "229"
+    language_code: "en"
+    name: "Lottery, betting and gambling activities"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "458"
+  fields:
+    industry_sectors_id: "229"
+    language_code: "vi"
+    name: "Hoạt động xổ số, cá cược và đánh bạc"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "459"
+  fields:
+    industry_sectors_id: "230"
+    language_code: "en"
+    name: "Sports activities"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "460"
+  fields:
+    industry_sectors_id: "230"
+    language_code: "vi"
+    name: "Hoạt động thể thao"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "461"
+  fields:
+    industry_sectors_id: "231"
+    language_code: "en"
+    name: "Other entertainment activities"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "462"
+  fields:
+    industry_sectors_id: "231"
+    language_code: "vi"
+    name: "Hoạt động vui chơi giải trí khác"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "463"
+  fields:
+    industry_sectors_id: "232"
+    language_code: "en"
+    name: "Activities of business, employer and professional associations"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "464"
+  fields:
+    industry_sectors_id: "232"
+    language_code: "vi"
+    name: "Hoạt động của các hiệp hội kinh doanh, nghiệp chủ và nghề nghiệp"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "465"
+  fields:
+    industry_sectors_id: "233"
+    language_code: "en"
+    name: "Trade union activities"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "466"
+  fields:
+    industry_sectors_id: "233"
+    language_code: "vi"
+    name: "Hoạt động của công đoàn"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "467"
+  fields:
+    industry_sectors_id: "234"
+    language_code: "en"
+    name: "Activities of other organizations"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "468"
+  fields:
+    industry_sectors_id: "234"
+    language_code: "vi"
+    name: "Hoạt động của các tổ chức khác"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "469"
+  fields:
+    industry_sectors_id: "235"
+    language_code: "en"
+    name: "Repair computers and communication equipment"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "470"
+  fields:
+    industry_sectors_id: "235"
+    language_code: "vi"
+    name: "Sửa chữa máy vi tính và thiết bị liên lạc"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "471"
+  fields:
+    industry_sectors_id: "236"
+    language_code: "en"
+    name: "Repair personal and household appliances"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "472"
+  fields:
+    industry_sectors_id: "236"
+    language_code: "vi"
+    name: "Sửa chữa đồ dùng cá nhân và gia đình"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "473"
+  fields:
+    industry_sectors_id: "237"
+    language_code: "en"
+    name: "Sauna, massage and similar health promotion services (except sports activities)"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "474"
+  fields:
+    industry_sectors_id: "237"
+    language_code: "vi"
+    name: "Dịch vụ tắm hơi, massage và các dịch vụ tăng cường sức khoẻ tương tự (trừ hoạt động thể thao)"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "475"
+  fields:
+    industry_sectors_id: "238"
+    language_code: "en"
+    name: "Laundry, cleaning of textile and fur products"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "476"
+  fields:
+    industry_sectors_id: "238"
+    language_code: "vi"
+    name: "Giặt là, làm sạch các sản phẩm dệt và lông thú"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "477"
+  fields:
+    industry_sectors_id: "239"
+    language_code: "en"
+    name: "Other personal service activities not classified elsewhere"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "478"
+  fields:
+    industry_sectors_id: "239"
+    language_code: "vi"
+    name: "Hoạt động dịch vụ phục vụ cá nhân khác chưa được phân vào đâu"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "479"
+  fields:
+    industry_sectors_id: "240"
+    language_code: "en"
+    name: "Housework activities in households"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "480"
+  fields:
+    industry_sectors_id: "240"
+    language_code: "vi"
+    name: "Hoạt động làm thuê công việc gia đình trong các hộ gia đình"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "481"
+  fields:
+    industry_sectors_id: "241"
+    language_code: "en"
+    name: "Production of material products for self-consumption by households"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "482"
+  fields:
+    industry_sectors_id: "241"
+    language_code: "vi"
+    name: "Hoạt động sản xuất các sản phẩm vật chất tự tiêu dùng của hộ gia đình"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "483"
+  fields:
+    industry_sectors_id: "242"
+    language_code: "en"
+    name: "Production of products and services for self-consumption by households"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "484"
+  fields:
+    industry_sectors_id: "242"
+    language_code: "vi"
+    name: "Hoạt động sản xuất các sản phẩm dịch vụ tự tiêu dùng của hộ gia đình"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "485"
+  fields:
+    industry_sectors_id: "243"
+    language_code: "en"
+    name: "Activities of international organizations and agencies"
+- model: 'master_data.IndustrySectorsTranslation'
+  pk: "486"
+  fields:
+    industry_sectors_id: "243"
+    language_code: "vi"
+    name: "Hoạt động của các tổ chức và cơ quan quốc tế"

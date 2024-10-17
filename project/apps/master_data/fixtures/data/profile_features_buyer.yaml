@@ -1,0 +1,51 @@
+- model: 'sale_schema.profileFeaturesBuyer'
+  pk: 1
+  fields:
+    name: UNSECURED
+    market_research: "Yes"
+    rfx_year: 3
+    no_eauction_year: 0
+    help_desk: "No" 
+    report_year: 3
+    fee_eauction: null
+    total_fee_year: null
+    profile_features_type: 1
+
+- model: 'sale_schema.profileFeaturesBuyer'
+  pk: 2
+  fields:
+    name: FLYER
+    market_research: "Yes"
+    rfx_year: 6
+    no_eauction_year: 3
+    help_desk: "Yes"
+    report_year: 6
+    fee_eauction: 7590000
+    total_fee_year: 22770000
+    profile_features_type: 2
+
+- model: 'sale_schema.profileFeaturesBuyer'
+  pk: 3
+  fields:
+    name: CREW
+    market_research: "Yes"
+    rfx_year: 9         
+    no_eauction_year: 6
+    help_desk: "Yes"
+    report_year: 9
+    fee_eauction: 6831000
+    total_fee_year: 40986000
+    profile_features_type: 3
+
+- model: 'sale_schema.profileFeaturesBuyer'
+  pk: 4
+  fields:
+    name: CAPTAIN
+    market_research: "Yes"
+    rfx_year: 12
+    no_eauction_year: 99999
+    help_desk: "Yes"
+    report_year: 99999
+    fee_eauction: 6141000
+    total_fee_year: 73692000
+    profile_features_type: 4

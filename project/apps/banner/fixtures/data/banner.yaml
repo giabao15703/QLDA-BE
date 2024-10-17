@@ -1,0 +1,25 @@
+- model: 'banner.bannerGroup' 
+  pk: 1
+  fields: 
+    item_code: market_research_listing
+    name: Market research listing
+
+- model: 'banner.bannerGroup' 
+  pk: 2
+  fields: 
+    item_code: market_research_detail
+    name: Market research detail
+
+- model: 'banner.banner' 
+  pk: 1
+  fields:
+    name: Market research listing
+    group_id: 1
+    sort_order: 0
+
+- model: 'banner.banner' 
+  pk: 2
+  fields:
+    name: Market research detail
+    group_id: 2
+    sort_order: 0

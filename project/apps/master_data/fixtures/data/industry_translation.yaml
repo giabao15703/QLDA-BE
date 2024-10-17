@@ -1,0 +1,252 @@
+- model: 'master_data.IndustryTranslation'
+  pk: "1"
+  fields:
+    industry_id: "1"
+    language_code: "en"
+    name: "All"
+- model: 'master_data.IndustryTranslation'
+  pk: "2"
+  fields:
+    industry_id: "1"
+    language_code: "vi"
+    name: "Tất cả"
+- model: 'master_data.IndustryTranslation'
+  pk: "3"
+  fields:
+    industry_id: "2"
+    language_code: "en"
+    name: "Agriculture, forestry and fisheries"
+- model: 'master_data.IndustryTranslation'
+  pk: "4"
+  fields:
+    industry_id: "2"
+    language_code: "vi"
+    name: "Nông nghiệp, lâm nghiệp và thuỷ sản"
+- model: 'master_data.IndustryTranslation'
+  pk: "5"
+  fields:
+    industry_id: "3"
+    language_code: "en"
+    name: "Extractive"
+- model: 'master_data.IndustryTranslation'
+  pk: "6"
+  fields:
+    industry_id: "3"
+    language_code: "vi"
+    name: "Khai khoáng"
+- model: 'master_data.IndustryTranslation'
+  pk: "7"
+  fields:
+    industry_id: "4"
+    language_code: "en"
+    name: "Manufacturing and processing industry"
+- model: 'master_data.IndustryTranslation'
+  pk: "8"
+  fields:
+    industry_id: "4"
+    language_code: "vi"
+    name: "Công nghiệp chế biến, chế tạo"
+- model: 'master_data.IndustryTranslation'
+  pk: "9"
+  fields:
+    industry_id: "5"
+    language_code: "en"
+    name: "Production and distribution of fuel"
+- model: 'master_data.IndustryTranslation'
+  pk: "10"
+  fields:
+    industry_id: "5"
+    language_code: "vi"
+    name: "Sản xuất và phân phối nhiên liệu"
+- model: 'master_data.IndustryTranslation'
+  pk: "11"
+  fields:
+    industry_id: "6"
+    language_code: "en"
+    name: "Water supply and environment"
+- model: 'master_data.IndustryTranslation'
+  pk: "12"
+  fields:
+    industry_id: "6"
+    language_code: "vi"
+    name: "Cung cấp nước và môi trường"
+- model: 'master_data.IndustryTranslation'
+  pk: "13"
+  fields:
+    industry_id: "7"
+    language_code: "en"
+    name: "Construction"
+- model: 'master_data.IndustryTranslation'
+  pk: "14"
+  fields:
+    industry_id: "7"
+    language_code: "vi"
+    name: "Xây dựng"
+- model: 'master_data.IndustryTranslation'
+  pk: "15"
+  fields:
+    industry_id: "8"
+    language_code: "en"
+    name: "Wholesale and retail"
+- model: 'master_data.IndustryTranslation'
+  pk: "16"
+  fields:
+    industry_id: "8"
+    language_code: "vi"
+    name: "Bán buôn và bán lẻ"
+- model: 'master_data.IndustryTranslation'
+  pk: "17"
+  fields:
+    industry_id: "9"
+    language_code: "en"
+    name: "Warehouse transportation"
+- model: 'master_data.IndustryTranslation'
+  pk: "18"
+  fields:
+    industry_id: "9"
+    language_code: "vi"
+    name: "Vận tải kho bãi"
+- model: 'master_data.IndustryTranslation'
+  pk: "19"
+  fields:
+    industry_id: "10"
+    language_code: "en"
+    name: "Accommodation and dining service"
+- model: 'master_data.IndustryTranslation'
+  pk: "20"
+  fields:
+    industry_id: "10"
+    language_code: "vi"
+    name: "Dịch vụ lưu trú và ăn uống"
+- model: 'master_data.IndustryTranslation'
+  pk: "21"
+  fields:
+    industry_id: "11"
+    language_code: "en"
+    name: "Information and communication"
+- model: 'master_data.IndustryTranslation'
+  pk: "22"
+  fields:
+    industry_id: "11"
+    language_code: "vi"
+    name: "Thông tin và truyền thông"
+- model: 'master_data.IndustryTranslation'
+  pk: "23"
+  fields:
+    industry_id: "12"
+    language_code: "en"
+    name: "Financial, banking and insurance"
+- model: 'master_data.IndustryTranslation'
+  pk: "24"
+  fields:
+    industry_id: "12"
+    language_code: "vi"
+    name: "Tài chính, ngân hàng và bảo hiểm"
+- model: 'master_data.IndustryTranslation'
+  pk: "25"
+  fields:
+    industry_id: "13"
+    language_code: "en"
+    name: "Real estate business"
+- model: 'master_data.IndustryTranslation'
+  pk: "26"
+  fields:
+    industry_id: "13"
+    language_code: "vi"
+    name: "Kinh doanh bất động sản"
+- model: 'master_data.IndustryTranslation'
+  pk: "27"
+  fields:
+    industry_id: "14"
+    language_code: "en"
+    name: "Professional, scientific and technological service"
+- model: 'master_data.IndustryTranslation'
+  pk: "28"
+  fields:
+    industry_id: "14"
+    language_code: "vi"
+    name: "Dịch vụ chuyên môn, khoa học và công nghệ"
+- model: 'master_data.IndustryTranslation'
+  pk: "29"
+  fields:
+    industry_id: "15"
+    language_code: "en"
+    name: "Administrative and support service"
+- model: 'master_data.IndustryTranslation'
+  pk: "30"
+  fields:
+    industry_id: "15"
+    language_code: "vi"
+    name: "Hành chính và dịch vụ hỗ trợ"
+- model: 'master_data.IndustryTranslation'
+  pk: "31"
+  fields:
+    industry_id: "16"
+    language_code: "en"
+    name: "Public administration"
+- model: 'master_data.IndustryTranslation'
+  pk: "32"
+  fields:
+    industry_id: "16"
+    language_code: "vi"
+    name: "Hành chính công"
+- model: 'master_data.IndustryTranslation'
+  pk: "33"
+  fields:
+    industry_id: "17"
+    language_code: "en"
+    name: "Education and training"
+- model: 'master_data.IndustryTranslation'
+  pk: "34"
+  fields:
+    industry_id: "17"
+    language_code: "vi"
+    name: "Giáo dục và đào tạo"
+- model: 'master_data.IndustryTranslation'
+  pk: "35"
+  fields:
+    industry_id: "18"
+    language_code: "en"
+    name: "Medical and social aid"
+- model: 'master_data.IndustryTranslation'
+  pk: "36"
+  fields:
+    industry_id: "18"
+    language_code: "vi"
+    name: "Y tế và trợ giúp xã hội"
+- model: 'master_data.IndustryTranslation'
+  pk: "37"
+  fields:
+    industry_id: "19"
+    language_code: "en"
+    name: "Art, fun and entertainment"
+- model: 'master_data.IndustryTranslation'
+  pk: "38"
+  fields:
+    industry_id: "19"
+    language_code: "vi"
+    name: "Nghệ thuật, vui chơi và giải trí"
+- model: 'master_data.IndustryTranslation'
+  pk: "39"
+  fields:
+    industry_id: "20"
+    language_code: "en"
+    name: "Other service"
+- model: 'master_data.IndustryTranslation'
+  pk: "40"
+  fields:
+    industry_id: "20"
+    language_code: "vi"
+    name: "Dịch vụ khác"
+- model: 'master_data.IndustryTranslation'
+  pk: "41"
+  fields:
+    industry_id: "21"
+    language_code: "en"
+    name: "International organization and agency"
+- model: 'master_data.IndustryTranslation'
+  pk: "42"
+  fields:
+    industry_id: "21"
+    language_code: "vi"
+    name: "Tổ chức và cơ quan quốc tế"

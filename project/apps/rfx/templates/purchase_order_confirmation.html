@@ -1,0 +1,253 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE HTML>
+<html lang="vi">
+
+<head>
+    <title></title>
+    <meta http-equiv=Content-Type content="text/html; charset=utf-8" />
+    <meta charset="UTF-8" />
+    <style>
+        @font-face {
+            font-family: font;
+            src: ("\static\times.ttf");
+        }
+        @font-face {
+            font-family: Roboto;
+            src: "\static\Roboto-Regular.ttf";
+        }
+
+        body {
+            font-family: Roboto;
+        }
+
+        .font_face {
+            font-family: Roboto;
+        }
+
+        .fs-8 {
+            font-size: 8pt;
+            margin-bottom: 0in;
+            text-align: left;
+            margin-left: 5px;
+        }
+
+        .w-100 {
+            width: 100% !important;
+        }
+
+        .mt-0 {
+            margin-top: 0 !important;
+        }
+
+        .mt-5px {
+            margin-top: 5px !important;
+        }
+
+
+
+        .fs-9 {
+            font-size: 9pt;
+            text-align: left;
+        }
+        .fs-9-center {
+            font-size: 9pt;
+            text-align: center;
+        }
+
+        .fs-10 {
+            font-size: 10pt;
+            margin-bottom: 0in;
+            text-align: left;
+            margin-left: 5px;
+        }
+
+        td {
+            border: 1px solid #000000;
+
+        }
+
+        tr.item-table-content td {
+            font-size: 14px;
+        }
+
+        tr.tr-fs-14 td {
+            font-size: 14px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        table.info-table {
+            padding: 1px;
+            border-spacing: 0;
+            border-collapse: separate;
+        }
+
+
+        table.item-table,
+        table.signature-table {
+            padding: 7px;
+            border-spacing: 0;
+            border-collapse: separate;
+        }
+
+        .bg-dark {
+            background-color: #bfbfbf;
+        }
+
+        .header {
+            width: 100%;
+        }
+
+        .header img {
+            height: 36px;
+            width: 120px;
+        }
+
+
+        table td {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        table {
+            table-layout: fixed;
+        }
+        
+        .inner-table-border {
+            vertical-align: top;
+            border: 0;
+        }
+
+        hr.line {
+            border: 0.5pt solid black;
+            width: 50%;
+            float: left;
+        }
+
+        .text-render {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div title="Header">
+        <p style="margin-top: 0.46in; margin-bottom: 0in; line-height: 100%; text-align: right;">
+            <b>Purchase order confirmation</b>
+        </p>
+    </div>
+    <center>
+        <table class="info-table">
+            <tr>
+                <td style="vertical-align: top;">
+                    <p class="fs-10 mt-5px">Buyer code: {{buyer_code}}</p>
+                    <p class="fs-10 mt-1px">{{buyer_company_name}}</p>
+                    <p class="fs-10 mt-1px">{{buyer_company_address}}</p>
+                </td>
+                <td style="vertical-align: top;">
+                    <table style="border: 1;border-spacing: 0;">
+                        <tr>
+                            <td class="inner-table-border" >
+                                <p class="fs-8 mt-5px">Purchase order no.</p>
+                                <p class="fs-10 mt-1px">{{item_code}}</p>
+                            </td>
+                            <td class="inner-table-border">
+                                <p class="fs-8 mt-5px">Date</p>
+                                <p class="fs-10 mt-1px">{{rfx_awarded_date}}</p>
+                            </td>
+                            <td class="inner-table-border">
+                                <p class="fs-8 mt-5px">Page</p>
+                                <p class="fs-10 mt-1px">1 of 2</p>
+                            </td>
+                        </tr>                        
+                        <tr>
+                            <td class="inner-table-border" >
+                                <p class="fs-8 mt-1px">Contact</p>
+                                <br/>
+                            </td>
+                            <td colspan=2 class="inner-table-border">
+                                <p class="fs-10 mt-1px">{{buyer_contact_name}}</p>
+                                <br/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="inner-table-border" >
+                                <p class="fs-8 mt-1px">Telephone</p>
+                                <br/>
+                            </td>
+                            <td colspan=2 class="inner-table-border">
+                                <p class="fs-10 mt-1px">{{buyer_phone}}</p>
+                                <br/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="inner-table-border" >
+                                <p class="fs-8 mt-1px">E-mail</p>
+                                <br/>
+                            </td>
+                            <td colspan=2 class="inner-table-border">
+                                <p class="fs-10 mt-1px">{{buyer_email}}</p>
+                                <br/>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">
+                    <p class="fs-10 mt-5px">Supplier code: {{supplier_code}}</p>
+                    <p class="fs-10 mt-1px">{{supplier_company_name}}</p>
+                    <p class="fs-10 mt-1px">{{supplier_company_address}}</p>
+                </td>
+                <td style="vertical-align: top;">
+                    <table>                      
+                        <tr>
+                            <td class="inner-table-border" >
+                                <p class="fs-8 mt-1px">Contact</p>
+                            </td>
+                            <td colspan=2 class="inner-table-border">
+                                <p class="fs-10 mt-1px">{{supplier_name}}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="inner-table-border" >
+                                <p class="fs-8 mt-1px">E-mail</p>
+                            </td>
+                            <td colspan=2 class="inner-table-border">
+                                <p class="fs-10 mt-1px">{{supplier_email}}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="inner-table-border" >
+                                <p class="fs-8 mt-1px">Telephone</p>
+                            </td>
+                            <td colspan=2 class="inner-table-border">
+                                <p class="fs-10 mt-1px">{{supplier_phone}}</p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </center>
+    <p class="fs-9">The Supplier hereby confirms the acceptance of this PO as per terms and conditions stated in this PO and the Buyer's Terms & Conditions available at the link: https://nextpro.io/term-conditions/ (if applicable)</p>
+    <p class="fs-9">The Supplier hereby confirms that it has accessed to, read and agreed with these Buyer's Terms & Conditions stored in the above link (if applicable).</p>
+    <br/>
+    <p class="fs-9">We supply and you purchase according to the purchase order number: {{item_code}} dated {{rfx_awarded_date}}</p>
+    <p class="fs-9">The deliveries / services detailed under item(s) as mentioned in the PO</p>
+    <p class="fs-9">The prices, specifications, terms and conditions agreed with you in this purchase order shall apply to all deliveries / services provided within the periods stated therein.</p>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/> <br/>
+    Stamp and Signature of Supplier
+    <div style="width:50vw; border: 0.5px black solid; margin-top: 10px" ></div>
+    Date Signature
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+- model: 'master_data.level'
+  pk: 1
+  fields:
+    name: Level 1
+- model: 'master_data.level'
+  pk: 2
+  fields:
+    name: Level 2

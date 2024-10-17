@@ -1,0 +1,136 @@
+- model: 'master_data.paymentTerm'
+  pk: 1
+  fields:
+    name: 14 days/net
+
+- model: 'master_data.paymentTerm'
+  pk: 2
+  fields:
+    name: 30 days/net
+
+
+- model: 'master_data.paymentTerm'
+  pk: 3
+  fields:
+    name: 45 days/net
+
+
+- model: 'master_data.paymentTerm'
+  pk: 4
+  fields:
+    name: 60 days/net
+
+
+- model: 'master_data.paymentTerm'
+  pk: 5
+  fields:
+    name: 90 days/net
+
+
+- model: 'master_data.paymentTerm'
+  pk: 6
+  fields:
+    name: 120 days/net
+
+
+- model: 'master_data.paymentTerm'
+  pk: 7
+  fields:
+    name: Free of Charge
+
+
+- model: 'master_data.paymentTerm'
+  pk: 8
+  fields:
+    name: Payment on invoice net
+
+
+- model: 'master_data.paymentTerm'
+  pk: 9
+  fields:
+    name: Acceptance Letter of Credit
+
+
+- model: 'master_data.paymentTerm'
+  pk: 10
+  fields:
+    name: Advance payment guarantee
+
+
+- model: 'master_data.paymentTerm'
+  pk: 11
+  fields:
+    name: Bill due on delivery
+
+
+- model: 'master_data.paymentTerm'
+  pk: 12
+  fields:
+    name: By agreement
+
+
+- model: 'master_data.paymentTerm'
+  pk: 13
+  fields:
+    name: Cash on delivery
+
+
+- model: 'master_data.paymentTerm'
+  pk: 14
+  fields:
+    name: Cash up front
+
+
+- model: 'master_data.paymentTerm'
+  pk: 15
+  fields:
+    name: Documents against acceptance L/C
+
+
+- model: 'master_data.paymentTerm'
+  pk: 16
+  fields:
+    name: Documents against payment
+
+- model: 'master_data.paymentTerm'
+  pk: 17
+  fields:
+    name: End of following month net
+
+- model: 'master_data.paymentTerm'
+  pk: 18
+  fields:
+    name: 2% 10day/s; 30 day/s net
+
+- model: 'master_data.paymentTerm'
+  pk: 19
+  fields:
+    name: 2% 14day/s; 30 day/s net
+
+- model: 'master_data.paymentTerm'
+  pk: 20
+  fields:
+    name: 2% 10day/s; 60 day/s net
+
+- model: 'master_data.paymentTerm'
+  pk: 21
+  fields:
+    name: 2% 10day/s; 90 day/s net
+
+- model: 'master_data.paymentTerm'
+  pk: 22
+  fields:
+    name: 2% 8day/s; by the end of next month net
+
+
+- model: 'master_data.paymentTerm'
+  pk: 23
+  fields:
+    name: 3% 14day/s; 30 day/s net
+
+- model: 'master_data.paymentTerm'
+  pk: 24
+  fields:
+    name: 3% 20 month/s; 60 month/s net
+
+

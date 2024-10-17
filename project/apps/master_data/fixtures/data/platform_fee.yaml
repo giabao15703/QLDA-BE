@@ -1,0 +1,5 @@
+- model: 'sale_schema.PlatformFee'
+  pk: 1
+  fields:
+    title: "Platform Fee"
+    fee: 1000000

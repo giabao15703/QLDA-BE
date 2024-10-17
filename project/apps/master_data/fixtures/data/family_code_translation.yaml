@@ -1,0 +1,336 @@
+- model: master_data.familyCodeTranslation
+  pk: "1"
+  fields:
+    family_code_id: "1"
+    language_code: "en"
+    name: "Electronic and household appliance"
+- model: master_data.familyCodeTranslation
+  pk: "2"
+  fields:
+    family_code_id: "1"
+    language_code: "vi"
+    name: "Thiết bị điện tử và đồ gia dụng"
+- model: master_data.familyCodeTranslation
+  pk: "3"
+  fields:
+    family_code_id: "2"
+    language_code: "en"
+    name: "Apparel, textile and accessory"
+- model: master_data.familyCodeTranslation
+  pk: "4"
+  fields:
+    family_code_id: "2"
+    language_code: "vi"
+    name: "Trang phục, dệt may và phụ kiện"
+- model: master_data.familyCodeTranslation
+  pk: "5"
+  fields:
+    family_code_id: "3"
+    language_code: "en"
+    name: "Gift, sport and toy"
+- model: master_data.familyCodeTranslation
+  pk: "6"
+  fields:
+    family_code_id: "3"
+    language_code: "vi"
+    name: "Quà tặng, thể thao và đồ chơi"
+- model: master_data.familyCodeTranslation
+  pk: "7"
+  fields:
+    family_code_id: "4"
+    language_code: "en"
+    name: "Bag, shoe and accessory"
+- model: master_data.familyCodeTranslation
+  pk: "8"
+  fields:
+    family_code_id: "4"
+    language_code: "vi"
+    name: "Túi xách, giầy dép và phụ kiện"
+- model: master_data.familyCodeTranslation
+  pk: "9"
+  fields:
+    family_code_id: "5"
+    language_code: "en"
+    name: "Construction and furniture"
+- model: master_data.familyCodeTranslation
+  pk: "10"
+  fields:
+    family_code_id: "5"
+    language_code: "vi"
+    name: "Xây dựng và nội thất"
+- model: master_data.familyCodeTranslation
+  pk: "11"
+  fields:
+    family_code_id: "6"
+    language_code: "en"
+    name: "Vehicle and accessory"
+- model: master_data.familyCodeTranslation
+  pk: "12"
+  fields:
+    family_code_id: "6"
+    language_code: "vi"
+    name: "Xe và phụ kiện"
+- model: master_data.familyCodeTranslation
+  pk: "13"
+  fields:
+    family_code_id: "7"
+    language_code: "en"
+    name: "Health and beauty"
+- model: master_data.familyCodeTranslation
+  pk: "14"
+  fields:
+    family_code_id: "7"
+    language_code: "vi"
+    name: "Sức khỏe và làm đẹp"
+- model: master_data.familyCodeTranslation
+  pk: "15"
+  fields:
+    family_code_id: "8"
+    language_code: "en"
+    name: "Computer and software"
+- model: master_data.familyCodeTranslation
+  pk: "16"
+  fields:
+    family_code_id: "8"
+    language_code: "vi"
+    name: "Máy tính và phần mềm"
+- model: master_data.familyCodeTranslation
+  pk: "17"
+  fields:
+    family_code_id: "9"
+    language_code: "en"
+    name: "Building material and product"
+- model: master_data.familyCodeTranslation
+  pk: "18"
+  fields:
+    family_code_id: "9"
+    language_code: "vi"
+    name: "Sản phẩm và vật liệu xây dựng"
+- model: master_data.familyCodeTranslation
+  pk: "19"
+  fields:
+    family_code_id: "10"
+    language_code: "en"
+    name: "Medical device and supply"
+- model: master_data.familyCodeTranslation
+  pk: "20"
+  fields:
+    family_code_id: "10"
+    language_code: "vi"
+    name: "Thiết bị và vật tư y tế"
+- model: master_data.familyCodeTranslation
+  pk: "21"
+  fields:
+    family_code_id: "11"
+    language_code: "en"
+    name: "Specialized service"
+- model: master_data.familyCodeTranslation
+  pk: "22"
+  fields:
+    family_code_id: "11"
+    language_code: "vi"
+    name: "Dịch vụ chuyên ngành"
+- model: master_data.familyCodeTranslation
+  pk: "23"
+  fields:
+    family_code_id: "12"
+    language_code: "en"
+    name: "Machine and accessory"
+- model: master_data.familyCodeTranslation
+  pk: "24"
+  fields:
+    family_code_id: "12"
+    language_code: "vi"
+    name: "Máy móc và phụ tùng"
+- model: master_data.familyCodeTranslation
+  pk: "25"
+  fields:
+    family_code_id: "13"
+    language_code: "en"
+    name: "Communication and presentation technology"
+- model: master_data.familyCodeTranslation
+  pk: "26"
+  fields:
+    family_code_id: "13"
+    language_code: "vi"
+    name: "Công nghệ truyền thông và trình chiếu"
+- model: master_data.familyCodeTranslation
+  pk: "27"
+  fields:
+    family_code_id: "14"
+    language_code: "en"
+    name: "Labor protection and fire prevention"
+- model: master_data.familyCodeTranslation
+  pk: "28"
+  fields:
+    family_code_id: "14"
+    language_code: "vi"
+    name: "Bảo hộ lao động và phòng cháy chữa cháy"
+- model: master_data.familyCodeTranslation
+  pk: "29"
+  fields:
+    family_code_id: "15"
+    language_code: "en"
+    name: "Tool and workshop equipment"
+- model: master_data.familyCodeTranslation
+  pk: "30"
+  fields:
+    family_code_id: "15"
+    language_code: "vi"
+    name: "Công cụ và thiết bị nhà xưởng"
+- model: master_data.familyCodeTranslation
+  pk: "31"
+  fields:
+    family_code_id: "16"
+    language_code: "en"
+    name: "Other technology"
+- model: master_data.familyCodeTranslation
+  pk: "32"
+  fields:
+    family_code_id: "16"
+    language_code: "vi"
+    name: "Công nghệ khác"
+- model: master_data.familyCodeTranslation
+  pk: "33"
+  fields:
+    family_code_id: "17"
+    language_code: "en"
+    name: "Piping technology and environmental engineering"
+- model: master_data.familyCodeTranslation
+  pk: "34"
+  fields:
+    family_code_id: "17"
+    language_code: "vi"
+    name: "Công nghệ đường ống và kỹ thuật môi trường"
+- model: master_data.familyCodeTranslation
+  pk: "35"
+  fields:
+    family_code_id: "18"
+    language_code: "en"
+    name: "Chemical and fluid technology"
+- model: master_data.familyCodeTranslation
+  pk: "36"
+  fields:
+    family_code_id: "18"
+    language_code: "vi"
+    name: "Hóa chất và công nghệ chất lỏng"
+- model: master_data.familyCodeTranslation
+  pk: "37"
+  fields:
+    family_code_id: "19"
+    language_code: "en"
+    name: "Electrical and electronic engineering"
+- model: master_data.familyCodeTranslation
+  pk: "38"
+  fields:
+    family_code_id: "19"
+    language_code: "vi"
+    name: "Kỹ thuật điện và điện tử"
+- model: master_data.familyCodeTranslation
+  pk: "39"
+  fields:
+    family_code_id: "20"
+    language_code: "en"
+    name: "Drive and automation engineering"
+- model: master_data.familyCodeTranslation
+  pk: "40"
+  fields:
+    family_code_id: "20"
+    language_code: "vi"
+    name: "Kỹ thuật truyền động và tự động hóa"
+- model: master_data.familyCodeTranslation
+  pk: "41"
+  fields:
+    family_code_id: "21"
+    language_code: "en"
+    name: "Industrial handling and assembly technique"
+- model: master_data.familyCodeTranslation
+  pk: "42"
+  fields:
+    family_code_id: "21"
+    language_code: "vi"
+    name: "Kỹ thuật xử lý và lắp ráp công nghiệp"
+- model: master_data.familyCodeTranslation
+  pk: "43"
+  fields:
+    family_code_id: "22"
+    language_code: "en"
+    name: "Metallurgy, rubber and plastic"
+- model: master_data.familyCodeTranslation
+  pk: "44"
+  fields:
+    family_code_id: "22"
+    language_code: "vi"
+    name: "Luyện kim, cao su và nhựa"
+- model: master_data.familyCodeTranslation
+  pk: "45"
+  fields:
+    family_code_id: "23"
+    language_code: "en"
+    name: "Machining"
+- model: master_data.familyCodeTranslation
+  pk: "46"
+  fields:
+    family_code_id: "23"
+    language_code: "vi"
+    name: "Gia công chế biến"
+- model: master_data.familyCodeTranslation
+  pk: "47"
+  fields:
+    family_code_id: "24"
+    language_code: "en"
+    name: "Material and semi-finished product"
+- model: master_data.familyCodeTranslation
+  pk: "48"
+  fields:
+    family_code_id: "24"
+    language_code: "vi"
+    name: "Nguyên liệu và bán thành phẩm"
+- model: master_data.familyCodeTranslation
+  pk: "49"
+  fields:
+    family_code_id: "25"
+    language_code: "en"
+    name: "Agriculture and food"
+- model: master_data.familyCodeTranslation
+  pk: "50"
+  fields:
+    family_code_id: "25"
+    language_code: "vi"
+    name: "Nông nghiệp và thực phẩm"
+- model: master_data.familyCodeTranslation
+  pk: "51"
+  fields:
+    family_code_id: "26"
+    language_code: "en"
+    name: "Office supplies and company equipment"
+- model: master_data.familyCodeTranslation
+  pk: "52"
+  fields:
+    family_code_id: "26"
+    language_code: "vi"
+    name: "Văn phòng phẩm và thiết bị công ty"
+- model: master_data.familyCodeTranslation
+  pk: "53"
+  fields:
+    family_code_id: "27"
+    language_code: "en"
+    name: "Machine design and construction"
+- model: master_data.familyCodeTranslation
+  pk: "54"
+  fields:
+    family_code_id: "27"
+    language_code: "vi"
+    name: "Thiết kế và thi công máy"
+- model: master_data.familyCodeTranslation
+  pk: "55"
+  fields:
+    family_code_id: "28"
+    language_code: "en"
+    name: "Auxiliary and operating material"
+- model: master_data.familyCodeTranslation
+  pk: "56"
+  fields:
+    family_code_id: "28"
+    language_code: "vi"
+    name: "Vật liệu phụ trợ và vận hành"

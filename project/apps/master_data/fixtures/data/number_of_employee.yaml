@@ -1,0 +1,20 @@
+- model: 'master_data.numberofEmployee'
+  pk: 1
+  fields:
+    name: 1-10
+- model: 'master_data.numberofEmployee'
+  pk: 2
+  fields:
+    name: 11-50
+- model: 'master_data.numberofEmployee'
+  pk: 3
+  fields:
+    name: 51-200
+- model: 'master_data.numberofEmployee'
+  pk: 4
+  fields:
+    name: 201-500
+- model: 'master_data.numberofEmployee'
+  pk: 5
+  fields:
+    name: "> 500"

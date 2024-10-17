@@ -1,0 +1,486 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE HTML>
+<html lang="vi">
+
+<head>
+    <title></title>
+    <meta http-equiv=Content-Type content="text/html; charset=utf-8" />
+    <meta charset="UTF-8" />
+    <style>
+        @font-face {
+            font-family: font;
+            src: ("\static\times.ttf");
+        }
+        @font-face {
+            font-family: Roboto;
+            src: "\static\Roboto-Regular.ttf";
+        }
+
+        body {
+            font-family: Roboto;
+        }
+
+        .font_face {
+            font-family: Roboto;
+        }
+
+        .fs-8 {
+            font-size: 8pt;
+            margin-bottom: 0in;
+            text-align: left;
+            margin-left: 5px;
+        }
+
+        .w-100 {
+            width: 100% !important;
+        }
+
+        .mt-0 {
+            margin-top: 0 !important;
+        }
+
+        .mt-5px {
+            margin-top: 5px !important;
+        }
+
+
+
+        .fs-9 {
+            font-size: 9pt;
+            text-align: left;
+        }
+
+        .fs-10 {
+            font-size: 10pt;
+            margin-bottom: 0in;
+            text-align: left;
+            margin-left: 5px;
+        }
+
+        td {
+            border: 1px solid #000000;
+
+        }
+
+        tr.item-table-content td {
+            font-size: 14px;
+        }
+
+        tr.tr-fs-14 td {
+            font-size: 14px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        table.info-table {
+            padding: 1px;
+            border-spacing: 0;
+            border-collapse: separate;
+        }
+
+
+        table.item-table,
+        table.signature-table {
+            padding: 7px;
+            border-spacing: 0;
+            border-collapse: separate;
+        }
+
+        .bg-dark {
+            background-color: #bfbfbf;
+        }
+
+        .header {
+            width: 100%;
+        }
+
+        .header img {
+            height: 36px;
+            width: 120px;
+        }
+
+
+        table td {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        table {
+            table-layout: fixed;
+        }
+        
+        .inner-table-border {
+            vertical-align: top;
+            border: 0;
+        }
+
+        hr.line {
+            border: 0.5pt solid black;
+            width: 50%;
+            float: left;
+        }
+
+        .text-render {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div title="Header">
+        <p style="margin-top: 0.46in; margin-bottom: 0in; line-height: 100%; text-align: right; font-size: x-large;">
+            <i>Purchase Order</i>
+        </p>
+    </div>
+
+    <br/>
+    <br/>
+
+    <center>
+        <table class="info-table">
+            <tr>
+                <td style="vertical-align: top;">
+                    <p class="fs-10 mt-5px">Buyer code: <span class="text-render">{{buyer_code}}</span></p>
+                    <p class="fs-10 mt-1px text-render">{{buyer_company_name}}</p>
+                    <p class="fs-10 mt-1px text-render">{{buyer_company_address}}</p>
+                </td>
+                <td style="vertical-align: top;">
+                    <table style="border: 1;border-spacing: 0;">
+                        <tr>
+                            <td class="inner-table-border" >
+                                <p class="fs-8 mt-5px">Our Purchase Contract Number</p>
+                                <p class="fs-10 mt-1px text-render">{{item_code}}</p>
+                            </td>
+                            <td class="inner-table-border">
+                                <p class="fs-8 mt-5px">Date</p>
+                                <p class="fs-10 mt-1px text-render">{{date}}</p>
+                            </td>
+                            <td class="inner-table-border">
+                                <p class="fs-8 mt-5px">Page</p>
+                                <p class="fs-10 mt-1px">1 of 4</p>
+                            </td>
+                        </tr>                        
+                        <tr>
+                            <td class="inner-table-border" >
+                                <p class="fs-8 mt-1px">Our reference</p>
+                            </td>
+                            <td colspan=2 class="inner-table-border">
+                                <p class="fs-8 mt-1px">Contract</p>
+                                <p class="fs-10 mt-1px text-render">{{buyer_name}}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="inner-table-border" >
+                                <p class="fs-8 mt-1px">Telephone</p>
+                                <p class="fs-10 mt-1px text-render">{{buyer_telephone}}</p>
+                            </td>
+                            <td class="inner-table-border">
+                                <p class="fs-8 mt-1px">Alternative/mobile phone</p>
+                                <p class="fs-10 mt-1px text-render">{{buyer_mobile}}</p>
+                            </td>
+                            <td class="inner-table-border">
+                                <p class="fs-8"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="inner-table-border" >
+                                <p class="fs-8 mt-1px">Telefax</p>
+                                <br/>
+                            </td>
+                            <td class="inner-table-border">
+                                <p class="fs-8 mt-1px">In post code</p>
+                                <br/>
+                            </td>
+                            <td class="inner-table-border">
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan=3 class="inner-table-border" >
+                                <p class="fs-8 mt-1px">Email address</p>
+                                <p class="fs-10 mt-1px text-render">{{buyer_email}}</p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">
+                    <p class="fs-10 mt-5px">Supplier code: <span class="text-render">{{supplier_code}}</span></p>
+                    <p class="fs-10 mt-1px text-render">{{supplier_company_name}}</p>
+                    <p class="fs-10 mt-1px text-render">{{supplier_company_address}}</p>
+                </td>
+                <td style="vertical-align: top;">
+                    <table>
+                        <tr>
+                            <td class="inner-table-border">
+                                <p class="fs-8 mt-5px">Our Number</p>
+                            </td>
+                            <td class="inner-table-border">
+                                <p class="fs-8 mt-5px">Date</p>
+                            </td>
+                            <td class="inner-table-border">
+                                <p class="fs-8 mt-5px">Your reference</p>
+                            </td>
+                        </tr>                        
+                        <tr>
+                            <td class="inner-table-border">
+                                <p class="fs-8 mt-1px">Contract</p>
+                                <p class="fs-10 mt-1px text-render">{{supplier_name}}</p>
+                            </td>
+                            <td colspan=2 class="inner-table-border">
+                                <p class="fs-8 mt-1px">E-mail address</p>
+                                <p class="fs-10 mt-1px text-render">{{supplier_email}}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="inner-table-border">
+                                <p class="fs-8 mt-1px">Telephone</p>
+                                <p class="fs-10 mt-1px text-render">{{supplier_telephone}}</p>
+                            </td>
+                            <td class="inner-table-border">
+                                <p class="fs-8 mt-1px">Alternative/mobile phone</p>
+                                <p class="fs-10 mt-1px text-render">{{supplier_mobile}}</p>
+                            </td>
+                            <td class="inner-table-border">
+                                <p class="fs-8"></p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </center>
+    <p class="fs-9">This is a Purchase Order (’PO’) to be entered into by and between {{buyer_company_name}} (‘Buyer’) and/or its designated subsidiary or affiliate company (collectively, the ’Buyer’) and a supplier (the ’Supplier ’) in respect of supply of certain goods and/or services (the ’PO’).</p>
+    <p class="fs-9">1.	This PO provides for the basic matters regarding the purchase and supply of the goods and/or services and shall govern any and all individual purchase transactions between the parties, unless agreed otherwise. The conditions set forth herein and the Buyer s terms and conditions for the purchase of Goods & Services (as listed below) will apply to the individual purchase transaction between the Buyer and the Supplier.</p>
+    <p class="fs-9">2.	The agreed terms and conditions of the parties required for the delivery of the goods and/or services concerned such as purchase price, delivery date shall be specified as listed below.</p>
+    <p class="fs-9">3.	This PO itself does not give rise to a purchase commitment on the part of Buyer. Such obligations of the Parties exist only where a Purchase Order is sent to Supplier.</p>
+    <p class="fs-9">4.	The effective term of this Agreement shall follow Price Validity specified in item description (the  ’Effective Term’). Provided, however, that if, at the time of expiration or termination of this Agreement, there is any outstanding obligation of the Supplier, this Agreement shall be deemed to be effective until the date when such outstanding obligation has been fully performed.</p>
+    <p class="fs-9">5.	Amendments to the PO shall only be binding on Buyer if agreed by Buyer in writing in advance. Save that Buyer can at any time assign its rights or obligations under the Agreement to any affiliate, neither Party shall assign or otherwise transfer the same or any of its rights and obligations thereunder whether in whole or in part without the prior written consent of the other Party.</p>
+    <p class="fs-9">6.	This PO shall become effective upon signatures and/or company stamps by both Buyer and Supplier including dates of signatures. No modification shall be valid and binding upon both Buyer and Supplier unless made in written form upon signatures and/or company stamps by both Buyer and Supplier.</p>
+    <p></p>
+    <p class="fs-9">Payment Terms:</p>
+    <p class="fs-9">7.	Payment will be made the number of days thereafter as indicated in this PO.</p>
+    <p class="fs-9">8.	Payment shall be remitted only after receipt of a properly prepared invoice and all supporting documents (goods receipt note, service receipt note, etc.) as follows: the invoice and documentation shall be received by Buyer according to the above days before the respective payment days. Any delay will result in payment on the next payment cycle.</p>
+    <p class="fs-9">9.  All prices shown in this PO are exclusive of VAT (if applicable).</p>
+    <p class="fs-9">10. Upon receipt of the Purchase Order directly from the user, Supplier shall deliver the goods/ services with the required quantity, and shall adhere to the delivery date as specified in the Purchase Order.</p>
+    <p class="fs-9">11.	Withholding taxes, where applicable, will be deducted from the invoice amount by Buyer.</p>
+    <p class="fs-9">12.	The supply of services or goods will constitute Supplier’s acknowledgement and acceptance of Buyer’s GTC. This PO, including its subsequent Release Orders, the GTC and any clauses or signed documents referenced in this PC, contains the complete and final agreement between Buyer and Supplier, and no other agreement modifying the GTC is binding upon Buyer unless made in writing and signed by the Buyer’s authorized representative.</p>
+    <p class="fs-9">13.	Apart from the terms and conditions stated in this PO, the following terms & conditions shall respectively apply to this PO according to the nature of the transaction contemplated in this PO:</p>
+    <p class="fs-9">(i) General Purchase Terms and Conditions (’GPC’);</p>
+    <p class="fs-9">(ii)    Special Purchase Conditions for the Supply of Goods (’SPC Goods’);</p>
+    <p class="fs-9">(iii) Special Purchase Conditions for the Supply of Services (’SPC Services’)</p>
+    <p class="fs-9">(Hereinafter ‘Buyer’s Terms & Conditions’)</p>
+    <p class="fs-9">The above Buyer’s Terms & Conditions are available at the link www.nextpro.com.vn/termscondition and shall be integral parts of the PO. In case of discrepancy between provisions of the PO and Buyer’s Terms & Conditions, the provisions of the PO shall prevail.</p>
+    <p class="fs-9">The Supplier hereby confirms that it has accessed to, read and agreed with these Buyer’s Terms & Conditions available at the above link.</p>
+    <p class="fs-9">Applicable to <span class="text-render">{{buyer_company_name}}</span></p>
+    <p class="fs-9">-	Payment term: <span class="text-render">{{payment_term}}</span> after receiving financial invoices, supporting documents (buy off form, goods receipt note)</p>
+    <center style="margin-top: 20px;">
+        <table class="item-table">
+            <tr>
+                <td class="bg-dark">
+                    <p class="fs-9"><b>Item</b></p>
+                </td>
+                <td style="width: 35%;" class="bg-dark">
+                    <p class="fs-9"><b>Code no. / Description / Dimension /Deadlines </b></p>
+                </td>
+                <td style="width: 15%;" class="bg-dark">
+                    <p class="fs-9"><b>Rate/Quantity</b></p>
+                </td>
+                <td class="bg-dark">
+                    <p class="fs-9"><b>Price/Unit</b></p>
+                </td>
+            </tr>
+            {% block list_item %}
+
+            {% for item in item_list %}
+            <tr class="item-table-content">
+                <td>
+                    <p>{{ forloop.counter}}</p>
+                </td>
+                <td style="width: 35%;">
+                    <p style="text-align: left">{{item.name}}</p>
+                </td>
+                <td style="width: 15%;">
+                    <p>{{item.quantity}}</p>
+                </td>
+                <td>
+                    <p>{{item.unit_price}} VND</p>
+                </td>
+            </tr>
+            {% endfor %}
+            {% endblock %}
+        </table>
+    </center>
+    <p class="fs-10 text-render">{{buyer_company_name}}</p>
+    <br/>
+    <table class="inner-table-border">
+        <tr>
+            <td class="inner-table-border">
+                <p class="fs-10 mt-1px">Head of Procurement</p>
+            </td>
+            <td style="width: 35%;" class="inner-table-border">
+                <p class="fs-10 mt-1px">Buyer</p>
+                <p class="text-render">{{buyer_name}}</p>
+            </td>
+        </tr>
+    </table>
+    <br/>
+    <div> 
+        <pdf:nextpage /> 
+     </div> 
+     <div title="Header">
+        <p style="margin-top: 0.46in; margin-bottom: 0in; line-height: 100%; text-align: right; font-size: x-large;">
+            <i>Purchase Order</i>
+        </p>
+    </div>
+    <br/>
+    <center>
+        <table class="info-table">
+            <tr>
+                <td style="vertical-align: top; border: 0;">
+                   
+                </td>
+                <td style="text-align: left; border: 0; font-size: larger;">
+                    Purchase order confirmation
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top; border: 0">
+                    <p class="fs-10 mt-5px text-render">Buyer code: {{buyer_code}}</p>
+                    <p class="fs-10 mt-5px text-render">{{buyer_company_name}}</p>
+                    <p class="fs-10 mt-5px text-render">{{buyer_company_address}}</p>
+                    <hr/>
+                </td>
+                <td rowspan="2" style="vertical-align: top; border-left: 2px solid black;">
+                    <table style="border: 1;border-spacing: 0;">
+                        <tr>
+                            <td class="inner-table-border">
+                                <p class="fs-8 mt-5px">Your Number</p>
+                                <p class="fs-10 mt-1px text-render">{{item_code}}</p>
+                            </td>
+                            <td class="inner-table-border">
+                                <p class="fs-8 mt-5px">Date</p>
+                                <p class="fs-10 mt-1px text-render">{{date}}</p>
+                            </td>
+                            <td class="inner-table-border">
+                                <p class="fs-8 mt-5px">Page</p>
+                                <p class="fs-10 mt-1px">1 of 1</p>
+                            </td>
+                        </tr>                        
+                        <tr>
+                            <td class="inner-table-border">
+                                <p class="fs-8 mt-1px">Your reference</p>
+                            </td>
+                            <td colspan=2 class="inner-table-border">
+                                <p class="fs-8 mt-1px">Contract</p>
+                                <p class="fs-10 mt-1px text-render">{{buyer_name}}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="inner-table-border">
+                                <p class="fs-8 mt-1px">Telephone</p>
+                                <p class="fs-10 mt-1px text-render">{{buyer_telephone}}</p>
+                            </td>
+                            <td class="inner-table-border">
+                                <p class="fs-8 mt-1px">Alternative/mobile phone</p>
+                                <p class="fs-10 mt-1px text-render">{{buyer_mobile}}</p>
+                            </td>
+                            <td class="inner-table-border">
+                                <p class="fs-8"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="inner-table-border">
+                                <p class="fs-8 mt-1px">Telefax</p>
+                                <br/>
+                            </td>
+                            <td class="inner-table-border">
+                                <p class="fs-8 mt-1px">In post code</p>
+                                <br/>
+                            </td>
+                            <td class="inner-table-border">
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan=3 class="inner-table-border">
+                                <p class="fs-8 mt-1px">Email address</p>
+                                <p class="fs-10 mt-1px text-render">{{buyer_email}}</p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2" style="vertical-align: top; border: 0;">
+                    <p class="fs-10 mt-5px">Supplier code: <span  class="text-render">{{supplier_code}}</span></p>
+                    <p class="fs-10 mt-1px">Supplier name: <span  class="text-render">{{supplier_company_name}}</span></p>
+                    <p class="fs-10 mt-1px">Address: <span  class="text-render">{{supplier_company_address}}</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top; border-left: 2px solid black; border-right: 2px solid black; border-top: 2px solid black;">
+                    <table>
+                        <tr>
+                            <td class="inner-table-border">
+                                <p class="fs-8 mt-5px">Our Purchase Contract Number</p>
+                                <br/>
+                            </td>
+                            <td class="inner-table-border">
+                                <p class="fs-8 mt-5px">Date</p>
+                                <br/>
+                            </td>
+                            <td class="inner-table-border">
+                                <p class="fs-8 mt-5px">Our reference</p>
+                                <br/>
+                            </td>
+                        </tr>                        
+                        <tr>
+                            <td class="inner-table-border">
+                                <p class="fs-8 mt-1px">Contract</p>
+                                <br/>
+                            </td>
+                            <td colspan=2 class="inner-table-border">
+                                <p class="fs-8 mt-1px">E-mail address</p>
+                                <br/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="inner-table-border">
+                                <p class="fs-8 mt-1px">Telephone</p>
+                                <br/>
+                            </td>
+                            <td class="inner-table-border">
+                                <p class="fs-8 mt-1px">Alternative/mobile phone</p>
+                                <br/>
+                            </td>
+                            <td class="inner-table-border">
+                                <p class="fs-8 mt-1px"></p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="vertical-align: top; border-top: 2px solid black;">
+                   <p class="fs-8 mt-5px">Supplier hereby confirms the acceptance of this PO as per terms and conditions stated in this PO and the Buyer’s Terms & Conditions available at the link: <a href="http://www.nextpro.com.vn/termscondition">www.nextpro.com.vn/termscondition</a></p>
+                   <p class="fs-8">The Supplier hereby confirms that it has accessed to, read and agreed with these Buyer’s Terms & Conditions stored in the above link.</p>
+                </td>
+            </tr>
+        </table>
+    </center>
+    <br/>
+    <p class="fs-9">We supply and you purchase according the purchase contract Number: <span class="text-render">{{item_code}}</span>. dated <span class="text-render">{{date}}</span></p>
+    <p class="fs-9">the deliveries / services detailed under item(s) 1.00 - 5.00.</p>
+    <p class="fs-9">The prices, specifications, terms and conditions agreed with you in this purchase contract shall apply to all deliveries / services provided within the periods stated therein.</p>
+    <hr class="line"/>
+    <p class="fs-10" style="clear: left;">Place, Date Signature of supplier</p>
+
+</body>
+
+</html>

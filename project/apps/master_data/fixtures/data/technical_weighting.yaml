@@ -1,0 +1,12 @@
+- model: 'master_data.TechnicalWeighting'
+  pk: 1
+  fields:
+    name: Lowest price award
+- model: 'master_data.TechnicalWeighting'
+  pk: 2
+  fields:
+    name: Technical & Commercial Award
+- model: 'master_data.TechnicalWeighting'
+  pk: 3
+  fields:
+    name: Technical & Commercial Award - Bonus/Malus

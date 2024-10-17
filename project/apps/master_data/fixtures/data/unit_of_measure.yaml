@@ -1,0 +1,329 @@
+- model: 'master_data.UnitofMeasure'
+  pk: 1
+  fields:
+    name: piece
+    item_code: piece
+
+- model: 'master_data.UnitofMeasure'
+  pk: 2
+  fields:
+    item_code: each
+    name: each
+- model: 'master_data.UnitofMeasure'
+  pk: 3
+  fields:
+    item_code: bag
+    name: bag
+
+- model: 'master_data.UnitofMeasure'
+  pk: 4
+  fields:
+    item_code: bottle
+    name: bottle
+
+- model: 'master_data.UnitofMeasure'
+  pk: 5
+  fields:
+    item_code: canister
+    name: canister
+
+- model: 'master_data.UnitofMeasure'
+  pk: 6
+  fields:
+    item_code: caratage
+    name: caratage
+
+- model: 'master_data.UnitofMeasure'
+  pk: 7
+  fields:
+    item_code: carton
+    name: carton
+
+- model: 'master_data.UnitofMeasure'
+  pk: 8
+  fields:
+    item_code: case
+    name: case
+    
+- model: 'master_data.UnitofMeasure'
+  pk: 9
+  fields:
+    item_code: centimeter
+    name: centimeter
+- model: 'master_data.UnitofMeasure'
+  pk: 10
+  fields:
+    item_code: coil
+    name: coil
+- model: 'master_data.UnitofMeasure'
+  pk: 11
+  fields:
+    item_code: crate
+    name: crate
+- model: 'master_data.UnitofMeasure'
+  pk: 12
+  fields:
+    item_code: cubic centimeter
+    name: cubic centimeter
+- model: 'master_data.UnitofMeasure'
+  pk: 13
+  fields:
+    item_code: cubic decimeter
+    name: cubic decimeter
+- model: 'master_data.UnitofMeasure'
+  pk: 14
+  fields:
+    item_code: cubic foot
+    name: cubic foot
+- model: 'master_data.UnitofMeasure'
+  pk: 15
+  fields:
+    item_code: cubic meter
+    name: cubic meter
+- model: 'master_data.UnitofMeasure'
+  pk: 16
+  fields:
+    item_code: day
+    name: day
+- model: 'master_data.UnitofMeasure'
+  pk: 17
+  fields:
+    item_code: decimeter
+    name: decimeter
+- model: 'master_data.UnitofMeasure'
+  pk: 18
+  fields:
+    item_code: dozen durm
+    name: dozen durm
+- model: 'master_data.UnitofMeasure'
+  pk: 19
+  fields:
+    item_code: each feet
+    name: each feet
+
+- model: 'master_data.UnitofMeasure'
+  pk: 20
+  fields:
+    item_code: Gallon
+    name: Gallon
+
+- model: 'master_data.UnitofMeasure'
+  pk: 21
+  fields:
+    item_code: Gram
+    name: Gram
+- model: 'master_data.UnitofMeasure'
+  pk: 22
+  fields:
+    item_code: Hectoliter
+    name: Hectoliter
+- model: 'master_data.UnitofMeasure'
+  pk: 23
+  fields:
+    item_code: Hour
+    name: Hour
+- model: 'master_data.UnitofMeasure'
+  pk: 24
+  fields:
+    item_code: inch
+    name: inch
+- model: 'master_data.UnitofMeasure'
+  pk: 25
+  fields:
+    item_code: kilogram
+    name: kilogram
+- model: 'master_data.UnitofMeasure'
+  pk: 26
+  fields:
+    item_code: kg/m3
+    name: kiograms per cubic meter
+- model: 'master_data.UnitofMeasure'
+  pk: 27
+  fields:
+    item_code: kilometer
+    name: kilometer
+- model: 'master_data.UnitofMeasure'
+  pk: 28
+  fields:
+    item_code: kit
+    name: kit
+- model: 'master_data.UnitofMeasure'
+  pk: 29
+  fields:
+    item_code: kWh
+    name: kWh
+- model: 'master_data.UnitofMeasure'
+  pk: 30
+  fields:
+    item_code: liter
+    name: liter
+- model: 'master_data.UnitofMeasure'
+  pk: 31
+  fields:
+    item_code: megawatt hour
+    name: megawatt hour
+- model: 'master_data.UnitofMeasure'
+  pk: 32
+  fields:
+    item_code: meter
+    name: meter
+- model: 'master_data.UnitofMeasure'
+  pk: 33
+  fields:
+    item_code: micrometer
+    name: micrometer
+- model: 'master_data.UnitofMeasure'
+  pk: 34
+  fields:
+    item_code: mile
+    name: mile
+- model: 'master_data.UnitofMeasure'
+  pk: 35
+  fields:
+    item_code: miligram
+    name: miligram
+- model: 'master_data.UnitofMeasure'
+  pk: 36
+  fields:
+    item_code: mg/l
+    name: miligrams per liter
+- model: 'master_data.UnitofMeasure'
+  pk: 37
+  fields:
+    item_code: mililiter
+    name: mililiter
+- model: 'master_data.UnitofMeasure'
+  pk: 38
+  fields:
+    item_code: milimeter
+    name: milimeter
+- model: 'master_data.UnitofMeasure'
+  pk: 39
+  fields:
+    item_code: milisecond
+    name: milisecond
+- model: 'master_data.UnitofMeasure'
+  pk: 40
+  fields:
+    item_code: Minute
+    name: Minute
+- model: 'master_data.UnitofMeasure'
+  pk: 41
+  fields:
+    item_code: month
+    name: month
+- model: 'master_data.UnitofMeasure'
+  pk: 42
+  fields:
+    item_code: nanometer
+    name: nanometer
+- model: 'master_data.UnitofMeasure'
+  pk: 43
+  fields:
+    item_code: nanosecond
+    name: nanosecond
+- model: 'master_data.UnitofMeasure'
+  pk: 44
+  fields:
+    item_code: other unit
+    name: other unit
+- model: 'master_data.UnitofMeasure'
+  pk: 45
+  fields:
+    item_code: ounce
+    name: ounce
+- model: 'master_data.UnitofMeasure'
+  pk: 46
+  fields:
+    item_code: package
+    name: package
+- model: 'master_data.UnitofMeasure'
+  pk: 47
+  fields:
+    item_code: pair
+    name: pair
+- model: 'master_data.UnitofMeasure'
+  pk: 48
+  fields:
+    item_code: pallete
+    name: pallete
+- model: 'master_data.UnitofMeasure'
+  pk: 49
+  fields:
+    item_code: panel
+    name: panel
+- model: 'master_data.UnitofMeasure'
+  pk: 50
+  fields:
+    item_code: pascal second
+    name: pascal second
+- model: 'master_data.UnitofMeasure'
+  pk: 51
+  fields:
+    item_code: picosecond
+    name: picosecond
+- model: 'master_data.UnitofMeasure'
+  pk: 52
+  fields:
+    item_code: point
+    name: point
+- model: 'master_data.UnitofMeasure'
+  pk: 53
+  fields:
+    item_code: pund
+    name: pund
+- model: 'master_data.UnitofMeasure'
+  pk: 54
+  fields:
+    item_code: seconds
+    name: seconds
+- model: 'master_data.UnitofMeasure'
+  pk: 55
+  fields:
+    item_code: service unit
+    name: service unit
+- model: 'master_data.UnitofMeasure'
+  pk: 56
+  fields:
+    item_code: cm2
+    name: square centimeter
+- model: 'master_data.UnitofMeasure'
+  pk: 57
+  fields:
+    item_code: square meter
+    name: square meter
+- model: 'master_data.UnitofMeasure'
+  pk: 58
+  fields:
+    item_code: square milimeter
+    name: square milimeter
+- model: 'master_data.UnitofMeasure'
+  pk: 59
+  fields:
+    item_code: thousand
+    name: thousand
+- model: 'master_data.UnitofMeasure'
+  pk: 60
+  fields:
+    item_code: ton
+    name: ton
+- model: 'master_data.UnitofMeasure'
+  pk: 61
+  fields:
+    item_code: unit
+    name: unit
+- model: 'master_data.UnitofMeasure'
+  pk: 62
+  fields:
+    item_code: week
+    name: week
+- model: 'master_data.UnitofMeasure'
+  pk: 63
+  fields:
+    item_code: FCL
+    name: FCL
+- model: 'master_data.UnitofMeasure'
+  pk: 64
+  fields:
+    item_code: LCL
+    name: LCL

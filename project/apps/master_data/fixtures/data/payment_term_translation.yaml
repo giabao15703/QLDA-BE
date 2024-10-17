@@ -1,0 +1,154 @@
+
+- model: 'master_data.paymentTermTranslation'
+  pk: 1
+  fields:
+    name: 14 ngày thực
+    payment_term: 1
+    language_code : vi
+
+- model: 'master_data.paymentTermTranslation'
+  pk: 2
+  fields:
+    name: 30 ngày thực 
+    payment_term: 2
+    language_code : vi
+- model: 'master_data.paymentTermTranslation'
+  pk: 3
+  fields:
+    name: 45 ngày thực 
+    payment_term: 3
+    language_code : vi
+- model: 'master_data.paymentTermTranslation'
+  pk: 4
+  fields:
+    name: 60 ngày thực
+    payment_term: 4
+    language_code : vi
+- model: 'master_data.paymentTermTranslation'
+  pk: 5
+  fields:
+    name: 90 ngày thực 
+    payment_term: 5
+    language_code : vi
+- model: 'master_data.paymentTermTranslation'
+  pk: 6
+  fields:
+    name: 120 ngày thực
+    payment_term: 6
+    language_code : vi
+- model: 'master_data.paymentTermTranslation'
+  pk: 7
+  fields:
+    name: Miễn phí 
+    payment_term: 7
+    language_code : vi
+- model: 'master_data.paymentTermTranslation'
+  pk: 8
+  fields:
+    name: Thanh toán trên hóa đơn thực
+    payment_term: 8
+    language_code : vi
+- model: 'master_data.paymentTermTranslation'
+  pk: 9
+  fields:
+    name: Chấp thuận LC 
+    payment_term: 9
+    language_code : vi
+- model: 'master_data.paymentTermTranslation'
+  pk: 10
+  fields:
+    name: Bảo lãnh tạm ứng
+    payment_term: 10
+    language_code : vi
+- model: 'master_data.paymentTermTranslation'
+  pk: 11
+  fields:
+    name: Hóa đơn đến hạn khi giao hàng 
+    payment_term: 11
+    language_code : vi
+- model: 'master_data.paymentTermTranslation'
+  pk: 12
+  fields:
+    name: Theo thỏa thuận
+    payment_term: 12
+    language_code : vi
+- model: 'master_data.paymentTermTranslation'
+  pk: 13
+  fields:
+    name: Thanh toán khi giao hàng
+    payment_term: 13
+    language_code : vi 
+
+- model: 'master_data.paymentTermTranslation'
+  pk: 14
+  fields:
+    name: Thanh toán trước
+    payment_term: 14
+    language_code : vi
+- model: 'master_data.paymentTermTranslation'
+  pk: 15
+  fields:
+    name: Chứng từ theo L/C được chấp thuận
+    payment_term: 15
+    language_code : vi
+
+
+- model: 'master_data.paymentTermTranslation'
+  pk: 16
+  fields:
+    name: Chứng từ thanh toán
+    payment_term: 16
+    language_code : vi
+
+
+- model: 'master_data.paymentTermTranslation'
+  pk: 17
+  fields:
+    name: Cuối tháng thực tiếp sau  
+    payment_term: 17
+    language_code : vi
+
+- model: 'master_data.paymentTermTranslation'
+  pk: 18
+  fields:
+    name: 2% 10 ngày/giây; 30 ngày/s thực
+    payment_term: 18
+    language_code : vi
+
+- model: 'master_data.paymentTermTranslation'
+  pk: 19
+  fields:
+    name: 2% 14 ngày/giây; 30 ngày/s thực
+    payment_term: 19
+    language_code : vi
+
+- model: 'master_data.paymentTermTranslation'
+  pk: 20
+  fields:
+    name: 2% 10 ngày/giây; 60 ngày/s thực 
+    payment_term: 20
+    language_code : vi
+- model: 'master_data.paymentTermTranslation'
+  pk: 21
+  fields:
+    name: 2% 10ngày/s; 90 ngày/s thực 
+    payment_term: 21
+    language_code : vi
+- model: 'master_data.paymentTermTranslation'
+  pk: 22
+  fields:
+    name: 2% 8 ngày/giây; vào cuối tháng sau thực 
+    payment_term: 22
+    language_code : vi
+- model: 'master_data.paymentTermTranslation'
+  pk: 23
+  fields:
+    name: 3% 14 ngày/giây; 30 ngày/s thực 
+    payment_term: 23
+    language_code : vi
+- model: 'master_data.paymentTermTranslation'
+  pk: 24
+  fields:
+    name: 3% 20 tháng/s; 60 tháng/s thực
+    payment_term: 24
+    language_code : vi

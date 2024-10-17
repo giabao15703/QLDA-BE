@@ -1,0 +1,1068 @@
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "1"
+  fields:
+    industry_cluster_id: "1"
+    language_code: "en"
+    name: "All"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "2"
+  fields:
+    industry_cluster_id: "1"
+    language_code: "vi"
+    name: "Tất cả"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "3"
+  fields:
+    industry_cluster_id: "2"
+    language_code: "en"
+    name: "Agriculture and related activities"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "4"
+  fields:
+    industry_cluster_id: "2"
+    language_code: "vi"
+    name: "Nông nghiệp và hoạt động liên quan"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "5"
+  fields:
+    industry_cluster_id: "3"
+    language_code: "en"
+    name: "Forestry and related activities"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "6"
+  fields:
+    industry_cluster_id: "3"
+    language_code: "vi"
+    name: "Lâm nghiệp và hoạt động liên quan"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "7"
+  fields:
+    industry_cluster_id: "4"
+    language_code: "en"
+    name: "Exploitation and aquaculture"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "8"
+  fields:
+    industry_cluster_id: "4"
+    language_code: "vi"
+    name: "Khai thác, nuôi trồng thủy sản"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "9"
+  fields:
+    industry_cluster_id: "5"
+    language_code: "en"
+    name: "Mining hard coal and lignite"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "10"
+  fields:
+    industry_cluster_id: "5"
+    language_code: "vi"
+    name: "Khai thác than cứng và than non"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "11"
+  fields:
+    industry_cluster_id: "6"
+    language_code: "en"
+    name: "Exploitation of crude oil and natural gas"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "12"
+  fields:
+    industry_cluster_id: "6"
+    language_code: "vi"
+    name: "Khai thác dầu thô và khí đốt tự nhiên"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "13"
+  fields:
+    industry_cluster_id: "7"
+    language_code: "en"
+    name: "Mining metal ores"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "14"
+  fields:
+    industry_cluster_id: "7"
+    language_code: "vi"
+    name: "Khai thác quặng kim loại"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "15"
+  fields:
+    industry_cluster_id: "8"
+    language_code: "en"
+    name: "Other mining"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "16"
+  fields:
+    industry_cluster_id: "8"
+    language_code: "vi"
+    name: "Khai khoáng khác"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "17"
+  fields:
+    industry_cluster_id: "9"
+    language_code: "en"
+    name: "Mining support service activities"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "18"
+  fields:
+    industry_cluster_id: "9"
+    language_code: "vi"
+    name: "Hoạt động dịch vụ hỗ trợ khai khoáng"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "19"
+  fields:
+    industry_cluster_id: "10"
+    language_code: "en"
+    name: "Food production and processing"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "20"
+  fields:
+    industry_cluster_id: "10"
+    language_code: "vi"
+    name: "Sản xuất, chế biến thực phẩm"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "21"
+  fields:
+    industry_cluster_id: "11"
+    language_code: "en"
+    name: "Beverage production"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "22"
+  fields:
+    industry_cluster_id: "11"
+    language_code: "vi"
+    name: "Sản xuất đồ uống"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "23"
+  fields:
+    industry_cluster_id: "12"
+    language_code: "en"
+    name: "Production of tobacco products"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "24"
+  fields:
+    industry_cluster_id: "12"
+    language_code: "vi"
+    name: "Sản xuất sản phẩm thuốc lá"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "25"
+  fields:
+    industry_cluster_id: "13"
+    language_code: "en"
+    name: "Textile"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "26"
+  fields:
+    industry_cluster_id: "13"
+    language_code: "vi"
+    name: "Dệt"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "27"
+  fields:
+    industry_cluster_id: "14"
+    language_code: "en"
+    name: "Production of costumes"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "28"
+  fields:
+    industry_cluster_id: "14"
+    language_code: "vi"
+    name: "Sản xuất trang phục"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "29"
+  fields:
+    industry_cluster_id: "15"
+    language_code: "en"
+    name: "Manufacture of leather and related products"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "30"
+  fields:
+    industry_cluster_id: "15"
+    language_code: "vi"
+    name: "Sản xuất da và các sản phẩm có liên quan"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "31"
+  fields:
+    industry_cluster_id: "16"
+    language_code: "en"
+    name: "Wood processing and production of products from wood, bamboo (except beds, cabinets, tables, chairs); manufacturing products from straw and plaiting materials"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "32"
+  fields:
+    industry_cluster_id: "16"
+    language_code: "vi"
+    name: "Chế biến gỗ và sản xuất sản phẩm từ gỗ, tre, nứa (trừ giường, tủ, bàn, ghế); sản xuất sản phẩm từ rơm, rạ và vật liệu tết bện"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "33"
+  fields:
+    industry_cluster_id: "17"
+    language_code: "en"
+    name: "Production of paper and paper products"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "34"
+  fields:
+    industry_cluster_id: "17"
+    language_code: "vi"
+    name: "Sản xuất giấy và sản phẩm từ giấy"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "35"
+  fields:
+    industry_cluster_id: "18"
+    language_code: "en"
+    name: "Print and copy records of all types"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "36"
+  fields:
+    industry_cluster_id: "18"
+    language_code: "vi"
+    name: "In, sao chép bản ghi các loại"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "37"
+  fields:
+    industry_cluster_id: "19"
+    language_code: "en"
+    name: "Production of coke and refined petroleum products"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "38"
+  fields:
+    industry_cluster_id: "19"
+    language_code: "vi"
+    name: "Sản xuất than cốc, sản phẩm dầu mỏ tinh chế"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "39"
+  fields:
+    industry_cluster_id: "20"
+    language_code: "en"
+    name: "Production of chemicals and chemical products"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "40"
+  fields:
+    industry_cluster_id: "20"
+    language_code: "vi"
+    name: "Sản xuất hoá chất và sản phẩm hoá chất"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "41"
+  fields:
+    industry_cluster_id: "21"
+    language_code: "en"
+    name: "Production of drugs, pharmaceutical chemicals and medicinal materials"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "42"
+  fields:
+    industry_cluster_id: "21"
+    language_code: "vi"
+    name: "Sản xuất thuốc, hoá dược và dược liệu"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "43"
+  fields:
+    industry_cluster_id: "22"
+    language_code: "en"
+    name: "Manufacture of products from rubber and plastic"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "44"
+  fields:
+    industry_cluster_id: "22"
+    language_code: "vi"
+    name: "Sản xuất sản phẩm từ cao su và plastic"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "45"
+  fields:
+    industry_cluster_id: "23"
+    language_code: "en"
+    name: "Manufacture of products from other non-metallic minerals"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "46"
+  fields:
+    industry_cluster_id: "23"
+    language_code: "vi"
+    name: "Sản xuất sản phẩm từ khoáng phi kim loại khác"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "47"
+  fields:
+    industry_cluster_id: "24"
+    language_code: "en"
+    name: "Metal production"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "48"
+  fields:
+    industry_cluster_id: "24"
+    language_code: "vi"
+    name: "Sản xuất kim loại"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "49"
+  fields:
+    industry_cluster_id: "25"
+    language_code: "en"
+    name: "Manufacture of products from prefabricated metal (except machinery and equipment)"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "50"
+  fields:
+    industry_cluster_id: "25"
+    language_code: "vi"
+    name: "Sản xuất sản phẩm từ kim loại đúc sẵn (trừ máy móc, thiết bị)"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "51"
+  fields:
+    industry_cluster_id: "26"
+    language_code: "en"
+    name: "Manufacture of electronic products, computers and optical products"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "52"
+  fields:
+    industry_cluster_id: "26"
+    language_code: "vi"
+    name: "Sản xuất sản phẩm điện tử, máy vi tính và sản phẩm quang học"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "53"
+  fields:
+    industry_cluster_id: "27"
+    language_code: "en"
+    name: "Manufacture of electrical equipment"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "54"
+  fields:
+    industry_cluster_id: "27"
+    language_code: "vi"
+    name: "Sản xuất thiết bị điện"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "55"
+  fields:
+    industry_cluster_id: "28"
+    language_code: "en"
+    name: "Production of machinery and equipment has not been classified elsewhere"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "56"
+  fields:
+    industry_cluster_id: "28"
+    language_code: "vi"
+    name: "Sản xuất máy móc, thiết bị chưa được phân vào đâu"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "57"
+  fields:
+    industry_cluster_id: "29"
+    language_code: "en"
+    name: "Manufacture of cars and other motor vehicles"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "58"
+  fields:
+    industry_cluster_id: "29"
+    language_code: "vi"
+    name: "Sản xuất ô tô và xe có động cơ khác"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "59"
+  fields:
+    industry_cluster_id: "30"
+    language_code: "en"
+    name: "Manufacture of other means of transport"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "60"
+  fields:
+    industry_cluster_id: "30"
+    language_code: "vi"
+    name: "Sản xuất phương tiện vận tải khác"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "61"
+  fields:
+    industry_cluster_id: "31"
+    language_code: "en"
+    name: "Production of beds, cabinets, tables, chairs"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "62"
+  fields:
+    industry_cluster_id: "31"
+    language_code: "vi"
+    name: "Sản xuất giường, tủ, bàn, ghế"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "63"
+  fields:
+    industry_cluster_id: "32"
+    language_code: "en"
+    name: "Other processing and manufacturing industries"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "64"
+  fields:
+    industry_cluster_id: "32"
+    language_code: "vi"
+    name: "Công nghiệp chế biến, chế tạo khác"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "65"
+  fields:
+    industry_cluster_id: "33"
+    language_code: "en"
+    name: "Repair, maintenance and installation of machinery and equipment"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "66"
+  fields:
+    industry_cluster_id: "33"
+    language_code: "vi"
+    name: "Sửa chữa, bảo dưỡng và lắp đặt máy móc và thiết bị"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "67"
+  fields:
+    industry_cluster_id: "34"
+    language_code: "en"
+    name: "Production and distribution of electricity, gas, hot water, steam and air conditioning"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "68"
+  fields:
+    industry_cluster_id: "34"
+    language_code: "vi"
+    name: "Sản xuất và phân phối điện, khí đốt, nước nóng, hơi nước và điều hoà không khí"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "69"
+  fields:
+    industry_cluster_id: "35"
+    language_code: "en"
+    name: "Water exploitation, treatment and supply"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "70"
+  fields:
+    industry_cluster_id: "35"
+    language_code: "vi"
+    name: "Khai thác, xử lý và cung cấp nước"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "71"
+  fields:
+    industry_cluster_id: "36"
+    language_code: "en"
+    name: "Drainage and wastewater treatment"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "72"
+  fields:
+    industry_cluster_id: "36"
+    language_code: "vi"
+    name: "Thoát nước và xử lý nước thải"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "73"
+  fields:
+    industry_cluster_id: "37"
+    language_code: "en"
+    name: "Waste collection, treatment and destruction activities; scrap recycling"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "74"
+  fields:
+    industry_cluster_id: "37"
+    language_code: "vi"
+    name: "Hoạt động thu gom, xử lý và tiêu hủy rác thải; tái chế phế liệu"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "75"
+  fields:
+    industry_cluster_id: "38"
+    language_code: "en"
+    name: "Pollution treatment and other waste management activities"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "76"
+  fields:
+    industry_cluster_id: "38"
+    language_code: "vi"
+    name: "Xử lý ô nhiễm và hoạt động quản lý chất thải khác"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "77"
+  fields:
+    industry_cluster_id: "39"
+    language_code: "en"
+    name: "Construction of houses of all kinds"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "78"
+  fields:
+    industry_cluster_id: "39"
+    language_code: "vi"
+    name: "Xây dựng nhà các loại"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "79"
+  fields:
+    industry_cluster_id: "40"
+    language_code: "en"
+    name: "Construction of civil engineering works"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "80"
+  fields:
+    industry_cluster_id: "40"
+    language_code: "vi"
+    name: "Xây dựng công trình kỹ thuật dân dụng"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "81"
+  fields:
+    industry_cluster_id: "41"
+    language_code: "en"
+    name: "Specialized construction activities"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "82"
+  fields:
+    industry_cluster_id: "41"
+    language_code: "vi"
+    name: "Hoạt động xây dựng chuyên dụng"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "83"
+  fields:
+    industry_cluster_id: "42"
+    language_code: "en"
+    name: "Sell and repair vehicle"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "84"
+  fields:
+    industry_cluster_id: "42"
+    language_code: "vi"
+    name: "Bán, sửa chữa phương tiện giao thông"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "85"
+  fields:
+    industry_cluster_id: "43"
+    language_code: "en"
+    name: "Wholesale (except vehicle)"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "86"
+  fields:
+    industry_cluster_id: "43"
+    language_code: "vi"
+    name: "Bán buôn (trừ phương tiện giao thông)"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "87"
+  fields:
+    industry_cluster_id: "44"
+    language_code: "en"
+    name: "Retail (except vehicle)"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "88"
+  fields:
+    industry_cluster_id: "44"
+    language_code: "vi"
+    name: "Bán lẻ (trừ phương tiện giao thông)"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "89"
+  fields:
+    industry_cluster_id: "45"
+    language_code: "en"
+    name: "Rail, road and pipeline transport"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "90"
+  fields:
+    industry_cluster_id: "45"
+    language_code: "vi"
+    name: "Vận tải đường sắt, đường bộ và vận tải đường ống"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "91"
+  fields:
+    industry_cluster_id: "46"
+    language_code: "en"
+    name: "Water transport"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "92"
+  fields:
+    industry_cluster_id: "46"
+    language_code: "vi"
+    name: "Vận tải đường thủy"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "93"
+  fields:
+    industry_cluster_id: "47"
+    language_code: "en"
+    name: "Air transport"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "94"
+  fields:
+    industry_cluster_id: "47"
+    language_code: "vi"
+    name: "Vận tải hàng không"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "95"
+  fields:
+    industry_cluster_id: "48"
+    language_code: "en"
+    name: "Warehousing and transportation support activities"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "96"
+  fields:
+    industry_cluster_id: "48"
+    language_code: "vi"
+    name: "Kho bãi và các hoạt động hỗ trợ cho vận tải"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "97"
+  fields:
+    industry_cluster_id: "49"
+    language_code: "en"
+    name: "Postage and delivery"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "98"
+  fields:
+    industry_cluster_id: "49"
+    language_code: "vi"
+    name: "Bưu chính và chuyển phát"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "99"
+  fields:
+    industry_cluster_id: "50"
+    language_code: "en"
+    name: "Lodging"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "100"
+  fields:
+    industry_cluster_id: "50"
+    language_code: "vi"
+    name: "Dịch vụ lưu trú"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "101"
+  fields:
+    industry_cluster_id: "51"
+    language_code: "en"
+    name: "Food service"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "102"
+  fields:
+    industry_cluster_id: "51"
+    language_code: "vi"
+    name: "Dịch vụ ăn uống"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "103"
+  fields:
+    industry_cluster_id: "52"
+    language_code: "en"
+    name: "Publishing activities"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "104"
+  fields:
+    industry_cluster_id: "52"
+    language_code: "vi"
+    name: "Hoạt động xuất bản"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "105"
+  fields:
+    industry_cluster_id: "53"
+    language_code: "en"
+    name: "Film activities, television program production, recording and music publishing"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "106"
+  fields:
+    industry_cluster_id: "53"
+    language_code: "vi"
+    name: "Hoạt động điện ảnh, sản xuất chương trình truyền hình, ghi âm và xuất bản âm nhạc"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "107"
+  fields:
+    industry_cluster_id: "54"
+    language_code: "en"
+    name: "Radio and television broadcasting activities"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "108"
+  fields:
+    industry_cluster_id: "54"
+    language_code: "vi"
+    name: "Hoạt động phát thanh, truyền hình"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "109"
+  fields:
+    industry_cluster_id: "55"
+    language_code: "en"
+    name: "Telecommunication"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "110"
+  fields:
+    industry_cluster_id: "55"
+    language_code: "vi"
+    name: "Viễn thông"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "111"
+  fields:
+    industry_cluster_id: "56"
+    language_code: "en"
+    name: "Computer programming, consulting services and other activities related to computers"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "112"
+  fields:
+    industry_cluster_id: "56"
+    language_code: "vi"
+    name: "Lập trình máy vi tính, dịch vụ tư vấn và các hoạt động khác liên quan đến máy vi tính"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "113"
+  fields:
+    industry_cluster_id: "57"
+    language_code: "en"
+    name: "Information service activities"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "114"
+  fields:
+    industry_cluster_id: "57"
+    language_code: "vi"
+    name: "Hoạt động dịch vụ thông tin"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "115"
+  fields:
+    industry_cluster_id: "58"
+    language_code: "en"
+    name: "Financial service (except insurance and social insurance)"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "116"
+  fields:
+    industry_cluster_id: "58"
+    language_code: "vi"
+    name: "Dịch vụ tài chính (trừ bảo hiểm và bảo hiểm xã hội)"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "117"
+  fields:
+    industry_cluster_id: "59"
+    language_code: "en"
+    name: "Insurance, reinsurance and social insurance (except compulsory social security)"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "118"
+  fields:
+    industry_cluster_id: "59"
+    language_code: "vi"
+    name: "Bảo hiểm, tái bảo hiểm và bảo hiểm xã hội (trừ bảo đảm xã hội bắt buộc)"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "119"
+  fields:
+    industry_cluster_id: "60"
+    language_code: "en"
+    name: "Other financial service"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "120"
+  fields:
+    industry_cluster_id: "60"
+    language_code: "vi"
+    name: "Dịch vụ tài chính khác"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "121"
+  fields:
+    industry_cluster_id: "61"
+    language_code: "en"
+    name: "Real estate business"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "122"
+  fields:
+    industry_cluster_id: "61"
+    language_code: "vi"
+    name: "Kinh doanh bất động sản"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "123"
+  fields:
+    industry_cluster_id: "62"
+    language_code: "en"
+    name: "Legal, accounting and auditing service"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "124"
+  fields:
+    industry_cluster_id: "62"
+    language_code: "vi"
+    name: "Dịch vụ pháp luật, kế toán và kiểm toán"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "125"
+  fields:
+    industry_cluster_id: "63"
+    language_code: "en"
+    name: "Operations of office headquarters; management consulting activities"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "126"
+  fields:
+    industry_cluster_id: "63"
+    language_code: "vi"
+    name: "Hoạt động của trụ sở văn phòng; hoạt động tư vấn quản lý"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "127"
+  fields:
+    industry_cluster_id: "64"
+    language_code: "en"
+    name: "Architectural activities; Technical testing and analysis"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "128"
+  fields:
+    industry_cluster_id: "64"
+    language_code: "vi"
+    name: "Hoạt động kiến trúc; kiểm tra và phân tích kỹ thuật"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "129"
+  fields:
+    industry_cluster_id: "65"
+    language_code: "en"
+    name: "Scientific research and technology development"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "130"
+  fields:
+    industry_cluster_id: "65"
+    language_code: "vi"
+    name: "Nghiên cứu khoa học và phát triển công nghệ"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "131"
+  fields:
+    industry_cluster_id: "66"
+    language_code: "en"
+    name: "Advertising and market research"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "132"
+  fields:
+    industry_cluster_id: "66"
+    language_code: "vi"
+    name: "Quảng cáo và nghiên cứu thị trường"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "133"
+  fields:
+    industry_cluster_id: "67"
+    language_code: "en"
+    name: "Other Professional, scientific and technological service"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "134"
+  fields:
+    industry_cluster_id: "67"
+    language_code: "vi"
+    name: "Dịch vụ chuyên môn, khoa học và công nghệ khác"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "135"
+  fields:
+    industry_cluster_id: "68"
+    language_code: "en"
+    name: "Veterinary activities"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "136"
+  fields:
+    industry_cluster_id: "68"
+    language_code: "vi"
+    name: "Hoạt động thú y"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "137"
+  fields:
+    industry_cluster_id: "69"
+    language_code: "en"
+    name: "Rental of machinery and equipment; rental of personal and household items; leasing non-financial intangible assets"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "138"
+  fields:
+    industry_cluster_id: "69"
+    language_code: "vi"
+    name: "Cho thuê máy móc, thiết bị; cho thuê đồ dùng cá nhân và gia đình; cho thuê tài sản vô hình phi tài chính"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "139"
+  fields:
+    industry_cluster_id: "70"
+    language_code: "en"
+    name: "Labor and employment service activities"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "140"
+  fields:
+    industry_cluster_id: "70"
+    language_code: "vi"
+    name: "Hoạt động dịch vụ lao động và việc làm"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "141"
+  fields:
+    industry_cluster_id: "71"
+    language_code: "en"
+    name: "Activities of travel agents, tour businesses and support services related to promotion and organization of tours"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "142"
+  fields:
+    industry_cluster_id: "71"
+    language_code: "vi"
+    name: "Hoạt động của các đại lý du lịch, kinh doanh tua du lịch và các dịch vụ hỗ trợ, liên quan đến quảng bá và tổ chức tua du lịch"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "143"
+  fields:
+    industry_cluster_id: "72"
+    language_code: "en"
+    name: "Investigation activities ensure safety"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "144"
+  fields:
+    industry_cluster_id: "72"
+    language_code: "vi"
+    name: "Hoạt động điều tra bảo đảm an toàn"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "145"
+  fields:
+    industry_cluster_id: "73"
+    language_code: "en"
+    name: "House, construction and landscape cleaning service activities"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "146"
+  fields:
+    industry_cluster_id: "73"
+    language_code: "vi"
+    name: "Hoạt động dịch vụ vệ sinh nhà cửa, công trình và cảnh quan"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "147"
+  fields:
+    industry_cluster_id: "74"
+    language_code: "en"
+    name: "Administrative activities, office support and other business support activities"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "148"
+  fields:
+    industry_cluster_id: "74"
+    language_code: "vi"
+    name: "Hoạt động hành chính, hỗ trợ văn phòng và các hoạt động hỗ trợ kinh doanh khác"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "149"
+  fields:
+    industry_cluster_id: "75"
+    language_code: "en"
+    name: "Activities of the Communist Party, socio-political organizations, state management, national defense and security, foreign affairs and mandatory social security"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "150"
+  fields:
+    industry_cluster_id: "75"
+    language_code: "vi"
+    name: "Hoạt động của Đảng cộng sản, tổ chức chính trị – xã hội, quản lý nhà nước, an ninh quốc phòng, đối ngoại và bảo đảm xã hội bắt buộc"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "151"
+  fields:
+    industry_cluster_id: "76"
+    language_code: "en"
+    name: "Education and training"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "152"
+  fields:
+    industry_cluster_id: "76"
+    language_code: "vi"
+    name: "Giáo dục và đào tạo"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "153"
+  fields:
+    industry_cluster_id: "77"
+    language_code: "en"
+    name: "Medical activities"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "154"
+  fields:
+    industry_cluster_id: "77"
+    language_code: "vi"
+    name: "Hoạt động y tế"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "155"
+  fields:
+    industry_cluster_id: "78"
+    language_code: "en"
+    name: "Focused care and nursing activities"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "156"
+  fields:
+    industry_cluster_id: "78"
+    language_code: "vi"
+    name: "Hoạt động chăm sóc, điều dưỡng tập trung"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "157"
+  fields:
+    industry_cluster_id: "79"
+    language_code: "en"
+    name: "Social support activities are not centralized"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "158"
+  fields:
+    industry_cluster_id: "79"
+    language_code: "vi"
+    name: "Hoạt động trợ giúp xã hội không tập trung"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "159"
+  fields:
+    industry_cluster_id: "80"
+    language_code: "en"
+    name: "Creative, artistic and entertainment activities"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "160"
+  fields:
+    industry_cluster_id: "80"
+    language_code: "vi"
+    name: "Hoạt động sáng tác, nghệ thuật và giải trí"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "161"
+  fields:
+    industry_cluster_id: "81"
+    language_code: "en"
+    name: "Activities of libraries, archives, museums and other cultural activities"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "162"
+  fields:
+    industry_cluster_id: "81"
+    language_code: "vi"
+    name: "Hoạt động của thư viện, lưu trữ, bảo tàng và các hoạt động văn hóa khác"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "163"
+  fields:
+    industry_cluster_id: "82"
+    language_code: "en"
+    name: "Lottery, betting and gambling activities"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "164"
+  fields:
+    industry_cluster_id: "82"
+    language_code: "vi"
+    name: "Hoạt động xổ số, cá cược và đánh bạc"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "165"
+  fields:
+    industry_cluster_id: "83"
+    language_code: "en"
+    name: "Sports, entertainment and recreational activities"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "166"
+  fields:
+    industry_cluster_id: "83"
+    language_code: "vi"
+    name: "Hoạt động thể thao, vui chơi và giải trí"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "167"
+  fields:
+    industry_cluster_id: "84"
+    language_code: "en"
+    name: "Activities of other associations and organizations"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "168"
+  fields:
+    industry_cluster_id: "84"
+    language_code: "vi"
+    name: "Hoạt động của các hiệp hội, tổ chức khác"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "169"
+  fields:
+    industry_cluster_id: "85"
+    language_code: "en"
+    name: "Repair computers, personal and household appliances"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "170"
+  fields:
+    industry_cluster_id: "85"
+    language_code: "vi"
+    name: "Sửa chữa máy vi tính, đồ dùng cá nhân và gia đình"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "171"
+  fields:
+    industry_cluster_id: "86"
+    language_code: "en"
+    name: "Other personal service activities"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "172"
+  fields:
+    industry_cluster_id: "86"
+    language_code: "vi"
+    name: "Hoạt động dịch vụ phục vụ cá nhân khác"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "173"
+  fields:
+    industry_cluster_id: "87"
+    language_code: "en"
+    name: "Housework activities in households"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "174"
+  fields:
+    industry_cluster_id: "87"
+    language_code: "vi"
+    name: "Hoạt động làm thuê công việc gia đình trong các hộ gia đình"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "175"
+  fields:
+    industry_cluster_id: "88"
+    language_code: "en"
+    name: "Production of physical products and services for self-consumption by households"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "176"
+  fields:
+    industry_cluster_id: "88"
+    language_code: "vi"
+    name: "Hoạt động sản xuất sản phẩm vật chất và dịch vụ tự tiêu dùng của hộ gia đình"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "177"
+  fields:
+    industry_cluster_id: "89"
+    language_code: "en"
+    name: "Activities of international organizations and agencies"
+- model: 'master_data.IndustryClusterTranslation'
+  pk: "178"
+  fields:
+    industry_cluster_id: "89"
+    language_code: "vi"
+    name: "Hoạt động của các tổ chức và cơ quan quốc tế"
