@@ -34,6 +34,8 @@ from django.db import transaction
 from graphene_django_plus.mutations import ModelUpdateMutation
 from graphene_file_upload.scalars import Upload
 from graphql import GraphQLError
+from apps.delivery.models import Group
+from apps.delivery.schema import GroupStudentNode
 
 class ShippingFeeInput(graphene.InputObjectType):
     pick_up_city_code = graphene.String(required=True)
@@ -367,6 +369,91 @@ class DeliveryResponsibleDelete(graphene.Mutation):
             error = Error(code="DELIVERY_13", message=DeliveryError.DELIVERY_13)
             return DeliveryResponsibleDelete(status=False, error=error)
 
+
+class GroupStudentInput(graphene.InputObjectType):
+    name = graphene.String(required=True)
+    group_code= graphene.String(required=True)
+
+class GroupStudentCreate(graphene.Mutation):
+    class Arguments:
+        input = GroupStudentInput(required=True)
+
+    status = graphene.Boolean()
+    group_Student = graphene.Field(GroupStudentNode)
+    error = graphene.Field(Error)
+
+    def mutate(root, info, input):
+        try:
+            token = GetToken.getToken(info)
+            user = token.user
+            if user.isAdmin():
+                group_code = Group.objects.filter(id=input.group_code).first()
+                if group_code is None:
+                    error = Error(code="DELIVERY_10", message=DeliveryError.DELIVERY_10)
+                    return GroupStudentCreate(status=False, error=error)
+                try:
+                    group_Student = GroupStudent.objects.create(
+                        name = input.name,
+                        member = input.member,
+                        userName = user,
+                        group_code = input.group_code,
+                        status = input.status,
+                    )
+                    return GroupStudentCreate(status=True, group_Student= group_Student)
+                except:
+                    transaction.set_rollback(True)
+                    error = Error(code="DELIVERY_12", message=DeliveryError.DELIVERY_12)
+                    return GroupStudentCreate(status=False, error=error)
+            else:
+                error = Error(code="DELIVERY_01", message=DeliveryError.DELIVERY_01)
+                return GroupStudentCreate(error=error, status=False)
+        except:
+            error = Error(code="DELIVERY_02", message=DeliveryError.DELIVERY_02)
+            return GroupStudentCreate(error=error, status=False)
+
+class GroupStudentUpdate(graphene.Mutation):
+    class Arguments:
+        id = graphene.String(required=True)
+        input = GroupStudentInput(required=True)
+
+    status = graphene.Boolean()
+    group_Student = graphene.Field(GroupStudentNode)
+    error = graphene.Field(Error)
+
+    def mutate(root, info, input, id):
+        try:
+            token = GetToken.getToken(info)
+            user = token.user
+            if user.isAdmin():
+                try:
+                    group_Student = GroupStudent.objects.get(pk=id)
+                    transporter_code = GroupStudnet.objects.filter(id=input.transporter_code).first()
+                    if transporter_code is None:
+                        error = Error(code="DELIVERY_10", message=DeliveryError.DELIVERY_10)
+                        return GroupStudentUpdate(status=False, error=error)
+                    city_code = CountryState.objects.filter(id=input.city_code).first()
+                    if city_code is None:
+                        error = Error(code="DELIVERY_11", message=DeliveryError.DELIVERY_11)
+                        return GroupStudentUpdate(status=False, error=error)
+                    
+                    group_Student.name = input.name
+                    group_Student.userName = user
+                    group_Student.group_code = input.group_code
+                    group_Student.status = input.status
+                    group_Student.save()
+                    return GroupStudentUpdate(status=True, group_Student=group_Student)
+                except Exception as err:
+                    print({"exeption": err})
+                    transaction.set_rollback(True)
+                    error = Error(code="DELIVERY_13", message=DeliveryError.DELIVERY_13)
+                    return GroupStudentUpdate(status=False, error=error)
+            else:
+                error = Error(code="DELIVERY_01", message=DeliveryError.DELIVERY_01)
+                return GroupStudentUpdate(error=error, status=False)
+        except:
+            error = Error(code="DELIVERY_02", message=DeliveryError.DELIVERY_02)
+            return GroupStudentUpdate(error=error, status=False)
+
 class Mutation(graphene.ObjectType):
     shipping_fee_create = ShippingFeeCreate.Field()
     shipping_fee_update = ShippingFeeUpdate.Field()
@@ -379,3 +466,9 @@ class Mutation(graphene.ObjectType):
     delivery_responsible_create = DeliveryResponsibleCreate.Field()
     delivery_responsible_update = DeliveryResponsibleUpdate.Field()
     delivery_responsible_delete = DeliveryResponsibleDelete.Field()
+
+    group_student_create  = GroupStudentCreate.Field()  # Đổi tên mutation này thành create_group_student
+    group_student_update = GroupStudentUpdate.Field()
+    """ update_status_group_student= UpdateStatusGroup.Field() """
+
+

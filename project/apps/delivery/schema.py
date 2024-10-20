@@ -13,11 +13,12 @@ from apps.delivery.models import (
 from apps.users.models import Token
 from graphene import relay, ObjectType, Connection
 from graphql import GraphQLError
+from apps.delivery.models import Group
 
 class GetToken:
     def getToken(info):
         try:
-            key = info.context.headers['Authorization'].split(" ")
+            key = info.context.headers['Authorization'].split("")
             key = key[-1]
             token = Token.objects.get(key=key)
             return token
@@ -90,6 +91,23 @@ class DeliveryResponsibleNode(DjangoObjectType):
         interfaces = (CustomNode,)
         connection_class = ExtendedConnection
 
+class GroupFilter(FilterSet):
+    group_Id = django_filters.CharFilter(field_name="id", lookup_expr="exact")  # Đổi thành 'id' vì 'group_id' không tồn tại trong model
+    group_name = django_filters.CharFilter(field_name='name', lookup_expr="icontains") 
+    group_code = django_filters.CharFilter(field_name='group_code', lookup_expr="exact")
+
+    class Meta:
+        model = Group
+        fields = ['id', 'name', 'userName', 'member', 'status', 'group_code']  # Chỉ định các trường bạn muốn lọc
+
+
+class GroupStudentNode(DjangoObjectType):
+    class Meta:
+        model = Group
+        interfaces = (CustomNode,)
+        connection_class = ExtendedConnection
+
+
 class Query(object):
     shipping_fee = CustomNode.Field(ShippingFeeNode)
     shipping_fees = CustomizeFilterConnectionField(ShippingFeeNode)
@@ -99,3 +117,6 @@ class Query(object):
 
     delivery_responsible = CustomNode.Field(DeliveryResponsibleNode)
     delivery_responsibles = CustomizeFilterConnectionField(DeliveryResponsibleNode)
+
+    group_Student = CustomNode.Field(GroupStudentNode)
+    group_Students = CustomizeFilterConnectionField(GroupStudentNode, filterset_class=GroupFilter)  # Thêm filter cho Group

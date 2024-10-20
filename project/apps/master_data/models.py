@@ -1138,13 +1138,3 @@ class SetProductAdvertisementTranslation(models.Model):
             self.description,
             self.set_product_advertisement_id,
         )
-class Group(models.Model):
-    name = models.CharField(max_length=255)
-    member = models.IntegerField(default=0)
-    status = models.BooleanField(default=True)
-
-    def __str__(self):
-        return self.name
-
-    class Meta:
-        db_table = 'group'

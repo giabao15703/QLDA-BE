@@ -110,28 +110,3 @@ class OrderDeliveryShippingFee(models.Model):
     class Meta: 
         db_table = 'order_delivery_shipping_fee'
 
-# Role choices
-ROLE_CHOICES = [
-    ('student', 'Sinh Viên'),
-    ('lecturer', 'Giảng Viên'),
-    ('admin_officer', 'Giáo Vụ'),
-    ('dean', 'Trưởng Khoa'),
-]
-
-class Login(models.Model):
-    id = models.AutoField(primary_key=True)
-    username = models.CharField(max_length=50, unique=True)
-    password = models.CharField(max_length=128)
-    emailLogin = models.CharField(max_length=50, default='huit@example.com')  
-    role = models.CharField(max_length=20, choices=ROLE_CHOICES)
-    is_active = models.BooleanField(default=True)
-    
-    class Meta:
-        db_table = 'login_qlda'
-
-    def set_password(self, raw_password):
-        self.password = make_password(raw_password)
-        self.save(update_fields=['password'])
-
-    def check_password(self, raw_password):
-        return check_password(raw_password, self.password)

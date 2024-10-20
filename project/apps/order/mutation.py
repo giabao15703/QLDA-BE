@@ -28,19 +28,10 @@ from apps.order.error_code import (
     OrderError,
 )
 from django.core.mail import send_mail
-from apps.order.models import Login
-from apps.order.schema import LoginNode
 from django.contrib.auth.hashers import make_password
 from django.contrib.auth import logout as django_logout
 
 OrderTypeEnum = graphene.Enum.from_enum(OrderType)
-
-class LoginRoleEnum(graphene.Enum):
-    STUDENT = 'student'
-    LECTURER = 'lecturer'
-    ADMIN_OFFICER = 'admin_officer'
-    DEAN = 'dean'
-
 
 class OrderInput(graphene.InputObjectType):
     buyerId = graphene.Int(required=True) 
@@ -51,21 +42,6 @@ class OrderUpdateInput(graphene.InputObjectType):
     order_status = graphene.String()
     order_type = graphene.String()
     amount = graphene.Float()
-
-class UserLoginInput(graphene.InputObjectType):
-    username = graphene.String(required=True)
-    password = graphene.String(required=True)
-    role = graphene.Field(LoginRoleEnum, required=True)
-    emailLogin= graphene.String(required=True)
-    is_active = graphene.Boolean(default_value=True)
-
-class LoginRoleInput(graphene.InputObjectType):
-    id = graphene.ID(required=True) 
-    role = graphene.Field(LoginRoleEnum, required=True)
-
-class LoginStatusInput(graphene.InputObjectType):
-    id = graphene.ID(required=True)
-    is_active = graphene.Boolean(required=True)
 
 
 #class OrderAddressesInput(DjangoObjectType):
@@ -333,184 +309,10 @@ class OrderDeleteMutation(graphene.Mutation):
             error = Error(code="ORDER_01", message=str(error))
             return OrderDeleteMutation(success=False)
 
-from django.contrib.auth import authenticate, login as django_login
 
-class LoginMutation(graphene.Mutation):
-    class Arguments:
-        username = graphene.String(required=True)
-        password = graphene.String(required=True)
-
-    status = graphene.Boolean()
-    login = graphene.Field(LoginNode)
-    error = graphene.Field(Error)
-
-    @staticmethod
-    def mutate(root, info, username, password):
-        try:
-            request = info.context
-            login_user = Login.objects.get(username=username)
-            if login_user.check_password(password):
-                if not login_user.is_active:
-                    return LoginMutation(status=False, error=Error(code="AUTH_03", message="Tài khoản đã bị vô hiệu hóa."))
-                # Đăng nhập người dùng và tạo session
-                django_login(request, login_user)
-                return LoginMutation(status=True, login=login_user)
-            else:
-                return LoginMutation(status=False, error=Error(code="AUTH_01", message="Thông tin đăng nhập không hợp lệ"))
-        except Login.DoesNotExist:
-            return LoginMutation(status=False, error=Error(code="AUTH_01", message="Thông tin đăng nhập không hợp lệ"))
-
-class LogoutMutation(graphene.Mutation):
-    status = graphene.Boolean()
-    error = graphene.Field(Error)
-
-    @staticmethod
-    def mutate(root, info):
-        request = info.context
-        django_logout(request)
-        return LogoutMutation(status=True)
-
-
-class CreateLoginMutation(graphene.Mutation):
-    class Arguments:
-        id = graphene.ID(required=True)
-        input = UserLoginInput(required=True)
-
-    status = graphene.Boolean(default_value=False)
-    login = graphene.Field(LoginNode)
-    error = graphene.Field(Error)
-
-    @staticmethod
-    def mutate(root, info, input):
-        try:
-            # Tạo người dùng mà chưa đặt mật khẩu
-            login = Login.objects.create(
-                username=input.username,
-                emailLogin=input.emailLogin,
-                role=input.role,
-                is_active=input.is_active
-            )
-            # Đặt mật khẩu đã băm
-            login.set_password(input.password)
-            
-            # Gửi email thông báo tới người dùng
-            send_mail(
-                'Thông tin tài khoản của bạn',
-                f'Tài khoản của bạn đã được tạo. Username: {input.username}, Password: {input.password}',
-                'your-email@gmail.com',
-                [input.emailLogin],
-                fail_silently=False,
-            )
-
-            return CreateLoginMutation(status=True, login=login)
-        except Exception as error:
-            transaction.set_rollback(True)
-            return CreateLoginMutation(status=False, error=Error(code="CREATE_LOGIN_ERROR", message=str(error)))
-# Mutation cập nhật thông tin login
-class UpdateLoginMutation(graphene.Mutation):
-    class Arguments:
-        id = graphene.ID(required=True)
-        input = UserLoginInput()
-
-    status = graphene.Boolean(default_value=False)
-    login = graphene.Field(LoginNode)
-    error = graphene.Field(Error)
-
-    @staticmethod
-    def mutate(root, info, id, input):
-        try:
-            login = Login.objects.get(id=id)
-            if input.username:
-                login.username = input.username
-            if input.password:
-                login.set_password(input.password)
-            if input.role:
-                login.role = input.role
-            if input.is_active is not None:
-                login.is_active = input.is_active
-            login.save()
-
-            return UpdateLoginMutation(status=True, login=login)
-        except Exception as error:
-            transaction.set_rollback(True)
-            return UpdateLoginMutation(status=False, error=Error(code="UPDATE_LOGIN_ERROR", message=str(error)))
-
-
-# Mutation thay đổi role của login
-class UpdateLoginRoleMutation(graphene.Mutation):
-    class Arguments:
-        input = LoginRoleInput(required=True)
-
-    status = graphene.Boolean(default_value=False)
-    login = graphene.Field(LoginNode)
-    error = graphene.Field(Error)
-
-    @staticmethod
-    def mutate(root, info, input):
-        try:
-            login = login.objects.get(id=input.id)
-            login.role = input.role
-            login.save()
-
-            return UpdateLoginRoleMutation(status=True, login=login)
-        except Exception as error:
-            transaction.set_rollback(True)
-            return UpdateLoginRoleMutation(status=False, error=Error(code="UPDATE_ROLE_ERROR", message=str(error)))
-
-
-# Mutation thay đổi trạng thái của login
-class UpdateLoginStatusMutation(graphene.Mutation):
-    class Arguments:
-        input = LoginStatusInput(required=True)
-
-    status = graphene.Boolean(default_value=False)
-    login = graphene.Field(LoginNode)
-    error = graphene.Field(Error)
-
-    @staticmethod
-    def mutate(root, info, input):
-        try:
-            login = login.objects.get(id=input.id)
-            login.is_active = input.is_active
-            login.save()
-
-            return UpdateLoginStatusMutation(status=True, login=login)
-        except Exception as error:
-            transaction.set_rollback(True)
-            return UpdateLoginStatusMutation(status=False, error=Error(code="UPDATE_STATUS_ERROR", message=str(error)))
-
-
-# Mutation đặt lại mật khẩu, mật khẩu = username
-class ResetPasswordMutation(graphene.Mutation):
-    class Arguments:
-        id = graphene.ID(required=True)
-
-    status = graphene.Boolean(default_value=False)
-    login = graphene.Field(LoginNode)
-    error = graphene.Field(Error)
-
-    @staticmethod
-    def mutate(root, info, id):
-        try:
-            login = Login.objects.get(id=id)
-            login.set_password(login.username)  # Đặt mật khẩu = username
-            login.save()
-
-            return ResetPasswordMutation(status=True, login=login)
-        except Exception as error:
-            transaction.set_rollback(True)
-            return ResetPasswordMutation(status=False, error=Error(code="RESET_PASSWORD_ERROR", message=str(error)))
 
 class Mutation(graphene.ObjectType):
     create_order = OrderCreateMutation.Field()
     update_order = OrderUpdateMutation.Field()
     update_order_status = OrderUpdateStatusMutation.Field()
     delete_order = OrderDeleteMutation.Field()
-    create_login = CreateLoginMutation.Field()
-    update_login = UpdateLoginMutation.Field()
-    update_login_role = UpdateLoginRoleMutation.Field()
-    update_login_status = UpdateLoginStatusMutation.Field()
-    reset_password = ResetPasswordMutation.Field()
-    login= LoginMutation.Field()
-    logout = LogoutMutation.Field()
-

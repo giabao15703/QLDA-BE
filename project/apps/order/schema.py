@@ -11,13 +11,10 @@ from apps.order.models import (
 from graphene_django import DjangoObjectType
 from django_filters import FilterSet, CharFilter, NumberFilter
 from apps.users.models import SupplierProductImage, SupplierProductFlashSale, SupplierProductWholesalePrice
-from apps.order.models import Login
 from django.contrib.auth.hashers import make_password
 
 
 # ----------------- Order Filter -----------------
-
-
 class OrderFilter(FilterSet):
     id = NumberFilter(field_name="id", lookup_expr="exact")
     order_status = CharFilter(field_name="order_status", lookup_expr="exact")
@@ -27,15 +24,6 @@ class OrderFilter(FilterSet):
     destination_city_id = NumberFilter(field_name="order_delivery_shipping_fee__delivery_shipping_fee__destination_city", lookup_expr="exact")
     class Meta:
         model = Order
-        fields = [
-            "id", 
-        ]
-class LoginFilter(FilterSet):
-    id = NumberFilter(field_name="id", lookup_expr="exact")
-    username = CharFilter(field_name="username", lookup_expr="exact")
-    role = CharFilter(field_name="role", lookup_expr="exact")
-    class Meta:
-        model = Login
         fields = [
             "id", 
         ]
@@ -122,13 +110,7 @@ class OrderItemsNode(DjangoObjectType):
 
     # def resolve_rating_delivery_time(self, info):
     #     return float(self.delivery_time)
-class LoginNode(DjangoObjectType):
-    class Meta:
-        model = Login
-        fields = ("id", "username","password", "role", "is_active")
-        interfaces = (CustomizeInterface,)
-        connection_class = CountableConnection
-        filterset_class = LoginFilter
+
 # ----------------- Order Node -----------------
 class OrderNode(DjangoObjectType):
     order_delivery_timelines = graphene.List(OrderDeliveryTimelineNode)
@@ -190,7 +172,5 @@ class OrderNode(DjangoObjectType):
 class Query(graphene.ObjectType):
     order = graphene.Field(OrderNode) # TODO: Fix this later
     orders = CustomizeFilterConnectionField(OrderNode)
-    login = graphene.Field(LoginNode)
-    logins = CustomizeFilterConnectionField(LoginNode)
 
 
