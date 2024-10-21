@@ -8,6 +8,7 @@ from apps.master_data.models import Currency, Country, CountryState
 from apps.delivery.models import ShippingFee
 from apps.master_data.models import Voucher
 from apps.users.models import Buyer
+from apps.users.models import User
 from django.contrib.auth.hashers import make_password, check_password
 # --------------------------------- Order ---------------------------------
 
@@ -110,3 +111,20 @@ class OrderDeliveryShippingFee(models.Model):
     class Meta: 
         db_table = 'order_delivery_shipping_fee'
 
+# Bảng Giảng Viên
+class GiangVien(models.Model):
+    name_giang_vien = models.CharField(max_length=255)
+    detai = models.TextField(null=True, blank=True)
+
+    class Meta:
+        db_table = 'giang_vien'
+
+
+# Bảng Group Student
+class GroupStudent(models.Model):
+    name_group = models.CharField(max_length=255)
+    members = models.ForeignKey(User, on_delete=models.CASCADE, related_name='group_members_QLDA', null=True, blank=True)  # Thêm on_delete=models.CASCADE
+    giang_vien = models.ForeignKey(GiangVien, on_delete=models.CASCADE, related_name='group_students')
+
+    class Meta:
+        db_table = 'group_student_QLDA'

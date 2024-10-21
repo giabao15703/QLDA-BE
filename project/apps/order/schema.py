@@ -6,7 +6,10 @@ from apps.order.models import (
     Order, 
     OrderDeliveryTimelines, 
     # OrderPaymentDetails, 
-    OrderItems
+    OrderItems,
+    GiangVien,
+    GroupStudent
+
 )
 from graphene_django import DjangoObjectType
 from django_filters import FilterSet, CharFilter, NumberFilter
@@ -163,7 +166,17 @@ class OrderNode(DjangoObjectType):
 
   # def resolve_discount(self, info):
   #     return float(self.discount) / 100
+class GiangVienType(DjangoObjectType):
+    class Meta:
+        model = GiangVien
+        fields = "__all__"
+        interfaces = (CustomizeInterface,)
+        
 
+class GroupStudentType(DjangoObjectType):
+    class Meta:
+        model = GroupStudent
+        fields = "__all__"
     @classmethod
     def get_queryset(cls, queryset, info):
         return gql_optimizer.query(queryset,info)
@@ -172,5 +185,26 @@ class OrderNode(DjangoObjectType):
 class Query(graphene.ObjectType):
     order = graphene.Field(OrderNode) # TODO: Fix this later
     orders = CustomizeFilterConnectionField(OrderNode)
+    giang_viens = graphene.List(GiangVienType)
+    giang_vien = graphene.Field(GiangVienType, id=graphene.ID(required=True))
+    
+    groups = graphene.List(GroupStudentType)
+    group = graphene.Field(GroupStudentType, id=graphene.ID(required=True))
 
+    def resolve_giang_viens(self, info):
+        return GiangVien.objects.all()
 
+    def resolve_giang_vien(self, info, id):
+        try:
+            return GiangVien.objects.get(id=id)
+        except GiangVien.DoesNotExist:
+            return None
+
+    def resolve_groups(self, info):
+        return GroupStudent.objects.all()
+
+    def resolve_group(self, info, id):
+        try:
+            return GroupStudent.objects.get(id=id)
+        except GroupStudent.DoesNotExist:
+            return None

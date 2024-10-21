@@ -6,7 +6,9 @@ from apps.order.models import (
     OrderDeliveryShippingFee, 
     OrderType,
     OrderItems,
-    OrderStatus
+    OrderStatus,
+    GiangVien,
+    GroupStudent
 )   
 import jwt
 from datetime import datetime, timedelta
@@ -19,7 +21,7 @@ from apps.users.models import (
     SupplierProduct,
     SupplierProductFlashSale
 )
-from apps.order.schema import OrderNode
+from apps.order.schema import OrderNode, GiangVienType, GroupStudentType
 from apps.users.schema import GetToken
 from apps.core import Error    
 from apps.users.error_code import UserError
@@ -30,12 +32,22 @@ from apps.order.error_code import (
 from django.core.mail import send_mail
 from django.contrib.auth.hashers import make_password
 from django.contrib.auth import logout as django_logout
+from apps.users.models import User
+from django.core.exceptions import ValidationError
 
 OrderTypeEnum = graphene.Enum.from_enum(OrderType)
 
 class OrderInput(graphene.InputObjectType):
     buyerId = graphene.Int(required=True) 
     order_type = graphene.String(required=True) 
+
+class GiangVienInput(graphene.InputObjectType):
+    name_giang_vien = graphene.String(required=True)
+    detai = graphene.String()
+
+class GroupStudentInput(graphene.InputObjectType):
+    name_group = graphene.String(required=True)
+    giang_vien_id = graphene.ID(required=True)
 
 class OrderUpdateInput(graphene.InputObjectType):
     buyerId = graphene.Int()
@@ -308,7 +320,90 @@ class OrderDeleteMutation(graphene.Mutation):
             transaction.set_rollback(True)
             error = Error(code="ORDER_01", message=str(error))
             return OrderDeleteMutation(success=False)
+class CreateGiangVien(graphene.Mutation):
+    class Arguments:
+        input = GiangVienInput(required=True)
 
+    giang_vien = graphene.Field(lambda: GiangVienType)
+    error = graphene.Field(Error)
+    status = graphene.Boolean()
+
+
+    def mutate(self, info, input):
+        giang_vien = GiangVien.objects.create(
+            name_giang_vien=input.name_giang_vien,
+            detai=input.detai
+        )
+        return CreateGiangVien(giang_vien=giang_vien)
+
+# Mutation tạo nhóm sinh viên và thêm user vào nhóm
+class CreateGroupStudent(graphene.Mutation):
+    class Arguments:
+        input = GroupStudentInput(required=True)
+        user_id = graphene.ID(required=True)
+
+    group = graphene.Field(lambda: GroupStudentType)
+    error = graphene.Field(Error)
+    status = graphene.Boolean()
+
+    def mutate(self, info, input, user_id):
+        try:
+            user = User.objects.get(id=user_id)
+            giang_vien = GiangVien.objects.get(id=input.giang_vien_id)
+
+            # Kiểm tra nếu user đã thuộc nhóm nào khác
+            existing_group = GroupStudent.objects.filter(members=user).first()
+            if existing_group:
+                raise ValidationError("User đã thuộc một nhóm khác.")
+
+            # Tạo nhóm mới và gán user vào
+            group = GroupStudent.objects.create(
+                name_group=input.name_group,
+                giang_vien=giang_vien,
+                members=user 
+            )
+
+            group.save()
+            return CreateGroupStudent(group=group)
+
+        except User.DoesNotExist:
+            raise ValidationError("User không tồn tại.")
+        except GiangVien.DoesNotExist:
+            raise ValidationError("Giảng viên không tồn tại.")
+        except Exception as e:
+            raise ValidationError(f"Lỗi khi tạo nhóm: {str(e)}")
+
+
+# Mutation cập nhật nhóm, thêm user mới
+class UpdateGroupStudent(graphene.Mutation):
+    class Arguments:
+        group_id = graphene.ID(required=True)
+        user_id = graphene.ID(required=True)
+
+    group = graphene.Field(lambda: GroupStudentType)
+    error = graphene.Field(Error)
+    status = graphene.Boolean()
+
+    def mutate(self, info, group_id, user_id):
+        try:
+            group = GroupStudent.objects.get(id=group_id)
+            user = User.objects.get(id=user_id)
+
+            # Kiểm tra nếu user đã thuộc nhóm nào
+            if user.group_members.exists():
+                raise ValidationError("User đã thuộc một nhóm khác.")
+
+            group.members.add(user)
+            group.save()
+
+            return UpdateGroupStudent(group=group)
+
+        except GroupStudent.DoesNotExist:
+            raise ValidationError("Nhóm không tồn tại.")
+        except User.DoesNotExist:
+            raise ValidationError("User không tồn tại.")
+        except Exception as e:
+            raise ValidationError(f"Lỗi khi cập nhật nhóm: {str(e)}")
 
 
 class Mutation(graphene.ObjectType):
@@ -316,3 +411,6 @@ class Mutation(graphene.ObjectType):
     update_order = OrderUpdateMutation.Field()
     update_order_status = OrderUpdateStatusMutation.Field()
     delete_order = OrderDeleteMutation.Field()
+    create_giang_vien = CreateGiangVien.Field()
+    create_group_student = CreateGroupStudent.Field()
+    update_group_student = UpdateGroupStudent.Field()

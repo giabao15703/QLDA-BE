@@ -35,16 +35,3 @@ class DeliveryResponsible(models.Model):
 
     class Meta:
         db_table = 'delivery_delivery_responsible'
-
-class Group(models.Model):
-    name = models.CharField(max_length=255)
-    group_code=models.CharField(max_length=6,unique=True)
-    userName = models.ForeignKey(User, related_name="translations", on_delete=models.CASCADE)
-    member = models.IntegerField(default=0)
-    status = models.BooleanField(default=True)
-
-    def __str__(self):
-        return self.name
-
-    class Meta:
-        db_table = 'group_student'
