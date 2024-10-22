@@ -9,13 +9,15 @@ from apps.delivery.schema import (
     ShippingFeeNode,
     TransporterListNode,
     DeliveryResponsibleNode,
-    GetToken
+    GetToken,
+    GiangVienNode
 )
 
 from apps.delivery.models import (
     ShippingFee,
     TransporterList,
     DeliveryResponsible,
+    GiangVien,
 )
 
 from apps.delivery.error_code import (
@@ -366,6 +368,52 @@ class DeliveryResponsibleDelete(graphene.Mutation):
             error = Error(code="DELIVERY_13", message=DeliveryError.DELIVERY_13)
             return DeliveryResponsibleDelete(status=False, error=error)
 
+class GiangVienInput(graphene.InputObjectType):
+    name = graphene.String(required=True)
+    de_tai = graphene.String(required=True)
+
+class GiangVienCreate(graphene.Mutation):
+    class Arguments:
+        input = GiangVienInput(required=True)
+
+    status = graphene.Boolean()
+    giangVien = graphene.Field(GiangVienNode)
+    error = graphene.Field(Error)
+
+    def mutate(root, info, input):
+        try:
+            giangVien = GiangVien.objects.create(
+                name=input.name,
+                de_tai=input.de_tai
+            )
+            return GiangVienCreate(status=True, giangVien=giangVien)
+        except Exception as e:
+            error = Error(code="CREATE_ERROR", message=str(e))
+            return GiangVienCreate(status=False, error=error)
+            
+class GiangVienUpdate(graphene.Mutation):
+    class Arguments:
+        id = graphene.ID(required=True)
+        input = GiangVienInput(required=True)
+
+    status = graphene.Boolean()
+    giangVien = graphene.Field(lambda: GiangVienNode)
+    error = graphene.Field(Error)
+
+    def mutate(root, info, id, input):
+        try:
+            giangVien = GiangVien.objects.get(pk=id)
+            giangVien.name = input.name
+            giangVien.de_tai = input.de_tai
+            giangVien.save()
+            return GiangVienUpdate(status=True, giangVien=giangvien)
+        except GiangVien.DoesNotExist:
+            error = Error(code="NOT_FOUND", message="GiangVien không tồn tại")
+            return GiangVienUpdate(status=False, error=error)
+        except Exception as e:
+            error = Error(code="UPDATE_ERROR", message=str(e))
+            return GiangVienUpdate(status=False, error=error)
+
 class Mutation(graphene.ObjectType):
     shipping_fee_create = ShippingFeeCreate.Field()
     shipping_fee_update = ShippingFeeUpdate.Field()
@@ -379,5 +427,6 @@ class Mutation(graphene.ObjectType):
     delivery_responsible_update = DeliveryResponsibleUpdate.Field()
     delivery_responsible_delete = DeliveryResponsibleDelete.Field()
 
-
+    giangVien_create = GiangVienCreate.Field()
+    giangVien_update = GiangVienUpdate.Field()
 

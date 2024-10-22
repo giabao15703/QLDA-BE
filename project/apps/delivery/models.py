@@ -35,3 +35,10 @@ class DeliveryResponsible(models.Model):
 
     class Meta:
         db_table = 'delivery_delivery_responsible'
+
+class GiangVien(models.Model):
+    name = models.CharField(max_length=255)
+    de_tai = models.CharField(max_length=1024)
+
+    class Meta:
+        db_table = 'giangvien'

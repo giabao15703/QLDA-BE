@@ -9,6 +9,7 @@ from apps.delivery.models import (
     ShippingFee,
     TransporterList,
     DeliveryResponsible,
+    GiangVien,
 )
 from apps.users.models import Token
 from graphene import relay, ObjectType, Connection
@@ -90,6 +91,23 @@ class DeliveryResponsibleNode(DjangoObjectType):
         interfaces = (CustomNode,)
         connection_class = ExtendedConnection
 
+class GiangVienFilter(FilterSet):
+    id = django_filters.CharFilter(field_name='id', lookup_expr="exact")
+    name = django_filters.CharFilter(field_name='name', lookup_expr="icontains")
+    de_tai = django_filters.CharFilter(field_name='de_tai', lookup_expr="icontains")
+
+    class Meta:
+        model = GiangVien
+        fields = []
+
+class GiangVienNode(DjangoObjectType):
+    class Meta:
+        model = GiangVien
+        filterset_class = GiangVienFilter
+        interfaces = (CustomNode,)
+        connection_class = ExtendedConnection
+
+        
 class Query(object):
     shipping_fee = CustomNode.Field(ShippingFeeNode)
     shipping_fees = CustomizeFilterConnectionField(ShippingFeeNode)
@@ -99,3 +117,6 @@ class Query(object):
 
     delivery_responsible = CustomNode.Field(DeliveryResponsibleNode)
     delivery_responsibles = CustomizeFilterConnectionField(DeliveryResponsibleNode)
+
+    giang_vien = CustomNode.Field(GiangVienNode)
+    giang_viens = CustomizeFilterConnectionField(GiangVienNode)
