@@ -10,6 +10,7 @@ from apps.delivery.models import (
     TransporterList,
     DeliveryResponsible,
     GiangVien,
+    GroupQLDA
 )
 from apps.users.models import Token
 from graphene import relay, ObjectType, Connection
@@ -107,6 +108,20 @@ class GiangVienNode(DjangoObjectType):
         interfaces = (CustomNode,)
         connection_class = ExtendedConnection
 
+class GroupQLDAFilter(FilterSet):
+    de_tai = django_filters.CharFilter(field_name='de_tai', lookup_expr="icontains")
+
+    class Meta:
+        model = GroupQLDA
+        fields = ['de_tai'] 
+
+
+class GroupQLDANode(DjangoObjectType):
+    class Meta:
+        model = GroupQLDA
+        interfaces = (CustomNode,)
+        connection_class = ExtendedConnection
+
         
 class Query(object):
     shipping_fee = CustomNode.Field(ShippingFeeNode)
@@ -120,3 +135,6 @@ class Query(object):
 
     giang_vien = CustomNode.Field(GiangVienNode)
     giang_viens = CustomizeFilterConnectionField(GiangVienNode)
+
+    group = CustomNode.Field(GroupQLDANode)
+    groups = CustomizeFilterConnectionField(GroupQLDANode)

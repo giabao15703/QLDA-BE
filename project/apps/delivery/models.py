@@ -42,3 +42,9 @@ class GiangVien(models.Model):
 
     class Meta:
         db_table = 'giangvien'
+class GroupQLDA(models.Model):
+    name_group = models.CharField(max_length=255)
+    giang_viens = models.ManyToManyField(GiangVien, related_name='groups')
+
+    class Meta:
+        db_table = 'group_Qlda'

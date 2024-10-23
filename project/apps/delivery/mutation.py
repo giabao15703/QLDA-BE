@@ -10,7 +10,8 @@ from apps.delivery.schema import (
     TransporterListNode,
     DeliveryResponsibleNode,
     GetToken,
-    GiangVienNode
+    GiangVienNode,
+    GroupQLDANode
 )
 
 from apps.delivery.models import (
@@ -18,6 +19,7 @@ from apps.delivery.models import (
     TransporterList,
     DeliveryResponsible,
     GiangVien,
+    GroupQLDA
 )
 
 from apps.delivery.error_code import (
@@ -371,6 +373,7 @@ class DeliveryResponsibleDelete(graphene.Mutation):
 class GiangVienInput(graphene.InputObjectType):
     name = graphene.String(required=True)
     de_tai = graphene.String(required=True)
+    
 
 class GiangVienCreate(graphene.Mutation):
     class Arguments:
@@ -414,6 +417,40 @@ class GiangVienUpdate(graphene.Mutation):
             error = Error(code="UPDATE_ERROR", message=str(e))
             return GiangVienUpdate(status=False, error=error)
 
+class GroupQLDAInput(graphene.InputObjectType):
+    name_group = graphene.String(required=True)
+    giang_vien_names = graphene.List(graphene.String, required=True)
+
+class GroupQLDACreate(graphene.Mutation):
+    class Arguments:
+        input = GroupQLDAInput(required=True)
+
+    status = graphene.Boolean()
+    group = graphene.Field(lambda: GroupQLDANode)
+    error = graphene.Field(Error)
+
+    def mutate(root, info, input):
+        try:
+            # Tạo nhóm mới
+            group = GroupQLDA.objects.create(
+                name_group=input.name_group
+            )
+
+            # Truy vấn giảng viên dựa trên tên
+            giang_vien_objects = GiangVien.objects.filter(name__in=input.giang_vien_names)
+
+            if giang_vien_objects.exists():
+                group.giang_viens.set(giang_vien_objects)  # Liên kết giảng viên với nhóm
+                return GroupQLDACreate(status=True, group=group)
+            else:
+                error = Error(code="NOT_FOUND", message="Không tìm thấy Giảng viên")
+                return GroupQLDACreate(status=False, error=error)
+
+        except Exception as e:
+            error = Error(code="CREATE_ERROR", message=str(e))
+            return GroupQLDACreate(status=False, error=error)
+
+
 class Mutation(graphene.ObjectType):
     shipping_fee_create = ShippingFeeCreate.Field()
     shipping_fee_update = ShippingFeeUpdate.Field()
@@ -429,4 +466,6 @@ class Mutation(graphene.ObjectType):
 
     giangVien_create = GiangVienCreate.Field()
     giangVien_update = GiangVienUpdate.Field()
+
+    groupQLDA_create = GroupQLDACreate.Field()
 
