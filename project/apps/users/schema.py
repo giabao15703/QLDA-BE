@@ -1520,6 +1520,7 @@ class UserInput(graphene.InputObjectType):
     first_name = graphene.String()
     last_name = graphene.String()
     company_position = graphene.Int()
+    username = graphene.String()
 
 
 class BuyerSubAccountsActivityFilter(FilterSet):
@@ -1775,96 +1776,64 @@ class BuyerUpdateInput(graphene.InputObjectType):
 
 class BuyerCreate(graphene.Mutation):
     class Arguments:
-        buyer = BuyerInput(required=True)
+        user = UserInput(required=True)
 
     status = graphene.Boolean()
-    buyer = graphene.Field(BuyerNode)
+    error = graphene.Field(Error)
 
-    def mutate(self, info, buyer):
+    def mutate(self, info, user):
         try:
-            if (User.objects.filter(user_type=2, email=buyer.user.email)).exists():
+            # Kiểm tra email đã tồn tại hay chưa
+            if User.objects.filter(user_type=2, email=user.email).exists():
                 raise GraphQLError('Email already exists')
+
+            # Tạo username mới dựa trên số lượng người dùng
             user_count = User.objects.filter(user_type=2, company_position=1).count() + 1
             username = '80' + str(user_count).zfill(4)
-            user = User(username=username, user_type=2, **buyer.user)
-            user.set_password(buyer.user.password)
-            user.save()
 
-            company_country = buyer.company_country
-            company_number_of_employee = buyer.company_number_of_employee
-            position = buyer.position
-            language = buyer.language
-            currency = buyer.currency
-            profile_features = 1
-            if buyer.promotion is not None:
-                promotion = buyer.promotion
-                promotion_instance = Promotion.objects.get(id=promotion)
-                if promotion_instance.status == False:
-                    user.delete()
-                    raise GraphQLError('Promotion code has been deactivated ')
-                if promotion_instance.discount == 100:
-                    profile_features = buyer.profile_features
-            else:
-                promotion = None
-
-            gender = buyer.gender
-
-            buyer_instance = Buyer(
-                company_short_name=buyer.company_short_name,
-                company_long_name=buyer.company_long_name,
-                company_logo=buyer.company_logo,
-                company_tax=buyer.company_tax,
-                company_address=buyer.company_address,
-                company_city=buyer.company_city,
-                company_country_id=company_country,
-                company_country_state_id=buyer.company_country_state,
-                company_number_of_employee_id=company_number_of_employee,
-                company_website=buyer.company_website,
-                company_referral_code=buyer.company_referral_code,
-                company_email=buyer.company_email,
-                gender_id=gender,
-                picture=buyer.picture,
-                phone=buyer.phone,
-                position_id=position,
-                language_id=language,
-                currency_id=currency,
-                profile_features_id=profile_features,
-                promotion_id=promotion,
-                user=user,
+            # Tạo đối tượng user mới
+            new_user = User(
+                username=username,
+                user_type=2,
+                first_name=user.first_name,
+                last_name=user.last_name,
+                email=user.email,
+                company_position=user.company_position or 1,
             )
-            buyer_instance.save()
-            UserPayment.objects.create(user=user)
-            if len(buyer.industries) > 10:
-                user.delete()
-                raise GraphQLError("Number industry  is less than or equals 10")
+            new_user.set_password(user.password)
+            new_user.save()
 
-            for industry_id in buyer.industries:
-                industry_buyer = BuyerIndustry(industry_id=industry_id, user_buyer_id=buyer_instance.id)
-                industry_buyer.save()
+            # Tạo bản ghi thanh toán cho user
+            UserPayment.objects.create(user=new_user)
 
+            # Gửi email kích hoạt tài khoản
             email = EmailTemplates.objects.get(item_code='ActivateBuyerAccount')
             title = email.title
 
             t = Template(email.content)
+            last_name = user.last_name if user.last_name is not None else ""
+            first_name = user.first_name if user.first_name is not None else ""
+
             c = Context(
                 {
-                    "image": info.context.build_absolute_uri("/static/logo_mail.png"),
-                    "name": user.last_name + " " + user.first_name,
-                    "username": user.username,
-                    "password": buyer.user.password,
+                    "name": last_name + " " + first_name,
+                    "username": username,
+                    "password": user.password,
                 }
             )
+
             output = t.render(c)
 
             try:
-                send_mail(title, output, "NextPro <no-reply@nextpro.io>", [user.email], html_message=output, fail_silently=True)
+                send_mail(title, output, "NextPro <no-reply@nextpro.io>", [new_user.email], html_message=output, fail_silently=True)
             except:
                 print("fail mail")
-            return BuyerCreate(status=True, buyer=buyer_instance)
+
+            return BuyerCreate(status=True)  # Không trả về thông tin buyer nếu không cần
+
         except Exception as errors:
             transaction.set_rollback(True)
-            return BuyerCreate(errors)
-
+            raise GraphQLError(str(errors))
 
 class BuyerUpdate(graphene.Mutation):
     class Arguments:
