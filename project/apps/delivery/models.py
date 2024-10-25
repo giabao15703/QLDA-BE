@@ -1,3 +1,4 @@
+import random
 from django.db import models
 from apps.master_data.models import (
     CountryState,
@@ -36,15 +37,32 @@ class DeliveryResponsible(models.Model):
     class Meta:
         db_table = 'delivery_delivery_responsible'
 
+
 class GiangVien(models.Model):
     name = models.CharField(max_length=255)
     de_tai = models.CharField(max_length=1024)
 
     class Meta:
         db_table = 'giangvien'
+
 class GroupQLDA(models.Model):
-    name_group = models.CharField(max_length=255)
-    giang_viens = models.ManyToManyField(GiangVien, related_name='groups')
+    ma_Nhom = models.CharField(max_length=10, unique=True, default="")  # Mã nhóm
+    name = models.CharField(max_length=255)
+    de_tai = models.CharField(max_length=1024)
+    status = models.BooleanField(default=True)  # True là còn mở, False là đã đầy
 
     class Meta:
-        db_table = 'group_Qlda'
+        db_table = 'group_qlda'
+    def save(self, *args, **kwargs):
+        if not self.ma_Nhom:
+            # Tạo mã nhóm ngẫu nhiên và kiểm tra xem có trùng lặp không
+            self.ma_Nhom = self.generate_unique_ma_nhom()
+        super().save(*args, **kwargs)
+
+    @staticmethod
+    def generate_unique_ma_nhom():
+        # Lặp lại việc tạo mã nhóm cho đến khi không trùng lặp
+        while True:
+            ma_nhom = f"DA{random.randint(100, 999)}"  # Tạo 3 số ngẫu nhiên
+            if not GroupQLDA.objects.filter(ma_Nhom=ma_nhom).exists():  # Kiểm tra trùng lặp
+                return ma_nhom

@@ -10,7 +10,7 @@ from apps.delivery.models import (
     TransporterList,
     DeliveryResponsible,
     GiangVien,
-    GroupQLDA
+    GroupQLDA,
 )
 from apps.users.models import Token
 from graphene import relay, ObjectType, Connection
@@ -109,20 +109,29 @@ class GiangVienNode(DjangoObjectType):
         connection_class = ExtendedConnection
 
 class GroupQLDAFilter(FilterSet):
-    de_tai = django_filters.CharFilter(field_name='de_tai', lookup_expr="icontains")
+    name = django_filters.CharFilter(field_name="name", lookup_expr="icontains")
+    de_tai = django_filters.CharFilter(field_name="de_tai", lookup_expr="icontains")
+    status = django_filters.BooleanFilter(field_name="status")
+
+    def filter_members_count(self, queryset, name, value):
+        return queryset.annotate(num_members=models.Count('members')).filter(num_members=value)
 
     class Meta:
         model = GroupQLDA
-        fields = ['de_tai'] 
+        fields = []
 
 
 class GroupQLDANode(DjangoObjectType):
+    members_count = graphene.Int()
+
     class Meta:
         model = GroupQLDA
+        filterset_class = GroupQLDAFilter
         interfaces = (CustomNode,)
         connection_class = ExtendedConnection
 
-        
+
+
 class Query(object):
     shipping_fee = CustomNode.Field(ShippingFeeNode)
     shipping_fees = CustomizeFilterConnectionField(ShippingFeeNode)
@@ -136,5 +145,6 @@ class Query(object):
     giang_vien = CustomNode.Field(GiangVienNode)
     giang_viens = CustomizeFilterConnectionField(GiangVienNode)
 
-    group = CustomNode.Field(GroupQLDANode)
-    groups = CustomizeFilterConnectionField(GroupQLDANode)
+    group_qlda = CustomNode.Field(GroupQLDANode)
+    group_qldas = CustomizeFilterConnectionField(GroupQLDANode, filterset_class=GroupQLDAFilter)
+

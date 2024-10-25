@@ -2,7 +2,7 @@ import datetime
 import filetype
 import graphene
 import re
-
+import random
 from django.db.models import Subquery
 
 from apps.delivery.schema import (
@@ -418,37 +418,66 @@ class GiangVienUpdate(graphene.Mutation):
             return GiangVienUpdate(status=False, error=error)
 
 class GroupQLDAInput(graphene.InputObjectType):
-    name_group = graphene.String(required=True)
-    giang_vien_names = graphene.List(graphene.String, required=True)
+    name = graphene.String(required=True)
+    
 
 class GroupQLDACreate(graphene.Mutation):
     class Arguments:
         input = GroupQLDAInput(required=True)
 
     status = graphene.Boolean()
-    group = graphene.Field(lambda: GroupQLDANode)
+    group_qlda = graphene.Field(lambda: GroupQLDANode)
     error = graphene.Field(Error)
 
     def mutate(root, info, input):
         try:
-            # Tạo nhóm mới
-            group = GroupQLDA.objects.create(
-                name_group=input.name_group
+            user_creating_group = info.context.user
+
+            group_qlda = GroupQLDA(
+                name=input.name,
             )
+            
+            group_qlda.save()  # Mã nhóm sẽ tự động được kiểm tra trùng lặp và tạo mới nếu cần
 
-            # Truy vấn giảng viên dựa trên tên
-            giang_vien_objects = GiangVien.objects.filter(name__in=input.giang_vien_names)
-
-            if giang_vien_objects.exists():
-                group.giang_viens.set(giang_vien_objects)  # Liên kết giảng viên với nhóm
-                return GroupQLDACreate(status=True, group=group)
-            else:
-                error = Error(code="NOT_FOUND", message="Không tìm thấy Giảng viên")
-                return GroupQLDACreate(status=False, error=error)
-
+            return GroupQLDACreate(status=True, group_qlda=group_qlda)
         except Exception as e:
             error = Error(code="CREATE_ERROR", message=str(e))
             return GroupQLDACreate(status=False, error=error)
+
+
+
+
+class GroupQLDAJoin(graphene.Mutation):
+    class Arguments:
+        group_id = graphene.ID(required=True)
+
+    status = graphene.Boolean()
+    group_qlda = graphene.Field(lambda: GroupQLDANode)
+    error = graphene.Field(Error)
+
+    def mutate(root, info, group_id):
+        try:
+            user = info.context.user  # Lấy người dùng hiện tại
+            group_qlda = GroupQLDA.objects.get(pk=group_id)
+
+            if group_qlda.members.count() >= 3:
+                error = Error(code="GROUP_FULL", message="Nhóm đã đủ thành viên")
+                return GroupQLDAJoin(status=False, error=error)
+
+            group_qlda.members.add(user)  # Thêm người dùng vào nhóm
+
+            # Nếu nhóm đã có 3 thành viên, đặt trạng thái thành không hoạt động
+            if group_qlda.members.count() >= 3:
+                group_qlda.status = False
+                group_qlda.save()
+
+            return GroupQLDAJoin(status=True, group_qlda=group_qlda)
+        except GroupQLDA.DoesNotExist:
+            error = Error(code="NOT_FOUND", message="Nhóm không tồn tại")
+            return GroupQLDAJoin(status=False, error=error)
+        except Exception as e:
+            error = Error(code="JOIN_ERROR", message=str(e))
+            return GroupQLDAJoin(status=False, error=error)
 
 
 class Mutation(graphene.ObjectType):
@@ -467,5 +496,5 @@ class Mutation(graphene.ObjectType):
     giangVien_create = GiangVienCreate.Field()
     giangVien_update = GiangVienUpdate.Field()
 
-    groupQLDA_create = GroupQLDACreate.Field()
+    group_qlda_create = GroupQLDACreate.Field()
 
