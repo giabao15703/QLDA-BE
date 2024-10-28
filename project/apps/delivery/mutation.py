@@ -10,16 +10,19 @@ from apps.delivery.schema import (
     TransporterListNode,
     DeliveryResponsibleNode,
     GetToken,
-    GiangVienNode,
+    DeTaiNode,
     GroupQLDANode
+
 )
 
 from apps.delivery.models import (
     ShippingFee,
     TransporterList,
     DeliveryResponsible,
-    GiangVien,
-    GroupQLDA
+    DeTai,
+    GroupQLDA,
+    JoinGroup,
+    User
 )
 
 from apps.delivery.error_code import (
@@ -370,31 +373,41 @@ class DeliveryResponsibleDelete(graphene.Mutation):
             error = Error(code="DELIVERY_13", message=DeliveryError.DELIVERY_13)
             return DeliveryResponsibleDelete(status=False, error=error)
 
-class GiangVienInput(graphene.InputObjectType):
-    name = graphene.String(required=True)
-    de_tai = graphene.String(required=True)
-    
+class DeTaiInput(graphene.InputObjectType):
+    giang_vien_full_name = graphene.String(required=True)  # Lấy full_name thay vì ID
+    ten_de_tai = graphene.String(required=True)
+    mo_ta = graphene.String(required=True)
 
-class GiangVienCreate(graphene.Mutation):
+class DeTaiCreate(graphene.Mutation):
     class Arguments:
-        input = GiangVienInput(required=True)
+        input = DeTaiInput(required=True)
 
     status = graphene.Boolean()
-    giangVien = graphene.Field(GiangVienNode)
+    de_tai = graphene.Field(DeTaiNode)
     error = graphene.Field(Error)
 
     def mutate(root, info, input):
         try:
-            giangVien = GiangVien.objects.create(
-                name=input.name,
-                de_tai=input.de_tai
+            # Tìm giảng viên dựa trên full_name
+            giang_vien = User.objects.get(full_name=input.giang_vien_full_name)
+            
+            de_tai = DeTai.objects.create(
+                giang_vien=giang_vien,
+                ten_de_tai=input.ten_de_tai,
+                mo_ta=input.mo_ta
             )
-            return GiangVienCreate(status=True, giangVien=giangVien)
+            return DeTaiCreate(status=True, de_tai=de_tai)
+        except User.DoesNotExist:
+            error = Error(code="NOT_FOUND", message="Giang viên không tồn tại")
+            return DeTaiCreate(status=False, error=error)
         except Exception as e:
             error = Error(code="CREATE_ERROR", message=str(e))
-            return GiangVienCreate(status=False, error=error)
+            return DeTaiCreate(status=False, error=error)
+
+
+
             
-class GiangVienUpdate(graphene.Mutation):
+""" class GiangVienUpdate(graphene.Mutation):
     class Arguments:
         id = graphene.ID(required=True)
         input = GiangVienInput(required=True)
@@ -415,7 +428,7 @@ class GiangVienUpdate(graphene.Mutation):
             return GiangVienUpdate(status=False, error=error)
         except Exception as e:
             error = Error(code="UPDATE_ERROR", message=str(e))
-            return GiangVienUpdate(status=False, error=error)
+            return GiangVienUpdate(status=False, error=error) """
 
 class GroupQLDAInput(graphene.InputObjectType):
     name = graphene.String(required=True)
@@ -424,60 +437,75 @@ class GroupQLDAInput(graphene.InputObjectType):
 class GroupQLDACreate(graphene.Mutation):
     class Arguments:
         input = GroupQLDAInput(required=True)
+        user_email = graphene.String(required=True)
 
     status = graphene.Boolean()
     group_qlda = graphene.Field(lambda: GroupQLDANode)
     error = graphene.Field(Error)
 
-    def mutate(root, info, input):
+    def mutate(root, info, input, user_email):
         try:
-            user_creating_group = info.context.user
+            # Tìm người dùng dựa trên email
+            user_creating_group = User.objects.get(email=user_email)
 
+            # Tạo nhóm mới
             group_qlda = GroupQLDA(
                 name=input.name,
             )
-            
-            group_qlda.save()  # Mã nhóm sẽ tự động được kiểm tra trùng lặp và tạo mới nếu cần
+            group_qlda.save() 
+
+            # Thêm người dùng vào nhóm
+            JoinGroup.objects.create(user=user_creating_group, group=group_qlda)
+
+            # Cập nhật số lượng thành viên trong nhóm
+            group_qlda.member_count += 1
+            group_qlda.save()  # Cập nhật lại số lượng thành viên
 
             return GroupQLDACreate(status=True, group_qlda=group_qlda)
+        except User.DoesNotExist:
+            error = Error(code="USER_NOT_FOUND", message="Người dùng không tồn tại")
+            return GroupQLDACreate(status=False, error=error)
         except Exception as e:
             error = Error(code="CREATE_ERROR", message=str(e))
             return GroupQLDACreate(status=False, error=error)
 
-
-
-
 class GroupQLDAJoin(graphene.Mutation):
     class Arguments:
         group_id = graphene.ID(required=True)
+        user_email = graphene.String(required=True)
 
     status = graphene.Boolean()
-    group_qlda = graphene.Field(lambda: GroupQLDANode)
     error = graphene.Field(Error)
 
-    def mutate(root, info, group_id):
+    def mutate(root, info, group_id, user_email):
         try:
-            user = info.context.user  # Lấy người dùng hiện tại
+            # Tìm nhóm dựa trên group_id
             group_qlda = GroupQLDA.objects.get(pk=group_id)
 
-            if group_qlda.members.count() >= 3:
-                error = Error(code="GROUP_FULL", message="Nhóm đã đủ thành viên")
-                return GroupQLDAJoin(status=False, error=error)
+            # Tìm người dùng dựa trên email
+            user = User.objects.get(email=user_email)
 
-            group_qlda.members.add(user)  # Thêm người dùng vào nhóm
+            # Kiểm tra xem người dùng đã ở trong nhóm chưa
+            if JoinGroup.objects.filter(user=user, group=group_qlda).exists():
+                return GroupQLDAJoin(status=False, error=Error(code="ALREADY_IN_GROUP", message="Người dùng đã ở trong nhóm này"))
 
-            # Nếu nhóm đã có 3 thành viên, đặt trạng thái thành không hoạt động
-            if group_qlda.members.count() >= 3:
-                group_qlda.status = False
-                group_qlda.save()
+            # Thêm người dùng vào nhóm
+            JoinGroup.objects.create(user=user, group=group_qlda)
 
-            return GroupQLDAJoin(status=True, group_qlda=group_qlda)
+            # Cập nhật số lượng thành viên trong nhóm
+            group_qlda.member_count += 1
+            group_qlda.save()
+
+            return GroupQLDAJoin(status=True)
         except GroupQLDA.DoesNotExist:
-            error = Error(code="NOT_FOUND", message="Nhóm không tồn tại")
-            return GroupQLDAJoin(status=False, error=error)
+            return GroupQLDAJoin(status=False, error=Error(code="GROUP_NOT_FOUND", message="Nhóm không tồn tại"))
+        except User.DoesNotExist:
+            return GroupQLDAJoin(status=False, error=Error(code="USER_NOT_FOUND", message="Người dùng không tồn tại"))
         except Exception as e:
-            error = Error(code="JOIN_ERROR", message=str(e))
-            return GroupQLDAJoin(status=False, error=error)
+            return GroupQLDAJoin(status=False, error=Error(code="JOIN_ERROR", message=str(e)))
+
+
+
 
 
 class Mutation(graphene.ObjectType):
@@ -493,8 +521,8 @@ class Mutation(graphene.ObjectType):
     delivery_responsible_update = DeliveryResponsibleUpdate.Field()
     delivery_responsible_delete = DeliveryResponsibleDelete.Field()
 
-    giangVien_create = GiangVienCreate.Field()
-    giangVien_update = GiangVienUpdate.Field()
+    deTai_create = DeTaiCreate.Field()
 
     group_qlda_create = GroupQLDACreate.Field()
+    group_qlda_join = GroupQLDAJoin.Field()
 

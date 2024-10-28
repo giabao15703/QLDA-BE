@@ -9,8 +9,10 @@ from apps.delivery.models import (
     ShippingFee,
     TransporterList,
     DeliveryResponsible,
-    GiangVien,
+    DeTai,
+    User,
     GroupQLDA,
+    JoinGroup
 )
 from apps.users.models import Token
 from graphene import relay, ObjectType, Connection
@@ -92,25 +94,33 @@ class DeliveryResponsibleNode(DjangoObjectType):
         interfaces = (CustomNode,)
         connection_class = ExtendedConnection
 
-class GiangVienFilter(FilterSet):
+class DeTaiFilter(FilterSet):
     id = django_filters.CharFilter(field_name='id', lookup_expr="exact")
-    name = django_filters.CharFilter(field_name='name', lookup_expr="icontains")
-    de_tai = django_filters.CharFilter(field_name='de_tai', lookup_expr="icontains")
+    giang_vien = django_filters.CharFilter(field_name='giang_vien__full_name', lookup_expr="icontains")
+    ten_de_tai = django_filters.CharFilter(field_name='ten_de_tai', lookup_expr="icontains")
+    mo_ta = django_filters.CharFilter(field_name='mo_ta', lookup_expr="icontains")
 
     class Meta:
-        model = GiangVien
+        model = DeTai
         fields = []
 
-class GiangVienNode(DjangoObjectType):
+
+class DeTaiNode(DjangoObjectType):
+    giang_vien_full_name = graphene.String()
+
     class Meta:
-        model = GiangVien
-        filterset_class = GiangVienFilter
+        model = DeTai
+        filterset_class = DeTaiFilter
         interfaces = (CustomNode,)
         connection_class = ExtendedConnection
 
+    def resolve_giang_vien_full_name(self, info):
+        return self.giang_vien.full_name 
+
+
+
 class GroupQLDAFilter(FilterSet):
     name = django_filters.CharFilter(field_name="name", lookup_expr="icontains")
-    de_tai = django_filters.CharFilter(field_name="de_tai", lookup_expr="icontains")
     status = django_filters.BooleanFilter(field_name="status")
 
     def filter_members_count(self, queryset, name, value):
@@ -130,7 +140,14 @@ class GroupQLDANode(DjangoObjectType):
         interfaces = (CustomNode,)
         connection_class = ExtendedConnection
 
+class JoinGroupNode(DjangoObjectType):
+    members_count = graphene.Int()
 
+    class Meta:
+        model = JoinGroup
+        filterset_class = GroupQLDAFilter
+        interfaces = (CustomNode,)
+        connection_class = ExtendedConnection
 
 class Query(object):
     shipping_fee = CustomNode.Field(ShippingFeeNode)
@@ -142,9 +159,11 @@ class Query(object):
     delivery_responsible = CustomNode.Field(DeliveryResponsibleNode)
     delivery_responsibles = CustomizeFilterConnectionField(DeliveryResponsibleNode)
 
-    giang_vien = CustomNode.Field(GiangVienNode)
-    giang_viens = CustomizeFilterConnectionField(GiangVienNode)
+    de_tai = CustomNode.Field(DeTaiNode)
+    de_tais = CustomizeFilterConnectionField(DeTaiNode)
 
     group_qlda = CustomNode.Field(GroupQLDANode)
     group_qldas = CustomizeFilterConnectionField(GroupQLDANode, filterset_class=GroupQLDAFilter)
+
+    join_group = CustomNode.Field(JoinGroupNode)
 
