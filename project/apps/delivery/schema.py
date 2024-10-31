@@ -12,6 +12,7 @@ from apps.delivery.models import (
     DeTai,
     User,
     GroupQLDA,
+    JoinRequest,
     JoinGroup
 )
 from apps.users.models import Token
@@ -149,6 +150,36 @@ class JoinGroupNode(DjangoObjectType):
         interfaces = (CustomNode,)
         connection_class = ExtendedConnection
 
+class JoinRequestFilter(FilterSet):
+    user_id = django_filters.NumberFilter(field_name="user_id", lookup_expr="exact")
+    group_id = django_filters.NumberFilter(field_name="group_id", lookup_expr="exact")
+    is_approved = django_filters.BooleanFilter(field_name="is_approved", lookup_expr="exact")
+
+    class Meta:
+        model = JoinRequest
+        fields = []
+class JoinRequestNode(DjangoObjectType):
+    members_count = graphene.Int()
+    leader_notification = graphene.String()  # Thêm trường để chứa thông báo dành riêng cho leader
+
+    class Meta:
+        model = JoinRequest
+        filterset_class = JoinRequestFilter
+        interfaces = (CustomNode,)
+        connection_class = ExtendedConnection
+
+    def resolve_leader_notification(self, info):
+        # Lấy thông tin người dùng hiện tại
+        current_user = info.context.user
+
+        # Kiểm tra nếu người dùng hiện tại là leader của nhóm bằng cách so sánh với leader_user_id
+        if current_user.id == self.leader_user_id:
+            return f"Thông báo: User {self.user.id} đã gửi yêu cầu tham gia nhóm {self.group.id}."
+        else:
+            return None  # Không hiện thông báo cho người không phải leader
+
+
+
 class Query(object):
     shipping_fee = CustomNode.Field(ShippingFeeNode)
     shipping_fees = CustomizeFilterConnectionField(ShippingFeeNode)
@@ -166,4 +197,7 @@ class Query(object):
     group_qldas = CustomizeFilterConnectionField(GroupQLDANode, filterset_class=GroupQLDAFilter)
 
     join_group = CustomNode.Field(JoinGroupNode)
+    join_request= CustomNode.Field(JoinRequestNode)
+    
+    join_requests = CustomizeFilterConnectionField(JoinRequestNode, filterset_class=JoinRequestFilter)
 

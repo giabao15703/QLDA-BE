@@ -22,6 +22,7 @@ from apps.delivery.models import (
     DeTai,
     GroupQLDA,
     JoinGroup,
+    JoinRequest,
     User
 )
 
@@ -452,14 +453,14 @@ class GroupQLDACreate(graphene.Mutation):
             group_qlda = GroupQLDA(
                 name=input.name,
             )
-            group_qlda.save() 
+            group_qlda.save()
 
-            # Thêm người dùng vào nhóm
-            JoinGroup.objects.create(user=user_creating_group, group=group_qlda)
+            # Thêm người dùng vào nhóm với vai trò trưởng nhóm
+            JoinGroup.objects.create(user=user_creating_group, group=group_qlda, role="leader")
 
             # Cập nhật số lượng thành viên trong nhóm
             group_qlda.member_count += 1
-            group_qlda.save()  # Cập nhật lại số lượng thành viên
+            group_qlda.save()
 
             return GroupQLDACreate(status=True, group_qlda=group_qlda)
         except User.DoesNotExist:
@@ -485,16 +486,19 @@ class GroupQLDAJoin(graphene.Mutation):
             # Tìm người dùng dựa trên email
             user = User.objects.get(email=user_email)
 
-            # Kiểm tra xem người dùng đã ở trong nhóm chưa
-            if JoinGroup.objects.filter(user=user, group=group_qlda).exists():
-                return GroupQLDAJoin(status=False, error=Error(code="ALREADY_IN_GROUP", message="Người dùng đã ở trong nhóm này"))
+            # Kiểm tra nếu yêu cầu đã tồn tại hoặc người dùng đã ở trong nhóm
+            if JoinRequest.objects.filter(user=user, group=group_qlda, is_approved=False).exists():
+                return GroupQLDAJoin(status=False, error=Error(code="REQUEST_ALREADY_SENT", message="Yêu cầu đã được gửi"))
 
-            # Thêm người dùng vào nhóm
-            JoinGroup.objects.create(user=user, group=group_qlda)
+            # Tạo yêu cầu tham gia mới
+            join_request = JoinRequest.objects.create(user=user, group=group_qlda)
 
-            # Cập nhật số lượng thành viên trong nhóm
-            group_qlda.member_count += 1
-            group_qlda.save()
+            # Gửi thông báo đến leader của nhóm
+            leader = group_qlda.join_groups.filter(role="leader").first().user
+            send_notification(
+                user=leader,
+                message=f"{user.email} đã gửi yêu cầu tham gia vào nhóm {group_qlda.name}"
+            )
 
             return GroupQLDAJoin(status=True)
         except GroupQLDA.DoesNotExist:
@@ -505,6 +509,50 @@ class GroupQLDAJoin(graphene.Mutation):
             return GroupQLDAJoin(status=False, error=Error(code="JOIN_ERROR", message=str(e)))
 
 
+class AcceptJoinRequest(graphene.Mutation):
+    class Arguments:
+        join_request_id = graphene.ID(required=True)
+
+    status = graphene.Boolean()
+    error = graphene.Field(Error)
+
+    def mutate(root, info, join_request_id):
+        try:
+            # Lấy yêu cầu tham gia dựa trên ID
+            join_request = JoinRequest.objects.get(pk=join_request_id)
+
+            # Kiểm tra nếu user hiện tại là leader của nhóm dựa trên leader_user_id
+            if info.context.user.id != join_request.leader_user_id:
+                return AcceptJoinRequest(
+                    status=False,
+                    error=Error(code="PERMISSION_DENIED", message="Bạn không có quyền chấp nhận yêu cầu này")
+                )
+
+            # Đánh dấu yêu cầu là đã được phê duyệt
+            join_request.is_approved = True
+            join_request.save()
+
+            # Thêm người dùng vào nhóm với vai trò là thành viên
+            JoinGroup.objects.create(user=join_request.user, group=join_request.group, role="member")
+
+            # Tăng số lượng thành viên trong nhóm
+            join_request.group.member_count += 1
+            join_request.group.save()
+
+            # Gửi thông báo tới leader về việc chấp nhận yêu cầu
+            join_request.send_notification(f"User {join_request.user.id} đã được chấp nhận vào nhóm {join_request.group.id}.")
+
+            return AcceptJoinRequest(status=True)
+        except JoinRequest.DoesNotExist:
+            return AcceptJoinRequest(
+                status=False,
+                error=Error(code="REQUEST_NOT_FOUND", message="Yêu cầu tham gia không tồn tại")
+            )
+        except Exception as e:
+            return AcceptJoinRequest(
+                status=False,
+                error=Error(code="ACCEPT_ERROR", message=str(e))
+            )
 
 
 
@@ -525,4 +573,5 @@ class Mutation(graphene.ObjectType):
 
     group_qlda_create = GroupQLDACreate.Field()
     group_qlda_join = GroupQLDAJoin.Field()
+    accept_join_request = AcceptJoinRequest.Field()
 

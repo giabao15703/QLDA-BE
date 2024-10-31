@@ -78,7 +78,41 @@ class GroupQLDA(models.Model):
 class JoinGroup(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="join_groups")
     group = models.ForeignKey(GroupQLDA, on_delete=models.CASCADE, related_name="join_groups")
+    role = models.CharField(max_length=20, default="member")
     
     class Meta:
         db_table = 'join_group'
         unique_together = ('user', 'group')
+
+class JoinRequest(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="join_requests")
+    group = models.ForeignKey(GroupQLDA, on_delete=models.CASCADE, related_name="join_requests")
+    is_approved = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+    leader_user_id = models.IntegerField(null=True, blank=True)  # Field mới để lưu userId của leader
+
+    @staticmethod
+    def get_group_leader_user_id(group_id):
+        """Lấy userId của leader dựa trên group_id từ bảng JoinGroup."""
+        leader = JoinGroup.objects.filter(group_id=group_id, role="leader").first()
+        return leader.user.id if leader else None
+
+    def save(self, *args, **kwargs):
+        # Trước khi lưu JoinRequest, gán leader_user_id nếu chưa có
+        if not self.leader_user_id:
+            leader_user_id = self.get_group_leader_user_id(self.group.id)
+            if leader_user_id:
+                self.leader_user_id = leader_user_id
+        super().save(*args, **kwargs)
+
+    def send_notification_to_leader(self):
+        """Gửi thông báo cho leader của nhóm khi có yêu cầu tham gia mới."""
+        leader_user_id = self.get_group_leader_user_id(self.group.id)
+        leader_user = User.objects.get(id=leader_user_id) if leader_user_id else None
+        if leader_user:
+            print(f"Gửi thông báo đến {leader_user.email}: User {self.user.id} đã gửi yêu cầu tham gia nhóm {self.group.id}.")
+
+    class Meta:
+        db_table = 'join_request'
+        unique_together = ('user', 'group')
+
