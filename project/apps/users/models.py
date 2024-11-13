@@ -650,9 +650,15 @@ class BuyerIndustry(models.Model):
 
 
 class Admin(models.Model):
+    ROLE_CHOICES = [
+        (1, 'Trưởng khoa'),
+        (2, 'Giáo vụ'),
+        (3, 'Giảng viên')
+    ]
+
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     long_name = models.CharField(max_length=96)
-    picture = models.ImageField(upload_to=picture_directory_path, null=True)
+    role = models.IntegerField(choices=ROLE_CHOICES, default=3)
 
     class Meta:
         db_table = 'users_admin'

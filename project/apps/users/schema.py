@@ -3682,10 +3682,11 @@ class UserAdminInput(graphene.InputObjectType):
     status = graphene.Int()
 
 class AdminInput(graphene.InputObjectType):
-    user = graphene.Field(UserAdminInput, required=True)
+    user = UserInput(required=True)
     long_name = graphene.String(required=True)
-    picture = Upload()
-    permissions = graphene.List(PermissionInput)
+    role = graphene.Int(required=True)  # Thêm trường role để xác định vai trò
+
+
 
 class UserAdminUpdateInput(graphene.InputObjectType):
     email = graphene.String(required=True)
@@ -3713,9 +3714,18 @@ class AdminCreate(graphene.Mutation):
 
     def mutate(root, info, admin=None):
         if checkPermission(info):
-            if (User.objects.filter(user_type=1, email=admin.user.email)).exists():
+            # Kiểm tra vai trò của người dùng hiện tại
+            current_admin = Admin.objects.get(user=info.context.user)
+            if current_admin.role != 1:  # Nếu không phải Trưởng khoa
+                error = Error(code="USER_03", message="Bạn không có quyền tạo tài khoản.")
+                return AdminCreate(status=False, error=error)
+
+            # Kiểm tra nếu email đã tồn tại
+            if User.objects.filter(user_type=1, email=admin.user.email).exists():
                 error = Error(code="USER_01", message=UserError.USER_01)
                 return AdminCreate(status=False, error=error)
+
+            # Tạo User và Admin mới
             last_created_admin = User.objects.filter(user_type=1).order_by("-username").first()
             last_user_id_str = last_created_admin.username[2:]
             user_count = int(last_user_id_str) + 1
@@ -3723,45 +3733,15 @@ class AdminCreate(graphene.Mutation):
             user = User(username=username, user_type=1, **admin.user)
             user.set_password(admin.user.password)
             user.save()
-            admin_intance = Admin(long_name=admin.long_name, picture=admin.picture, user=user)
-            admin_intance.save()
-            time_now = timezone.now()
-            for permission in admin.permissions:
-                valid_from1 = datetime.strptime(permission.valid_from, '%Y-%m-%dT%H:%M:%S%z')
-                status_input = 4
-                value_form_check = valid_from1 + timezone.timedelta(days=1)
-                if valid_from1 <= time_now < value_form_check:
-                    status_input = 1
-                valid_to1 = datetime.strptime(permission.valid_to, '%Y-%m-%dT%H:%M:%S%z')
-                group_permission = GroupPermission.objects.filter(group_id=permission.modules, role=permission.role).first()
-                if group_permission is None:
-                    transaction.set_rollback(True)
-                    error = Error(code="USER_36", message=UserError.USER_36)
-                    return AdminCreate(status=False, error=error)
-                user_permission_mapping = UsersPermission.objects.filter(permission_id=group_permission.id, status__in=[1, 4])
-                for user_permission in user_permission_mapping:
-                    valid_from = user_permission.valid_from
-                    valid_to = user_permission.valid_to
-                    if valid_from <= valid_from1 <= valid_to:
-                        transaction.set_rollback(True)
-                        error = Error(code="USER_07", message=UserError.USER_07)
-                        return AdminCreate(status=False, error=error)
-                    if valid_from <= valid_to1 <= valid_to:
-                        transaction.set_rollback(True)
-                        error = Error(code="USER_07", message=UserError.USER_07)
-                        return AdminCreate(status=False, error=error)
-                    if valid_from >= valid_from1 and valid_to <= valid_to1:
-                        transaction.set_rollback(True)
-                        error = Error(code="USER_07", message=UserError.USER_07)
-                        return AdminCreate(status=False, error=error)
-                user_permission = UsersPermission(
-                    permission_id=group_permission.id, valid_from=permission.valid_from, valid_to=permission.valid_to, user=user, status=status_input
-                )
-                user_permission.save()
-            return AdminCreate(status=True, admin=admin_intance)
+            
+            admin_instance = Admin(long_name=admin.long_name, user=user, role=admin.role)  # Không còn `picture`
+            admin_instance.save()
+
+            return AdminCreate(status=True, admin=admin_instance)
         else:
             error = Error(code="USER_02", message=UserError.USER_02)
             return AdminCreate(status=False, error=error)
+
 
 class AdminUpdate(graphene.Mutation):
     class Arguments:
