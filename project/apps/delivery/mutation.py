@@ -3,15 +3,19 @@ import filetype
 import graphene
 import re
 import random
+from graphene import relay 
 from django.db.models import Subquery
-
+from graphene_django import DjangoObjectType
+from django.utils import timezone
+from django.core.exceptions import ValidationError  # Thêm dòng này để import ValidationError
 from apps.delivery.schema import (
     ShippingFeeNode,
     TransporterListNode,
     DeliveryResponsibleNode,
     GetToken,
     DeTaiNode,
-    GroupQLDANode
+    GroupQLDANode,
+    KeHoachDoAnNode,
 
 )
 
@@ -23,7 +27,8 @@ from apps.delivery.models import (
     GroupQLDA,
     JoinGroup,
     JoinRequest,
-    User
+    User,
+    KeHoachDoAn
 )
 
 from apps.delivery.error_code import (
@@ -375,7 +380,7 @@ class DeliveryResponsibleDelete(graphene.Mutation):
             return DeliveryResponsibleDelete(status=False, error=error)
 
 class DeTaiInput(graphene.InputObjectType):
-    giang_vien_full_name = graphene.String(required=True)  # Lấy full_name thay vì ID
+    giangvien_id = graphene.ID(required=True)  # Dùng ID của giảng viên thay vì full_name
     ten_de_tai = graphene.String(required=True)
     mo_ta = graphene.String(required=True)
 
@@ -389,47 +394,90 @@ class DeTaiCreate(graphene.Mutation):
 
     def mutate(root, info, input):
         try:
-            # Tìm giảng viên dựa trên full_name
-            giang_vien = User.objects.get(full_name=input.giang_vien_full_name)
-            
+            # Tìm giảng viên dựa trên ID
+            giang_vien = User.objects.get(id=input.giangvien_id)
+
+            # Kiểm tra xem có kế hoạch đồ án nào đang chạy và trong khoảng thời gian cho phép tạo đồ án
+            now = timezone.now().date()  # Lấy thời gian hiện tại
+            ke_hoach_do_an = KeHoachDoAn.objects.filter(
+                tgbd_tao_do_an__lte=now,  # Ngày bắt đầu tạo đồ án phải trước hoặc bằng hôm nay
+                tgkt_tao_do_an__gte=now   # Ngày kết thúc tạo đồ án phải sau hoặc bằng hôm nay
+            ).first()  # Kiểm tra xem có tồn tại bản ghi phù hợp không
+
+            if not ke_hoach_do_an:
+                error = Error(code="NO_VALID_KEHOACH", message="Không có kế hoạch đồ án nào trong thời gian cho phép tạo đề tài.")
+                return DeTaiCreate(status=False, error=error)
+
+            # Tạo đề tài
             de_tai = DeTai.objects.create(
-                giang_vien=giang_vien,
+                giangvien_id=giang_vien,
+                kehoachdoan_id=ke_hoach_do_an,
                 ten_de_tai=input.ten_de_tai,
                 mo_ta=input.mo_ta
             )
             return DeTaiCreate(status=True, de_tai=de_tai)
+        
         except User.DoesNotExist:
-            error = Error(code="NOT_FOUND", message="Giang viên không tồn tại")
+            error = Error(code="NOT_FOUND", message="Giảng viên không tồn tại")
+            return DeTaiCreate(status=False, error=error)
+        except KeHoachDoAn.DoesNotExist:
+            error = Error(code="NOT_FOUND", message="Kế hoạch đồ án không tồn tại")
             return DeTaiCreate(status=False, error=error)
         except Exception as e:
             error = Error(code="CREATE_ERROR", message=str(e))
             return DeTaiCreate(status=False, error=error)
 
 
-
-            
-""" class GiangVienUpdate(graphene.Mutation):
+class DeTaiUpdate(graphene.Mutation):
     class Arguments:
         id = graphene.ID(required=True)
-        input = GiangVienInput(required=True)
+        input = DeTaiInput(required=True)
 
     status = graphene.Boolean()
-    giangVien = graphene.Field(lambda: GiangVienNode)
+    de_tai = graphene.Field(DeTaiNode)
     error = graphene.Field(Error)
 
     def mutate(root, info, id, input):
         try:
-            giangVien = GiangVien.objects.get(pk=id)
-            giangVien.name = input.name
-            giangVien.de_tai = input.de_tai
-            giangVien.save()
-            return GiangVienUpdate(status=True, giangVien=giangvien)
-        except GiangVien.DoesNotExist:
-            error = Error(code="NOT_FOUND", message="GiangVien không tồn tại")
-            return GiangVienUpdate(status=False, error=error)
+            # Lấy đối tượng đề tài cần cập nhật
+            de_tai = DeTai.objects.get(id=id)
+
+            # Cập nhật thông tin tên đề tài và mô tả
+            de_tai.ten_de_tai = input.ten_de_tai
+            de_tai.mo_ta = input.mo_ta
+
+            # Lưu thay đổi
+            de_tai.save()
+            return DeTaiUpdate(status=True, de_tai=de_tai)
+
+        except DeTai.DoesNotExist:
+            error = Error(code="NOT_FOUND", message="Đề tài không tồn tại")
+            return DeTaiUpdate(status=False, error=error)
         except Exception as e:
             error = Error(code="UPDATE_ERROR", message=str(e))
-            return GiangVienUpdate(status=False, error=error) """
+            return DeTaiUpdate(status=False, error=error)
+
+
+
+class DeTaiDelete(graphene.Mutation):
+    class Arguments:
+        id = graphene.ID(required=True)
+
+    status = graphene.Boolean()
+    error = graphene.Field(Error)
+
+    def mutate(root, info, id):
+        try:
+            de_tai = DeTai.objects.get(id=id)
+            de_tai.delete()
+            return DeTaiDelete(status=True)
+
+        except DeTai.DoesNotExist:
+            error = Error(code="NOT_FOUND", message="Đề tài không tồn tại")
+            return DeTaiDelete(status=False, error=error)
+        except Exception as e:
+            error = Error(code="DELETE_ERROR", message=str(e))
+            return DeTaiDelete(status=False, error=error)
 
 class GroupQLDAInput(graphene.InputObjectType):
     name = graphene.String(required=True)
@@ -441,7 +489,7 @@ class GroupQLDACreate(graphene.Mutation):
         user_email = graphene.String(required=True)
 
     status = graphene.Boolean()
-    group_qlda = graphene.Field(lambda: GroupQLDANode)
+    group_qlda = graphene.Field(GroupQLDANode)
     error = graphene.Field(Error)
 
     def mutate(root, info, input, user_email):
@@ -554,7 +602,179 @@ class AcceptJoinRequest(graphene.Mutation):
                 error=Error(code="ACCEPT_ERROR", message=str(e))
             )
 
+class KeHoachDoAnType(DjangoObjectType):
+    class Meta:
+        model = KeHoachDoAn
+        fields = "__all__"
+        interfaces = (relay.Node,)
 
+class CreateKeHoachDoAn(graphene.Mutation):
+    class Arguments:
+        sl_sinh_vien = graphene.Int(required=True)
+        sl_do_an = graphene.Int(required=True)
+        ky_mo = graphene.String(required=True)
+        tgbd_do_an = graphene.Date(required=True)
+        tgkt_do_an = graphene.Date(required=True)
+        tgbd_tao_do_an = graphene.Date(required=True)
+        tgkt_tao_do_an = graphene.Date(required=True)
+        tgbd_dang_ky_de_tai = graphene.Date(required=True)
+        tgkt_dang_ky_de_tai = graphene.Date(required=True)
+        tgbd_lam_do_an = graphene.Date(required=True)
+        tgkt_lam_do_an = graphene.Date(required=True)
+        tgbd_cham_phan_bien = graphene.Date(required=True)
+        tgkt_cham_phan_bien = graphene.Date(required=True)
+        tgbd_cham_hoi_dong = graphene.Date(required=True)
+        tgkt_cham_hoi_dong = graphene.Date(required=True)
+        user_id = graphene.ID(required=True)
+
+    ke_hoach_do_an = graphene.Field(KeHoachDoAnNode)
+
+    def validate_time_fields(**kwargs):
+        """
+        Kiểm tra tính hợp lệ của các trường thời gian dựa trên timeline yêu cầu:
+        tgbd_do_an <= tgbd_tao_do_an <= tgkt_tao_do_an <= tgbd_dang_ky_de_tai <= tgkt_dang_ky_de_tai <=
+        tgbd_lam_do_an <= tgkt_lam_do_an <= tgbd_cham_phan_bien <= tgkt_cham_phan_bien <= 
+        tgbd_cham_hoi_dong <= tgkt_cham_hoi_dong <= tgkt_do_an
+        """
+
+        tgbd_do_an = kwargs.get('tgbd_do_an')
+        tgkt_do_an = kwargs.get('tgkt_do_an')
+
+        if not all([
+            tgbd_do_an <= kwargs.get('tgbd_tao_do_an') <= tgkt_do_an,
+            tgbd_do_an <= kwargs.get('tgkt_tao_do_an') <= tgkt_do_an,
+            tgbd_do_an <= kwargs.get('tgbd_dang_ky_de_tai') <= tgkt_do_an,
+            tgbd_do_an <= kwargs.get('tgkt_dang_ky_de_tai') <= tgkt_do_an,
+            tgbd_do_an <= kwargs.get('tgbd_lam_do_an') <= tgkt_do_an,
+            tgbd_do_an <= kwargs.get('tgkt_lam_do_an') <= tgkt_do_an,
+            tgbd_do_an <= kwargs.get('tgbd_cham_phan_bien') <= tgkt_do_an,
+            tgbd_do_an <= kwargs.get('tgkt_cham_phan_bien') <= tgkt_do_an,
+            tgbd_do_an <= kwargs.get('tgbd_cham_hoi_dong') <= tgkt_do_an,
+            tgbd_do_an <= kwargs.get('tgkt_cham_hoi_dong') <= tgkt_do_an
+        ]):
+            raise ValidationError("Thời gian bắt đầu và kết thúc của đồ án phải bao hàm toàn bộ các khoảng thời gian khác.")
+
+        timeline = [
+            ('tgbd_do_an', 'tgbd_tao_do_an'),
+            ('tgbd_tao_do_an', 'tgkt_tao_do_an'),
+            ('tgkt_tao_do_an', 'tgbd_dang_ky_de_tai'),
+            ('tgbd_dang_ky_de_tai', 'tgkt_dang_ky_de_tai'),
+            ('tgkt_dang_ky_de_tai', 'tgbd_lam_do_an'),
+            ('tgbd_lam_do_an', 'tgkt_lam_do_an'),
+            ('tgkt_lam_do_an', 'tgbd_cham_phan_bien'),
+            ('tgbd_cham_phan_bien', 'tgkt_cham_phan_bien'),
+            ('tgkt_cham_phan_bien', 'tgbd_cham_hoi_dong'),
+            ('tgbd_cham_hoi_dong', 'tgkt_cham_hoi_dong'),
+            ('tgkt_cham_hoi_dong', 'tgkt_do_an')
+        ]
+        
+        for start, end in timeline:
+            if kwargs.get(start) > kwargs.get(end):
+                raise ValidationError(f"{start} phải nhỏ hơn hoặc bằng {end}")
+
+    def mutate(self, info, **kwargs):
+        # Kiểm tra user
+        user = User.objects.get(pk=kwargs.get('user_id'))
+        
+        # Kiểm tra tính hợp lệ của thời gian
+        CreateKeHoachDoAn.validate_time_fields(**kwargs)
+        
+        
+        # Tạo kế hoạch đồ án nếu hợp lệ
+        ke_hoach_do_an = KeHoachDoAn(
+            sl_sinh_vien=kwargs.get('sl_sinh_vien'),
+            sl_do_an=kwargs.get('sl_do_an'),
+            ky_mo=kwargs.get('ky_mo'),
+            tgbd_do_an=kwargs.get('tgbd_do_an'),
+            tgkt_do_an=kwargs.get('tgkt_do_an'),
+            tgbd_tao_do_an=kwargs.get('tgbd_tao_do_an'),
+            tgkt_tao_do_an=kwargs.get('tgkt_tao_do_an'),
+            tgbd_dang_ky_de_tai=kwargs.get('tgbd_dang_ky_de_tai'),
+            tgkt_dang_ky_de_tai=kwargs.get('tgkt_dang_ky_de_tai'),
+            tgbd_lam_do_an=kwargs.get('tgbd_lam_do_an'),
+            tgkt_lam_do_an=kwargs.get('tgkt_lam_do_an'),
+            tgbd_cham_phan_bien=kwargs.get('tgbd_cham_phan_bien'),
+            tgkt_cham_phan_bien=kwargs.get('tgkt_cham_phan_bien'),
+            tgbd_cham_hoi_dong=kwargs.get('tgbd_cham_hoi_dong'),
+            tgkt_cham_hoi_dong=kwargs.get('tgkt_cham_hoi_dong'),
+            user=user
+        )
+        ke_hoach_do_an.save()
+        return CreateKeHoachDoAn(ke_hoach_do_an=ke_hoach_do_an)
+
+class UpdateKeHoachDoAn(graphene.Mutation):
+    class Arguments:
+        id = graphene.ID(required=True)
+        sl_sinh_vien = graphene.Int()
+        sl_do_an = graphene.Int()
+        ky_mo = graphene.String()
+        tgbd_do_an = graphene.Date()
+        tgkt_do_an = graphene.Date()
+        tgbd_tao_do_an = graphene.Date()
+        tgkt_tao_do_an = graphene.Date()
+        tgbd_dang_ky_de_tai = graphene.Date()
+        tgkt_dang_ky_de_tai = graphene.Date()
+        tgbd_lam_do_an = graphene.Date()
+        tgkt_lam_do_an = graphene.Date()
+        tgbd_cham_phan_bien = graphene.Date()
+        tgkt_cham_phan_bien = graphene.Date()
+        tgbd_cham_hoi_dong = graphene.Date()
+        tgkt_cham_hoi_dong = graphene.Date()
+        user_id = graphene.ID()
+
+    ke_hoach_do_an = graphene.Field(KeHoachDoAnNode)
+
+    def validate_time_fields(**kwargs):
+        """
+        Kiểm tra tính hợp lệ của các trường thời gian dựa trên timeline yêu cầu.
+        """
+        timeline = [
+            ('tgbd_do_an', 'tgbd_tao_do_an'),
+            ('tgbd_tao_do_an', 'tgkt_tao_do_an'),
+            ('tgkt_tao_do_an', 'tgbd_dang_ky_de_tai'),
+            ('tgbd_dang_ky_de_tai', 'tgkt_dang_ky_de_tai'),
+            ('tgkt_dang_ky_de_tai', 'tgbd_lam_do_an'),
+            ('tgbd_lam_do_an', 'tgkt_lam_do_an'),
+            ('tgkt_lam_do_an', 'tgbd_cham_phan_bien'),
+            ('tgbd_cham_phan_bien', 'tgkt_cham_phan_bien'),
+            ('tgkt_cham_phan_bien', 'tgbd_cham_hoi_dong'),
+            ('tgbd_cham_hoi_dong', 'tgkt_cham_hoi_dong'),
+            ('tgkt_cham_hoi_dong', 'tgkt_do_an')
+        ]
+        
+        for start, end in timeline:
+            if kwargs.get(start) and kwargs.get(end) and kwargs.get(start) > kwargs.get(end):
+                raise ValidationError(f"{start} phải nhỏ hơn hoặc bằng {end}")
+
+    def mutate(self, info, id, **kwargs):
+        # Lấy bản ghi kế hoạch đồ án hiện tại
+        ke_hoach_do_an = KeHoachDoAn.objects.get(pk=id)
+        
+        # Kiểm tra tính hợp lệ của thời gian
+        UpdateKeHoachDoAn.validate_time_fields(**kwargs)
+        
+        # Cập nhật các trường nếu có giá trị mới trong `kwargs`
+        for key, value in kwargs.items():
+            if value is not None:
+                setattr(ke_hoach_do_an, key, value)
+
+        # Cập nhật quan hệ nếu cần thiết
+        if 'user_id' in kwargs:
+            ke_hoach_do_an.user = User.objects.get(pk=kwargs.get('user_id'))
+        
+        ke_hoach_do_an.save()
+        return UpdateKeHoachDoAn(ke_hoach_do_an=ke_hoach_do_an)
+    
+class DeleteKeHoachDoAn(graphene.Mutation):
+    class Arguments:
+        id = graphene.ID(required=True)
+
+    success = graphene.Boolean()
+
+    def mutate(self, info, id):
+        ke_hoach_do_an = KeHoachDoAn.objects.get(pk=id)
+        ke_hoach_do_an.delete()
+        return DeleteKeHoachDoAn(success=True)
 
 class Mutation(graphene.ObjectType):
     shipping_fee_create = ShippingFeeCreate.Field()
@@ -570,8 +790,13 @@ class Mutation(graphene.ObjectType):
     delivery_responsible_delete = DeliveryResponsibleDelete.Field()
 
     deTai_create = DeTaiCreate.Field()
+    deTai_update = DeTaiUpdate.Field()
 
     group_qlda_create = GroupQLDACreate.Field()
     group_qlda_join = GroupQLDAJoin.Field()
     accept_join_request = AcceptJoinRequest.Field()
+
+    create_ke_hoach_do_an = CreateKeHoachDoAn.Field()
+    update_ke_hoach_do_an = UpdateKeHoachDoAn.Field()
+    delete_ke_hoach_do_an = DeleteKeHoachDoAn.Field()
 

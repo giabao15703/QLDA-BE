@@ -39,7 +39,8 @@ class DeliveryResponsible(models.Model):
 
 
 class DeTai(models.Model):
-    giang_vien = models.ForeignKey(User, on_delete=models.CASCADE)
+    giangvien_id = models.ForeignKey(User, on_delete=models.CASCADE)
+    kehoachdoan_id = models.ForeignKey('KeHoachDoAn', on_delete=models.CASCADE,default=1)
     ten_de_tai = models.CharField(max_length=255)
     mo_ta = models.TextField()
 
@@ -48,7 +49,8 @@ class DeTai(models.Model):
 
     @property
     def giang_vien_full_name(self):
-        return self.giang_vien.full_name
+        return self.giangvien_id.full_name
+
 
 
 
@@ -115,4 +117,38 @@ class JoinRequest(models.Model):
     class Meta:
         db_table = 'join_request'
         unique_together = ('user', 'group')
+
+class KeHoachDoAn(models.Model):
+    sl_sinh_vien = models.IntegerField()  # Số lượng sinh viên
+    sl_do_an = models.IntegerField()  # Số lượng đồ án
+    ky_mo = models.CharField(max_length=50)  # Kỳ mở của đồ án
+
+    tgbd_do_an = models.DateField()  # Thời gian bắt đầu đồ án
+    tgkt_do_an = models.DateField()  # Thời gian kết thúc đồ án
+
+    tgbd_tao_do_an = models.DateField()  # Thời gian bắt đầu tạo đồ án
+    tgkt_tao_do_an = models.DateField()  # Thời gian kết thúc tạo đồ án
+
+    tgbd_dang_ky_de_tai = models.DateField()  # Thời gian bắt đầu đăng ký đề tài
+    tgkt_dang_ky_de_tai = models.DateField()  # Thời gian kết thúc đăng ký đề tài
+
+    tgbd_lam_do_an = models.DateField()  # Thời gian bắt đầu làm đồ án
+    tgkt_lam_do_an = models.DateField()  # Thời gian kết thúc làm đồ án
+
+    tgbd_cham_phan_bien = models.DateField()  # Thời gian bắt đầu chấm phản biện
+    tgkt_cham_phan_bien = models.DateField()  # Thời gian kết thúc chấm phản biện
+
+    tgbd_cham_hoi_dong = models.DateField()  # Thời gian bắt đầu chấm hội đồng
+    tgkt_cham_hoi_dong = models.DateField()  # Thời gian kết thúc chấm hội đồng
+
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="ke_hoach_do_an")  # Liên kết tới bảng người dùng
+
+    class Meta:
+        db_table = 'kehoach_doan'
+
+    def save(self, *args, **kwargs):
+        # Kiểm tra trùng lặp thời gian như đã làm ở bước trước nếu cần
+        super().save(*args, **kwargs)
+
+
 

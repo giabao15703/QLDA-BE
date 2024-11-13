@@ -5,6 +5,7 @@ import django_filters
 from apps.core import CustomNode, CustomizeFilterConnectionField, Error
 from django_filters import FilterSet
 from graphene_django import DjangoObjectType
+ 
 from apps.delivery.models import (
     ShippingFee,
     TransporterList,
@@ -13,7 +14,8 @@ from apps.delivery.models import (
     User,
     GroupQLDA,
     JoinRequest,
-    JoinGroup
+    JoinGroup,
+    KeHoachDoAn
 )
 from apps.users.models import Token
 from graphene import relay, ObjectType, Connection
@@ -95,15 +97,16 @@ class DeliveryResponsibleNode(DjangoObjectType):
         interfaces = (CustomNode,)
         connection_class = ExtendedConnection
 
-class DeTaiFilter(FilterSet):
+class DeTaiFilter(django_filters.FilterSet):
     id = django_filters.CharFilter(field_name='id', lookup_expr="exact")
-    giang_vien = django_filters.CharFilter(field_name='giang_vien__full_name', lookup_expr="icontains")
+    giangvien_id = django_filters.CharFilter(field_name='giangvien_id__full_name', lookup_expr="icontains")  # Lọc theo giangvien_id
     ten_de_tai = django_filters.CharFilter(field_name='ten_de_tai', lookup_expr="icontains")
     mo_ta = django_filters.CharFilter(field_name='mo_ta', lookup_expr="icontains")
 
     class Meta:
         model = DeTai
         fields = []
+
 
 
 class DeTaiNode(DjangoObjectType):
@@ -116,7 +119,9 @@ class DeTaiNode(DjangoObjectType):
         connection_class = ExtendedConnection
 
     def resolve_giang_vien_full_name(self, info):
-        return self.giang_vien.full_name 
+        # Sử dụng giangvien_id thay vì giang_vien
+        return self.giangvien_id.full_name if self.giangvien_id else None
+
 
 
 
@@ -133,8 +138,7 @@ class GroupQLDAFilter(FilterSet):
 
 
 class GroupQLDANode(DjangoObjectType):
-    members_count = graphene.Int()
-
+    
     class Meta:
         model = GroupQLDA
         filterset_class = GroupQLDAFilter
@@ -178,7 +182,23 @@ class JoinRequestNode(DjangoObjectType):
         else:
             return None  # Không hiện thông báo cho người không phải leader
 
+class KeHoachDoAnFilter(FilterSet):
+    ma_ke_hoach = django_filters.CharFilter(field_name="ma_ke_hoach", lookup_expr="icontains")
+    sl_sinh_vien = django_filters.NumberFilter(field_name="sl_sinh_vien", lookup_expr="exact")
+    sl_do_an = django_filters.NumberFilter(field_name="sl_do_an", lookup_expr="exact")
+    ky_mo = django_filters.CharFilter(field_name="ky_mo", lookup_expr="icontains")
+    user_id = django_filters.NumberFilter(field_name="user_id", lookup_expr="exact")
 
+    class Meta:
+        model = KeHoachDoAn
+        fields = []
+
+class KeHoachDoAnNode(DjangoObjectType):
+    class Meta:
+        model = KeHoachDoAn
+        filterset_class = KeHoachDoAnFilter
+        interfaces = (CustomNode,)
+        connection_class = ExtendedConnection
 
 class Query(object):
     shipping_fee = CustomNode.Field(ShippingFeeNode)
@@ -200,4 +220,7 @@ class Query(object):
     join_request= CustomNode.Field(JoinRequestNode)
     
     join_requests = CustomizeFilterConnectionField(JoinRequestNode, filterset_class=JoinRequestFilter)
+
+    ke_hoach_do_an = CustomNode.Field(KeHoachDoAnNode)
+    ke_hoach_do_ans = CustomizeFilterConnectionField(KeHoachDoAnNode, filterset_class=KeHoachDoAnFilter)
 
