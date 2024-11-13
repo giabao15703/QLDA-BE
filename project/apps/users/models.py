@@ -295,6 +295,7 @@ class User(AbstractUser, TimeStampedModel):
     local_time = models.CharField(max_length=32, default='Asia/Ho_Chi_Minh')
     company_position = models.PositiveSmallIntegerField(choices=COMPANY_POSITION_CHOICES, default=1)
     language = models.ForeignKey(Language, on_delete=models.CASCADE, default=1)
+    role = models.PositiveSmallIntegerField(choices=ADMIN_ROLE_CHOICES, null=True)
 
     def get_profile(self):
         if self.isBuyer():

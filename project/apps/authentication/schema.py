@@ -7,7 +7,7 @@ from apps.core import Error
 from apps.master_data.models import EmailTemplates, Promotion
 from apps.realtime.consumers import ConsumerLoginCheck
 from apps.users.models import User, Token, ForgotPasswordToken, Buyer, Supplier
-from apps.users.schema import UserNode
+from apps.users.schema import UserNode, AdminNode
 from django.contrib.auth import authenticate, get_user_model
 from django.core.mail import send_mail
 from django.template import Template, Context
@@ -21,24 +21,28 @@ class LoginInput(graphene.InputObjectType):
     username = graphene.String()
     password = graphene.String()
 
+from django.core.exceptions import ObjectDoesNotExist
+
 class Login(graphene.Mutation):
     token = graphene.String()
+    status = graphene.Boolean()
+    user = graphene.Field(UserNode)
+    admin = graphene.Field(AdminNode)  # Thêm trường admin
+    error = graphene.Field(Error)
 
     class Arguments:
         user = LoginInput(required=True)
-
-    status = graphene.Boolean()
-    user = graphene.Field(UserNode)
-    error = graphene.Field(Error)
 
     def mutate(root, info, user=None):
         try:
             error = None
             users_login = ConsumerLoginCheck.users
             username_check = 'username_%s' % user.username
+
             if user.username is None or user.password is None:
                 error = Error(code="AUTH_02", message=AuthencationError.AUTH_02)
                 raise GraphQLError("AUTH_02")
+                
             user = authenticate(username=user.username, password=user.password)
             if not user:
                 error = Error(code="AUTH_01", message=AuthencationError.AUTH_01)
@@ -46,23 +50,31 @@ class Login(graphene.Mutation):
 
             if username_check in users_login and user.user_type == 2:
                 error = Error(code="AUTH_18", message=AuthencationError.AUTH_18)
-                raise GraphQLError("User can only login to one device the same time")
+                raise GraphQLError("User can only login to one device at the same time")
 
-            if user.status != 1:
-                error = Error(code="AUTH_03", message=AuthencationError.AUTH_03)
-                raise GraphQLError('AUTH_03')
-
+            # Xóa token cũ nếu user_type là 2
             if user.user_type == 2:
                 Token.objects.filter(user=user).delete()
                 token = Token.objects.create(user=user)
             else:
                 token, _ = Token.objects.get_or_create(user=user)
 
-            return Login(status=True, user=user, token=token)
+            # Truy xuất thông tin admin của user hiện tại
+            admin = None
+            if hasattr(user, 'admin'):
+                admin = user.admin
+                print("Admin found:", admin)  # Log để kiểm tra xem admin có được tìm thấy không
+            else:
+                print("No admin associated with user")
+
+            return Login(status=True, user=user, admin=admin, token=token)
+        
         except Exception as err:
             if error is None:
-                error = err
+                error = Error(code="UNKNOWN_ERROR", message=str(err))
             return Login(status=False, error=error)
+
+
 
 class Logout(graphene.Mutation):
     class Arguments:

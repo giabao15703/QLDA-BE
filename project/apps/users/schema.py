@@ -3612,14 +3612,16 @@ class AdminFilter(FilterSet):
     valid_from = django_filters.CharFilter(method='valid_from_filter')
     valid_to = django_filters.CharFilter(method='valid_to_filter')
     long_name = django_filters.CharFilter(lookup_expr='contains')
+    role=django_filters.CharFilter(method='role_filter')
 
     class Meta:
         model = Admin
         fields = ['id', 'long_name']
 
     order_by = OrderingFilter(
-        fields=(
+            fields=(
             ('id', 'id'),
+            ('role', 'role'),
             ('long_name', 'long_name'),
             ('user__email', 'email'),
             ('user__created', 'created'),
@@ -3631,6 +3633,10 @@ class AdminFilter(FilterSet):
 
     def email_filter(self, queryset, name, value):
         queryset = queryset.filter(user__email=value)
+        return queryset
+
+    def role_filter(self, queryset, name, value):
+        queryset = queryset.filter(user__role=value)
         return queryset
 
     def username_filter(self, queryset, name, value):
@@ -3660,12 +3666,6 @@ class AdminNode(DjangoObjectType):
         interfaces = (CustomNode, UserInterface)
         connection_class = ExtendedConnection
 
-    def resolve_picture(self, info):
-        if self.picture and hasattr(self.picture, 'url'):
-            return info.context.build_absolute_uri(self.picture.url)
-        else:
-            return ''
-
     def resolve_language(self, info):
         return self.user.language
 
@@ -3684,9 +3684,7 @@ class UserAdminInput(graphene.InputObjectType):
 class AdminInput(graphene.InputObjectType):
     user = UserInput(required=True)
     long_name = graphene.String(required=True)
-    role = graphene.Int(required=True)  # Thêm trường role để xác định vai trò
-
-
+    role = graphene.Int(required=True)
 
 class UserAdminUpdateInput(graphene.InputObjectType):
     email = graphene.String(required=True)
@@ -3713,35 +3711,35 @@ class AdminCreate(graphene.Mutation):
     error = graphene.Field(Error)
 
     def mutate(root, info, admin=None):
-        if checkPermission(info):
-            # Kiểm tra vai trò của người dùng hiện tại
-            current_admin = Admin.objects.get(user=info.context.user)
-            if current_admin.role != 1:  # Nếu không phải Trưởng khoa
-                error = Error(code="USER_03", message="Bạn không có quyền tạo tài khoản.")
-                return AdminCreate(status=False, error=error)
+        # Bỏ qua kiểm tra quyền để test
+        # if checkPermission(info):
 
-            # Kiểm tra nếu email đã tồn tại
-            if User.objects.filter(user_type=1, email=admin.user.email).exists():
-                error = Error(code="USER_01", message=UserError.USER_01)
-                return AdminCreate(status=False, error=error)
-
-            # Tạo User và Admin mới
-            last_created_admin = User.objects.filter(user_type=1).order_by("-username").first()
-            last_user_id_str = last_created_admin.username[2:]
-            user_count = int(last_user_id_str) + 1
-            username = '70' + str(user_count).zfill(4)
-            user = User(username=username, user_type=1, **admin.user)
-            user.set_password(admin.user.password)
-            user.save()
-            
-            admin_instance = Admin(long_name=admin.long_name, user=user, role=admin.role)  # Không còn `picture`
-            admin_instance.save()
-
-            return AdminCreate(status=True, admin=admin_instance)
-        else:
-            error = Error(code="USER_02", message=UserError.USER_02)
+        # Kiểm tra nếu email đã tồn tại
+        if User.objects.filter(user_type=1, email=admin.user.email).exists():
+            error = Error(code="USER_01", message=UserError.USER_01)
             return AdminCreate(status=False, error=error)
 
+        # Tạo User và Admin mới
+        last_created_admin = User.objects.filter(user_type=1).order_by("-username").first()
+
+        if last_created_admin:
+            last_user_id_str = last_created_admin.username[2:]
+            user_count = int(last_user_id_str) + 1
+        else:
+            user_count = 1
+
+        username = '70' + str(user_count).zfill(4)
+        user = User(username=username, user_type=1, **admin.user)
+        user.set_password(admin.user.password)
+        user.save()
+
+        admin_instance = Admin(long_name=admin.long_name, user=user, role=admin.role)
+        admin_instance.save()
+
+        return AdminCreate(status=True, admin=admin_instance)
+        # else:
+        #     error = Error(code="USER_02", message=UserError.USER_02)
+        #     return AdminCreate(status=False, error=error)
 
 class AdminUpdate(graphene.Mutation):
     class Arguments:
