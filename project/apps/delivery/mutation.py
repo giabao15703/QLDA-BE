@@ -672,7 +672,6 @@ class KeHoachDoAnInput(graphene.InputObjectType):
     tgkt_cham_phan_bien = graphene.Date(required=True)
     tgbd_cham_hoi_dong = graphene.Date(required=True)
     tgkt_cham_hoi_dong = graphene.Date(required=True)
-    admin_id = graphene.ID(required=True)
 
 
 class CreateKeHoachDoAn(graphene.Mutation):
@@ -727,8 +726,6 @@ class CreateKeHoachDoAn(graphene.Mutation):
 
     def mutate(self, info, input):
         # Kiểm tra user
-        admin = Admin.objects.get(pk=input.admin_id)
-        
         # Kiểm tra tính hợp lệ của thời gian
         self.validate_time_fields(input)
         

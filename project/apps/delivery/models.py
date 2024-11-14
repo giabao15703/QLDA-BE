@@ -149,8 +149,6 @@ class KeHoachDoAn(models.Model):
     tgbd_cham_hoi_dong = models.DateField()  # Thời gian bắt đầu chấm hội đồng
     tgkt_cham_hoi_dong = models.DateField()  # Thời gian kết thúc chấm hội đồng
 
-    admin = models.ForeignKey(Admin, on_delete=models.CASCADE, related_name="ke_hoach_do_an", null=True, blank=True )  # Liên kết tới bảng người dùng
-
     class Meta:
         db_table = 'kehoach_doan'
 
