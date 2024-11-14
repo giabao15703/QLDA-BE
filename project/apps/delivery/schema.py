@@ -115,9 +115,9 @@ class DeTaiFilter(django_filters.FilterSet):
 
 
 class DeTaiNode(DjangoObjectType):
-    giang_vien_full_name = graphene.String()
+    giang_vien_long_name = graphene.String()
     ke_hoach_do_an_id = graphene.ID()
-    giang_vien_phan_bien_full_name = graphene.String()
+    giang_vien_phan_bien_long_name = graphene.String()
 
     class Meta:
         model = DeTai
@@ -125,17 +125,18 @@ class DeTaiNode(DjangoObjectType):
         interfaces = (graphene.relay.Node, )
         connection_class = ExtendedConnection
 
-    def resolve_giang_vien_full_name(self, info):
-        # Lấy full name của giảng viên hướng dẫn
-        return self.idgvhuongdan.full_name if self.idgvhuongdan else None
+    def resolve_giang_vien_long_name(self, info):
+        # Lấy long_name của giảng viên hướng dẫn
+        return self.idgvhuongdan.long_name if self.idgvhuongdan else None
 
-    def resolve_giang_vien_phan_bien_full_name(self, info):
-        # Lấy full name của giảng viên phản biện nếu có
-        return self.idgvphanbien.full_name if self.idgvphanbien else None
+    def resolve_giang_vien_phan_bien_long_name(self, info):
+        # Lấy long_name của giảng viên phản biện nếu có
+        return self.idgvphanbien.long_name if self.idgvphanbien else None
 
     def resolve_ke_hoach_do_an_id(self, info):
         # Trả về ID của kế hoạch đồ án
         return self.idkehoach.id if self.idkehoach else None
+
 
 
 

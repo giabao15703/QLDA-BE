@@ -4,7 +4,7 @@ from django.db import models
 from apps.master_data.models import (
     CountryState,
 )
-from apps.users.models import User
+from apps.users.models import User, Admin
 # Create your models here.
 class ShippingFee(models.Model):
     pick_up_city = models.ForeignKey(CountryState, on_delete=models.CASCADE, related_name='pick_up_city')
@@ -40,8 +40,8 @@ class DeliveryResponsible(models.Model):
 
 
 class DeTai(models.Model):
-    idgvhuongdan = models.ForeignKey(User, on_delete=models.CASCADE, related_name="huongdan_detai", null=True, blank=True)
-    idgvphanbien = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True, related_name="phanbien_detai")
+    idgvhuongdan = models.ForeignKey(Admin, on_delete=models.CASCADE, related_name="huongdan_detai", null=True, blank=True)
+    idgvphanbien = models.ForeignKey(Admin, on_delete=models.SET_NULL, null=True, blank=True, related_name="phanbien_detai")
     idnhom = models.UUIDField(null=True, blank=True)
     madoan = models.CharField(max_length=20, unique=True, null=True, blank=True)
     chuyennganh = models.CharField(max_length=100, null=True, blank=True)
@@ -61,9 +61,6 @@ class DeTai(models.Model):
             ma_do_an = f"DA{uuid.uuid4().hex[:8].upper()}"
             if not DeTai.objects.filter(madoan=ma_do_an).exists():
                 return ma_do_an
-
-
-
 
 class GroupQLDA(models.Model):
     ma_Nhom = models.CharField(max_length=10, unique=True, default="")

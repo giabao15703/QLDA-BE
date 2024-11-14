@@ -28,6 +28,7 @@ from apps.delivery.models import (
     JoinGroup,
     JoinRequest,
     User,
+    Admin,
     KeHoachDoAn
 )
 
@@ -384,7 +385,6 @@ class DeTaiInput(graphene.InputObjectType):
     tendoan = graphene.String(required=True)
     mota = graphene.String(required=True)
 
-
 class DeTaiCreate(graphene.Mutation):
     class Arguments:
         input = DeTaiInput(required=True)
@@ -396,7 +396,7 @@ class DeTaiCreate(graphene.Mutation):
     def mutate(root, info, input):
         try:
             # Lấy giảng viên dựa trên ID
-            giang_vien = User.objects.get(id=input.idgvhuongdan)
+            giang_vien = Admin.objects.get(id=input.idgvhuongdan)
 
             # Lấy kế hoạch đồ án hợp lệ
             now = timezone.now().date()
@@ -409,6 +409,9 @@ class DeTaiCreate(graphene.Mutation):
                 error = Error(code="NO_VALID_KEHOACH", message="Không có kế hoạch đồ án nào trong thời gian cho phép tạo đề tài.")
                 return DeTaiCreate(status=False, error=error)
 
+            # Lấy chuyên ngành từ giảng viên hoặc đặt giá trị mặc định
+            chuyennganh = getattr(giang_vien, 'chuyen_nganh', 'Chưa xác định')
+
             # Tạo đề tài với các thuộc tính được yêu cầu
             de_tai = DeTai.objects.create(
                 idgvhuongdan=giang_vien,
@@ -416,13 +419,12 @@ class DeTaiCreate(graphene.Mutation):
                 tendoan=input.tendoan,
                 mota=input.mota,
                 madoan=DeTai.generate_unique_madoan(),
-                chuyennganh=giang_vien.chuyennganh,  # Lấy chuyên ngành từ giảng viên
+                chuyennganh=chuyennganh,  # Lấy chuyên ngành từ giảng viên hoặc giá trị mặc định
                 trangthai="0"  # Đặt trạng thái mặc định là "0" (chưa duyệt)
             )
-
             return DeTaiCreate(status=True, de_tai=de_tai)
 
-        except User.DoesNotExist:
+        except Admin.DoesNotExist:
             error = Error(code="NOT_FOUND", message="Giảng viên không tồn tại")
             return DeTaiCreate(status=False, error=error)
         except KeHoachDoAn.DoesNotExist:
@@ -431,6 +433,7 @@ class DeTaiCreate(graphene.Mutation):
         except Exception as e:
             error = Error(code="CREATE_ERROR", message=str(e))
             return DeTaiCreate(status=False, error=error)
+
 
 
 
@@ -486,9 +489,6 @@ class DeTaiUpdate(graphene.Mutation):
             error = Error(code="UPDATE_ERROR", message=str(e))
             return DeTaiUpdate(status=False, error=error)
 
-
-
-import graphene
 from django.utils import timezone
 
 class DeTaiDelete(graphene.Mutation):
