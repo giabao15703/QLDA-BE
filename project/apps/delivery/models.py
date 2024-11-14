@@ -131,23 +131,23 @@ class KeHoachDoAn(models.Model):
     sl_do_an = models.IntegerField()  # Số lượng đồ án
     ky_mo = models.CharField(max_length=50)  # Kỳ mở của đồ án
 
-    tgbd_do_an = models.DateField()  # Thời gian bắt đầu đồ án
-    tgkt_do_an = models.DateField()  # Thời gian kết thúc đồ án
+    tgbd_do_an = models.DateTimeField()  # Thời gian bắt đầu đồ án
+    tgkt_do_an = models.DateTimeField()  # Thời gian kết thúc đồ án
 
-    tgbd_tao_do_an = models.DateField()  # Thời gian bắt đầu tạo đồ án
-    tgkt_tao_do_an = models.DateField()  # Thời gian kết thúc tạo đồ án
+    tgbd_tao_do_an = models.DateTimeField()  # Thời gian bắt đầu tạo đồ án
+    tgkt_tao_do_an = models.DateTimeField()  # Thời gian kết thúc tạo đồ án
 
-    tgbd_dang_ky_de_tai = models.DateField()  # Thời gian bắt đầu đăng ký đề tài
-    tgkt_dang_ky_de_tai = models.DateField()  # Thời gian kết thúc đăng ký đề tài
+    tgbd_dang_ky_de_tai = models.DateTimeField()  # Thời gian bắt đầu đăng ký đề tài
+    tgkt_dang_ky_de_tai = models.DateTimeField()  # Thời gian kết thúc đăng ký đề tài
 
-    tgbd_lam_do_an = models.DateField()  # Thời gian bắt đầu làm đồ án
-    tgkt_lam_do_an = models.DateField()  # Thời gian kết thúc làm đồ án
+    tgbd_lam_do_an = models.DateTimeField()  # Thời gian bắt đầu làm đồ án
+    tgkt_lam_do_an = models.DateTimeField()  # Thời gian kết thúc làm đồ án
 
-    tgbd_cham_phan_bien = models.DateField()  # Thời gian bắt đầu chấm phản biện
-    tgkt_cham_phan_bien = models.DateField()  # Thời gian kết thúc chấm phản biện
+    tgbd_cham_phan_bien = models.DateTimeField()  # Thời gian bắt đầu chấm phản biện
+    tgkt_cham_phan_bien = models.DateTimeField()  # Thời gian kết thúc chấm phản biện
 
-    tgbd_cham_hoi_dong = models.DateField()  # Thời gian bắt đầu chấm hội đồng
-    tgkt_cham_hoi_dong = models.DateField()  # Thời gian kết thúc chấm hội đồng
+    tgbd_cham_hoi_dong = models.DateTimeField()  # Thời gian bắt đầu chấm hội đồng
+    tgkt_cham_hoi_dong = models.DateTimeField()  # Thời gian kết thúc chấm hội đồng
 
     class Meta:
         db_table = 'kehoach_doan'

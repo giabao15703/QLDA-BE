@@ -660,25 +660,30 @@ class KeHoachDoAnInput(graphene.InputObjectType):
     sl_sinh_vien = graphene.Int(required=True)
     sl_do_an = graphene.Int(required=True)
     ky_mo = graphene.String(required=True)
-    tgbd_do_an = graphene.Date(required=True)
-    tgkt_do_an = graphene.Date(required=True)
-    tgbd_tao_do_an = graphene.Date(required=True)
-    tgkt_tao_do_an = graphene.Date(required=True)
-    tgbd_dang_ky_de_tai = graphene.Date(required=True)
-    tgkt_dang_ky_de_tai = graphene.Date(required=True)
-    tgbd_lam_do_an = graphene.Date(required=True)
-    tgkt_lam_do_an = graphene.Date(required=True)
-    tgbd_cham_phan_bien = graphene.Date(required=True)
-    tgkt_cham_phan_bien = graphene.Date(required=True)
-    tgbd_cham_hoi_dong = graphene.Date(required=True)
-    tgkt_cham_hoi_dong = graphene.Date(required=True)
+    tgbd_do_an = graphene.DateTime(required=True)
+    tgkt_do_an = graphene.DateTime(required=True)
+    tgbd_tao_do_an = graphene.DateTime(required=True)
+    tgkt_tao_do_an = graphene.DateTime(required=True)
+    tgbd_dang_ky_de_tai = graphene.DateTime(required=True)
+    tgkt_dang_ky_de_tai = graphene.DateTime(required=True)
+    tgbd_lam_do_an = graphene.DateTime(required=True)
+    tgkt_lam_do_an = graphene.DateTime(required=True)
+    tgbd_cham_phan_bien = graphene.DateTime(required=True)
+    tgkt_cham_phan_bien = graphene.DateTime(required=True)
+    tgbd_cham_hoi_dong = graphene.DateTime(required=True)
+    tgkt_cham_hoi_dong = graphene.DateTime(required=True)
 
+
+from django.core.exceptions import ValidationError
+import graphene
 
 class CreateKeHoachDoAn(graphene.Mutation):
     class Arguments:
         input = KeHoachDoAnInput(required=True)
 
     ke_hoach_do_an = graphene.Field(KeHoachDoAnNode)
+    status = graphene.Boolean()
+    error = graphene.Field(Error)
 
     @staticmethod
     def validate_time_fields(input_data):
@@ -688,7 +693,8 @@ class CreateKeHoachDoAn(graphene.Mutation):
         tgbd_lam_do_an <= tgkt_lam_do_an <= tgbd_cham_phan_bien <= tgkt_cham_phan_bien <= 
         tgbd_cham_hoi_dong <= tgkt_cham_hoi_dong <= tgkt_do_an
         """
-
+        
+        # Kiểm tra bao gồm tổng thể khoảng thời gian
         tgbd_do_an = input_data.tgbd_do_an
         tgkt_do_an = input_data.tgkt_do_an
 
@@ -706,6 +712,7 @@ class CreateKeHoachDoAn(graphene.Mutation):
         ]):
             raise ValidationError("Thời gian bắt đầu và kết thúc của đồ án phải bao hàm toàn bộ các khoảng thời gian khác.")
 
+        # Kiểm tra thứ tự thời gian
         timeline = [
             ('tgbd_do_an', 'tgbd_tao_do_an'),
             ('tgbd_tao_do_an', 'tgkt_tao_do_an'),
@@ -722,35 +729,39 @@ class CreateKeHoachDoAn(graphene.Mutation):
         
         for start, end in timeline:
             if getattr(input_data, start) > getattr(input_data, end):
-                raise ValidationError(f"{start} phải nhỏ hơn hoặc bằng {end}")
+                raise ValidationError(f"Thời gian {start} phải nhỏ hơn hoặc bằng {end}")
 
     def mutate(self, info, input):
-        # Kiểm tra user
-        # Kiểm tra tính hợp lệ của thời gian
-        self.validate_time_fields(input)
-        
-        # Tạo kế hoạch đồ án nếu hợp lệ
-        ke_hoach_do_an = KeHoachDoAn(
-            sl_sinh_vien=input.sl_sinh_vien,
-            sl_do_an=input.sl_do_an,
-            ky_mo=input.ky_mo,
-            tgbd_do_an=input.tgbd_do_an,
-            tgkt_do_an=input.tgkt_do_an,
-            tgbd_tao_do_an=input.tgbd_tao_do_an,
-            tgkt_tao_do_an=input.tgkt_tao_do_an,
-            tgbd_dang_ky_de_tai=input.tgbd_dang_ky_de_tai,
-            tgkt_dang_ky_de_tai=input.tgkt_dang_ky_de_tai,
-            tgbd_lam_do_an=input.tgbd_lam_do_an,
-            tgkt_lam_do_an=input.tgkt_lam_do_an,
-            tgbd_cham_phan_bien=input.tgbd_cham_phan_bien,
-            tgkt_cham_phan_bien=input.tgkt_cham_phan_bien,
-            tgbd_cham_hoi_dong=input.tgbd_cham_hoi_dong,
-            tgkt_cham_hoi_dong=input.tgkt_cham_hoi_dong,
-            admin=admin
-        )
-        ke_hoach_do_an.save()
-        return CreateKeHoachDoAn(ke_hoach_do_an=ke_hoach_do_an)
+        try:
+            # Kiểm tra tính hợp lệ của thời gian
+            CreateKeHoachDoAn.validate_time_fields(input)
+            
+            # Tạo kế hoạch đồ án nếu hợp lệ
+            ke_hoach_do_an = KeHoachDoAn(
+                sl_sinh_vien=input.sl_sinh_vien,
+                sl_do_an=input.sl_do_an,
+                ky_mo=input.ky_mo,
+                tgbd_do_an=input.tgbd_do_an,
+                tgkt_do_an=input.tgkt_do_an,
+                tgbd_tao_do_an=input.tgbd_tao_do_an,
+                tgkt_tao_do_an=input.tgkt_tao_do_an,
+                tgbd_dang_ky_de_tai=input.tgbd_dang_ky_de_tai,
+                tgkt_dang_ky_de_tai=input.tgkt_dang_ky_de_tai,
+                tgbd_lam_do_an=input.tgbd_lam_do_an,
+                tgkt_lam_do_an=input.tgkt_lam_do_an,
+                tgbd_cham_phan_bien=input.tgbd_cham_phan_bien,
+                tgkt_cham_phan_bien=input.tgkt_cham_phan_bien,
+                tgbd_cham_hoi_dong=input.tgbd_cham_hoi_dong,
+                tgkt_cham_hoi_dong=input.tgkt_cham_hoi_dong,
+            )
+            ke_hoach_do_an.save()
 
+            return CreateKeHoachDoAn(ke_hoach_do_an=ke_hoach_do_an, status=True, error=None)
+        
+        except ValidationError as e:
+            # Trả về lỗi nếu thời gian không hợp lệ
+            return CreateKeHoachDoAn(ke_hoach_do_an=None, status=False, error=str(e))
+    
 
 class UpdateKeHoachDoAn(graphene.Mutation):
     class Arguments:
@@ -770,7 +781,6 @@ class UpdateKeHoachDoAn(graphene.Mutation):
         tgkt_cham_phan_bien = graphene.Date()
         tgbd_cham_hoi_dong = graphene.Date()
         tgkt_cham_hoi_dong = graphene.Date()
-        admin_id = graphene.ID()
 
     ke_hoach_do_an = graphene.Field(KeHoachDoAnNode)
 
