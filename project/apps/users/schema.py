@@ -1783,15 +1783,12 @@ class BuyerCreate(graphene.Mutation):
 
     def mutate(self, info, user):
         try:
-            # Kiểm tra email đã tồn tại hay chưa
             if User.objects.filter(user_type=2, email=user.email).exists():
-                raise GraphQLError('Email already exists')
+                raise GraphQLError('Email đã tồn tại.')
 
-            # Tạo username mới dựa trên số lượng người dùng
             user_count = User.objects.filter(user_type=2, company_position=1).count() + 1
             username = '80' + str(user_count).zfill(4)
 
-            # Tạo đối tượng user mới
             new_user = User(
                 username=username,
                 user_type=2,
@@ -1807,27 +1804,35 @@ class BuyerCreate(graphene.Mutation):
             UserPayment.objects.create(user=new_user)
 
             # Gửi email kích hoạt tài khoản
-            email = EmailTemplates.objects.get(item_code='ActivateBuyerAccount')
-            title = email.title
-
-            t = Template(email.content)
-            last_name = user.last_name if user.last_name is not None else ""
-            first_name = user.first_name if user.first_name is not None else ""
-
-            c = Context(
-                {
-                    "name": last_name + " " + first_name,
-                    "username": username,
-                    "password": user.password,
-                }
-            )
-
-            output = t.render(c)
-
             try:
-                send_mail(title, output, "NextPro <no-reply@nextpro.io>", [new_user.email], html_message=output, fail_silently=True)
-            except:
-                print("fail mail")
+                email = EmailTemplates.objects.get(item_code='ActivateBuyerAccount')
+                title = email.title
+
+                t = Template(email.content)
+                last_name = user.last_name if user.last_name else ""
+                first_name = user.first_name if user.first_name else ""
+
+                c = Context(
+                    {
+                        "name": last_name + " " + first_name,
+                        "username": username,
+                        "password": user.password,
+                    }
+                )
+
+                output = t.render(c)
+
+                send_mail(
+                    title,
+                    output,
+                    "NextPro <no-reply@nextpro.io>",
+                    [new_user.email],
+                    html_message=output,
+                    fail_silently=True
+                )
+
+            except EmailTemplates.DoesNotExist:
+                print("Mẫu email 'ActivateBuyerAccount' không tồn tại.")
 
             return BuyerCreate(status=True)  # Không trả về thông tin buyer nếu không cần
 
@@ -3612,11 +3617,8 @@ class AdminFilter(FilterSet):
     valid_from = django_filters.CharFilter(method='valid_from_filter')
     valid_to = django_filters.CharFilter(method='valid_to_filter')
     long_name = django_filters.CharFilter(lookup_expr='contains')
-<<<<<<< Updated upstream
     role=django_filters.CharFilter(method='role_filter')
-=======
     chuyen_nganh = django_filters.CharFilter(lookup_expr='icontains')  # Thêm bộ lọc cho chuyen_nganh
->>>>>>> Stashed changes
 
     class Meta:
         model = Admin
@@ -3667,14 +3669,6 @@ class AdminNode(DjangoObjectType):
         interfaces = (CustomNode, UserInterface)
         connection_class = ExtendedConnection
 
-<<<<<<< Updated upstream
-=======
-    def resolve_picture(self, info):
-        if self.picture and hasattr(self.picture, 'url'):
-            return info.context.build_absolute_uri(self.picture.url)
-        return ''
-
->>>>>>> Stashed changes
     def resolve_language(self, info):
         return self.user.language
 
@@ -3696,14 +3690,10 @@ class UserAdminInput(graphene.InputObjectType):
 class AdminInput(graphene.InputObjectType):
     user = UserInput(required=True)
     long_name = graphene.String(required=True)
-<<<<<<< Updated upstream
-    role = graphene.Int(required=True)
-=======
     role = graphene.Int(required=True)  # Thêm trường role để xác định vai trò
     chuyen_nganh = graphene.String()  # Thêm chuyen_nganh
 
 
->>>>>>> Stashed changes
 
 class UserAdminUpdateInput(graphene.InputObjectType):
     email = graphene.String(required=True)
@@ -3730,44 +3720,12 @@ class AdminCreate(graphene.Mutation):
     error = graphene.Field(Error)
 
     def mutate(root, info, admin=None):
-<<<<<<< Updated upstream
         # Bỏ qua kiểm tra quyền để test
         # if checkPermission(info):
 
         # Kiểm tra nếu email đã tồn tại
         if User.objects.filter(user_type=1, email=admin.user.email).exists():
             error = Error(code="USER_01", message=UserError.USER_01)
-=======
-        if checkPermission(info):
-            current_admin = Admin.objects.get(user=info.context.user)
-            if current_admin.role != 1:
-                error = Error(code="USER_03", message="Bạn không có quyền tạo tài khoản.")
-                return AdminCreate(status=False, error=error)
-
-            if User.objects.filter(user_type=1, email=admin.user.email).exists():
-                error = Error(code="USER_01", message=UserError.USER_01)
-                return AdminCreate(status=False, error=error)
-
-            last_created_admin = User.objects.filter(user_type=1).order_by("-username").first()
-            last_user_id_str = last_created_admin.username[2:]
-            user_count = int(last_user_id_str) + 1
-            username = '70' + str(user_count).zfill(4)
-            user = User(username=username, user_type=1, **admin.user)
-            user.set_password(admin.user.password)
-            user.save()
-            
-            admin_instance = Admin(
-                long_name=admin.long_name,
-                user=user,
-                role=admin.role,
-                chuyen_nganh=admin.chuyen_nganh  # Gán chuyen_nganh
-            )
-            admin_instance.save()
-
-            return AdminCreate(status=True, admin=admin_instance)
-        else:
-            error = Error(code="USER_02", message=UserError.USER_02)
->>>>>>> Stashed changes
             return AdminCreate(status=False, error=error)
 
         # Tạo User và Admin mới

@@ -40,17 +40,16 @@ class DeliveryResponsible(models.Model):
 
 
 class DeTai(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    idgvhuongdan = models.ForeignKey(User, on_delete=models.CASCADE, related_name="huongdan_detai")
+    idgvhuongdan = models.ForeignKey(User, on_delete=models.CASCADE, related_name="huongdan_detai", null=True, blank=True)
     idgvphanbien = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True, related_name="phanbien_detai")
     idnhom = models.UUIDField(null=True, blank=True)
-    madoan = models.CharField(max_length=20, unique=True)
-    chuyennganh = models.CharField(max_length=100)
-    tendoan = models.CharField(max_length=255)
-    mota = models.TextField()
-    trangthai = models.CharField(max_length=20, default="0")  # 0 là chưa duyệt
+    madoan = models.CharField(max_length=20, unique=True, null=True, blank=True)
+    chuyennganh = models.CharField(max_length=100, null=True, blank=True)
+    tendoan = models.CharField(max_length=255, null=True, blank=True)
+    mota = models.TextField(null=True, blank=True)
+    trangthai = models.CharField(max_length=20, default="0",null=True, blank=True)  # 0 là chưa duyệt
     yeucau = models.TextField(null=True, blank=True)
-    idkehoach = models.ForeignKey('KeHoachDoAn', on_delete=models.CASCADE, default=1)
+    idkehoach = models.ForeignKey('KeHoachDoAn', on_delete=models.CASCADE, default=1,null=True, blank=True)
 
     class Meta:
         db_table = 'detai'
