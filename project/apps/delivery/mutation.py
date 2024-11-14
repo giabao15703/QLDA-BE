@@ -650,11 +650,11 @@ class AcceptJoinRequest(graphene.Mutation):
                 error=Error(code="ACCEPT_ERROR", message=str(e))
             )
 
-class KeHoachDoAnType(DjangoObjectType):
+""" class KeHoachDoAnType(DjangoObjectType):
     class Meta:
         model = KeHoachDoAn
         fields = "__all__"
-        interfaces = (relay.Node,)
+        interfaces = (relay.Node,) """
 
 class KeHoachDoAnInput(graphene.InputObjectType):
     sl_sinh_vien = graphene.Int(required=True)
