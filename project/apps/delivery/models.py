@@ -1,4 +1,5 @@
 import random
+import uuid 
 from django.db import models
 from apps.master_data.models import (
     CountryState,
@@ -39,17 +40,28 @@ class DeliveryResponsible(models.Model):
 
 
 class DeTai(models.Model):
-    giangvien_id = models.ForeignKey(User, on_delete=models.CASCADE)
-    kehoachdoan_id = models.ForeignKey('KeHoachDoAn', on_delete=models.CASCADE,default=1)
-    ten_de_tai = models.CharField(max_length=255)
-    mo_ta = models.TextField()
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    idgvhuongdan = models.ForeignKey(User, on_delete=models.CASCADE, related_name="huongdan_detai")
+    idgvphanbien = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True, related_name="phanbien_detai")
+    idnhom = models.UUIDField(null=True, blank=True)
+    madoan = models.CharField(max_length=20, unique=True)
+    chuyennganh = models.CharField(max_length=100)
+    tendoan = models.CharField(max_length=255)
+    mota = models.TextField()
+    trangthai = models.CharField(max_length=20, default="0")  # 0 là chưa duyệt
+    yeucau = models.TextField(null=True, blank=True)
+    idkehoach = models.ForeignKey('KeHoachDoAn', on_delete=models.CASCADE, default=1)
 
     class Meta:
         db_table = 'detai'
 
-    @property
-    def giang_vien_full_name(self):
-        return self.giangvien_id.full_name
+    @staticmethod
+    def generate_unique_madoan():
+        """Tạo mã đồ án ngẫu nhiên và đảm bảo không trùng."""
+        while True:
+            ma_do_an = f"DA{uuid.uuid4().hex[:8].upper()}"
+            if not DeTai.objects.filter(madoan=ma_do_an).exists():
+                return ma_do_an
 
 
 

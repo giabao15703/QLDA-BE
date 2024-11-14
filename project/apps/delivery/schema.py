@@ -99,9 +99,14 @@ class DeliveryResponsibleNode(DjangoObjectType):
 
 class DeTaiFilter(django_filters.FilterSet):
     id = django_filters.CharFilter(field_name='id', lookup_expr="exact")
-    giangvien_id = django_filters.CharFilter(field_name='giangvien_id__full_name', lookup_expr="icontains")  # Lọc theo giangvien_id
-    ten_de_tai = django_filters.CharFilter(field_name='ten_de_tai', lookup_expr="icontains")
-    mo_ta = django_filters.CharFilter(field_name='mo_ta', lookup_expr="icontains")
+    idgvhuongdan = django_filters.CharFilter(field_name='idgvhuongdan__full_name', lookup_expr="icontains")  # Lọc theo tên giảng viên hướng dẫn
+    idgvphanbien = django_filters.CharFilter(field_name='idgvphanbien__full_name', lookup_expr="icontains")  # Lọc theo tên giảng viên phản biện
+    idnhom = django_filters.CharFilter(field_name='idnhom', lookup_expr="exact")  # Lọc theo ID nhóm
+    madoan = django_filters.CharFilter(field_name='madoan', lookup_expr="icontains")  # Lọc theo mã đồ án
+    chuyennganh = django_filters.CharFilter(field_name='chuyennganh', lookup_expr="icontains")  # Lọc theo chuyên ngành
+    tendoan = django_filters.CharFilter(field_name='tendoan', lookup_expr="icontains")  # Lọc theo tên đồ án
+    trangthai = django_filters.CharFilter(field_name='trangthai', lookup_expr="exact")  # Lọc theo trạng thái
+    idkehoach = django_filters.CharFilter(field_name='idkehoach__id', lookup_expr="exact")  # Lọc theo ID kế hoạch
 
     class Meta:
         model = DeTai
@@ -111,16 +116,26 @@ class DeTaiFilter(django_filters.FilterSet):
 
 class DeTaiNode(DjangoObjectType):
     giang_vien_full_name = graphene.String()
+    ke_hoach_do_an_id = graphene.ID()
+    giang_vien_phan_bien_full_name = graphene.String()
 
     class Meta:
         model = DeTai
         filterset_class = DeTaiFilter
-        interfaces = (CustomNode,)
+        interfaces = (graphene.relay.Node, )
         connection_class = ExtendedConnection
 
     def resolve_giang_vien_full_name(self, info):
-        # Sử dụng giangvien_id thay vì giang_vien
-        return self.giangvien_id.full_name if self.giangvien_id else None
+        # Lấy full name của giảng viên hướng dẫn
+        return self.idgvhuongdan.full_name if self.idgvhuongdan else None
+
+    def resolve_giang_vien_phan_bien_full_name(self, info):
+        # Lấy full name của giảng viên phản biện nếu có
+        return self.idgvphanbien.full_name if self.idgvphanbien else None
+
+    def resolve_ke_hoach_do_an_id(self, info):
+        # Trả về ID của kế hoạch đồ án
+        return self.idkehoach.id if self.idkehoach else None
 
 
 

@@ -380,9 +380,10 @@ class DeliveryResponsibleDelete(graphene.Mutation):
             return DeliveryResponsibleDelete(status=False, error=error)
 
 class DeTaiInput(graphene.InputObjectType):
-    giangvien_id = graphene.ID(required=True)  # Dùng ID của giảng viên thay vì full_name
-    ten_de_tai = graphene.String(required=True)
-    mo_ta = graphene.String(required=True)
+    idgvhuongdan = graphene.ID(required=True)  # ID của giảng viên hướng dẫn
+    tendoan = graphene.String(required=True)
+    mota = graphene.String(required=True)
+
 
 class DeTaiCreate(graphene.Mutation):
     class Arguments:
@@ -394,29 +395,33 @@ class DeTaiCreate(graphene.Mutation):
 
     def mutate(root, info, input):
         try:
-            # Tìm giảng viên dựa trên ID
-            giang_vien = User.objects.get(id=input.giangvien_id)
+            # Lấy giảng viên dựa trên ID
+            giang_vien = User.objects.get(id=input.idgvhuongdan)
 
-            # Kiểm tra xem có kế hoạch đồ án nào đang chạy và trong khoảng thời gian cho phép tạo đồ án
-            now = timezone.now().date()  # Lấy thời gian hiện tại
+            # Lấy kế hoạch đồ án hợp lệ
+            now = timezone.now().date()
             ke_hoach_do_an = KeHoachDoAn.objects.filter(
-                tgbd_tao_do_an__lte=now,  # Ngày bắt đầu tạo đồ án phải trước hoặc bằng hôm nay
-                tgkt_tao_do_an__gte=now   # Ngày kết thúc tạo đồ án phải sau hoặc bằng hôm nay
-            ).first()  # Kiểm tra xem có tồn tại bản ghi phù hợp không
+                tgbd_tao_do_an__lte=now,
+                tgkt_tao_do_an__gte=now
+            ).first()
 
             if not ke_hoach_do_an:
                 error = Error(code="NO_VALID_KEHOACH", message="Không có kế hoạch đồ án nào trong thời gian cho phép tạo đề tài.")
                 return DeTaiCreate(status=False, error=error)
 
-            # Tạo đề tài
+            # Tạo đề tài với các thuộc tính được yêu cầu
             de_tai = DeTai.objects.create(
-                giangvien_id=giang_vien,
-                kehoachdoan_id=ke_hoach_do_an,
-                ten_de_tai=input.ten_de_tai,
-                mo_ta=input.mo_ta
+                idgvhuongdan=giang_vien,
+                idkehoach=ke_hoach_do_an,
+                tendoan=input.tendoan,
+                mota=input.mota,
+                madoan=DeTai.generate_unique_madoan(),
+                chuyennganh=giang_vien.chuyennganh,  # Lấy chuyên ngành từ giảng viên
+                trangthai="0"  # Đặt trạng thái mặc định là "0" (chưa duyệt)
             )
+
             return DeTaiCreate(status=True, de_tai=de_tai)
-        
+
         except User.DoesNotExist:
             error = Error(code="NOT_FOUND", message="Giảng viên không tồn tại")
             return DeTaiCreate(status=False, error=error)
@@ -428,10 +433,18 @@ class DeTaiCreate(graphene.Mutation):
             return DeTaiCreate(status=False, error=error)
 
 
+
+class DeTaiUpdateInput(graphene.InputObjectType):
+    tendoan = graphene.String()
+    mota = graphene.String()
+    trangthai = graphene.String()  # Chỉ trưởng khoa có thể cập nhật
+    yeucau = graphene.String()      # Chỉ trưởng khoa có thể cập nhật
+
+
 class DeTaiUpdate(graphene.Mutation):
     class Arguments:
         id = graphene.ID(required=True)
-        input = DeTaiInput(required=True)
+        input = DeTaiUpdateInput(required=True)
 
     status = graphene.Boolean()
     de_tai = graphene.Field(DeTaiNode)
@@ -441,10 +454,26 @@ class DeTaiUpdate(graphene.Mutation):
         try:
             # Lấy đối tượng đề tài cần cập nhật
             de_tai = DeTai.objects.get(id=id)
+            user = info.context.user
 
-            # Cập nhật thông tin tên đề tài và mô tả
-            de_tai.ten_de_tai = input.ten_de_tai
-            de_tai.mo_ta = input.mo_ta
+            # Kiểm tra quyền hạn của người dùng
+            if user.role == "TruongKhoa":  # Giả sử Trưởng khoa có role là "TruongKhoa"
+                # Cho phép trưởng khoa cập nhật trạng thái và yêu cầu
+                if input.trangthai is not None:
+                    de_tai.trangthai = input.trangthai
+                if input.yeucau is not None:
+                    de_tai.yeucau = input.yeucau
+
+            elif user.id == de_tai.idgvhuongdan.id:
+                # Nếu là giảng viên hướng dẫn, chỉ cho phép cập nhật tên đồ án và mô tả
+                if input.tendoan is not None:
+                    de_tai.tendoan = input.tendoan
+                if input.mota is not None:
+                    de_tai.mota = input.mota
+            else:
+                # Người dùng không có quyền cập nhật
+                error = Error(code="PERMISSION_DENIED", message="Bạn không có quyền cập nhật đề tài này.")
+                return DeTaiUpdate(status=False, error=error)
 
             # Lưu thay đổi
             de_tai.save()
@@ -459,6 +488,9 @@ class DeTaiUpdate(graphene.Mutation):
 
 
 
+import graphene
+from django.utils import timezone
+
 class DeTaiDelete(graphene.Mutation):
     class Arguments:
         id = graphene.ID(required=True)
@@ -468,7 +500,22 @@ class DeTaiDelete(graphene.Mutation):
 
     def mutate(root, info, id):
         try:
+            # Lấy đối tượng đề tài cần xoá
             de_tai = DeTai.objects.get(id=id)
+            user = info.context.user
+
+            # Kiểm tra quyền hạn: chỉ cho phép Trưởng khoa xoá
+            if user.role != "1":  # Giả sử "1 - TruongKhoa" là vai trò của Trưởng khoa
+                error = Error(code="PERMISSION_DENIED", message="Bạn không có quyền xoá đề tài này.")
+                return DeTaiDelete(status=False, error=error)
+
+            # Kiểm tra thời gian: chỉ cho phép xoá trong thời gian tạo đồ án
+            now = timezone.now().date()
+            if not (de_tai.idkehoach.tgbd_tao_do_an <= now <= de_tai.idkehoach.tgkt_tao_do_an):
+                error = Error(code="TIME_CONSTRAINT", message="Đề tài chỉ có thể bị xoá trong thời gian tạo đồ án.")
+                return DeTaiDelete(status=False, error=error)
+
+            # Xoá đề tài
             de_tai.delete()
             return DeTaiDelete(status=True)
 
@@ -478,6 +525,7 @@ class DeTaiDelete(graphene.Mutation):
         except Exception as e:
             error = Error(code="DELETE_ERROR", message=str(e))
             return DeTaiDelete(status=False, error=error)
+
 
 class GroupQLDAInput(graphene.InputObjectType):
     name = graphene.String(required=True)

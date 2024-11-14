@@ -3612,11 +3612,15 @@ class AdminFilter(FilterSet):
     valid_from = django_filters.CharFilter(method='valid_from_filter')
     valid_to = django_filters.CharFilter(method='valid_to_filter')
     long_name = django_filters.CharFilter(lookup_expr='contains')
+<<<<<<< Updated upstream
     role=django_filters.CharFilter(method='role_filter')
+=======
+    chuyen_nganh = django_filters.CharFilter(lookup_expr='icontains')  # Thêm bộ lọc cho chuyen_nganh
+>>>>>>> Stashed changes
 
     class Meta:
         model = Admin
-        fields = ['id', 'long_name']
+        fields = ['id', 'long_name', 'chuyen_nganh']  # Thêm chuyen_nganh vào fields
 
     order_by = OrderingFilter(
             fields=(
@@ -3628,37 +3632,34 @@ class AdminFilter(FilterSet):
             ('user__status', 'status'),
             ('user__username', 'username'),
             ('user__short_name', 'short_name'),
+            ('chuyen_nganh', 'chuyen_nganh'),  # Cho phép sắp xếp theo chuyen_nganh
         )
     )
 
     def email_filter(self, queryset, name, value):
-        queryset = queryset.filter(user__email=value)
-        return queryset
+        return queryset.filter(user__email=value)
 
     def role_filter(self, queryset, name, value):
         queryset = queryset.filter(user__role=value)
         return queryset
 
     def username_filter(self, queryset, name, value):
-        queryset = queryset.filter(user__username=value)
-        return queryset
+        return queryset.filter(user__username=value)
 
     def status_filter(self, queryset, name, value):
-        queryset = queryset.filter(user__status=value)
-        return queryset
+        return queryset.filter(user__status=value)
 
     def created_filter(self, queryset, name, value):
         value = datetime.strptime(value, '%Y-%m-%dT%H:%M:%S%z')
         value_to = value + timezone.timedelta(days=1)
-        queryset = queryset.filter(user__created__range=(value, value_to))
-        return queryset
+        return queryset.filter(user__created__range=(value, value_to))
 
     def short_name_filter(self, queryset, name, value):
-        queryset = queryset.filter(user__short_name__contains=value)
-        return queryset
+        return queryset.filter(user__short_name__contains=value)
 
 class AdminNode(DjangoObjectType):
     language = graphene.Field(LanguageNode)
+    chuyen_nganh = graphene.String()  # Thêm chuyen_nganh vào node
 
     class Meta:
         model = Admin
@@ -3666,8 +3667,19 @@ class AdminNode(DjangoObjectType):
         interfaces = (CustomNode, UserInterface)
         connection_class = ExtendedConnection
 
+<<<<<<< Updated upstream
+=======
+    def resolve_picture(self, info):
+        if self.picture and hasattr(self.picture, 'url'):
+            return info.context.build_absolute_uri(self.picture.url)
+        return ''
+
+>>>>>>> Stashed changes
     def resolve_language(self, info):
         return self.user.language
+
+    def resolve_chuyen_nganh(self, info):
+        return self.chuyen_nganh  # Trả về giá trị chuyen_nganh
 
 class PermissionInput(graphene.InputObjectType):
     valid_from = graphene.String(required=True)
@@ -3684,7 +3696,14 @@ class UserAdminInput(graphene.InputObjectType):
 class AdminInput(graphene.InputObjectType):
     user = UserInput(required=True)
     long_name = graphene.String(required=True)
+<<<<<<< Updated upstream
     role = graphene.Int(required=True)
+=======
+    role = graphene.Int(required=True)  # Thêm trường role để xác định vai trò
+    chuyen_nganh = graphene.String()  # Thêm chuyen_nganh
+
+
+>>>>>>> Stashed changes
 
 class UserAdminUpdateInput(graphene.InputObjectType):
     email = graphene.String(required=True)
@@ -3694,8 +3713,8 @@ class UserAdminUpdateInput(graphene.InputObjectType):
 class AdminUpdateInput(graphene.InputObjectType):
     user = graphene.Field(UserAdminUpdateInput, required=True)
     long_name = graphene.String(required=True)
-    picture = Upload()
-    permissions = graphene.List(PermissionInput, required=True)
+    role = graphene.Int(required=True)  # Thêm trường role để xác định vai trò
+    chuyen_nganh = graphene.String()  # Thêm chuyen_nganh
 
 class AdminProfileUpdateInput(graphene.InputObjectType):
     user = graphene.Field(UserAdminUpdateInput, required=True)
@@ -3711,12 +3730,44 @@ class AdminCreate(graphene.Mutation):
     error = graphene.Field(Error)
 
     def mutate(root, info, admin=None):
+<<<<<<< Updated upstream
         # Bỏ qua kiểm tra quyền để test
         # if checkPermission(info):
 
         # Kiểm tra nếu email đã tồn tại
         if User.objects.filter(user_type=1, email=admin.user.email).exists():
             error = Error(code="USER_01", message=UserError.USER_01)
+=======
+        if checkPermission(info):
+            current_admin = Admin.objects.get(user=info.context.user)
+            if current_admin.role != 1:
+                error = Error(code="USER_03", message="Bạn không có quyền tạo tài khoản.")
+                return AdminCreate(status=False, error=error)
+
+            if User.objects.filter(user_type=1, email=admin.user.email).exists():
+                error = Error(code="USER_01", message=UserError.USER_01)
+                return AdminCreate(status=False, error=error)
+
+            last_created_admin = User.objects.filter(user_type=1).order_by("-username").first()
+            last_user_id_str = last_created_admin.username[2:]
+            user_count = int(last_user_id_str) + 1
+            username = '70' + str(user_count).zfill(4)
+            user = User(username=username, user_type=1, **admin.user)
+            user.set_password(admin.user.password)
+            user.save()
+            
+            admin_instance = Admin(
+                long_name=admin.long_name,
+                user=user,
+                role=admin.role,
+                chuyen_nganh=admin.chuyen_nganh  # Gán chuyen_nganh
+            )
+            admin_instance.save()
+
+            return AdminCreate(status=True, admin=admin_instance)
+        else:
+            error = Error(code="USER_02", message=UserError.USER_02)
+>>>>>>> Stashed changes
             return AdminCreate(status=False, error=error)
 
         # Tạo User và Admin mới
@@ -3741,6 +3792,7 @@ class AdminCreate(graphene.Mutation):
         #     error = Error(code="USER_02", message=UserError.USER_02)
         #     return AdminCreate(status=False, error=error)
 
+
 class AdminUpdate(graphene.Mutation):
     class Arguments:
         is_delete = graphene.Boolean(required=True)
@@ -3753,18 +3805,21 @@ class AdminUpdate(graphene.Mutation):
 
     def mutate(root, info, id, is_delete, admin=None):
         if checkPermission(info):
-            admin_intance = Admin.objects.get(pk=id)
-            user = User.objects.get(pk=admin_intance.user_id)
+            admin_instance = Admin.objects.get(pk=id)
+            user = User.objects.get(pk=admin_instance.user_id)
             user.short_name = admin.user.short_name
             user.status = admin.user.status
 
             if admin.picture is None and not is_delete:
-                picture = admin_intance.picture
+                picture = admin_instance.picture
             else:
                 picture = admin.picture
-            admin_intance.long_name = admin.long_name
-            admin_intance.picture = picture
+
+            admin_instance.long_name = admin.long_name
+            admin_instance.picture = picture
+            admin_instance.chuyen_nganh = admin.chuyen_nganh  # Cập nhật chuyen_nganh nếu có
             time_now = timezone.now()
+
             for permission in admin.permissions:
                 valid_from1 = datetime.strptime(permission.valid_from, '%Y-%m-%dT%H:%M:%S%z')
                 status_input = 4
@@ -3774,6 +3829,7 @@ class AdminUpdate(graphene.Mutation):
                 valid_to1 = datetime.strptime(permission.valid_to, '%Y-%m-%dT%H:%M:%S%z')
                 group_permission = GroupPermission.objects.filter(group_id=permission.modules, role=permission.role).first()
                 user_permission_mapping = UsersPermission.objects.filter(permission_id=group_permission.id, status__in=[1, 4])
+
                 for user_permission in user_permission_mapping:
                     valid_from = user_permission.valid_from
                     valid_to = user_permission.valid_to
@@ -3786,16 +3842,23 @@ class AdminUpdate(graphene.Mutation):
                     if valid_from >= valid_from1 and valid_to <= valid_to1:
                         error = Error(code="USER_07", message=UserError.USER_07)
                         return AdminUpdate(status=False, error=error)
+                        
                 user_permission = UsersPermission(
-                    permission_id=group_permission.id, valid_from=permission.valid_from, valid_to=permission.valid_to, user=user, status=status_input
+                    permission_id=group_permission.id,
+                    valid_from=permission.valid_from,
+                    valid_to=permission.valid_to,
+                    user=user,
+                    status=status_input
                 )
                 user_permission.save()
-            admin_intance.save()
+
+            admin_instance.save()
             user.save()
-            return AdminUpdate(status=True, admin=admin_intance)
+            return AdminUpdate(status=True, admin=admin_instance)
         else:
             error = Error(code="USER_02", message=UserError.USER_02)
             return AdminUpdate(status=False, error=error)
+
 
 class AdminDelete(graphene.Mutation):
     status = graphene.Boolean()
