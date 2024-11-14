@@ -673,7 +673,7 @@ class CreateKeHoachDoAn(graphene.Mutation):
         tgkt_cham_phan_bien = graphene.Date(required=True)
         tgbd_cham_hoi_dong = graphene.Date(required=True)
         tgkt_cham_hoi_dong = graphene.Date(required=True)
-        user_id = graphene.ID(required=True)
+        admin_id = graphene.ID(required=True)
 
     ke_hoach_do_an = graphene.Field(KeHoachDoAnNode)
 
@@ -722,7 +722,7 @@ class CreateKeHoachDoAn(graphene.Mutation):
 
     def mutate(self, info, **kwargs):
         # Kiểm tra user
-        user = User.objects.get(pk=kwargs.get('user_id'))
+        admin = Admin.objects.get(pk=kwargs.get('admin_id'))
         
         # Kiểm tra tính hợp lệ của thời gian
         CreateKeHoachDoAn.validate_time_fields(**kwargs)
@@ -745,7 +745,7 @@ class CreateKeHoachDoAn(graphene.Mutation):
             tgkt_cham_phan_bien=kwargs.get('tgkt_cham_phan_bien'),
             tgbd_cham_hoi_dong=kwargs.get('tgbd_cham_hoi_dong'),
             tgkt_cham_hoi_dong=kwargs.get('tgkt_cham_hoi_dong'),
-            user=user
+            admin=admin
         )
         ke_hoach_do_an.save()
         return CreateKeHoachDoAn(ke_hoach_do_an=ke_hoach_do_an)
@@ -768,7 +768,7 @@ class UpdateKeHoachDoAn(graphene.Mutation):
         tgkt_cham_phan_bien = graphene.Date()
         tgbd_cham_hoi_dong = graphene.Date()
         tgkt_cham_hoi_dong = graphene.Date()
-        user_id = graphene.ID()
+        admin_id = graphene.ID()
 
     ke_hoach_do_an = graphene.Field(KeHoachDoAnNode)
 
@@ -807,8 +807,8 @@ class UpdateKeHoachDoAn(graphene.Mutation):
                 setattr(ke_hoach_do_an, key, value)
 
         # Cập nhật quan hệ nếu cần thiết
-        if 'user_id' in kwargs:
-            ke_hoach_do_an.user = User.objects.get(pk=kwargs.get('user_id'))
+        if 'admin_id' in kwargs:
+            ke_hoach_do_an.admin = Admin.objects.get(pk=kwargs.get('admin_id'))
         
         ke_hoach_do_an.save()
         return UpdateKeHoachDoAn(ke_hoach_do_an=ke_hoach_do_an)
