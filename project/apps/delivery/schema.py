@@ -203,7 +203,7 @@ class KeHoachDoAnFilter(FilterSet):
     sl_sinh_vien = django_filters.NumberFilter(field_name="sl_sinh_vien", lookup_expr="exact")
     sl_do_an = django_filters.NumberFilter(field_name="sl_do_an", lookup_expr="exact")
     ky_mo = django_filters.CharFilter(field_name="ky_mo", lookup_expr="icontains")
-    user_id = django_filters.NumberFilter(field_name="user_id", lookup_expr="exact")
+    admin_id = django_filters.NumberFilter(field_name="admin_id", lookup_expr="exact")
 
     class Meta:
         model = KeHoachDoAn

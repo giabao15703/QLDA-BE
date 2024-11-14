@@ -656,28 +656,33 @@ class KeHoachDoAnType(DjangoObjectType):
         fields = "__all__"
         interfaces = (relay.Node,)
 
+class KeHoachDoAnInput(graphene.InputObjectType):
+    sl_sinh_vien = graphene.Int(required=True)
+    sl_do_an = graphene.Int(required=True)
+    ky_mo = graphene.String(required=True)
+    tgbd_do_an = graphene.Date(required=True)
+    tgkt_do_an = graphene.Date(required=True)
+    tgbd_tao_do_an = graphene.Date(required=True)
+    tgkt_tao_do_an = graphene.Date(required=True)
+    tgbd_dang_ky_de_tai = graphene.Date(required=True)
+    tgkt_dang_ky_de_tai = graphene.Date(required=True)
+    tgbd_lam_do_an = graphene.Date(required=True)
+    tgkt_lam_do_an = graphene.Date(required=True)
+    tgbd_cham_phan_bien = graphene.Date(required=True)
+    tgkt_cham_phan_bien = graphene.Date(required=True)
+    tgbd_cham_hoi_dong = graphene.Date(required=True)
+    tgkt_cham_hoi_dong = graphene.Date(required=True)
+    admin_id = graphene.ID(required=True)
+
+
 class CreateKeHoachDoAn(graphene.Mutation):
     class Arguments:
-        sl_sinh_vien = graphene.Int(required=True)
-        sl_do_an = graphene.Int(required=True)
-        ky_mo = graphene.String(required=True)
-        tgbd_do_an = graphene.Date(required=True)
-        tgkt_do_an = graphene.Date(required=True)
-        tgbd_tao_do_an = graphene.Date(required=True)
-        tgkt_tao_do_an = graphene.Date(required=True)
-        tgbd_dang_ky_de_tai = graphene.Date(required=True)
-        tgkt_dang_ky_de_tai = graphene.Date(required=True)
-        tgbd_lam_do_an = graphene.Date(required=True)
-        tgkt_lam_do_an = graphene.Date(required=True)
-        tgbd_cham_phan_bien = graphene.Date(required=True)
-        tgkt_cham_phan_bien = graphene.Date(required=True)
-        tgbd_cham_hoi_dong = graphene.Date(required=True)
-        tgkt_cham_hoi_dong = graphene.Date(required=True)
-        admin_id = graphene.ID(required=True)
+        input = KeHoachDoAnInput(required=True)
 
     ke_hoach_do_an = graphene.Field(KeHoachDoAnNode)
 
-    def validate_time_fields(**kwargs):
+    @staticmethod
+    def validate_time_fields(input_data):
         """
         Kiểm tra tính hợp lệ của các trường thời gian dựa trên timeline yêu cầu:
         tgbd_do_an <= tgbd_tao_do_an <= tgkt_tao_do_an <= tgbd_dang_ky_de_tai <= tgkt_dang_ky_de_tai <=
@@ -685,20 +690,20 @@ class CreateKeHoachDoAn(graphene.Mutation):
         tgbd_cham_hoi_dong <= tgkt_cham_hoi_dong <= tgkt_do_an
         """
 
-        tgbd_do_an = kwargs.get('tgbd_do_an')
-        tgkt_do_an = kwargs.get('tgkt_do_an')
+        tgbd_do_an = input_data.tgbd_do_an
+        tgkt_do_an = input_data.tgkt_do_an
 
         if not all([
-            tgbd_do_an <= kwargs.get('tgbd_tao_do_an') <= tgkt_do_an,
-            tgbd_do_an <= kwargs.get('tgkt_tao_do_an') <= tgkt_do_an,
-            tgbd_do_an <= kwargs.get('tgbd_dang_ky_de_tai') <= tgkt_do_an,
-            tgbd_do_an <= kwargs.get('tgkt_dang_ky_de_tai') <= tgkt_do_an,
-            tgbd_do_an <= kwargs.get('tgbd_lam_do_an') <= tgkt_do_an,
-            tgbd_do_an <= kwargs.get('tgkt_lam_do_an') <= tgkt_do_an,
-            tgbd_do_an <= kwargs.get('tgbd_cham_phan_bien') <= tgkt_do_an,
-            tgbd_do_an <= kwargs.get('tgkt_cham_phan_bien') <= tgkt_do_an,
-            tgbd_do_an <= kwargs.get('tgbd_cham_hoi_dong') <= tgkt_do_an,
-            tgbd_do_an <= kwargs.get('tgkt_cham_hoi_dong') <= tgkt_do_an
+            tgbd_do_an <= input_data.tgbd_tao_do_an <= tgkt_do_an,
+            tgbd_do_an <= input_data.tgkt_tao_do_an <= tgkt_do_an,
+            tgbd_do_an <= input_data.tgbd_dang_ky_de_tai <= tgkt_do_an,
+            tgbd_do_an <= input_data.tgkt_dang_ky_de_tai <= tgkt_do_an,
+            tgbd_do_an <= input_data.tgbd_lam_do_an <= tgkt_do_an,
+            tgbd_do_an <= input_data.tgkt_lam_do_an <= tgkt_do_an,
+            tgbd_do_an <= input_data.tgbd_cham_phan_bien <= tgkt_do_an,
+            tgbd_do_an <= input_data.tgkt_cham_phan_bien <= tgkt_do_an,
+            tgbd_do_an <= input_data.tgbd_cham_hoi_dong <= tgkt_do_an,
+            tgbd_do_an <= input_data.tgkt_cham_hoi_dong <= tgkt_do_an
         ]):
             raise ValidationError("Thời gian bắt đầu và kết thúc của đồ án phải bao hàm toàn bộ các khoảng thời gian khác.")
 
@@ -717,38 +722,38 @@ class CreateKeHoachDoAn(graphene.Mutation):
         ]
         
         for start, end in timeline:
-            if kwargs.get(start) > kwargs.get(end):
+            if getattr(input_data, start) > getattr(input_data, end):
                 raise ValidationError(f"{start} phải nhỏ hơn hoặc bằng {end}")
 
-    def mutate(self, info, **kwargs):
+    def mutate(self, info, input):
         # Kiểm tra user
-        admin = Admin.objects.get(pk=kwargs.get('admin_id'))
+        admin = Admin.objects.get(pk=input.admin_id)
         
         # Kiểm tra tính hợp lệ của thời gian
-        CreateKeHoachDoAn.validate_time_fields(**kwargs)
-        
+        self.validate_time_fields(input)
         
         # Tạo kế hoạch đồ án nếu hợp lệ
         ke_hoach_do_an = KeHoachDoAn(
-            sl_sinh_vien=kwargs.get('sl_sinh_vien'),
-            sl_do_an=kwargs.get('sl_do_an'),
-            ky_mo=kwargs.get('ky_mo'),
-            tgbd_do_an=kwargs.get('tgbd_do_an'),
-            tgkt_do_an=kwargs.get('tgkt_do_an'),
-            tgbd_tao_do_an=kwargs.get('tgbd_tao_do_an'),
-            tgkt_tao_do_an=kwargs.get('tgkt_tao_do_an'),
-            tgbd_dang_ky_de_tai=kwargs.get('tgbd_dang_ky_de_tai'),
-            tgkt_dang_ky_de_tai=kwargs.get('tgkt_dang_ky_de_tai'),
-            tgbd_lam_do_an=kwargs.get('tgbd_lam_do_an'),
-            tgkt_lam_do_an=kwargs.get('tgkt_lam_do_an'),
-            tgbd_cham_phan_bien=kwargs.get('tgbd_cham_phan_bien'),
-            tgkt_cham_phan_bien=kwargs.get('tgkt_cham_phan_bien'),
-            tgbd_cham_hoi_dong=kwargs.get('tgbd_cham_hoi_dong'),
-            tgkt_cham_hoi_dong=kwargs.get('tgkt_cham_hoi_dong'),
+            sl_sinh_vien=input.sl_sinh_vien,
+            sl_do_an=input.sl_do_an,
+            ky_mo=input.ky_mo,
+            tgbd_do_an=input.tgbd_do_an,
+            tgkt_do_an=input.tgkt_do_an,
+            tgbd_tao_do_an=input.tgbd_tao_do_an,
+            tgkt_tao_do_an=input.tgkt_tao_do_an,
+            tgbd_dang_ky_de_tai=input.tgbd_dang_ky_de_tai,
+            tgkt_dang_ky_de_tai=input.tgkt_dang_ky_de_tai,
+            tgbd_lam_do_an=input.tgbd_lam_do_an,
+            tgkt_lam_do_an=input.tgkt_lam_do_an,
+            tgbd_cham_phan_bien=input.tgbd_cham_phan_bien,
+            tgkt_cham_phan_bien=input.tgkt_cham_phan_bien,
+            tgbd_cham_hoi_dong=input.tgbd_cham_hoi_dong,
+            tgkt_cham_hoi_dong=input.tgkt_cham_hoi_dong,
             admin=admin
         )
         ke_hoach_do_an.save()
         return CreateKeHoachDoAn(ke_hoach_do_an=ke_hoach_do_an)
+
 
 class UpdateKeHoachDoAn(graphene.Mutation):
     class Arguments:
