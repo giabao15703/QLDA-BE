@@ -65,12 +65,21 @@ class DeTai(models.Model):
 class GroupQLDA(models.Model):
     ma_Nhom = models.CharField(max_length=10, unique=True, default="")
     name = models.CharField(max_length=255)
-    de_tai = models.CharField(max_length=1024)
+    de_tai = models.CharField(max_length=1024, null=True, blank=True)
     status = models.BooleanField(default=True)
-    member_count = models.PositiveIntegerField(default=0)  # True là còn mở, False là đã đầy
+    member_count = models.PositiveIntegerField(default=0)
+    creator_short_name = models.CharField(max_length=255, null=True, blank=True)
+    leader_user = models.ForeignKey(
+        User,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name="led_groups"
+    )
 
     class Meta:
         db_table = 'group_qlda'
+
     def save(self, *args, **kwargs):
         if not self.ma_Nhom:
             # Tạo mã nhóm ngẫu nhiên và kiểm tra xem có trùng lặp không
@@ -84,6 +93,7 @@ class GroupQLDA(models.Model):
             ma_nhom = f"DA{random.randint(100, 999)}"  # Tạo 3 số ngẫu nhiên
             if not GroupQLDA.objects.filter(ma_Nhom=ma_nhom).exists():  # Kiểm tra trùng lặp
                 return ma_nhom
+
 
 class JoinGroup(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="join_groups")
@@ -99,7 +109,7 @@ class JoinRequest(models.Model):
     group = models.ForeignKey(GroupQLDA, on_delete=models.CASCADE, related_name="join_requests")
     is_approved = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
-    leader_user_id = models.IntegerField(null=True, blank=True)  # Field mới để lưu userId của leader
+    leader_user_id = models.IntegerField(null=True, blank=True)
 
     @staticmethod
     def get_group_leader_user_id(group_id):
@@ -108,23 +118,16 @@ class JoinRequest(models.Model):
         return leader.user.id if leader else None
 
     def save(self, *args, **kwargs):
-        # Trước khi lưu JoinRequest, gán leader_user_id nếu chưa có
         if not self.leader_user_id:
             leader_user_id = self.get_group_leader_user_id(self.group.id)
             if leader_user_id:
                 self.leader_user_id = leader_user_id
         super().save(*args, **kwargs)
 
-    def send_notification_to_leader(self):
-        """Gửi thông báo cho leader của nhóm khi có yêu cầu tham gia mới."""
-        leader_user_id = self.get_group_leader_user_id(self.group.id)
-        leader_user = User.objects.get(id=leader_user_id) if leader_user_id else None
-        if leader_user:
-            print(f"Gửi thông báo đến {leader_user.email}: User {self.user.id} đã gửi yêu cầu tham gia nhóm {self.group.id}.")
-
     class Meta:
         db_table = 'join_request'
         unique_together = ('user', 'group')
+
 
 class KeHoachDoAn(models.Model):
     sl_sinh_vien = models.IntegerField()  # Số lượng sinh viên

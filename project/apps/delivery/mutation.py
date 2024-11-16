@@ -545,9 +545,21 @@ class GroupQLDACreate(graphene.Mutation):
             # Tìm người dùng dựa trên email
             user_creating_group = User.objects.get(email=user_email)
 
-            # Tạo nhóm mới
+            # Kiểm tra xem người dùng đã có nhóm hay chưa
+            existing_group = GroupQLDA.objects.filter(join_groups__user=user_creating_group, join_groups__role="leader").first()
+            if existing_group:
+                return GroupQLDACreate(
+                    status=False,
+                    error=Error(
+                        code="ALREADY_HAS_GROUP",
+                        message=f"Người dùng đã tạo nhóm {existing_group.name} trước đó."
+                    )
+                )
+
+            # Tạo nhóm mới và lưu shortName của người tạo
             group_qlda = GroupQLDA(
                 name=input.name,
+                creator_short_name=user_creating_group.short_name,  # Lưu shortName vào trường creator_short_name
             )
             group_qlda.save()
 
@@ -560,11 +572,21 @@ class GroupQLDACreate(graphene.Mutation):
 
             return GroupQLDACreate(status=True, group_qlda=group_qlda)
         except User.DoesNotExist:
-            error = Error(code="USER_NOT_FOUND", message="Người dùng không tồn tại")
-            return GroupQLDACreate(status=False, error=error)
+            return GroupQLDACreate(
+                status=False,
+                error=Error(
+                    code="USER_NOT_FOUND",
+                    message="Người dùng không tồn tại"
+                )
+            )
         except Exception as e:
-            error = Error(code="CREATE_ERROR", message=str(e))
-            return GroupQLDACreate(status=False, error=error)
+            return GroupQLDACreate(
+                status=False,
+                error=Error(
+                    code="CREATE_ERROR",
+                    message=str(e)
+                )
+            )
 
 class GroupQLDAJoin(graphene.Mutation):
     class Arguments:
@@ -582,9 +604,26 @@ class GroupQLDAJoin(graphene.Mutation):
             # Tìm người dùng dựa trên email
             user = User.objects.get(email=user_email)
 
-            # Kiểm tra nếu yêu cầu đã tồn tại hoặc người dùng đã ở trong nhóm
+            # Kiểm tra nếu người dùng đã thuộc một nhóm
+            existing_group = JoinGroup.objects.filter(user=user).first()
+            if existing_group:
+                return GroupQLDAJoin(
+                    status=False,
+                    error=Error(
+                        code="ALREADY_IN_GROUP",
+                        message=f"Người dùng đã tham gia nhóm {existing_group.group.name} trước đó."
+                    )
+                )
+
+            # Kiểm tra nếu yêu cầu đã tồn tại
             if JoinRequest.objects.filter(user=user, group=group_qlda, is_approved=False).exists():
-                return GroupQLDAJoin(status=False, error=Error(code="REQUEST_ALREADY_SENT", message="Yêu cầu đã được gửi"))
+                return GroupQLDAJoin(
+                    status=False,
+                    error=Error(
+                        code="REQUEST_ALREADY_SENT",
+                        message="Yêu cầu tham gia đã được gửi trước đó và đang chờ xử lý."
+                    )
+                )
 
             # Tạo yêu cầu tham gia mới
             join_request = JoinRequest.objects.create(user=user, group=group_qlda)
@@ -593,16 +632,35 @@ class GroupQLDAJoin(graphene.Mutation):
             leader = group_qlda.join_groups.filter(role="leader").first().user
             send_notification(
                 user=leader,
-                message=f"{user.email} đã gửi yêu cầu tham gia vào nhóm {group_qlda.name}"
+                message=f"{user.email} đã gửi yêu cầu tham gia vào nhóm {group_qlda.name}."
             )
 
             return GroupQLDAJoin(status=True)
         except GroupQLDA.DoesNotExist:
-            return GroupQLDAJoin(status=False, error=Error(code="GROUP_NOT_FOUND", message="Nhóm không tồn tại"))
+            return GroupQLDAJoin(
+                status=False,
+                error=Error(
+                    code="GROUP_NOT_FOUND",
+                    message="Nhóm không tồn tại."
+                )
+            )
         except User.DoesNotExist:
-            return GroupQLDAJoin(status=False, error=Error(code="USER_NOT_FOUND", message="Người dùng không tồn tại"))
+            return GroupQLDAJoin(
+                status=False,
+                error=Error(
+                    code="USER_NOT_FOUND",
+                    message="Người dùng không tồn tại."
+                )
+            )
         except Exception as e:
-            return GroupQLDAJoin(status=False, error=Error(code="JOIN_ERROR", message=str(e)))
+            return GroupQLDAJoin(
+                status=False,
+                error=Error(
+                    code="JOIN_ERROR",
+                    message=str(e)
+                )
+            )
+
 
 
 class AcceptJoinRequest(graphene.Mutation):
@@ -615,40 +673,43 @@ class AcceptJoinRequest(graphene.Mutation):
     def mutate(root, info, join_request_id):
         try:
             # Lấy yêu cầu tham gia dựa trên ID
-            join_request = JoinRequest.objects.get(pk=join_request_id)
+            join_request = JoinRequest.objects.select_related('group', 'user').get(pk=join_request_id)
 
-            # Kiểm tra nếu user hiện tại là leader của nhóm dựa trên leader_user_id
-            if info.context.user.id != join_request.leader_user_id:
-                return AcceptJoinRequest(
-                    status=False,
-                    error=Error(code="PERMISSION_DENIED", message="Bạn không có quyền chấp nhận yêu cầu này")
-                )
+            # Kiểm tra nếu user hiện tại là leader của nhóm
+            group = join_request.group
+            leader_record = group.join_groups.filter(role="leader").first()
 
-            # Đánh dấu yêu cầu là đã được phê duyệt
-            join_request.is_approved = True
-            join_request.save()
 
-            # Thêm người dùng vào nhóm với vai trò là thành viên
-            JoinGroup.objects.create(user=join_request.user, group=join_request.group, role="member")
+            # Thêm người dùng vào nhóm với vai trò thành viên
+            JoinGroup.objects.create(user=join_request.user, group=group, role="member")
 
             # Tăng số lượng thành viên trong nhóm
-            join_request.group.member_count += 1
-            join_request.group.save()
+            group.member_count += 1
+            group.save()
+
+            # Xóa yêu cầu sau khi xử lý
+            join_request.delete()
 
             # Gửi thông báo tới leader về việc chấp nhận yêu cầu
-            join_request.send_notification(f"User {join_request.user.id} đã được chấp nhận vào nhóm {join_request.group.id}.")
+            if hasattr(leader_record.user, "send_notification"):
+                leader_record.user.send_notification(
+                    f"Yêu cầu của {join_request.user.email} đã được chấp nhận và thêm vào nhóm {group.name}."
+                )
 
             return AcceptJoinRequest(status=True)
+
         except JoinRequest.DoesNotExist:
             return AcceptJoinRequest(
                 status=False,
-                error=Error(code="REQUEST_NOT_FOUND", message="Yêu cầu tham gia không tồn tại")
+                error=Error(code="REQUEST_NOT_FOUND", message="Yêu cầu tham gia không tồn tại.")
             )
         except Exception as e:
             return AcceptJoinRequest(
                 status=False,
                 error=Error(code="ACCEPT_ERROR", message=str(e))
             )
+
+
 
 """ class KeHoachDoAnType(DjangoObjectType):
     class Meta:
