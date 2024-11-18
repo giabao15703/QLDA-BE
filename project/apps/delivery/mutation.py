@@ -18,7 +18,7 @@ from apps.delivery.schema import (
     KeHoachDoAnNode,
 
 )
-
+from apps.users.models import Token
 from apps.delivery.models import (
     ShippingFee,
     TransporterList,
@@ -381,7 +381,7 @@ class DeliveryResponsibleDelete(graphene.Mutation):
             return DeliveryResponsibleDelete(status=False, error=error)
 
 class DeTaiInput(graphene.InputObjectType):
-    idgvhuongdan = graphene.ID(required=True)  # ID của giảng viên hướng dẫn
+    #idgvhuongdan = graphene.ID(required=True)  # ID của giảng viên hướng dẫn
     tendoan = graphene.String(required=True)
     mota = graphene.String(required=True)
 
@@ -396,33 +396,39 @@ class DeTaiCreate(graphene.Mutation):
     def mutate(root, info, input):
         try:
             # Lấy giảng viên dựa trên ID
-            giang_vien = Admin.objects.get(id=input.idgvhuongdan)
+            token_key = GetToken.getToken(info)
+            token = Token.objects.get(key=token_key)
+            user = token.user
+            if user.isAdmin():
+                giang_vien = Admin.objects.get(user=user)
+                # Lấy kế hoạch đồ án hợp lệ
+                now = timezone.now().date()
+                ke_hoach_do_an = KeHoachDoAn.objects.filter(
+                    tgbd_tao_do_an__lte=now,
+                    tgkt_tao_do_an__gte=now
+                ).first()
+                count = DeTai.objects.filter(idgvhuongdan=giang_vien, idkehoach=ke_hoach_do_an).count()
 
-            # Lấy kế hoạch đồ án hợp lệ
-            now = timezone.now().date()
-            ke_hoach_do_an = KeHoachDoAn.objects.filter(
-                tgbd_tao_do_an__lte=now,
-                tgkt_tao_do_an__gte=now
-            ).first()
+                if not ke_hoach_do_an:
+                    error = Error(code="NO_VALID_KEHOACH", message="Không có kế hoạch đồ án nào trong thời gian cho phép tạo đề tài.")
+                    return DeTaiCreate(status=False, error=error)
+                if count >= ke_hoach_do_an.sl_do_an:
+                    error = Error(code="DETAI_LIMIT", message="Số lượng đề tài đã đạt giới hạn cho phép.")
+                    return DeTaiCreate(status=False, error=error)
+                # Lấy chuyên ngành từ giảng viên hoặc đặt giá trị mặc định
+                chuyennganh = getattr(giang_vien, 'chuyen_nganh', 'Chưa xác định')
 
-            if not ke_hoach_do_an:
-                error = Error(code="NO_VALID_KEHOACH", message="Không có kế hoạch đồ án nào trong thời gian cho phép tạo đề tài.")
-                return DeTaiCreate(status=False, error=error)
-
-            # Lấy chuyên ngành từ giảng viên hoặc đặt giá trị mặc định
-            chuyennganh = getattr(giang_vien, 'chuyen_nganh', 'Chưa xác định')
-
-            # Tạo đề tài với các thuộc tính được yêu cầu
-            de_tai = DeTai.objects.create(
-                idgvhuongdan=giang_vien,
-                idkehoach=ke_hoach_do_an,
-                tendoan=input.tendoan,
-                mota=input.mota,
-                madoan=DeTai.generate_unique_madoan(),
-                chuyennganh=chuyennganh,  # Lấy chuyên ngành từ giảng viên hoặc giá trị mặc định
-                trangthai="0"  # Đặt trạng thái mặc định là "0" (chưa duyệt)
-            )
-            return DeTaiCreate(status=True, de_tai=de_tai)
+                # Tạo đề tài với các thuộc tính được yêu cầu
+                de_tai = DeTai.objects.create(
+                    idgvhuongdan=giang_vien,
+                    idkehoach=ke_hoach_do_an,
+                    tendoan=input.tendoan,
+                    mota=input.mota,
+                    madoan=DeTai.generate_unique_madoan(),
+                    chuyennganh=chuyennganh,  # Lấy chuyên ngành từ giảng viên hoặc giá trị mặc định
+                    trangthai="0"  # Đặt trạng thái mặc định là "0" (chưa duyệt)
+                )
+                return DeTaiCreate(status=True, de_tai=de_tai)
 
         except Admin.DoesNotExist:
             error = Error(code="NOT_FOUND", message="Giảng viên không tồn tại")
@@ -446,7 +452,7 @@ class DeTaiUpdateInput(graphene.InputObjectType):
 
 class DeTaiUpdate(graphene.Mutation):
     class Arguments:
-        id = graphene.ID(required=True)
+        id = graphene.String(required=True)
         input = DeTaiUpdateInput(required=True)
 
     status = graphene.Boolean()
@@ -459,24 +465,48 @@ class DeTaiUpdate(graphene.Mutation):
             de_tai = DeTai.objects.get(id=id)
             user = info.context.user
 
-            # Kiểm tra quyền hạn của người dùng
-            if user.role == "TruongKhoa":  # Giả sử Trưởng khoa có role là "TruongKhoa"
-                # Cho phép trưởng khoa cập nhật trạng thái và yêu cầu
-                if input.trangthai is not None:
-                    de_tai.trangthai = input.trangthai
-                if input.yeucau is not None:
-                    de_tai.yeucau = input.yeucau
+            # Lấy token từ header
+            #auth_header = info.context.META.get('HTTP_AUTHORIZATION', None)
+            #token_key = auth_header.split(" ")[1] if auth_header else None
+            token_key = GetToken.getToken(info)
 
-            elif user.id == de_tai.idgvhuongdan.id:
-                # Nếu là giảng viên hướng dẫn, chỉ cho phép cập nhật tên đồ án và mô tả
-                if input.tendoan is not None:
-                    de_tai.tendoan = input.tendoan
-                if input.mota is not None:
-                    de_tai.mota = input.mota
-            else:
-                # Người dùng không có quyền cập nhật
-                error = Error(code="PERMISSION_DENIED", message="Bạn không có quyền cập nhật đề tài này.")
-                return DeTaiUpdate(status=False, error=error)
+            if token_key:
+                # Lấy đối tượng Token
+                token = Token.objects.get(key=token_key)
+                # Lấy đối tượng User từ Token
+                user = token.user
+
+                if user.isAdmin():
+
+                    # Lấy đối tượng Admin từ User
+                    admin = Admin.objects.get(user=user)
+                    # Lấy role từ Admin
+                    role = admin.role
+                    # Kiểm tra quyền hạn của người dùng
+                    if role == 1 or user.id == de_tai.idgvhuongdan.id:  # Giả sử Trưởng khoa có role là "TruongKhoa"
+                        if role == 1:
+                            # Cho phép trưởng khoa cập nhật trạng thái và yêu cầu
+                            if input.trangthai is not None:
+                                de_tai.trangthai = input.trangthai
+                            if input.yeucau is not None:
+                                de_tai.yeucau = input.yeucau 
+
+                        if user.id == de_tai.idgvhuongdan.id:
+                            # Nếu là giảng viên hướng dẫn, chỉ cho phép cập nhật tên đồ án và mô tả
+                            if input.tendoan is not None:
+                                de_tai.tendoan = input.tendoan
+                            if input.mota is not None:
+                                de_tai.mota = input.mota
+                        
+                    else:
+                        # Người dùng không có quyền cập nhật
+                        error = Error(code="PERMISSION_DENIED", message="Bạn không có quyền cập nhật đề tài này.")
+                        return DeTaiUpdate(status=False, error=error)
+                        
+                else:
+                    # Người dùng không có quyền cập nhật
+                    error = Error(code="PERMISSION_DENIED", message="Bạn không có quyền cập nhật đề tài này.")
+                    return DeTaiUpdate(status=False, error=error)
 
             # Lưu thay đổi
             de_tai.save()
@@ -677,7 +707,7 @@ class AcceptJoinRequest(graphene.Mutation):
 
             # Kiểm tra nếu user hiện tại là leader của nhóm
             group = join_request.group
-            leader_record = group.join_groups.filter(role="leader").first()
+            leader_record = group.join_groups.filter(role="leader").first().user
 
 
             # Thêm người dùng vào nhóm với vai trò thành viên
@@ -742,8 +772,8 @@ class CreateKeHoachDoAn(graphene.Mutation):
     class Arguments:
         input = KeHoachDoAnInput(required=True)
 
-    ke_hoach_do_an = graphene.Field(KeHoachDoAnNode)
     status = graphene.Boolean()
+    ke_hoach_do_an = graphene.Field(KeHoachDoAnNode)
     error = graphene.Field(Error)
 
     @staticmethod
@@ -797,6 +827,18 @@ class CreateKeHoachDoAn(graphene.Mutation):
             # Kiểm tra tính hợp lệ của thời gian
             CreateKeHoachDoAn.validate_time_fields(input)
             
+            # Kiểm tra trùng lặp mốc thời gian với kế hoạch đã tồn tại
+            existing_plans = KeHoachDoAn.objects.filter(
+                tgbd_do_an__lte=input.tgkt_do_an,
+                tgkt_do_an__gte=input.tgbd_do_an
+            )
+            if existing_plans.exists():
+                return CreateKeHoachDoAn(
+                    ke_hoach_do_an=None,
+                    status=False,
+                    error="Thời gian của kế hoạch mới trùng với kế hoạch đã tồn tại."
+                )
+            
             # Tạo kế hoạch đồ án nếu hợp lệ
             ke_hoach_do_an = KeHoachDoAn(
                 sl_sinh_vien=input.sl_sinh_vien,
@@ -821,31 +863,40 @@ class CreateKeHoachDoAn(graphene.Mutation):
         
         except ValidationError as e:
             # Trả về lỗi nếu thời gian không hợp lệ
-            return CreateKeHoachDoAn(ke_hoach_do_an=None, status=False, error=str(e))
+            return CreateKeHoachDoAn(ke_hoach_do_an=None, status=False, error=f"Lỗi xác thực: {str(e)}")
+        except Exception as e:
+            # Trả về lỗi nếu có lỗi khác
+            return CreateKeHoachDoAn(ke_hoach_do_an=None, status=False, error=f"Lỗi: {str(e)}")
     
+
+# class UpdateKeHoachDoAnInput(graphene.InputObjectType):
+#     sl_sinh_vien = graphene.Int()
+#     sl_do_an = graphene.Int()
+#     ky_mo = graphene.String()
+#     tgbd_do_an = graphene.Date()
+#     tgkt_do_an = graphene.Date()
+#     tgbd_tao_do_an = graphene.Date()
+#     tgkt_tao_do_an = graphene.Date()
+#     tgbd_dang_ky_de_tai = graphene.Date()
+#     tgkt_dang_ky_de_tai = graphene.Date()
+#     tgbd_lam_do_an = graphene.Date()
+#     tgkt_lam_do_an = graphene.Date()
+#     tgbd_cham_phan_bien = graphene.Date()
+#     tgkt_cham_phan_bien = graphene.Date()
+#     tgbd_cham_hoi_dong = graphene.Date()
+#     tgkt_cham_hoi_dong = graphene.Date()
+
 
 class UpdateKeHoachDoAn(graphene.Mutation):
     class Arguments:
-        id = graphene.ID(required=True)
-        sl_sinh_vien = graphene.Int()
-        sl_do_an = graphene.Int()
-        ky_mo = graphene.String()
-        tgbd_do_an = graphene.Date()
-        tgkt_do_an = graphene.Date()
-        tgbd_tao_do_an = graphene.Date()
-        tgkt_tao_do_an = graphene.Date()
-        tgbd_dang_ky_de_tai = graphene.Date()
-        tgkt_dang_ky_de_tai = graphene.Date()
-        tgbd_lam_do_an = graphene.Date()
-        tgkt_lam_do_an = graphene.Date()
-        tgbd_cham_phan_bien = graphene.Date()
-        tgkt_cham_phan_bien = graphene.Date()
-        tgbd_cham_hoi_dong = graphene.Date()
-        tgkt_cham_hoi_dong = graphene.Date()
+        id = graphene.String(required=True)
+        input = KeHoachDoAnInput(required=True)
 
+    status = graphene.Boolean()
     ke_hoach_do_an = graphene.Field(KeHoachDoAnNode)
+    error = graphene.Field(Error)
 
-    def validate_time_fields(**kwargs):
+    def validate_time_fields(input):
         """
         Kiểm tra tính hợp lệ của các trường thời gian dựa trên timeline yêu cầu.
         """
@@ -864,27 +915,59 @@ class UpdateKeHoachDoAn(graphene.Mutation):
         ]
         
         for start, end in timeline:
-            if kwargs.get(start) and kwargs.get(end) and kwargs.get(start) > kwargs.get(end):
+            if getattr(input, start) and getattr(input, end) and getattr(input, start) > getattr(input, end):
                 raise ValidationError(f"{start} phải nhỏ hơn hoặc bằng {end}")
 
-    def mutate(self, info, id, **kwargs):
-        # Lấy bản ghi kế hoạch đồ án hiện tại
-        ke_hoach_do_an = KeHoachDoAn.objects.get(pk=id)
-        
-        # Kiểm tra tính hợp lệ của thời gian
-        UpdateKeHoachDoAn.validate_time_fields(**kwargs)
-        
-        # Cập nhật các trường nếu có giá trị mới trong `kwargs`
-        for key, value in kwargs.items():
-            if value is not None:
-                setattr(ke_hoach_do_an, key, value)
+    def mutate(self, info, id, input):
+        try:
+            # Lấy bản ghi kế hoạch đồ án hiện tại
+            ke_hoach_do_an = KeHoachDoAn.objects.get(pk=id)
+            # Kiểm tra tính hợp lệ của thời gian
+            UpdateKeHoachDoAn.validate_time_fields(input)
+            
+            # Cập nhật các trường nếu có giá trị mới trong `input`
+            if input.sl_sinh_vien is not None:
+                ke_hoach_do_an.sl_sinh_vien = input.sl_sinh_vien
+            if input.sl_do_an is not None:
+                ke_hoach_do_an.sl_do_an = input.sl_do_an
+            if input.ky_mo is not None:
+                ke_hoach_do_an.ky_mo = input.ky_mo
+            if input.tgbd_do_an is not None:
+                ke_hoach_do_an.tgbd_do_an = input.tgbd_do_an
+            if input.tgkt_do_an is not None:
+                ke_hoach_do_an.tgkt_do_an = input.tgkt_do_an
+            if input.tgbd_tao_do_an is not None:
+                ke_hoach_do_an.tgbd_tao_do_an = input.tgbd_tao_do_an
+            if input.tgkt_tao_do_an is not None:
+                ke_hoach_do_an.tgkt_tao_do_an = input.tgkt_tao_do_an
+            if input.tgbd_dang_ky_de_tai is not None:
+                ke_hoach_do_an.tgbd_dang_ky_de_tai = input.tgbd_dang_ky_de_tai
+            if input.tgkt_dang_ky_de_tai is not None:
+                ke_hoach_do_an.tgkt_dang_ky_de_tai = input.tgkt_dang_ky_de_tai
+            if input.tgbd_lam_do_an is not None:
+                ke_hoach_do_an.tgbd_lam_do_an = input.tgbd_lam_do_an
+            if input.tgkt_lam_do_an is not None:
+                ke_hoach_do_an.tgkt_lam_do_an = input.tgkt_lam_do_an
+            if input.tgbd_cham_phan_bien is not None:
+                ke_hoach_do_an.tgbd_cham_phan_bien = input.tgbd_cham_phan_bien
+            if input.tgkt_cham_phan_bien is not None:
+                ke_hoach_do_an.tgkt_cham_phan_bien = input.tgkt_cham_phan_bien
+            if input.tgbd_cham_hoi_dong is not None:
+                ke_hoach_do_an.tgbd_cham_hoi_dong = input.tgbd_cham_hoi_dong
+            if input.tgkt_cham_hoi_dong is not None:
+                ke_hoach_do_an.tgkt_cham_hoi_dong = input.tgkt_cham_hoi_dong
 
-        # Cập nhật quan hệ nếu cần thiết
-        if 'admin_id' in kwargs:
-            ke_hoach_do_an.admin = Admin.objects.get(pk=kwargs.get('admin_id'))
+            # Cập nhật quan hệ nếu cần thiết
+            
+            ke_hoach_do_an.save()
+            return UpdateKeHoachDoAn(ke_hoach_do_an=ke_hoach_do_an, status=True, error=None)
         
-        ke_hoach_do_an.save()
-        return UpdateKeHoachDoAn(ke_hoach_do_an=ke_hoach_do_an)
+        except ValidationError as e:
+            return UpdateKeHoachDoAn(ke_hoach_do_an=None, status=False, error=str(e))
+        except KeHoachDoAn.DoesNotExist:
+            return UpdateKeHoachDoAn(ke_hoach_do_an=None, status=False, error="Kế hoạch đồ án không tồn tại.")
+        except Exception as e:
+            return UpdateKeHoachDoAn(ke_hoach_do_an=None, status=False, error=str(e))
     
 class DeleteKeHoachDoAn(graphene.Mutation):
     class Arguments:

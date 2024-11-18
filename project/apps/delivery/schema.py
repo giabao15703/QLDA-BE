@@ -15,7 +15,8 @@ from apps.delivery.models import (
     GroupQLDA,
     JoinRequest,
     JoinGroup,
-    KeHoachDoAn
+    KeHoachDoAn,
+    Admin
 )
 from apps.users.models import Token
 from graphene import relay, ObjectType, Connection
@@ -24,7 +25,7 @@ from graphql import GraphQLError
 class GetToken:
     def getToken(info):
         try:
-            key = info.context.headers['Authorization'].split("")
+            key = info.context.headers['Authorization'].split(" ")
             key = key[-1]
             token = Token.objects.get(key=key)
             return token
@@ -106,13 +107,28 @@ class DeTaiFilter(django_filters.FilterSet):
     chuyennganh = django_filters.CharFilter(field_name='chuyennganh', lookup_expr="icontains")  # Lọc theo chuyên ngành
     tendoan = django_filters.CharFilter(field_name='tendoan', lookup_expr="icontains")  # Lọc theo tên đồ án
     trangthai = django_filters.CharFilter(field_name='trangthai', lookup_expr="exact")  # Lọc theo trạng thái
-    idkehoach = django_filters.CharFilter(field_name='idkehoach__id', lookup_expr="exact")  # Lọc theo ID kế hoạch
+    idkehoach = django_filters.CharFilter(field_name='idkehoach__id', lookup_expr="exact")
+
+    @property
+    def qs(self):
+        parent = super().qs
+        key = self.request.headers['Authorization'].split(" ")
+        key = key[-1]
+        token = Token.objects.get(key=key)
+        user = token.user
+        if user.isAdmin():
+            user_admin = Admin.objects.filter(user=user).first()
+            if user_admin:
+                role = user_admin.role
+                if role == 1:
+                    return parent
+                elif role == 3:
+                    return parent.filter(idgvhuongdan=user_admin)
+        return parent
 
     class Meta:
         model = DeTai
         fields = []
-
-
 
 class DeTaiNode(DjangoObjectType):
     giang_vien_long_name = graphene.String()
@@ -122,7 +138,7 @@ class DeTaiNode(DjangoObjectType):
     class Meta:
         model = DeTai
         filterset_class = DeTaiFilter
-        interfaces = (graphene.relay.Node, )
+        interfaces = (CustomNode, )
         connection_class = ExtendedConnection
 
     def resolve_giang_vien_long_name(self, info):
