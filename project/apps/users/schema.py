@@ -1795,6 +1795,7 @@ class BuyerCreate(graphene.Mutation):
                 first_name=user.first_name,
                 last_name=user.last_name,
                 email=user.email,
+                shortName=user.short_name,
                 company_position=user.company_position or 1,
             )
             new_user.set_password(user.password)

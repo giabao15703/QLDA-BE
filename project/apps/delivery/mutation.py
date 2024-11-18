@@ -696,7 +696,6 @@ class GroupQLDAJoin(graphene.Mutation):
 class AcceptJoinRequest(graphene.Mutation):
     class Arguments:
         join_request_id = graphene.ID(required=True)
-
     status = graphene.Boolean()
     error = graphene.Field(Error)
 
@@ -707,7 +706,7 @@ class AcceptJoinRequest(graphene.Mutation):
 
             # Kiểm tra nếu user hiện tại là leader của nhóm
             group = join_request.group
-            leader_record = group.join_groups.filter(role="leader").first().user
+            leader_record = group.join_groups.filter(role="leader").first()
 
 
             # Thêm người dùng vào nhóm với vai trò thành viên
