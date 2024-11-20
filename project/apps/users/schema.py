@@ -2,7 +2,9 @@ import random
 import graphene
 import django_filters
 import graphene_django_optimizer as gql_optimizer
-
+import openpyxl
+from django.http import JsonResponse
+from django.db import transaction
 from apps.auctions.models import Auction
 from apps.core import CustomNode, CustomizeFilterConnectionField, Error
 from apps.graphene_django_plus.mutations import ModelUpdateMutation
@@ -15,6 +17,7 @@ from apps.master_data.models import (
     Category
 )
 from apps.master_data.schema import LanguageNode, CategoryNode, SubClusterCodeNode
+from django.views.decorators.csrf import csrf_exempt
 from apps.users.models import (
     Supplier,
     SupplierFlashSale,
@@ -1792,11 +1795,8 @@ class BuyerCreate(graphene.Mutation):
             new_user = User(
                 username=username,
                 user_type=2,
-                first_name=user.first_name,
-                last_name=user.last_name,
                 email=user.email,
-                shortName=user.short_name,
-                company_position=user.company_position or 1,
+                short_name=user.short_name,  # Sử dụng short_name từ UserInput
             )
             new_user.set_password(user.password)
             new_user.save()
@@ -1818,6 +1818,7 @@ class BuyerCreate(graphene.Mutation):
                         "name": last_name + " " + first_name,
                         "username": username,
                         "password": user.password,
+                        "short_name": user.short_name,  # Truyền short_name vào email nếu cần
                     }
                 )
 
@@ -1835,12 +1836,82 @@ class BuyerCreate(graphene.Mutation):
             except EmailTemplates.DoesNotExist:
                 print("Mẫu email 'ActivateBuyerAccount' không tồn tại.")
 
-            return BuyerCreate(status=True)  # Không trả về thông tin buyer nếu không cần
+            return BuyerCreate(status=True)
 
         except Exception as errors:
             transaction.set_rollback(True)
             raise GraphQLError(str(errors))
+@csrf_exempt
+def import_students(request):
+    if request.method == 'POST' and request.FILES.get('file'):
+        file = request.FILES['file']
+        try:
+            wb = openpyxl.load_workbook(file)
+            sheet = wb.active
 
+            errors = []  # Lưu danh sách lỗi chi tiết
+            success_count = 0  # Đếm số tài khoản tạo thành công
+            duplicate_count = 0  # Đếm số tài khoản trùng lặp
+            missing_fields_count = 0  # Đếm số dòng bị thiếu thông tin
+
+            with transaction.atomic():
+                for index, row in enumerate(sheet.iter_rows(min_row=2, values_only=True), start=2):
+                    try:
+                        email, password, short_name = row
+
+                        if not all([email, password, short_name]):
+                            missing_fields_count += 1
+                            errors.append(f"Dòng {index}: Thiếu thông tin bắt buộc (Email, Mật khẩu, Tên ngắn).")
+                            continue
+
+                        # Kiểm tra email trùng lặp
+                        if User.objects.filter(email=email, user_type=2).exists():
+                            duplicate_count += 1
+                            errors.append(f"Dòng {index}: Email {email} đã tồn tại.")
+                            continue
+
+                        # Tạo username duy nhất
+                        user_count = User.objects.filter(user_type=2).count() + 1
+                        username = '80' + str(user_count).zfill(4)
+
+                        # Tạo User mới
+                        new_user = User(
+                            email=email,
+                            username=username,
+                            user_type=2,  # Buyer
+                            short_name=short_name,
+                        )
+                        new_user.set_password(password)
+                        new_user.save()
+
+                        # Tạo UserPayment nếu cần
+                        UserPayment.objects.create(user=new_user)
+
+                        success_count += 1
+
+                    except Exception as e:
+                        # Bắt lỗi tạo tài khoản
+                        errors.append(f"Dòng {index}: {str(e)}")
+
+            # Trả về kết quả sau khi xử lý
+            total_rows = sheet.max_row - 1  # Tổng số dòng không tính tiêu đề
+            return JsonResponse({
+                'status': 'success',
+                'message': f'Import thành công {success_count} tài khoản.',
+                'details': {
+                    'total_rows': total_rows,
+                    'success_count': success_count,
+                    'duplicate_count': duplicate_count,
+                    'missing_fields_count': missing_fields_count,
+                    'errors': errors,
+                }
+            })
+
+        except Exception as e:
+            # Bắt lỗi chung khi xử lý file
+            return JsonResponse({'status': 'error', 'message': str(e)})
+
+    return JsonResponse({'status': 'error', 'message': 'File không hợp lệ hoặc phương thức không được hỗ trợ!'})
 class BuyerUpdate(graphene.Mutation):
     class Arguments:
         id = graphene.String(required=True)

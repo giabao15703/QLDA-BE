@@ -84,7 +84,7 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'apps.order',
 ]
-
+CORS_ORIGIN_ALLOW_ALL = True 
 GRAPHENE = {
     "SCHEMA": "apps.schema.schema",
     'MIDDLEWARE': [
