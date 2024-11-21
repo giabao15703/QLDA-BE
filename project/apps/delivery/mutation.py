@@ -504,12 +504,21 @@ class DeTaiUpdate(graphene.Mutation):
                         return DeTaiUpdate(status=False, error=error)
                         
                 else:
-                    # Người dùng không có quyền cập nhật
-                    error = Error(code="PERMISSION_DENIED", message="Bạn không có quyền cập nhật đề tài này.")
-                    return DeTaiUpdate(status=False, error=error)
+                    # Kiểm tra sinh viên xem đã tham gia nhóm chưa và role của sinh viên đó phải là nhóm trưởng
+                    join_group = JoinGroup.objects.filter(user=user, role="leader").first()
+                    if not join_group:
+                        error = Error(code="PERMISSION_DENIED", message="Bạn không phải là nhóm trưởng hoặc chưa tham gia nhóm.")
+                        return DeTaiUpdate(status=False, error=error)
 
+                    # Kiểm tra nhóm đã đăng kí đề tài nào chưa
+                    if DeTai.objects.filter(idnhom=join_group.group.ma_Nhom).exists():
+                        error = Error(code="ALREADY_REGISTERED", message="Nhóm của bạn đã đăng kí đề tài khác.")
+                        return DeTaiUpdate(status=False, error=error)
+                de_tai.idnhom = join_group.group.ma_Nhom
+                join_group.group.de_tai = de_tai
             # Lưu thay đổi
             de_tai.save()
+            join_group.group.save()
             return DeTaiUpdate(status=True, de_tai=de_tai)
 
         except DeTai.DoesNotExist:
@@ -564,51 +573,64 @@ class GroupQLDAInput(graphene.InputObjectType):
 class GroupQLDACreate(graphene.Mutation):
     class Arguments:
         input = GroupQLDAInput(required=True)
-        user_email = graphene.String(required=True)
 
     status = graphene.Boolean()
     group_qlda = graphene.Field(GroupQLDANode)
     error = graphene.Field(Error)
 
-    def mutate(root, info, input, user_email):
+    def mutate(root, info, input):
         try:
-            # Tìm người dùng dựa trên email
-            user_creating_group = User.objects.get(email=user_email)
+            token = GetToken.getToken(info)
+            user_creating_group = token.user
 
-            # Kiểm tra xem người dùng đã có nhóm hay chưa
-            existing_group = GroupQLDA.objects.filter(join_groups__user=user_creating_group, join_groups__role="leader").first()
+            #kiểm tra xem có kế hoạch đồ án nào đang mở đăng kí nhóm không
+            now = timezone.now().date()
+            ke_hoach_do_an = KeHoachDoAn.objects.filter(
+                tgbd_dang_ky_de_tai__lte=now,
+                tgkt_dang_ky_de_tai__gte=now
+            ).first()
+
+            if not ke_hoach_do_an:
+                return GroupQLDACreate(
+                    status=False,
+                    error=Error(
+                        code="NO_VALID_KEHOACH",
+                        message="Không có kế hoạch đồ án nào trong thời gian cho phép tạo nhóm."
+                    )
+                )
+            sl_sinh_vien = ke_hoach_do_an.sl_sinh_vien
+            
+
+            if user_creating_group.isAdmin():
+                return GroupQLDACreate(
+                    status=False,
+                    error=Error(
+                        code="PERMISSION_DENIED",
+                        message="Admin không thể tạo nhóm."
+                    )
+                )
+
+            existing_group = JoinGroup.objects.filter(user=user_creating_group).first()
+        
             if existing_group:
                 return GroupQLDACreate(
                     status=False,
                     error=Error(
                         code="ALREADY_HAS_GROUP",
-                        message=f"Người dùng đã tạo nhóm {existing_group.name} trước đó."
+                        message=f"Người dùng đã tham gia nhóm {existing_group.group.name} trước đó."
                     )
                 )
 
-            # Tạo nhóm mới và lưu shortName của người tạo
             group_qlda = GroupQLDA(
                 name=input.name,
-                creator_short_name=user_creating_group.short_name,  # Lưu shortName vào trường creator_short_name
+                leader_user=user_creating_group,  # Set leader_user to the user creating the group
+                max_member = sl_sinh_vien
             )
             group_qlda.save()
-
-            # Thêm người dùng vào nhóm với vai trò trưởng nhóm
             JoinGroup.objects.create(user=user_creating_group, group=group_qlda, role="leader")
-
-            # Cập nhật số lượng thành viên trong nhóm
             group_qlda.member_count += 1
             group_qlda.save()
-
             return GroupQLDACreate(status=True, group_qlda=group_qlda)
-        except User.DoesNotExist:
-            return GroupQLDACreate(
-                status=False,
-                error=Error(
-                    code="USER_NOT_FOUND",
-                    message="Người dùng không tồn tại"
-                )
-            )
         except Exception as e:
             return GroupQLDACreate(
                 status=False,
@@ -621,18 +643,18 @@ class GroupQLDACreate(graphene.Mutation):
 class GroupQLDAJoin(graphene.Mutation):
     class Arguments:
         group_id = graphene.ID(required=True)
-        user_email = graphene.String(required=True)
 
     status = graphene.Boolean()
     error = graphene.Field(Error)
 
-    def mutate(root, info, group_id, user_email):
+    def mutate(root, info, group_id):
         try:
+            token = GetToken.getToken(info)
+            user = token.user
+
             # Tìm nhóm dựa trên group_id
             group_qlda = GroupQLDA.objects.get(pk=group_id)
 
-            # Tìm người dùng dựa trên email
-            user = User.objects.get(email=user_email)
 
             # Kiểm tra nếu người dùng đã thuộc một nhóm
             existing_group = JoinGroup.objects.filter(user=user).first()
@@ -672,14 +694,6 @@ class GroupQLDAJoin(graphene.Mutation):
                 error=Error(
                     code="GROUP_NOT_FOUND",
                     message="Nhóm không tồn tại."
-                )
-            )
-        except User.DoesNotExist:
-            return GroupQLDAJoin(
-                status=False,
-                error=Error(
-                    code="USER_NOT_FOUND",
-                    message="Người dùng không tồn tại."
                 )
             )
         except Exception as e:
@@ -959,7 +973,7 @@ class UpdateKeHoachDoAn(graphene.Mutation):
             # Cập nhật quan hệ nếu cần thiết
             
             ke_hoach_do_an.save()
-            return UpdateKeHoachDoAn(ke_hoach_do_an=ke_hoach_do_an, status=True, error=None)
+            return UpdateKeHoachDoAn(ke_hoach_do_an=ke_hoach_do_an, status=True, error="Update thất bại")
         
         except ValidationError as e:
             return UpdateKeHoachDoAn(ke_hoach_do_an=None, status=False, error=str(e))

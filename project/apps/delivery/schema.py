@@ -103,7 +103,7 @@ class DeTaiFilter(django_filters.FilterSet):
     idgvhuongdan = django_filters.CharFilter(field_name='idgvhuongdan__full_name', lookup_expr="icontains")  # Lọc theo tên giảng viên hướng dẫn
     idgvphanbien = django_filters.CharFilter(field_name='idgvphanbien__full_name', lookup_expr="icontains")  # Lọc theo tên giảng viên phản biện
     idnhom = django_filters.CharFilter(field_name='idnhom', lookup_expr="exact")  # Lọc theo ID nhóm
-    madoan = django_filters.CharFilter(field_name='madoan', lookup_expr="icontains")  # Lọc theo mã đồ án
+    madoan = django_filters.CharFilter(field_name='madoan', lookup_expr="exact")  # Lọc theo mã đồ án
     chuyennganh = django_filters.CharFilter(field_name='chuyennganh', lookup_expr="icontains")  # Lọc theo chuyên ngành
     tendoan = django_filters.CharFilter(field_name='tendoan', lookup_expr="icontains")  # Lọc theo tên đồ án
     trangthai = django_filters.CharFilter(field_name='trangthai', lookup_expr="exact")  # Lọc theo trạng thái
@@ -170,19 +170,27 @@ class GroupQLDAFilter(FilterSet):
 
 
 class GroupQLDANode(DjangoObjectType):
-    
+    creator_short_name = graphene.String()
+
     class Meta:
         model = GroupQLDA
         filterset_class = GroupQLDAFilter
         interfaces = (CustomNode,)
         connection_class = ExtendedConnection
 
-class JoinGroupNode(DjangoObjectType):
-    members_count = graphene.Int()
+    def resolve_creator_short_name(self, info):
+        return self.leader_user.short_name if self.leader_user else None
 
+
+class JoinGroupFilter(FilterSet):
+    user_id = django_filters.NumberFilter(field_name="user_id", lookup_expr="exact")
+    group_id = django_filters.NumberFilter(field_name="group_id", lookup_expr="exact")
+    role = django_filters.CharFilter(field_name="role", lookup_expr="icontains")
+
+class JoinGroupNode(DjangoObjectType):
     class Meta:
         model = JoinGroup
-        filterset_class = GroupQLDAFilter
+        filterset_class = JoinGroupFilter
         interfaces = (CustomNode,)
         connection_class = ExtendedConnection
 
@@ -248,6 +256,7 @@ class Query(object):
     group_qldas = CustomizeFilterConnectionField(GroupQLDANode, filterset_class=GroupQLDAFilter)
 
     join_group = CustomNode.Field(JoinGroupNode)
+    join_groups = CustomizeFilterConnectionField(JoinGroupNode, filterset_class=JoinGroupFilter)
     join_request= CustomNode.Field(JoinRequestNode)
     
     join_requests = CustomizeFilterConnectionField(JoinRequestNode, filterset_class=JoinRequestFilter)

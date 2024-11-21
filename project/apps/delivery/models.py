@@ -42,7 +42,7 @@ class DeliveryResponsible(models.Model):
 class DeTai(models.Model):
     idgvhuongdan = models.ForeignKey(Admin, on_delete=models.CASCADE, related_name="huongdan_detai", null=True, blank=True)
     idgvphanbien = models.ForeignKey(Admin, on_delete=models.SET_NULL, null=True, blank=True, related_name="phanbien_detai")
-    idnhom = models.UUIDField(null=True, blank=True)
+    idnhom = models.CharField(max_length=10, unique=True)
     madoan = models.CharField(max_length=20, unique=True, null=True, blank=True)
     chuyennganh = models.CharField(max_length=100, null=True, blank=True)
     tendoan = models.CharField(max_length=255, null=True, blank=True)
@@ -65,10 +65,10 @@ class DeTai(models.Model):
 class GroupQLDA(models.Model):
     ma_Nhom = models.CharField(max_length=10, unique=True, default="")
     name = models.CharField(max_length=255)
-    de_tai = models.CharField(max_length=1024, null=True, blank=True)
+    de_tai = models.ForeignKey(DeTai, on_delete=models.SET_NULL, null=True, blank=True, related_name="de_tai")
     status = models.BooleanField(default=True)
     member_count = models.PositiveIntegerField(default=0)
-    creator_short_name = models.CharField(max_length=255, null=True, blank=True)
+    max_member = models.PositiveIntegerField(default=5)
     leader_user = models.ForeignKey(
         User,
         on_delete=models.SET_NULL,
