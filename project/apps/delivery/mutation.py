@@ -7,7 +7,6 @@ from graphene import relay
 from django.db.models import Subquery
 from graphene_django import DjangoObjectType
 from django.utils import timezone
-from django.core.exceptions import ValidationError  # Thêm dòng này để import ValidationError
 from apps.delivery.schema import (
     ShippingFeeNode,
     TransporterListNode,
@@ -48,6 +47,8 @@ from django.db import transaction
 from graphene_django_plus.mutations import ModelUpdateMutation
 from graphene_file_upload.scalars import Upload
 from graphql import GraphQLError
+from django.core.exceptions import ValidationError
+
 class ShippingFeeInput(graphene.InputObjectType):
     pick_up_city_code = graphene.String(required=True)
     destination_city_code = graphene.String(required=True)
@@ -584,7 +585,7 @@ class GroupQLDACreate(graphene.Mutation):
             user_creating_group = token.user
 
             #kiểm tra xem có kế hoạch đồ án nào đang mở đăng kí nhóm không
-            now = timezone.now().date()
+            now = timezone.now()
             ke_hoach_do_an = KeHoachDoAn.objects.filter(
                 tgbd_dang_ky_de_tai__lte=now,
                 tgkt_dang_ky_de_tai__gte=now
@@ -595,9 +596,10 @@ class GroupQLDACreate(graphene.Mutation):
                     status=False,
                     error=Error(
                         code="NO_VALID_KEHOACH",
-                        message="Không có kế hoạch đồ án nào trong thời gian cho phép tạo nhóm."
+                        message=f"Không có kế hoạch đồ án nào trong thời gian cho phép tạo nhóm. Thời gian hiện tại: {now}."
                     )
                 )
+
             sl_sinh_vien = ke_hoach_do_an.sl_sinh_vien
             
 
@@ -636,7 +638,7 @@ class GroupQLDACreate(graphene.Mutation):
                 status=False,
                 error=Error(
                     code="CREATE_ERROR",
-                    message=str(e)
+                    message="CREATE ERROR"
                 )
             )
 
@@ -668,7 +670,7 @@ class GroupQLDAJoin(graphene.Mutation):
                 )
 
             # Kiểm tra nếu yêu cầu đã tồn tại
-            if JoinRequest.objects.filter(user=user, group=group_qlda, is_approved=False).exists():
+            if JoinRequest.objects.filter(user=user, group=group_qlda, is_approved="f").exists():
                 return GroupQLDAJoin(
                     status=False,
                     error=Error(
@@ -681,11 +683,9 @@ class GroupQLDAJoin(graphene.Mutation):
             join_request = JoinRequest.objects.create(user=user, group=group_qlda)
 
             # Gửi thông báo đến leader của nhóm
-            leader = group_qlda.join_groups.filter(role="leader").first().user
-            send_notification(
-                user=leader,
-                message=f"{user.email} đã gửi yêu cầu tham gia vào nhóm {group_qlda.name}."
-            )
+            #group_qlda.join_groups.filter(role="leader").first().user.send_notification(
+                #f"{user.email} đã gửi yêu cầu tham gia vào nhóm {group_qlda.name}."
+            #)
 
             return GroupQLDAJoin(status=True)
         except GroupQLDA.DoesNotExist:
@@ -721,7 +721,11 @@ class AcceptJoinRequest(graphene.Mutation):
             # Kiểm tra nếu user hiện tại là leader của nhóm
             group = join_request.group
             leader_record = group.join_groups.filter(role="leader").first()
-
+            if group.member_count >= group.max_member:
+                return AcceptJoinRequest(
+                    status=False,
+                    error=Error(code="GROUP_FULL", message="Nhóm đã đủ số lượng thành viên.")
+                )
 
             # Thêm người dùng vào nhóm với vai trò thành viên
             JoinGroup.objects.create(user=join_request.user, group=group, role="member")
@@ -731,7 +735,10 @@ class AcceptJoinRequest(graphene.Mutation):
             group.save()
 
             # Xóa yêu cầu sau khi xử lý
-            join_request.delete()
+            if group.member_count >= group.max_member:
+                JoinRequest.objects.filter(group=group).delete()
+            else:
+                join_request.delete()
 
             # Gửi thông báo tới leader về việc chấp nhận yêu cầu
             if hasattr(leader_record.user, "send_notification"):
@@ -777,8 +784,6 @@ class KeHoachDoAnInput(graphene.InputObjectType):
     tgbd_cham_hoi_dong = graphene.DateTime(required=True)
     tgkt_cham_hoi_dong = graphene.DateTime(required=True)
 
-
-from django.core.exceptions import ValidationError
 import graphene
 
 class CreateKeHoachDoAn(graphene.Mutation):
@@ -803,16 +808,16 @@ class CreateKeHoachDoAn(graphene.Mutation):
         tgkt_do_an = input_data.tgkt_do_an
 
         if not all([
-            tgbd_do_an <= input_data.tgbd_tao_do_an <= tgkt_do_an,
-            tgbd_do_an <= input_data.tgkt_tao_do_an <= tgkt_do_an,
-            tgbd_do_an <= input_data.tgbd_dang_ky_de_tai <= tgkt_do_an,
-            tgbd_do_an <= input_data.tgkt_dang_ky_de_tai <= tgkt_do_an,
-            tgbd_do_an <= input_data.tgbd_lam_do_an <= tgkt_do_an,
-            tgbd_do_an <= input_data.tgkt_lam_do_an <= tgkt_do_an,
-            tgbd_do_an <= input_data.tgbd_cham_phan_bien <= tgkt_do_an,
-            tgbd_do_an <= input_data.tgkt_cham_phan_bien <= tgkt_do_an,
-            tgbd_do_an <= input_data.tgbd_cham_hoi_dong <= tgkt_do_an,
-            tgbd_do_an <= input_data.tgkt_cham_hoi_dong <= tgkt_do_an
+            tgbd_do_an < input_data.tgbd_tao_do_an < tgkt_do_an,
+            tgbd_do_an < input_data.tgkt_tao_do_an < tgkt_do_an,
+            tgbd_do_an < input_data.tgbd_dang_ky_de_tai < tgkt_do_an,
+            tgbd_do_an < input_data.tgkt_dang_ky_de_tai < tgkt_do_an,
+            tgbd_do_an < input_data.tgbd_lam_do_an < tgkt_do_an,
+            tgbd_do_an < input_data.tgkt_lam_do_an < tgkt_do_an,
+            tgbd_do_an < input_data.tgbd_cham_phan_bien < tgkt_do_an,
+            tgbd_do_an < input_data.tgkt_cham_phan_bien < tgkt_do_an,
+            tgbd_do_an < input_data.tgbd_cham_hoi_dong < tgkt_do_an,
+            tgbd_do_an < input_data.tgkt_cham_hoi_dong < tgkt_do_an
         ]):
             raise ValidationError("Thời gian bắt đầu và kết thúc của đồ án phải bao hàm toàn bộ các khoảng thời gian khác.")
 
@@ -832,8 +837,8 @@ class CreateKeHoachDoAn(graphene.Mutation):
         ]
         
         for start, end in timeline:
-            if getattr(input_data, start) > getattr(input_data, end):
-                raise ValidationError(f"Thời gian {start} phải nhỏ hơn hoặc bằng {end}")
+            if getattr(input_data, start) >= getattr(input_data, end):
+                raise ValidationError(f"Thời gian {start} phải nhỏ  {end}")
 
     def mutate(self, info, input):
         try:
@@ -849,7 +854,7 @@ class CreateKeHoachDoAn(graphene.Mutation):
                 return CreateKeHoachDoAn(
                     ke_hoach_do_an=None,
                     status=False,
-                    error="Thời gian của kế hoạch mới trùng với kế hoạch đã tồn tại."
+                    error=Error(message="Thời gian của kế hoạch mới trùng với kế hoạch đã tồn tại.")
                 )
             
             # Tạo kế hoạch đồ án nếu hợp lệ
@@ -876,7 +881,7 @@ class CreateKeHoachDoAn(graphene.Mutation):
         
         except ValidationError as e:
             # Trả về lỗi nếu thời gian không hợp lệ
-            return CreateKeHoachDoAn(ke_hoach_do_an=None, status=False, error=f"Lỗi xác thực: {str(e)}")
+            return CreateKeHoachDoAn(ke_hoach_do_an=None, status=False, error=Error(message=f"Lỗi xác thực: {str(e)})"))
         except Exception as e:
             # Trả về lỗi nếu có lỗi khác
             return CreateKeHoachDoAn(ke_hoach_do_an=None, status=False, error=f"Lỗi: {str(e)}")
@@ -928,8 +933,8 @@ class UpdateKeHoachDoAn(graphene.Mutation):
         ]
         
         for start, end in timeline:
-            if getattr(input, start) and getattr(input, end) and getattr(input, start) > getattr(input, end):
-                raise ValidationError(f"{start} phải nhỏ hơn hoặc bằng {end}")
+            if getattr(input, start) and getattr(input, end) and getattr(input, start) >= getattr(input, end):
+                raise ValidationError(f"{start} phải nhỏ hơn {end}")
 
     def mutate(self, info, id, input):
         try:
@@ -973,14 +978,15 @@ class UpdateKeHoachDoAn(graphene.Mutation):
             # Cập nhật quan hệ nếu cần thiết
             
             ke_hoach_do_an.save()
-            return UpdateKeHoachDoAn(ke_hoach_do_an=ke_hoach_do_an, status=True, error="Update thất bại")
+            return UpdateKeHoachDoAn(ke_hoach_do_an=ke_hoach_do_an, status=True, error=Error(message="Update thành công"))
         
         except ValidationError as e:
-            return UpdateKeHoachDoAn(ke_hoach_do_an=None, status=False, error=str(e))
+            # Trả về lỗi nếu thời gian không hợp lệ
+            return UpdateKeHoachDoAn(ke_hoach_do_an=None, status=False, error=Error(message=f"Lỗi xác thực: {str(e)})"))
         except KeHoachDoAn.DoesNotExist:
             return UpdateKeHoachDoAn(ke_hoach_do_an=None, status=False, error="Kế hoạch đồ án không tồn tại.")
         except Exception as e:
-            return UpdateKeHoachDoAn(ke_hoach_do_an=None, status=False, error=str(e))
+            return UpdateKeHoachDoAn(ke_hoach_do_an=None, status=False, error="Error exception")
     
 class DeleteKeHoachDoAn(graphene.Mutation):
     class Arguments:
