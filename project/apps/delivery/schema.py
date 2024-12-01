@@ -160,9 +160,12 @@ class DeTaiNode(DjangoObjectType):
 class GroupQLDAFilter(FilterSet):
     name = django_filters.CharFilter(field_name="name", lookup_expr="icontains")
     status = django_filters.BooleanFilter(field_name="status")
+    idgvhuongdan = django_filters.CharFilter(field_name='de_tai__idgvhuongdan__id', lookup_expr="exact")  # Lọc theo id giảng viên hướng dẫn
+    idgvphanbien = django_filters.CharFilter(field_name='de_tai__idgvphanbien__id', lookup_expr="exact") 
 
     def filter_members_count(self, queryset, name, value):
         return queryset.annotate(num_members=models.Count('members')).filter(num_members=value)
+
 
     class Meta:
         model = GroupQLDA

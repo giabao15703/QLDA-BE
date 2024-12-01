@@ -42,7 +42,7 @@ class DeliveryResponsible(models.Model):
 class DeTai(models.Model):
     idgvhuongdan = models.ForeignKey(Admin, on_delete=models.CASCADE, related_name="huongdan_detai", null=True, blank=True)
     idgvphanbien = models.ForeignKey(Admin, on_delete=models.SET_NULL, null=True, blank=True, related_name="phanbien_detai")
-    idnhom = models.CharField(max_length=10, unique=True)
+    idnhom = models.CharField(max_length=10, unique=True, null=True, blank=True)
     madoan = models.CharField(max_length=20, unique=True, null=True, blank=True)
     chuyennganh = models.CharField(max_length=100, null=True, blank=True)
     tendoan = models.CharField(max_length=255, null=True, blank=True)
