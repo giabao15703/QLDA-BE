@@ -16,6 +16,7 @@ from apps.master_data.models import (
     SubClusterCode,
     Category
 )
+from graphene_file_upload.django import FileUploadGraphQLView
 from apps.master_data.schema import LanguageNode, CategoryNode, SubClusterCodeNode
 from django.views.decorators.csrf import csrf_exempt
 from apps.users.models import (
@@ -81,7 +82,7 @@ from graphene import relay, ObjectType, Connection
 from graphene_django import DjangoObjectType
 from graphene_file_upload.scalars import Upload
 from graphql import GraphQLError
-
+import os
 class GetToken:
     def getToken(info):
         try:
@@ -1518,13 +1519,19 @@ class UserInput(graphene.InputObjectType):
     password = graphene.String(required=True)
     email = graphene.String(required=True)
     short_name = graphene.String()
-    full_name = graphene.String()
     status = graphene.Int(required=False)
-    first_name = graphene.String()
-    last_name = graphene.String()
-    company_position = graphene.Int()
     username = graphene.String()
-
+    mssv = graphene.String()
+    ngay_sinh = graphene.String()
+    noi_sinh = graphene.String()
+    lop = graphene.String()
+    khoa_hoc = graphene.String() 
+    bac_dao_tao = graphene.String() 
+    loai_hinh_dao_tao = graphene.String()
+    nganh = graphene.String()
+    gender = graphene.String()
+    picture = Upload(required=False)
+    phone = graphene.String()
 
 class BuyerSubAccountsActivityFilter(FilterSet):
     changed_by = django_filters.CharFilter(method='changed_by_filter')
@@ -1786,41 +1793,82 @@ class BuyerCreate(graphene.Mutation):
 
     def mutate(self, info, user):
         try:
+            picture_file = user.picture if user.picture else None
+            picture_url = None
+
+            # Đảm bảo thư mục uploads tồn tại
+            UPLOAD_DIR = "media/uploads/"
+            if picture_file:
+                if not os.path.exists(UPLOAD_DIR):
+                    os.makedirs(UPLOAD_DIR)
+
+                # Lưu file vào thư mục
+                file_path = os.path.join(UPLOAD_DIR, picture_file.name)
+                with open(file_path, "wb") as f:
+                    f.write(picture_file.read())
+
+                # Lưu URL của file
+                picture_url = f"/media/uploads/{picture_file.name}"
+
+            # Kiểm tra email trùng lặp
             if User.objects.filter(user_type=2, email=user.email).exists():
                 raise GraphQLError('Email đã tồn tại.')
 
-            user_count = User.objects.filter(user_type=2, company_position=1).count() + 1
-            username = '80' + str(user_count).zfill(4)
+            # Tạo username
+            user_count = User.objects.filter(user_type=2).count() + 1
+            username = user.username or '80' + str(user_count).zfill(4)
 
+            # Tạo user mới
             new_user = User(
                 username=username,
                 user_type=2,
                 email=user.email,
-                short_name=user.short_name,  # Sử dụng short_name từ UserInput
+                short_name=user.short_name,
+                mssv=user.mssv,
+                ngay_sinh=user.ngay_sinh,
+                noi_sinh=user.noi_sinh,
+                lop=user.lop,
+                khoa_hoc=user.khoa_hoc,
+                bac_dao_tao=user.bac_dao_tao,
+                loai_hinh_dao_tao=user.loai_hinh_dao_tao,
+                nganh=user.nganh,
+                phone=user.phone,
+                gender=user.gender,
+                picture=picture_url  # Lưu URL thay vì file
             )
             new_user.set_password(user.password)
             new_user.save()
 
-            # Tạo bản ghi thanh toán cho user
+            # Tạo Buyer mới (nếu cần)
+            Buyer.objects.create(
+                user=new_user,
+                mssv=user.mssv,
+                ngay_sinh=user.ngay_sinh,
+                noi_sinh=user.noi_sinh,
+                lop=user.lop,
+                khoa_hoc=user.khoa_hoc,
+                bac_dao_tao=user.bac_dao_tao,
+                loai_hinh_dao_tao=user.loai_hinh_dao_tao,
+                nganh=user.nganh,
+                gender=user.gender,
+                picture=picture_url,
+            )
+
+            # Tạo bản ghi thanh toán
             UserPayment.objects.create(user=new_user)
 
             # Gửi email kích hoạt tài khoản
             try:
-                email = EmailTemplates.objects.get(item_code='ActivateBuyerAccount')
-                title = email.title
+                email_template = EmailTemplates.objects.get(item_code='ActivateBuyerAccount')
+                title = email_template.title
 
-                t = Template(email.content)
-                last_name = user.last_name if user.last_name else ""
-                first_name = user.first_name if user.first_name else ""
-
-                c = Context(
-                    {
-                        "name": last_name + " " + first_name,
-                        "username": username,
-                        "password": user.password,
-                        "short_name": user.short_name,  # Truyền short_name vào email nếu cần
-                    }
-                )
+                t = Template(email_template.content)
+                c = Context({
+                    "name": user.short_name,
+                    "username": username,
+                    "password": user.password,
+                    "short_name": user.short_name,
+                })
 
                 output = t.render(c)
 
@@ -1838,9 +1886,9 @@ class BuyerCreate(graphene.Mutation):
 
             return BuyerCreate(status=True)
 
-        except Exception as errors:
-            transaction.set_rollback(True)
-            raise GraphQLError(str(errors))
+        except Exception as e:
+            raise GraphQLError(f"Lỗi xảy ra: {str(e)}")
+
 @csrf_exempt
 def import_students(request):
     if request.method == 'POST' and request.FILES.get('file'):
@@ -1857,11 +1905,14 @@ def import_students(request):
             with transaction.atomic():
                 for index, row in enumerate(sheet.iter_rows(min_row=2, values_only=True), start=2):
                     try:
-                        email, password, short_name = row
+                        (
+                            email, password, short_name, mssv, ngaysinh, noisinh, lop, 
+                            khoa_hoc, bac_dao_tao, loai_hinh_dao_tao, nganh, gender, picture
+                        ) = row
 
-                        if not all([email, password, short_name]):
+                        if not all([email, password, short_name, mssv]):
                             missing_fields_count += 1
-                            errors.append(f"Dòng {index}: Thiếu thông tin bắt buộc (Email, Mật khẩu, Tên ngắn).")
+                            errors.append(f"Dòng {index}: Thiếu thông tin bắt buộc (Email, Mật khẩu, Tên ngắn, MSSV).")
                             continue
 
                         # Kiểm tra email trùng lặp
@@ -1880,6 +1931,17 @@ def import_students(request):
                             username=username,
                             user_type=2,  # Buyer
                             short_name=short_name,
+                            mssv=mssv,
+                            ngay_sinh=ngay_sinh,
+                            noi_sinh=noi_sinh,
+                            lop=lop,
+                            phone=phone,
+                            khoa_hoc=khoa_hoc,
+                            bac_dao_tao=bac_dao_tao,
+                            loai_hinh_dao_tao=loai_hinh_dao_tao,
+                            nganh=nganh,
+                            gender=gender,
+                            picture=picture
                         )
                         new_user.set_password(password)
                         new_user.save()
@@ -1911,7 +1973,6 @@ def import_students(request):
             # Bắt lỗi chung khi xử lý file
             return JsonResponse({'status': 'error', 'message': str(e)})
 
-    return JsonResponse({'status': 'error', 'message': 'File không hợp lệ hoặc phương thức không được hỗ trợ!'})
 class BuyerUpdate(graphene.Mutation):
     class Arguments:
         id = graphene.String(required=True)
