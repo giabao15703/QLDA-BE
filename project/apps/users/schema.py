@@ -65,6 +65,10 @@ from apps.users.models import (
     UserFollowingSupplierStatus,
     UserRatingSupplierProduct,
 )
+
+from apps.delivery.models import (
+    JoinGroup,
+)
 from apps.users.error_code import UserError
 from apps.payment.models import UserPayment
 from apps.sale_schema.models import ProfileFeaturesSupplier, SICPRegistration
@@ -4894,6 +4898,8 @@ class UserRatingSupplierProductNode(DjangoObjectType):
         filterset_class = UserRatingSupplierProductFilter
         interfaces = (CustomNode,)
         connection_class = ExtendedConnection
+        
+        
 
 class Mutation(graphene.ObjectType):
     supplier_flash_sale_create = SupplierFlashSaleCreate.Field()
@@ -4901,6 +4907,7 @@ class Mutation(graphene.ObjectType):
     supplier_flash_sale_delete = SupplierFlashSaleDelete.Field()
     supplier_flash_sale_reorder_update = SupplierFlashSaleUpdateOrder.Field()
     supplier_sicp_registration_update = SupplierSICPRegistrationUpdate.Field()
+
 
     buyer_create = BuyerCreate.Field()
     buyer_update = BuyerUpdate.Field()
@@ -4943,7 +4950,7 @@ class Mutation(graphene.ObjectType):
 class Query(ObjectType):
     supplier = CustomNode.Field(SupplierNode)
     suppliers = CustomizeFilterConnectionField(SupplierNode)
-
+    
     supplier_flash_sale = CustomNode.Field(SupplierFlashSaleNode)
     supplier_flash_sales = CustomizeFilterConnectionField(SupplierFlashSaleNode)
     
@@ -5081,6 +5088,15 @@ class Query(ObjectType):
 
     admin = CustomNode.Field(AdminNode)
     admins = CustomizeFilterConnectionField(AdminNode)
+    
+    students_without_group = graphene.List(UserNode)
+    
+    def resolve_students_without_group(self, info):
+        admin_users = Admin.objects.values_list('user_id', flat=True)
+        non_admin_users = User.objects.exclude(id__in=admin_users)
+        users_with_group = JoinGroup.objects.values_list('user_id', flat=True)
+        students_without_group = non_admin_users.exclude(id__in=users_with_group)
+        return students_without_group
 
     group = CustomNode.Field(GroupNode)
     groups = CustomizeFilterConnectionField(GroupNode)

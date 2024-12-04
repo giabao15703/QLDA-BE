@@ -256,6 +256,8 @@ class NotificationNode(DjangoObjectType):
         model = Notification
         interfaces = (CustomNode,)
         connection_class = ExtendedConnection
+        
+
 
 class Query(object):
     shipping_fee = CustomNode.Field(ShippingFeeNode)
