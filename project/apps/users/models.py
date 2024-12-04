@@ -296,6 +296,17 @@ class User(AbstractUser, TimeStampedModel):
     company_position = models.PositiveSmallIntegerField(choices=COMPANY_POSITION_CHOICES, default=1)
     language = models.ForeignKey(Language, on_delete=models.CASCADE, default=1)
     role = models.PositiveSmallIntegerField(choices=ADMIN_ROLE_CHOICES, null=True)
+    mssv = models.CharField(max_length=20, null=True, blank=True)  # Student ID
+    ngay_sinh = models.DateTimeField(null=True, blank=True)  # Date of Birth
+    noi_sinh = models.CharField(max_length=100, null=True, blank=True)  # Place of Birth
+    lop = models.CharField(max_length=50, null=True, blank=True)  # Class
+    khoa_hoc = models.CharField(max_length=50, null=True, blank=True)  # Course
+    bac_dao_tao = models.CharField(max_length=50, null=True, blank=True)  # Level of Education
+    loai_hinh_dao_tao = models.CharField(max_length=50, null=True, blank=True)  # Type of Education
+    nganh = models.CharField(max_length=100, null=True, blank=True)  # Major
+    gender = models.CharField(max_length=10, null=True, blank=True)
+    picture = models.ImageField(upload_to=picture_directory_path, null=True, blank=True)
+    phone = models.CharField(max_length=32, null=True, blank=True)
 
     def get_profile(self):
         if self.isBuyer():
@@ -383,35 +394,38 @@ class Buyer(models.Model):
     company_short_name = models.CharField(max_length=32, null=True, blank=True)
     company_long_name = models.CharField(max_length=96, null=True, blank=True)
     company_logo = models.ImageField(upload_to=company_logo_directory_path, null=True, blank=True)
-    company_tax = models.CharField(max_length=32)
-    company_address = models.CharField(max_length=256)
-    company_city = models.CharField(max_length=32)
-    company_country = models.ForeignKey(Country, on_delete=models.CASCADE)
-    company_country_state = models.ForeignKey(CountryState, default=1, on_delete=models.CASCADE)
-    company_number_of_employee = models.ForeignKey(NumberofEmployee, on_delete=models.CASCADE)
-    company_website = models.CharField(max_length=32)
+    company_tax = models.CharField(max_length=32, null=True, blank=True)
+    company_address = models.CharField(max_length=256, null=True, blank=True)
+    company_city = models.CharField(max_length=32,null=True, blank=True)
+    company_number_of_employee = models.ForeignKey(NumberofEmployee, on_delete=models.CASCADE,null= True, blank=True)
+    company_website = models.CharField(max_length=32,null=True, blank=True)
     company_referral_code = models.CharField(max_length=100, null=True, blank=True)
     company_email = models.CharField(max_length=32, null=True, blank=True)
-
-    gender = models.ForeignKey(Gender, on_delete=models.CASCADE)
     picture = models.ImageField(upload_to=picture_directory_path, null=True, blank=True)
-    phone = models.CharField(max_length=32)
-    position = models.ForeignKey(Position, on_delete=models.CASCADE)
+    phone = models.CharField(max_length=32, null=True, blank=True)
+    position = models.ForeignKey(Position, on_delete=models.CASCADE, null=True, blank=True)
     level = models.ForeignKey(Level, on_delete=models.CASCADE, null=True, blank=True)
     language = models.ForeignKey(Language, on_delete=models.CASCADE, null=True, blank=True, default=1)
     profile_features = models.ForeignKey(ProfileFeaturesBuyer, on_delete=models.CASCADE, null=True, blank=True)
     currency = models.ForeignKey(Currency, on_delete=models.CASCADE, null=True)
     promotion = models.ForeignKey(Promotion, on_delete=models.CASCADE, null=True, blank=True)
-    valid_from = models.DateTimeField(auto_now_add=True)
-    valid_to = models.DateTimeField(default=one_year)
+    valid_from = models.DateTimeField(auto_now_add=True, null=True, blank=True)
+    valid_to = models.DateTimeField(default=one_year, null=True, blank=True)
     send_mail_30_day = models.DateTimeField(null=True, blank=True)
     send_mail_15_day = models.DateTimeField(null=True, blank=True)
     send_mail_7_day = models.DateTimeField(null=True, blank=True)
     send_mail_expire = models.DateTimeField(null=True, blank=True)
-
+    mssv = models.CharField(max_length=20, null=True, blank=True)  # Student ID
+    ngay_sinh = models.DateField(null=True, blank=True)  # Date of Birth
+    noi_sinh = models.CharField(max_length=100, null=True, blank=True)  # Place of Birth
+    lop = models.CharField(max_length=50, null=True, blank=True)  # Class
+    khoa_hoc = models.CharField(max_length=50, null=True, blank=True)  # Course
+    bac_dao_tao = models.CharField(max_length=50, null=True, blank=True)  # Level of Education
+    loai_hinh_dao_tao = models.CharField(max_length=50, null=True, blank=True)  # Type of Education
+    nganh = models.CharField(max_length=100, null=True, blank=True)  # Major
+    gender = models.CharField(max_length=10, null=True, blank=True)
     class Meta:
         db_table = 'users_buyer'
-
 
 class BuyerActivity(models.Model):
     buyer = models.ForeignKey(Buyer, on_delete=models.CASCADE, related_name='buyer_activity')
