@@ -7,6 +7,7 @@ from django_filters import FilterSet
 from graphene_django import DjangoObjectType
  
 from apps.delivery.models import (
+    Notification,
     ShippingFee,
     TransporterList,
     DeliveryResponsible,
@@ -242,6 +243,20 @@ class KeHoachDoAnNode(DjangoObjectType):
         interfaces = (CustomNode,)
         connection_class = ExtendedConnection
 
+class NotificationFilter(FilterSet):
+    created_date = django_filters.DateTimeFilter(field_name="created_date", lookup_expr="exact")
+    status = django_filters.BooleanFilter(field_name="status", lookup_expr="exact")
+
+    class Meta:
+        model = Notification
+        fields = []
+        
+class NotificationNode(DjangoObjectType):
+    class Meta:
+        model = Notification
+        interfaces = (CustomNode,)
+        connection_class = ExtendedConnection
+
 class Query(object):
     shipping_fee = CustomNode.Field(ShippingFeeNode)
     shipping_fees = CustomizeFilterConnectionField(ShippingFeeNode)
@@ -266,4 +281,7 @@ class Query(object):
 
     ke_hoach_do_an = CustomNode.Field(KeHoachDoAnNode)
     ke_hoach_do_ans = CustomizeFilterConnectionField(KeHoachDoAnNode, filterset_class=KeHoachDoAnFilter)
+    
+    notifications = CustomizeFilterConnectionField(NotificationNode, filterset_class=NotificationFilter)
+    notification = CustomNode.Field(NotificationNode)
 

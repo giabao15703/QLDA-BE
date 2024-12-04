@@ -8,6 +8,7 @@ from django.db.models import Subquery
 from graphene_django import DjangoObjectType
 from django.utils import timezone
 from apps.delivery.schema import (
+    NotificationNode,
     ShippingFeeNode,
     TransporterListNode,
     DeliveryResponsibleNode,
@@ -19,6 +20,7 @@ from apps.delivery.schema import (
 )
 from apps.users.models import Token
 from apps.delivery.models import (
+    Notification,
     ShippingFee,
     TransporterList,
     DeliveryResponsible,
@@ -529,8 +531,6 @@ class DeTaiUpdate(graphene.Mutation):
             error = Error(code="UPDATE_ERROR", message=str(e))
             return DeTaiUpdate(status=False, error=error)
 
-from django.utils import timezone
-
 class DeTaiDelete(graphene.Mutation):
     class Arguments:
         id = graphene.ID(required=True)
@@ -998,6 +998,59 @@ class DeleteKeHoachDoAn(graphene.Mutation):
         ke_hoach_do_an = KeHoachDoAn.objects.get(pk=id)
         ke_hoach_do_an.delete()
         return DeleteKeHoachDoAn(success=True)
+    
+class NotificationInput(graphene.InputObjectType):
+    title = graphene.String(required=True)
+    content = graphene.String(required=True)
+    status = graphene.Boolean(required=True)
+    
+class CreateNotification(graphene.Mutation):
+    class Arguments:
+        input = NotificationInput(required=True)
+
+    status = graphene.Boolean()
+    notification = graphene.Field(NotificationNode)
+    error = graphene.Field(Error)
+
+    def mutate(root, info, input):
+        try:
+            notification = Notification.objects.create(
+                title=input.title,
+                content=input.content,
+                status=input.status
+            )
+            return CreateNotification(status=True, notification=notification)
+        except Exception as e:
+            error = Error(code="CREATE_ERROR", message=str(e))
+            return CreateNotification(status=False, error=error)
+
+class UpdateNotification(graphene.Mutation):    
+    class Arguments:
+        id = graphene.ID(required=True)
+        input = NotificationInput(required=True)
+        
+    status = graphene.Boolean()
+    notification = graphene.Field(NotificationNode)
+    error = graphene.Field(Error)
+    
+    def mutate(self, info, id, input):
+        try:
+            notification = Notification.objects.get(pk=id)
+            if input.title is not None:
+                notification.title = input.title
+            if input.content is not None:
+                notification.content = input.content
+            if input.status is not None:
+                notification.status = input.status
+            notification.save()
+            return UpdateNotification(status=True,notification=notification,error=Error(message="Update thành công"))
+        except Notification.DoesNotExist:
+            error = Error(code="NOT_FOUND", message="Notification not found")
+            return UpdateNotification(status=False, error=error)
+        except Exception as e:
+            error = Error(code="UPDATE_ERROR", message=str(e))
+            return UpdateNotification(status=False, error=error)
+    
 
 class Mutation(graphene.ObjectType):
     shipping_fee_create = ShippingFeeCreate.Field()
@@ -1022,4 +1075,7 @@ class Mutation(graphene.ObjectType):
     create_ke_hoach_do_an = CreateKeHoachDoAn.Field()
     update_ke_hoach_do_an = UpdateKeHoachDoAn.Field()
     delete_ke_hoach_do_an = DeleteKeHoachDoAn.Field()
+    
+    create_notification = CreateNotification.Field()
+    update_notification = UpdateNotification.Field()
 

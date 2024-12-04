@@ -159,5 +159,15 @@ class KeHoachDoAn(models.Model):
         # Kiểm tra trùng lặp thời gian như đã làm ở bước trước nếu cần
         super().save(*args, **kwargs)
 
+class Notification(models.Model):
+    title = models.CharField(max_length=255)
+    content = models.TextField() 
+    created_date = models.DateTimeField(auto_now_add=True)  # Ngày tạo thông báo
+    status = models.BooleanField(default=True)  # Trạng thái thông báo (True: hoạt động, False: không hoạt động)
 
+    class Meta:
+        db_table = 'notification'
+
+    def __str__(self):
+        return self.title
 
