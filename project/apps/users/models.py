@@ -305,7 +305,7 @@ class User(AbstractUser, TimeStampedModel):
     loai_hinh_dao_tao = models.CharField(max_length=50, null=True, blank=True)  # Type of Education
     nganh = models.CharField(max_length=100, null=True, blank=True)  # Major
     gender = models.CharField(max_length=10, null=True, blank=True)
-    picture = models.ImageField(upload_to=picture_directory_path, null=True, blank=True)
+    picture = models.ImageField(upload_to='uploads/', null=True, blank=True)
     phone = models.CharField(max_length=32, null=True, blank=True)
 
     def get_profile(self):
@@ -401,7 +401,7 @@ class Buyer(models.Model):
     company_website = models.CharField(max_length=32,null=True, blank=True)
     company_referral_code = models.CharField(max_length=100, null=True, blank=True)
     company_email = models.CharField(max_length=32, null=True, blank=True)
-    picture = models.ImageField(upload_to=picture_directory_path, null=True, blank=True)
+    picture = models.ImageField(upload_to='uploads/', null=True, blank=True)
     phone = models.CharField(max_length=32, null=True, blank=True)
     position = models.ForeignKey(Position, on_delete=models.CASCADE, null=True, blank=True)
     level = models.ForeignKey(Level, on_delete=models.CASCADE, null=True, blank=True)

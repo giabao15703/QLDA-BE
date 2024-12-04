@@ -309,3 +309,14 @@ class Query(object):
     gradings = CustomizeFilterConnectionField(GradingNode, filterset_class=GradingFilter)
     grading = CustomNode.Field(GradingNode)
 
+    users_in_group = graphene.List(graphene.String, group_id=graphene.ID(required=True))
+
+    def resolve_users_in_group(self, info, group_id):
+        try:
+            group = GroupQLDA.objects.get(id=group_id)
+        except GroupQLDA.DoesNotExist:
+            raise GraphQLError(f"Group with ID {group_id} does not exist.")
+
+        user_ids = group.get_users_in_group()
+
+        return [str(user_id) for user_id in user_ids]

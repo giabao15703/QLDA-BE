@@ -93,7 +93,8 @@ class GroupQLDA(models.Model):
             ma_nhom = f"DA{random.randint(100, 999)}"  # Tạo 3 số ngẫu nhiên
             if not GroupQLDA.objects.filter(ma_Nhom=ma_nhom).exists():  # Kiểm tra trùng lặp
                 return ma_nhom
-
+    def get_users_in_group(self):
+        return self.join_groups.all().values_list('user', flat=True)
 
 class JoinGroup(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="join_groups")
@@ -175,7 +176,6 @@ class Notification(models.Model):
 class Grading(models.Model):
     detai = models.ForeignKey(DeTai, on_delete=models.CASCADE, related_name='gradings')
     group = models.ForeignKey(GroupQLDA, on_delete=models.CASCADE, related_name='gradings')
-    
     diem_huongdan = models.FloatField(default=0.0)
     diem_phanbien = models.FloatField(default=0.0)
 

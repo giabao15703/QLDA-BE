@@ -446,8 +446,6 @@ class DeTaiCreate(graphene.Mutation):
             return DeTaiCreate(status=False, error=error)
 
 
-
-
 class DeTaiUpdateInput(graphene.InputObjectType):
     tendoan = graphene.String()
     mota = graphene.String()
@@ -466,72 +464,70 @@ class DeTaiUpdate(graphene.Mutation):
 
     def mutate(root, info, id, input):
         try:
-            # Lấy đối tượng đề tài cần cập nhật
-            de_tai = DeTai.objects.get(id=id)
-            user = info.context.user
-
-            # Lấy token từ header
-            #auth_header = info.context.META.get('HTTP_AUTHORIZATION', None)
-            #token_key = auth_header.split(" ")[1] if auth_header else None
+            # Lấy token từ context
             token_key = GetToken.getToken(info)
+            token = Token.objects.get(key=token_key)
+            user = token.user
 
-            if token_key:
-                # Lấy đối tượng Token
-                token = Token.objects.get(key=token_key)
-                # Lấy đối tượng User từ Token
-                user = token.user
+            if user.is_authenticated:
+                # Lấy đề tài cần cập nhật
+                de_tai = DeTai.objects.get(id=id)
 
-                if user.isAdmin():
-
-                    # Lấy đối tượng Admin từ User
-                    admin = Admin.objects.get(user=user)
-                    # Lấy role từ Admin
-                    role = admin.role
-                    # Kiểm tra quyền hạn của người dùng
-                    if role == 1 or user.id == de_tai.idgvhuongdan.id:  # Giả sử Trưởng khoa có role là "TruongKhoa"
-                        if role == 1:
-                            # Cho phép trưởng khoa cập nhật trạng thái và yêu cầu
-                            if input.trangthai is not None:
-                                de_tai.trangthai = input.trangthai
-                            if input.yeucau is not None:
-                                de_tai.yeucau = input.yeucau 
-
-                        if user.id == de_tai.idgvhuongdan.id:
-                            # Nếu là giảng viên hướng dẫn, chỉ cho phép cập nhật tên đồ án và mô tả
-                            if input.tendoan is not None:
-                                de_tai.tendoan = input.tendoan
-                            if input.mota is not None:
-                                de_tai.mota = input.mota
-                        
+                # Kiểm tra user_type
+                if user.user_type == 1:  # Admin
+                    if user.role == 1 or user.id == de_tai.idgvhuongdan.id:
+                        # Cập nhật thông tin đề tài cho Admin
+                        if input.trangthai is not None:
+                            de_tai.trangthai = input.trangthai
+                        if input.yeucau is not None:
+                            de_tai.yeucau = input.yeucau
+                        if input.tendoan is not None:
+                            de_tai.tendoan = input.tendoan
+                        if input.mota is not None:
+                            de_tai.mota = input.mota
                     else:
-                        # Người dùng không có quyền cập nhật
                         error = Error(code="PERMISSION_DENIED", message="Bạn không có quyền cập nhật đề tài này.")
                         return DeTaiUpdate(status=False, error=error)
-                        
-                else:
-                    # Kiểm tra sinh viên xem đã tham gia nhóm chưa và role của sinh viên đó phải là nhóm trưởng
+
+                elif user.user_type == 2:  # Sinh viên
+                    # Kiểm tra xem user có phải là leader của nhóm trong join_group
                     join_group = JoinGroup.objects.filter(user=user, role="leader").first()
+
                     if not join_group:
                         error = Error(code="PERMISSION_DENIED", message="Bạn không phải là nhóm trưởng hoặc chưa tham gia nhóm.")
                         return DeTaiUpdate(status=False, error=error)
 
-                    # Kiểm tra nhóm đã đăng kí đề tài nào chưa
+                    # Kiểm tra xem nhóm của user đã có đề tài chưa
                     if DeTai.objects.filter(idnhom=join_group.group.ma_Nhom).exists():
-                        error = Error(code="ALREADY_REGISTERED", message="Nhóm của bạn đã đăng kí đề tài khác.")
+                        error = Error(code="ALREADY_REGISTERED", message="Nhóm của bạn đã đăng ký đề tài khác.")
                         return DeTaiUpdate(status=False, error=error)
-                de_tai.idnhom = join_group.group.ma_Nhom
-                join_group.group.de_tai = de_tai
-            # Lưu thay đổi
-            de_tai.save()
-            join_group.group.save()
-            return DeTaiUpdate(status=True, de_tai=de_tai)
+
+                    # Cập nhật thông tin nếu là leader và nhóm chưa đăng ký đề tài
+                    de_tai.idnhom = join_group.group.ma_Nhom
+                    join_group.group.de_tai = de_tai
+
+                # Lưu lại thay đổi
+                de_tai.save()
+                if user.user_type == 2 and join_group:
+                    join_group.group.save()  # Nếu có thay đổi nhóm
+
+                return DeTaiUpdate(status=True, de_tai=de_tai)
+
+            else:
+                error = Error(code="AUTHENTICATION_REQUIRED", message="Bạn cần đăng nhập để thực hiện thao tác này.")
+                return DeTaiUpdate(status=False, error=error)
 
         except DeTai.DoesNotExist:
             error = Error(code="NOT_FOUND", message="Đề tài không tồn tại")
             return DeTaiUpdate(status=False, error=error)
+        except Token.DoesNotExist:
+            error = Error(code="AUTHENTICATION_REQUIRED", message="Token không hợp lệ hoặc đã hết hạn.")
+            return DeTaiUpdate(status=False, error=error)
         except Exception as e:
             error = Error(code="UPDATE_ERROR", message=str(e))
             return DeTaiUpdate(status=False, error=error)
+
+
 
 class DeTaiDelete(graphene.Mutation):
     class Arguments:
@@ -1117,6 +1113,153 @@ class UpdateGrading(graphene.Mutation):
             error = Error(code="UPDATE_ERROR", message=str(e))
             return UpdateGrading(status=False, error=error)
 
+class InviteUserToGroup(graphene.Mutation):
+    class Arguments:
+        group_id = graphene.ID(required=True)
+        user_id = graphene.ID(required=True)
+
+    status = graphene.Boolean()
+    error = graphene.Field(Error)
+
+    def mutate(self, info, group_id, user_id):
+        try:
+            # Lấy thông tin người dùng từ token
+            token = GetToken.getToken(info)
+            user = token.user  # Người gửi lời mời (leader của nhóm)
+
+            # Lấy thông tin nhóm
+            group_qlda = GroupQLDA.objects.get(pk=group_id)
+
+            # Kiểm tra nếu người dùng đã là thành viên của nhóm
+            existing_group = JoinGroup.objects.filter(user__id=user_id, group=group_qlda).first()
+            if existing_group:
+                return InviteUserToGroup(
+                    status=False,
+                    error=Error(
+                        code="ALREADY_IN_GROUP",
+                        message=f"Người dùng {user_id} đã tham gia nhóm {group_qlda.name} trước đó."
+                    )
+                )
+
+            # Kiểm tra nếu yêu cầu đã tồn tại và chưa được duyệt
+            if JoinRequest.objects.filter(user__id=user_id, group=group_qlda, is_approved="f").exists():
+                return InviteUserToGroup(
+                    status=False,
+                    error=Error(
+                        code="REQUEST_ALREADY_SENT",
+                        message="Yêu cầu tham gia đã được gửi trước đó và đang chờ xử lý."
+                    )
+                )
+
+            # Tạo yêu cầu tham gia nhóm mới
+            join_request = JoinRequest.objects.create(user_id=user_id, group=group_qlda)
+
+            # Gửi thông báo tới người được mời (nếu có tính năng gửi thông báo)
+            user_to_invite = User.objects.get(id=user_id)
+            user_to_invite.send_notification(f"Bạn đã nhận được lời mời tham gia nhóm {group_qlda.name}.")
+
+            return InviteUserToGroup(status=True)
+
+        except GroupQLDA.DoesNotExist:
+            return InviteUserToGroup(
+                status=False,
+                error=Error(
+                    code="GROUP_NOT_FOUND",
+                    message="Nhóm không tồn tại."
+                )
+            )
+        except Exception as e:
+            return InviteUserToGroup(
+                status=False,
+                error=Error(
+                    code="INVITE_ERROR",
+                    message=str(e)
+                )
+            )
+class AcceptGroupInvitation(graphene.Mutation):
+    class Arguments:
+        join_request_id = graphene.ID(required=True)
+
+    status = graphene.Boolean()
+    error = graphene.Field(Error)
+
+    def mutate(self, info, join_request_id):
+        try:
+            # Lấy thông tin token của người dùng hiện tại
+            token = GetToken.getToken(info)
+            user = token.user
+
+            # Lấy yêu cầu tham gia từ join_request_id
+            join_request = JoinRequest.objects.select_related('group', 'user').get(pk=join_request_id)
+
+            # Kiểm tra xem người dùng này có phải là người được mời hay không
+            if join_request.user != user:
+                return AcceptGroupInvitation(
+                    status=False,
+                    error=Error(
+                        code="NOT_INVITED",
+                        message="Bạn không phải là người được mời tham gia nhóm này."
+                    )
+                )
+
+            # Kiểm tra xem yêu cầu đã được duyệt hay chưa
+            if join_request.is_approved:
+                return AcceptGroupInvitation(
+                    status=False,
+                    error=Error(
+                        code="ALREADY_JOINED",
+                        message="Bạn đã tham gia nhóm này trước đó."
+                    )
+                )
+
+            # Kiểm tra nếu nhóm đã đủ số lượng thành viên tối đa
+            group = join_request.group
+            if group.member_count >= group.max_member:
+                return AcceptGroupInvitation(
+                    status=False,
+                    error=Error(
+                        code="GROUP_FULL",
+                        message="Nhóm đã đủ số lượng thành viên."
+                    )
+                )
+
+            # Chấp nhận lời mời và thêm người dùng vào nhóm với vai trò là thành viên
+            JoinGroup.objects.create(user=user, group=group, role="member")
+
+            # Tăng số lượng thành viên trong nhóm
+            group.member_count += 1
+            group.save()
+
+            # Cập nhật trạng thái yêu cầu tham gia là đã được duyệt
+            join_request.is_approved = True
+            join_request.save()
+
+            # Gửi thông báo cho người quản lý nhóm (leader) về việc người dùng đã gia nhập nhóm
+            leader_record = group.join_groups.filter(role="leader").first()
+            if leader_record:
+                leader_record.user.send_notification(
+                    f"{user.email} đã chấp nhận lời mời và gia nhập nhóm {group.name}."
+                )
+
+            return AcceptGroupInvitation(status=True)
+
+        except JoinRequest.DoesNotExist:
+            return AcceptGroupInvitation(
+                status=False,
+                error=Error(
+                    code="REQUEST_NOT_FOUND",
+                    message="Yêu cầu tham gia không tồn tại."
+                )
+            )
+        except Exception as e:
+            return AcceptGroupInvitation(
+                status=False,
+                error=Error(
+                    code="JOIN_ERROR",
+                    message=str(e)
+                )
+            )
+
 class Mutation(graphene.ObjectType):
     shipping_fee_create = ShippingFeeCreate.Field()
     shipping_fee_update = ShippingFeeUpdate.Field()
@@ -1146,4 +1289,7 @@ class Mutation(graphene.ObjectType):
     
     create_grading = CreateGrading.Field()
     update_grading = UpdateGrading.Field()
+
+    invite_user_to_group = InviteUserToGroup.Field()
+    accept_group_invitation = AcceptGroupInvitation.Field()
 

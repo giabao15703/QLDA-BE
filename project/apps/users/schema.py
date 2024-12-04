@@ -594,6 +594,10 @@ class UserNode(DjangoObjectType):
         queryset = gql_optimizer.query(queryset.filter().order_by('id'), info)
         return queryset
 
+    def resolve_picture(self, info):
+       if self.picture and hasattr(self.picture, 'url'):
+           return info.context.build_absolute_uri(self.picture.url)
+       return None
 class SupplierFlashSaleFilter(FilterSet):
     user_supplier = django_filters.CharFilter(field_name="user_supplier__id", lookup_expr="exact")
     company_name = django_filters.CharFilter(field_name="user_supplier__company_full_name", lookup_expr="icontains")
@@ -1797,24 +1801,6 @@ class BuyerCreate(graphene.Mutation):
 
     def mutate(self, info, user):
         try:
-            picture_file = user.picture if user.picture else None
-            picture_url = None
-
-            # Đảm bảo thư mục uploads tồn tại
-            UPLOAD_DIR = "media/uploads/"
-            if picture_file:
-                if not os.path.exists(UPLOAD_DIR):
-                    os.makedirs(UPLOAD_DIR)
-
-                # Lưu file vào thư mục
-                file_path = os.path.join(UPLOAD_DIR, picture_file.name)
-                with open(file_path, "wb") as f:
-                    f.write(picture_file.read())
-
-                # Lưu URL của file
-                picture_url = f"/media/uploads/{picture_file.name}"
-
-            # Kiểm tra email trùng lặp
             if User.objects.filter(user_type=2, email=user.email).exists():
                 raise GraphQLError('Email đã tồn tại.')
 
@@ -1838,7 +1824,7 @@ class BuyerCreate(graphene.Mutation):
                 nganh=user.nganh,
                 phone=user.phone,
                 gender=user.gender,
-                picture=picture_url  # Lưu URL thay vì file
+                picture=user.picture  # Lưu URL thay vì file
             )
             new_user.set_password(user.password)
             new_user.save()
@@ -1855,7 +1841,7 @@ class BuyerCreate(graphene.Mutation):
                 loai_hinh_dao_tao=user.loai_hinh_dao_tao,
                 nganh=user.nganh,
                 gender=user.gender,
-                picture=picture_url,
+                picture=user.picture,
             )
 
             # Tạo bản ghi thanh toán
@@ -5088,15 +5074,36 @@ class Query(ObjectType):
 
     admin = CustomNode.Field(AdminNode)
     admins = CustomizeFilterConnectionField(AdminNode)
-    
     students_without_group = graphene.List(UserNode)
-    
+
     def resolve_students_without_group(self, info):
-        admin_users = Admin.objects.values_list('user_id', flat=True)
-        non_admin_users = User.objects.exclude(id__in=admin_users)
-        users_with_group = JoinGroup.objects.values_list('user_id', flat=True)
-        students_without_group = non_admin_users.exclude(id__in=users_with_group)
-        return students_without_group
+        try:
+            # Lấy thông tin người dùng từ token
+            token = GetToken.getToken(info)
+            if not token:
+                raise PermissionError("Không tìm thấy token. Vui lòng đăng nhập lại.")
+
+            # Lấy thông tin user từ token
+            user = token.user
+            user_id = user.id  # Lấy ID của người dùng đang đăng nhập
+
+            print(f"ID của người dùng đang đăng nhập: {user_id}")
+
+            # Kiểm tra người dùng có phải admin không
+            admin_users = Admin.objects.values_list('user_id', flat=True)
+            non_admin_users = User.objects.exclude(id__in=admin_users)
+            
+            # Lấy danh sách sinh viên không có nhóm
+            users_with_group = JoinGroup.objects.values_list('user_id', flat=True)
+            students_without_group = non_admin_users.exclude(id__in=users_with_group)
+
+            return students_without_group
+
+        except PermissionError as e:
+            raise GraphQLError(f"Permission Error: {str(e)}")
+        except Exception as e:
+            raise GraphQLError(f"Đã có lỗi xảy ra khi lấy danh sách sinh viên không có nhóm: {str(e)}")
+
 
     group = CustomNode.Field(GroupNode)
     groups = CustomizeFilterConnectionField(GroupNode)
