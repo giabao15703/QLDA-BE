@@ -7,6 +7,7 @@ from django_filters import FilterSet
 from graphene_django import DjangoObjectType
  
 from apps.delivery.models import (
+    Grading,
     Notification,
     ShippingFee,
     TransporterList,
@@ -257,6 +258,24 @@ class NotificationNode(DjangoObjectType):
         interfaces = (CustomNode,)
         connection_class = ExtendedConnection
         
+class GradingFilter(FilterSet):
+    detai = django_filters.CharFilter(field_name="detai", lookup_expr="exact")
+    group = django_filters.CharFilter(field_name="group", lookup_expr="exact")
+    diem_huongdan = django_filters.NumberFilter(field_name="diem_huongdan", lookup_expr="exact")
+    diem_phanbien = django_filters.NumberFilter(field_name="diem_phanbien", lookup_expr="exact")
+    
+
+    class Meta:
+        model = Grading
+        fields = []
+        
+class GradingNode(DjangoObjectType):
+    class Meta:
+        model = Grading
+        filterset_class = GradingFilter
+        interfaces = (CustomNode,)
+        connection_class = ExtendedConnection
+        
 
 
 class Query(object):
@@ -286,4 +305,7 @@ class Query(object):
     
     notifications = CustomizeFilterConnectionField(NotificationNode, filterset_class=NotificationFilter)
     notification = CustomNode.Field(NotificationNode)
+    
+    gradings = CustomizeFilterConnectionField(GradingNode, filterset_class=GradingFilter)
+    grading = CustomNode.Field(GradingNode)
 

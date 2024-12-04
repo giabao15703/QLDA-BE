@@ -8,6 +8,7 @@ from django.db.models import Subquery
 from graphene_django import DjangoObjectType
 from django.utils import timezone
 from apps.delivery.schema import (
+    GradingNode,
     NotificationNode,
     ShippingFeeNode,
     TransporterListNode,
@@ -20,6 +21,7 @@ from apps.delivery.schema import (
 )
 from apps.users.models import Token
 from apps.delivery.models import (
+    Grading,
     Notification,
     ShippingFee,
     TransporterList,
@@ -1051,6 +1053,69 @@ class UpdateNotification(graphene.Mutation):
             error = Error(code="UPDATE_ERROR", message=str(e))
             return UpdateNotification(status=False, error=error)
     
+class GradingInput(graphene.InputObjectType):
+    detai_id = graphene.ID(required=True)
+    group_id = graphene.ID(required=True)
+    diem_huongdan = graphene.Float(required=True)
+    diem_phanbien = graphene.Float(required=True)
+    
+class CreateGrading(graphene.Mutation):
+    class Arguments:
+        input = GradingInput(required=True)
+
+    status = graphene.Boolean()
+    grading = graphene.Field(GradingNode)
+    error = graphene.Field(Error)
+
+    def mutate(root, info, input):
+        # Kiểm tra xem đã có bản ghi nào trùng với detai_id, group_id và user_id chưa
+        if Grading.objects.filter(detai_id=input.detai_id, group_id=input.group_id, user_id=input.user_id).exists():
+            error = Error(code="DUPLICATE_RECORD", message="Sinh viên đã có điểm cho đề tài và nhóm này.")
+            return CreateGrading(status=False, error=error)
+
+        # Nếu không có bản ghi trùng, thực hiện tạo mới
+        try:
+            grading = Grading.objects.create(
+                detai_id=input.detai_id,
+                group_id=input.group_id,
+                user_id=input.user_id,  # Giả sử input đã chứa user_id
+                diem_huongdan=input.diem_huongdan,
+                diem_phanbien=input.diem_phanbien
+            )
+            return CreateGrading(status=True, grading=grading, error=Error(message="Tạo thành công"))
+        except Exception as e:
+            error = Error(code="CREATE_ERROR", message=str(e))
+            return CreateGrading(status=False, error=error)
+
+        
+class UpdateGradingInput(graphene.InputObjectType):
+    diem_huongdan = graphene.Float()
+    diem_phanbien = graphene.Float()
+
+class UpdateGrading(graphene.Mutation):
+    class Arguments:
+        id = graphene.ID(required=True)
+        input = UpdateGradingInput(required=True)
+
+    status = graphene.Boolean()
+    grading = graphene.Field(GradingNode)
+    error = graphene.Field(Error)
+
+    def mutate(root, info, id, input):
+        try:
+            grading = Grading.objects.get(pk=id)
+            if input.diem_huongdan is not None:
+                grading.diem_huongdan = input.diem_huongdan
+            if input.diem_phanbien is not None:
+                grading.diem_phanbien = input.diem_phanbien
+            grading.save()
+            return UpdateGrading(status=True, grading=grading)
+        except Grading.DoesNotExist:
+            error = Error(code="NOT_FOUND", message="Bản ghi không tồn tại")
+            return UpdateGrading(status=False, error=error)
+        except Exception as e:
+            error = Error(code="UPDATE_ERROR", message=str(e))
+            return UpdateGrading(status=False, error=error)
 
 class Mutation(graphene.ObjectType):
     shipping_fee_create = ShippingFeeCreate.Field()
@@ -1078,4 +1143,7 @@ class Mutation(graphene.ObjectType):
     
     create_notification = CreateNotification.Field()
     update_notification = UpdateNotification.Field()
+    
+    create_grading = CreateGrading.Field()
+    update_grading = UpdateGrading.Field()
 
