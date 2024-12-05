@@ -469,13 +469,13 @@ class DeTaiUpdate(graphene.Mutation):
             token = Token.objects.get(key=token_key)
             user = token.user
 
-            if user.is_authenticated:
+            if user.isAdmin():
                 # Lấy đề tài cần cập nhật
                 de_tai = DeTai.objects.get(id=id)
-
+                giang_vien = Admin.objects.get(user=user)
                 # Kiểm tra user_type
                 if user.user_type == 1:  # Admin
-                    if user.role == 1 or user.id == de_tai.idgvhuongdan.id:
+                    if user.role == 1 or giang_vien.id == de_tai.idgvhuongdan.id:
                         # Cập nhật thông tin đề tài cho Admin
                         if input.trangthai is not None:
                             de_tai.trangthai = input.trangthai
@@ -733,10 +733,10 @@ class AcceptJoinRequest(graphene.Mutation):
             group.save()
 
             # Xóa yêu cầu sau khi xử lý
-            if group.member_count >= group.max_member:
-                JoinRequest.objects.filter(group=group).delete()
-            else:
-                join_request.delete()
+            #if group.member_count >= group.max_member:
+            #    JoinRequest.objects.filter(group=group).delete()
+            #else:
+            join_request.delete()
 
             # Gửi thông báo tới leader về việc chấp nhận yêu cầu
             if hasattr(leader_record.user, "send_notification"):
