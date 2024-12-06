@@ -308,6 +308,9 @@ class User(AbstractUser, TimeStampedModel):
     picture = models.ImageField(upload_to='uploads/', null=True, blank=True)
     phone = models.CharField(max_length=32, null=True, blank=True)
 
+
+    def send_notification(self, message: str):
+        print(f"Đã mời {self.name}: {message}")
     def get_profile(self):
         if self.isBuyer():
             profile = Buyer.objects.get(user_id=self.id)

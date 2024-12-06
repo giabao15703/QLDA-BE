@@ -95,7 +95,6 @@ class GroupQLDA(models.Model):
                 return ma_nhom
     def get_users_in_group(self):
         return self.join_groups.all().values_list('user', flat=True)
-
 class JoinGroup(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="join_groups")
     group = models.ForeignKey(GroupQLDA, on_delete=models.CASCADE, related_name="join_groups")
@@ -104,6 +103,17 @@ class JoinGroup(models.Model):
     class Meta:
         db_table = 'join_group'
         unique_together = ('user', 'group')
+    def get_users_in_group(self):
+        return self.user.all()
+
+from enum import Enum       
+class RequestType(Enum):
+    INVITE = 1
+    JOIN_REQUEST = 2
+
+    @classmethod
+    def choices(cls):
+        return [(item.value, item.name.replace("_", " ").title()) for item in cls]
 
 class JoinRequest(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="join_requests")
@@ -111,6 +121,11 @@ class JoinRequest(models.Model):
     is_approved = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     leader_user_id = models.IntegerField(null=True, blank=True)
+    request_type = models.CharField(
+      choices=[("joinRequest", "Join Request"), ("invite", "Invite")],  # Sử dụng chuỗi cho request_type
+      default="joinRequest",  # Mặc định là 'joinRequest'
+      max_length=20
+    )
 
     @staticmethod
     def get_group_leader_user_id(group_id):
@@ -128,7 +143,6 @@ class JoinRequest(models.Model):
     class Meta:
         db_table = 'join_request'
         unique_together = ('user', 'group')
-
 
 class KeHoachDoAn(models.Model):
     sl_sinh_vien = models.IntegerField()  # Số lượng sinh viên

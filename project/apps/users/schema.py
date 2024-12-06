@@ -1895,11 +1895,22 @@ def import_students(request):
             with transaction.atomic():
                 for index, row in enumerate(sheet.iter_rows(min_row=2, values_only=True), start=2):
                     try:
-                        (
-                            email, password, short_name, mssv, ngaysinh, noisinh, lop, 
-                            khoa_hoc, bac_dao_tao, loai_hinh_dao_tao, nganh, gender, picture
-                        ) = row
+                        # Gán mặc định các giá trị là null
+                        email = row[0] if row[0] else None
+                        password = row[1] if row[1] else None
+                        short_name = row[2] if row[2] else None
+                        mssv = row[3] if row[3] else None
+                        ngaysinh = row[4] if row[4] else None
+                        noisinh = row[5] if row[5] else None
+                        lop = row[6] if row[6] else None
+                        khoa_hoc = row[7] if row[7] else None
+                        bac_dao_tao = row[8] if row[8] else None
+                        loai_hinh_dao_tao = row[9] if row[9] else None
+                        nganh = row[10] if row[10] else None
+                        gender = row[11] if row[11] else None
+                        picture = row[12] if row[12] else None  # Kiểm tra nếu có ảnh
 
+                        # Kiểm tra các trường bắt buộc và bỏ qua dòng nếu thiếu
                         if not all([email, password, short_name, mssv]):
                             missing_fields_count += 1
                             errors.append(f"Dòng {index}: Thiếu thông tin bắt buộc (Email, Mật khẩu, Tên ngắn, MSSV).")
@@ -1922,16 +1933,16 @@ def import_students(request):
                             user_type=2,  # Buyer
                             short_name=short_name,
                             mssv=mssv,
-                            ngay_sinh=ngay_sinh,
-                            noi_sinh=noi_sinh,
+                            ngay_sinh=ngaysinh,
+                            noi_sinh=noisinh,
                             lop=lop,
-                            phone=phone,
+                            phone=None,  # Nếu không có giá trị phone, để null
                             khoa_hoc=khoa_hoc,
                             bac_dao_tao=bac_dao_tao,
                             loai_hinh_dao_tao=loai_hinh_dao_tao,
                             nganh=nganh,
                             gender=gender,
-                            picture=picture
+                            picture=picture,  # Đảm bảo rằng picture có thể là URL hoặc Null
                         )
                         new_user.set_password(password)
                         new_user.save()
@@ -1942,8 +1953,26 @@ def import_students(request):
                         success_count += 1
 
                     except Exception as e:
-                        # Bắt lỗi tạo tài khoản
-                        errors.append(f"Dòng {index}: {str(e)}")
+                        # Bắt lỗi tạo tài khoản và gán giá trị null cho các trường không hợp lệ
+                        errors.append(f"Dòng {index}: Lỗi xảy ra: {str(e)}")
+                        # Nếu lỗi ở các trường nhất định, bạn có thể gán null
+                        new_user = User(
+                            email=None,  # Đặt email là null nếu có lỗi
+                            username=None,  # Đặt username là null nếu có lỗi
+                            user_type=None,
+                            short_name=None,
+                            mssv=None,
+                            ngay_sinh=None,
+                            noi_sinh=None,
+                            lop=None,
+                            khoa_hoc=None,
+                            bac_dao_tao=None,
+                            loai_hinh_dao_tao=None,
+                            nganh=None,
+                            gender=None,
+                            picture=None,
+                        )
+                        new_user.save()
 
             # Trả về kết quả sau khi xử lý
             total_rows = sheet.max_row - 1  # Tổng số dòng không tính tiêu đề

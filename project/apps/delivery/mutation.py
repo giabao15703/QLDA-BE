@@ -32,7 +32,8 @@ from apps.delivery.models import (
     JoinRequest,
     User,
     Admin,
-    KeHoachDoAn
+    KeHoachDoAn,
+    RequestType
 )
 
 from apps.delivery.error_code import (
@@ -643,21 +644,22 @@ class GroupQLDACreate(graphene.Mutation):
 class GroupQLDAJoin(graphene.Mutation):
     class Arguments:
         group_id = graphene.ID(required=True)
+        request_type = graphene.String(required=False)  # request_type là chuỗi
 
     status = graphene.Boolean()
     error = graphene.Field(Error)
 
-    def mutate(root, info, group_id):
+    def mutate(self, info, group_id, request_type=None):
         try:
+            # Lấy thông tin người dùng từ token
             token = GetToken.getToken(info)
             user = token.user
 
             # Tìm nhóm dựa trên group_id
             group_qlda = GroupQLDA.objects.get(pk=group_id)
 
-
-            # Kiểm tra nếu người dùng đã thuộc một nhóm
-            existing_group = JoinGroup.objects.filter(user=user).first()
+            # Kiểm tra nếu người dùng đã tham gia nhóm
+            existing_group = JoinGroup.objects.filter(user=user, group=group_qlda).first()
             if existing_group:
                 return GroupQLDAJoin(
                     status=False,
@@ -667,8 +669,26 @@ class GroupQLDAJoin(graphene.Mutation):
                     )
                 )
 
-            # Kiểm tra nếu yêu cầu đã tồn tại
-            if JoinRequest.objects.filter(user=user, group=group_qlda, is_approved="f").exists():
+            # Gán thẳng 'joinRequest' nếu không có giá trị từ client
+            if not request_type:
+                request_type = "joinRequest"  # Gán 'joinRequest' nếu không có giá trị
+
+            # Ánh xạ chuỗi 'joinRequest' và 'invite' thành giá trị số tương ứng
+            if request_type == "joinRequest":
+                request_type = RequestType.JOIN_REQUEST.value  # Gán giá trị 2
+            elif request_type == "invite":
+                request_type = RequestType.INVITE.value  # Gán giá trị 1
+            else:
+                return GroupQLDAJoin(
+                    status=False,
+                    error=Error(
+                        code="INVALID_REQUEST_TYPE",
+                        message="Loại yêu cầu không hợp lệ."
+                    )
+                )
+
+            # Kiểm tra nếu yêu cầu đã tồn tại và chưa được duyệt
+            if JoinRequest.objects.filter(user=user, group=group_qlda, request_type=request_type, is_approved=False).exists():
                 return GroupQLDAJoin(
                     status=False,
                     error=Error(
@@ -677,15 +697,11 @@ class GroupQLDAJoin(graphene.Mutation):
                     )
                 )
 
-            # Tạo yêu cầu tham gia mới
-            join_request = JoinRequest.objects.create(user=user, group=group_qlda)
-
-            # Gửi thông báo đến leader của nhóm
-            #group_qlda.join_groups.filter(role="leader").first().user.send_notification(
-                #f"{user.email} đã gửi yêu cầu tham gia vào nhóm {group_qlda.name}."
-            #)
+            # Tạo yêu cầu tham gia nhóm
+            JoinRequest.objects.create(user=user, group=group_qlda, request_type=request_type)
 
             return GroupQLDAJoin(status=True)
+
         except GroupQLDA.DoesNotExist:
             return GroupQLDAJoin(
                 status=False,
@@ -1142,19 +1158,30 @@ class InviteUserToGroup(graphene.Mutation):
                 )
 
             # Kiểm tra nếu yêu cầu đã tồn tại và chưa được duyệt
-            if JoinRequest.objects.filter(user__id=user_id, group=group_qlda, is_approved="f").exists():
+            if JoinRequest.objects.filter(user__id=user_id, group=group_qlda, is_approved=False, request_type=RequestType.INVITE.value).exists():
                 return InviteUserToGroup(
                     status=False,
                     error=Error(
                         code="REQUEST_ALREADY_SENT",
-                        message="Yêu cầu tham gia đã được gửi trước đó và đang chờ xử lý."
+                        message="Yêu cầu mời tham gia đã được gửi trước đó và đang chờ xử lý."
                     )
                 )
 
-            # Tạo yêu cầu tham gia nhóm mới
-            join_request = JoinRequest.objects.create(user_id=user_id, group=group_qlda)
+            # Kiểm tra số lượng lời mời đã gửi trong nhóm
+            invite_count = JoinRequest.objects.filter(user__id=user.id, group=group_qlda, request_type=RequestType.INVITE.value).count()
+            if invite_count >= 5:
+                return InviteUserToGroup(
+                    status=False,
+                    error=Error(
+                        code="MAX_INVITES_REACHED",
+                        message="Bạn đã gửi tối đa 5 lời mời tham gia nhóm này."
+                    )
+                )
 
-            # Gửi thông báo tới người được mời (nếu có tính năng gửi thông báo)
+            # Tạo yêu cầu mời tham gia nhóm với request_type là INVITE
+            join_request = JoinRequest.objects.create(user_id=user_id, group=group_qlda, request_type=RequestType.INVITE.value)
+
+            # Gửi thông báo cho người được mời
             user_to_invite = User.objects.get(id=user_id)
             user_to_invite.send_notification(f"Bạn đã nhận được lời mời tham gia nhóm {group_qlda.name}.")
 
@@ -1176,6 +1203,8 @@ class InviteUserToGroup(graphene.Mutation):
                     message=str(e)
                 )
             )
+
+
 class AcceptGroupInvitation(graphene.Mutation):
     class Arguments:
         join_request_id = graphene.ID(required=True)

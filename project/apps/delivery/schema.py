@@ -162,19 +162,30 @@ class DeTaiNode(DjangoObjectType):
 
 
 
-class GroupQLDAFilter(FilterSet):
+class GroupQLDAFilter(django_filters.FilterSet):
     name = django_filters.CharFilter(field_name="name", lookup_expr="icontains")
     status = django_filters.BooleanFilter(field_name="status")
-    idgvhuongdan = django_filters.CharFilter(field_name='de_tai__idgvhuongdan__id', lookup_expr="exact")  # Lọc theo id giảng viên hướng dẫn
+    idgvhuongdan = django_filters.CharFilter(field_name='de_tai__idgvhuongdan__id', lookup_expr="exact") 
     idgvphanbien = django_filters.CharFilter(field_name='de_tai__idgvphanbien__id', lookup_expr="exact") 
 
     def filter_members_count(self, queryset, name, value):
-        return queryset.annotate(num_members=models.Count('members')).filter(num_members=value)
+        return queryset.annotate(num_members=Count('join_groups')).filter(num_members=value)
 
+    user_id = django_filters.CharFilter(field_name='join_groups__user__id', lookup_expr="exact")  # Lọc theo ID người dùng
+    group_id = django_filters.CharFilter(field_name='join_groups__group__id', lookup_expr="exact")  # Lọc theo ID nhóm
+    mssv = django_filters.CharFilter(field_name='join_groups__user__mssv', lookup_expr="icontains")  # Lọc theo mã sinh viên (mssv)
+
+    def filter_by_group_and_user(self, queryset, name, value):
+        if self.request.GET.get('group_id') and self.request.GET.get('user_id'):
+            return queryset.filter(
+                join_groups__group__id=self.request.GET.get('group_id'),
+                join_groups__user__id=self.request.GET.get('user_id')
+            )
+        return queryset
 
     class Meta:
         model = GroupQLDA
-        fields = []
+        fields = ['name', 'status', 'idgvhuongdan', 'idgvphanbien', 'user_id', 'group_id', 'mssv']
 
 
 class GroupQLDANode(DjangoObjectType):
@@ -311,15 +322,3 @@ class Query(object):
     
     gradings = CustomizeFilterConnectionField(GradingNode, filterset_class=GradingFilter)
     grading = CustomNode.Field(GradingNode)
-
-    users_in_group = graphene.List(graphene.String, group_id=graphene.ID(required=True))
-
-    def resolve_users_in_group(self, info, group_id):
-        try:
-            group = GroupQLDA.objects.get(id=group_id)
-        except GroupQLDA.DoesNotExist:
-            raise GraphQLError(f"Group with ID {group_id} does not exist.")
-
-        user_ids = group.get_users_in_group()
-
-        return [str(user_id) for user_id in user_ids]
