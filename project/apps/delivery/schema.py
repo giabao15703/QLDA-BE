@@ -102,14 +102,17 @@ class DeliveryResponsibleNode(DjangoObjectType):
 
 class DeTaiFilter(django_filters.FilterSet):
     id = django_filters.CharFilter(field_name='id', lookup_expr="exact")
-    idgvhuongdan = django_filters.CharFilter(field_name='idgvhuongdan__full_name', lookup_expr="icontains")  # Lọc theo tên giảng viên hướng dẫn
-    idgvphanbien = django_filters.CharFilter(field_name='idgvphanbien__full_name', lookup_expr="icontains")  # Lọc theo tên giảng viên phản biện
+    idgvhuongdan = django_filters.CharFilter(field_name='idgvhuongdan__id', lookup_expr="icontains")  # Lọc theo tên giảng viên hướng dẫn
+    idgvphanbien = django_filters.CharFilter(field_name='idgvphanbien__id', lookup_expr="icontains")  # Lọc theo tên giảng viên phản biện
     idnhom = django_filters.CharFilter(field_name='idnhom', lookup_expr="exact")  # Lọc theo ID nhóm
     madoan = django_filters.CharFilter(field_name='madoan', lookup_expr="exact")  # Lọc theo mã đồ án
     chuyennganh = django_filters.CharFilter(field_name='chuyennganh', lookup_expr="icontains")  # Lọc theo chuyên ngành
     tendoan = django_filters.CharFilter(field_name='tendoan', lookup_expr="icontains")  # Lọc theo tên đồ án
+    mota = django_filters.CharFilter(field_name='mota', lookup_expr="icontains")  # Lọc theo mô tả
     trangthai = django_filters.CharFilter(field_name='trangthai', lookup_expr="exact")  # Lọc theo trạng thái
     idkehoach = django_filters.CharFilter(field_name='idkehoach__id', lookup_expr="exact")
+    gvhd_LongName = django_filters.CharFilter(field_name='idgvhuongdan__long_name', lookup_expr="icontains")
+    
 
     @property
     def qs(self):

@@ -475,7 +475,7 @@ class DeTaiUpdate(graphene.Mutation):
                 giang_vien = Admin.objects.get(user=user)
                 # Kiểm tra user_type
                 if user.user_type == 1:  # Admin
-                    if user.role == 1 or giang_vien.id == de_tai.idgvhuongdan.id:
+                    if giang_vien.role == 1 or giang_vien.id == de_tai.idgvhuongdan.id:
                         # Cập nhật thông tin đề tài cho Admin
                         if input.trangthai is not None:
                             de_tai.trangthai = input.trangthai
