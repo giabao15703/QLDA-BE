@@ -114,22 +114,22 @@ class DeTaiFilter(django_filters.FilterSet):
     gvhd_LongName = django_filters.CharFilter(field_name='idgvhuongdan__long_name', lookup_expr="icontains")
     
 
-    @property
-    def qs(self):
-        parent = super().qs
-        key = self.request.headers['Authorization'].split(" ")
-        key = key[-1]
-        token = Token.objects.get(key=key)
-        user = token.user
-        if user.isAdmin():
-            user_admin = Admin.objects.filter(user=user).first()
-            if user_admin:
-                role = user_admin.role
-                if role == 1:
-                    return parent
-                elif role == 3:
-                    return parent.filter(idgvhuongdan=user_admin)
-        return parent
+    #@property
+    #def qs(self):
+    #    parent = super().qs
+    #    key = self.request.headers['Authorization'].split(" ")
+    #    key = key[-1]
+    #    token = Token.objects.get(key=key)
+    #    user = token.user
+    #    if user.isAdmin():
+    #        user_admin = Admin.objects.filter(user=user).first()
+    #        if user_admin:
+    #            role = user_admin.role
+    #            if role == 1:
+    #                return parent
+    #            elif role == 3:
+    #                return parent.filter(idgvhuongdan=user_admin)
+    #    return parent
 
     class Meta:
         model = DeTai
@@ -284,11 +284,53 @@ class GradingFilter(FilterSet):
     detai = django_filters.CharFilter(field_name="detai", lookup_expr="exact")
     diem_huongdan = django_filters.NumberFilter(field_name="diem_huongdan", lookup_expr="exact")
     diem_phanbien = django_filters.NumberFilter(field_name="diem_phanbien", lookup_expr="exact")
-    
+    type = django_filters.CharFilter(method='filter_by_type')  # Custom field for filtering
 
     class Meta:
         model = Grading
         fields = []
+
+    def filter_by_type(self, queryset, name, value):
+        """
+        Custom filter method to handle `type` field for classification.
+        """
+        if value == 'huongdan':
+            return queryset.filter(diem_huongdan__isnull=False)  # Filter for huongdan
+        elif value == 'phanbien':
+            return queryset.filter(diem_phanbien__isnull=False)  # Filter for phanbien
+        return queryset
+
+    @property
+    def qs(self):
+        parent = super().qs
+        key = self.request.headers.get('Authorization', '').split(" ")
+        key = key[-1] if len(key) > 1 else None
+
+        # Ensure token exists
+        try:
+            token = Token.objects.get(key=key)
+        except Token.DoesNotExist:
+            return parent.none()  # Return empty queryset if token is invalid
+
+        user = token.user
+
+        # Check if user is admin
+        if user.isAdmin():
+            user_admin = Admin.objects.filter(user=user).first()
+            if user_admin:
+                role = user_admin.role
+                print(role)
+                if role in [1, 3]:  # Apply filtering logic based on type
+                    filter_type = self.data.get('type')
+                    print(user_admin.id)
+                    if filter_type == 'PHAN_BIEN':
+                        print("PHAN_BIEN")
+                        return parent.filter(detai__idgvphanbien=user_admin)
+                    elif filter_type == 'HUONG_DAN':
+                        print("HUONG_DAN")
+                        return parent.filter(detai__idgvhuongdan=user_admin)
+        return parent
+
         
 class GradingNode(DjangoObjectType):
     class Meta:

@@ -471,25 +471,26 @@ class DeTaiUpdate(graphene.Mutation):
             token = Token.objects.get(key=token_key)
             user = token.user
 
-            if user.isAdmin():
+            if user:
                 # Lấy đề tài cần cập nhật
                 de_tai = DeTai.objects.get(id=id)
-                giang_vien = Admin.objects.get(user=user)
                 # Kiểm tra user_type
                 if user.user_type == 1:  # Admin
-                    if giang_vien.role == 1 or giang_vien.id == de_tai.idgvhuongdan.id:
+                    giang_vien = Admin.objects.get(user=user)
+                    if giang_vien.role == 4 or giang_vien.id == de_tai.idgvhuongdan.id:
                         # Cập nhật thông tin đề tài cho Admin
-                        if input.trangthai is not None:
-                            de_tai.trangthai = input.trangthai
-                        if input.yeucau is not None:
-                            de_tai.yeucau = input.yeucau
                         if input.tendoan is not None:
                             de_tai.tendoan = input.tendoan
                         if input.mota is not None:
                             de_tai.mota = input.mota
-                        if input.idgvphanbienScalar is not None:
-                            gv_phan_bien = Admin.objects.get(pk=input.idgvphanbienScalar)
-                            de_tai.idgvphanbien = gv_phan_bien
+                        if giang_vien.role == 4:
+                            if input.trangthai is not None:
+                                de_tai.trangthai = input.trangthai
+                            if input.yeucau is not None:
+                                de_tai.yeucau = input.yeucau
+                            if input.idgvphanbienScalar is not None:
+                                gv_phan_bien = Admin.objects.get(pk=input.idgvphanbienScalar)
+                                de_tai.idgvphanbien = gv_phan_bien
                     else:
                         error = Error(code="PERMISSION_DENIED", message="Bạn không có quyền cập nhật đề tài này.")
                         return DeTaiUpdate(status=False, error=error)
@@ -1084,34 +1085,21 @@ class CreateGrading(graphene.Mutation):
 
     def mutate(root, info, input):
         # Kiểm tra xem đã có bản ghi nào trùng với detai_id, group_id và user_id chưa
-        existing_grading = Grading.objects.filter(
-            detai_id=input.detai_id,
-        ).first()
+        if Grading.objects.filter(detai_id=input.detai_id).exists():
+            error = Error(code="DUPLICATE_RECORD", message="Đề tài nãy đã được chấm điểm.")
+            return CreateGrading(status=False, error=error)
 
-        if existing_grading:
-            # Cập nhật các trường được cung cấp
-            if input.diem_huongdan is not None:
-                existing_grading.diem_huongdan = input.diem_huongdan
-            if input.diem_phanbien is not None:
-                existing_grading.diem_phanbien = input.diem_phanbien
-            try:
-                existing_grading.save()
-                return CreateGrading(status=True, grading=existing_grading, error=Error(message="Create thành công"))
-            except Exception as e:
-                error = Error(code="CREATE_ERROR", message=str(e))
-                return CreateGrading(status=False, error=error)
-        else:
-            # Nếu không có bản ghi trùng, thực hiện tạo mới
-            try:
-                grading = Grading.objects.create(
-                    detai_id=input.detai_id,
-                    diem_huongdan=input.diem_huongdan,
-                    diem_phanbien=input.diem_phanbien
-                )
-                return CreateGrading(status=True, grading=grading)
-            except Exception as e:
-                error = Error(code="CREATE_ERROR", message=str(e))
-                return CreateGrading(status=False, error=error)
+        # Nếu không có bản ghi trùng, thực hiện tạo mới
+        try:
+            grading = Grading.objects.create(
+                detai_id=input.detai_id,
+                diem_huongdan=input.diem_huongdan,
+                diem_phanbien=input.diem_phanbien
+            )
+            return CreateGrading(status=True, grading=grading, error=Error(message="Tạo thành công"))
+        except Exception as e:
+            error = Error(code="CREATE_ERROR", message=str(e))
+            return CreateGrading(status=False, error=error)
 
         
 class UpdateGradingInput(graphene.InputObjectType):

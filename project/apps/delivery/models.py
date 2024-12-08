@@ -116,8 +116,8 @@ class RequestType(Enum):
         return [(item.value, item.name.replace("_", " ").title()) for item in cls]
 
 class JoinRequest(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="join_requests")
-    group = models.ForeignKey(GroupQLDA, on_delete=models.CASCADE, related_name="join_requests")
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="join_requests_users")
+    group = models.ForeignKey(GroupQLDA, on_delete=models.CASCADE, related_name="join_requests_groups")
     is_approved = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     leader_user_id = models.IntegerField(null=True, blank=True)
