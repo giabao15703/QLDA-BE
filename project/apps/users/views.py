@@ -2,7 +2,7 @@ import csv
 import json 
 import os
 import uuid
-
+import openpyxl
 from datetime import date
 
 from apps.master_data.models import Promotion, PromotionUserUsed, Position
@@ -27,9 +27,9 @@ from rest_framework import generics, views, serializers, parsers
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
-
+from openpyxl.styles import NamedStyle
+from openpyxl.utils import get_column_letter
 from docxtpl import DocxTemplate
-
 User = get_user_model()
 
 class UserProfileSerializer(serializers.ModelSerializer):
@@ -601,3 +601,70 @@ class DownloadSupplierCooperationAgreement(APIView):
             return response
         except:
             return Http404
+
+def export_students(request):
+    # Lọc các user có user_type = 2
+    users = User.objects.filter(user_type=2)
+
+    # Tạo workbook và sheet
+    wb = openpyxl.Workbook()
+    sheet = wb.active
+    sheet.title = 'Danh sách Người Mua'
+
+    # Đặt tiêu đề cho các cột
+    sheet['A1'] = 'Email'
+    sheet['B1'] = 'Username'
+    sheet['C1'] = 'MSSV'
+    sheet['D1'] = 'Tên ngắn'
+    sheet['E1'] = 'Ngày sinh'
+    sheet['F1'] = 'Nơi sinh'
+    sheet['G1'] = 'Lớp'
+    sheet['H1'] = 'Khóa học'
+    sheet['I1'] = 'Bậc đào tạo'
+    sheet['J1'] = 'Loại hình đào tạo'
+    sheet['K1'] = 'Ngành'
+    sheet['L1'] = 'Giới tính'
+
+    # Định nghĩa kiểu ngày tháng
+    date_style = NamedStyle(name="date_style", number_format="DD/MM/YYYY")
+    
+    # Điền dữ liệu vào các hàng
+    for index, user in enumerate(users, start=2):
+        sheet[f'A{index}'] = user.email
+        sheet[f'B{index}'] = user.username
+        sheet[f'C{index}'] = user.mssv
+        sheet[f'D{index}'] = user.short_name
+        sheet[f'E{index}'] = user.ngay_sinh
+        sheet[f'F{index}'] = user.noi_sinh
+        sheet[f'G{index}'] = user.lop
+        sheet[f'H{index}'] = user.khoa_hoc
+        sheet[f'I{index}'] = user.bac_dao_tao
+        sheet[f'J{index}'] = user.loai_hinh_dao_tao
+        sheet[f'K{index}'] = user.nganh
+        sheet[f'L{index}'] = user.gender
+
+        # Áp dụng kiểu định dạng ngày cho cột 'Ngày sinh'
+        sheet[f'E{index}'].style = date_style
+
+    # Điều chỉnh chiều rộng các cột (Tùy chọn)
+    for col in range(1, sheet.max_column + 1):
+        column_letter = get_column_letter(col)
+        max_length = 0
+        for row in sheet.iter_rows(min_col=col, max_col=col):
+            for cell in row:
+                try:
+                    if len(str(cell.value)) > max_length:
+                        max_length = len(cell.value)
+                except:
+                    pass
+        adjusted_width = (max_length + 2)
+        sheet.column_dimensions[column_letter].width = adjusted_width
+
+    # Tạo HTTP response để trả về tệp Excel
+    response = HttpResponse(content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+    response['Content-Disposition'] = 'attachment; filename=students.xlsx'
+
+    # Lưu workbook vào response
+    wb.save(response)
+
+    return response

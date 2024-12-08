@@ -476,7 +476,13 @@ class DeTaiUpdate(graphene.Mutation):
                 de_tai = DeTai.objects.get(id=id)
                 # Kiểm tra user_type
                 if user.user_type == 1:  # Admin
-                    giang_vien = Admin.objects.get(user=user)
+                    # Kiểm tra sự tồn tại của Admin cho user
+                    giang_vien = Admin.objects.filter(user=user).first()
+                    
+                    if not giang_vien:
+                        error = Error(code="NOT_FOUND", message="Không tìm thấy Admin cho người dùng này.")
+                        return DeTaiUpdate(status=False, error=error)
+                    
                     if giang_vien.role == 4 or giang_vien.id == de_tai.idgvhuongdan.id:
                         # Cập nhật thông tin đề tài cho Admin
                         if input.tendoan is not None:
@@ -488,8 +494,8 @@ class DeTaiUpdate(graphene.Mutation):
                                 de_tai.trangthai = input.trangthai
                             if input.yeucau is not None:
                                 de_tai.yeucau = input.yeucau
-                            if input.idgvphanbienScalar is not None:
-                                gv_phan_bien = Admin.objects.get(pk=input.idgvphanbienScalar)
+                            if input.idgvphanbienScalar is not None and input.idgvphanbienScalar != "-1":
+                                gv_phan_bien = Admin.objects.filter(pk=input.idgvphanbienScalar).first()
                                 de_tai.idgvphanbien = gv_phan_bien
                     else:
                         error = Error(code="PERMISSION_DENIED", message="Bạn không có quyền cập nhật đề tài này.")
@@ -532,7 +538,6 @@ class DeTaiUpdate(graphene.Mutation):
         except Exception as e:
             error = Error(code="UPDATE_ERROR", message=str(e))
             return DeTaiUpdate(status=False, error=error)
-
 
 
 class DeTaiDelete(graphene.Mutation):

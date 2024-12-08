@@ -20,6 +20,7 @@ from apps.delivery.models import (
     KeHoachDoAn,
     Admin
 )
+from apps.users.schema import UserNode
 from apps.users.models import Token
 from graphene import relay, ObjectType, Connection
 from graphql import GraphQLError
@@ -157,10 +158,6 @@ class DeTaiNode(DjangoObjectType):
     def resolve_ke_hoach_do_an_id(self, info):
         # Trả về ID của kế hoạch đồ án
         return self.idkehoach.id if self.idkehoach else None
-
-
-
-
 
 class GroupQLDAFilter(django_filters.FilterSet):
     name = django_filters.CharFilter(field_name="name", lookup_expr="icontains")
@@ -339,6 +336,8 @@ class GradingNode(DjangoObjectType):
         interfaces = (CustomNode,)
         connection_class = ExtendedConnection
         
+class StudentWithGroupNode(graphene.ObjectType):
+    joinGroup = graphene.Field(JoinGroupNode)        
 
 
 class Query(object):
@@ -371,3 +370,36 @@ class Query(object):
     
     gradings = CustomizeFilterConnectionField(GradingNode, filterset_class=GradingFilter)
     grading = CustomNode.Field(GradingNode)
+
+    get_students_in_group = graphene.Field(
+        graphene.List(StudentWithGroupNode),  # Đảm bảo trả về danh sách kiểu StudentWithGroupNode
+        description="Lấy danh sách sinh viên trong nhóm"
+    )
+    def resolve_get_students_in_group(self, info):
+        try:
+            token = GetToken.getToken(info)
+            user = token.user  # Lấy thông tin user từ token
+
+            # Lấy tất cả các nhóm mà người dùng tham gia
+            join_groups = JoinGroup.objects.filter(user_id=user.id)
+
+            if not join_groups:
+                raise GraphQLError("Người dùng không tham gia bất kỳ nhóm nào.")
+
+            # Lấy tất cả các group_id mà người dùng tham gia
+            group_ids = [join_group.group_id for join_group in join_groups]
+
+            # Lấy thông tin tất cả các thành viên trong các nhóm mà người dùng tham gia
+            join_groups = JoinGroup.objects.filter(group_id__in=group_ids)
+
+            # Lấy thông tin sinh viên và thông tin nhóm (role) từ JoinGroup và trả về danh sách
+            students = [
+                StudentWithGroupNode(joinGroup=join_group)  # Đảm bảo joinGroup được truyền đúng
+                for join_group in join_groups
+            ]
+
+
+            return students
+
+        except Exception as e:
+            raise GraphQLError(f"Lỗi: {str(e)}")

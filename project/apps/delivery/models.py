@@ -124,8 +124,8 @@ class JoinRequest(models.Model):
     request_type = models.CharField(
       choices=[("joinRequest", "Join Request"), ("invite", "Invite")],  # Sử dụng chuỗi cho request_type
       default="joinRequest",  # Mặc định là 'joinRequest'
-      max_length=20
-    )
+        max_length=20
+        )
 
     @staticmethod
     def get_group_leader_user_id(group_id):
@@ -139,7 +139,6 @@ class JoinRequest(models.Model):
             if leader_user_id:
                 self.leader_user_id = leader_user_id
         super().save(*args, **kwargs)
-
     class Meta:
         db_table = 'join_request'
         unique_together = ('user', 'group')

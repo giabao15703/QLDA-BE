@@ -598,6 +598,11 @@ class UserNode(DjangoObjectType):
        if self.picture and hasattr(self.picture, 'url'):
            return info.context.build_absolute_uri(self.picture.url)
        return None
+    def resolve_joinGroup(self, info):
+            from apps.delivery.models import JoinGroup
+            # Lấy JoinGroup từ database
+            join_group = JoinGroup.objects.filter(user=self).first()  # Giả sử joinGroup liên kết với user
+            return join_group  # Trả về thông tin JoinGroup
 class SupplierFlashSaleFilter(FilterSet):
     user_supplier = django_filters.CharFilter(field_name="user_supplier__id", lookup_expr="exact")
     company_name = django_filters.CharFilter(field_name="user_supplier__company_full_name", lookup_expr="icontains")
@@ -1879,6 +1884,30 @@ class BuyerCreate(graphene.Mutation):
         except Exception as e:
             raise GraphQLError(f"Lỗi xảy ra: {str(e)}")
 
+class UpdatePassword(graphene.Mutation):
+    class Arguments:
+        new_password = graphene.String(required=True)
+
+    status = graphene.Boolean()
+    error = graphene.Field(Error)
+
+    def mutate(self, info, new_password):
+        try:
+            # Lấy token từ request (dùng GetToken để lấy thông tin người dùng từ token)
+            token = GetToken.getToken(info)
+            user = token.user  # Lấy user từ token
+
+            if not user:
+                raise GraphQLError("Không tìm thấy người dùng.")
+
+            # Cập nhật mật khẩu mới
+            user.set_password(new_password)
+            user.save()
+
+            return UpdatePassword(status=True)
+
+        except Exception as e:
+            return UpdatePassword(status=False, error=f"Lỗi xảy ra: {str(e)}")
 @csrf_exempt
 def import_students(request):
     if request.method == 'POST' and request.FILES.get('file'):
@@ -1887,10 +1916,10 @@ def import_students(request):
             wb = openpyxl.load_workbook(file)
             sheet = wb.active
 
-            errors = []  # Lưu danh sách lỗi chi tiết
-            success_count = 0  # Đếm số tài khoản tạo thành công
-            duplicate_count = 0  # Đếm số tài khoản trùng lặp
-            missing_fields_count = 0  # Đếm số dòng bị thiếu thông tin
+            errors = []  
+            success_count = 0  
+            duplicate_count = 0  
+            missing_fields_count = 0 
 
             with transaction.atomic():
                 for index, row in enumerate(sheet.iter_rows(min_row=2, values_only=True), start=2):
@@ -1908,7 +1937,8 @@ def import_students(request):
                         loai_hinh_dao_tao = row[9] if row[9] else None
                         nganh = row[10] if row[10] else None
                         gender = row[11] if row[11] else None
-                        picture = row[12] if row[12] else None  # Kiểm tra nếu có ảnh
+                        picture = row[12] if row[12] else None 
+                        phone = row[13] if row[13] else None
 
                         # Kiểm tra các trường bắt buộc và bỏ qua dòng nếu thiếu
                         if not all([email, password, short_name, mssv]):
@@ -1936,13 +1966,13 @@ def import_students(request):
                             ngay_sinh=ngaysinh,
                             noi_sinh=noisinh,
                             lop=lop,
-                            phone=None,  # Nếu không có giá trị phone, để null
+                            phone=phone,  # Nếu không có giá trị phone, để null
                             khoa_hoc=khoa_hoc,
                             bac_dao_tao=bac_dao_tao,
                             loai_hinh_dao_tao=loai_hinh_dao_tao,
                             nganh=nganh,
                             gender=gender,
-                            picture=picture,  # Đảm bảo rằng picture có thể là URL hoặc Null
+                            picture=picture, 
                         )
                         new_user.set_password(password)
                         new_user.save()
@@ -1971,6 +2001,7 @@ def import_students(request):
                             nganh=None,
                             gender=None,
                             picture=None,
+                            phone=None,
                         )
                         new_user.save()
 
@@ -1991,94 +2022,112 @@ def import_students(request):
         except Exception as e:
             # Bắt lỗi chung khi xử lý file
             return JsonResponse({'status': 'error', 'message': str(e)})
+def export_students(request):
+    # Lấy dữ liệu từ cơ sở dữ liệu (bạn có thể thay đổi cách lấy dữ liệu tùy thuộc vào mô hình của bạn)
+    users = User.objects.all()
 
+    # Tạo workbook và sheet
+    wb = openpyxl.Workbook()
+    sheet = wb.active
+    sheet.title = 'Danh sách Người Mua'
+
+    # Đặt tiêu đề cho các cột
+    sheet['A1'] = 'Email'
+    sheet['B1'] = 'Username'
+    sheet['C1'] = 'MSSV'
+    sheet['D1'] = 'Tên ngắn'
+    sheet['E1'] = 'Ngày sinh'
+    sheet['F1'] = 'Nơi sinh'
+    sheet['G1'] = 'Lớp'
+    sheet['H1'] = 'Khóa học'
+    sheet['I1'] = 'Bậc đào tạo'
+    sheet['J1'] = 'Loại hình đào tạo'
+    sheet['K1'] = 'Ngành'
+    sheet['L1'] = 'Giới tính'
+
+    # Điền dữ liệu vào các hàng
+    for index, user in enumerate(users, start=2):
+        sheet[f'A{index}'] = user.email
+        sheet[f'B{index}'] = user.username
+        sheet[f'C{index}'] = user.mssv
+        sheet[f'D{index}'] = user.short_name
+        sheet[f'E{index}'] = user.ngay_sinh
+        sheet[f'F{index}'] = user.noi_sinh
+        sheet[f'G{index}'] = user.lop
+        sheet[f'H{index}'] = user.khoa_hoc
+        sheet[f'I{index}'] = user.bac_dao_tao
+        sheet[f'J{index}'] = user.loai_hinh_dao_tao
+        sheet[f'K{index}'] = user.nganh
+        sheet[f'L{index}'] = user.gender
+
+    # Tạo HTTP response để trả về tệp Excel
+    response = HttpResponse(content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+    response['Content-Disposition'] = 'attachment; filename=students.xlsx'
+
+    # Lưu workbook vào response
+    wb.save(response)
+
+    return response
+    
 class BuyerUpdate(graphene.Mutation):
     class Arguments:
-        id = graphene.String(required=True)
-        buyer = BuyerUpdateInput(required=True)
-        is_delete_logo = graphene.Boolean(required=True)
-        is_delete_picture = graphene.Boolean(required=True)
+        user_id = graphene.ID(required=True)  # ID người dùng cần cập nhật
+        user = UserInput(required=True)  # Các thông tin người dùng mới
 
-    buyer = graphene.Field(BuyerNode)
     status = graphene.Boolean()
+    error = graphene.Field(Error)
 
-    def mutate(self, info, id, buyer, is_delete_logo, is_delete_picture):
-        token = GetToken.getToken(info)
-        if token.user.isAdmin():
-            buyer_instance = Buyer.objects.get(pk=id)
-            user = User.objects.get(pk=buyer_instance.user_id)
-            user.first_name = buyer.user.first_name
-            user.last_name = buyer.user.last_name
-            user.status = buyer_instance.user.status
+    def mutate(self, info, user_id, user):
+        try:
+            # Lấy người dùng cần cập nhật
+            existing_user = User.objects.get(id=user_id, user_type=2)
 
-            profile_features = buyer_instance.profile_features_id
-            if buyer.promotion is not None:
-                promotion = buyer.promotion
-                promotion_instance = Promotion.objects.get(id=promotion)
-                if promotion_instance.status == False:
-                    raise GraphQLError('Promotion code has been deactivated ')
-                if promotion_instance.apply_for_buyer == False:
-                    raise GraphQLError('This promotion does not apply for buyer')
-                if promotion_instance.discount == 100:
-                    profile_features = buyer.profile_features
-            else:
-                promotion = buyer_instance.promotion_id
+            # Cập nhật thông tin người dùng
+            existing_user.email = user.email or existing_user.email
+            existing_user.short_name = user.short_name or existing_user.short_name
+            existing_user.mssv = user.mssv or existing_user.mssv
+            existing_user.ngay_sinh = user.ngay_sinh or existing_user.ngay_sinh
+            existing_user.noi_sinh = user.noi_sinh or existing_user.noi_sinh
+            existing_user.lop = user.lop or existing_user.lop
+            existing_user.khoa_hoc = user.khoa_hoc or existing_user.khoa_hoc
+            existing_user.bac_dao_tao = user.bac_dao_tao or existing_user.bac_dao_tao
+            existing_user.loai_hinh_dao_tao = user.loai_hinh_dao_tao or existing_user.loai_hinh_dao_tao
+            existing_user.nganh = user.nganh or existing_user.nganh
+            existing_user.phone = user.phone or existing_user.phone
+            existing_user.gender = user.gender or existing_user.gender
+            existing_user.picture = user.picture or existing_user.picture
 
-            if buyer.picture is None and not is_delete_picture:
-                picture = buyer_instance.picture
-            else:
-                picture = buyer.picture
-            if buyer.company_logo is None and not is_delete_logo:
-                company_logo = buyer_instance.company_logo
-            else:
-                company_logo = buyer.company_logo
+            # Nếu có thay đổi mật khẩu
+            if user.password:
+                existing_user.set_password(user.password)
 
-            buyer_instance.company_short_name = buyer.company_short_name
-            buyer_instance.company_long_name = buyer.company_long_name
-            buyer_instance.company_logo = company_logo
-            buyer_instance.company_tax = buyer.company_tax
-            buyer_instance.company_address = buyer.company_address
-            buyer_instance.company_city = buyer.company_city
-            buyer_instance.company_country_id = buyer.company_country
-            buyer_instance.company_country_state_id = buyer.company_country_state
-            buyer_instance.company_number_of_employee_id = buyer.company_number_of_employee
-            buyer_instance.company_website = buyer.company_website
-            buyer_instance.company_email = buyer.company_email
-            buyer_instance.gender_id = buyer.gender
-            buyer_instance.picture = picture
-            buyer_instance.phone = buyer.phone
-            buyer_instance.position_id = buyer.position
-            buyer_instance.language_id = buyer.language
-            buyer_instance.currency_id = buyer.currency
-            buyer_instance.profile_features_id = profile_features
-            buyer_instance.promotion_id = promotion
+            # Lưu lại thông tin người dùng đã cập nhật
+            existing_user.save()
 
-            if len(buyer.industries) > 10:
-                raise GraphQLError("Number industry  is less than or equals 10")
+            # Cập nhật thông tin Buyer tương ứng
+            existing_buyer = Buyer.objects.get(user=existing_user)
+            existing_buyer.mssv = user.mssv or existing_buyer.mssv
+            existing_buyer.ngay_sinh = user.ngay_sinh or existing_buyer.ngay_sinh
+            existing_buyer.noi_sinh = user.noi_sinh or existing_buyer.noi_sinh
+            existing_buyer.lop = user.lop or existing_buyer.lop
+            existing_buyer.khoa_hoc = user.khoa_hoc or existing_buyer.khoa_hoc
+            existing_buyer.bac_dao_tao = user.bac_dao_tao or existing_buyer.bac_dao_tao
+            existing_buyer.loai_hinh_dao_tao = user.loai_hinh_dao_tao or existing_buyer.loai_hinh_dao_tao
+            existing_buyer.nganh = user.nganh or existing_buyer.nganh
+            existing_buyer.gender = user.gender or existing_buyer.gender
+            existing_buyer.picture = user.picture or existing_buyer.picture
 
-            buyer_industry_mapping = map(
-                lambda x: x.get('industry_id'), BuyerIndustry.objects.filter(user_buyer_id=buyer_instance.id).values('industry_id')
-            )
-            buyer_industry_list = buyer_industry_list = map(lambda x: int(x), buyer.industries)
-            buyer_industry_list = set(buyer_industry_list)
-            buyer_industry_mapping = set(buyer_industry_mapping)
+            # Lưu lại thông tin Buyer đã cập nhật
+            existing_buyer.save()
 
-            buyer_industry_delete = buyer_industry_mapping.difference(buyer_industry_list)
-            BuyerIndustry.objects.filter(industry_id__in=buyer_industry_delete, user_buyer_id=buyer_instance.id).delete()
+            return BuyerUpdate(status=True)
 
-            buyer_industry_create = buyer_industry_list.difference(buyer_industry_mapping)
-            for industry_id in buyer_industry_create:
-                industry_buyer = BuyerIndustry(industry_id=industry_id, user_buyer_id=buyer_instance.id)
-                industry_buyer.save()
-
-            buyer_instance.save()
-            buyer_instance.user.first_name = user.first_name
-            buyer_instance.user.last_name = user.last_name
-            user.save()
-            return BuyerUpdate(status=True, buyer=buyer_instance)
-        else:
-            raise GraphQLError('No permission')
-
+        except User.DoesNotExist:
+            raise GraphQLError("Người dùng không tồn tại.")
+        except Buyer.DoesNotExist:
+            raise GraphQLError("Buyer không tồn tại.")
+        except Exception as e:
+            raise GraphQLError(f"Lỗi xảy ra: {str(e)}")
 
 class BuyerProfileUpdate(graphene.Mutation):
     class Arguments:
@@ -3911,6 +3960,7 @@ class AdminUpdate(graphene.Mutation):
 
     status = graphene.Boolean()
     admin = graphene.Field(AdminNode)
+    
     error = graphene.Field(Error)
 
     def mutate(root, info, id, is_delete, admin=None):
@@ -4928,6 +4978,7 @@ class Mutation(graphene.ObjectType):
     buyer_update = BuyerUpdate.Field()
     buyer_profile_update = BuyerProfileUpdate.Field()
     buyer_status_update = BuyerStatusUpdate.Field()
+    update_password = UpdatePassword.Field()
 
     buyer_sub_accounts_create = BuyerSubAccountsCreate.Field()
     buyer_sub_accounts_status_update = BuyerSubAccountsStatusUpdate.Field()
