@@ -216,6 +216,8 @@ class JoinGroupNode(DjangoObjectType):
 class JoinRequestFilter(FilterSet):
     user_id = django_filters.NumberFilter(field_name="user_id", lookup_expr="exact")
     group_id = django_filters.NumberFilter(field_name="group_id", lookup_expr="exact")
+    leader_user_id = django_filters.NumberFilter(field_name="leader_user_id", lookup_expr="exact")
+    request_type = django_filters.CharFilter(field_name="request_type", lookup_expr="exact")
     is_approved = django_filters.BooleanFilter(field_name="is_approved", lookup_expr="exact")
 
     class Meta:
@@ -223,7 +225,8 @@ class JoinRequestFilter(FilterSet):
         fields = []
 class JoinRequestNode(DjangoObjectType):
     members_count = graphene.Int()
-    leader_notification = graphene.String()  # Thêm trường để chứa thông báo dành riêng cho leader
+    leader_notification = graphene.String()
+    request_type = graphene.String()  # Đảm bảo khai báo kiểu trả về là String
 
     class Meta:
         model = JoinRequest
@@ -231,15 +234,20 @@ class JoinRequestNode(DjangoObjectType):
         interfaces = (CustomNode,)
         connection_class = ExtendedConnection
 
-    def resolve_leader_notification(self, info):
-        # Lấy thông tin người dùng hiện tại
-        current_user = info.context.user
+    def resolve_request_type(self, info):
+        # Chuyển đổi giá trị số trong DB sang chuỗi
+        if self.request_type == '1':
+            return "invite"
+        elif self.request_type == '2':
+            return "joinRequest"
+        return None
 
-        # Kiểm tra nếu người dùng hiện tại là leader của nhóm bằng cách so sánh với leader_user_id
+    def resolve_leader_notification(self, info):
+        current_user = info.context.user
         if current_user.id == self.leader_user_id:
             return f"Thông báo: User {self.user.id} đã gửi yêu cầu tham gia nhóm {self.group.id}."
-        else:
-            return None  # Không hiện thông báo cho người không phải leader
+        return None
+
 
 class KeHoachDoAnFilter(FilterSet):
     ma_ke_hoach = django_filters.CharFilter(field_name="ma_ke_hoach", lookup_expr="icontains")
@@ -274,7 +282,6 @@ class NotificationNode(DjangoObjectType):
         
 class GradingFilter(FilterSet):
     detai = django_filters.CharFilter(field_name="detai", lookup_expr="exact")
-    group = django_filters.CharFilter(field_name="group", lookup_expr="exact")
     diem_huongdan = django_filters.NumberFilter(field_name="diem_huongdan", lookup_expr="exact")
     diem_phanbien = django_filters.NumberFilter(field_name="diem_phanbien", lookup_expr="exact")
     

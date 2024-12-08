@@ -189,9 +189,8 @@ class Notification(models.Model):
 
 class Grading(models.Model):
     detai = models.ForeignKey(DeTai, on_delete=models.CASCADE, related_name='gradings')
-    group = models.ForeignKey(GroupQLDA, on_delete=models.CASCADE, related_name='gradings')
-    diem_huongdan = models.FloatField(default=0.0)
-    diem_phanbien = models.FloatField(default=0.0)
+    diem_huongdan = models.FloatField(default=0.0, null=True, blank=True)
+    diem_phanbien = models.FloatField(default=0.0 , null=True, blank=True)
 
     class Meta:
         db_table = 'grading'

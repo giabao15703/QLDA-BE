@@ -450,8 +450,9 @@ class DeTaiCreate(graphene.Mutation):
 class DeTaiUpdateInput(graphene.InputObjectType):
     tendoan = graphene.String()
     mota = graphene.String()
-    trangthai = graphene.String()  # Chỉ trưởng khoa có thể cập nhật
-    yeucau = graphene.String()      # Chỉ trưởng khoa có thể cập nhật
+    trangthai = graphene.String() 
+    yeucau = graphene.String()     
+    idgvphanbienScalar = graphene.String()
 
 
 class DeTaiUpdate(graphene.Mutation):
@@ -486,6 +487,9 @@ class DeTaiUpdate(graphene.Mutation):
                             de_tai.tendoan = input.tendoan
                         if input.mota is not None:
                             de_tai.mota = input.mota
+                        if input.idgvphanbienScalar is not None:
+                            gv_phan_bien = Admin.objects.get(pk=input.idgvphanbienScalar)
+                            de_tai.idgvphanbien = gv_phan_bien
                     else:
                         error = Error(code="PERMISSION_DENIED", message="Bạn không có quyền cập nhật đề tài này.")
                         return DeTaiUpdate(status=False, error=error)
@@ -1067,9 +1071,8 @@ class UpdateNotification(graphene.Mutation):
     
 class GradingInput(graphene.InputObjectType):
     detai_id = graphene.ID(required=True)
-    group_id = graphene.ID(required=True)
-    diem_huongdan = graphene.Float(required=True)
-    diem_phanbien = graphene.Float(required=True)
+    diem_huongdan = graphene.Float()
+    diem_phanbien = graphene.Float()
     
 class CreateGrading(graphene.Mutation):
     class Arguments:
@@ -1081,23 +1084,34 @@ class CreateGrading(graphene.Mutation):
 
     def mutate(root, info, input):
         # Kiểm tra xem đã có bản ghi nào trùng với detai_id, group_id và user_id chưa
-        if Grading.objects.filter(detai_id=input.detai_id, group_id=input.group_id, user_id=input.user_id).exists():
-            error = Error(code="DUPLICATE_RECORD", message="Sinh viên đã có điểm cho đề tài và nhóm này.")
-            return CreateGrading(status=False, error=error)
+        existing_grading = Grading.objects.filter(
+            detai_id=input.detai_id,
+        ).first()
 
-        # Nếu không có bản ghi trùng, thực hiện tạo mới
-        try:
-            grading = Grading.objects.create(
-                detai_id=input.detai_id,
-                group_id=input.group_id,
-                user_id=input.user_id,  # Giả sử input đã chứa user_id
-                diem_huongdan=input.diem_huongdan,
-                diem_phanbien=input.diem_phanbien
-            )
-            return CreateGrading(status=True, grading=grading, error=Error(message="Tạo thành công"))
-        except Exception as e:
-            error = Error(code="CREATE_ERROR", message=str(e))
-            return CreateGrading(status=False, error=error)
+        if existing_grading:
+            # Cập nhật các trường được cung cấp
+            if input.diem_huongdan is not None:
+                existing_grading.diem_huongdan = input.diem_huongdan
+            if input.diem_phanbien is not None:
+                existing_grading.diem_phanbien = input.diem_phanbien
+            try:
+                existing_grading.save()
+                return CreateGrading(status=True, grading=existing_grading, error=Error(message="Create thành công"))
+            except Exception as e:
+                error = Error(code="CREATE_ERROR", message=str(e))
+                return CreateGrading(status=False, error=error)
+        else:
+            # Nếu không có bản ghi trùng, thực hiện tạo mới
+            try:
+                grading = Grading.objects.create(
+                    detai_id=input.detai_id,
+                    diem_huongdan=input.diem_huongdan,
+                    diem_phanbien=input.diem_phanbien
+                )
+                return CreateGrading(status=True, grading=grading)
+            except Exception as e:
+                error = Error(code="CREATE_ERROR", message=str(e))
+                return CreateGrading(status=False, error=error)
 
         
 class UpdateGradingInput(graphene.InputObjectType):

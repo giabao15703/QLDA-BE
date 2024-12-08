@@ -115,10 +115,10 @@ PROFILE_FEATURES_CHOICES = (
 STATUS_CHOICES = ((1, 'active'), (2, 'inactive'), (3, 'deactive'))
 
 ADMIN_ROLE_CHOICES = (
-    (1, 'master'),
-    (2, 'a1'),
-    (3, 'a2'),
-    (4, 'a3'),
+    (1, 'Trưởng khoa'),
+    (2, 'Giáo vụ'),
+    (3, 'Giảng viên'),
+    (4, 'Trưởng bộ môn'),
 )
 
 PERMISSION_STATUS_CHOICES = (
@@ -671,7 +671,8 @@ class Admin(models.Model):
     ROLE_CHOICES = [
         (1, 'Trưởng khoa'),
         (2, 'Giáo vụ'),
-        (3, 'Giảng viên')
+        (3, 'Giảng viên'),
+        (4, 'Trưởng bộ môn')
     ]
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
