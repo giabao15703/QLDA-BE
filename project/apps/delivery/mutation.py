@@ -418,9 +418,6 @@ class DeTaiCreate(graphene.Mutation):
                 if not ke_hoach_do_an:
                     error = Error(code="NO_VALID_KEHOACH", message="Không có kế hoạch đồ án nào trong thời gian cho phép tạo đề tài.")
                     return DeTaiCreate(status=False, error=error)
-                if count >= ke_hoach_do_an.sl_do_an:
-                    error = Error(code="DETAI_LIMIT", message="Số lượng đề tài đã đạt giới hạn cho phép.")
-                    return DeTaiCreate(status=False, error=error)
                 # Lấy chuyên ngành từ giảng viên hoặc đặt giá trị mặc định
                 chuyennganh = getattr(giang_vien, 'chuyen_nganh', 'Chưa xác định')
 
@@ -494,9 +491,12 @@ class DeTaiUpdate(graphene.Mutation):
                                 de_tai.trangthai = input.trangthai
                             if input.yeucau is not None:
                                 de_tai.yeucau = input.yeucau
-                            if input.idgvphanbienScalar is not None and input.idgvphanbienScalar != "-1":
+                            if input.idgvphanbienScalar is not None:
                                 gv_phan_bien = Admin.objects.filter(pk=input.idgvphanbienScalar).first()
-                                de_tai.idgvphanbien = gv_phan_bien
+                                if input.idgvphanbienScalar == "-1":
+                                    de_tai.idgvphanbien = None
+                                else:
+                                    de_tai.idgvphanbien = gv_phan_bien
                     else:
                         error = Error(code="PERMISSION_DENIED", message="Bạn không có quyền cập nhật đề tài này.")
                         return DeTaiUpdate(status=False, error=error)
