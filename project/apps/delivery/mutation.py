@@ -494,9 +494,12 @@ class DeTaiUpdate(graphene.Mutation):
                                 de_tai.trangthai = input.trangthai
                             if input.yeucau is not None:
                                 de_tai.yeucau = input.yeucau
-                            if input.idgvphanbienScalar is not None and input.idgvphanbienScalar != "-1":
+                            if input.idgvphanbienScalar is not None:
                                 gv_phan_bien = Admin.objects.filter(pk=input.idgvphanbienScalar).first()
-                                de_tai.idgvphanbien = gv_phan_bien
+                                if input.idgvphanbienScalar == "-1":
+                                    de_tai.idgvphanbien = None
+                                else:
+                                    de_tai.idgvphanbien = gv_phan_bien
                     else:
                         error = Error(code="PERMISSION_DENIED", message="Bạn không có quyền cập nhật đề tài này.")
                         return DeTaiUpdate(status=False, error=error)

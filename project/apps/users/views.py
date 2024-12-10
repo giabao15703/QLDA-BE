@@ -611,7 +611,6 @@ def export_students(request):
     sheet = wb.active
     sheet.title = 'Danh sách Người Mua'
 
-    # Đặt tiêu đề cho các cột
     sheet['A1'] = 'Email'
     sheet['B1'] = 'Username'
     sheet['C1'] = 'MSSV'

@@ -2,7 +2,7 @@ from django.urls import path
 from rest_framework.urlpatterns import format_suffix_patterns
 
 from apps.auctions import views
-from apps.users.schema import import_students
+from apps.users.schema import import_students, import_admins
 
 
 urlpatterns = format_suffix_patterns(
@@ -16,6 +16,7 @@ urlpatterns = format_suffix_patterns(
         path('server/', views.CurrentTimestamp.as_view(), name='auction-server-time'),
         path('auction/extract/coupon/', views.AuctionReportExportCoupon.as_view(), name='auction-extract-coupon'),
         path('import-students/', import_students, name='import-students'),
+        path('import-admins/', import_admins, name='import-admins'),
 
     ]
 )

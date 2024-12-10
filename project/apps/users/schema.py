@@ -3951,7 +3951,75 @@ class AdminCreate(graphene.Mutation):
         #     error = Error(code="USER_02", message=UserError.USER_02)
         #     return AdminCreate(status=False, error=error)
 
+@csrf_exempt
+def import_admins(request):
+    if request.method == 'POST' and request.FILES.get('file'):
+        file = request.FILES['file']
+        try:
+            wb = openpyxl.load_workbook(file)
+            sheet = wb.active
 
+            errors = []  
+            success_count = 0  
+            duplicate_count = 0  
+            missing_fields_count = 0 
+
+            with transaction.atomic():
+                for index, row in enumerate(sheet.iter_rows(min_row=2, values_only=True), start=2):
+                    try:
+                        # Lấy các dữ liệu từ từng dòng trong Excel
+                        email = row[0] if row[0] else None
+                        password = row[1] if row[1] else None
+                        short_name = row[2] if row[2] else None
+                        role = row[3] if row[3] else None  # Lấy role từ cột thứ 4
+
+                        # Kiểm tra các trường bắt buộc
+                        if not all([email, password, short_name, role]):
+                            missing_fields_count += 1
+                            errors.append(f"Dòng {index}: Thiếu thông tin bắt buộc (Email, Mật khẩu, Tên ngắn, Role).")
+                            continue
+
+                        # Kiểm tra email đã tồn tại chưa
+                        if User.objects.filter(user_type=1, email=email).exists():
+                            duplicate_count += 1
+                            errors.append(f"Dòng {index}: Email {email} đã tồn tại.")
+                            continue
+
+                        # Tạo username duy nhất
+                        user_count = User.objects.filter(user_type=1).count() + 1
+                        username = '70' + str(user_count).zfill(4)
+
+                        # Tạo User mới
+                        user = User(username=username, user_type=1, email=email, short_name=short_name)
+                        user.set_password(password)
+                        user.save()
+
+                        # Tạo Admin mới
+                        admin_instance = Admin(long_name=short_name, user=user, role=role)
+                        admin_instance.save()
+
+                        success_count += 1
+
+                    except Exception as e:
+                        errors.append(f"Dòng {index}: Lỗi xảy ra: {str(e)}")
+
+            # Trả về kết quả sau khi xử lý
+            total_rows = sheet.max_row - 1  # Tổng số dòng không tính tiêu đề
+            return JsonResponse({
+                'status': 'success',
+                'message': f'Import thành công {success_count} admin.',
+                'details': {
+                    'total_rows': total_rows,
+                    'success_count': success_count,
+                    'duplicate_count': duplicate_count,
+                    'missing_fields_count': missing_fields_count,
+                    'errors': errors,
+                }
+            })
+
+        except Exception as e:
+            # Bắt lỗi chung khi xử lý file
+            return JsonResponse({'status': 'error', 'message': str(e)})
 class AdminUpdate(graphene.Mutation):
     class Arguments:
         is_delete = graphene.Boolean(required=True)
