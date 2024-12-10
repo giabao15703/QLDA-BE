@@ -1956,7 +1956,6 @@ def import_students(request):
                         user_count = User.objects.filter(user_type=2).count() + 1
                         username = '80' + str(user_count).zfill(4)
 
-                        # Tạo User mới
                         new_user = User(
                             email=email,
                             username=username,
@@ -1966,7 +1965,7 @@ def import_students(request):
                             ngay_sinh=ngaysinh,
                             noi_sinh=noisinh,
                             lop=lop,
-                            phone=phone,  # Nếu không có giá trị phone, để null
+                            phone=phone, 
                             khoa_hoc=khoa_hoc,
                             bac_dao_tao=bac_dao_tao,
                             loai_hinh_dao_tao=loai_hinh_dao_tao,
@@ -1985,25 +1984,7 @@ def import_students(request):
                     except Exception as e:
                         # Bắt lỗi tạo tài khoản và gán giá trị null cho các trường không hợp lệ
                         errors.append(f"Dòng {index}: Lỗi xảy ra: {str(e)}")
-                        # Nếu lỗi ở các trường nhất định, bạn có thể gán null
-                        new_user = User(
-                            email=None,  # Đặt email là null nếu có lỗi
-                            username=None,  # Đặt username là null nếu có lỗi
-                            user_type=None,
-                            short_name=None,
-                            mssv=None,
-                            ngay_sinh=None,
-                            noi_sinh=None,
-                            lop=None,
-                            khoa_hoc=None,
-                            bac_dao_tao=None,
-                            loai_hinh_dao_tao=None,
-                            nganh=None,
-                            gender=None,
-                            picture=None,
-                            phone=None,
-                        )
-                        new_user.save()
+                        # Không tạo user khi có lỗi và chỉ gán lỗi vào danh sách errors
 
             # Trả về kết quả sau khi xử lý
             total_rows = sheet.max_row - 1  # Tổng số dòng không tính tiêu đề
@@ -2022,6 +2003,7 @@ def import_students(request):
         except Exception as e:
             # Bắt lỗi chung khi xử lý file
             return JsonResponse({'status': 'error', 'message': str(e)})
+
 def export_students(request):
     # Lấy dữ liệu từ cơ sở dữ liệu (bạn có thể thay đổi cách lấy dữ liệu tùy thuộc vào mô hình của bạn)
     users = User.objects.all()
