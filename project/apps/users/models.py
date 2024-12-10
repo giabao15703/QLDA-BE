@@ -676,7 +676,7 @@ class Admin(models.Model):
     ]
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    long_name = models.CharField(max_length=96)
+    short_name = models.CharField(max_length=96)
     role = models.IntegerField(choices=ROLE_CHOICES, default=3)
     chuyen_nganh = models.CharField(max_length=255, null=True, blank=True)  # Thêm trường chuyên ngành
 

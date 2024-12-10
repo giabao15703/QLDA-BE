@@ -3844,7 +3844,6 @@ class AdminFilter(FilterSet):
 
 class AdminNode(DjangoObjectType):
     language = graphene.Field(LanguageNode)
-    chuyen_nganh = graphene.String()  # Thêm chuyen_nganh vào node
 
     class Meta:
         model = Admin
@@ -3925,7 +3924,7 @@ class AdminCreate(graphene.Mutation):
         user.set_password(admin.user.password)
         user.save()
 
-        admin_instance = Admin(long_name=admin.long_name, user=user, role=admin.role)
+        admin_instance = Admin(short_name=admin.short_name, user=user, role=admin.role)
         admin_instance.save()
 
         return AdminCreate(status=True, admin=admin_instance)
