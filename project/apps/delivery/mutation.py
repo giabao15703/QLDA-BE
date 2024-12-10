@@ -480,13 +480,13 @@ class DeTaiUpdate(graphene.Mutation):
                         error = Error(code="NOT_FOUND", message="Không tìm thấy Admin cho người dùng này.")
                         return DeTaiUpdate(status=False, error=error)
                     
-                    if giang_vien.role == 4 or giang_vien.id == de_tai.idgvhuongdan.id:
+                    if giang_vien.role == 4 or giang_vien.role == 1 or giang_vien.id == de_tai.idgvhuongdan.id:
                         # Cập nhật thông tin đề tài cho Admin
                         if input.tendoan is not None:
                             de_tai.tendoan = input.tendoan
                         if input.mota is not None:
                             de_tai.mota = input.mota
-                        if giang_vien.role == 4:
+                        if giang_vien.role == 4 or giang_vien.role == 1:
                             if input.trangthai is not None:
                                 de_tai.trangthai = input.trangthai
                             if input.yeucau is not None:

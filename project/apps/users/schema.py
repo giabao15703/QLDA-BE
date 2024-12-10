@@ -4014,60 +4014,19 @@ class AdminUpdate(graphene.Mutation):
     error = graphene.Field(Error)
 
     def mutate(root, info, id, is_delete, admin=None):
-        if checkPermission(info):
-            admin_instance = Admin.objects.get(pk=id)
-            user = User.objects.get(pk=admin_instance.user_id)
-            user.short_name = admin.user.short_name
-            user.status = admin.user.status
+        admin_instance = Admin.objects.get(pk=id)
+        user = User.objects.get(pk=admin_instance.user_id)
+        user.short_name = admin.user.short_name
+        user.status = admin.user.status
+        
+        admin_instance.role = admin.role
+        admin_instance.long_name = admin.long_name
+        admin_instance.chuyen_nganh = admin.chuyen_nganh  # Cập nhật chuyen_nganh nếu có
+        time_now = timezone.now()
 
-            if admin.picture is None and not is_delete:
-                picture = admin_instance.picture
-            else:
-                picture = admin.picture
-
-            admin_instance.long_name = admin.long_name
-            admin_instance.picture = picture
-            admin_instance.chuyen_nganh = admin.chuyen_nganh  # Cập nhật chuyen_nganh nếu có
-            time_now = timezone.now()
-
-            for permission in admin.permissions:
-                valid_from1 = datetime.strptime(permission.valid_from, '%Y-%m-%dT%H:%M:%S%z')
-                status_input = 4
-                value_form_check = valid_from1 + timezone.timedelta(days=1)
-                if valid_from1 <= time_now < value_form_check:
-                    status_input = 1
-                valid_to1 = datetime.strptime(permission.valid_to, '%Y-%m-%dT%H:%M:%S%z')
-                group_permission = GroupPermission.objects.filter(group_id=permission.modules, role=permission.role).first()
-                user_permission_mapping = UsersPermission.objects.filter(permission_id=group_permission.id, status__in=[1, 4])
-
-                for user_permission in user_permission_mapping:
-                    valid_from = user_permission.valid_from
-                    valid_to = user_permission.valid_to
-                    if valid_from <= valid_from1 <= valid_to:
-                        error = Error(code="USER_07", message=UserError.USER_07)
-                        return AdminUpdate(status=False, error=error)
-                    if valid_from <= valid_to1 <= valid_to:
-                        error = Error(code="USER_07", message=UserError.USER_07)
-                        return AdminUpdate(status=False, error=error)
-                    if valid_from >= valid_from1 and valid_to <= valid_to1:
-                        error = Error(code="USER_07", message=UserError.USER_07)
-                        return AdminUpdate(status=False, error=error)
-                        
-                user_permission = UsersPermission(
-                    permission_id=group_permission.id,
-                    valid_from=permission.valid_from,
-                    valid_to=permission.valid_to,
-                    user=user,
-                    status=status_input
-                )
-                user_permission.save()
-
-            admin_instance.save()
-            user.save()
-            return AdminUpdate(status=True, admin=admin_instance)
-        else:
-            error = Error(code="USER_02", message=UserError.USER_02)
-            return AdminUpdate(status=False, error=error)
+        admin_instance.save()
+        user.save()
+        return AdminUpdate(status=True, admin=admin_instance)
 
 
 class AdminDelete(graphene.Mutation):
