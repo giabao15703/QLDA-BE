@@ -418,9 +418,6 @@ class DeTaiCreate(graphene.Mutation):
                 if not ke_hoach_do_an:
                     error = Error(code="NO_VALID_KEHOACH", message="Không có kế hoạch đồ án nào trong thời gian cho phép tạo đề tài.")
                     return DeTaiCreate(status=False, error=error)
-                if count >= ke_hoach_do_an.sl_do_an:
-                    error = Error(code="DETAI_LIMIT", message="Số lượng đề tài đã đạt giới hạn cho phép.")
-                    return DeTaiCreate(status=False, error=error)
                 # Lấy chuyên ngành từ giảng viên hoặc đặt giá trị mặc định
                 chuyennganh = getattr(giang_vien, 'chuyen_nganh', 'Chưa xác định')
 
