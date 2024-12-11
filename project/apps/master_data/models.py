@@ -1137,4 +1137,4 @@ class SetProductAdvertisementTranslation(models.Model):
             self.pk,
             self.description,
             self.set_product_advertisement_id,
-        )
+        )   

@@ -35,7 +35,9 @@ from apps.delivery.models import (
     KeHoachDoAn,
     RequestType
 )
-
+import openpyxl
+from django.http import HttpResponse
+from io import BytesIO
 from apps.delivery.error_code import (
     DeliveryError
 )
@@ -442,7 +444,6 @@ class DeTaiCreate(graphene.Mutation):
         except Exception as e:
             error = Error(code="CREATE_ERROR", message=str(e))
             return DeTaiCreate(status=False, error=error)
-
 
 class DeTaiUpdateInput(graphene.InputObjectType):
     tendoan = graphene.String()
@@ -1038,6 +1039,7 @@ class CreateNotification(graphene.Mutation):
 
     def mutate(root, info, input):
         try:
+            # Tạo mới notification, tự động sinh createdDate
             notification = Notification.objects.create(
                 title=input.title,
                 content=input.content,
@@ -1048,13 +1050,13 @@ class CreateNotification(graphene.Mutation):
             error = Error(code="CREATE_ERROR", message=str(e))
             return CreateNotification(status=False, error=error)
 
-class UpdateNotification(graphene.Mutation):    
+class UpdateNotification(graphene.Mutation):
     class Arguments:
         id = graphene.ID(required=True)
         input = NotificationInput(required=True)
         
     status = graphene.Boolean()
-    notification = graphene.Field(NotificationNode)
+    notification = graphene.Field(NotificationNode, default_value=None)
     error = graphene.Field(Error)
     
     def mutate(self, info, id, input):
@@ -1067,13 +1069,14 @@ class UpdateNotification(graphene.Mutation):
             if input.status is not None:
                 notification.status = input.status
             notification.save()
-            return UpdateNotification(status=True,notification=notification,error=Error(message="Update thành công"))
+            return UpdateNotification(status=True, notification=notification, error=Error(message="Update thành công"))
         except Notification.DoesNotExist:
             error = Error(code="NOT_FOUND", message="Notification not found")
-            return UpdateNotification(status=False, error=error)
+            return UpdateNotification(status=False, notification=None, error=error)
         except Exception as e:
             error = Error(code="UPDATE_ERROR", message=str(e))
-            return UpdateNotification(status=False, error=error)
+            return UpdateNotification(status=False, notification=None, error=error)
+
     
 class GradingInput(graphene.InputObjectType):
     detai_id = graphene.ID(required=True)

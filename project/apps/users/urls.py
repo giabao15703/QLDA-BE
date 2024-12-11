@@ -13,7 +13,7 @@ from apps.users.views import (
     PromotionUserUsedExport,
     DownloadSupplierCooperationAgreement,
 )
-from apps.users.views import export_students
+from apps.users.views import export_students, export_de_tai
 urlpatterns = [
     path('user/profile/', ProfileView.as_view(), name='user-profile'),
     path('user/change-password/', ChangePasswordView.as_view(), name='user-change-password'),
@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/export/', AdminPermissionExport.as_view(), name='user-admin-permission_export'),
     path('buyer/export/', BuyerExport.as_view(), name='user-buyer-export'),
     path('export/', export_students, name='export_students'),
+    path('export-de-tai/', export_de_tai, name='export_de_tai'),
     path('supplier/export/', SupplierExport.as_view(), name='user-supplier-export'),
     path('supplier/download-form/', DownloadSupplierForm.as_view(), name='supplier-download-form'),
     path('promotion/export/', PromotionExport.as_view(), name='promotion-export'),

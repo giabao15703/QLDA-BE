@@ -19,6 +19,7 @@ from apps.users.serializers import (
     PromotionExportSerializer,
     PromotionUserUsedExportSerializer,
 )
+from apps.delivery.models import DeTai
 from django.conf import settings
 from django.contrib.auth import authenticate, get_user_model
 from django.http import HttpResponse, Http404
@@ -662,6 +663,66 @@ def export_students(request):
     # Tạo HTTP response để trả về tệp Excel
     response = HttpResponse(content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
     response['Content-Disposition'] = 'attachment; filename=students.xlsx'
+
+    # Lưu workbook vào response
+    wb.save(response)
+
+    return response
+    
+def export_de_tai(request):
+    # Lọc các đề tài (DeTai) hiện có
+    de_tais = DeTai.objects.filter(trangthai=1)
+
+    # Tạo workbook và sheet
+    wb = openpyxl.Workbook()
+    sheet = wb.active
+    sheet.title = 'Danh sách Đề Tài'
+
+    # Tiêu đề cột
+    sheet['A1'] = 'Mã Đề Tài'
+    sheet['B1'] = 'Tên Đề Tài'
+    sheet['C1'] = 'Mô Tả'
+    sheet['D1'] = 'Giảng Viên Hướng Dẫn'
+    sheet['E1'] = 'Kế Hoạch Đồ Án'
+
+    # Định nghĩa kiểu ngày tháng nếu cần thiết
+    date_style = NamedStyle(name="date_style", number_format="DD/MM/YYYY")
+
+    # Điền dữ liệu vào các hàng
+    for index, de_tai in enumerate(de_tais, start=2):
+        # Lấy giảng viên hướng dẫn
+        giang_vien = de_tai.idgvhuongdan.short_name if de_tai.idgvhuongdan else "Chưa có giảng viên"
+
+        # Lấy kế hoạch đồ án
+        ke_hoach = de_tai.idkehoach.ky_mo if de_tai.idkehoach else "Chưa có kế hoạch"
+
+        # Điền dữ liệu vào sheet
+        sheet[f'A{index}'] = de_tai.madoan
+        sheet[f'B{index}'] = de_tai.tendoan
+        sheet[f'C{index}'] = de_tai.mota
+        sheet[f'D{index}'] = giang_vien
+        sheet[f'E{index}'] = ke_hoach
+
+        # Nếu cần định dạng ngày tháng (ví dụ nếu có trường ngày trong DeTai)
+        # sheet[f'E{index}'].style = date_style
+
+    # Điều chỉnh chiều rộng các cột (Tùy chọn)
+    for col in range(1, sheet.max_column + 1):
+        column_letter = get_column_letter(col)
+        max_length = 0
+        for row in sheet.iter_rows(min_col=col, max_col=col):
+            for cell in row:
+                try:
+                    if len(str(cell.value)) > max_length:
+                        max_length = len(cell.value)
+                except:
+                    pass
+        adjusted_width = (max_length + 2)
+        sheet.column_dimensions[column_letter].width = adjusted_width
+
+    # Tạo HTTP response để trả về tệp Excel
+    response = HttpResponse(content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+    response['Content-Disposition'] = 'attachment; filename=de_tai.xlsx'
 
     # Lưu workbook vào response
     wb.save(response)

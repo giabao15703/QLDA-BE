@@ -112,7 +112,7 @@ class DeTaiFilter(django_filters.FilterSet):
     mota = django_filters.CharFilter(field_name='mota', lookup_expr="icontains")  # Lọc theo mô tả
     trangthai = django_filters.CharFilter(field_name='trangthai', lookup_expr="exact")  # Lọc theo trạng thái
     idkehoach = django_filters.CharFilter(field_name='idkehoach__id', lookup_expr="exact")
-    gvhd_LongName = django_filters.CharFilter(field_name='idgvhuongdan__long_name', lookup_expr="icontains")
+    gvhd_ShortName = django_filters.CharFilter(field_name='idgvhuongdan__short_name', lookup_expr="icontains")
     
 
     #@property
@@ -137,9 +137,9 @@ class DeTaiFilter(django_filters.FilterSet):
         fields = []
 
 class DeTaiNode(DjangoObjectType):
-    giang_vien_long_name = graphene.String()
+    giang_vien_short_name = graphene.String()
     ke_hoach_do_an_id = graphene.ID()
-    giang_vien_phan_bien_long_name = graphene.String()
+    giang_vien_phan_bien_short_name = graphene.String()
 
     class Meta:
         model = DeTai
@@ -147,13 +147,13 @@ class DeTaiNode(DjangoObjectType):
         interfaces = (CustomNode, )
         connection_class = ExtendedConnection
 
-    def resolve_giang_vien_long_name(self, info):
+    def resolve_giang_vien_short_name(self, info):
         # Lấy long_name của giảng viên hướng dẫn
-        return self.idgvhuongdan.long_name if self.idgvhuongdan else None
+        return self.idgvhuongdan.short_name if self.idgvhuongdan else None
 
-    def resolve_giang_vien_phan_bien_long_name(self, info):
-        # Lấy long_name của giảng viên phản biện nếu có
-        return self.idgvphanbien.long_name if self.idgvphanbien else None
+    def resolve_giang_vien_phan_bien_short_name(self, info):
+        # Lấy short_name của giảng viên phản biện nếu có
+        return self.idgvphanbien.short_name if self.idgvphanbien else None
 
     def resolve_ke_hoach_do_an_id(self, info):
         # Trả về ID của kế hoạch đồ án

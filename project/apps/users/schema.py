@@ -1796,7 +1796,8 @@ class BuyerUpdateInput(graphene.InputObjectType):
     industries = graphene.List(graphene.String, required=True)
     reason_manual = graphene.String()
 
-
+from django.core.mail import send_mail
+from django.template import Context, Template
 class BuyerCreate(graphene.Mutation):
     class Arguments:
         user = UserInput(required=True)
@@ -1829,55 +1830,31 @@ class BuyerCreate(graphene.Mutation):
                 nganh=user.nganh,
                 phone=user.phone,
                 gender=user.gender,
-                picture=user.picture  # Lưu URL thay vì file
+                picture=user.picture
             )
             new_user.set_password(user.password)
             new_user.save()
 
-            # Tạo Buyer mới (nếu cần)
-            Buyer.objects.create(
-                user=new_user,
-                mssv=user.mssv,
-                ngay_sinh=user.ngay_sinh,
-                noi_sinh=user.noi_sinh,
-                lop=user.lop,
-                khoa_hoc=user.khoa_hoc,
-                bac_dao_tao=user.bac_dao_tao,
-                loai_hinh_dao_tao=user.loai_hinh_dao_tao,
-                nganh=user.nganh,
-                gender=user.gender,
-                picture=user.picture,
-            )
-
-            # Tạo bản ghi thanh toán
-            UserPayment.objects.create(user=new_user)
-
-            # Gửi email kích hoạt tài khoản
+            # Gửi email cho người dùng mới
             try:
-                email_template = EmailTemplates.objects.get(item_code='ActivateBuyerAccount')
-                title = email_template.title
-
-                t = Template(email_template.content)
-                c = Context({
-                    "name": user.short_name,
-                    "username": username,
-                    "password": user.password,
-                    "short_name": user.short_name,
-                })
-
-                output = t.render(c)
+                subject = "Chào bạn, tài khoản của bạn đã được tạo"
+                message = f"Chào bạn {user.short_name},\n\n"
+                message += f"Đây là tài khoản của bạn:\n"
+                message += f"Username: {username}\n"
+                message += f"Password: {user.password}\n\n"
+                message += "Vui lòng đổi mật khẩu sau khi đăng nhập lần đầu.\n\n"
+                message += "Chúc bạn sử dụng dịch vụ của chúng tôi!"
 
                 send_mail(
-                    title,
-                    output,
-                    "NextPro <no-reply@nextpro.io>",
+                    subject,
+                    message,
+                    "Huit <no-reply@huit.io>",
                     [new_user.email],
-                    html_message=output,
                     fail_silently=True
                 )
 
-            except EmailTemplates.DoesNotExist:
-                print("Mẫu email 'ActivateBuyerAccount' không tồn tại.")
+            except Exception as e:
+                print(f"Lỗi gửi email: {str(e)}")
 
             return BuyerCreate(status=True)
 
@@ -1893,7 +1870,6 @@ class UpdatePassword(graphene.Mutation):
 
     def mutate(self, info, new_password):
         try:
-            # Lấy token từ request (dùng GetToken để lấy thông tin người dùng từ token)
             token = GetToken.getToken(info)
             user = token.user  # Lấy user từ token
 
@@ -1908,6 +1884,13 @@ class UpdatePassword(graphene.Mutation):
 
         except Exception as e:
             return UpdatePassword(status=False, error=f"Lỗi xảy ra: {str(e)}")
+from django.core.mail import send_mail
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+from django.db import transaction
+import openpyxl
+from .models import User  # Đảm bảo bạn đã import đúng model User
+
 @csrf_exempt
 def import_students(request):
     if request.method == 'POST' and request.FILES.get('file'):
@@ -1926,7 +1909,7 @@ def import_students(request):
                     try:
                         # Gán mặc định các giá trị là null
                         email = row[0] if row[0] else None
-                        password = row[1] if row[1] else None
+                        password = row[1] if row[1] else '123'  # Mật khẩu mặc định là '123' nếu không có mật khẩu
                         short_name = row[2] if row[2] else None
                         mssv = row[3] if row[3] else None
                         ngaysinh = row[4] if row[4] else None
@@ -1941,13 +1924,13 @@ def import_students(request):
                         phone = row[13] if row[13] else None
 
                         # Kiểm tra các trường bắt buộc và bỏ qua dòng nếu thiếu
-                        if not all([email, password, short_name, mssv]):
+                        if not all([email, short_name, mssv]):
                             missing_fields_count += 1
-                            errors.append(f"Dòng {index}: Thiếu thông tin bắt buộc (Email, Mật khẩu, Tên ngắn, MSSV).")
+                            errors.append(f"Dòng {index}: Thiếu thông tin bắt buộc (Email, Tên ngắn, MSSV).")
                             continue
 
                         # Kiểm tra email trùng lặp
-                        if User.objects.filter(email=email, user_type=2).exists():
+                        if User.objects.filter(email=email).exists():
                             duplicate_count += 1
                             errors.append(f"Dòng {index}: Email {email} đã tồn tại.")
                             continue
@@ -1977,59 +1960,32 @@ def import_students(request):
                         new_user.set_password(password)
                         new_user.save()
 
-                        # Tạo Buyer mới
-                        Buyer.objects.create(
-                            user=new_user,
-                            mssv=mssv,
-                            ngay_sinh=ngaysinh,
-                            noi_sinh=noisinh,
-                            lop=lop,
-                            khoa_hoc=khoa_hoc,
-                            bac_dao_tao=bac_dao_tao,
-                            loai_hinh_dao_tao=loai_hinh_dao_tao,
-                            nganh=nganh,
-                            gender=gender,
-                            picture=picture,
-                        )
-
-                        # Tạo bản ghi thanh toán
-                        UserPayment.objects.create(user=new_user)
-
-                        # Gửi email kích hoạt tài khoản
+                        # Gửi email cho người dùng mới
                         try:
-                            email_template = EmailTemplates.objects.get(item_code='ActivateBuyerAccount')
-                            title = email_template.title
-
-                            t = Template(email_template.content)
-                            c = Context({
-                                "name": short_name,
-                                "username": username,
-                                "password": password,
-                                "short_name": short_name,
-                            })
-
-                            output = t.render(c)
+                            subject = "Chào bạn, tài khoản của bạn đã được tạo"
+                            message = f"Chào bạn {short_name},\n\n"
+                            message += f"Đây là tài khoản của bạn:\n"
+                            message += f"Username: {username}\n"
+                            message += f"Password: {password}\n\n"
+                            message += "Vui lòng đăng nhập và thay đổi mật khẩu ngay lần đầu.\n\n"
+                            message += "Chúc bạn sử dụng dịch vụ của chúng tôi!"
 
                             send_mail(
-                                title,
-                                output,
-                                "NextPro <no-reply@nextpro.io>",
-                                [new_user.email],
-                                html_message=output,
+                                subject,
+                                message,
+                                "Huit <no-reply@huit.io>",  # Địa chỉ email gửi đi
+                                [new_user.email],  # Địa chỉ email nhận
                                 fail_silently=True
                             )
 
-                        except EmailTemplates.DoesNotExist:
-                            errors.append(f"Dòng {index}: Mẫu email 'ActivateBuyerAccount' không tồn tại.")
-                        except Exception as email_error:
-                            errors.append(f"Dòng {index}: Lỗi gửi email: {str(email_error)}")
+                        except Exception as e:
+                            errors.append(f"Dòng {index}: Lỗi gửi email: {str(e)}")
 
                         success_count += 1
 
                     except Exception as e:
                         # Bắt lỗi tạo tài khoản và gán giá trị null cho các trường không hợp lệ
                         errors.append(f"Dòng {index}: Lỗi xảy ra: {str(e)}")
-                        # Không tạo user khi có lỗi và chỉ gán lỗi vào danh sách errors
 
             # Trả về kết quả sau khi xử lý
             total_rows = sheet.max_row - 1  # Tổng số dòng không tính tiêu đề
@@ -2050,7 +2006,6 @@ def import_students(request):
             return JsonResponse({'status': 'error', 'message': str(e)})
 
     return JsonResponse({'status': 'error', 'message': 'Phương thức yêu cầu không được hỗ trợ hoặc không có file được tải lên.'})
-
 
 def export_students(request):
     # Lấy dữ liệu từ cơ sở dữ liệu (bạn có thể thay đổi cách lấy dữ liệu tùy thuộc vào mô hình của bạn)
