@@ -1916,10 +1916,10 @@ def import_students(request):
             wb = openpyxl.load_workbook(file)
             sheet = wb.active
 
-            errors = []  
-            success_count = 0  
-            duplicate_count = 0  
-            missing_fields_count = 0 
+            errors = []
+            success_count = 0
+            duplicate_count = 0
+            missing_fields_count = 0
 
             with transaction.atomic():
                 for index, row in enumerate(sheet.iter_rows(min_row=2, values_only=True), start=2):
@@ -1937,7 +1937,7 @@ def import_students(request):
                         loai_hinh_dao_tao = row[9] if row[9] else None
                         nganh = row[10] if row[10] else None
                         gender = row[11] if row[11] else None
-                        picture = row[12] if row[12] else None 
+                        picture = row[12] if row[12] else None
                         phone = row[13] if row[13] else None
 
                         # Kiểm tra các trường bắt buộc và bỏ qua dòng nếu thiếu
@@ -1956,28 +1956,73 @@ def import_students(request):
                         user_count = User.objects.filter(user_type=2).count() + 1
                         username = '80' + str(user_count).zfill(4)
 
+                        # Tạo user mới
                         new_user = User(
-                            email=email,
                             username=username,
                             user_type=2,  # Buyer
+                            email=email,
                             short_name=short_name,
                             mssv=mssv,
                             ngay_sinh=ngaysinh,
                             noi_sinh=noisinh,
                             lop=lop,
-                            phone=phone, 
+                            phone=phone,
                             khoa_hoc=khoa_hoc,
                             bac_dao_tao=bac_dao_tao,
                             loai_hinh_dao_tao=loai_hinh_dao_tao,
                             nganh=nganh,
                             gender=gender,
-                            picture=picture, 
+                            picture=picture,  # Lưu URL hoặc đường dẫn hình ảnh
                         )
                         new_user.set_password(password)
                         new_user.save()
 
-                        # Tạo UserPayment nếu cần
+                        # Tạo Buyer mới
+                        Buyer.objects.create(
+                            user=new_user,
+                            mssv=mssv,
+                            ngay_sinh=ngaysinh,
+                            noi_sinh=noisinh,
+                            lop=lop,
+                            khoa_hoc=khoa_hoc,
+                            bac_dao_tao=bac_dao_tao,
+                            loai_hinh_dao_tao=loai_hinh_dao_tao,
+                            nganh=nganh,
+                            gender=gender,
+                            picture=picture,
+                        )
+
+                        # Tạo bản ghi thanh toán
                         UserPayment.objects.create(user=new_user)
+
+                        # Gửi email kích hoạt tài khoản
+                        try:
+                            email_template = EmailTemplates.objects.get(item_code='ActivateBuyerAccount')
+                            title = email_template.title
+
+                            t = Template(email_template.content)
+                            c = Context({
+                                "name": short_name,
+                                "username": username,
+                                "password": password,
+                                "short_name": short_name,
+                            })
+
+                            output = t.render(c)
+
+                            send_mail(
+                                title,
+                                output,
+                                "NextPro <no-reply@nextpro.io>",
+                                [new_user.email],
+                                html_message=output,
+                                fail_silently=True
+                            )
+
+                        except EmailTemplates.DoesNotExist:
+                            errors.append(f"Dòng {index}: Mẫu email 'ActivateBuyerAccount' không tồn tại.")
+                        except Exception as email_error:
+                            errors.append(f"Dòng {index}: Lỗi gửi email: {str(email_error)}")
 
                         success_count += 1
 
@@ -2003,6 +2048,9 @@ def import_students(request):
         except Exception as e:
             # Bắt lỗi chung khi xử lý file
             return JsonResponse({'status': 'error', 'message': str(e)})
+
+    return JsonResponse({'status': 'error', 'message': 'Phương thức yêu cầu không được hỗ trợ hoặc không có file được tải lên.'})
+
 
 def export_students(request):
     # Lấy dữ liệu từ cơ sở dữ liệu (bạn có thể thay đổi cách lấy dữ liệu tùy thuộc vào mô hình của bạn)
@@ -3871,7 +3919,7 @@ class UserAdminInput(graphene.InputObjectType):
 
 class AdminInput(graphene.InputObjectType):
     user = UserInput(required=True)
-    long_name = graphene.String(required=True)
+    short_name = graphene.String(required=True)
     role = graphene.Int(required=True)  # Thêm trường role để xác định vai trò
     chuyen_nganh = graphene.String()  # Thêm chuyen_nganh
 
@@ -3884,7 +3932,7 @@ class UserAdminUpdateInput(graphene.InputObjectType):
 
 class AdminUpdateInput(graphene.InputObjectType):
     user = graphene.Field(UserAdminUpdateInput, required=True)
-    long_name = graphene.String(required=True)
+    short_name = graphene.String(required=True)
     role = graphene.Int(required=True)  # Thêm trường role để xác định vai trò
     chuyen_nganh = graphene.String()  # Thêm chuyen_nganh
 

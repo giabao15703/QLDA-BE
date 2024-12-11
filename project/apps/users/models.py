@@ -428,7 +428,7 @@ class Buyer(models.Model):
     nganh = models.CharField(max_length=100, null=True, blank=True)  # Major
     gender = models.CharField(max_length=10, null=True, blank=True)
     class Meta:
-        db_table = 'users_buyer'
+        db_table = 'users_student'
 
 class BuyerActivity(models.Model):
     buyer = models.ForeignKey(Buyer, on_delete=models.CASCADE, related_name='buyer_activity')
