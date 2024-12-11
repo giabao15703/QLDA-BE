@@ -393,9 +393,31 @@ class ForgotPasswordToken(models.Model):
 
 class Buyer(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='buyer')
+    company_full_name = models.CharField(max_length=255, null=True, blank=True)
+    company_short_name = models.CharField(max_length=32, null=True, blank=True)
+    company_long_name = models.CharField(max_length=96, null=True, blank=True)
+    company_logo = models.ImageField(upload_to=company_logo_directory_path, null=True, blank=True)
+    company_tax = models.CharField(max_length=32, null=True, blank=True)
+    company_address = models.CharField(max_length=256, null=True, blank=True)
+    company_city = models.CharField(max_length=32,null=True, blank=True)
+    company_number_of_employee = models.ForeignKey(NumberofEmployee, on_delete=models.CASCADE,null= True, blank=True)
+    company_website = models.CharField(max_length=32,null=True, blank=True)
+    company_referral_code = models.CharField(max_length=100, null=True, blank=True)
+    company_email = models.CharField(max_length=32, null=True, blank=True)
     picture = models.ImageField(upload_to='uploads/', null=True, blank=True)
     phone = models.CharField(max_length=32, null=True, blank=True)
+    position = models.ForeignKey(Position, on_delete=models.CASCADE, null=True, blank=True)
+    level = models.ForeignKey(Level, on_delete=models.CASCADE, null=True, blank=True)
     language = models.ForeignKey(Language, on_delete=models.CASCADE, null=True, blank=True, default=1)
+    profile_features = models.ForeignKey(ProfileFeaturesBuyer, on_delete=models.CASCADE, null=True, blank=True)
+    currency = models.ForeignKey(Currency, on_delete=models.CASCADE, null=True)
+    promotion = models.ForeignKey(Promotion, on_delete=models.CASCADE, null=True, blank=True)
+    valid_from = models.DateTimeField(auto_now_add=True, null=True, blank=True)
+    valid_to = models.DateTimeField(default=one_year, null=True, blank=True)
+    send_mail_30_day = models.DateTimeField(null=True, blank=True)
+    send_mail_15_day = models.DateTimeField(null=True, blank=True)
+    send_mail_7_day = models.DateTimeField(null=True, blank=True)
+    send_mail_expire = models.DateTimeField(null=True, blank=True)
     mssv = models.CharField(max_length=20, null=True, blank=True)  # Student ID
     ngay_sinh = models.DateField(null=True, blank=True)  # Date of Birth
     noi_sinh = models.CharField(max_length=100, null=True, blank=True)  # Place of Birth
