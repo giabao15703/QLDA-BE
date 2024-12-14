@@ -1529,7 +1529,7 @@ class BuyerIndustryNode(DjangoObjectType):
 
 
 class UserInput(graphene.InputObjectType):
-    password = graphene.String(required=True)
+    password = graphene.String()
     email = graphene.String(required=True)
     short_name = graphene.String()
     status = graphene.Int(required=False)
@@ -1863,18 +1863,27 @@ class BuyerCreate(graphene.Mutation):
 
 class UpdatePassword(graphene.Mutation):
     class Arguments:
-        new_password = graphene.String(required=True)
+        current_password = graphene.String(required=True, description="Mật khẩu hiện tại của người dùng.")
+        new_password = graphene.String(required=True, description="Mật khẩu mới mà người dùng muốn đặt.")
 
     status = graphene.Boolean()
     error = graphene.Field(Error)
 
-    def mutate(self, info, new_password):
+    def mutate(self, info, current_password, new_password):
         try:
+            # Giả sử bạn có một phương thức GetToken để lấy token từ request
             token = GetToken.getToken(info)
             user = token.user  # Lấy user từ token
 
             if not user:
                 raise GraphQLError("Không tìm thấy người dùng.")
+
+            # Kiểm tra mật khẩu hiện tại
+            if not user.check_password(current_password):
+                return UpdatePassword(
+                    status=False,
+                    error=Error(message="Mật khẩu hiện tại không chính xác.")
+                )
 
             # Cập nhật mật khẩu mới
             user.set_password(new_password)
@@ -1883,7 +1892,12 @@ class UpdatePassword(graphene.Mutation):
             return UpdatePassword(status=True)
 
         except Exception as e:
-            return UpdatePassword(status=False, error=f"Lỗi xảy ra: {str(e)}")
+            return UpdatePassword(
+                status=False,
+                error=Error(message=f"Lỗi xảy ra: {str(e)}")
+            )
+        
+        
 from django.core.mail import send_mail
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -2090,20 +2104,20 @@ class BuyerUpdate(graphene.Mutation):
             existing_user.save()
 
             # Cập nhật thông tin Buyer tương ứng
-            existing_buyer = Buyer.objects.get(user=existing_user)
-            existing_buyer.mssv = user.mssv or existing_buyer.mssv
-            existing_buyer.ngay_sinh = user.ngay_sinh or existing_buyer.ngay_sinh
-            existing_buyer.noi_sinh = user.noi_sinh or existing_buyer.noi_sinh
-            existing_buyer.lop = user.lop or existing_buyer.lop
-            existing_buyer.khoa_hoc = user.khoa_hoc or existing_buyer.khoa_hoc
-            existing_buyer.bac_dao_tao = user.bac_dao_tao or existing_buyer.bac_dao_tao
-            existing_buyer.loai_hinh_dao_tao = user.loai_hinh_dao_tao or existing_buyer.loai_hinh_dao_tao
-            existing_buyer.nganh = user.nganh or existing_buyer.nganh
-            existing_buyer.gender = user.gender or existing_buyer.gender
-            existing_buyer.picture = user.picture or existing_buyer.picture
+            # existing_buyer = Buyer.objects.get(user=existing_user)
+            # existing_buyer.mssv = user.mssv or existing_buyer.mssv
+            # existing_buyer.ngay_sinh = user.ngay_sinh or existing_buyer.ngay_sinh
+            # existing_buyer.noi_sinh = user.noi_sinh or existing_buyer.noi_sinh
+            # existing_buyer.lop = user.lop or existing_buyer.lop
+            # existing_buyer.khoa_hoc = user.khoa_hoc or existing_buyer.khoa_hoc
+            # existing_buyer.bac_dao_tao = user.bac_dao_tao or existing_buyer.bac_dao_tao
+            # existing_buyer.loai_hinh_dao_tao = user.loai_hinh_dao_tao or existing_buyer.loai_hinh_dao_tao
+            # existing_buyer.nganh = user.nganh or existing_buyer.nganh
+            # existing_buyer.gender = user.gender or existing_buyer.gender
+            # existing_buyer.picture = user.picture or existing_buyer.picture
 
-            # Lưu lại thông tin Buyer đã cập nhật
-            existing_buyer.save()
+            # # Lưu lại thông tin Buyer đã cập nhật
+            # existing_buyer.save()
 
             return BuyerUpdate(status=True)
 
@@ -3802,19 +3816,17 @@ class AdminFilter(FilterSet):
     short_name = django_filters.CharFilter(method='short_name_filter')
     valid_from = django_filters.CharFilter(method='valid_from_filter')
     valid_to = django_filters.CharFilter(method='valid_to_filter')
-    long_name = django_filters.CharFilter(lookup_expr='contains')
     role=django_filters.CharFilter(method='role_filter')
     chuyen_nganh = django_filters.CharFilter(lookup_expr='icontains')  # Thêm bộ lọc cho chuyen_nganh
 
     class Meta:
         model = Admin
-        fields = ['id', 'long_name', 'chuyen_nganh']  # Thêm chuyen_nganh vào fields
+        fields = ['id', 'short_name', 'chuyen_nganh']  # Thêm chuyen_nganh vào fields
 
     order_by = OrderingFilter(
             fields=(
             ('id', 'id'),
             ('role', 'role'),
-            ('long_name', 'long_name'),
             ('user__email', 'email'),
             ('user__created', 'created'),
             ('user__status', 'status'),
@@ -3867,13 +3879,13 @@ class PermissionInput(graphene.InputObjectType):
     modules = graphene.String(required=True)
 
 class UserAdminInput(graphene.InputObjectType):
-    password = graphene.String(required=True)
+    password = graphene.String()
     email = graphene.String(required=True)
     short_name = graphene.String(required=True)
     status = graphene.Int()
 
 class AdminInput(graphene.InputObjectType):
-    user = UserInput(required=True)
+    user = UserInput()
     short_name = graphene.String(required=True)
     role = graphene.Int(required=True)  # Thêm trường role để xác định vai trò
     chuyen_nganh = graphene.String()  # Thêm chuyen_nganh
@@ -4020,9 +4032,7 @@ class AdminUpdate(graphene.Mutation):
         user = User.objects.get(pk=admin_instance.user_id)
         user.short_name = admin.user.short_name
         user.status = admin.user.status
-        
         admin_instance.role = admin.role
-        admin_instance.long_name = admin.long_name
         admin_instance.chuyen_nganh = admin.chuyen_nganh  # Cập nhật chuyen_nganh nếu có
         time_now = timezone.now()
 

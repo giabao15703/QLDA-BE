@@ -731,6 +731,85 @@ class GroupQLDAJoin(graphene.Mutation):
             )
 
 
+class DeleteMemberFromGroup(graphene.Mutation):
+    class Arguments:
+        group_id = graphene.ID(required=True)  # ID của nhóm
+        user_id = graphene.ID(required=True)  # ID của thành viên cần xóa
+
+    status = graphene.Boolean()
+    error = graphene.Field(Error)
+
+    def mutate(root, info, group_id, user_id):
+        try:
+            # Lấy thông tin người dùng từ token
+            token = GetToken.getToken(info)
+            requesting_user = token.user
+
+            # Lấy thông tin nhóm
+            group = GroupQLDA.objects.get(pk=group_id)
+
+            # Kiểm tra nếu người dùng hiện tại không phải leader của nhóm
+            giang_vien = Admin.objects.filter(user=requesting_user).first()
+            if not giang_vien.role == 2:
+                return DeleteMemberFromGroup(
+                    status=False,
+                    error=Error(
+                        code="PERMISSION_DENIED",
+                        message="Bạn không có quyền xóa thành viên khỏi nhóm này."
+                    )
+                )
+
+            # Kiểm tra thành viên cần xóa có trong nhóm không
+            member_to_remove = JoinGroup.objects.filter(group=group, user_id=user_id).first()
+            if not member_to_remove:
+                return DeleteMemberFromGroup(
+                    status=False,
+                    error=Error(
+                        code="MEMBER_NOT_FOUND",
+                        message="Thành viên không tồn tại trong nhóm."
+                    )
+                )
+
+            if group.member_count == 1 and member_to_remove.role == "leader":
+                group.delete()
+                return DeleteMemberFromGroup(status=True, error=Error(code="GROUP_DELETED", message="Nhóm đã bị xóa vì không còn thành viên."))
+            # Không cho phép xóa leader
+            if member_to_remove.role == "leader":
+                return DeleteMemberFromGroup(
+                    status=False,
+                    error=Error(
+                        code="CANNOT_REMOVE_LEADER",
+                        message="Không thể xóa leader khỏi nhóm."
+                    )
+                )
+
+            # Xóa thành viên khỏi nhóm
+            member_to_remove.delete()
+
+            # Giảm số lượng thành viên trong nhóm
+            group.member_count -= 1
+            group.save()
+
+            return DeleteMemberFromGroup(status=True, error=Error(code="MEMBER_REMOVED", message="Thành viên đã bị xóa khỏi nhóm."))
+
+        except GroupQLDA.DoesNotExist:
+            return DeleteMemberFromGroup(
+                status=False,
+                error=Error(
+                    code="GROUP_NOT_FOUND",
+                    message="Nhóm không tồn tại."
+                )
+            )
+        except Exception as e:
+            return DeleteMemberFromGroup(
+                status=False,
+                error=Error(
+                    code="DELETE_ERROR",
+                    message=str(e)
+                )
+            )
+
+
 
 class AcceptJoinRequest(graphene.Mutation):
     class Arguments:
@@ -1331,4 +1410,5 @@ class Mutation(graphene.ObjectType):
 
     invite_user_to_group = InviteUserToGroup.Field()
     accept_group_invitation = AcceptGroupInvitation.Field()
+    delete_member_from_group = DeleteMemberFromGroup.Field()
 
