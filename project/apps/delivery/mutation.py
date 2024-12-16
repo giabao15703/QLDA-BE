@@ -769,6 +769,15 @@ class DeleteMemberFromGroup(graphene.Mutation):
                         message="Thành viên không tồn tại trong nhóm."
                     )
                 )
+            #kiểm tra xem nhóm có đang đăng kí đề tài không
+            if group.de_tai:
+                return DeleteMemberFromGroup(
+                    status=False,
+                    error=Error(
+                        code="DETAI_FOUND",
+                        message="Nhóm đang có đề tài không thể xóa nhóm hoặc xoá thành viên cuối cùng."
+                    )
+                )
 
             if group.member_count == 1 and member_to_remove.role == "leader":
                 group.delete()
@@ -809,7 +818,69 @@ class DeleteMemberFromGroup(graphene.Mutation):
                 )
             )
 
+class RemoveDeTaiFromGroup(graphene.Mutation):
+    class Arguments:
+        group_id = graphene.ID(required=True)  # ID của nhóm
 
+    status = graphene.Boolean()
+    error = graphene.Field(Error)
+
+    def mutate(root, info, group_id):
+        try:
+            # Lấy thông tin người dùng từ token
+            token = GetToken.getToken(info)
+            requesting_user = token.user
+
+            # Lấy thông tin nhóm
+            group = GroupQLDA.objects.get(pk=group_id)
+
+            # Kiểm tra nếu người dùng hiện tại không phải leader của nhóm
+            giang_vien = Admin.objects.filter(user=requesting_user).first()
+            if not giang_vien.role == 2:
+                return RemoveDeTaiFromGroup(
+                    status=False,
+                    error=Error(
+                        code="PERMISSION_DENIED",
+                        message="Bạn không có quyền xóa đề tài khỏi nhóm này."
+                    )
+                )
+
+            # Kiểm tra nhóm đã có đề tài chưa
+            if not group.de_tai:
+                return RemoveDeTaiFromGroup(
+                    status=False,
+                    error=Error(
+                        code="NO_DETAI_FOUND",
+                        message="Nhóm không có đề tài."
+                    )
+                )
+
+            # Xóa đề tài khỏi nhóm
+            #remove id nhóm trong bảng đề tài
+            group.de_tai.idnhom = None
+            group.de_tai.save()
+            
+            group.de_tai = None
+            group.save()
+
+            return RemoveDeTaiFromGroup(status=True, error=Error(code="DETAI_REMOVED", message="Đề tài đã bị xóa khỏi nhóm."))
+
+        except GroupQLDA.DoesNotExist:
+            return RemoveDeTaiFromGroup(
+                status=False,
+                error=Error(
+                    code="GROUP_NOT_FOUND",
+                    message="Nhóm không tồn tại."
+                )
+            )
+        except Exception as e:
+            return RemoveDeTaiFromGroup(
+                status=False,
+                error=Error(
+                    code="DELETE_ERROR",
+                    message=str(e)
+                )
+            )
 
 class AcceptJoinRequest(graphene.Mutation):
     class Arguments:
@@ -1411,4 +1482,5 @@ class Mutation(graphene.ObjectType):
     invite_user_to_group = InviteUserToGroup.Field()
     accept_group_invitation = AcceptGroupInvitation.Field()
     delete_member_from_group = DeleteMemberFromGroup.Field()
+    remove_de_tai_from_group = RemoveDeTaiFromGroup.Field()
 
