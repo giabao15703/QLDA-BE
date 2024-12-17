@@ -310,7 +310,7 @@ class User(AbstractUser, TimeStampedModel):
 
 
     def send_notification(self, message: str):
-        print(f"Đã gửi lời mời {self}: {message}")
+        print(f"Đã gửi lời mời ")
     
     def get_profile(self):
         if self.isBuyer():

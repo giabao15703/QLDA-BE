@@ -612,7 +612,14 @@ class GroupQLDACreate(graphene.Mutation):
 
             sl_sinh_vien = ke_hoach_do_an.sl_sinh_vien
             
-
+            if GroupQLDA.objects.filter(name=input.name).exists():
+                return GroupQLDACreate(
+                    status=False,
+                    error=Error(
+                        code="GROUP_NAME_EXISTS",
+                        message="Tên nhóm đã tồn tại."
+                    )
+                )
             if user_creating_group.isAdmin():
                 return GroupQLDACreate(
                     status=False,

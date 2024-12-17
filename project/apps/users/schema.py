@@ -2071,7 +2071,7 @@ def export_students(request):
 class BuyerUpdate(graphene.Mutation):
     class Arguments:
         user_id = graphene.ID(required=True)  # ID người dùng cần cập nhật
-        user = UserInput(required=True)  # Các thông tin người dùng mới
+        user = UserInput(required=True)       # Các thông tin người dùng mới
 
     status = graphene.Boolean()
     error = graphene.Field(Error)
@@ -2094,7 +2094,16 @@ class BuyerUpdate(graphene.Mutation):
             existing_user.nganh = user.nganh or existing_user.nganh
             existing_user.phone = user.phone or existing_user.phone
             existing_user.gender = user.gender or existing_user.gender
-            existing_user.picture = user.picture or existing_user.picture
+
+            # Cập nhật picture nếu được gửi lên
+            if user.picture:
+                # Xóa hình ảnh cũ (nếu cần)
+                if existing_user.picture:
+                    existing_user.picture.delete(save=False)
+                # Lưu hình ảnh mới
+                existing_user.picture.save(
+                    user.picture.name, user.picture, save=True
+                )
 
             # Nếu có thay đổi mật khẩu
             if user.password:
@@ -2103,30 +2112,13 @@ class BuyerUpdate(graphene.Mutation):
             # Lưu lại thông tin người dùng đã cập nhật
             existing_user.save()
 
-            # Cập nhật thông tin Buyer tương ứng
-            # existing_buyer = Buyer.objects.get(user=existing_user)
-            # existing_buyer.mssv = user.mssv or existing_buyer.mssv
-            # existing_buyer.ngay_sinh = user.ngay_sinh or existing_buyer.ngay_sinh
-            # existing_buyer.noi_sinh = user.noi_sinh or existing_buyer.noi_sinh
-            # existing_buyer.lop = user.lop or existing_buyer.lop
-            # existing_buyer.khoa_hoc = user.khoa_hoc or existing_buyer.khoa_hoc
-            # existing_buyer.bac_dao_tao = user.bac_dao_tao or existing_buyer.bac_dao_tao
-            # existing_buyer.loai_hinh_dao_tao = user.loai_hinh_dao_tao or existing_buyer.loai_hinh_dao_tao
-            # existing_buyer.nganh = user.nganh or existing_buyer.nganh
-            # existing_buyer.gender = user.gender or existing_buyer.gender
-            # existing_buyer.picture = user.picture or existing_buyer.picture
-
-            # # Lưu lại thông tin Buyer đã cập nhật
-            # existing_buyer.save()
-
             return BuyerUpdate(status=True)
 
         except User.DoesNotExist:
             raise GraphQLError("Người dùng không tồn tại.")
-        except Buyer.DoesNotExist:
-            raise GraphQLError("Buyer không tồn tại.")
         except Exception as e:
             raise GraphQLError(f"Lỗi xảy ra: {str(e)}")
+
 
 class BuyerProfileUpdate(graphene.Mutation):
     class Arguments:
